@@ -1,0 +1,6 @@
+FROM LIB:c.o "Make_saves_file.o"
+TO "Make_saves_file"
+LIB LIB:scm.lib
+    LIB:sc.lib LIB:amiga.lib
+ADDSYM
+

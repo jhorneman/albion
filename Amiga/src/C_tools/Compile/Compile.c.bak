@@ -1,0 +1,552 @@
+/****************************************************************************
+ Omnifile compiler for omnifiles
+ Written by J.Horneman (In Tune With The Universe)
+ Start : 22-3-1994
+ Syntax : Compile {source path}
+****************************************************************************/
+
+/*** Constants ***/
+
+#define File_header_size 12
+#define Path_length 100
+#define max_subfiles 600
+#define Buffer_size 1000000
+#define BSS_size 26124+100
+#define Info_lines 4
+
+/*** Prototypes ***/
+
+void Cleanup(char *text);
+extern void Pack(void);
+ULONG LOF(char *path);
+BOOL Read_info_file(char *infofilename);
+int Get_file_infos(char *search_string,char *ptr);
+void Encrypt_block(UWORD seed,UWORD *ptr,ULONG length);
+void Load_subfile(void);
+
+/*** Structure definitions ***/
+
+struct MyAnchor {
+	struct AChain	*ap_Base;
+	struct AChain	*ap_Last;
+	LONG	ap_BreakBits;
+	LONG	ap_FoundBreak;
+	BYTE	ap_Flags;
+	BYTE	ap_Reserved;
+	WORD	ap_Strlen;
+	struct	FileInfoBlock ap_Info;		/* Examine result */
+	UBYTE	ap_Buf[Path_length];
+};
+/*** Variable declarations ***/
+
+
+BPTR omnifile,subfile;
+
+ULONG zero = 0,l;
+ULONG lengths[max_subfiles],pack_header,max;
+ULONG unpacked_length,packed_length;
+ULONG rate,total_packed,total_unpacked;
+
+UWORD count,i,nr_index,nr_subfiles,input_max=0;
+
+UBYTE *buffer;
+UBYTE *pack_bss,*unpacked_address,*packed_address;
+
+BOOL packed=FALSE,encrypted=FALSE,pack_success;
+
+char *subfiles[max_subfiles];
+char filenames[max_subfiles*Path_length];
+char sourcefile_path[Path_length],omnifile_path[Path_length];
+
+char Pack_ID[] = {(char) 1,'L','O','B'};
+char Packed_header[] = {'O','M','P','C'};
+char Unpacked_header[] = {'O','M','N','I'};
+char Encrypted_header[] = {'O','M','N','C'};
+char Packcrypted_header[] = {'O','M','N','P'};
+
+/*** Main program ***/
+
+main(argc,argv)
+int argc;
+char *argv[];
+{
+/*** Print info if number of arguments is wrong ***/
+if (argc!=2)
+	{
+	printf("Syntax : Compile {source path}.\n");
+	printf("Written by J.Horneman (In Tune With The Universe).\n");
+	printf("Start : 22-3-1994.\n\n");
+	printf("This tool will compile an Omnifile using the .OSC-file\n");
+	printf("found in the source path\n\n");
+	Cleanup("");
+	}
+
+/*** Read info-file ***/
+printf("\n************************************************************\n");
+printf("Compiling from %s.\n",argv[1]);
+printf("************************************************************\n\n");
+
+strcpy(omnifile_path,"DDT:Omnifiles/");
+if (Read_info_file(argv[1]) == FALSE) Cleanup("");
+
+printf("Destination Omnifile : %s\n",omnifile_path);
+printf("    Source directory : %s\n",sourcefile_path);
+
+if (packed)
+	printf("Packed / ");
+else
+	printf("Unpacked / ");
+if (encrypted)
+	printf("encrypted\n\n");
+else
+	printf("not encrypted\n\n");
+
+/*** Read file paths and lengths ***/
+count = Get_file_infos(sourcefile_path,filenames);
+if (count == 0)
+	Cleanup("No subfiles were found.");
+
+if (input_max)
+	{
+	nr_subfiles = input_max;
+	if (count>input_max) count = input_max;
+	}
+
+/*** Try to get work memory ***/
+if (!(buffer = (UBYTE *) AllocMem(Buffer_size,(ULONG) 0)))
+	Cleanup("Not enough memory (1Mb is needed)");
+unpacked_address = buffer;
+
+if (packed)
+	if (!(pack_bss = (UBYTE *) AllocMem(BSS_size,MEMF_CLEAR)))
+		Cleanup("Not enough memory");
+
+/*** Try to open Omnifile ***/
+if (!(omnifile =  Open(omnifile_path,(LONG) MODE_NEWFILE)))
+	Cleanup("Omnifile couldn't be opened.");
+
+/*** Write Omnifile header ***/
+if (packed)
+	{
+	/*** Write header ***/
+	if (encrypted)
+		Write(omnifile,(UBYTE *) Packcrypted_header,4);
+	else
+		Write(omnifile,(UBYTE *) Packed_header,4);
+
+	Write(omnifile,&nr_subfiles,2);
+
+	/*** Write dummy subfile lengths ***/
+	for (i=1;i<=nr_subfiles;i++)
+		Write(omnifile,&zero,4);
+	}
+else
+	{
+	/*** Write header ***/
+	if (encrypted)
+		Write(omnifile,(UBYTE *) Encrypted_header,4);
+	else
+		Write(omnifile,(UBYTE *) Unpacked_header,4);
+
+	Write(omnifile,&nr_subfiles,2);
+
+	/*** Write subfile lengths ***/
+	for (i=1;i<=nr_subfiles;i++)
+		Write(omnifile,&lengths[i],4);
+	}
+
+/*** Compile omnifile ***/
+for (i=1;i<=nr_subfiles;i++)
+	{
+	if (subfiles[i]!=NULL)
+		{
+		/*** Load subfile ***/
+		Load_subfile();
+
+		if (packed)
+			{
+			/*** Already packed ? ***/
+			if (!(strncmp((char *) unpacked_address,Pack_ID,4)))
+				{
+				printf("File %s has already been packed.\n",subfiles[i]);
+				packed_address = buffer;
+				packed_length = lengths[i];
+				unpacked_length = lengths[i];
+				}
+			else
+				{
+				unpacked_length = lengths[i];
+
+				/*** Empty file ? ***/
+				if (!(unpacked_length))
+					{
+					packed_address = buffer;
+					packed_length = unpacked_length;
+					}
+				else
+					{
+					/*** Pack file ***/
+					Pack();
+
+					if (packed_length+4 >= unpacked_length)
+						{
+						/*** RE-load subfile ***/
+						Load_subfile();
+
+						if (encrypted)
+							Encrypt_block(i+1,(UWORD *) buffer,lengths[i]);
+
+						packed_address = buffer;
+						lengths[i] = unpacked_length+4;
+						packed_length = unpacked_length;
+						pack_success = FALSE;
+						}
+					else
+						{
+						lengths[i] = packed_length+4;
+						total_packed = total_packed + 4;
+
+						if (encrypted)
+							Encrypt_block(i+1,(UWORD *) (packed_address+4),packed_length-4);
+						pack_success = TRUE;
+						}
+					}
+				}
+			total_packed = total_packed + packed_length;
+			total_unpacked = total_unpacked + unpacked_length;
+			}
+		else
+			{
+			if (encrypted)
+				Encrypt_block(i+1,(UWORD *) buffer,lengths[i]);
+
+			packed_address = buffer;
+			packed_length = lengths[i];
+			total_unpacked = total_unpacked + lengths[i];
+			}
+
+		/*** Write subfile to Omnifile ***/
+		if (packed && packed_length)
+			{
+			if (packed_length < File_header_size)
+				{
+				packed_length = File_header_size-4;
+				lengths[i] = File_header_size;
+				}
+			if (pack_success)
+				{
+				if (Write(omnifile,&Pack_ID,4) != 4)
+					{
+					printf("File %s could not be written.\n",subfiles[i]);
+					Cleanup("");
+					}
+				}
+			else
+				{
+				if (Write(omnifile,&zero,4) != 4)
+					{
+					printf("File %s could not be written.\n",subfiles[i]);
+					Cleanup("");
+					}
+				}
+			}
+
+		if (Write(omnifile,packed_address,packed_length) != packed_length)
+			{
+			printf("File %s could not be written.\n",subfiles[i]);
+			Cleanup("");
+			}
+		}
+	}
+
+/*** Write subfile lengths (if packing) ***/
+if (packed)
+	{
+	Seek(omnifile,6,OFFSET_BEGINNING);
+
+	/*** Write subfile lengths ***/
+	for (i=1;i<=nr_subfiles;i++)
+		Write(omnifile,&lengths[i],4);
+	}
+
+/*** Close omnifile ***/
+Close(omnifile);
+omnifile = NULL;
+
+/*** Status report ***/
+if (count == 1)
+	printf("1 file was processed, ");
+else
+	printf("%u files were processed, ",count);
+
+if (nr_subfiles == 1)
+	printf("1 was generated.\n");
+else
+	printf("%u were generated.\n",nr_subfiles);
+
+if (packed)
+	{
+	rate = (100*total_packed)/total_unpacked;
+	printf("Omnifile length : %u.\n",total_packed+(nr_subfiles*4)+6);
+	printf("Pack rate : %d%%.\n",rate);
+	}
+else
+	printf("Omnifile length : %u.\n",total_unpacked+(nr_subfiles*4)+6);
+
+/*** Exit ***/
+Cleanup("");
+}
+
+/************************************************************************
+ * Clean up & exit
+ ************************************************************************/
+void Cleanup(char *text)
+{
+	/*** A last message ***/
+	if (strlen(text) != 0) printf("%s\n",text);
+
+	/*** Close opened files ***/
+	if (omnifile) Close(omnifile);
+	if (subfile) Close(subfile);
+
+	/*** Free allocated memory ***/
+	if (buffer) FreeMem(buffer,Buffer_size);
+	if (pack_bss) FreeMem(pack_bss,BSS_size);
+
+	/*** Exit ***/
+        exit(0);
+}
+
+/************************************************************************
+ * Get file length
+ ************************************************************************/
+ULONG LOF(char *path)
+	{
+	BPTR lock;
+	struct FileInfoBlock *my_fib;
+	ULONG length;
+
+	if (!(my_fib = (struct FileInfoBlock *) AllocMem((ULONG) sizeof(struct FileInfoBlock),0L)))
+		length = 0;
+	else
+		{
+		if (lock = (BPTR) Lock(path,(ULONG) ACCESS_READ))
+			{
+			if (Examine(lock,my_fib))
+				length = (ULONG) my_fib->fib_Size;
+			else
+				length = 0;
+			}
+		else
+			length = 0;
+
+		if (lock) UnLock(lock);
+		FreeMem(my_fib,(ULONG) sizeof(struct FileInfoBlock));
+		}
+	return (length);
+	}
+
+/************************************************************************
+ * Read info-file
+ * Info file format :
+ *     PACKED
+ *     ENCRYPTED
+ *     Number index in filename
+ *     Source file path    ("DDT:Data/Map_data/MAP_0???.DAT")
+ *     Omnifile filename
+ *     Number of subfiles (optional)
+ ************************************************************************/
+BOOL Read_info_file(char *path)
+	{
+	BPTR infofile;
+	int i=0;
+	char infofilename[Path_length],*Error,info[Info_lines][80],*p,*filename;
+	struct MyAnchor *my_anchor;
+	BOOL error;
+
+	/*** Set up anchor ***/
+	if (!(my_anchor = (struct MyAnchor *) AllocMem(sizeof(struct MyAnchor),MEMF_CLEAR)))
+		{
+		printf("Out of memory.\n");
+		return(0);
+		}
+	my_anchor->ap_Strlen = (WORD) Path_length;
+
+	/*** Search infofile ***/
+	strcpy(infofilename,path);
+	strcat(infofilename,"/#?.osc");
+
+	error = MatchFirst(infofilename,(struct AnchorPath *) my_anchor);
+	if (error)
+		{
+		printf("Info-file not found.\n");
+		MatchEnd((struct AnchorPath *) my_anchor);
+		FreeMem(my_anchor,sizeof(struct MyAnchor));
+		return(0);
+		}
+
+	strcpy(infofilename,(char *) (&my_anchor->ap_Buf));
+	MatchEnd((struct AnchorPath *) my_anchor);
+	FreeMem(my_anchor,sizeof(struct MyAnchor));
+
+	/*** Open file ***/
+	if (!(infofile = Open(infofilename,(LONG) MODE_OLDFILE)))
+		printf("Info-file couldn't be opened.\n");
+	else
+		{
+		/*** Read lines ***/
+		do
+			{
+			Error = (char *) FGets(infofile,(UBYTE *) info[i],(ULONG) 80);
+			i++;
+			} while (Error != NULL && i<Info_lines);
+
+		/*** Close file ***/
+		Close(infofile);
+		}
+
+	if (i < Info_lines)
+		{
+		printf("Not a legal info-file.\n");
+		return (FALSE);
+		}
+	else
+		{
+		/*** Check packed flag ***/
+		if (strncmp(info[0],"PACKED",6)==0) packed = TRUE;
+
+		/*** Check encrypted flag ***/
+		if (strncmp(info[1],"ENCRYPTED",6)==0) encrypted = TRUE;
+
+		/*** Get paths ***/
+		strcpy(sourcefile_path,path);
+		strcat(sourcefile_path,"/");
+		strcat(sourcefile_path,info[2]);
+		sourcefile_path[strlen(sourcefile_path)-1] = 0;	/* Remove EOL */
+
+		filename = FilePart(infofilename);
+		p = strrchr(filename,'.');
+		strcpy(p,".omni");
+		strcat(omnifile_path,filename);
+
+		/*** Find number index ***/
+		p = strstr(sourcefile_path,"???");
+		if (p == NULL)
+			{
+			printf("Source-file path does not contain ???.\n");
+			return(FALSE);
+			}
+		nr_index = (p-sourcefile_path)+1;
+
+		/*** Get input max ***/
+		if (info[3]!="") input_max=atoi(info[3]);
+
+		return (TRUE);
+		}
+	}
+
+/************************************************************************
+ * Get file infos from search pattern
+ ************************************************************************/
+int Get_file_infos(char *search_string,char *ptr)
+	{
+	struct MyAnchor *my_anchor;
+	char *path,nr[4];
+	BOOL error;
+	int count=0,i;
+
+	/*** Clear arrays ***/
+	for (i=0;i<max_subfiles;i++)
+		{
+		subfiles[i]=NULL;
+		lengths[i]=0;
+		}
+
+	/*** Set up anchor ***/
+	if (!(my_anchor = (struct MyAnchor *) AllocMem(sizeof(struct MyAnchor),MEMF_CLEAR)))
+		{
+		printf("Out of memory.\n");
+		return(0);
+		}
+	my_anchor->ap_Strlen = (WORD) Path_length;
+
+
+	/*** Search all files ***/
+	nr_subfiles = 0;
+	error = MatchFirst(search_string,(struct AnchorPath *) my_anchor);
+	while (!error)
+		{
+		/*** Get file length & path ***/
+		path = (char *) (&my_anchor->ap_Buf);
+		
+		strmid(path,nr,nr_index,3);
+		i = atoi(nr);
+		
+		if (i)
+			if (i>max_subfiles)
+				printf("Subfile number %d too large!\n",i);
+			else
+				{
+				if (i>nr_subfiles) nr_subfiles=i;
+			
+				lengths[i] = ((struct FileInfoBlock *) (&my_anchor->ap_Info))->fib_Size;
+				subfiles[i] = ptr;
+
+/*				printf(">>>file %u : %s, %u bytes.\n",i,path,lengths[i]);
+*/
+				strcpy(ptr,path);
+				ptr += strlen(path)+1;
+			
+				count++;
+				}
+		error = MatchNext((struct AnchorPath *) my_anchor);	/* Next file */
+		}
+
+	MatchEnd((struct AnchorPath *) my_anchor);			/* Destroy anchor */
+	FreeMem(my_anchor,sizeof(struct MyAnchor));
+
+	return(count);				/* Return number of files */
+}
+
+/************************************************************************
+ * Encrypt block
+ ************************************************************************/
+void Encrypt_block(UWORD seed,UWORD *ptr,ULONG length)
+	{
+	UWORD v;
+	ULONG j;
+
+	for (j=0;j<=length/2;j++)
+		{
+		v = *ptr;
+		v = v^seed;
+		*(ptr++) = v;
+		seed = seed*17+87;
+		}
+	}
+
+/************************************************************************
+ * Load subfile
+ ************************************************************************/
+void Load_subfile()
+	{
+	printf(">>>file %u : %s, %u bytes.\n",i,subfiles[i],lengths[i]);
+
+	/*** Try to open subfile ***/
+	if (!(subfile = Open(subfiles[i],(LONG) MODE_OLDFILE)))
+		{
+		printf("File %s couldn't be opened.\n",subfiles[i]);
+		Cleanup("");
+		}
+
+	/*** Read subfile ***/
+	if (Read(subfile,unpacked_address,lengths[i]) != lengths[i])
+		{
+		printf("File %s could not be read.\n",subfiles[i]);
+		Cleanup("");
+		}
+
+	/*** Close subfile ***/
+	Close(subfile);
+	subfile = NULL;
+	}

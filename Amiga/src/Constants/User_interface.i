@@ -2,8 +2,8 @@
 ; Written by J.Horneman (In Tune With The Universe)
 ; Start : 17-2-1994
 
-Forbidden_X	EQU 100
-Forbidden_Y	EQU 155
+Forbidden_X	EQU 160
+Forbidden_Y	EQU Screen_height-48
 
 Scroll_bar_width	EQU 6
 
@@ -48,8 +48,14 @@ Blue:	rs.b 4
 Skin:	rs.b 8
 Marmor:	rs.b 16
 
+Draw_colour	EQU Gold+1
+Feedback_colour	EQU Gold+3
 Highlight_colour	EQU Brightest
 Capital_colour	EQU Indigo
+Focus_colour	EQU Gold
+
+Interactor_object_size	EQU Object_header_size
+Intergroup_object_size	EQU Object_header_size
 
 ;***************************************************************************	
 ; Standard OID :
@@ -61,160 +67,11 @@ OID_height:	rs.w 1
 Standard_OID_size:	rs.b 0
 
 ;***************************************************************************	
-; Scroll bar object
-; OID :
-	rsreset
-	rs.w 1			; Coordinates of scroll bar
-	rs.w 1
-OID_Total_units:	rs.w 1		; Total amount of units
-OID_Units_width:	rs.w 1		; Number of units per row
-OID_Units_height:	rs.w 1		; Number of rows on screen
-OID_Scroll_bar_height:	rs.w 1	; Height of scroll bar in pixels
-Scroll_bar_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-Total_units:	rs.w 1		; Total amount of units
-Units_width:	rs.w 1		; Number of units per row
-Units_height:	rs.w 1		; Number of rows on screen
-Slider_height:	rs.w 1		; Height of slider in pixels
-Slider_Y:	rs.w 1			; Y-coordinate of slider
-Row_height:	rs.w 1		; Height of row in pixels
-Current_row:	rs.w 1		; Current row
-Scroll_bar_height:	rs.w 1		; Height of scroll bar in pixels
-Scroll_bar_max_height:	rs.w 1	; Maximum Y-coordinate of slider
-Scroll_bar_result:	rs.w 1		; Current unit selected by scroll bar {0...}
-Scroll_bar_object_size:	rs.b 0
-
-;***************************************************************************	
-; Item list object
-; OID :
-	rsreset
-	rs.w 1			; Coordinates of item list
-	rs.w 1
-OID_IL_width:	rs.w 1		; Number of slots per row
-OID_IL_height:	rs.w 1		; Number of rows on screen
-OID_IL_nr_items:	rs.w 1
-OID_IL_slots_handle:	rs.b 1
-	rseven
-OID_IL_slots_offset:	rs.l 1
-OID_IL_touched:	rs.l 1
-OID_IL_selected:	rs.l 1
-OID_IL_PUM:	rs.l 1
-Item_list_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-IL_nr_items:	rs.w 1		; Number of item slots in inventory
-IL_slots_handle:	rs.b 1		; Memory handle of inventory
-				;  (0=absolute address)
-	rseven
-IL_slots_offset:	rs.l 1		; Long offset to inventory
-IL_touched:	rs.l 1		; Pointer to a routine which is
-				;  called when the player moves the
-				;  mouse over an item slot
-IL_selected:	rs.l 1		; Pointer to a routine which is
-				;  called when the player left-clicks
-				;  on an item slot
-IL_PUM:	rs.l 1			; Pointer to a pop-up menu data
-				;  structure
-Item_list_object_size:	rs.b 0
-
-;***************************************************************************	
-; Item slot object
-; OID :
-	rsreset
-	rs.w 1			; Coordinates of item slot
-	rs.w 1
-OID_IS_nr:	rs.w 1
-Item_slot_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-IS_nr:	rs.w 1
-Item_slot_object_size:	rs.b 0
-
-;***************************************************************************	
 ; Earth object
 ; Object :
 	rsreset
 	rs.b Object_header_size
 Earth_object_size:	rs.b 0
-
-;***************************************************************************	
-; Box object
-; OID :
-	rsreset
-	rs.b Standard_OID_size
-Box_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-Box_object_size:	rs.b 0
-
-;***************************************************************************	
-; HBox object
-; OID :
-	rsreset
-	rs.b Box_OID_size
-HBox_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Box_object_size
-HBox_object_size:	rs.b 0
-
-;***************************************************************************	
-; DBox object
-; OID :
-	rsreset
-	rs.b Box_OID_size
-DBox_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Box_object_size
-DBox_object_size:	rs.b 0
-
-;***************************************************************************	
-; Symbol object
-; OID :
-	rsreset
-	rs.w 1
-	rs.w 1
-OID_Symbol:	rs.b Symbol_data_size
-Symbol_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-Object_symbol:	rs.b Symbol_data_size
-Symbol_object_size:	rs.b 0
-
-;***************************************************************************	
-; Text object
-; OID :
-	rsreset
-	rs.w 1
-	rs.w 1
-OID_Text_object_width:	rs.w 1
-OID_Text_ptr:	rs.l 1
-OID_Text_colour:	rs.w 1
-OID_Text_feedback_colour:	rs.w 1
-Text_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-Text_object_width:	rs.w 1
-Text_ptr:	rs.l 1
-Text_colour:	rs.w 1
-Text_feedback_colour:	rs.w 1
-Text_object_size:	rs.b 0
 
 ;***************************************************************************	
 ; Window object
@@ -263,15 +120,6 @@ Button_function:	rs.l 1
 Button_object_size:	rs.b 0
 
 ;***************************************************************************	
-; Button (or switch) + text object
-; OID :
-	rsreset
-	rs.b Button_OID_size
-OID_Button_text_colour:	rs.w 1
-OID_Button_text_feedback_colour:	rs.w 1
-Button_text_OID_size:	rs.b 0
-
-;***************************************************************************	
 ; Switch object
 ; Object :
 	rsreset
@@ -292,17 +140,100 @@ Radio_object_size:	rs.b 0
 ; Radio button object
 ; OID :
 	rsreset
-	rs.b Button_text_OID_size
+	rs.b Button_OID_size
 OID_Radio_button_nr:	rs.w 1
-OID_Radio_handle:	rs.w 1
 Radio_button_OID_size:	rs.b 0
 
 ; Object :
 	rsreset
-	rs.b Switch_object_size
+	rs.b Button_object_size
+	rs.b 1				; This is {Switch_state} !
+	rseven
 Radio_button_nr:	rs.w 1
-Radio_handle:	rs.w 1
 Radio_button_object_size:	rs.b 0
+
+
+
+
+	ifne	FALSE
+;***************************************************************************	
+; Scroll bar object
+; OID :
+	rsreset
+	rs.w 1			; Coordinates of scroll bar
+	rs.w 1
+OID_Total_units:	rs.w 1		; Total amount of units
+OID_Units_width:	rs.w 1		; Number of units per row
+OID_Units_height:	rs.w 1		; Number of rows on screen
+OID_Scroll_bar_height:	rs.w 1	; Height of scroll bar in pixels
+Scroll_bar_OID_size:	rs.b 0
+
+; Object :
+	rsreset
+	rs.b Object_header_size
+Total_units:	rs.w 1		; Total amount of units
+Units_width:	rs.w 1		; Number of units per row
+Units_height:	rs.w 1		; Number of rows on screen
+Slider_height:	rs.w 1		; Height of slider in pixels
+Slider_Y:	rs.w 1			; Y-coordinate of slider
+Row_height:	rs.w 1		; Height of row in pixels
+Current_row:	rs.w 1		; Current row
+Scroll_bar_height:	rs.w 1		; Height of scroll bar in pixels
+Scroll_bar_max_height:	rs.w 1	; Maximum Y-coordinate of slider
+Scroll_bar_result:	rs.w 1		; Current unit selected by scroll bar {0...}
+Scroll_bar_object_size:	rs.b 0
+
+;***************************************************************************	
+; Item list object
+; OID :
+	rsreset
+	rs.w 1			; Coordinates of item list
+	rs.w 1
+OID_IL_width:	rs.w 1
+OID_IL_height:	rs.w 1
+OID_IL_nr_items:	rs.w 1
+OID_IL_slots_handle:	rs.b 1
+	rseven
+OID_IL_slots_offset:	rs.l 1
+OID_IL_touched:	rs.l 1
+OID_IL_selected:	rs.l 1
+OID_IL_PUM:	rs.l 1
+Item_list_OID_size:	rs.b 0
+
+; Object :
+	rsreset
+	rs.b Object_header_size
+IL_width:	rs.w 1			; Number of slots per row
+IL_height:	rs.w 1			; Number of rows on screen
+IL_nr_items:	rs.w 1		; Number of item slots in inventory
+IL_slots_handle:	rs.b 1		; Memory handle of inventory
+				;  (0=absolute address)
+	rseven
+IL_slots_offset:	rs.l 1		; Long offset to inventory
+IL_touched:	rs.l 1		; Pointer to a routine which is
+				;  called when the player moves the
+				;  mouse over an item slot
+IL_selected:	rs.l 1		; Pointer to a routine which is
+				;  called when the player left-clicks
+				;  on an item slot
+IL_PUM:	rs.l 1			; Pointer to a pop-up menu data
+				;  structure
+Item_list_object_size:	rs.b 0
+
+;***************************************************************************	
+; Item slot object
+; OID :
+	rsreset
+	rs.w 1			; Coordinates of item slot
+	rs.w 1
+OID_IS_nr:	rs.w 1
+Item_slot_OID_size:	rs.b 0
+
+; Object :
+	rsreset
+	rs.b Object_header_size
+IS_nr:	rs.w 1
+Item_slot_object_size:	rs.b 0
 
 ;***************************************************************************	
 ; Pop-up menu object
@@ -410,3 +341,4 @@ Text_slot_OID_size:	rs.b 0
 	rs.b Object_header_size
 TS_nr:	rs.w 1
 Text_slot_object_size:	rs.b 0
+	endc

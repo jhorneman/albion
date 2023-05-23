@@ -13,6 +13,10 @@ PROCESSOR_ERROR:	rs.b 1
 DOS_LIBRARY_ERROR:	rs.b 1		; Hey, where are your libraries ?
 GRAPHICS_LIBRARY_ERROR:	rs.b 1
 INTUITION_LIBRARY_ERROR:	rs.b 1
+ASL_LIBRARY_ERROR:	rs.b 1
+
+ALLOC_SPRITE_ERROR:	rs.b 1		; You have a sprite against me
+GET_SPRITE_ERROR:	rs.b 1
 
 MODE_ID_ERROR:	rs.b 1		; Your screen doesn't like me
 ALLOC_BITMAP_ERROR:	rs.b 1
@@ -33,5 +37,13 @@ NOT_ENOUGH_HANDLES:	rs.b 1
 HANDLES_CORRUPTED:	rs.b 1
 AREA_CORRUPTED:	rs.b 1
 NOT_ENOUGH_FILES:	rs.b 1
+
+DATA_DIR_NOT_FOUND:	rs.b 1		; File handling hullaballoo
+ILLEGAL_FILE_TYPE:	rs.b 1
+INCOMPLETE_READ:	rs.b 1
+INCOMPLETE_WRITE:	rs.b 1
+BAD_OMNIFILE:	rs.b 1
+SUBFILE_NOT_LOADED:	rs.b 1
+DISK_ERROR:	rs.b 1
 
 TEXT_TOO_LONG_ERROR:	rs.b 1	; "War and peace" or what ?

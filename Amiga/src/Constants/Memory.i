@@ -15,6 +15,7 @@ Minimum_CHIP	EQU 280000	; Minimum needed
 Minimum_FAST	EQU 75000
 
 Check_frequency	EQU 10000		; Memory self-check frequency
+Age_all_frequency	EQU 20		; Age all blocks frequency
 
 ;*****************************************************************************
 ; These are the BLOCK memory types

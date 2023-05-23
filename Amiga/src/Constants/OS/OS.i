@@ -4,7 +4,6 @@
 
 	OPT	GENSYM
 
-
 	incdir	DDT:
 	include	Constants/Global.i
 
@@ -177,6 +176,24 @@ SB_COPY_BITMAP	EQU 2
 
 ; Various
 EXTEND_VSTRUCT	EQU $1000
+
+; Types of requesters known to ASL, used as arguments to AllocAslRequest()
+ASL_FileRequest	EQU 0
+ASL_FontRequest	EQU 1
+ASL_ScreenModeRequest	EQU 2
+
+; Flag bits for the ASLFR_Flags1 tag
+FRB_FILTERFUNC	EQU 7
+FRB_INTUIFUNC	EQU 6
+FRB_DOSAVEMODE	EQU 5
+FRB_PRIVATEIDCMP	EQU 4
+FRB_DOMULTISELECT	EQU 3
+FRB_DOPATTERNS	EQU 0
+
+; Flag bits for the ASLFR_Flags2 tag
+FRB_DRAWERSONLY	EQU 0
+FRB_FILTERDRAWERS	EQU 1
+FRB_REJECTICONS	EQU 2
 
 ;*****************************************************************************
 ; These are window flags
@@ -996,6 +1013,25 @@ ss_data_size:	rs.b 0
 ; ExtSprite data follows
 
 ;*****************************************************************************
+; This is the FileRequester structure
+	rsreset
+fr_Reserved0:	rs.b 4
+fr_File:	rs.l 1		; Contents of File gadget on exit
+fr_Drawer:	rs.l 1		; Contents of Drawer gadget on exit
+fr_Reserved1:	rs.b 10
+fr_LeftEdge:	rs.w 1	; Coordinates of requester on exit
+fr_TopEdge:	rs.w 1
+fr_Width:	rs.w 1
+fr_Height:	rs.w 1
+fr_Reserved2:	rs.b 2
+fr_NumArgs:	rs.l 1	; Number of files selected
+fr_ArgList:	rs.l 1	; List of files selected
+fr_UserData:	rs.l 1	; You can store your own data here
+fr_Reserved3:	rs.b 8
+fr_Pattern:	rs.l 1	; Contents of Pattern gadget on exit
+fr_data_size:	rs.b 0
+
+;*****************************************************************************
 ; These are OS macros
 	
 kickEXEC	macro
@@ -1022,6 +1058,13 @@ kickGFX	macro
 kickINTU	macro
 	move.l	a6,-(sp)
 	move.l	Intuition_base,a6
+	jsr	_LVO\1(a6)
+	move.l	(sp)+,a6
+	endm
+
+kickASL	macro
+	move.l	a6,-(sp)
+	move.l	Asl_base,a6
 	jsr	_LVO\1(a6)
 	move.l	(sp)+,a6
 	endm
@@ -1056,3 +1099,4 @@ Wait_4_blitter	macro
 	include	Dos_lib.i
 	include	Graphics_lib.i
 	include	Intuition_lib.i
+	include	Asl_lib.i

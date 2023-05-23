@@ -1,0 +1,10 @@
+Compile: Compile.o Pack.o
+   sc link Compile.o Pack.o to Compile
+#   sc debug=ff link Compile.o Pack.o to Compile
+
+Compile.o: Compile.c
+   sc nolink Compile.c to Compile.o
+#   sc debug=ff nolink Compile.c to Compile.o
+
+Pack.o: Pack.s
+   sc nolink Pack.s to Pack.o

@@ -327,3 +327,49 @@ BIDTAG_GreenBits	EQU $8000000d
 	; Default - 4
 
 BIDTAG_GfxPrivate	EQU $8000000e	; Private
+
+
+; File requester tag values, used by AllocAslRequest() and AslRequest()
+
+ASL_TB	EQU TAG_USER+$80000
+
+; Window control
+ASLFR_Window	EQU ASL_TB+2	; Parent window
+ASLFR_Screen	EQU ASL_TB+40	; Screen to open on if no window
+ASLFR_PubScreenName	EQU ASL_TB+41	; Name of public screen
+ASLFR_PrivateIDCMP	EQU ASL_TB+42	; Allocate private IDCMP?
+ASLFR_IntuiMsgFunc	EQU ASL_TB+70	; Function to handle IntuiMessages
+ASLFR_SleepWindow	EQU ASL_TB+43	; Block input in ASLFR_Window?
+ASLFR_UserData	EQU ASL_TB+52	; What to put in fr_UserData
+
+; Text display
+ASLFR_TextAttr	EQU ASL_TB+51	; Text font to use for gadget text
+ASLFR_Locale	EQU ASL_TB+50	; Locale ASL should use for text
+ASLFR_TitleText	EQU ASL_TB+1	; Title of requester
+ASLFR_PositiveText	EQU ASL_TB+18	; Positive gadget text
+ASLFR_NegativeText	EQU ASL_TB+19	; Negative gadget text
+
+; Initial settings
+ASLFR_InitialLeftEdge	EQU ASL_TB+3	; Initial requester coordinates
+ASLFR_InitialTopEdge	EQU ASL_TB+4
+ASLFR_InitialWidth	EQU ASL_TB+5	; Initial requester dimensions
+ASLFR_InitialHeight	EQU ASL_TB+6
+ASLFR_InitialFile	EQU ASL_TB+8	; Initial contents of File gadget
+ASLFR_InitialDrawer	EQU ASL_TB+9	; Initial contents of Drawer gadg.
+ASLFR_InitialPattern	EQU ASL_TB+10	; Initial contents of Pattern gadg.
+
+; Options
+ASLFR_Flags1	EQU ASL_TB+20	; Option flags
+ASLFR_Flags2	EQU ASL_TB+22	; Additional option flags
+ASLFR_DoSaveMode	EQU ASL_TB+44	; Being used for saving?
+ASLFR_DoMultiSelect	EQU ASL_TB+45	; Do multi-select?
+ASLFR_DoPatterns	EQU ASL_TB+46	; Display a Pattern gadget?
+
+; Filtering
+ASLFR_DrawersOnly	EQU ASL_TB+47	; Don't display files?
+ASLFR_FilterFunc	EQU ASL_TB+49	; Function to filter files
+ASLFR_RejectIcons	EQU ASL_TB+60	; Display .info files?
+ASLFR_RejectPattern	EQU ASL_TB+61	; Don't display files matching pat
+ASLFR_AcceptPattern	EQU ASL_TB+62	; Accept only files matching pat
+ASLFR_FilterDrawers	EQU ASL_TB+63	; Also filter drawers with patterns
+ASLFR_HookFunc	EQU ASL_TB+7	; Combined callback function

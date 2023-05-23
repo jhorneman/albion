@@ -1,5 +1,5 @@
 ; Amiga hardware register offsets
-; Original by Commodore Bussiness Machines
+; Original by Commodore Business Machines
 ; Adapted by J.Horneman
 
 	OPT	GENSYM

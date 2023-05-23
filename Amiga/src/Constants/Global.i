@@ -7,6 +7,7 @@
 TRUE	EQU -1
 FALSE	EQU 0
 
+Cheat	EQU TRUE
 
 ; This is a rectangular area structure
 	rsreset
@@ -22,10 +23,6 @@ Local\@:
 
 rseven	macro
 	rs.w 0
-	endm
-
-qmulu	macro
-	mulu.w	\1,\2
 	endm
 
 Push	macro
@@ -46,12 +43,23 @@ Get	macro
 	endm
 
 Free	macro
-	move.w	d0,-(sp)
+	move.l	d0,-(sp)
 	move.b	\1,d0
 	jsr	Free_pointer
-	move.w	(sp)+,d0
+	move.l	(sp)+,d0
+	endm
+
+XGet	macro
+	move.b	\1,d0
+	jsr	Claim_pointer
+	move.l	d0,\2
+	endm
+
+XFree	macro
+	move.b	\1,d0
+	jsr	Free_pointer
 	endm
 
 
-	incdir	DDT:
+	incdir	DDT:Constants/
 	include	Error_codes.i

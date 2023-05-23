@@ -31,16 +31,11 @@ Module_ID:	rs.b 1			; Module ID
 DisUpd_ptr:	rs.l 1		; Pointer	to display update routine
 VblQ_ptr:	rs.l 1			; Pointer	to Vbl queue
 ScrQ_ptr:	rs.l 1			; Pointer	to Screen	queue
-Mev_ptr:	rs.l 1			; Pointer	to Mouse Event list
-Kev_ptr:	rs.l 1			; Pointer	to Key Event list
 ModInit_ptr:	rs.l 1		; Pointer	to Module	Init routine
 ModExit_ptr:	rs.l 1		; Pointer	to Module	Exit routine
 DisInit_ptr:	rs.l 1		; Pointer	to Display Init routine
 DisExit_ptr:	rs.l 1		; Pointer	to Display Exit routine
-Raster_list_ptr:	rs.l 1		; Pointer to raster list
-Mouse_ptr:	rs.l 1			; Pointer to mouse pointer
-PA_ptr:		rs.l 1		; Pointer to print area
-MA_ptr:		rs.l 1		; Pointer to mouse area
+Palette_ptr:	rs.l 1		; Pointer to palette list
 Module_data_size:	rs.b 1
 
 ;*****************************************************************************
@@ -72,9 +67,12 @@ Object_header_size:	rs.b 0
 ;***************************************************************************	
 ; These are the Object flags
 	rsreset
-Object_warn_when_deleted:	rs.b 1
-Object_control:	rs.b 1
-Object_norect:	rs.b 1
+Object_warn_when_deleted:	rs.b 1	; Used by [ Wait_4_object ].
+Object_control:	rs.b 1		; Object is used for grouping other
+				;  objects and has no rectangle of
+				;  it's own.
+Object_disable:	rs.b 1		; Interaction with this object is
+				;  disabled.
 
 ;***************************************************************************	
 ; This is the Class definition structure
@@ -89,13 +87,24 @@ Class_methods:	rs.b 0
 	rs.b 1
 Init_method:	rs.b 1
 Exit_method:	rs.b 1
+Close_method:	rs.b 1
+Touched_method:	rs.b 1
+Left_method:	rs.b 1
+Right_method:	rs.b 1
+DLeft_method:	rs.b 1
+DRight_method:	rs.b 1
+Custommouse_method:	rs.b 1
+Customkey_method:	rs.b 1
+Highlight_method:	rs.b 1
+Help_method:	rs.b 1
+Feedback_method:	rs.b 1
+Pop_up_method:	rs.b 1
+Focus_method:	rs.b 1
+Move_method:	rs.b 1
+Cycle_method:	rs.b 1
 Draw_method:	rs.b 1
 Update_method:	rs.b 1
-Feedback_method:	rs.b 1
-Print_method:	rs.b 1
+Erase_method:	rs.b 1
 Get_method:	rs.b 1
 Set_method:	rs.b 1
-Mev_method:	rs.b 1
-Kev_method:	rs.b 1
-Highlight_method:	rs.b 1
-Erase_method:	rs.b 1
+Print_method:	rs.b 1

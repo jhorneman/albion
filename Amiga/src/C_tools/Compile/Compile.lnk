@@ -1,0 +1,6 @@
+FROM LIB:c.o "Compile.o"+"Pack.o"
+TO "Compile"
+LIB LIB:scmnb.lib
+    LIB:scnb.lib LIB:amiga.lib
+ADDSYM
+

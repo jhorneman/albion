@@ -23,20 +23,33 @@
 	XREF	Random
 	XREF	Fill_memory
 	XREF	Copy_memory
+	XREF	Crypt_block
+	XREF	Shellsort
 
 	XREF	Ink_colour
 	XREF	Shadow_colour
 	XREF	Line_buffer
 	XREF	Reset_PA_stack
 	XREF	Reset_Font_stack
+	XREF	Strcpy
+
+	XREF	Reset_keyboard
+	XREF	Reset_mouse_buffer
 
 	XREF	Marmor_slab
 	XREF	Default_Mptr
+	XREF	Disk_Mptr
 	XREF	Memory_Mptr
 
+	XREF	Get_Omnifile_name
 	XREF	Get_file_memory_type
 	XREF	Get_file_priority
-	XREF	File_relocators
+	XREF	Get_file_safety_factor
+	XREF	Get_file_relocator
+	XREF	Default_memory_type
+	XREF	Default_safety_factor
+
+	XREF	Disk_error_handler
 
 	XREF	Reload_map_data
 	XREF	Remove_map_data
@@ -62,4 +75,5 @@
 	include	Files.s
 	include	Input.s
 	include	Mouse.s
+	include	Screen_save.s
 	include	Screen_slow.s
