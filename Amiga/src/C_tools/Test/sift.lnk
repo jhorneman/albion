@@ -1,0 +1,6 @@
+FROM LIB:c.o "sift.o"
+TO "sift"
+LIB LIB:scm.lib
+    LIB:sc.lib LIB:amiga.lib
+ADDSYM
+

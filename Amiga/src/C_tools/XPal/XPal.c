@@ -1,0 +1,179 @@
+/*
+ * XPal2.c - Extract palette from IFF file
+ *
+ */
+
+#include <exec/types.h>
+#include <exec/memory.h>
+#include <libraries/dos.h>
+#include <libraries/iffparse.h>
+#include <proto/exec.h>
+#include <proto/dos.h>
+#include <proto/iffparse.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#ifdef LATTICE
+int CXBRK(void) { return(0); }
+#endif
+
+#define MINARGS 3
+#define MAXARGS 5
+
+#define ID_CMAP		MAKE_ID('C','M','A','P')
+
+UBYTE vers[] = "\0$VER: XPal 2.0";
+
+char *errormsgs[] = {
+	"End of file (not an error).",
+	"End of context (not an error).",
+	"No lexical scope.",
+	"Insufficient memory.",
+	"Stream read error.",
+	"Stream write error.",
+	"Stream seek error.",
+	"File is corrupt.",
+	"IFF syntax error.",
+	"Not an IFF file.",
+	"Required call-back hook missing.",
+	"Return to client. You should never see this."
+};
+
+struct Library *IFFParseBase;	
+
+struct IFF_pal_entry
+	{
+	UBYTE rgb[3];
+	};
+
+void main(int argc, char **argv)
+{
+	BPTR outfile = NULL;
+	struct IFFHandle *iff = NULL;
+	struct ContextNode *top;
+	long error,length;
+	UWORD start=0,number=256;
+	struct IFF_pal_entry pal_buffer[256];
+	
+	/* If not enough args or '?', print usage */
+	if (((argc)&&(argc<MINARGS)) || (argv[argc-1][0]=='?') || (argc>MAXARGS))
+		{
+		puts("Syntax : XPal {IFF filename} {destination filename} [{start} {number}].");
+		puts("Written by J.Horneman (In Tune With The Universe).");
+		puts("Start : 24-2-1994.");
+		printf("\n");
+		puts("This tool will extract a palette (CMAP chunk) from an IFF-file and save it");
+		puts("under the destination filename.");
+		puts("Optionally, a start index and the number of colours which are to be saved");
+		puts("can be entered.");
+		printf("\n");
+		goto bye;
+		}
+	
+	/* Get parameters */
+	if (argc>3)
+		{
+		start = atoi(argv[3]);
+		number = atoi(argv[4]);
+		}
+	
+	/* Open library */
+	if (!(IFFParseBase = OpenLibrary("iffparse.library",0L)))
+		{
+		puts("Can't open iff parsing library.");
+		goto bye;
+		}
+	
+	/* Allocate IFF_File structure */
+	if (!(iff = AllocIFF()))
+		{
+		puts("AllocIFF() failed.");
+		goto bye;
+		}
+	
+	/* Open file */
+	if (!(iff->iff_Stream = Open(argv[1],MODE_OLDFILE)))
+		{
+		puts("File open failed.");
+		goto bye;
+		}
+	InitIFFasDOS(iff);
+	
+	/* Start the IFF transaction */
+	if (error = OpenIFF(iff,IFFF_READ))
+		{
+		puts("OpenIFF failed.");
+		goto bye;
+		}
+	
+	while(1)
+		{
+		error = ParseIFF(iff,IFFPARSE_RAWSTEP);
+
+		if (error == IFFERR_EOC)
+			continue;
+		
+		if (error == IFFERR_EOF)
+			{
+			puts("No palette was found.");
+			goto bye;
+			}
+		
+		if (error)
+			{
+			printf("File scan aborted, error %ld: %s\n",error,errormsgs[-error-1]);
+			goto bye;
+			}
+		
+		if (!(top = CurrentChunk(iff)))
+			{
+			puts("CurrentChunk failed.");
+			goto bye;
+			}
+	
+		if (top->cn_ID == ID_CMAP)
+			{
+			length = top->cn_Size;
+			
+			if ((ReadChunkBytes(iff,(UBYTE *) &pal_buffer,length)) != length)
+				{
+				puts("ReadChunkBytes failed.");
+				goto bye;
+				}
+	
+			if (!(outfile = Open(argv[2],MODE_NEWFILE)))
+				{
+				puts("Output file couldn't be opened.");
+				goto bye;
+				}
+
+			if ((Write(outfile,(UBYTE *) &pal_buffer[start],number*3)) != number*3)
+				{
+				puts("Output file couldn't be written.");
+				goto bye;
+				}
+			
+			printf("%d colours were saved, starting at colour %d.\n",number,start);
+			break;
+			}
+		}
+
+bye:
+
+	if (outfile)
+		Close(outfile);
+
+	if (iff)
+			{
+		CloseIFF(iff);
+		
+		if (iff->iff_Stream)
+			Close (iff->iff_Stream);
+		
+		FreeIFF(iff);
+		}
+	if (IFFParseBase) CloseLibrary(IFFParseBase);
+	
+	exit (RETURN_OK);
+}

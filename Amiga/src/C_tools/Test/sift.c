@@ -1,0 +1,152 @@
+/*
+ * sift.c - IFF file list
+ *
+ */
+
+#include <exec/types.h>
+#include <exec/memory.h>
+#include <libraries/dos.h>
+#include <libraries/iffparse.h>
+#include <proto/exec.h>
+#include <proto/dos.h>
+#include <proto/iffparse.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+#ifdef LATTICE
+int CXBRK(void) { return(0); }
+#endif
+
+#define MINARGS 2
+
+UBYTE vers[] = "\0$VER: sift 37.1";
+UBYTE usage[] = "Usage: sift IFFfilename (or -c for clipboard)";
+
+void PrintTopChunk (struct IFFHandle *);
+
+char *errormsgs[] = {
+	"End of file (not an error).",
+	"End of context (not an error).",
+	"No lexical scope.",
+	"Insufficient memory.",
+	"Stream read error.",
+	"Stream write error.",
+	"Stream seek error.",
+	"File is corrupt.",
+	"IFF syntax error.",
+	"Not an IFF file.",
+	"Required call-back hook missing.",
+	"Return to client. You should never see this."
+};
+
+struct Library *IFFParseBase;	
+
+void main(int argc, char **argv)
+{
+	struct IFFHandle *iff = NULL;
+	long error;
+	short cbio;
+	
+	/* If not enough args or '?', print usage */
+	if (((argc)&&(argc<MINARGS)) || (argv[argc-1][0]=='?'))
+		{
+		printf("%s\n",usage);
+		goto bye;
+		}
+	
+	/* Check to see if we are doing I/O to the clipboard */
+	cbio = (argv[1][0] == '-' && argv[1][1] == 'c');
+	
+	if (!(IFFParseBase = OpenLibrary("iffparse.library",0L)))
+		{
+		puts("Can't open iff parsing library.");
+		goto bye;
+		}
+	
+	/* Allocate IFF_File structure */
+	if (!(iff = AllocIFF()))
+		{
+		puts("AllocIFF() failed.");
+		goto bye;
+		}
+	
+	/* File or clipboard stuff */
+	if (cbio)
+		{
+		if (!(iff->iff_Stream = (ULONG) OpenClipboard (PRIMARY_CLIP)))
+			{
+			puts("Clipboard open failed.");
+			goto bye;
+			}
+		InitIFFasClip(iff);
+		}
+	else
+		{
+		if (!(iff->iff_Stream = Open(argv[1],MODE_OLDFILE)))
+			{
+			puts("File open failed.");
+			goto bye;
+			}
+		InitIFFasDOS(iff);
+		}
+	
+	/* Start the IFF transaction */
+	if (error = OpenIFF(iff,IFFF_READ))
+		{
+		puts("OpenIFF failed.");
+		goto bye;
+		}
+	
+	while(1)
+		{
+		error = ParseIFF(iff,IFFPARSE_RAWSTEP);
+		
+		if (error == IFFERR_EOC)
+			continue;
+		else if (error)
+			break;
+		
+		PrintTopChunk(iff);
+		}
+	
+	if (error == IFFERR_EOF)
+		puts("File scan complete.");
+	else
+		printf("File scan aborted, error %ld: %s\n",error,errormsgs[-error-1]);
+
+bye:
+	if (iff)
+		{
+		CloseIFF(iff);
+		
+		if (iff->iff_Stream)
+			if (cbio)
+				CloseClipboard((struct ClipboardHandle *) iff->iff_Stream);
+			else
+				Close (iff->iff_Stream);
+		
+		FreeIFF(iff);
+		}
+	if (IFFParseBase) CloseLibrary(IFFParseBase);
+	
+	exit (RETURN_OK);
+}
+
+void
+PrintTopChunk(iff)
+struct IFFHandle *iff;
+{
+	struct ContextNode *top;
+	short i;
+	char idbuf[5];
+	
+	if (!(top = CurrentChunk(iff)))
+		return;
+	
+	for (i = iff->iff_Depth; i--;)
+		printf(". ");
+
+	printf("%s %ld ",IDtoStr(top->cn_ID,idbuf),top->cn_Size);
+	puts(IDtoStr(top->cn_Type,idbuf));
+}

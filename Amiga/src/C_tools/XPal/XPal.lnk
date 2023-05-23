@@ -1,0 +1,6 @@
+FROM LIB:c.o "XPal.o"
+TO "XPal"
+LIB LIB:scm.lib
+    LIB:sc.lib LIB:amiga.lib
+ADDSYM
+
