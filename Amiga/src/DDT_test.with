@@ -2,12 +2,17 @@ DDT:Objects/Core.o
 DDT:Objects/Hull.o
 DDT:Objects/User_interface.o
 
+DDT:Objects/Game.o
+
 DDT:Objects/Bitmaps.o
 DDT:Objects/Palettes.o
+DDT:Objects/File_types.o
+DDT:Objects/Data.o
+DDT:Objects/English.o
 
 DDT:Objects/Temporary.o
 
 to RAM:DDT_test
 
-;STRIPDEBUG
+;NODEBUG
 ADDSYM

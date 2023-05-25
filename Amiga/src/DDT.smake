@@ -1,0 +1,159 @@
+# MAKEFILE FOR DDT :
+
+LINKER = RAM:Slink
+ASSEMBLER = RAM:GenAm
+
+OBJS = Objects/Core.o \
+Objects/Hull.o \
+Objects/User_interface.o \
+Objects/Game.o \
+Objects/Bitmaps.o \
+Objects/File_types.o \
+Objects/Palettes.o \
+Objects/Data.o
+
+DDT_test: $(OBJS)
+	$(LINKER) with DDT_test.with
+
+
+# SUPPORT OBJECT MODULES :
+
+Objects/Core.o: Constants/Global.gs \
+Constants/OS/OS.gs \
+Constants/Core.i \
+Constants/Memory.i \
+Constants/File_types.i \
+Constants/Hardware_registers.gs \
+Core/Core.s \
+Core/Startup.s \
+Core/Graphics/Graphics.s \
+Core/Graphics/Graphics_bitmap.s \
+Core/Graphics/Graphics_copy.s \
+Core/Graphics/Graphics_mask.s \
+Core/Graphics/Graphics_recolour.s \
+Core/Graphics/Graphics_vector.s \
+Core/Memory/Memory.s \
+Core/Memory/Memory_allocate.s \
+Core/Memory/Memory_checks.s \
+Core/Memory/Memory_handles.s \
+Core/Memory/Memory_init.s \
+Core/Memory/Memory_lists.s \
+Core/Colours.s \
+Core/Files.s \
+Core/Input.s \
+Core/Mouse.s \
+Core/Screen_slow.s
+	$(ASSEMBLER) Core/Core.s
+
+Objects/Hull.o: Constants/Global.gs \
+Constants/Core.i \
+Constants/Memory.i \
+Constants/File_types.i \
+Constants/Hull.i \
+Constants/Control.i \
+Constants/User_interface.i \
+Hull/Dynamic_lists.s \
+Hull/HDOBs.s \
+Hull/Module_control.s \
+Hull/Numeric.s \
+Hull/OOUI.s \
+Hull/Various.s \
+Hull/Text/Text.s \
+Hull/Text/Text_commands.s \
+Hull/Text/Text_display.s \
+Hull/Text/Text_processing.s
+	$(ASSEMBLER) Hull/Hull.s
+
+Objects/User_interface.o: Constants/Global.gs \
+Constants/Core.i \
+Constants/Memory.i \
+Constants/File_types.i \
+Constants/Hull.i \
+Constants/Control.i \
+Constants/User_interface.i \
+User_interface/User_interface.s \
+User_interface/Button.s \
+User_interface/General.s \
+User_interface/Item_lists.s \
+User_interface/Item_slots.s \
+User_interface/Pop_up_menu.s \
+User_interface/Primitives.s \
+User_interface/Scroll_bar.s \
+User_interface/Text_lists.s \
+User_interface/Text_slots.s
+	$(ASSEMBLER) User_interface/User_interface.s
+
+
+# MAIN GAME OBJECT MODULE :
+
+Objects/Game.o: Constants/Global.gs \
+Constants/OS/OS.gs \
+Constants/Core.i \
+Constants/Memory.i \
+Constants/File_types.i \
+Constants/Hull.i \
+Constants/Control.i \
+Constants/User_interface.i \
+Constants/Game/Game.i \
+Constants/Game/Map.i \
+Constants/Game/2D_map.i \
+Constants/Game/3D_map.i \
+Game/Game.s \
+Game/Main.s \
+Game/Modules.s
+	$(ASSEMBLER) Game/Game.s
+
+
+# OTHER OBJECT MODULES :
+
+Objects/Bitmaps.o: Graphics/Ready/Mouse_pointers/Default.mptr \
+Graphics/Ready/Mouse_pointers/Click.mptr \
+Graphics/Ready/Mouse_pointers/Disk.mptr \
+Graphics/Ready/Mouse_pointers/Memory.mptr \
+Graphics/Ready/Mouse_pointers/Pop_up.mptr \
+Graphics/Ready/Mouse_pointers/Zzz.mptr \
+Graphics/Ready/Fonts/Normal_font \
+Graphics/Ready/Fonts/Techno_font \
+Graphics/Ready/Marmor_slab \
+Other/Bitmaps.s
+	$(ASSEMBLER) Other/Bitmaps.s
+
+Objects/File_types.o: Constants/Global.gs \
+Constants/OS/OS.gs \
+Constants/Core.i \
+Constants/Memory.i \
+Constants/File_types.i \
+Other/File_types.s
+	$(ASSEMBLER) Other/File_types.s
+
+Objects/Palettes.o: Other/Palettes.s \
+Graphics/Ready/Palettes/Main_palette
+	$(ASSEMBLER) Other/Palettes.s
+
+Objects/English.o: Other/English.s
+	$(ASSEMBLER) Other/English.s
+
+Objects/Data.o: Other/Data.s \
+Data/Sine_table
+	$(ASSEMBLER) Other/Data.s
+
+
+# CONSTANTS INCLUDE FILES :
+
+Constants/Hardware_registers.gs: Constants/Hardware_registers.i
+	$(ASSEMBLER) Constants/Hardware_registers.i
+
+Constants/OS/OS.gs: Constants/OS/OS.i \
+Constants/Global.gs \
+Constants/OS/OS_error_codes.i \
+Constants/OS/OS_tags.i \
+Constants/OS/Exec_lib.i \
+Constants/OS/Dos_lib.i \
+Constants/OS/Graphics_lib.i \
+Constants/OS/Intuition_lib.i \
+Constants/OS/Asl_lib.i
+	$(ASSEMBLER) Constants/OS/OS.i
+
+Constants/Global.gs: Constants/Global.i \
+Constants/Error_codes.i
+	$(ASSEMBLER) Constants/Global.i

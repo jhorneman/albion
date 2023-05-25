@@ -11,6 +11,7 @@
 Reset_memory:
 	movem.l	d7/a0-a2,-(sp)
 	move.w	#Check_frequency,Check_counter	; Reset
+	move.w	#Age_all_frequency,Age_counter
 	lea.l	Memory_areas,a2		; All areas
 	move.w	Number_of_areas,d7
 	bra.s	.Entry
@@ -29,7 +30,7 @@ Reset_memory:
 .Entry:	dbra	d7,.Loop
 	LOCAL
 	lea.l	File_infos,a0		; Clear file infos
-	moveq.l	#Max_files-1,d7
+	move.w	#Max_files-1,d7
 .Loop:	clr.b	File_type(a0)
 	lea.l	File_data_size(a0),a0
 	dbra	d7,.Loop
@@ -93,6 +94,7 @@ Init_memory:
 	cmp.l	#Small_fish,d0		; Too small ?
 	bmi.s	.Done
 	move.l	d0,d2			; Save size
+ 	or.l	#MEMF_PUBLIC,d1
 	kickEXEC	AllocMem			; Get it
 	tst.l	d0			; Error ? -> try again
 	beq.s	.Again1
@@ -133,17 +135,16 @@ Init_memory:
 	beq	.End
 	bra.s	.Again2
 .Split:	sub.l	d0,d4			; Return area
-	movem.l	d0/d1/a0/a1,-(sp)
 	move.l	Area_size(a2),d0		; Free area memory
 	move.l	Area_start(a2),a1
 	kickEXEC	FreeMem
-	movem.l	(sp)+,d0/d1/a0/a1
 	subq.w	#1,d7			; One area less
 	sub.l	d3,d0			; Get proper size
 	cmp.l	#Small_fish,d0		; Too small ?
 	bmi.s	.End
 	move.l	d0,d2			; Save size
 	move.l	d6,d1			; Get area again
+ 	or.l	#MEMF_PUBLIC,d1
 	kickEXEC	AllocMem
 	tst.l	d0
 	beq.s	.End

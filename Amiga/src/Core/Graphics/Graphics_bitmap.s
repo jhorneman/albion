@@ -5,20 +5,19 @@
 
 	SECTION	Program,code
 ;***************************************************************************
-; [ Put a 16 by 16 masked block on the screen UNCLIPPED ]
+; [ Put a 16 by 16 masked block on the screen UNCLIPPED / all planes ]
 ;   IN : d0 - X-coordinate (on trunc boundary) (.w)
 ;        d1 - Y-coordinate (.w)
-;        d4 - Base colour (if d5 <> Screen_depth) (.w)
-;        d5 - Number of planes {0...Screen_depth} (.w)
 ;        a0 - Pointer to graphics (.l)
 ; All registers are restored
+; Notes :
+;   - This routine assumes the blitter is owned.
 ;***************************************************************************
 Put_masked_icon:
-	movem.l	d0-d7/a0-a2/a6,-(sp)
-	kickGFX	OwnBlitter
+	movem.l	d0-d3/d7/a0-a2/a6,-(sp)
 	lea.l	Custom,a6
 ; ---------- Prepare blitter ----------------------
-	jsr	Calculate_small_mask
+	jsr	Calculate_small_mask_all
 	move.l	Work_screen,a1		; Calculate screen address
 	and.w	#$fff0,d0
 	jsr	Coord_convert
@@ -27,127 +26,53 @@ Put_masked_icon:
 	move.l	#-1,bltafwm(a6)		; Set mask
 	move.l	#$0fca0000,bltcon0(a6)	; Set blitter control
 	move.w	#16*64+1,d7		; Calculate blit size
-	move.w	#0,bltamod(a6)		; Set modulo A
-	move.w	d5,d2			; Set modulo B
-	subq.w	#1,d2
-	add.w	d2,d2
-	move.w	d2,bltbmod(a6)
+	move.w	#0,bltamod(a6)		; Set modulo A & B
+	move.w	#(Screen_depth-1)*2,bltbmod(a6)
 	move.w	#Bytes_per_line-2,d2	; Set modulo C & D
 	move.w	d2,bltcmod(a6)
 	move.w	d2,bltdmod(a6)
 ; ---------- Blit each plane ----------------------
-	move.w	d5,-(sp)
-	bra.s	.Entry1
-.Loop1:	Wait_4_blitter
-	move.l	a2,bltapt(a6)		; Set pointers
+	moveq.l	#Screen_depth-1,d0
+	bra.s	.Entry
+.Loop:	Wait_4_blitter
+.Entry:	move.l	a2,bltapt(a6)		; Set pointers
 	move.l	a0,bltbpt(a6)
 	move.l	a1,bltcpt(a6)
 	move.l	a1,bltdpt(a6)
 	move.w	d7,bltsize(a6)		; Set blit size & start
 	addq.l	#2,a0			; Next plane
 	add.w	#Bytes_per_plane,a1
-.Entry1:	dbra	d5,.Loop1
-	move.w	(sp)+,d0
-; ---------- Blit each remaining plane ------------
-	cmp.w	#Screen_depth,d0		; Any ?
-	beq	.Exit
-	ror.b	d0,d4
-	Wait_4_blitter			; Set new modulo B
-	move.w	d2,bltbmod(a6)
-	clr.w	bltcon1(a6)		; Clear blitter control (!)
-	moveq.l	#Screen_depth,d5		; Do
-	sub.w	d0,d5
-	bra.s	.Entry2
-.Loop2:	Wait_4_blitter
-	ror.b	d4			; Determine plane
-	bcc.s	.Zero
-	move.w	#$0dfc,bltcon0(a6)
-	bra.s	.Do
-.Zero:	or.w	#$0d0c,bltcon0(a6)
-.Do:	move.l	a2,bltapt(a6)		; Set pointers
-	move.l	a1,bltbpt(a6)
-	move.l	a1,bltdpt(a6)
-	move.w	d7,bltsize(a6)		; Set blit size & start
-	add.w	#Bytes_per_plane,a1		; Next plane
-.Entry2:	dbra	d5,.Loop2
-.Exit:	kickGFX	DisownBlitter
-	movem.l	(sp)+,d0-d7/a0-a2/a6
+	dbra	d0,.Loop
+	movem.l	(sp)+,d0-d3/d7/a0-a2/a6
 	rts
 
 ;***************************************************************************
-; [ Put a 16 by 16 unmasked block on the screen UNCLIPPED ]
+; [ Put a 16 by 16 unmasked block on the screen UNCLIPPED / all planes ]
 ;   IN : d0 - X-coordinate (on trunc boundary) (.w)
 ;        d1 - Y-coordinate (.w)
-;        d4 - Base colour (if d5 <> Screen_depth) (.w)
-;        d5 - Number of planes {0...Screen_depth} (.w)
 ;        a0 - Pointer to graphics (.l)
 ; All registers are restored
+; Notes :
+;   - This routine assumes the blitter is owned.
 ;***************************************************************************
 Put_unmasked_icon:
-	movem.l	d0-d5/d7/a0-a2/a6,-(sp)
-	kickGFX	OwnBlitter
+	movem.l	d0-d3/a0/a1/a6,-(sp)
 	lea.l	Custom,a6
-; ---------- Prepare ------------------------------
+; ---------- Prepare blitter ----------------------
 	move.l	Work_screen,a1		; Calculate screen address
 	and.w	#$fff0,d0
 	jsr	Coord_convert
 	add.l	d2,a1
-	cmp.w	#Screen_depth,d5		; All planes ?
-	bne	.Not_all
-; ---------- Do all planes ------------------------
 	Wait_4_blitter			; Wait
 	move.l	#-1,bltafwm(a6)		; Set mask
 	move.l	#$09f00000,bltcon0(a6)	; Set blitter control
 	move.w	#0,bltamod(a6)		; Set modulos
 	move.w	#Bytes_per_plane-2,bltdmod(a6)
+; ---------- Do all planes ------------------------
 	move.l	a0,bltapt(a6)		; Set pointers
 	move.l	a1,bltdpt(a6)
 	move.w	#64*16*Screen_depth+1,bltsize(a6)	; Set blit size & start
-	bra	.Exit
-; ---------- Do some planes -----------------------
-.Not_all:	jsr	Calculate_small_mask	; Make mask
-	Wait_4_blitter			; Wait
-	move.l	#-1,bltafwm(a6)		; Set mask
-	move.l	#$09f00000,bltcon0(a6)	; Set blitter control
-	move.w	#64*16+1,d7		; Calculate blit size
-	move.w	#Bytes_per_line-2,bltdmod(a6)	; Set modulo D
-	move.w	d5,d2			; Set modulo A
-	subq.w	#1,d2
-	add.w	d2,d2
-	move.w	d2,bltamod(a6)
-; ---------- Blit each plane ----------------------
-	move.w	d5,-(sp)
-	bra.s	.Entry1
-.Loop1:	Wait_4_blitter
-	move.l	a0,bltapt(a6)		; Set pointers
-	move.l	a1,bltdpt(a6)
-	move.w	d7,bltsize(a6)		; Set blit size & start
-	addq.l	#2,a0			; Next plane
-	add.w	#Bytes_per_plane,a1
-.Entry1:	dbra	d5,.Loop1
-	move.w	(sp)+,d0
-; ---------- Blit each remaining plane ------------
-	cmp.w	#Screen_depth,d0		; Any ?
-	beq	.Exit
-	ror.b	d0,d4
-	Wait_4_blitter			; Set new modulo A
-	move.w	#0,bltamod(a6)
-	moveq.l	#Screen_depth,d5		; Do
-	sub.w	d0,d5
-	bra.s	.Entry2
-.Loop2:	Wait_4_blitter
-	ror.b	d4			; Determine plane
-	bcc.s	.Zero
-	move.w	#$09f0,bltcon0(a6)
-	bra.s	.Go_on
-.Zero:	move.w	#$0900,bltcon0(a6)
-.Go_on:	move.l	a2,bltapt(a6)		; Set pointers
-	move.l	a1,bltdpt(a6)
-	move.w	d7,bltsize(a6)		; Set blit size & start
-	add.w	#Bytes_per_plane,a1		; Next plane
-.Entry2:	dbra	d5,.Loop2
-.Exit:	kickGFX	DisownBlitter
-	movem.l	(sp)+,d0-d5/d7/a0-a2/a6
+	movem.l	(sp)+,d0-d3/a0/a1/a6
 	rts
 
 ;***************************************************************************
@@ -167,8 +92,10 @@ Put_masked_block:
 	movem.l	d0-d7/a0-a3/a5/a6,-(sp)
 	lea.l	-Put_block_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 	move.w	d0,BlockX1(a5)		; Store X1
 	move.w	d6,d2			; Calculate & store X2
 	lsl.w	#4,d2
@@ -359,8 +286,10 @@ Put_masked_block:
 	jsr	Free_pointer
 	jsr	Free_memory
 .No_buf:	clr.b	Mask_buffer_handle
-	kickGFX	DisownBlitter
-	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
 	movem.l	(sp)+,d0-d7/a0-a3/a5/a6
 	rts
 
@@ -636,8 +565,10 @@ Put_masked_silhouette:
 	movem.l	d0-d7/a0-a3/a5/a6,-(sp)
 	lea.l	-Put_block_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 	move.w	d0,BlockX1(a5)		; Store X1
 	move.w	d6,d2			; Calculate & store X2
 	lsl.w	#4,d2
@@ -784,8 +715,10 @@ Put_masked_silhouette:
 	jsr	Free_pointer
 	jsr	Free_memory
 .No_buf:	clr.b	Mask_buffer_handle
-	kickGFX	DisownBlitter
-	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
 	movem.l	(sp)+,d0-d7/a0-a3/a5/a6
 	rts
 
@@ -806,8 +739,10 @@ Put_unmasked_block:
 	movem.l	d0-d7/a0-a2/a5/a6,-(sp)
 	lea.l	-Put_block_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 	move.w	d4,Mask_colour(a5)		; Store colour
 	cmp.w	#Screen_depth,d5		; Mask needed ?
 	beq.s	.No_mask
@@ -931,8 +866,10 @@ Put_unmasked_block:
 	jsr	Free_pointer
 	jsr	Free_memory
 .No_buf:	clr.b	Mask_buffer_handle
-	kickGFX	DisownBlitter
-	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
 	movem.l	(sp)+,d0-d7/a0-a2/a5/a6
 	rts
 
@@ -949,8 +886,10 @@ Put_unmasked_block_all:
 	movem.l	d0-d7/a0/a1/a5/a6,-(sp)
 	lea.l	-Put_block_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 ; ---------- Check if block is off-screen ---------
 	and.w	#$fff0,d0			; Round to trunc
 	move.l	CA_Sp,a1			; Get CA
@@ -1047,8 +986,10 @@ Put_unmasked_block_all:
 	move.l	a0,bltapt(a6)		; Set pointers
 	move.l	a1,bltdpt(a6)
 	move.w	d7,bltsize(a6)		; Set blit size & start
-.Exit:	kickGFX	DisownBlitter
-	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
+.Exit:	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	lea.l	Put_block_LDS(sp),sp	; Destroy local variables
 	movem.l	(sp)+,d0-d7/a0/a1/a5/a6
 	rts
 
@@ -1062,8 +1003,10 @@ Put_unmasked_block_all:
 ;***************************************************************************
 Put_line_buffer:
 	movem.l	d0-d7/a0-a1/a6,-(sp)
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 	lea.l	Line_buffer,a0
 ; ---------- Check if block is off-screen ---------
 	and.w	#$fff0,d0			; Round to trunc
@@ -1153,8 +1096,10 @@ Put_line_buffer:
 	lea.l	Bytes_per_plane(a1),a1	; Next plane
 	dbra	d5,.Loop
 .Exit:	Wait_4_blitter
-	kickGFX	DisownBlitter
-	movem.l	(sp)+,d0-d7/a0-a1/a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	movem.l	(sp)+,d0-d7/a0-a1/a6
 	rts
 
 ;***************************************************************************
@@ -1169,8 +1114,10 @@ Put_line_buffer_shadow:
 	tst.w	Shadow_colour		; Any shadow ?
 	bmi	.No_shadow
 	movem.l	d0-d7/a0-a1/a6,-(sp)
-	kickGFX	OwnBlitter
-	lea.l	Custom,a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned1
+	kickGFX	OwnBlitter		; No
+.Owned1:	lea.l	Custom,a6
 	lea.l	Line_buffer,a0
 	addq.w	#1,d1			; Down one
 ; ---------- Check if block is off-screen ---------
@@ -1263,7 +1210,9 @@ Put_line_buffer_shadow:
 	lea.l	Bytes_per_plane(a1),a1	; Next plane
 	dbra	d5,.Loop
 .Exit:	Wait_4_blitter
-	kickGFX	DisownBlitter
-	movem.l	(sp)+,d0-d7/a0-a1/a6
+	tst.b	Graphics_ops		; Already owned ?
+	bne.s	.Owned2
+	kickGFX	DisownBlitter		; No
+.Owned2:	movem.l	(sp)+,d0-d7/a0-a1/a6
 .No_shadow:
 	rts

@@ -58,7 +58,7 @@ Duplicate_box:
 	bmi.s	.Done
 	move.w	Y2(a0),d3
 ; ---------- Prepare blitter ----------------------
-.Done:	movem.l	d2/d3,-(sp)		; Calculate screen address
+.Done:	movem.l	d2/d3,-(sp)		; Calculate screen addresses
 	move.l	Off_screen,a0
 	move.l	On_screen,a1
 	jsr	Coord_convert
@@ -97,6 +97,63 @@ Duplicate_box:
 	move.w	d7,bltsize(a6)		; Set blit size & start
 .Exit:	kickGFX	DisownBlitter
 	movem.l	(sp)+,d0-d7/a0/a1/a6
+	rts
+
+;***************************************************************************
+; [ Duplicate an 8x8 block from the invisible to the visible screen CLIPPED ]
+;   IN : d0 - Top-left X-coordinate (.w)
+;        d1 - Top-left Y-coordinate (.w)
+; All registers are restored
+; Notes :
+;  - This routine will handle {Screen_depth} bitplanes.
+;  - The coordinates will be rounded to byte boundaries.
+;  - This routine won't do "real" clipping but will check if the ebe is in
+;     the current CA.
+;***************************************************************************
+Blend_ebe:
+	movem.l	d0-d3/a0/a1,-(sp)
+	Wait_4_blitter			; Wait
+	and.w	#$fff8,d0			; Round to byte boundaries
+	and.w	#$fff8,d1
+; ---------- Check if block is off-screen ---------
+	move.l	CA_Sp,a0			; Get CA
+	move.l	(a0),a0
+	cmp.w	X2(a0),d0			; X1 over right edge ?
+	bgt	.Exit
+	cmp.w	Y2(a0),d1			; Y1 over bottom edge ?
+	bgt	.Exit
+	move.w	d0,d2			; Calculate X2
+	addq.w	#7,d2
+	cmp.w	X1(a0),d2			; X2 over left edge ?
+	bmi	.Exit
+	move.w	d1,d3			; Calculate Y2
+	addq.w	#7,d3
+	cmp.w	Y1(a0),d3			; Y2 over top edge ?
+	bmi	.Exit
+; ---------- Just do it ---------------------------
+	move.l	On_screen,a0		; Calculate screen addresses
+	move.l	Off_screen,a1
+	jsr	Coord_convert
+	add.l	d2,a0
+	add.l	d2,a1
+	cmp.w	#8,d3			; Odd ?
+	bmi.s	.Even
+	addq.l	#1,a0			; Yes -> Other byte
+	addq.l	#1,a1
+.Even:	move.w	#Bytes_per_line,d0		; Just do it
+	moveq.l	#8-1,d2
+.Loop:	move.b	(a1),(a0)
+	move.b	Bytes_per_plane(a1),Bytes_per_plane(a0)
+	move.b	Bytes_per_plane*2(a1),Bytes_per_plane*2(a0)
+	move.b	Bytes_per_plane*3(a1),Bytes_per_plane*3(a0)
+	move.b	Bytes_per_plane*4(a1),Bytes_per_plane*4(a0)
+	move.b	Bytes_per_plane*5(a1),Bytes_per_plane*5(a0)
+	move.b	Bytes_per_plane*6(a1),Bytes_per_plane*6(a0)
+	move.b	Bytes_per_plane*7(a1),Bytes_per_plane*7(a0)
+	add.w	d0,a0
+	add.w	d0,a1
+	dbra	d2,.Loop
+.Exit:	movem.l	(sp)+,d0-d3/a0/a1
 	rts
 
 ;***************************************************************************
@@ -511,4 +568,98 @@ VScroll_block_all:
 	move.w	d7,bltsize(a6)		; Set blit size & start
 .Exit:	kickGFX	DisownBlitter
 	movem.l	(sp)+,d0-d7/a0/a1/a6
+	rts
+
+;***************************************************************************
+; [ Display a chunky block UNCLIPPED ]
+;   IN : d0 - X-coordinate (on trunc boundary) (.w)
+;        d1 - Y-coordinate (.w)
+;        d6 - Width of block in truncs (must be even) (.w)
+;        d7 - Height of block in pixels (.w)
+;        a0 - Pointer to chunky block (.l)
+; All registers are restored
+;***************************************************************************
+Display_chunky_block:
+	movem.l	d0-d7/a0-a6,-(sp)
+	Wait_4_blitter			; Wait
+	move.l	Work_screen,a1		; Get screen address
+	jsr	Coord_convert
+	add.l	d2,a1
+	move.w	#Bytes_per_line,d2		; Calculate line offset
+	sub.w	d6,d2
+	sub.w	d6,d2
+	move.l	#$0f0f0f0f,a2		; Load masks
+	move.l	#$f0f0f0f0,a3
+	move.l	#$3333cccc,a4
+	move.l	#$55005500,a5
+	move.l	#$00aa00aa,a6
+	subq.w	#1,d7
+.Loop_Y:	move.w	d6,d3
+	add.w	d3,d3
+	subq.w	#1,d3
+.Loop_X1:	move.l	(a0)+,d0			; Read graphics
+	move.l	(a0)+,d1
+	move.l	a2,d4			; First swapping
+	move.l	a3,d5
+	and.l	d0,d4
+	and.l	d1,d5
+	eor.l	d4,d0
+	eor.l	d5,d1
+	lsl.l	#4,d4
+	lsr.l	#4,d5
+	or.l	d5,d0
+	or.l	d4,d1
+	move.l	a4,d4			; Second swapping
+	and.l	d0,d4
+	eor.l	d4,d0
+	lsr.w	#2,d4
+	swap	d4	
+	lsl.w	#2,d4
+	or.l	d4,d0
+	move.l	a4,d4
+	and.l	d1,d4
+	eor.l	d4,d1
+	lsr.w	#2,d4
+	swap	d4	
+	lsl.w	#2,d4
+	or.l	d4,d1
+	move.l	a5,d4			; Third swapping
+	move.l	a6,d5
+	and.l	d0,d4
+	and.l	d0,d5
+	eor.l	d4,d0
+	eor.l	d5,d0
+	lsr.l	#7,d4
+	lsl.l	#7,d5
+	or.l	d4,d0
+	or.l	d5,d0
+	move.l	a5,d4
+	move.l	a6,d5
+	and.l	d1,d4
+	and.l	d1,d5
+	eor.l	d4,d1
+	eor.l	d5,d1
+	lsr.l	#7,d4
+	lsl.l	#7,d5
+	or.l	d4,d1
+	or.l	d5,d1
+	move.b	d0,4*Bytes_per_plane(a1)	; Write graphics
+	lsr.w	#8,d0
+	move.b	d0,5*Bytes_per_plane(a1)
+	swap	d0
+	move.b	d0,6*Bytes_per_plane(a1)
+	lsr.w	#8,d0
+	move.b	d0,7*Bytes_per_plane(a1)
+	move.b	d1,(a1)
+	lsr.w	#8,d1
+	move.b	d1,Bytes_per_plane(a1)
+	swap	d1
+	move.b	d1,2*Bytes_per_plane(a1)
+	lsr.w	#8,d1
+	move.b	d1,3*Bytes_per_plane(a1)
+	addq.l	#1,a1			; Next byte
+	dbra	d3,.Loop_X1
+	add.w	d2,a1			; Next line
+	dbra	d7,.Loop_Y
+	movem.l	(sp)+,d0-d7/a0-a6
 	rts

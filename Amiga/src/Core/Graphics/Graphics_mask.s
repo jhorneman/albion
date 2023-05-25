@@ -301,6 +301,7 @@ Calculate_mask_all_CPU:
 .Exit:	movem.l	(sp)+,d0-d4/d6/d7/a0/a1
 	rts
 
+	ifne	FALSE
 ;***************************************************************************
 ; [ Calculate small mask / any planes ]
 ;   IN : d5 - Number of planes {0...Screen_depth} (.w)
@@ -349,6 +350,7 @@ Calculate_small_mask:
 	dbra	d5,.Loop
 .Exit:	movem.l	(sp)+,d0/d5/d7/a0
 	rts
+	endc
 
 ;***************************************************************************
 ; [ Calculate small mask / all planes ]
@@ -405,6 +407,7 @@ Calculate_small_mask_all:
 .Exit:	movem.l	(sp)+,d0/d7/a0
 	rts
 
+	ifne	FALSE
 ;***************************************************************************
 ; [ Calculate small mask / any planes / CPU ]
 ;   IN : d5 - Number of planes {0...Screen_depth} (.w)
@@ -437,6 +440,7 @@ Calculate_small_mask_CPU:
 	lea.l	Fast_mask_buffer,a2		; Output
 	movem.l	(sp)+,d0/d1/d5/d7/a0
 	rts
+	endc
 
 ;***************************************************************************
 ; [ Calculate small mask / all planes / CPU ]
@@ -471,8 +475,3 @@ Calculate_small_mask_all_CPU:
 	SECTION	Chip_BSS,bss_c
 Fast_mask_buffer:
 Chip_mask_buffer:	ds.w Mask_buffer_size/2
-
-
-	SECTION	Fast_BSS,bss
-Mask_buffer_handle:	ds.b 1
-	even

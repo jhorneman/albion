@@ -1,0 +1,23 @@
+
+
+
+
+Repeat
+	Get d0-d3 for area
+	Button pressed ?
+		No -> Exit
+	In area (d0-d3) ?
+		No -> Reset colour
+		Yes -> Increase colour
+	Draw box (d0-d3)
+	Print text / draw symbol
+End
+Reset colour
+Draw box
+Print text / draw symbol
+
+
+Do_PUME_feedback (eq,ne)
+Do_item_feedback (eq,ne)
+Do_multiple_item_feedback (eq,ne) + Grab_all_flag
+

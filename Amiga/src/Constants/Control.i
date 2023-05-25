@@ -71,6 +71,8 @@ Object_warn_when_deleted:	rs.b 1	; Used by [ Wait_4_object ].
 Object_control:	rs.b 1		; Object is used for grouping other
 				;  objects and has no rectangle of
 				;  it's own.
+Object_no_container:	rs.b 1	; Object's children lie outside it's
+				;  own rectangle.
 Object_disable:	rs.b 1		; Interaction with this object is
 				;  disabled.
 

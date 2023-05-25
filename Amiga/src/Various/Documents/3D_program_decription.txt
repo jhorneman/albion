@@ -1,0 +1,35 @@
+
+M3 MODINIT :
+
+Load map data
+Load map palette
+Set shade factor
+Calculate shade function
+Make modifications
+Set variables
+Analyze lab data
+Initialize other variables
+Initialize position
+Set light parameters
+Check wall transparencies
+Initialize persons
+Get first location status
+Float up or down
+
+M3 DISINIT :
+
+Set map palette
+Calculate shade table
+Draw first time
+Wipe
+
+M3 DISUPD :
+
+Do colour cycling
+Set view direction
+Draw a black box if it's dark, else :
+Claim lots of pointers
+Draw dungeon on BPP screen
+Display BPP screen
+Free some handles
+Update animation

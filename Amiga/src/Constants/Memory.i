@@ -5,8 +5,7 @@
 Max_areas		EQU 10
 Max_blocks	EQU 500
 Max_handles	EQU 200
-Max_files		EQU 100
-
+Max_files		EQU 255
 
 Small_fish	EQU 5*1024		; Too small to manage
 OS_CHIP	EQU 20*1024		; Returned to OS

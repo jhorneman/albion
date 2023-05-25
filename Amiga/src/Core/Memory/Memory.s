@@ -4,6 +4,7 @@
 ; Start : 26-1-1994
 
 	XDEF	Clear_all_claims
+	XDEF	Get_pointer
 	XDEF	Claim_pointer
 	XDEF	Free_pointer
 	XDEF	Reallocate_memory
@@ -20,7 +21,6 @@
 	XDEF	Invalidate_memory
 	XDEF	Kill_unclaimed_memory
 	XDEF	Total_FAST_memory
-	XDEF	Default_memory_type
 	XDEF	Reset_memory
 	XDEF	Init_memory
 	XDEF	Exit_memory
@@ -75,7 +75,6 @@ Get_memory_length:
 ;*****************************************************************************
 Shrink_memory:
 	movem.l	d0/d1/a0/a1,-(sp)
-	jsr	Update_memory_time
 	jsr	Find_entry		; Find entry
 	bne.s	.Exit
 	jsr	Find_file_info		; Just a memory block ?
@@ -103,7 +102,6 @@ Shrink_memory:
 ;*****************************************************************************
 Free_memory:
 	movem.l	a0/a1,-(sp)
-	jsr	Update_memory_time
 	jsr	Find_entry		; Find entry
 	bne.s	.Exit
 	btst	#Allocated,Block_flags(a0)	; Already freed ?
@@ -135,7 +133,6 @@ Free_memory:
 ;*****************************************************************************
 Kill_memory:
 	movem.l	a0/a1,-(sp)
-	jsr	Update_memory_time
 	jsr	Find_entry		; Find entry
 	bne.s	.Exit
 	tst.b	Block_claim(a0)		; Claimed ?
@@ -204,10 +201,6 @@ Find_free_file_info_block:
 ;***************************************************************************	
 ; The DATA & BSS segments
 ;***************************************************************************	
-	SECTION	Fast_DATA,data
-Default_memory_type:	dc.b DONTCARE
-	even
-
 	SECTION	Fast_BSS,bss
 Number_of_areas:	ds.w 1
 Memory_areas:	ds.b Max_areas*Area_data_size

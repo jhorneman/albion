@@ -7,8 +7,8 @@
 	SECTION	Program,code
 ;***************************************************************************	
 ; [ Initialize method for scroll bar objects ]
-;   IN : a0 - Pointer to scroll bar object (.l)
-;        a1 - Pointer to scroll bar OID (.l)
+;   IN : a0 - Pointer to object (.l)
+;        a1 - Pointer to OID (.l)
 ; All registers are restored
 ;***************************************************************************
 Init_scroll_bar:
@@ -18,6 +18,7 @@ Init_scroll_bar:
 	move.w	OID_Units_width(a1),Units_width(a0)
 	move.w	OID_Units_height(a1),Units_height(a0)
 	move.w	OID_Scroll_bar_height(a1),Scroll_bar_height(a0)
+	move.w	OID_Scroll_bar_update_ptr(a1),Scroll_bar_update_ptr(a0)
 	move.w	OID_X(a1),d0		; Set rectangle
 	move.w	OID_Y(a1),d1
 	add.w	X1(a0),d0
@@ -29,6 +30,7 @@ Init_scroll_bar:
 	subq.w	#1,d1
 	move.w	d0,X2(a0)
 	move.w	d1,Y2(a0)
+	bset	#Object_no_container,Object_flags(a0)
 ; ---------- Scroll at all ? ----------------------
 	moveq.l	#0,d0			; Total units less or same
 	move.w	Total_units(a0),d0		;  as visible units ?
@@ -64,24 +66,24 @@ Init_scroll_bar:
 
 ;***************************************************************************	
 ; [ Draw AND Update method for scroll bar objects ]
-;   IN : a0 - Pointer to scroll bar object (.l)
+;   IN : a0 - Pointer to object (.l)
 ; All registers are restored
 ;***************************************************************************
 Draw_scroll_bar:
-	movem.l	d0/d1/d7/a0,-(sp)
+	movem.l	a1,-(sp)
 	sf	Slider_selected
 	jsr	Do_draw_scroll_bar		; Re-draw scroll bar
-	move.w	Object_self(a0),d0		; Draw all elements
-	move.w	#Draw_method,d1
-	move.w 	Scroll_bar_result(a0),d7
-	jsr	Execute_brother_methods
-	movem.l	(sp)+,d0/d1/d7/a0
+	move.l	Scroll_bar_update_ptr(a0),a1	; Update
+	cmp.l	#0,a1
+	beq.s	.None
+	jsr	(a1)
+.None:	movem.l	(sp)+,a1
 	rts
 
 ;***************************************************************************	
 ; [ Set method for scroll bar objects ]
 ;   IN : d2 - Scroll bar result (.w)
-;        a0 - Pointer to scroll bar object (.l)
+;        a0 - Pointer to object (.l)
 ; All registers are restored
 ;***************************************************************************
 Set_scroll_bar:
@@ -99,7 +101,7 @@ Set_scroll_bar:
 
 ;***************************************************************************	
 ; [ Get method for scroll bar objects ]
-;   IN : a0 - Pointer to scroll bar object (.l)
+;   IN : a0 - Pointer to object (.l)
 ;  OUT : d0 - Scroll bar Y-position (.w)
 ; All registers are restored
 ;***************************************************************************
@@ -108,8 +110,8 @@ Get_scroll_bar:
 	rts
 
 ;***************************************************************************	
-; [ Scroll bar clicked mouse event ]
-;   IN : a0 - Pointer to scroll bar object (.l)
+; [ Left method for scroll bar objects ]
+;   IN : a0 - Pointer to object (.l)
 ; No registers are restored
 ;***************************************************************************
 Scroll_bar_clicked:
@@ -247,7 +249,7 @@ Light_slider:
 ; All registers are restored
 ;***************************************************************************	
 Update_slider:
-	movem.l	d0/d1/a0,-(sp)
+	movem.l	d0/a1,-(sp)
 	cmp.w	Scroll_bar_max_height(a0),d0	; Too far down ?
 	bmi.s	.Ok
 	move.w	Scroll_bar_max_height(a0),d0	; Yes
@@ -258,11 +260,25 @@ Update_slider:
 	mulu.w	Units_width(a0),d0
 	move.w	d0,Scroll_bar_result(a0)
 	jsr	Do_draw_scroll_bar		; Re-draw scroll bar
+	move.l	Scroll_bar_update_ptr(a0),a1	; Update
+	cmp.l	#0,a1
+	beq.s	.None
+	jsr	(a1)
+.None:	movem.l	(sp)+,d0/a1
+	rts
+
+;***************************************************************************	
+; [ Update a scroll bar's children ]
+;   IN : a0 - Pointer to scroll bar object (.l)
+; All registers are restored
+;***************************************************************************	
+Update_children:
+	movem.l d0/d1/d7,-(sp)
 	move.w	Object_self(a0),d0		; Draw all elements
 	move.w	#Draw_method,d1
 	move.w 	Scroll_bar_result(a0),d7
-	jsr	Execute_brother_methods
-.None:	movem.l	(sp)+,d0/d1/a0
+	jsr	Execute_child_methods
+	movem.l (sp)+,d0/d1/d7
 	rts
 
 ;***************************************************************************	
@@ -358,13 +374,11 @@ Scroll_bar_class:
 	Method Init,Init_scroll_bar
 	Method Draw,Draw_scroll_bar
 	Method Update,Draw_scroll_bar
+;	Method Highlight,Highlight_scroll_bar
+	Method Left,Scroll_bar_clicked
+	Method Touched,Normal_touched
 	Method Get,Get_scroll_bar
 	Method Set,Set_scroll_bar
-	Method Mev,.Mev
-	dc.w -1
-
-.Mev:	dc.w $0202
-	dc.l Scroll_bar_clicked
 	dc.w -1
 
 Unselected_slider_colours:

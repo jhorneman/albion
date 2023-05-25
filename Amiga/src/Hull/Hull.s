@@ -27,12 +27,15 @@
 	XREF	Put_unmasked_block
 	XREF	Put_line_buffer
 	XREF	Put_line_buffer_shadow
+	XREF	Blend_ebe
 
 	XREF	HLC_table
 	XREF	Diagnostics_list1
 	XREF	Diagnostics_list2
 	XREF	Default_module
 
+	XREF	Mouse_on
+	XREF	Mouse_off
 	XREF	Push_MA
 	XREF	Push_Mptr
 	XREF	Pop_MA
@@ -53,6 +56,8 @@
 	XREF	Normal_font
 	XREF	Techno_font
 
+	XREF	Number
+	XREF	Wait_4_user_Mod
 
 	incdir	DDT:Constants/
 	include	Global.i
@@ -62,8 +67,10 @@
 
 
 	incdir	DDT:Hull/
+	include	Blenders.s
 	include	Dynamic_lists.s
 	include	HDOBs.s
+	include	Interaction.s
 	include	Module_control.s
 	include	Numeric.s
 	include	OOUI.s

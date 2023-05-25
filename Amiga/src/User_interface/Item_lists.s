@@ -7,14 +7,16 @@
 	SECTION	Program,code
 ;***************************************************************************
 ; [ Initialize method for item list objects ]
-;   IN : a0 - Pointer to item list object (.l)
-;        a1 - Pointer to item list OID (.l)
+;   IN : a0 - Pointer to object (.l)
+;        a1 - Pointer to OID (.l)
 ; All registers are restored
 ;***************************************************************************
 Init_item_list:
 	movem.l	d0-d3/d6-d7/a0-a2,-(sp)
 ; ---------- Initialize object --------------------
-	move.w	OID_IL_nr_items(a1),IL_nr_items(a0)	; Copy
+	move.w	OID_IL_width(a1),IL_width(a0)	; Copy
+	move.w	OID_IL_height(a1),IL_height(a0)
+	move.w	OID_IL_nr_items(a1),IL_nr_items(a0)
 	move.b	OID_IL_slots_handle(a1),IL_slots_handle(a0)
 	move.l	OID_IL_slots_offset(a1),IL_slots_offset(a0)
 	move.l	OID_IL_touched(a1),IL_touched(a0)
@@ -56,7 +58,6 @@ Init_item_list:
 	Free_OID
 ; ---------- Make item slots ----------------------
 	Make_OID	Item_slot,a1		; Prepare item slot OID
-	move.w	Object_self(a0),d0
 	move.w	#1,OID_IS_nr(a1)
 	move.w	#1,OID_Y(a1)		; Do
 	move.w	OID_IL_height(a2),d7
@@ -78,8 +79,86 @@ Init_item_list:
 	rts
 
 ;***************************************************************************	
+; [ Focus method for item list objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Focus_item_list:
+	movem.l	d0-d4/a0,-(sp)
+	move.w	X1(a0),d0			; Display focus
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
+	sub.w	d0,d2
+	sub.w	d1,d3
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	move.w	#Focus_colour,d4
+	jsr	Draw_rectangle
+	tst.w	Current_highlighted_object	; Anything highlighted ?
+	bne.s	.Yes
+	move.w	Object_child(a0),d0		; No -> Select
+	jsr	Get_object_data
+	move.w	Object_child(a0),d0
+	move.w	d0,Current_highlighted_object
+	moveq.l	#Highlight_method,d1
+	jsr	Execute_method
+	jsr	Update_screen
+	movem.l	(sp)+,d0-d4/a0
+	rts
+
+	ifne	FALSE
+;***************************************************************************	
+; [ Move method for item list objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Move_item_list:
+	movem.l	d0/d1/d7/a0-a2,-(sp)
+	move.w	Current_highlighted_object,d7	; Get currently highlighted
+	move.l	a0,a1			;  object
+	move.w	d7,d0
+	jsr	Get_object_data
+	exg.l	a0,a1
+	move.w	Key_parameter,d0		; Get parameter
+	move.l	.Ptrs(pc,d0.w*4),a2		; Execute move function
+	jsr	(a2)
+	cmp.w	Current_highlighted_object,d7	; Any change ?
+	beq.s	.Exit1
+	move.w	d7,d0			; Yes -> Redraw old
+	moveq.l	#Draw_method,d1
+	jsr	Execute_method
+	move.w	Current_highlighted_object,d0	; Highlight new
+	moveq.l	#Highlight_method,d1
+	jsr	Execute_method
+	jsr	Update_screen
+.Exit1:	movem.l	(sp)+,d0/d1/d7/a0-a2
+	rts
+
+.Ptrs:	dc.l .Up,.Right,.Down,.Left
+
+.Up:	move.w	IS_nr(a1),d0		; Can move up ?
+	move.w	IL_width(a0),d1
+	sub.w	d1,d0
+	bmi.s	.Exit2
+	move.w	d0,Current_highlighted_object	; Yes
+.Exit2:	rts
+
+.Right:
+	rts
+
+.Down:
+	rts
+
+.Left:
+	rts
+	endc
+
+;***************************************************************************	
 ; [ Draw method for item list objects ]
-;   IN : a0 - Pointer to item list object (.l)
+;   IN : a0 - Pointer to object (.l)
 ; All registers are restored
 ;***************************************************************************
 Draw_item_list:
@@ -95,23 +174,10 @@ Draw_item_list:
 	subq.w	#1,d0
 	subq.w	#1,d1
 	jsr	Draw_deep_box
-	move.w	Object_child(a0),d0		; Draw children
+	move.w	Object_self(a0),d0		; Draw children
 	moveq.l	#Draw_method,d1
-	jsr	Execute_method
-	movem.l	(sp)+,d0-d3/a0
-	rts
-
-;***************************************************************************	
-; [ Update method for item list objects ]
-;   IN : a0 - Pointer to item list object (.l)
-; All registers are restored
-;***************************************************************************
-Update_item_list:
-	movem.l	d0/d1,-(sp)
-	move.w	Object_self(a0),d0		; Update all children
-	moveq.l	#Update_method,d1
 	jsr	Execute_child_methods
-	movem.l	(sp)+,d0/d1
+	movem.l	(sp)+,d0-d3/a0
 	rts
 
 ;*****************************************************************************
@@ -119,14 +185,11 @@ Update_item_list:
 ;*****************************************************************************
 	SECTION	Fast_DATA,data
 Item_list_class:
-	dc.l 0
+	dc.l Intergroup_class
 	dc.w Item_list_object_size
 	Method Init,Init_item_list
+	Method Focus,Focus_item_list
+;	Method Move,Move_item_list
 	Method Draw,Draw_item_list
-	Method Update,Update_item_list
-	Method Mev,.Mev
-	dc.w -1
-
-.Mev:	dc.w $3300
-	dc.l Dehighlight
+	Method Update,Execute_child_methods
 	dc.w -1

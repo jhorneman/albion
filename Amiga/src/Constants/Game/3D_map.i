@@ -7,7 +7,7 @@ Objects_per_group	EQU 8
 Anim_speed_3D	EQU 6
 Max_3D_VBLs	EQU 10
 
-Square_size	EQU 512		; Square size in cm
+Square_size	EQU 512		; Square size in cm. DO NOT CHANGE!!!
 NPC_stat_frame	EQU 2
 
 Max_3D_objects	EQU 64

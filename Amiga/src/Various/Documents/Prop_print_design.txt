@@ -1,0 +1,117 @@
+	Design for a proportional print-routine
+
+*** Input & output ***
+
+Input :		Pointer to a line of text (format below)
+			X-coordinate
+			Y-coordinate
+
+Output :	<None>
+
+*** Description of text format ***
+
+A string of Amiga or Atari ST ASCII characters, terminated by a zero.
+
+Several characters have a special meaning :
+
+	0 				- End of string
+	Space 			- Skip {Width of space} pixels (no graphics in font)
+	Skip			- Skip x pixels, where x is the byte following the Skip
+
+Characters not available in the font and ASCII codes below 32 are ignored
+completely.
+
+The string may contain low-level commands (LLC's) which start and end with the
+Command character. The following LLC's are supported :
+
+	~INK xx~		- Set the current printing ink to the value "xx".
+
+*** Description of Font data-structure ***
+
+	UWORD Raw_char_width
+	UWORD Raw_char_height
+	UWORD Raw_char_size
+	UWORD Between_width
+	UWORD Width_of_space
+	UWORD Nr_chars
+	APTR Font_graphics
+	APTR Kerning_table
+	UBYTE Font_translation[224]
+	UBYTE Char_width[Nr_chars]
+	EVEN
+
+*** Description of Put_text_line ***
+
+A :
+	Clear print buffer
+	Counter = 0
+	Previous_character = -1
+	Buffer_X = Screen_X AND $000f
+
+	B :
+		If Buffer_X > Width of screen
+			Call Print_buffer
+			EXIT
+
+		Read Byte from string
+		If Byte = 0
+			Call Print_buffer
+			EXIT
+		If Byte = Command_character
+			Call LLC_handler
+			Goto B
+		If Byte = Space
+			Add Width_of_space to Screen_X
+			Add Width_of_space to Buffer_X
+			Previous_character = -1
+			Goto B
+
+(		If Byte = Skip
+			Read Byte from string
+			Add Byte to Screen_X
+			Add Byte to Buffer_X
+			Previous_character = -1
+			Goto B )
+
+		If Byte < 32
+			Goto B
+		Character = Font_translation[Byte]
+		If Character = -1
+			Goto B
+
+		If Previous_character <> -1
+			If Previous_character + Character are in the Paired Kerning table
+				Decrease Screen_X
+				Decrease Buffer_X
+
+		Insert character from font in print buffer
+
+		Add Character_width[Character] to Screen_X
+		Add Character_width[Character] to Buffer_X
+		Previous_character = Character
+		Increase Counter
+
+		Goto B
+
+*** Description of LLC-handler ***
+
+Skip Command character
+Read next four characters
+Search in command list
+If found
+	Call command handler
+Search until next Command character is reached
+
+*** Description of Ink-command-handler ***
+
+Call Print print buffer
+Read two characters
+Current ink = new value
+
+*** Description of Print print buffer ***
+
+If Counter <> 0
+	Print current print buffer (Width is (Buffer_X + 15) AND $fff0)
+	Clear print buffer
+	Buffer_X = Screen_X AND $000f
+	Counter = 0

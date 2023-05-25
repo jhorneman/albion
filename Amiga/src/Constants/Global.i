@@ -25,6 +25,10 @@ rseven	macro
 	rs.w 0
 	endm
 
+dsbit	macro
+	ds.b (\1+7)/8
+	endm
+
 Push	macro
 	lea.l	\2,a0
 	jsr	Push_\1

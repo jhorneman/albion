@@ -1,0 +1,646 @@
+; Interaction management
+; Written by J.Horneman (In Tune With The Universe)
+; Start : 12-4-1994
+
+	XDEF	Handle_input
+	XDEF	Cycle_focus
+	XDEF	Move_highlight
+	XDEF	Dehighlight
+	XDEF	Unfocus
+	XDEF	Has_method
+	XDEF	Is_over_object
+	XDEF	Key_or_mouse
+	XDEF	Key_parameter
+	XDEF	Current_highlighted_object
+	XDEF	Current_focussed_object
+
+	SECTION	Program,code
+;***************************************************************************
+; [ Handle object interaction ]
+; All registers are restored
+;***************************************************************************
+Handle_input:
+	movem.l	d0-d2,-(sp)
+	tst.b	Key_or_mouse		; Key or mouse mode ?
+	bne	.Mouse
+; ---------- Key mode -----------------------------
+	jsr	Read_Mev			; Key -> Any mouse event ?
+	tst.w	d2
+	beq.s	.No
+.Switch1:	jsr	Reset_keyboard		; Yes
+	jsr	Unfocus			; Unfocus
+	jsr	Mouse_on			; Go to mouse mode
+	st	Key_or_mouse
+	bra	.Handle2
+.No:	move.w	Mouse_X,d0		; Mouse moved ?
+	move.w	Mouse_Y,d1
+	cmp.w	Old_mouse_X,d0
+	bne.s	.Switch1
+	cmp.w	Old_mouse_Y,d1
+	bne.s	.Switch1
+	jsr	Read_key			; No -> Any key event ?
+	tst.l	d0
+	beq	.Done
+.Handle1:	move.l	d0,Current_input_event	; Yes
+	jsr	Handle_key_event		; Handle key event
+	bra	.Done
+; ---------- Mouse mode ---------------------------
+.Mouse:	jsr	Read_Mev			; Mouse -> Any mouse event ?
+	tst.w	d2
+	bne.s	.Handle2
+	jsr	Read_key			; No -> Any key event ?
+	tst.l	d0
+	bne.s	.Switch2
+.Touch:	move.w	Mouse_X,d0		; No -> Touched event
+	move.w	Mouse_Y,d1
+	move.b	Button_state,d2
+	bra.s	.Handle2
+.Switch2:	sf	Key_or_mouse		; Yes -> Go to key mode
+	jsr	Mouse_off
+	jsr	Set_focus			; Set focus
+	move.w	Mouse_X,Old_mouse_X		; Save mouse coordinates
+	move.w	Mouse_Y,Old_mouse_Y
+	bra	.Handle1
+.Handle2:	movem.w	d0-d2,Current_input_event
+	jsr	Handle_mouse_event		; Handle mouse event
+	jsr	Reset_mouse_buffer
+.Done:	movem.l	(sp)+,d0-d2
+	rts
+
+;***************************************************************************
+; [ Handle key event ]
+;   IN : d0 - Key event (.l)
+; All registers are restored
+;***************************************************************************
+Handle_key_event:
+	movem.l	d0-d3/a0/a1,-(sp)
+	btst	#Amiga_key,d0		; Diagnostic key ?
+	beq.s	.No
+	lea.l	Diagnostics_list1,a0	; Yes -> Check
+	jsr	Handle_Kev_list
+	bne	.Exit
+	lea.l	Diagnostics_list2,a0
+	jsr	Handle_Kev_list
+	bra	.Exit
+.No:	move.l	d0,d2			; Save
+; ---------- Find method belonging to key ---------
+	lea.l	Key_methods,a0
+	moveq.l	#0,d3
+.Again1:	tst.l	(a0)			; End of list ?
+	beq	.Done
+	move.l	(a0)+,d1			; Mask
+	and.l	d0,d1
+	cmp.l	(a0)+,d1			; Compare
+	bne.s	.Next1
+	move.w	(a0)+,d3			; Yay!
+	move.w	(a0),Key_parameter
+	bra.s	.Done
+.Next1:	addq.l	#4,a0			; Next event
+	bra.s	.Again1
+; ---------- Search an object with this method ----
+.Done:	move.w	Current_highlighted_object,d0	; Start at highlighted
+	beq.s	.Exit
+.Again2:	jsr	Get_object_data		; Get object data
+	moveq.l	#Customkey_method,d1	; Has a customkey method ?
+	jsr	Has_method
+	beq.s	.No1
+	movem.l	d0/a0,-(sp)
+	jsr	Execute_method		; Yes -> Get list
+	move.l	a1,a0
+	move.l	d2,d0			; Handle it
+	jsr	Handle_Kev_list
+	sne	d1
+	movem.l	(sp)+,d0/a0
+	tst.w	d1			; Did anything happen ?
+	beq.s	.No1
+	jsr	Reset_keyboard		; Yes
+	bra.s	.Exit
+.No1:	move.w	d3,d1			; Look for another method ?
+	beq.s	.No2
+	jsr	Has_method		; Yes -> Has method ?
+	beq.s	.No2
+	jsr	Execute_method		; Yes -> Execute
+	jsr	Reset_keyboard
+	bra.s	.Exit
+.No2:	move.w	Object_parent(a0),d0	; No -> Ask parent
+	bne.s	.Again2
+.Exit:	movem.l	(sp)+,d0-d3/a0/a1
+	rts
+
+;*****************************************************************************
+; [ Key Event list handler ]
+;   IN : d0 - Key event (.l)
+;        a0 - Pointer to event list (.l)
+;  OUT : ne - Action
+;        eq - No action
+; All registers are restored
+;*****************************************************************************
+Handle_Kev_list:
+	movem.l	d1/d7/a0,-(sp)
+	moveq.l	#0,d7			; Default is no action
+.Again:	tst.l	(a0)			; End of list ?
+	beq.s	.Exit
+	move.l	(a0)+,d1			; Mask
+	and.l	d0,d1
+	cmp.l	(a0)+,d1			; Compare
+	bne.s	.Next
+	movem.l	d0-d7/a0-a6,-(sp)		; Execute
+	movea.l	(a0),a0
+	jsr	(a0)
+	movem.l	(sp)+,d0-d7/a0-a6
+	moveq.l	#-1,d7			; Yay!
+	bra.s	.Exit
+.Next:	addq.l	#4,a0			; Next event
+	bra.s	.Again
+.Exit:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d1/d7/a0
+	rts
+
+;***************************************************************************
+; [ Handle mouse event ]
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d2 - Button state (.b)
+; All registers are restored
+; Notes :
+;   - This routine will find the smallest object containing the input
+;     coordinates which can handle this button state.
+;***************************************************************************
+Handle_mouse_event:
+	movem.l	d3/d4/d6/a0/a6,-(sp)
+; ---------- Find method belonging to state -------
+	lea.l	Mouse_methods,a0		; No
+	moveq.l	#0,d3
+.Again1:	cmp.w	#-1,(a0)			; End of list ?
+	beq.s	.Exit1
+	move.b	(a0)+,d4			; Mask
+	and.b	d2,d4
+	cmp.b	(a0)+,d4			; Compare
+	bne.s	.Next1
+	move.w	(a0),d3			; Yay!
+	bra.s	.Found
+.Next1:	addq.l	#2,a0			; Next event
+	bra.s	.Again1
+; ---------- Search an object with this method ----
+.Found:	move.l	Root_Sp,a0		; Is the root empty ?
+	move.w	(a0),d4
+	beq.s	.Exit1
+	lea.l	Object_ptrs,a6		; No -> Search
+	jsr	.Do
+.Exit1:	movem.l	(sp)+,d3/d4/d6/a0/a6
+	rts
+
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d2 - Click state (.w)
+;        d3 - Target method (.w)
+;        d4 - First object handle (.w)
+;        a6 - Pointer to [ Object_ptrs ] (.l)
+;  OUT : ne - Action
+;        eq - No action
+; All registers are restored
+.Do:
+	movem.l	d4/d7/a0-a2,-(sp)
+	moveq.l	#-1,d7			; Default is found
+.Again2:	move.l	-4(a6,d4.w*4),a0		; Get object address
+	btst	#Object_control,Object_flags(a0)	; Is control object ?
+	bne.s	.In
+	cmp.w	X1(a0),d0			; In rectangle ?
+	blt.s	.Out
+	cmp.w	X2(a0),d0
+	bgt.s	.Out
+	cmp.w	Y1(a0),d1
+	blt.s	.Out
+	cmp.w	Y2(a0),d1
+	bgt.s	.Out
+.In:	move.w	Object_child(a0),d4		; In -> Has children ?
+	beq.s	.No1
+	jsr	.Do			; Yes -> Search children
+	bne.s	.Exit2
+.No1:	jsr	.Search			; No -> Look for method
+	bne.s	.Exit2			; Found ?
+	btst	#Object_control,Object_flags(a0)	; No -> Control object ?
+	bne.s	.Next2
+	moveq.l	#0,d7			; No -> Bad luck
+	bra.s	.Exit2
+.Out:	btst	#Object_no_container,Object_flags(a0)	; Out -> Container ?
+	beq.s	.Next2
+	move.w	Object_child(a0),d4		; No -> Has children ?
+	beq.s	.Next2
+	jsr	.Do			; Yes -> Search children
+	bne.s	.Exit2
+.Next2:	move.w	Object_next(a0),d4		; Next object (if any)
+	bne.s	.Again2
+	moveq.l	#0,d7			; Not found
+.Exit2:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d4/d7/a0-a2
+	rts
+
+; [ Search object for custommouse or target method ]
+;   IN : d3 - Target method (.w)
+;        a0 - Pointer to object (.l)
+;  OUT : ne - Action
+;        eq - No action
+; All registers are restored
+.Search:
+	movem.l	d0-d2/d4-d7/a1,-(sp)
+	moveq.l	#0,d7			; Default is no action
+	move.w	Object_self(a0),d0		; Has a custommouse method ?
+	moveq.l	#Custommouse_method,d1
+	jsr	Has_method
+	beq.s	.No2
+	move.l	a0,-(sp)
+	jsr	Execute_method		; Yes -> Get list
+	move.l	a1,a0
+	movem.w	Current_input_event,d0-d2	; Handle it
+	jsr	Handle_Mev_list
+	sne	d6
+	move.l	(sp)+,a0
+	tst.w	d6			; Did anything happen ?
+	beq.s	.Exit3
+	moveq.l	#-1,d7			; Yay!
+	bra.s	.Exit3
+.No2:	move.w	d3,d1			; Look for another method ?
+	beq.s	.Exit3
+	jsr	Has_method		; Yes -> Has method ?
+	beq.s	.Exit3
+	jsr	Execute_method		; Yes -> Execute
+	moveq.l	#-1,d7			; Yay!
+.Exit3:	tst.w	d7			; Well ?
+	movem.l	(sp)+,d0-d2/d4-d7/a1
+	rts
+
+;*****************************************************************************
+; [ Mouse Event list handler ]
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d2 - Button state (.b)
+;        a0 - Pointer to event list (.l)
+;  OUT : ne - Action
+;        eq - No action
+; All registers are restored
+;*****************************************************************************
+Handle_Mev_list:
+	movem.l	d6/d7/a0,-(sp)
+	moveq.l	#0,d7			; Default is no action
+.Again:	cmp.w	#-1,(a0)			; End of list ?
+	beq.s	.Exit
+	move.b	(a0)+,d6			; Mask
+	and.b	d2,d6
+	cmp.b	(a0)+,d6			; Compare
+	bne.s	.Next
+	movem.l	d0-d7/a0-a6,-(sp)		; Yes -> Execute
+	movea.l	(a0),a0
+	jsr	(a0)
+	movem.l	(sp)+,d0-d7/a0-a6
+	moveq.l	#-1,d7			; Yay!
+	bra.s	.Exit
+.Next:	addq.l	#4,a0			; Next event
+	bra.s	.Again
+.Exit:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d6/d7/a0
+	rts
+
+;***************************************************************************
+; [ Set focus ]
+; All registers are restored
+; Notes :
+;   - The Focus method must highlight a child object if there currently
+;     is no highlighted object.
+;***************************************************************************
+Set_focus:
+	movem.l	d0/d1/d4/a6,-(sp)
+	move.l	Root_Sp,a6		; Is the root empty ?
+	move.w	(a6),d4
+	beq.s	.Exit1
+	lea.l	Object_ptrs,a6		; No -> Search
+	move.w	Mouse_X,d0
+	move.w	Mouse_Y,d1
+	jsr	.Do
+.Exit1:	movem.l	(sp)+,d0/d1/d4/a6
+	rts
+
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d4 - First object handle (.w)
+;        a6 - Pointer to [ Object_ptrs ] (.l)
+;  OUT : ne - Found
+;        eq - Not found
+; All registers are restored
+.Do:
+	movem.l	d4/d7/a0-a2,-(sp)
+	moveq.l	#-1,d7			; Default is found
+.Again2:	move.l	-4(a6,d4.w*4),a0		; Get object address
+	btst	#Object_control,Object_flags(a0)	; Is control object ?
+	bne.s	.In
+	cmp.w	X1(a0),d0			; In rectangle ?
+	blt.s	.Out
+	cmp.w	X2(a0),d0
+	bgt.s	.Out
+	cmp.w	Y1(a0),d1
+	blt.s	.Out
+	cmp.w	Y2(a0),d1
+	bgt.s	.Out
+.In:	move.w	Object_child(a0),d4		; In -> Has children ?
+	beq.s	.No1
+	jsr	.Do			; Yes -> Search children
+	bne.s	.Exit2
+.No1:	jsr	.Search			; No -> Look for method
+	bne.s	.Exit2			; Found ?
+	btst	#Object_control,Object_flags(a0)	; No -> Control object ?
+	bne.s	.Next2
+	moveq.l	#0,d7			; No -> Bad luck
+	bra.s	.Exit2
+.Out:	btst	#Object_no_container,Object_flags(a0)	; Out -> Container ?
+	beq.s	.Next2
+	move.w	Object_child(a0),d4		; No -> Has children ?
+	beq.s	.Next2
+	jsr	.Do			; Yes -> Search children
+	bne.s	.Exit2
+.Next2:	move.w	Object_next(a0),d4		; Next object (if any)
+	bne.s	.Again2
+	moveq.l	#0,d7			; Not found
+.Exit2:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d4/d7/a0-a2
+	rts
+
+; [ Search object for focus method ]
+;   IN : a0 - Pointer to object (.l)
+;  OUT : ne - Found
+;        eq - Not found
+; All registers are restored
+.Search:
+	movem.l	d0/d1/d7,-(sp)
+	moveq.l	#0,d7			; Default is not found
+	move.w	Object_self(a0),d0		; Has a focus method ?
+	moveq.l	#Focus_method,d1
+	jsr	Has_method
+	beq.s	.Exit3
+	move.w	d0,Current_focussed_object	; Yes -> Set
+	jsr	Execute_method		; Execute
+	jsr	Update_screen
+	moveq.l	#-1,d7			; Yay!
+.Exit3:	tst.w	d7			; Well ?
+	movem.l	(sp)+,d0/d1/d7
+	rts
+
+;***************************************************************************
+; [ Cycle to the next focus ]
+; All registers are restored
+; Notes :
+;   - The Focus method must highlight a child object if there currently
+;     is no highlighted object.
+;***************************************************************************
+Cycle_focus:
+	movem.l	d0-d2/d6/d7/a0,-(sp)
+	moveq.l	#0,d6
+	move.w	Current_focussed_object,d7
+	beq.s	.Exit
+	moveq.l	#Focus_method,d1
+	move.w	d7,d0
+.Brother:	jsr	Get_object_data		; Get brother
+	move.w	Object_next(a0),d0		; If any
+	beq.s	.Parent
+.Child:	jsr	.Check			; Check
+	bne.s	.Exit
+	jsr	Get_object_data		; Get child
+	move.w	Object_child(a0),d0
+	bne.s	.Child
+	jsr	.Check			; Check
+	bne.s	.Exit
+	bra.s	.Brother
+.Parent:	move.w	Object_parent(a0),d0	; Get parent
+	bne.s	.Yes			; If any
+	tst.w	d6			; Been here before ?
+	bne.s	.Exit
+	moveq.l	#-1,d6			; No
+	move.l	Root_Sp,a0		; Get first object
+	move.w	(a0),d0
+.Yes:	jsr	.Check			; Check
+	bne.s	.Exit
+	bra.s	.Brother
+.Exit:	movem.l	(sp)+,d0-d2/d6/d7/a0
+	rts
+
+.Check:	moveq.l	#0,d2			; Default is no luck
+	jsr	Has_method		; Can focus ?
+	beq.s	.Exit2
+	moveq.l	#-1,d2			; Yes
+	cmp.w	d0,d7			; Back at the start ?
+ 	beq.s	.Exit2
+	move.w	d0,Current_focussed_object	; No
+	clr.w	Current_highlighted_object
+	jsr	Execute_method		; Display new focus
+	move.w	d7,d0			; Remove old focus
+	moveq.l	#Draw_method,d1
+	jsr	Execute_method
+	jsr	Update_screen
+.Exit2:	tst.w	d2			; Well ?
+	rts
+
+;***************************************************************************
+; [ Move the highlight within the current focus ]
+; All registers are restored
+; Notes :
+;   - [ Key_parameter ] contains the direction.
+;***************************************************************************
+Move_highlight:
+	rts
+
+	ifne	FALSE
+	move.w	Current_focussed_object,d0	; Is there a focus ?
+	beq.s	.Exit1
+	lea.l	Object_ptrs,a6		; Yes
+	move.l	-4(a6,d0.w*4),a0
+	move.w	Object_child(a0),d4
+	move.w	Current_highlighted_object,d0
+	move.l	-4(a6,d0.w*4),a1
+	move.w	Key_parameter,d0		; Get move routine
+	move.l	.Ptrs(pc,d0.w*4),a0
+	jsr	(a0)			; Execute
+.Exit1:
+	rts
+
+.Ptrs:	dc.l Move_up,Move_right,Move_down,Move_left
+
+
+;   IN : d4 - First object handle (.w)
+;        a1 - Pointer to currently highlighted object (.l)
+;        a6 - Pointer to [ Object_ptrs ] (.l)
+;  OUT : ne - Found
+;        eq - Not found
+; Changed registers : 
+Move_right:
+	movem.l	,-(sp)
+	moveq.l	#-1,d7			; Default is found
+.Again:	move.l	-4(a6,d4.w*4),a0		; Get object address
+	btst	#Object_control,Object_flags(a0)	; Is control object ?
+	bne.s	.In
+	move.w	Highlight_Y,d0
+	cmp.w	Y1(a0),d0
+	
+
+
+.In:	move.w	Object_child(a0),d0		; In -> Has children ?
+	beq.s	.No
+	jsr	.Right			; Yes -> Search children
+	bne.s	.Exit
+.No:	jsr	.Search			; No -> Look for method
+	bne.s	.Exit2			; Found ?
+	btst	#Object_control,Object_flags(a0)	; No -> Control object ?
+	bne.s	.Next
+	moveq.l	#0,d7			; No -> Bad luck
+	bra.s	.Exit
+.Out:	btst	#Object_no_container,Object_flags(a0)	; Out -> Container ?
+	beq.s	.Next
+	move.w	Object_child(a0),d4		; No -> Has children ?
+	beq.s	.Next
+	jsr	.Do			; Yes -> Search children
+	bne.s	.Exit
+.Next:	move.w	Object_next(a0),d4		; Next object (if any)
+	bne.s	.Again
+	moveq.l	#0,d7			; Not found
+.Exit:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d4/d7/a0-a2
+	rts
+	endc
+
+;***************************************************************************
+; [ Remove current highlighting ]
+; All registers are restored
+;***************************************************************************
+Dehighlight:
+	movem.l	d0/d1,-(sp)
+	move.w	Current_highlighted_object,d0	; Anything highlighted ?
+	beq.s	.Exit
+	clr.w	Current_highlighted_object	; Yes -> Clear
+	moveq.l	#Draw_method,d1		; Redraw object
+	jsr	Execute_method
+	jsr	Update_screen
+.Exit:	movem.l	(sp)+,d0/d1
+	rts
+
+;***************************************************************************
+; [ Remove current focussing ]
+; All registers are restored
+;***************************************************************************
+Unfocus:
+	movem.l	d0/d1,-(sp)
+	move.w	Current_focussed_object,d0	; Anything focussed ?
+	beq.s	.Exit
+	clr.w	Current_focussed_object	; Yes -> Clear
+	moveq.l	#Draw_method,d1		; Redraw object
+	jsr	Execute_method
+	jsr	Update_screen
+.Exit:	movem.l	(sp)+,d0/d1
+	rts
+
+;*****************************************************************************
+; [ Does an object have a certain method ? ]
+;   IN : d0 - Object handle (.w)
+;        d1 - Method number (.w)
+;  OUT : ne - Yes
+;        eq - No
+; All registers are restored
+;*****************************************************************************
+Has_method:
+	movem.l	d7/a0/a6,-(sp)
+	tst.w	d0			; Exit if handle is zero
+	beq.s	.Exit
+	jsr	Get_object_data		; Get object data
+	move.l	Object_class(a0),a6		; Get class definition
+	jsr	.Do			; Do
+.Exit:	movem.l	(sp)+,d7/a0/a6
+	rts
+
+.Do:	moveq.l	#0,d7			; Default is no luck
+	tst.l	Class_parent_class(a6)	; Has a parent class ?
+	beq.s	.No
+	move.l	a6,-(sp)
+	move.l	Class_parent_class(a6),a6	; Yes -> Do first
+	jsr	.Do
+	sne	d7
+	move.l	(sp)+,a6
+	tst.w	d7			; Well ?
+	bne.s	.Exit2
+.No:	lea.l	Class_methods(a6),a6	; Search for method
+.Again:	cmp.w	#-1,(a6)			; End ?
+	beq.s	.Exit2
+	cmp.w	(a6),d1			; Is this the one ?
+	bne.s	.Next
+	moveq.l	#-1,d7			; Yes -> Exit
+	bra.s	.Exit2
+.Next:	addq.l	#6,a6			; No -> Next method
+	bra.s	.Again
+.Exit2:	tst.w	d7			; Well ?
+	rts
+
+;*****************************************************************************
+; [ Check if the mouse is over an object ]
+;   IN : d0 - Object handle (.w)
+;  OUT : eq - Not
+;        ne - Is
+; All registers are restored
+;*****************************************************************************
+Is_over_object:
+	movem.l	d0/d1/d7/a0,-(sp)
+	moveq.l	#0,d7			; Default is Not
+	tst.w	d0			; Exit if handle is zero
+	beq.s	.Exit
+	jsr	Get_object_data		; Get object data
+	move.w	Mouse_X,d0		; Get mouse coordinates
+	move.w	Mouse_Y,d1
+	btst	#Object_control,Object_flags(a0)	; Control object ?
+	bne.s	.Exit
+	cmp.w	X1(a0),d0			; In rectangle ?
+	bmi.s	.Exit
+	cmp.w	X2(a0),d0
+	bgt.s	.Exit
+	cmp.w	Y1(a0),d1
+	bmi.s	.Exit
+	cmp.w	Y2(a0),d1
+	bgt.s	.Exit
+	moveq.l	#-1,d7			; Yes!
+.Exit:	tst.w	d7			; Any luck ?
+	movem.l	(sp)+,d0/d1/d7/a0
+	rts
+
+;*****************************************************************************
+; The DATA & BSS segments
+;*****************************************************************************
+	SECTION	Fast_DATA,data
+Mouse_methods:
+	dc.w $2202,Left_method
+	dc.w $2220,Right_method
+	dc.w $2200,Touched_method
+	dc.w -1
+Key_methods:
+	dc.l $ff0000ff,$00000009
+	dc.w Cycle_method,0
+	dc.l $ff0000ff,$0000000d
+	dc.w Left_method,0
+	dc.l $ff0000ff,$0100000d
+	dc.w Right_method,0
+	dc.l $ffff0000,$004f0000
+	dc.w Move_method,3
+	dc.l $ffff0000,$004e0000
+	dc.w Move_method,1
+	dc.l $ffff0000,$004c0000
+	dc.w Move_method,0
+	dc.l $ffff0000,$004d0000
+	dc.w Move_method,2
+	dc.l $ffff0000,$00450000
+	dc.w Close_method,0
+	dc.l 0
+
+	SECTION	Fast_BSS,bss
+Key_or_mouse:	ds.b 1
+	even
+Key_parameter:	ds.w 1
+Old_mouse_X:	ds.w 1		; To determine mouse movement
+Old_mouse_Y:	ds.w 1
+Highlight_X:	ds.w 1		; Highlight coordinates
+Highlight_Y:	ds.w 1
+Current_input_event:	ds.w 3	; Current input event
+Current_highlighted_object:	ds.w 1
+Current_focussed_object:	ds.w 1	; Where the keys go

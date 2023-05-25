@@ -141,14 +141,14 @@ My_input_handler:
 	move.w	X1(a1),d0
 	bra.s	.Check_Y
 .Left_OK:	cmp.w	X2(a1),d0			; X too high ?
-	blt.s	.Check_Y
+	ble.s	.Check_Y
 	move.w	X2(a1),d0
 .Check_Y:	cmp.w	Y1(a1),d1			; Y too low ?
 	bpl.s	.Top_OK
 	move.w	Y1(a1),d1
 	bra.s	.Done
 .Top_OK:	cmp.w	Y2(a1),d1			; Y too high ?
-	blt.s	.Done
+	ble.s	.Done
 	move.w	Y2(a1),d1
 .Done:	move.w	d0,Mouse_X		; Store coordinates
 	move.w	d1,Mouse_Y
@@ -246,6 +246,7 @@ My_input_handler:
 	bra	.Again
 .Exit:	movem.l	(sp)+,d0-d7/a0-a2
 	move.l	a0,d0
+;	moveq.l	#0,d0
 	rts
 
 ;***************************************************************************

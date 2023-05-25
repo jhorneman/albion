@@ -5,34 +5,56 @@
 
 	SECTION	Program,code
 ;*****************************************************************************
-; [ Age the priorities of all de-allocated blocks ]
+; [ Age the priorities of de-allocated blocks ]
+;   IN : d1 - Current file type (.b)
 ; All registers are	restored
 ;*****************************************************************************
-Update_memory_time:
+Age_memory:
 	movem.l	d0/d7/a0/a1,-(sp)
 ; --------- Check memory --------------------------
-	addq.l	#1,Memory_time		; Update time
 	move.w	Check_counter,d0		; Time to check ?
-	beq.s	.No
 	subq.w	#1,d0
 	bne.s	.No
-	jsr	Check_memory		; Check
+	jsr	Check_memory		; Yes -> Check
 	move.w	#Check_frequency,d0		; Reset timer
 .No:	move.w	d0,Check_counter
-; --------- Age all de-allocated blocks -----------
-	lea.l	Memory_lists,a0		; All blocks
+	LOCAL
+; --------- Age de-allocated blocks ---------------
+	move.w	Age_counter,d0		; All blocks ?
+	subq.w	#1,d0
+	bne.s	.No
+; ---------- Age all blocks -----------------------
+	move.w	#Age_all_frequency,Age_counter	; Yes
+	lea.l	Memory_lists,a0
 	move.w	#Max_blocks-1,d7
-.Loop:	btst	#Allocated,Block_flags(a0)	; Allocated ?
-	bne.s	.Next
+.Loop1:	btst	#Allocated,Block_flags(a0)	; Allocated ?
+	bne.s	.Next1
 	jsr	Find_file_info		; No -> Is it a file ?
-	bne.s	.Next
+	bne.s	.Next1
 	move.b	File_priority(a1),d0	; Yes -> Age priority
 	subq.b	#1,d0
-	beq.s	.Next			; Zero ?
+	beq.s	.Next1			; Zero ?
 	move.b	d0,File_priority(a1)	; No -> store
-.Next:	lea.l	Block_data_size(a0),a0	; Next block
-	dbra	d7,.Loop
-	movem.l	(sp)+,d0/d7/a0/a1
+.Next1:	lea.l	Block_data_size(a0),a0	; Next block
+	dbra	d7,.Loop1
+	bra.s	.Exit
+; ---------- Age blocks of same type --------------
+.No:	move.w	d0,Age_counter		; No
+	lea.l	Memory_lists,a0
+	move.w	#Max_blocks-1,d7
+.Loop2:	btst	#Allocated,Block_flags(a0)	; Allocated ?
+	bne.s	.Next2
+	jsr	Find_file_info		; No -> Is it a file ?
+	bne.s	.Next2
+	cmp.b	File_type(a1),d1		; Yes -> Same type ?
+	bne.s	.Next2
+	move.b	File_priority(a1),d0	; Yes -> Age priority
+	subq.b	#1,d0
+	beq.s	.Next2			; Zero ?
+	move.b	d0,File_priority(a1)	; No -> store
+.Next2:	lea.l	Block_data_size(a0),a0	; Next block
+	dbra	d7,.Loop2
+.Exit:	movem.l	(sp)+,d0/d7/a0/a1
 	rts
 
 ;*****************************************************************************
@@ -41,13 +63,13 @@ Update_memory_time:
 ;*****************************************************************************
 Check_memory:
 	movem.l	d0/d1/d6/d7/a0/a1,-(sp)
-; --------- Clear CHECKED flags -------------------
+; ---------- Clear CHECKED flags ------------------
 	lea.l 	Memory_lists,a0		; All entries
 	move.w	#Max_blocks-1,d7
 .Loop1:	bclr	#Checked,Block_flags(a0)	; Clear flag
 	lea.l	Block_data_size(a0),a0
 	dbra	d7,.Loop1
-; --------- Check areas ---------------------------
+; ---------- Check areas --------------------------
 	lea.l	Memory_areas,a0		; All areas
 	move.w	Number_of_areas,d7
 	bra.s	.Entry2
@@ -116,5 +138,5 @@ Check_area:
 ; The DATA & BSS segments
 ;***************************************************************************	
 	SECTION	Fast_BSS,bss
+Age_counter:	ds.w 1
 Check_counter:	ds.w 1
-Memory_time:	ds.l 1

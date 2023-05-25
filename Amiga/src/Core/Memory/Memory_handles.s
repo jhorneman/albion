@@ -3,7 +3,6 @@
 ; Written by Jurie Horneman (In Tune With The Universe)
 ; Start : 26-1-1994
 
-
 ; Notes :
 ;   - A memory handle cannot be zero. The routines will accept this, however.
 ;   - It is VITAL that [ Claim_pointer ] return zero when handle zero is
@@ -44,6 +43,24 @@ Clear_all_claims:
 	rts
 
 ;*****************************************************************************
+; [ Get an UNCLAIMED pointer to a memory block ]
+;   IN : d0 - Memory handle (.b)
+;  OUT : d0 - Pointer to memory (.l)
+; Changed registers : d0
+;*****************************************************************************
+Get_pointer:
+	move.l	a0,-(sp)
+	tst.b	d0			; Zero ?
+	bne.s	.Not_zero
+	moveq.l	#0,d0			; Yes -> Return zero
+	bra.s	.Exit
+.Not_zero:	jsr	Find_entry		; No -> Find entry
+	bne.s	.Exit
+	move.l	Block_start(a0),d0		; Get start address
+.Exit:	move.l	(sp)+,a0
+	rts
+
+;*****************************************************************************
 ; [ Claim a memory block ]
 ;   IN : d0 - Memory handle (.b)
 ;  OUT : d0 - Pointer to memory (.l)
@@ -51,7 +68,7 @@ Clear_all_claims:
 ;*****************************************************************************
 Claim_pointer:
 	move.l	a0,-(sp)
-	and.w	#$00ff,d0			; Zero ?
+	tst.b	d0			; Zero ?
 	bne.s	.Not_zero
 	moveq.l	#0,d0			; Yes -> Return zero
 	bra.s	.Exit
@@ -136,21 +153,21 @@ Destroy_memory_handle:
 ;   - This routine uses a self-repairing quick access list.
 ;*****************************************************************************
 Find_entry:
-	movem.l	d0-d2/d7/a1/a2,-(sp)
+	movem.l	d0-d2/a2,-(sp)
 	moveq.l	#-1,d1			; Default is not found
-	tst.b	d0			; Zero ?
-	beq.s	.Exit
 	and.w	#$00ff,d0			; Mask off
-	lea.l	Memory_handles-4,a2		; Get pointer
-	move.w	d0,d2
-	lsl.w	#2,d2
-	add.w	d2,a2
-	move.l	(a2),d2
-	beq.s	.Exit			; Any ?
+	beq.s	.Exit
+	lea.l	Memory_handles,a2		; Get pointer
+	move.l	-4(a2,d0.w*4),d2
+	beq.s	.No			; Any ?
 	move.l	d2,a0			; Yes
 	cmp.b	Block_handle(a0),d0		; Is it the right one ?
 	beq.s	.Ok
+.No:	movem.l	d7/a1,-(sp)
 	lea.l	Memory_areas,a1		; No -> Search all areas
+	move.w	d0,d2
+	lsl.w	#2,d2
+	add.w	d2,a2
 	move.w	Number_of_areas,d7
 	bra.s	.Entry
 .Loop:	move.l	a1,a0			; Search area
@@ -163,10 +180,11 @@ Find_entry:
 	bra.s	.Ok
 .Next:	lea.l	Area_data_size(a1),a1	; Next area
 .Entry:	dbra	d7,.Loop
+	movem.l	(sp)+,d7/a1
 	bra.s	.Exit
-.Ok:	moveq.l	#0,d1			; Success !
-.Exit:	tst.w	d1
-	movem.l	(sp)+,d0-d2/d7/a1/a2
+.Ok:	moveq.l	#0,d1			; Yay!
+.Exit:	tst.w	d1			; Found ?
+	movem.l	(sp)+,d0-d2/a2
 	rts
 
 ;*****************************************************************************
@@ -178,7 +196,7 @@ Find_entry:
 ; Changed registers : a1
 ;*****************************************************************************
 Find_file_info:
-	movem.l	d0/d1,-(sp)
+	movem.l	d0-d2,-(sp)
 	moveq.l	#-1,d1			; Default is not found
 	moveq.l	#0,d0			; Is this a file ?
 	move.b	Block_file_index(a0),d0
@@ -189,7 +207,7 @@ Find_file_info:
 	add.w	d0,a1
 	moveq.l	#0,d1			; Success !
 .Exit:	tst.w	d1
-	movem.l	(sp)+,d0/d1
+	movem.l	(sp)+,d0-d2
 	rts
 
 ;***************************************************************************	

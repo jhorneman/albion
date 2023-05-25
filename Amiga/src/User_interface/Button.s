@@ -16,54 +16,294 @@
 	SECTION	Program,code
 ;***************************************************************************	
 ; [ Initialize method for button objects ]
-;   IN : a0 - Pointer to button object (.l)
-;        a1 - Pointer to button OID (.l)
+;   IN : a0 - Pointer to object (.l)
+;        a1 - Pointer to OID (.l)
 ; All registers are restored
 ;***************************************************************************
 Init_button:
-	movem.l	d0/d1,-(sp)
-; ---------- Initialize object --------------------
-	move.l	OID_Button_data(a1),Button_data(a0)	; Copy
+	move.l	OID_Button_data(a1),Button_data(a0)
 	move.l	OID_Button_function(a1),Button_function(a0)
-	move.w	OID_X(a1),d0		; Set rectangle
-	move.w	OID_Y(a1),d1
-	add.w	X1(a0),d0
-	add.w	Y1(a0),d1
-	move.w	d0,X1(a0)
-	move.w	d1,Y1(a0)
-	add.w	OID_width(a1),d0
-	add.w	OID_height(a1),d1
+	jmp	Set_rectangle
+
+;***************************************************************************	
+; [ Draw method for button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_button:
+	movem.l	d0-d3,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
+	sub.w	d0,d2
+	sub.w	d1,d3
+	addq.w	#1,d2
+	addq.w	#1,d3
+	jsr	Draw_normal_box
 	subq.w	#1,d0
 	subq.w	#1,d1
-	move.w	d0,X2(a0)
-	move.w	d1,Y2(a0)
-	movem.l	(sp)+,d0/d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	movem.l	(sp)+,d0-d3
+	rts
+
+;***************************************************************************	
+; [ Feedback method for button, switch or radio button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Feedback_button:
+	movem.l	d0-d3,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
+	sub.w	d0,d2
+	sub.w	d1,d3
+	addq.w	#1,d2
+	addq.w	#1,d3
+	jsr	Draw_deep_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	movem.l	(sp)+,d0-d3
+	rts
+
+;***************************************************************************	
+; [ Highlight method for button, switch or radio button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Highlight_button:
+	movem.l	d0-d3,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
+	sub.w	d0,d2
+	sub.w	d1,d3
+	addq.w	#1,d2
+	addq.w	#1,d3
+	jsr	Draw_high_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	movem.l	(sp)+,d0-d3
+	rts
+
+;***************************************************************************	
+; [ Left method for button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Button_selected:
+	move.l	a1,-(sp)
+	jsr	Normal_clicked
+	beq.s	.Exit
+	move.l	Button_function(a0),a1	; Execute function
+	jsr	(a1)
+.Exit:	move.l	(sp)+,a1
+	rts
+
+;***************************************************************************	
+; [ Draw method for BT button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_BT_button:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	sub.w	d0,d2
+	addq.w	#1,d2
+	move.l	Button_data(a0),a0
+	move.w	#Draw_colour,Ink_colour
+	jsr	Put_centered_text_line
+	movem.l	(sp)+,d0-d2/a0
+	rts
+
+;***************************************************************************	
+; [ Feedback method for BT button, switch or radio button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Feedback_BT_button:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	addq.w	#1,d1
+	move.w	X2(a0),d2
+	sub.w	d0,d2
+	addq.w	#1,d2
+	move.l	Button_data(a0),a0
+	move.w	#Feedback_colour,Ink_colour
+	jsr	Put_centered_text_line
+	movem.l	(sp)+,d0-d2/a0
+	rts
+
+;***************************************************************************	
+; [ Highlight method for BT button, switch or radio button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Highlight_BT_button:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	addq.w	#1,d1
+	move.w	X2(a0),d2
+	sub.w	d0,d2
+	addq.w	#1,d2
+	move.l	Button_data(a0),a0
+	move.w	#Highlight_colour,Ink_colour
+	jsr	Put_centered_text_line
+	movem.l	(sp)+,d0-d2/a0
+	rts
+
+;***************************************************************************	
+; [ Draw method for BS button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_BS_button:
+	movem.l	d0/d1/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.l	Button_data(a0),a0
+	jsr	Draw_symbol
+	movem.l	(sp)+,d0/d1/a0
+	rts
+
+;***************************************************************************	
+; [ Feedback method for BS button, switch or radio button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Feedback_BS_button:
+	movem.l	d0/d1/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	addq.w	#1,d1
+	move.l	Button_data(a0),a0
+	jsr	Draw_symbol
+	movem.l	(sp)+,d0/d1/a0
+	rts
+
+;***************************************************************************	
+; [ Feedback method for TS button objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Feedback_TS_button:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.l	Button_data(a0),a0
+	moveq.l	#0,d2			; Calculate symbol size
+	move.b	Symbol_depth(a0),d2
+	add.w	d2,d2
+	mulu.w	Symbol_width(a0),d2
+	mulu.w	Symbol_height(a0),d2
+	add.l	d2,Symbol_offset(a0)	; Select second frame
+	jsr	Draw_symbol		; Draw symbol
+	sub.l	d2,Symbol_offset(a0)	; Restore
+	movem.l	(sp)+,d0-d2/a0
 	rts
 
 ;***************************************************************************	
 ; [ Draw method for switch objects ]
-;   IN : a0 - Pointer to switch object (.l)
+;   IN : a0 - Pointer to object (.l)
 ; All registers are restored
 ;***************************************************************************
 Draw_switch:
-	move.l	d1,-(sp)
+	movem.l	d0-d3,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
 	tst.b	Switch_state(a0)		; Down ?
-	beq.s	.Do
-	moveq.l	#Feedback_method,d1		; Yes
-.Do:	jsr	Execute_child_methods	; Do children
-	move.l	(sp)+,d1
+	bne.s	.Down
+	sub.w	d0,d2			; No
+	sub.w	d1,d3
+	addq.w	#1,d2
+	addq.w	#1,d3
+	jsr	Draw_high_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	bra.s	.Exit
+.Down:	addq.w	#1,d0			; Yes
+	addq.w	#1,d1
+	subq.w	#1,d2
+	subq.w	#1,d3
+	jsr	Marmor_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	sub.w	d0,d2
+	sub.w	d1,d3
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+.Exit:	movem.l	(sp)+,d0-d3
 	rts
 
 ;***************************************************************************	
 ; [ Highlight method for switch objects ]
-;   IN : a0 - Pointer to switch object (.l)
+;   IN : a0 - Pointer to object (.l)
 ; All registers are restored
 ;***************************************************************************
 Highlight_switch:
+	movem.l	d0-d3,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	move.w	Y2(a0),d3
 	tst.b	Switch_state(a0)		; Down ?
-	bne.s	.Exit
-	jsr	Execute_child_methods	; No -> Do children
-.Exit:	rts
+	bne.s	.Down
+	sub.w	d0,d2			; No
+	sub.w	d1,d3
+	addq.w	#1,d2
+	addq.w	#1,d3
+	jsr	Draw_high_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	bra.s	.Exit
+.Down:	addq.w	#1,d0			; Yes
+	addq.w	#1,d1
+	subq.w	#1,d2
+	subq.w	#1,d3
+	jsr	Brighter_box
+	subq.w	#1,d0
+	subq.w	#1,d1
+	sub.w	d0,d2
+	sub.w	d1,d3
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+	subq.w	#1,d0
+	subq.w	#1,d1
+	addq.w	#2,d2
+	addq.w	#2,d3
+	jsr	Draw_deep_border
+.Exit:	movem.l	(sp)+,d0-d3
+	rts
 
 ;***************************************************************************	
 ; [ Get method for switch objects ]
@@ -94,6 +334,65 @@ Set_switch:
 	jsr	Execute_method
 	jsr	Update_screen
 .Exit:	movem.l	(sp)+,d0-d2
+	rts
+
+;***************************************************************************	
+; [ Draw method for BT switch objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_BT_switch:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.w	X2(a0),d2
+	sub.w	d0,d2
+	addq.w	#1,d2
+	move.l	Button_data(a0),a0
+	tst.b	Switch_state(a0)		; Down ?
+	beq.s	.No
+	addq.w	#1,d1			; Yes
+.No:	move.w	#Draw_colour,Ink_colour	; No
+	jsr	Put_centered_text_line
+	movem.l	(sp)+,d0-d2/a0
+	rts
+
+;***************************************************************************	
+; [ Draw method for BS switch objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_BS_switch:
+	movem.l	d0/d1/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.l	Button_data(a0),a0
+	tst.b	Switch_state(a0)		; Down ?
+	beq.s	.No
+	addq.w	#1,d1			; Yes
+.No:	jsr	Draw_symbol
+	movem.l	(sp)+,d0/d1/a0
+	rts
+
+;***************************************************************************	
+; [ Draw method for TS switch objects ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
+;***************************************************************************
+Draw_TS_switch:
+	movem.l	d0-d2/a0,-(sp)
+	move.w	X1(a0),d0
+	move.w	Y1(a0),d1
+	move.l	Button_data(a0),a0
+	moveq.l	#0,d2			; Calculate symbol size
+	move.b	Symbol_depth(a0),d2
+	add.w	d2,d2
+	mulu.w	Symbol_width(a0),d2
+	mulu.w	Symbol_height(a0),d2
+	add.l	d2,Symbol_offset(a0)	; Select second frame
+	jsr	Draw_symbol		; Draw symbol
+	sub.l	d2,Symbol_offset(a0)	; Restore
+	movem.l	(sp)+,d0-d2/a0
 	rts
 
 ;***************************************************************************	
@@ -167,178 +466,51 @@ Find_radio_button:
 
 ;***************************************************************************	
 ; [ Initialize method for radio button objects ]
-;   IN : a0 - Pointer to radio button object (.l)
-;        a1 - Pointer to radio button OID (.l)
+;   IN : a0 - Pointer to object (.l)
+;        a1 - Pointer to OID (.l)
 ; All registers are restored
 ;***************************************************************************
 Init_radio_button:
 	move.w	OID_Radio_button_nr(a1),Radio_button_nr(a0)	; Copy
-	move.w	OID_Radio_handle(a1),Radio_handle(a0)
 	rts
 
-;***************************************************************************	
-; [ Init method for BT buttons ]
-;   IN : a0 - Pointer to BT button object (.l)
-;        a1 - Pointer to BT button OID (.l)
+;***************************************************************************
+; [ Left method for switch object ]
+;   IN : a0 - Pointer to object (.l)
 ; All registers are restored
-;***************************************************************************
-Init_BT_button:
-	movem.l	d0-d2/a0-a2,-(sp)
-	move.l	a1,-(sp)
-	Make_OID	HBox,a1
-	move.l	a0,a2
-	clr.w	OID_X(a1)			; Make border
-	clr.w	OID_Y(a1)
-	move.w	Y2(a2),d1
-	move.w	X2(a2),d2
-	sub.w	Y1(a2),d1
-	sub.w	X1(a2),d2
-	addq.w	#1,d1
-	addq.w	#1,d2
-	move.w	d1,OID_height(a1)
-	move.w	d2,OID_width(a1)
-	lea.l	HBox_class,a0		; Add
-	move.w	Object_self(a2),d0
-	jsr	Add_object
-	Free_OID
-	move.l	(sp)+,a0			; Make text
-	Make_OID	Text,a1
-	move.w	OID_Button_text_colour(a0),OID_Text_colour(a1)
-	move.w	OID_Button_text_feedback_colour(a0),OID_Text_feedback_colour(a1)
-	clr.w	OID_X(a1)
-	sub.w	#Standard_text_height,d1
-	lsr.w	#1,d1
-	move.w	d1,OID_Y(a1)
-	move.w	d2,OID_Text_object_width(a1)
-	move.l	Button_data(a2),OID_Text_ptr(a1)
-	lea.l	Text_class,a0		; Add
-	move.w	Object_self(a2),d0
-	jsr	Add_object
-	Free_OID
-	movem.l	(sp)+,d0-d2/a0-a2
-	rts
-
-;***************************************************************************	
-; [ Init method for BS buttons ]
-;   IN : a0 - Pointer to BS button object (.l)
-; All registers are restored
-;***************************************************************************
-Init_BS_button:
-	movem.l	d0-d3/a0-a3,-(sp)
-	move.l	a0,a2
-	Make_OID	HBox,a1
-	clr.w	OID_X(a1)			; Make border
-	clr.w	OID_Y(a1)
-	move.w	X2(a2),d2
-	move.w	Y2(a2),d3
-	sub.w	X1(a2),d2
-	sub.w	Y1(a2),d3
-	addq.w	#1,d2
-	addq.w	#1,d3
-	move.w	d2,OID_width(a1)
-	move.w	d3,OID_height(a1)
-	lea.l	HBox_class,a0		; Add
-	move.w	Object_self(a2),d0
-	jsr	Add_object
-	Free_OID
-	move.l	Button_data(a2),a0		; Make symbol
-	Make_OID	Symbol,a1
-	lea.l	OID_Symbol(a1),a3
-	moveq.l	#Symbol_data_size/2-1,d0
-.Loop:	move.w	(a0)+,(a3)+
-	dbra	d0,.Loop
-	move.l	Button_data(a2),a0
-	move.w	Symbol_width(a0),d0		; Centre
-	lsl.w	#4,d0
-	sub.w	d0,d2
-	lsr.w	#1,d2
-	move.w	d2,OID_X(a1)
-	sub.w	Symbol_height(a0),d3
-	lsr.w	#1,d3
-	move.w	d3,OID_Y(a1)
-	lea.l	Symbol_class,a0		; Add
-	move.w	Object_self(a2),d0
-	jsr	Add_object
-	Free_OID
-	movem.l	(sp)+,d0-d3/a0-a3
-	rts
-
-;***************************************************************************	
-; [ Init method for TS buttons ]
-;   IN : a0 - Pointer to TS button object (.l)
-; All registers are restored
-;***************************************************************************
-Init_TS_button:
-	movem.l	d0-d3/a0-a3,-(sp)
-	move.l	a0,a2
-	Make_OID	Symbol,a1
-	move.l	Button_data(a2),a0		; Make two-symbol
-	lea.l	OID_Symbol(a1),a3
-	moveq.l	#Symbol_data_size/2-1,d0
-.Loop:	move.w	(a0)+,(a3)+
-	dbra	d0,.Loop
-	move.l	Button_data(a2),a0
-	move.w	X2(a2),d2			; Centre
-	sub.w	X1(a2),d2
-	addq.w	#1,d2
-	move.w	Symbol_width(a0),d0
-	lsl.w	#4,d0
-	sub.w	d0,d2
-	lsr.w	#1,d2
-	move.w	d2,OID_X(a1)
-	move.w	Y2(a2),d3
-	sub.w	Y1(a2),d3
-	addq.w	#1,d3
-	sub.w	Symbol_height(a0),d3
-	lsr.w	#1,d3
-	move.w	d3,OID_Y(a1)
-	lea.l	TSymbol_class,a0		; Add
-	move.w	Object_self(a2),d0
-	jsr	Add_object
-	Free_OID
-	movem.l	(sp)+,d0-d3/a0-a3
-	rts
-
-;***************************************************************************
-; [ Button selected mouse event ]
-;   IN : a0 - Pointer to button object (.l)
-; No registers are restored
-;***************************************************************************
-Button_selected:
-	jsr	Normal_clicked		; Do normal feedback
-	beq.s	.Exit
-	move.l	Button_function(a0),a1	; Execute function
-	jsr	(a1)
-.Exit:	rts
-
-;***************************************************************************
-; [ Switch selected mouse event ]
-;   IN : a0 - Pointer to switch object (.l)
-; No registers are restored
 ;***************************************************************************
 Switch_selected:
+	movem.l	d0/d1/a1,-(sp)
+	jsr	Normal_clicked
+	beq.s	.Exit
 	not.b	Switch_state(a0)		; Switch
 	move.w	Object_self(a0),d0		; Redraw
 	moveq.l	#Draw_method,d1
 	jsr	Execute_method
 	jsr	Update_screen
-	jsr	Wait_4_unclick		; Wait
-	jsr	Dehighlight
+	clr.w	Current_highlighted_object	; Clear
 	move.l	Button_function(a0),a1	; Execute function
-	jmp	(a1)
+	jsr	(a1)
+.Exit:	movem.l	(sp)+,d0/d1/a1
+	rts
 
 ;***************************************************************************
-; [ Radio button selected mouse event ]
-;   IN : a0 - Pointer to radio button object (.l)
-; No registers are restored
+; [ Left method for radio button object ]
+;   IN : a0 - Pointer to object (.l)
+; All registers are restored
 ;***************************************************************************
 Radio_button_selected:
-	move.w	Radio_handle(a0),d0		; Change buttons
+	movem.l	d0-d2,-(sp)
+	jsr	Normal_clicked
+	beq.s	.Exit
+	move.w	Object_parent(a0),d0	; Change buttons
 	moveq.l	#Set_method,d1
-	move.w	Radio_button_nr(a0),d2
+	moveq.l	#0,d2
+	move.b	Radio_button_nr(a0),d2
 	jsr	Execute_method
-	jsr	Wait_4_unclick		; Wait
-	jmp	Dehighlight
+	clr.w	Current_highlighted_object	; Clear
+.Exit:	movem.l	(sp)+,d0-d2
+	rts
 
 ;*****************************************************************************
 ; The DATA & BSS segments
@@ -348,34 +520,33 @@ Button_class:
 	dc.l 0
 	dc.w Button_object_size
 	Method Init,Init_button
-	Method Draw,Execute_child_methods
-	Method Feedback,Execute_child_methods
-	Method Highlight,Execute_child_methods
-	Method Mev,.Mev
-	dc.w -1
-
-.Mev:	dc.w $0202
-	dc.l Button_selected
-	dc.w $3300
-	dc.l Normal_highlighted
+	Method Draw,Draw_button
+	Method Feedback,Feedback_button
+	Method Highlight,Highlight_button
+	Method Left,Button_selected
+	Method Touched,Normal_touched
 	dc.w -1
 
 BT_Button_class:
 	dc.l Button_class
 	dc.w Button_object_size
-	Method Init,Init_BT_button
+	Method Draw,Draw_BT_button
+	Method Feedback,Feedback_BT_button
+	Method Highlight,Highlight_BT_button
 	dc.w -1
 
 BS_Button_class:
 	dc.l Button_class
 	dc.w Button_object_size
-	Method Init,Init_BS_button
+	Method Draw,Draw_BS_button
+	Method Feedback,Feedback_BS_button
 	dc.w -1
 
 TS_Button_class:
 	dc.l Button_class
 	dc.w Button_object_size
-	Method Init,Init_TS_button
+	Method Draw,Draw_BS_button
+	Method Feedback,Feedback_TS_button
 	dc.w -1
 
 Switch_class:
@@ -383,34 +554,34 @@ Switch_class:
 	dc.w Switch_object_size
 	Method Init,Init_button
 	Method Draw,Draw_switch
+	Method Feedback,Feedback_button
 	Method Highlight,Highlight_switch
 	Method Get,Get_switch
 	Method Set,Set_switch
-	Method Mev,.Mev
-	dc.w -1
-
-.Mev:	dc.w $0202
-	dc.l Switch_selected
-	dc.w $3300
-	dc.l Normal_highlighted
+	Method Left,Switch_selected
+	Method Touched,Normal_touched
 	dc.w -1
 
 BT_Switch_class:
 	dc.l Switch_class
 	dc.w Switch_object_size
-	Method Init,Init_BT_button
+	Method Draw,Draw_BT_switch
+	Method Feedback,Feedback_BT_button
+	Method Highlight,Highlight_BT_button
 	dc.w -1
 
 BS_Switch_class:
 	dc.l Switch_class
 	dc.w Switch_object_size
-	Method Init,Init_BS_button
+	Method Draw,Draw_BS_switch
+	Method Feedback,Feedback_BS_button
 	dc.w -1
 
 TS_Switch_class:
 	dc.l Switch_class
 	dc.w Switch_object_size
-	Method Init,Init_TS_button
+	Method Draw,Draw_TS_switch
+	Method Feedback,Feedback_TS_button
 	dc.w -1
 
 Radio_class:
@@ -418,37 +589,42 @@ Radio_class:
 	dc.w Radio_object_size
 	Method Init,Init_radio
 	Method Draw,Execute_child_methods
+	Method Move,Move_highlight
 	Method Get,Get_radio
 	Method Set,Set_radio
 	dc.w -1
 
 Radio_button_class:
-	dc.l Switch_class
+	dc.l 0
 	dc.w Radio_button_object_size
-	Method Init,Init_radio_button
-	Method Mev,.Mev
-	dc.w -1
-
-.Mev:	dc.w $0202
-	dc.l Radio_button_selected
-	dc.w $3300
-	dc.l Normal_highlighted
+	Method Init,Init_button
+	Method Draw,Draw_switch
+	Method Feedback,Feedback_button
+	Method Highlight,Highlight_switch
+	Method Get,Get_switch
+	Method Set,Set_switch
+	Method Left,Radio_button_selected
+	Method Touched,Normal_touched
 	dc.w -1
 
 BT_Radio_button_class:
 	dc.l Radio_button_class
 	dc.w Radio_button_object_size
-	Method Init,Init_BT_button
+	Method Draw,Draw_BT_switch
+	Method Feedback,Feedback_BT_button
+	Method Highlight,Highlight_BT_button
 	dc.w -1
 
 BS_Radio_button_class:
-	dc.l Radio_button_class
+	dc.l BS_Switch_class
 	dc.w Radio_button_object_size
-	Method Init,Init_BS_button
+	Method Draw,Draw_BS_switch
+	Method Feedback,Feedback_BS_button
 	dc.w -1
 
 TS_Radio_button_class:
-	dc.l Radio_button_class
+	dc.l TS_Switch_class
 	dc.w Radio_button_object_size
-	Method Init,Init_TS_button
+	Method Draw,Draw_TS_switch
+	Method Feedback,Feedback_TS_button
 	dc.w -1

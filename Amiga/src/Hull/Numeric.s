@@ -2,6 +2,14 @@
 ; Written by J.Horneman (In Tune With The Universe)
 ; Start : 15-2-1994
 
+	XDEF	String_to_number
+	XDEF	Hex_convert
+	XDEF	SDecL_convert
+	XDEF	DecL_convert
+	XDEF	SDecR_convert
+	XDEF	DecR_convert
+	XDEF	Insert_sign
+
 ; NOTES :
 ;   - All numbers must be EXTended to longwords before calling this
 ;     routine.

@@ -1,0 +1,32 @@
+	DDT PROGRAM PLAN
+
+
+PROGRAM PARTS
+
+Core	- Machine dependent
+Second	- Machine independent / Game independent
+Third	- User interface service routines
+Game
+
+SUB-DIRECTORIES
+
+NAME	CONTAINS
+
+Core	Core sources
+Data	Game data
+	-> Game_files
+	-> Ready
+
+Documents	Game documents
+Game	Game sources
+Global	MCP & main sources, include files
+	-> OS_includes
+
+Graphics	Game graphics
+	-> Pictures
+	-> Ready
+
+Objects	Assembled object-code
+Second	Second level sources
+Third	Third level sources
+Various	Stuff

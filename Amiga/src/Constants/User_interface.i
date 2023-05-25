@@ -104,6 +104,19 @@ Text_area_PA:	rs.b PA_data_size
 Text_area_object_size:	rs.b 0
 
 ;***************************************************************************	
+; Text window object
+; OID :
+	rsreset
+	rs.b Text_area_OID_size
+Text_window_OID_size:	rs.b 0
+
+; Object :
+	rsreset
+	rs.b Window_object_size
+Text_window_PA:	rs.b PA_data_size
+Text_window_object_size:	rs.b 0
+
+;***************************************************************************	
 ; Button object
 ; OID :
 	rsreset
@@ -152,10 +165,62 @@ Radio_button_OID_size:	rs.b 0
 Radio_button_nr:	rs.w 1
 Radio_button_object_size:	rs.b 0
 
+;***************************************************************************	
+; Pop-up menu object
+; OID :
+	rsreset
+	rs.b Window_OID_size
+OID_PUM_data:	rs.l 1
+OID_PUM_current_entries:	rs.w 1
+PUM_OID_size:	rs.b 0
 
+; Object :
+	rsreset
+	rs.b Window_object_size
+PUM_data:	rs.l 1
+PUM_current_entries:	rs.w 1
+PUM_object_size:	rs.b 0
 
+;***************************************************************************	
+; Pop-up menu entry object
+; OID :
+	rsreset
+	rs.b Standard_OID_size
+OID_PUME_nr:	rs.w 1
+PUME_OID_size:	rs.b 0
 
-	ifne	FALSE
+; Object :
+	rsreset
+	rs.b Object_header_size
+PUME_nr:	rs.w 1
+PUME_object_size:	rs.b 0
+
+;***************************************************************************	
+; Pop-up menu structure
+	rsreset
+PUM_nr_entries:	rs.w 1
+PUM_title:	rs.l 1
+PUM_evaluator:	rs.l 1
+PUM_header_size:	rs.b 0
+
+;***************************************************************************	
+; Pop-up menu entry structure
+	rsreset
+PUME_flags:	rs.b 1
+	rseven
+PUME_blocked_prompt:	rs.w 1
+PUME_text:	rs.l 1
+PUME_function:	rs.l 1
+PUME_data_size:	rs.b 0
+
+;***************************************************************************	
+; Pop-up menu entry flags
+	rsreset
+PUME_absent:	rs.b 1
+PUME_not_selectable:	rs.b 1
+PUME_blocked:	rs.b 1
+PUME_auto_close:	rs.b 1
+
 ;***************************************************************************	
 ; Scroll bar object
 ; OID :
@@ -166,6 +231,7 @@ OID_Total_units:	rs.w 1		; Total amount of units
 OID_Units_width:	rs.w 1		; Number of units per row
 OID_Units_height:	rs.w 1		; Number of rows on screen
 OID_Scroll_bar_height:	rs.w 1	; Height of scroll bar in pixels
+OID_Scroll_bar_update_ptr:	rs.l 1
 Scroll_bar_OID_size:	rs.b 0
 
 ; Object :
@@ -179,10 +245,12 @@ Slider_Y:	rs.w 1			; Y-coordinate of slider
 Row_height:	rs.w 1		; Height of row in pixels
 Current_row:	rs.w 1		; Current row
 Scroll_bar_height:	rs.w 1		; Height of scroll bar in pixels
+Scroll_bar_update_ptr:	rs.l 1
 Scroll_bar_max_height:	rs.w 1	; Maximum Y-coordinate of slider
 Scroll_bar_result:	rs.w 1		; Current unit selected by scroll bar {0...}
 Scroll_bar_object_size:	rs.b 0
 
+	ifne	FALSE
 ;***************************************************************************	
 ; Item list object
 ; OID :
@@ -234,64 +302,6 @@ Item_slot_OID_size:	rs.b 0
 	rs.b Object_header_size
 IS_nr:	rs.w 1
 Item_slot_object_size:	rs.b 0
-
-;***************************************************************************	
-; Pop-up menu object
-; OID :
-	rsreset
-	rs.w 1
-	rs.w 1
-OID_PUM_data:	rs.l 1
-PUM_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Object_header_size
-PUM_data:	rs.l 1
-PUM_current_entries:	rs.w 1
-PUM_object_size:	rs.b 0
-
-;***************************************************************************	
-; Pop-up menu entry object
-; OID :
-	rsreset
-	rs.b Button_text_OID_size
-OID_PUME_nr:	rs.w 1
-OID_PUM_handle:	rs.w 1
-PUME_OID_size:	rs.b 0
-
-; Object :
-	rsreset
-	rs.b Button_object_size
-PUME_nr:	rs.w 1
-PUM_handle:	rs.w 1
-PUME_object_size:	rs.b 0
-
-;***************************************************************************	
-; Pop-up menu structure
-	rsreset
-PUM_nr_entries:	rs.w 1
-PUM_title:	rs.l 1
-PUM_evaluator:	rs.l 1
-PUM_header_size:	rs.b 0
-
-;***************************************************************************	
-; Pop-up menu entry structure
-	rsreset
-PUME_flags:	rs.b 1
-	rseven
-PUME_blocked_prompt:	rs.w 1
-PUME_text:	rs.l 1
-PUME_function:	rs.l 1
-PUME_data_size:	rs.b 0
-
-;***************************************************************************	
-; Pop-up menu entry flags
-	rsreset
-PUME_absent:	rs.b 1
-PUME_not_selectable:	rs.b 1
-PUME_blocked:	rs.b 1
-PUME_auto_close:	rs.b 1
 
 ;***************************************************************************	
 ; Text list object

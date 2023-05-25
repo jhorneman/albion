@@ -3,6 +3,8 @@
 ; Written by Jurie Horneman (In Tune With The Universe)
 ; Start : 4-2-1994
 
+	XDEF	Begin_graphics_ops
+	XDEF	End_graphics_ops
 	XDEF	Push_CA
 	XDEF	Pop_CA
 	XDEF	Reset_CA_stack
@@ -17,8 +19,10 @@
 	XDEF	Put_line_buffer
 	XDEF	Put_line_buffer_shadow
 	XDEF	Duplicate_box
+	XDEF	Blend_ebe
 	XDEF	Get_block
 	XDEF	VScroll_block
+	XDEF	Display_chunky_block
 	XDEF	Plot_pixel
 	XDEF	Get_pixel
 	XDEF	Draw_box
@@ -30,6 +34,32 @@
 	XDEF	Recolour_box
 
 	SECTION	Program,code
+;***************************************************************************
+; [ Begin graphics operations ]
+; All registers are restored
+;***************************************************************************
+Begin_graphics_ops:
+	movem.l	d0/d1/a0/a1,-(sp)
+	tst.b	Graphics_ops
+	bne.s	.Exit
+	kickGFX	OwnBlitter
+	st	Graphics_ops
+.Exit:	movem.l	(sp)+,d0/d1/a0/a1
+	rts
+
+;***************************************************************************
+; [ End graphics operations ]
+; All registers are restored
+;***************************************************************************
+End_graphics_ops:
+	movem.l	d0/d1/a0/a1,-(sp)
+	tst.b	Graphics_ops
+	beq.s	.Exit
+	kickGFX	DisownBlitter
+	sf	Graphics_ops
+.Exit:	movem.l	(sp)+,d0/d1/a0/a1
+	rts
+
 ;*****************************************************************************
 ; [ Push a CA on the stack ]
 ;   IN : a0 - Pointer to CA (.l)
@@ -88,7 +118,8 @@ Coord_convert:
 	and.w	d0,d3
 	sub.w	d3,d0
 	lsr.w	#3,d0
-	add.w	d0,d2
+	ext.l	d0
+	add.l	d0,d2
 	move.l	(sp)+,d0
 	rts
 
@@ -113,6 +144,9 @@ Default_CA:
 
 
 	SECTION	Fast_BSS,bss
+Graphics_ops:	ds.b 1
+Mask_buffer_handle:	ds.b 1
+	even
 CA_Sp:	ds.l 1				; CA stack
 CAStack_start:        
 	ds.l Max_CA

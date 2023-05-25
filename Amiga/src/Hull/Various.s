@@ -2,10 +2,16 @@
 ; Written by J.Horneman (In Tune With The Universe)
 ; Start : 15-2-1994
 
+	XDEF	Print_number
+	XDEF	Print_large_number
+	XDEF	Delay
+	XDEF	Fill_memory
+	XDEF	Copy_memory
+	XDEF	Random
 	XDEF	Get_random_50_100
 	XDEF	Shuttlesort
 	XDEF	Shellsort
-	XDEF	Delay
+	XDEF	Wait_4_user
 	XDEF	Wait_4_click
 	XDEF	Wait_4_unclick
 	XDEF	Wait_4_rightclick
@@ -14,12 +20,64 @@
 	XDEF	Reset_keyboard
 	XDEF	Reset_mouse_buffer
 	XDEF	Crypt_block
-	XDEF	Fill_memory
-	XDEF	Copy_memory
-	XDEF	Random
 	XDEF	Square_root
 
 	SECTION	Program,code
+;*****************************************************************************
+; [ Print a 3-digit number ]
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d2 - Number (.w)
+; All registers are restored
+;*****************************************************************************
+Print_number:
+	movem.l	d0-d4/d7/a0,-(sp)
+	ext.l	d2
+	move.l	d2,-(sp)
+	move.w	d0,d2			; Clear number area
+	move.w	d1,d3
+	add.w	#32-1,d2
+	add.w	#Standard_text_height,d3
+	moveq.l	#0,d4
+	jsr	Draw_box
+	move.l	(sp)+,d2
+	lea.l	Number,a0			; Convert number
+	exg.l	d0,d2
+	moveq.l	#3,d7
+	jsr	DecL_convert
+	lea.l	Number,a0			; Print number
+	exg.l	d0,d2
+	jsr	Put_text_line
+	movem.l	(sp)+,d0-d4/d7/a0
+	rts
+
+;*****************************************************************************
+; [ Print a 7-digit number ]
+;   IN : d0 - X-coordinate (.w)
+;        d1 - Y-coordinate (.w)
+;        d2 - Number (.l)
+; All registers are restored
+;*****************************************************************************
+Print_large_number:
+	movem.l	d0-d4/d7/a0,-(sp)
+	move.l	d2,-(sp)
+	move.w	d0,d2			; Clear number area
+	move.w	d1,d3
+	add.w	#40-1,d2
+	add.w	#Standard_text_height,d3
+	moveq.l	#0,d4
+	jsr	Draw_box
+	move.l	(sp)+,d2
+	lea.l	Number,a0			; Convert number
+	exg.l	d0,d2
+	moveq.l	#7,d7
+	jsr	DecL_convert
+	lea.l	Number,a0			; Print number
+	exg.l	d0,d2
+	jsr	Put_text_line
+	movem.l	(sp)+,d0-d4/d7/a0
+	rts
+
 ;*****************************************************************************
 ; [ Delay	]
 ;   IN : d0 - Number of VBL's	to delay (.w)
@@ -35,13 +93,15 @@ Delay:
 
 ;***************************************************************************
 ; [ Fill memory ]
-;   IN : d0 - Number of bytes to clear (must be even) (.l)
+;   IN : d0 - Number of bytes to clear (will be made even) (.l)
 ;        d1 - Fill value (.l)
 ;        a0 - Address at which to clear (must be even) (.l)
 ; All registers are restored
 ;***************************************************************************
 Fill_memory:
 	movem.l	d0-d2/a0,-(sp)
+	addq.l	#1,d0			; Make even
+	and.b	#$fe,d0
 	add.l	d0,a0			; Work from back to front
 	move.l	d1,d2
 	move.l	d0,d1			; Do chunks of 32 bytes
@@ -244,6 +304,18 @@ Shellsort:
 	bra.s	.Again2			; }
 .Done2:	bra.s	.Again1			; }
 .Done1:	movem.l	(sp)+,d0-d2/d5/d6
+	rts
+
+;***************************************************************************
+; [ Wait for the user ]
+; All registers are restored
+;***************************************************************************
+Wait_4_user:
+	move.l	a0,-(sp)
+	jsr	Wait_4_unclick
+	Push	Module,Wait_4_user_Mod
+	jsr	Wait_4_unclick
+	move.l	(sp)+,a0
 	rts
 
 ;***************************************************************************

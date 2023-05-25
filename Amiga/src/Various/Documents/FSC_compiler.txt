@@ -1,0 +1,186 @@
+Forced Control Script compiler
+
+	*** Compiler structure ***
+
+Get input
+For each file
+	While not EOF
+	{
+		Read line
+		Skip leading spaces
+		If not comment line
+		{
+			Find command
+			If found
+			{
+				Write FSC-command to output buffer
+				Get X = number of parameters
+				Repeat X times
+				{
+					Skip spaces
+					Read number string
+					If EOL
+						Error ("Command ... doesn´t have enough parameters.")
+					Else
+					{
+						Convert string to number
+						If valid
+							Write number to output buffer
+						Else
+							Error ("Illegal number")
+					}
+				}
+			}
+			Else
+				Error ("Command ... not recognized.")
+		}
+		Search to EOL
+	}
+
+	*** Notes ***
+
+- The FSC compiler will be able to handle wildcards.
+- Error messages will include filename and line number.
+- Options when an error occurs :
+	I - Ignore
+	A - Abort this file
+	Q - Abort all
+	C - Correct this line
+  It is probably too hard to actually write the new line back to the file, but the
+  Correct-option is still useful when compiling large batches of files.
+- Input file extension doesn´t matter.
+- Output file extension is #?.FCS.
+- Output consists of a stream of words terminated by a zero. All parameters
+are stored as words. No checks are made on the parameters.
+
+	*** Script event structure ***
+
+Backup event data
+Load script
+While not end of script
+	{
+	Read FCS-command
+	Get address of FCS-command handler
+	Execute
+	}
+Remove script
+Restore event data
+If in a 2D map
+	Re-centre party
+
+	*** FCS commands ***
+
+All the commands are simply numbered starting from 1. 0 is the script terminator.
+
+Party_go_abs (x,y)
+Party_go_rel (dx,dy)
+NPC_go_abs (NPC nr,x,y)
+NPC_go_rel (NPC nr,dx,dy)
+Camera_go_abs (x,y)
+Camera_go_rel (dx,dy)
+Preload
+Flush
+Show_map
+Execute (type)
+Do_event_chain (chain nr)
+Do_event (b0,b1,b2,b3,b4,b5,w6,w8)
+Show_pic (pic nr)
+
+Text (text nr)
+Sound (sample nr)
+Music (song nr)
+Set_quest_bit (bit nr)
+Clear_quest_bit (bit nr)
+NPC_on (NPC nr)
+NPC_off (NPC nr)
+Give_item (object index,quantity)
+Give_gold (quantity)
+Give_food (quantity)
+Icon_change (x,y,icon nr)
+Wipe (type)
+Update
+Play_anim (animfile nr,x,y,number)
+Text_NPC (text nr,NPC nr)
+Pause (ticks)
+
+	*** FCS command structures ***
+
+Party_go_abs (x,y)
+	Set coordinates of party to x,y
+
+Party_go_rel (dx,dy)
+	Add dx,dy to coordinates of party
+
+NPC_go_abs (NPC nr,x,y)
+	Set coordinates of NPC (NPC nr) to x,y
+
+NPC_go_rel (NPC nr,dx,dy)
+	Add dx,dy to coordinates of NPC (NPC nr)
+
+Camera_go_abs (x,y)
+	Set coordinates of camera to x,y
+
+Camera_go_rel (dx,dy)
+	Add dx,dy to coordinates of camera
+
+Preload
+	While not end of script
+	{
+		Read command
+		If Flush
+			End
+		If Show_pic
+			Load picture
+		If Sound
+			Load sample
+		If Music
+			Load song
+		If Play_anim
+			Load animation
+	}
+
+Flush
+	No function
+
+Show_map
+	Show current map layout
+	Display the map
+
+Execute (type)
+	Get address of custom routine from table
+	Execute
+
+Do_event_chain (chain nr)
+	Find event chain
+	Initialize event data
+	Execute event data
+
+Do_event (b0,b1,b2,b3,b4,b5,w6,w8)
+	Initialize single event data block
+	Handle event
+
+Show_pic (pic nr)
+	Load picture & palette
+	Display picture over the entire top of the screen
+
+All the following FCS-commands work in the same way :
+	Initialize single event data block
+	Handle event
+How the actual event is constructed is different for each command.
+
+Text (text nr)				-> Text event
+Sound (sample nr)			-> Music event
+Music (song nr)				-> Music event
+Set_quest_bit (bit nr)			-> Modify event
+Clear_quest_bit (bit nr)		-> Modify event
+NPC_on (NPC nr)				-> Modify event
+NPC_off (NPC nr)			-> Modify event
+Give_item (object index,quantity)	-> Modify event
+Give_gold (quantity)			-> Modify event
+Give_food (quantity)			-> Modify event
+Icon_change (x,y,icon nr)		-> Change Icon event
+Wipe (type)				-> Wipe event
+Update					-> Wipe event
+Play_anim (animfile nr,x,y,number)	-> Play Animation event
+Text_NPC (text nr,NPC nr)		-> NPC Text event
+Pause (ticks)				-> Pause event

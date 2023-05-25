@@ -3,7 +3,6 @@
 ; Written by J.Horneman (In Tune With The Universe)
 ; Start : 7-2-1994
 
-
 ; Notes :
 ;   - [ Process_text ] doesn't handle the text justification anymore.
 ;     Instead, two routines are available :
@@ -105,7 +104,7 @@ Put_text_line:
 	rts
 
 ;***************************************************************************
-; [ Put a processed text line on the screen ]
+; [ Put a processed text line on the screen, centered horizontally ]
 ;   IN : d0 - X-coordinate (.w)
 ;        d1 - Y-coordinate (.w)
 ;        d2 - Width of area in which to center (.w)
@@ -124,6 +123,36 @@ Put_centered_text_line:
 	add.w	d2,d0
 .Skip:	jsr	Put_text_line
 	movem.l	(sp)+,d0/d2
+	rts
+
+;***************************************************************************
+; [ Put a processed text line on the screen, centered in a box ]
+;   IN : d0 - Top-left X-coordinate (.w)
+;        d1 - Top-left Y-coordinate (.w)
+;        d2 - Width of box (.w)
+;        d3 - Height of box (.w)
+;        a0 - Pointer to text line (.l)
+; All registers are restored
+;***************************************************************************
+Put_centered_box_text_line:
+	movem.l	d0-d5,-(sp)
+	move.w	d0,d4			; Save
+	move.w	d1,d5
+	jsr	Get_line_size		; Get size
+	exg.l	d0,d4
+	exg.l	d1,d5
+	sub.w	d4,d2			; Centre horizontally
+	bmi.s	.Skip1
+	addq.w	#1,d2
+	lsr.w	#1,d2
+	add.w	d2,d0
+.Skip1:	sub.w	d5,d3			; Centre vertically
+	bmi.s	.Skip2
+	addq.w	#1,d3
+	lsr.w	#1,d3
+	add.w	d3,d1
+.Skip2:	jsr	Put_text_line
+	movem.l	(sp)+,d0-d5
 	rts
 
 ;***************************************************************************
@@ -677,6 +706,81 @@ Get_line_length:
 	move.l	Font_translation(a6),a1	; Get font data
 	move.l	Width_table(a6),a2
 	moveq.l	#-1,d7			; No previous character
+	bra.s	.Again1
+.No_com:	cmp.b	#" ",d0			; Space or Solid space ?
+	beq.s	.Space
+	cmp.b	#Solid_space,d0
+	bne.s	.No_space
+.Space:	add.w	Width_of_space(a6),d4	; Yes -> Skip pixels
+	moveq.l	#-1,d7			; No previous character
+	bra.s	.Again1
+.No_space:	cmp.w	#32,d0			; Legal ?
+	blo.s	.Again1
+	move.b	-32(a1,d0.w),d0		; Yes -> Translate
+	bmi.s	.Again1
+	cmp.w	#-1,d7			; Is there a previous character ?
+	beq.s	.No_kern
+	move.l	Kerning_table(a6),d2	; Kerning table available ?
+	beq.s	.No_kern
+	move.l	d2,a4			; Yes
+	addq.l	#2,a4
+	lsl.w	#8,d7			; Build kerning pair
+	move.b	d0,d7
+.Again2:	move.w	(a4)+,d2			; End of table ?
+	beq.s	.No_kern
+	cmp.w	d2,d7			; No -> Found ?
+	bne.s	.Again2
+	subq.w	#1,d4			; Yes -> Remove pixel
+.No_kern:	move.b	d0,d7			; Save
+	moveq.l	#0,d2			; Get character width
+	move.b	0(a2,d0.w),d2
+	add.w	d2,d4			; Skip pixels
+	add.w	Between_width(a6),d4	; Skip more pixels
+	bra	.Again1
+.Exit:	sub.w	Between_width(a6),d4	; Remove last pixels
+	move.l	(sp)+,a0			; Restore font
+	jsr	Change_Font
+	move.w	d4,d0			; Output
+	movem.l	(sp)+,d2/d4/d7/a0-a2/a4/a6
+	rts
+
+;***************************************************************************
+; [ Get the width & height of a text line in pixels ]
+;   IN : a0 - Pointer to text line (.l)
+;  OUT : d0 - Width of text line in pixels (.w)
+;        d1 - Height of text line in pixels (.w)
+; Changed registers : d0,d1
+;***************************************************************************
+Get_line_size:
+	movem.l	d2/d4/d7/a0-a2/a4/a6,-(sp)
+	movea.l	Font_Sp,a6		; Get current font
+	move.l	(a6),a6
+	move.l	a6,-(sp)			; Save
+	move.l	([Current_text_style],a6.l),a6
+	move.l	Font_translation(a6),a1	; Get font data
+	move.l	Width_table(a6),a2
+	move.w	Raw_char_height(a6),d1	; Get initial height
+	moveq.l	#0,d4			; Length is zero
+	moveq.l	#-1,d7			; No previous character
+.Again1:	moveq.l	#0,d0			; Read byte from string
+	move.b	(a0)+,d0
+	beq	.Exit			; Exit if EOL
+	cmp.b	#Comstart_char,d0		; Command character ?
+	bne.s	.No_com
+	move.l	a1,-(sp)			; Yes -> Handle command
+	lea.l	LLC_table2,a1
+	jsr	LLC_handler
+	move.l	(sp)+,a1
+	movea.l	Font_Sp,a6		; Get current font
+	move.l	(a6),a6
+	move.l	([Current_text_style],a6.l),a6
+	move.l	Font_translation(a6),a1	; Get font data
+	move.l	Width_table(a6),a2
+	move.w	Raw_char_height(a6),d0	; Get height
+	cmp.w	d0,d1			; Higher ?
+	bpl.s	.No1
+	move.w	d0,d1			; Yes
+.No1:	moveq.l	#-1,d7			; No previous character
 	bra.s	.Again1
 .No_com:	cmp.b	#" ",d0			; Space or Solid space ?
 	beq.s	.Space

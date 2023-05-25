@@ -1,0 +1,234 @@
+
+**** CORE : Initialization, hardware management & I/O ****
+
+Global
+	Set up & restore computer state
+	VBL routine
+	First copper list updating (screen address & hardware sprites)
+	-> Rasters
+Screen
+	Initializing the screen
+	Clearing, switching, copying, updating of the screen
+	-> Global
+Rasters / fading
+	Palette changing and fading
+	Copper list management
+Hardware sprites
+	Hardware sprite management
+	-> Rasters
+
+Memory
+	Memory management
+File handling
+	Loading and saving of files
+	-> Memory, Requesters
+
+Graphics
+	All graphics routines
+	-> Memory
+
+Mouse
+	Reading mouse position and button state
+	-> Hardware sprites
+Keyboard
+	Reading the keyboard
+
+**** Hull : Service routines for user interface ****
+
+Various
+	Miscellaneous functions
+
+Module control
+	Program flow control
+
+Objects
+	Identifying objects under the mouse-pointer
+
+Windows
+	Opening and closing windows
+
+HDOB큦
+	Managing the HDOB큦
+	-> Graphics
+
+Text
+	Processing and displaying texts
+Numerical conversions
+	Conversions of numbers to text and vice versa
+Text output
+	Actual printing of text lines
+	-> Graphics
+
+**** Special effects ****
+
+Blending effects
+	Graphics blending from invisible to visible screen
+	-> Graphics
+
+Special effects
+	Moving HDOB큦, exploding bitmaps
+	-> HDOB큦, Graphics
+
+Colour fading
+	Frequent fading operations
+	Colour blinking
+	Change palette to one colour
+
+**** User-interface elements ****
+
++ Pop-up menus
+	Displaying and handling pop-up menus
+	-> Graphics, Module control, text
+
++ Buttons
+	Displaying and handling buttons
+	-> Graphics, Module control, text
+
++ Scroll-bars
+	Displaying and handling scroll-bars
+	-> Graphics
+
+Text windows
+	Displaying and handling text windows
+	-> Windows, Text
+
+Requesters
+	Displaying and handling requesters
+	-> Windows, Text, Module control
+
+Permanent text window
+	New message
+	Clear
+
+Permanent feedback line
+	Management (automatic fading out)
+	New message
+	Clear
+
+**** GAME SPECIFIC ****
+
+PDA display
+	Automatic update
+	Complete update
+	Force update
+	Show death
+	Show arrival
+	Show removal
+	Update damage display
+	Update magic sparkle display
+	Wait for sparkles
+
+Standard selections
+	Select party member
+	Select item from on-screen items
+	Update object display
+	Display an object
+	Display a body object
+	Let an object sparkle
+	Select item from window
+	Numerical requesters
+
+**** Game logic ****
+
+Activate party member
+Check if current active member can remain active
+Select a new party member
+
+Active check
+Alive check
+Talk check
+Inventory check
+Present check
+
+HLC (high-level text commands)
+Probe & Probe 100%
+
+Do damage
+Kill party member
+Remove party member
+Add party member (-> Dialogue !)
+De-exhaust a party member
+Increase LP
+Increase PP
+
+Move in one of four directions (-> Map)
+Move in one of eight directions (-> Map)
+
+Clear new words array (-> Dialogue)
+Reset sold scroll bar (sold = work slots)
+Clear sold slots
+
+Access bit array
+
+Pool gold
+Divide gold
+Divide food
+
+Display gold & food
+Handle gold & food transfers
+
+Check if active member carries anything in backpack
+Check if a 24-slot inventory is empty
+Check if a 24-slot inventory is full
+Check an object list for vital items
+
+Count normal party members
+
+Check member levels
+Make levels
+
+Music on
+Music off
+
+Load object graphics
+Free object graphics
+Load 80x80 picture
+Free 80x80 picture
+
+Print a prompt referring to a party member
+Open a window with a prompt referring to a party member
+Print a text referring to a party member (uses text list)
+Open a window with a text referring to a party member (uses text list)
+NOTES :
+  - The latter two functions should be removed.
+  - The text routines should be prepared for increased use of HLC큦.
+  - The SUBJ commands should be used, as they are so versatile. A function should
+    be written which turns any party member into the subject.
+
+Show layout
+
+Scan for gold, food or object transfer victims
+
+Move an item to the backpack
+Remove an item from a person큦 inventory
+Remove an item from a 24-slot inventory
+Move an item to a 24-slot inventory
+Add an item to the body
+Move an item to merchant inventory
+
+Destroy a used item (logic)
+Reset weight of party members
+
+
+
+( **** Game logic displays ****
+	Show death
+	Show arrival
+	Show removal
+	Do magic sparkle
+
+	Drop items
+	Equip items
+
+	Lockpick breaks
+	Lockpick works
+	Key is not destroyed
+	Key is destroyed
+	Key is does not fit
+
+	Show damage
+	Game over )
+
+**** NOTES ****
+
+

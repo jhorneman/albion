@@ -4,9 +4,11 @@
 
 	XDEF	Draw_symbol
 	XDEF	Draw_rectangle
-	XDEF	Draw_deep_box
+	XDEF	Draw_high_border
+	XDEF	Draw_deep_border
 	XDEF	Draw_normal_box
 	XDEF	Draw_high_box
+	XDEF	Draw_deep_box
 
 	SECTION	Program,code
 ;***************************************************************************	
@@ -63,14 +65,58 @@ Draw_rectangle:
 	rts
 
 ;***************************************************************************	
-; [ Draw a deep box ]
+; [ Draw a high border ]
 ;   IN : d0 - Top-left X-coordinate (.w)
 ;        d1 - Top-left Y-coordinate (.w)
-;        d2 - Width of box (.w)
-;        d3 - Height of box (.w)
+;        d2 - Width of border (.w)
+;        d3 - Height of border (.w)
 ; All registers are restored
 ;***************************************************************************	
-Draw_deep_box:
+Draw_high_border:
+	movem.l	d0-d5,-(sp)
+	move.w	d0,d5			; Save
+	move.w	#Brightest,d4		; Top-left pixel
+	jsr	Plot_pixel
+	addq.w	#1,d0			; Top line
+	add.w	d0,d2
+	subq.w	#3,d2
+	move.w	#Brighter,d4
+	jsr	Draw_hline
+	move.w	d2,d0			; Top-right pixel
+	addq.w	#1,d0
+	move.w	#Normal,d4
+	jsr	Plot_pixel
+	move.w	d5,d0			; Left line
+	addq.w	#1,d1
+	add.w	d1,d3
+	subq.w	#3,d3
+	move.w	#Brighter,d4
+	jsr	Draw_vline
+	move.w	d2,d0			; Right line
+	addq.w	#1,d0
+	move.w	#Darker,d4
+	jsr	Draw_vline
+	move.w	d5,d0			; Bottom-left pixel
+	move.w	d3,d1
+	addq.w	#1,d1
+	move.w	#Normal,d4
+	jsr	Plot_pixel
+	addq.w	#1,d0			; Bottom line
+	addq.w	#1,d2
+	move.w	#Darker,d4
+	jsr	Draw_hline
+	movem.l	(sp)+,d0-d5
+	rts
+
+;***************************************************************************	
+; [ Draw a deep border ]
+;   IN : d0 - Top-left X-coordinate (.w)
+;        d1 - Top-left Y-coordinate (.w)
+;        d2 - Width of border (.w)
+;        d3 - Height of border (.w)
+; All registers are restored
+;***************************************************************************	
+Draw_deep_border:
 	movem.l	d0-d5,-(sp)
 	move.w	d0,d5			; Save
 	add.w	d0,d2			; Top line
@@ -87,8 +133,6 @@ Draw_deep_box:
 	subq.w	#3,d3
 	move.w	#Darker,d4
 	jsr	Draw_vline
-	addq.w	#1,d0			; Main box
-	jsr	Darker_box
 	move.w	d2,d0			; Right line
 	addq.w	#1,d0
 	move.w	#Bright,d4
@@ -114,41 +158,16 @@ Draw_deep_box:
 ; All registers are restored
 ;***************************************************************************	
 Draw_normal_box:
-	movem.l	d0-d5,-(sp)
-	move.w	d0,d5			; Save
-	move.w	#Brightest,d4		; Top-left pixel
-	jsr	Plot_pixel
-	addq.w	#1,d0			; Top line
-	add.w	d0,d2
+	movem.l	d0-d3,-(sp)
+	jsr	Draw_high_border
+	add.w	d0,d2			; Main box
 	subq.w	#3,d2
-	move.w	#Bright,d4
-	jsr	Draw_hline
-	move.w	d2,d0			; Top-right pixel
-	addq.w	#1,d0
-	move.w	#Normal,d4
-	jsr	Plot_pixel
-	move.w	d5,d0			; Left line
-	addq.w	#1,d1
 	add.w	d1,d3
 	subq.w	#3,d3
-	move.w	#Bright,d4
-	jsr	Draw_vline
-	addq.w	#1,d0			; Main box
-	jsr	Marmor_box
-	move.w	d2,d0			; Right line
 	addq.w	#1,d0
-	move.w	#Dark,d4
-	jsr	Draw_vline
-	move.w	d5,d0			; Bottom-left pixel
-	move.w	d3,d1
 	addq.w	#1,d1
-	move.w	#Normal,d4
-	jsr	Plot_pixel
-	addq.w	#1,d0			; Bottom line
-	addq.w	#1,d2
-	move.w	#Dark,d4
-	jsr	Draw_hline
-	movem.l	(sp)+,d0-d5
+	jsr	Marmor_box
+	movem.l	(sp)+,d0-d3
 	rts
 
 ;***************************************************************************	
@@ -160,39 +179,35 @@ Draw_normal_box:
 ; All registers are restored
 ;***************************************************************************	
 Draw_high_box:
-	movem.l	d0-d5,-(sp)
-	move.w	d0,d5			; Save
-	move.w	#Brightest,d4		; Top-left pixel
-	jsr	Plot_pixel
-	addq.w	#1,d0			; Top line
-	add.w	d0,d2
-	subq.w	#3,d2
-	move.w	#Brighter,d4
-	jsr	Draw_hline
-	move.w	d2,d0			; Top-right pixel
+	movem.l	d0-d3,-(sp)
+	jsr	Draw_high_border
+	add.w	d0,d2			; Main box
+	subq.w	#2,d2
+	add.w	d1,d3
+	subq.w	#2,d3
 	addq.w	#1,d0
-	move.w	#Normal,d4
-	jsr	Plot_pixel
-	move.w	d5,d0			; Left line
 	addq.w	#1,d1
+	jsr	Brighter_box
+	movem.l	(sp)+,d0-d3
+	rts
+
+;***************************************************************************	
+; [ Draw a deep box ]
+;   IN : d0 - Top-left X-coordinate (.w)
+;        d1 - Top-left Y-coordinate (.w)
+;        d2 - Width of box (.w)
+;        d3 - Height of box (.w)
+; All registers are restored
+;***************************************************************************	
+Draw_deep_box:
+	movem.l	d0-d3,-(sp)
+	jsr	Draw_deep_border
+	add.w	d0,d2			; Main box
+	subq.w	#3,d2
 	add.w	d1,d3
 	subq.w	#3,d3
-	move.w	#Brighter,d4
-	jsr	Draw_vline
-	addq.w	#1,d0			; Main box
-	jsr	Brighter_box
-	move.w	d2,d0			; Right line
 	addq.w	#1,d0
-	move.w	#Darker,d4
-	jsr	Draw_vline
-	move.w	d5,d0			; Bottom-left pixel
-	move.w	d3,d1
 	addq.w	#1,d1
-	move.w	#Normal,d4
-	jsr	Plot_pixel
-	addq.w	#1,d0			; Bottom line
-	addq.w	#1,d2
-	move.w	#Darker,d4
-	jsr	Draw_hline
-	movem.l	(sp)+,d0-d5
+	jsr	Darker_box
+	movem.l	(sp)+,d0-d3
 	rts

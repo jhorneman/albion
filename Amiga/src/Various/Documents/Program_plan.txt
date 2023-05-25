@@ -1,0 +1,81 @@
+
+*** RESTART GAME	(Save number)
+
+Clear game data
+If save number is 0
+	Clear party data
+	Initialize time & member
+	LOAD GAME DATA ()
+	Execute Game begins event chain
+Else
+	LOAD GAME DATA ()
+
+
+*** LOAD GAME DATA	()
+Load default event set
+Load item event set
+Load magic event set
+For each party member :
+	Load character data
+	Load small portrait
+	Load event sets
+End
+
+*** DO ACTION 	(Action number,
+				 Extra,
+				 Value,
+				 Pointer to action)
+Surrounding handler,
+Select a number of event sets depending on the surrounding
+Check these event sets for an event chain beginning with the specified action
+If the action was neither executed nor forbidden AND the default is execute
+	Execute the action
+
+
+
+Actor type priorities : Me, One of my friends, One of my enemies
+
+
+Check map events				/* Check for location-based exceptions */
+
+If in dialogue mode
+	Check dialogue partner event sets
+
+If in magic mode
+	Check magic event set
+
+If in item mode
+	Check item event set
+
+If in combat mode
+	Check current combat participant's event sets
+	Check other combat participant's event sets
+Else
+	Check active member
+	Check other party member's event sets
+
+Check default event set			/* Execute the default action */
+
+
+*** HANDLE MAP ACTION EVENT
+
+*** CHECK MAP ACTION EVENT CHAIN
+
+If the chain has an Action trigger
+	Search the chain for an Action event
+	If this matches the current Action
+		Execute the chain
+
+*** HANDLE EVENT SET ACTION EVENT
+
+For all event chains in this set :
+	If this matches the current Action EXACTLY :
+		Execute the EXACT chain
+	If this matches the current Action APPROXIMATELY :
+		For all event chains in this set :
+			If this matches the current Action EXACTLY :
+				Execute the EXACT chain
+		If no EXACT match was found
+			Execute the APPROXIMATE chain
+
+*** EXECUTE EVENT

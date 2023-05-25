@@ -8,6 +8,7 @@
 	XDEF	Clear_cache
 	XDEF	My_vsync
 	XDEF	Dummy
+	XDEF	File_requester
 
 	XDEF	DDT_name
 	XDEF	Kickstart_version
@@ -51,6 +52,8 @@ Restart:	move.l	Stack_base,sp		; Reset stack
 	jsr	Reset_CA_stack
 	jsr	Reset_root_stack
 	jsr	Reset_module_stack
+	jsr	Reset_keyboard		; Reset input buffers
+	jsr	Reset_mouse_buffer
 	jsr	Clear_all_HDOBs		; Reset HDOBs
 
 	move.l	Off_screen,a0		; Clear screens
@@ -84,13 +87,16 @@ Init_computer:
 	sub.l	a1,a1			; Find own task
 	kickEXEC	FindTask
 	move.l	d0,My_task_ptr
+;	move.l	d0,a1			; Increase priority
+;	moveq.l	#16,d0
+;	kickEXEC	SetTaskPri
 	moveq.l	#INTB_COPER,d0		; Install Copper interrupt
 	lea.l	My_Copper_interrupt,a1
 	kickEXEC	AddIntServer
 	st	Vbl_installed
-	jsr	Init_screens		; Initialize Core
+	jsr	Init_mouse		; Initialize Core
+	jsr	Init_screens
 	jsr	Init_input
-	jsr	Init_mouse
 	jsr	Init_files
 .Exit:	movem.l	(sp)+,d0-d7/a0-a6
 	rts
@@ -102,10 +108,11 @@ Init_computer:
 Exit_computer:
 	movem.l	d0-d7/a0-a6,-(sp)
 	Wait_4_blitter
+	jsr	End_graphics_ops
 	jsr	Exit_files		; Exit Core
 	jsr	Exit_input
-	jsr	Exit_mouse
 	jsr	Exit_screens
+	jsr	Exit_mouse
 	tst.b	Vbl_installed		; Remove Copper interrupt
 	beq	.Skip
 	moveq.l	#INTB_COPER,d0
@@ -167,7 +174,7 @@ Get_computer_state:
 ;*****************************************************************************
 Open_libraries:
 	movem.l	d0/d1/a0/a1,-(sp)
-	moveq.l	#39,d0			; Open Kick 3.0 DOS library
+	moveq.l	#39,d0			; Open DOS library
 	lea.l	DOS_library_name,a1
 	kickEXEC	OpenLibrary
 	tst.l	d0			; Success ?
@@ -176,7 +183,7 @@ Open_libraries:
 	jmp	Fatal_error
 .Ok:	move.l	d0,DOS_base
 	LOCAL
-	moveq.l	#39,d0			; Open Kick 3.0 Graphics library
+	moveq.l	#39,d0			; Open Graphics library
 	lea.l	Graphics_library_name,a1
 	kickEXEC	OpenLibrary
 	tst.l	d0			; Success ?
@@ -185,7 +192,7 @@ Open_libraries:
 	jmp	Fatal_error
 .Ok:	move.l	d0,Graphics_base
 	LOCAL
-	moveq.l	#33,d0			; Open Kick 3.0 Intuition library
+	moveq.l	#33,d0			; Open Intuition library
 	lea.l	Intuition_library_name,a1
 	kickEXEC	OpenLibrary
 	tst.l	d0			; Success ?
@@ -193,6 +200,15 @@ Open_libraries:
 	move.l	#INTUITION_LIBRARY_ERROR,d0	; No -> Exit
 	jmp	Fatal_error
 .Ok:	move.l	d0,Intuition_base
+	LOCAL
+	moveq.l	#33,d0			; Open Asl library
+	lea.l	Asl_library_name,a1
+	kickEXEC	OpenLibrary
+	tst.l	d0			; Success ?
+	bne.s	.Ok
+	move.l	#ASL_LIBRARY_ERROR,d0	; No -> Exit
+	jmp	Fatal_error
+.Ok:	move.l	d0,Asl_base
 	movem.l	(sp)+,d0/d1/a0/a1
 	rts
 
@@ -220,21 +236,33 @@ Close_libraries:
 	kickEXEC	CloseLibrary
 	clr.l	Intuition_base
 .No:	LOCAL
+	move.l	Asl_base,d0		; Asl library open ?
+	beq.s	.No
+	move.l	d0,a1			; Yes -> Close
+	kickEXEC	CloseLibrary
+	clr.l	Asl_base
+.No:	LOCAL
 	movem.l	(sp)+,d0/d1/a0/a1
 	rts
 
 ;***************************************************************************
 ; [ Copper interrupt handler ]
 ; All registers are restored
+; Notes :
+;   - There are TWO copper interrupts per frame !
 ;***************************************************************************
 My_Copper_handler:
-	movem.l	d0-d7/a0-a6,-(sp)
+	not.b	Interrupt_toggle
+	beq.s	.Two
+	addq.l	#1,Top_counter
+	bra.s	.Exit
+.Two:	movem.l	d0-d7/a0-a6,-(sp)
 	addq.l	#1,VBL_counter		; Count
 	jsr	Update_mouse		; Update mouse
 	jsr	Random			; Randomize
 	jsr	VblQ_handler		; Do VBL queue
 	movem.l	(sp)+,d0-d7/a0-a6
-	rts
+.Exit:	rts
 
 ;*****************************************************************************
 ; [ Set data of a tag in a tag list ]
@@ -358,10 +386,70 @@ My_vsync:
 Dummy:
 	rts
 
+;*****************************************************************************
+; [ Filerequester ]
+;   IN : a0 - Pointer to title text (.l)
+;        a1 - Pointer to file pattern (.l)
+;  OUT : a0 - Pointer to filename / 0 (No file) (.l)
+; Changed registers : a0
+;*****************************************************************************
+File_requester:
+	movem.l	d0/d1/d7/a1/a2,-(sp)
+	moveq.l	#0,d7			; Default is no file
+	move.l	a0,d1			; Insert title text
+	lea.l	File_requester_tags,a0
+	move.l	#ASLFR_TitleText,d0
+	jsr	Set_tag_data
+	move.l	#ASLFR_InitialPattern,d0	; Insert file pattern
+	move.l	a1,d1
+	jsr	Set_tag_data
+	move.l	#ASL_FileRequest,d0		; Allocate requester
+	kickASL	AllocAslRequest
+	move.l	d0,My_requester
+	move.l	d0,a0			; Do
+	sub.l	a1,a1
+	kickASL	AslRequest
+	tst.l	d0			; Cancelled ?
+	beq.s	.Exit
+	move.l	My_requester,a2		; No
+	lea.l	Full_name,a0		; Make full filename
+	move.l	fr_Drawer(a2),a1
+	jsr	Strcpy
+	move.l	#Full_name,d1
+	move.l	fr_File(a2),d2
+	move.l	#100,d3
+	kickDOS	AddPart
+	tst.l	d0			; Success ?
+	beq.s	.Exit
+	move.l	#Full_name,d7		; Yes
+.Exit:	move.l	My_requester,a0		; Free requester
+	kickASL	FreeAslRequest
+	move.l	d7,a0			; Output
+	movem.l	(sp)+,d0/d1/d7/a1/a2
+	rts
+
 ;***************************************************************************	
 ; The DATA & BSS segments	
 ;***************************************************************************
 	SECTION	Fast_DATA,data
+Empty_tags:
+	dc.l TAG_DONE
+File_requester_tags:
+	dc.l ASLFR_TitleText,0		; Will be inserted
+	dc.l ASLFR_InitialLeftEdge,20
+	dc.l ASLFR_InitialTopEdge,20
+	dc.l ASLFR_InitialHeight,300
+	dc.l ASLFR_InitialWidth,160
+	dc.l ASLFR_InitialPattern,0		; Will be inserted
+	dc.l ASLFR_PositiveText,.Ok
+	dc.l ASLFR_NegativeText,.Cancel
+	dc.l ASLFR_PrivateIDCMP,TRUE
+	dc.l TAG_DONE
+
+.Ok:	dc.b "Ok",0
+.Cancel:	dc.b "Cancel",0
+	even
+
 My_Copper_interrupt:
 	dc.l 0,0
 	dc.b NT_INTERRUPT
@@ -373,24 +461,32 @@ My_Copper_interrupt:
 DOS_library_name:	dc.b "dos.library",0
 Graphics_library_name:	dc.b "graphics.library",0
 Intuition_library_name:	dc.b "intuition.library",0
+Asl_library_name:	dc.b "asl.library",0
 	even
 
 
 	SECTION	Fast_BSS,bss
 Vbl_installed:	ds.b 1
 Blitter_or_CPU:	ds.b 1
+Interrupt_toggle:	ds.b 1
 	even
 Stack_base:	ds.l 1
 Interface_ptr:	ds.l 1
 Return_address:	ds.l 1
 Return_value:	ds.l 1
-Extended_error_code:	ds.l 1
+Extended_error_code:	ds.l 2
 Kickstart_version:	ds.w 1
 Processor_type:	ds.w 1
 VBLs_per_second:	ds.w 1
 VBL_counter:	ds.l 1
+Top_counter:	ds.l 1
 My_task_ptr:	ds.l 1
+
+My_requester:	ds.l 1
+Full_name:	ds.b 100
+	even
 
 DOS_base:	ds.l 1
 Graphics_base:	ds.l 1
 Intuition_base:	ds.l 1
+Asl_base:	ds.l 1

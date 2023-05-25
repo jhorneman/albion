@@ -7,8 +7,6 @@
 ; Notes :
 ;   - Sadly, it is impossible to guarantee that no blocks are claimed when
 ;     memory is allocated. This is taken into account by [ Collect_garbage ].
-;   - If Pass 3 of the memory allocation should take too much time, this
-;     can be speeded up by increasing the priority step factor.
 
 	SECTION	Program,code
 ;*****************************************************************************
@@ -21,7 +19,6 @@
 ;*****************************************************************************
 Reallocate_memory:
 	movem.l	a0/a1,-(sp)
-	jsr	Update_memory_time
 	jsr	Find_memory		; Find file
 	move.l	a0,d0			; Found ?
 	beq	.Exit
@@ -47,7 +44,6 @@ Reallocate_memory:
 ;*****************************************************************************
 Duplicate_memory:
 	movem.l	d1/d2/a0-a2,-(sp)
-	jsr	Update_memory_time
 	jsr	Find_memory		; Find file
 	move.l	a0,d0			; Found ?
 	beq.s	.Exit
@@ -210,15 +206,16 @@ File_allocate:
 	move.l	d0,Original_length		; Store original length
 	tst.b	d1			; Real file type ?
 	bne.s	.Yes
-	move.w	#-1,(sp)			; No
+	move.l	#-1,(sp)			; No
 	move.b	Default_memory_type,d1	; Default memory type
 	jsr	Do_allocate		; Allocate memory
 	bra.s	.Go_on
-.Yes:	move.w	d1,-(sp)			; Yes
+.Yes:	move.l	d1,-(sp)			; Yes
 	jsr	Get_file_memory_type	; Get memory type
 	jsr	Do_allocate		; Allocate memory
-.Go_on:	move.w	(sp)+,d1			; Find entry
-	jsr	Find_entry
+.Go_on:	move.l	(sp)+,d1
+	jsr	Find_entry		; Find entry
+	move.l	d0,-(sp)
 	jsr	Find_free_file_info_block	; Find free file info
 	move.b	d0,Block_file_index(a0)	; Write index
 	move.b	d1,File_type(a1)		; Write file type &
@@ -229,7 +226,9 @@ File_allocate:
 	bne.s	.Not_MT
 	move.l	Block_start(a0),a1		; Yes -> Make sure
 	clr.l	(a1)
-.Not_MT:	jsr	Set_priority
+.Not_MT:	jsr	Set_priority		; Set priority
+	jsr	Age_memory
+	move.l	(sp)+,d0
 	movem.l	(sp)+,d1/a0/a1
 	rts
 
@@ -245,7 +244,6 @@ File_allocate:
 ;*****************************************************************************
 Do_allocate:
 	movem.l	d1/d7/a0/a1,-(sp)
-	jsr	Update_memory_time
 	sf	Handles_invalid		; Clear
 	sf	Restart_music
 	addq.l	#3,d0			; Force longword boundary
@@ -347,7 +345,7 @@ Pass_1:
 ;    collects garbage. After that it calls Pass 1.
 Pass_2:
 	movem.l	d1-d7/a0-a6,-(sp)
-	Push	Mptr,Memory_Mptr
+	Push	busy_Mptr,Memory_Mptr
 	move.l	d0,d4
 ; ---------- Seek area with largest TFM -----------
 	lea.l	Memory_areas,a0
@@ -372,7 +370,7 @@ Pass_2:
 .Go_on:	jsr	Collect_garbage		; Collect garbage
 	move.l	d4,d0			; Try
 	jsr	Pass_1
-.Exit:	Pop	Mptr
+.Exit:	Pop	busy_Mptr
 	movem.l	(sp)+,d1-d7/a0-a6
 	rts
 
@@ -392,7 +390,7 @@ Pass_9:
 	bra	.Exit
 .Yes:	tst.l	Total_FAST_memory		; Any FAST ?
 	beq.s	.Out
-	Push	Mptr,Memory_Mptr
+	Push	busy_Mptr,Memory_Mptr
 	move.l	d0,-(sp)			; Save
 	move.w	d1,-(sp)
 ; ---------- Seek CHIP areas for unused CHIP blocks --
@@ -448,7 +446,7 @@ Pass_9:
 .Entry:	dbra	d7,.Loop
 	move.w	(sp)+,d1			; Restore
 	move.l	(sp)+,d0
-	Pop	Mptr
+	Pop	busy_Mptr
 	jsr	Pass_1			; Try
 .Exit:	movem.l	(sp)+,d1-d7/a0-a6
 	rts
@@ -463,7 +461,7 @@ Pass_9:
 ;    old memory blocks and collects garbage. After that it calls pass 1.
 Pass_3:
 	movem.l	d1-d7/a0-a6,-(sp)
-	Push	Mptr,Memory_Mptr
+	Push	busy_Mptr,Memory_Mptr
 	move.l	d0,d4
 	moveq.l	#0,d6			; Start priority = 0
 ; ---------- Seek area with largest EMG -----------
@@ -501,7 +499,7 @@ Pass_3:
 ; ---------- Do it --------------------------------
 .Go_on:	move.l	d4,d0			; Allocate
 	jsr	Pass_1
-.Exit:	Pop	Mptr
+.Exit:	Pop	busy_Mptr
 	movem.l	(sp)+,d1-d7/a0-a6
 	rts
 
@@ -540,7 +538,7 @@ Pass_5:
 	bra	.Exit
 .Yes:	tst.l	Total_FAST_memory		; Any FAST ?
 	beq.s	.Out
-	Push	Mptr,Memory_Mptr
+	Push	busy_Mptr,Memory_Mptr
 	move.l	d0,-(sp)			; Save
 	move.w	d1,-(sp)
 	jsr	Armageddon		; Kill! Kill! Kill!
@@ -591,7 +589,7 @@ Pass_5:
 .Entry:	dbra	d7,.Loop
 	move.w	(sp)+,d1			; Restore
 	move.l	(sp)+,d0
-	Pop	Mptr
+	Pop	busy_Mptr
 	jsr	Pass_1			; Try
 .Exit:	movem.l	(sp)+,d1-d7/a0-a6
 	rts
@@ -614,7 +612,7 @@ Pass_6:
 	bra	.Exit
 .Yes:	tst.l	Total_FAST_memory		; Any FAST ?
 	beq.s	.Out
-	Push	Mptr,Memory_Mptr
+	Push	busy_Mptr,Memory_Mptr
 	move.l	d0,-(sp)			; Save
 	move.w	d1,-(sp)
 ; ---------- Seek CHIP areas for DONTCARE blocks --
@@ -665,7 +663,7 @@ Pass_6:
 .Entry:	dbra	d7,.Loop
 	move.w	(sp)+,d1			; Restore
 	move.l	(sp)+,d0
-	Pop	Mptr
+	Pop	busy_Mptr
 	jsr	Pass_1			; Try
 .Exit:	movem.l	(sp)+,d1-d7/a0-a6
 	rts
@@ -794,11 +792,6 @@ Collect_garbage:
 ; Notes :
 ;   - This routine finds it's own target memory in the same area, in front
 ;     of the source memory entry.
-;   - [File_relocators] entry :
-;     	Block types which may be moved at will : [Copy_memory]
-;     	Block types which may not be moved : 0
-;     	Block types which must be relocated : Custom routine
-;   - Relocator routines receive the same parameters as [Copy_memory].
 ;   - This routine is only called by [Collect_garbage].
 ;   - This routine may assume that the source memory entry remains valid.
 ;*****************************************************************************
@@ -813,11 +806,9 @@ Relocate_memory_block:
 	add.w	d0,a2
 	moveq.l	#0,d0			; Get file type
 	move.b	File_type(a2),d0
-.No_file:	lea.l	File_relocators,a2		; Find relocator
-	lsl.w	#2,d0
-	move.l	0(a2,d0.w),d0
-	beq	.Exit			; If any
-	move.l	d0,a2
+.No_file:	jsr	Get_file_relocator		; Get relocator
+	cmp.l	#0,a2			; If any
+	beq.s	.Exit
 	jsr	Find_LFB_in_garbage		; Find a destination
 	cmpa.l	#0,a0			; Any ?
 	beq	.Exit
@@ -894,11 +885,6 @@ Find_LFB_in_garbage:
 ; Notes :
 ;   - Unlike [ Relocate_memory_block ], this routine doesn't find it's own
 ;     target memory.
-;   - [File_relocators] entry :
-;     	Block types which may be moved at will : [Copy_memory]
-;     	Block types which may not be moved : 0
-;     	Block types which must be relocated : Custom routine
-;   - Relocator routines receive the same parameters as [Copy_memory].
 ;   - This routine is called by the allocation passes.
 ;   - This routine may assume that the source memory entry is valid.
 ;*****************************************************************************
@@ -914,11 +900,9 @@ Move_memory_block:
 	add.w	d0,a2
 	moveq.l	#0,d0			; Get file type
 	move.b	File_type(a2),d0
-.No_file:	lea.l	File_relocators,a2		; Find relocator
-	lsl.w	#2,d0
-	move.l	0(a2,d0.w),d0
-	beq.s	.Exit			; If any
-	move.l	d0,a2
+.No_file:	jsr	Get_file_relocator		; Get relocator
+	cmp.l	#0,a2			; If any
+	beq.s	.Exit
 	st	Handles_invalid		; Flag
 	move.l	a0,-(sp)			; Relocate
 	move.l	Block_start(a0),a1

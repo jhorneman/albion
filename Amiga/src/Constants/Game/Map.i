@@ -2,7 +2,14 @@
 ; Written by J.Horneman (In Tune With The Universe)
 ; Start : 24-3-1994
 
-NPCs_per_map	EQU 32
+Random_anim_bias	EQU 6		; 0-15
+
+;*****************************************************************************
+; These are the offsets for the animation data
+	rsreset
+Anim_frame:	rs.b 1		; bit 7 is wave direction
+Anim_rnd_offset:	rs.b 1		; to create different groups every time
+Anim_rnd_bitlist:	rs.w 1
 
 ;*****************************************************************************
 ; These are the offsets for the NPC data
@@ -25,10 +32,10 @@ NPC_movement_type:	rs.b 2
 Short_dialogue:	rs.b 1
 Icon_priority:	rs.b 1
 NPC_wave_anim:	rs.b 1
+NPC_icon_height:	rs.b 2
 NPC_async_anim:	rs.b 1
 NPC_random_anim:	rs.b 1
 NPC_map_graphics:	rs.b 1
-NPC_icon_height:	rs.b 2
 
 ;*****************************************************************************
 ; These are the NPC types
@@ -71,20 +78,6 @@ NPC_sleeping:	rs.b 1
 NPC_blocks:	rs.b 1
 
 ;*****************************************************************************
-; This is the event block structure
-	rsreset
-	rs.b 1			; Event type
-Event_b1:	rs.b 1			; Byte data
-Event_b2:	rs.b 1
-Event_b3:	rs.b 1
-Event_b4:	rs.b 1
-Event_b5:	rs.b 1
-Event_w6:	rs.w 1			; Word data
-Event_w8:	rs.w 1
-Next_event_nr:	rs.w 1		; Number of next event in chain
-Event_data_size:    rs.b 0
-
-;*****************************************************************************
 ; This is the Goto-point structure
 	rsreset
 Goto_X:	rs.b 1			; X-coordinate
@@ -102,7 +95,8 @@ Map_music:	rs.b 1
 Map_width:	rs.b 1
 Map_height:	rs.b 1
 Lab_data_nr:	rs.b 0
-Icon_data_nr:	rs.b 1
+Icon_set_1_nr:	rs.b 1
+Icon_set_2_nr:	rs.b 1
 Palette_nr:	rs.b 1
 	rseven
 NPC_data:	rs.b NPCs_per_map*NPC_data_size

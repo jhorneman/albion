@@ -17,7 +17,7 @@
 ; All registers are restored
 ;***************************************************************************
 Init_screens:
-	movem.l	d0-d3/a0/a1,-(sp)
+	movem.l	d0-d3/d6/d7/a0/a1,-(sp)
 ; ---------- Find best mode ID --------------------
 	lea.l	BestModeID_tag_items,a0	; Find
 	kickGFX	BestModeIDA
@@ -25,11 +25,32 @@ Init_screens:
 	bne.s	.Ok
 	move.l	#MODE_ID_ERROR,d0		; No -> Exit
 	jmp	Fatal_error
-.Ok:	lea.l	Open_screen_tag_items,a0	; Insert mode ID
+.Ok:	move.l	d0,My_mode_ID		; Store
+	LOCAL
+	lea.l	Open_screen_tag_items,a0	; Insert mode ID
 	move.l	d0,d1
 	move.l	#SA_DisplayID,d0
 	jsr	Set_tag_data
-	LOCAL
+; ---------- Prepare overscan ---------------------
+	move.l	d1,a0			; Query overscan
+	lea.l	Overscan,a1
+	move.l	#OSCAN_MAX,d0
+	kickINTU	QueryOverscan
+	lea.l	Open_screen_tag_items,a0	; Insert left & top of
+	lea.l	Overscan,a1		;  screen
+	move.l	#SA_Left,d0
+	moveq.l	#0,d1
+	move.w	ra_MaxX(a1),d1
+	sub.w	ra_MinX(a1),d1
+	sub.w	#Screen_width,d1
+	asr.w	#1,d1
+	jsr	Set_tag_data
+	move.l	#SA_Top,d0
+	move.w	ra_MaxY(a1),d1
+	sub.w	ra_MinY(a1),d1
+	sub.w	#Screen_height,d1
+	asr.w	#1,d1
+	jsr	Set_tag_data
 ; ---------- Allocate bitmaps for screens ---------
 	move.l	#Screen_width,d0		; Allocate first bitmap
 	move.l	#Screen_height,d1
@@ -94,6 +115,13 @@ Init_screens:
 	move.l	#OPEN_WINDOW_ERROR,d0	; No -> Exit
 	jmp	Fatal_error
 .Ok:	move.l	d0,My_window
+	move.l	My_window,a0		; Set dummy Intuition pointer
+	lea.l	Dummy_sprite,a1
+	moveq.l	#1,d0
+	moveq.l	#16,d1
+	moveq.l	#0,d2
+	moveq.l	#0,d3
+	kickINTU	SetPointer
 	LOCAL
 ; ---------- Make copper list ---------------------
 	move.l	#ucl_data_size,d0		; Make UCopList
@@ -102,10 +130,22 @@ Init_screens:
 	move.l	d0,My_UCopList
 	move.l	d0,a6
 	move.l	d0,a0			; Initialize
-	moveq.l	#3,d0
+	moveq.l	#5,d0
 	kickGFX	UCopperListInit
+	move.l	a6,a1			; Wait for start of screen
+	moveq.l	#0,d0
+	moveq.l	#0,d1
+	kickGFX	CWait
+	move.l	a6,a1
+	kickGFX	CBump
+	move.l	a6,a1			; Cause copper interrupt
+	move.w	#intreq,d0
+	move.w	#$8010,d1
+	kickGFX	CMove
+	move.l	a6,a1
+	kickGFX	CBump
 	move.l	a6,a1			; Wait for end of screen
-	move.w	#201,d0
+	move.w	#Screen_height,d0
 	moveq.l	#0,d1
 	kickGFX	CWait
 	move.l	a6,a1
@@ -153,7 +193,7 @@ Init_screens:
 	move.l	Bitmap_2,a0		; Get second screen pointer
 	move.l	bm_Planes(a0),Off_screen
 	move.l	Off_screen,Work_screen
-	movem.l	(sp)+,d0-d3/a0/a1
+	movem.l	(sp)+,d0-d3/d6/d7/a0/a1
 	rts
 
 ;***************************************************************************
@@ -186,7 +226,9 @@ Exit_screens:
 .No:	LOCAL
 	move.l	My_window,d0		; Window open ?
 	beq.s	.No
-	move.l	d0,a0			; Yes -> Close it
+	move.l	d0,a0			; Yes -> Restore Intuition pointer
+	kickINTU	ClearPointer
+	move.l	My_window,a0		; Close it
 	kickINTU	CloseWindow
 	clr.l	My_window
 .No:	LOCAL
@@ -234,12 +276,8 @@ Clear_screen:
 ; All registers are restored
 ;***************************************************************************
 Update_screen:
-	movem.l	d0/d1/a0-a2,-(sp)
+	movem.l	d0/d1/d7/a0-a2,-(sp)
 	jsr	Draw_HDOBs		; Draw
-	move.l	Off_screen,a0		; Switch on- & off-screen
-	move.l	On_screen,Off_screen
-	move.l	a0,On_screen
-	move.l	Off_screen,Work_screen	; Set work screen
 	jsr	My_vsync			; Wait
 	Wait_4_blitter
 	tst.b	Screen_flag		; Select new screen buffer
@@ -249,11 +287,19 @@ Update_screen:
 .Two:	move.l	My_screen_buffer2,a1
 .Do:	move.l	My_screen,a0		; Switch
 	kickINTU	ChangeScreenBuffer
+	move.l	Top_counter,d0
+.Wait:	cmp.l	Top_counter,d0
+	beq.s	.Wait
+	move.l	Off_screen,a0		; Switch on- & off-screen
+	move.l	On_screen,Off_screen
+	move.l	a0,On_screen
+	move.l	Off_screen,Work_screen	; Set work screen
 	not.b	Screen_flag		; Toggle
 	jsr	Erase_HDOBs		; Erase
 	jsr	Copy_screen		: Copy
+	jsr	Handle_busy_pointer
 	jsr	ScrQ_handler		; Do screen queue 
-	movem.l	(sp)+,d0/d1/a0-a2
+	movem.l	(sp)+,d0/d1/d7/a0-a2
 	rts
 
 ;***************************************************************************
@@ -261,12 +307,8 @@ Update_screen:
 ; All registers are restored
 ;***************************************************************************
 Switch_screens:
-	movem.l	d0/d1/a0-a2,-(sp)
+	movem.l	d0/d1/d7/a0-a2,-(sp)
 	jsr	Draw_HDOBs		; Draw
-	move.l	Off_screen,a0		; Switch on- & off-screen
-	move.l	On_screen,Off_screen
-	move.l	a0,On_screen
-	move.l	Off_screen,Work_screen	; Set work screen
 	jsr	My_vsync			; Wait
 	Wait_4_blitter
 	tst.b	Screen_flag		; Select new screen buffer
@@ -276,10 +318,18 @@ Switch_screens:
 .Two:	move.l	My_screen_buffer2,a1
 .Do:	move.l	My_screen,a0		; Switch
 	kickINTU	ChangeScreenBuffer
+	move.l	Top_counter,d0
+.Wait:	cmp.l	Top_counter,d0
+	beq.s	.Wait
+	move.l	Off_screen,a0		; Switch on- & off-screen
+	move.l	On_screen,Off_screen
+	move.l	a0,On_screen
+	move.l	Off_screen,Work_screen	; Set work screen
 	not.b	Screen_flag		; Toggle
 	jsr	Erase_HDOBs		; Erase
+	jsr	Handle_busy_pointer
 	jsr	ScrQ_handler		; Do screen queue 
-	movem.l	(sp)+,d0/d1/a0-a2
+	movem.l	(sp)+,d0/d1/d7/a0-a2
 	rts
 
 ;***************************************************************************
@@ -291,7 +341,6 @@ Switch_screens:
 Copy_screen:
 	movem.l	d7/a0/a1,-(sp)
 	Wait_4_blitter
-	st	Double_mouse
 	move.l	On_screen,a0		; Copy
 	move.l	Off_screen,a1
 	move.w	#Screen_size/32-1,d7
@@ -300,8 +349,6 @@ Copy_screen:
 	move.l	(a0)+,(a1)+
 	endr
 	dbra	d7,.Loop
-	jsr	My_vsync
-	sf	Double_mouse
 	not.b	Screen_flag		; Adjust HDOB's
 	jsr	Erase_HDOBs
 	not.b	Screen_flag
@@ -313,10 +360,10 @@ Copy_screen:
 ;***************************************************************************
 	SECTION	Fast_DATA,data
 BestModeID_tag_items:
-	dc.l BIDTAG_DIPFMustHave,DIPF_IS_DBUFFER
-	dc.l BIDTAG_DIPFMustNotHave,SPECIAL_FLAGS|DIPF_IS_LACE
-	dc.l BIDTAG_NominalWidth,Screen_width
-	dc.l BIDTAG_NominalHeight,Screen_height
+	dc.l BIDTAG_DIPFMustHave,DIPF_IS_PAL|DIPF_IS_DBUFFER|DIPF_IS_SPRITES|DIPF_IS_SPRITES_ATT|DIPF_IS_SPRITES_CHNG_RES|DIPF_IS_SPRITES_CHNG_BASE
+	dc.l BIDTAG_DIPFMustNotHave,SPECIAL_FLAGS|DIPF_IS_LACE|DIPF_IS_PROGBEAM
+	dc.l BIDTAG_NominalWidth,320		; !!
+	dc.l BIDTAG_NominalHeight,200	; !!
 	dc.l BIDTAG_Depth,Screen_depth
 	dc.l BIDTAG_RedBits,8
 	dc.l BIDTAG_BlueBits,8
@@ -324,8 +371,8 @@ BestModeID_tag_items:
 	dc.l TAG_DONE,0
 
 Open_screen_tag_items:
-	dc.l SA_Left,0
-	dc.l SA_Top,0
+	dc.l SA_Left,0			; Will be inserted
+	dc.l SA_Top,0			; Will be inserted
 	dc.l SA_Width,Screen_width
 	dc.l SA_Height,Screen_height
 	dc.l SA_Depth,Screen_depth
@@ -334,12 +381,17 @@ Open_screen_tag_items:
 	dc.l SA_Quiet,TRUE
 	dc.l SA_DisplayID,0		; Will be inserted
 	dc.l SA_Type,CUSTOMSCREEN|CUSTOMBITMAP
-	dc.l SA_Overscan,OSCAN_MAX
+	dc.l SA_DClip,Overscan
 	dc.l SA_ErrorCode,Extended_error_code
 	dc.l SA_Draggable,FALSE
 	dc.l SA_Exclusive,TRUE
-;	dc.l SA_Colors32,Palette
 	dc.l SA_Interleaved,TRUE
+	dc.l SA_VideoControl,Open_screen_video_control_tag_items
+	dc.l TAG_DONE,0
+
+Open_screen_video_control_tag_items:
+	dc.l VTAG_SPRITERESN_SET,SPRITERESN_140NS
+	dc.l VTAG_BORDERSPRITE_SET,TRUE
 	dc.l TAG_DONE,0
 
 Open_window_tag_items:
@@ -349,10 +401,15 @@ Open_window_tag_items:
 	dc.l WA_Height,Screen_height
 	dc.l WA_Flags,WFLG_ACTIVATE|WFLG_BACKDROP|WFLG_BORDERLESS|WFLG_RMBTRAP
 	dc.l WA_IDCMP,0
-	dc.l WA_CustomScreen,0
+	dc.l WA_CustomScreen,0		; Will be inserted
 	dc.l WA_AutoAdjust,FALSE
 	dc.l WA_ReportMouse,TRUE
 	dc.l TAG_DONE,0
+
+
+	SECTION	Chip_BSS,bss_c
+Dummy_sprite:
+	ds.l 3
 
 
 	SECTION	Fast_BSS,bss
@@ -367,5 +424,7 @@ My_window:	ds.l 1
 My_UCopList:	ds.l 1
 My_screen_buffer1:	ds.l 1
 My_screen_buffer2:	ds.l 1
+My_mode_ID:	ds.l 1
 Bitmap_1:	ds.l 1
 Bitmap_2:	ds.l 1
+Overscan:	ds.b ra_data_size

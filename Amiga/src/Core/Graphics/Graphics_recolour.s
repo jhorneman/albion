@@ -47,6 +47,7 @@ Recolour_marmor_box:
 	movem.l	d0-d7/a0-a2/a5,-(sp)
 	lea.l	-Draw_box_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
+	Wait_4_blitter
 ; --------- Adjust coordinates --------------------
 	cmp.w	d0,d2			; X1 > X2 ?
 	bpl.s	.X_OK
@@ -161,12 +162,12 @@ Recolour_marmor_box:
 	beq	.Do_C
 	move.w	BoxHeight(a5),d7		; Get height
 	subq.w	#1,d7
-	move.w	#Bytes_per_plane,d0		; Calculate offset
+	move.w	#Trunced_width*8,d0		; Calculate offsets
 	sub.w	d6,d0
 	sub.w	d6,d0
-	move.w	d0,d1
-	add.w	#Bytes_per_plane*3,d0
-	add.w	#(Screen_depth-1)*Bytes_per_plane,d1
+	move.w	#Bytes_per_line,d1
+	sub.w	d6,d1
+	sub.w	d6,d1
 	btst	#0,d6			; Odd or even ?
 	bne	.Loop3
 ; --------- EVEN loop -----------------------------
@@ -217,7 +218,7 @@ Recolour_marmor_box:
 ;        a5 - Pointer to local variables (.l)
 ; Changed registers : d5,d6,d7,a0,a1
 .Do_trunc:
-	move.w	#Bytes_per_plane*4-2,d5
+	move.w	#Trunced_width*8-2,d5
 	move.w	#Bytes_per_line-2,d6
 	move.w	BoxHeight(a5),d7
 	subq.w	#1,d7
@@ -236,9 +237,9 @@ Recolour_marmor_box:
 .Recolour_masked_trunc:
 	movem.l	d0-d7,-(sp)
 	move.w	d0,d4
-	move.w	Bytes_per_plane(a0),d1	; Read 16	pixels
-	move.w	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.w	Bytes_per_plane*3(a0),d3
+	move.w	Trunced_width*2(a0),d1	; Read 16	pixels
+	move.w	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.w	Trunced_width*6(a0),d3
 	move.w	(a0)+,d0
 	and.w	d4,d0			; Mask
 	and.w	d4,d1
@@ -308,9 +309,9 @@ Recolour_marmor_box:
 ; Changed registers : a0,a1
 .Recolour_1trunc:
 	movem.l	d0-d3/d5-d7,-(sp)
-	move.w	Bytes_per_plane(a0),d1	; Read 16	pixels
-	move.w	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.w	Bytes_per_plane*3(a0),d3
+	move.w	Trunced_width*2(a0),d1	; Read 16	pixels
+	move.w	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.w	Trunced_width*6(a0),d3
 	move.w	(a0)+,d0
 	moveq.l	#0,d6			; Initial d6 is zero
 	moveq.l	#8-1,d7			; Do 8 shifts
@@ -371,9 +372,9 @@ Recolour_marmor_box:
 ; Changed registers : a0,a1
 .Recolour_2truncs:
 	movem.l	d0-d3/d5-d7,-(sp)
-	move.l	Bytes_per_plane(a0),d1	; Read 32	pixels
-	move.l	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.l	Bytes_per_plane*3(a0),d3
+	move.l	Trunced_width*2(a0),d1	; Read 32	pixels
+	move.l	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.l	Trunced_width*6(a0),d3
 	move.l	(a0)+,d0
 	moveq.l	#0,d6			; Initial d6 is zero
 	moveq.l	#16-1,d7			; Do 16 shifts
@@ -435,14 +436,17 @@ Recolour_marmor_box:
 ; Changed registers : d2
 ;***************************************************************************
 Coord4_convert:
-	move.l	d0,-(sp)
-	move.w	d1,d2
-	mulu.w	#4*Bytes_per_plane,d2
-	and.w	#$fff0,d0
-	lsr.w	#3,d0
-	add.w	d0,d2
-	move.l	(sp)+,d0
+	moveq.l	#0,d2
 	rts
+
+;	move.l	d0,-(sp)
+;	move.w	d1,d2
+;	mulu.w	#Trunced_width*8,d2
+;	and.w	#$fff0,d0
+;	lsr.w	#3,d0
+;	add.w	d0,d2
+;	move.l	(sp)+,d0
+;	rts
 
 ;***************************************************************************
 ; [ Draw a marmor box on the screen CLIPPED ]
@@ -456,6 +460,7 @@ Marmor_box:
 	movem.l	d0-d7/a0-a2/a5,-(sp)
 	lea.l	-Draw_box_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
+	Wait_4_blitter
 ; --------- Adjust coordinates --------------------
 	cmp.w	d0,d2			; X1 > X2 ?
 	bpl.s	.X_OK
@@ -570,12 +575,12 @@ Marmor_box:
 	beq	.Do_C
 	move.w	BoxHeight(a5),d7		; Get height
 	subq.w	#1,d7
-	move.w	#Bytes_per_plane,d0		; Calculate offset
+	move.w	#Trunced_width*8,d0		; Calculate offsets
 	sub.w	d6,d0
 	sub.w	d6,d0
-	move.w	d0,d1
-	add.w	#Bytes_per_plane*3,d0
-	add.w	#(Screen_depth-1)*Bytes_per_plane,d1
+	move.w	#Bytes_per_line,d1
+	sub.w	d6,d1
+	sub.w	d6,d1
 	btst	#0,d6			; Odd or even ?
 	bne	.Loop3
 ; --------- EVEN loop -----------------------------
@@ -626,7 +631,7 @@ Marmor_box:
 ;        a5 - Pointer to local variables (.l)
 ; Changed registers : d5,d6,d7,a0,a1
 .Do_trunc:
-	move.w	#Bytes_per_plane*4-2,d5
+	move.w	#Trunced_width*8-2,d5
 	move.w	#Bytes_per_line-2,d6
 	move.w	BoxHeight(a5),d7
 	subq.w	#1,d7
@@ -645,9 +650,9 @@ Marmor_box:
 .Draw_masked_trunc:
 	movem.l	d0-d4,-(sp)
 	move.w	d0,d4
-	move.w	Bytes_per_plane(a0),d1	; Read 16	pixels
-	move.w	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.w	Bytes_per_plane*3(a0),d3
+	move.w	Trunced_width*2(a0),d1	; Read 16	pixels
+	move.w	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.w	Trunced_width*6(a0),d3
 	move.w	(a0)+,d0
 	and.w	d4,d0			; Mask
 	and.w	d4,d1
@@ -676,9 +681,9 @@ Marmor_box:
 ; Changed registers : a0,a1
 .Draw_1trunc:
 	movem.l	d0-d3,-(sp)
-	move.w	Bytes_per_plane(a0),d1	; Read 16	pixels
-	move.w	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.w	Bytes_per_plane*3(a0),d3
+	move.w	Trunced_width*2(a0),d1	; Read 16	pixels
+	move.w	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.w	Trunced_width*6(a0),d3
 	move.w	(a0)+,d0
 	move.w	#-1,Bytes_per_plane*4(a1)	; Fill other planes
 	move.w	#-1,Bytes_per_plane*5(a1)
@@ -698,9 +703,9 @@ Marmor_box:
 ; Changed registers : a0,a1
 .Draw_2truncs:
 	movem.l	d0-d3,-(sp)
-	move.l	Bytes_per_plane(a0),d1	; Read 32	pixels
-	move.l	Bytes_per_plane*2(a0),d2	;  in 4 bitplanes
-	move.l	Bytes_per_plane*3(a0),d3
+	move.l	Trunced_width*2(a0),d1	; Read 32	pixels
+	move.l	Trunced_width*4(a0),d2	;  in 4 bitplanes
+	move.l	Trunced_width*6(a0),d3
 	move.l	(a0)+,d0
 	move.l	#-1,Bytes_per_plane*4(a1)	; Fill other planes
 	move.l	#-1,Bytes_per_plane*5(a1)
@@ -726,6 +731,7 @@ Recolour_box:
 	movem.l	d0-d7/a0-a2/a5,-(sp)
 	lea.l	-Draw_box_LDS(sp),sp	; Create local variables
 	move.l	sp,a5
+	Wait_4_blitter
 	move.l	a0,a1
 ; --------- Adjust coordinates --------------------
 	cmp.w	d0,d2			; X1 > X2 ?
@@ -855,7 +861,7 @@ Recolour_box:
 ;        a0 - Pointer to screen (.l)
 ;        a1 - Pointer to recolouring table (.l)
 ;        a5 - Pointer to local variables (.l)
-; Changed registers : d7,a0
+; Changed registers : d7
 .Do_trunc:
 	move.w	BoxHeight(a5),d7
 
@@ -1018,31 +1024,39 @@ Recolour_masked_trunc:
 	lsl.l	#7,d5
 	or.l	d4,d1
 	or.l	d5,d1
-	not.b	d6
-	and.b	d6,4*Bytes_per_plane(a0)	; Write graphics
+	move.b	d6,d4			; Make inverted mask
+	not.b	d4
+	and.b	d4,4*Bytes_per_plane(a0)	; Write graphics
+	and.b	d6,d0
 	or.b	d0,4*Bytes_per_plane(a0)
 	lsr.w	#8,d0
-	and.b	d6,5*Bytes_per_plane(a0)
+	and.b	d4,5*Bytes_per_plane(a0)
+	and.b	d6,d0
 	or.b	d0,5*Bytes_per_plane(a0)
 	swap	d0
-	and.b	d6,6*Bytes_per_plane(a0)
+	and.b	d4,6*Bytes_per_plane(a0)
+	and.b	d6,d0
 	or.b	d0,6*Bytes_per_plane(a0)
 	lsr.w	#8,d0
-	and.b	d6,7*Bytes_per_plane(a0)
+	and.b	d4,7*Bytes_per_plane(a0)
+	and.b	d6,d0
 	or.b	d0,7*Bytes_per_plane(a0)
-	and.b	d6,(a0)
+	and.b	d4,(a0)
+	and.b	d6,d1
 	or.b	d1,(a0)
 	lsr.w	#8,d1
-	and.b	d6,Bytes_per_plane(a0)
+	and.b	d4,Bytes_per_plane(a0)
+	and.b	d6,d1
 	or.b	d1,Bytes_per_plane(a0)
 	swap	d1
-	and.b	d6,2*Bytes_per_plane(a0)
+	and.b	d4,2*Bytes_per_plane(a0)
+	and.b	d6,d1
 	or.b	d1,2*Bytes_per_plane(a0)
 	lsr.w	#8,d1
-	and.b	d6,3*Bytes_per_plane(a0)
+	and.b	d4,3*Bytes_per_plane(a0)
+	and.b	d6,d1
 	or.b	d1,3*Bytes_per_plane(a0)
 	addq.l	#1,a0			; Other byte
-	not.b	d6
 	ror.w	#8,d6
 	dbra	d3,.Loop_X
 	lea.l	Bytes_per_line-2(a0),a0	; Next line

@@ -16,8 +16,10 @@
 	XDEF	Strlen
 	XDEF	Put_text_line
 	XDEF	Put_centered_text_line
+	XDEF	Put_centered_box_text_line
 	XDEF	Process_text
 	XDEF	Get_line_length
+	XDEF	Get_line_size
 	XDEF	Ink_colour
 	XDEF	Shadow_colour
 	XDEF	Line_buffer
@@ -365,9 +367,10 @@ Normal_kerning_table:
 
 	dc.b "LaLcLeLgLjLoLqLtLuLvLy"
 
-	dc.b "PaPcPdPePgPmPnPoPpPqPrPsPuPvPwPxPyPz"
-	dc.b "PäPöP.P:P,P;P'P+P-P=P<"
-	dc.b "P0P1P2P3P4P5P6P7P8P9"
+;	dc.b "PaPcPdPePgPmPnPoPpPqPrPsPuPvPwPxPyPz"
+;	dc.b "PäPö"
+	dc.b "P.P:P,P;P'P+P-P=P<"
+;	dc.b "P0P1P2P3P4P5P6P7P8P9"
 
 	dc.b "TaTcTdTeTgTmTnToTpTqTrTsTuTvTwTxTyTz"
 	dc.b "TäTöTüT.T:T,T;T'T+T-T=T<"
