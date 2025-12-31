@@ -1,0 +1,112 @@
+# Makefile for Albion
+# PC CD-ROM version
+
+# Optimize implicit rule checking
+.OPTIMIZE
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+# Define library and source directories
+Ldir = C:\WORK\ALBION\LIB
+Ldir2 = C:\PCLIB32\LIB
+Ldir3 = C:\WORK\MODULES\LIB
+Sdir = C:\WORK\ALBION\GAME
+Sdir3 = C:\WORK\MODULES
+Pdir = C:\WORK\ALBION
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G
+Compiler = WCC386 /d2 /ox
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /od
+
+!endif
+
+# Define default header files
+Header_files = $(Ldir2)\BBDEF.H
+
+# Define object files
+Object_files = $(Ldir)\MAIN.OBJ &
+	$(Ldir)\GAME.OBJ &
+	$(Ldir)\CONTROL.OBJ &
+	$(Ldir)\MAP.OBJ &
+	$(Ldir)\2D_MAP.OBJ &
+	$(Ldir)\3D_MAP.OBJ &
+	$(Ldir)\ANIMATE.OBJ &
+	$(Ldir)\FONT.OBJ &
+	$(Ldir)\XFTYPES.OBJ &
+	$(Ldir3)\SCROLL.OBJ &
+	$(Ldir3)\XLOAD.OBJ &
+	$(Ldir3)\HDOB.OBJ &
+	$(Ldir3)\GFXFUNC.OBJ &
+	$(Ldir3)\SORT.OBJ &
+	$(Ldir3)\TEXT.LIB &
+	$(Ldir2)\PCLIB32.LIB
+
+# .C-files can be found in these directories :
+.C : $(Sdir);$(Sdir3)\SCROLL;$(Sdir3)\XLOAD;$(Sdir3)\HDOB;$(Sdir3)\GFXFUNC;$(Sdir3)\SORT
+
+# .C-files should be turned into .OBJ-files using the following command list :
+# (The first dependent of the target should be the main source-file.)
+.C.OBJ :
+	$(Compiler) $[@ -fo$^*.OBJ
+
+
+# This is the main target, which should not be erased if anything goes wrong :
+!ifeq Mode Production
+
+C:\WORK\ALBION\ALBION.EXE : $(Object_files)
+	$(Linker) @$(Sdir)\ALBION.LST NAME $(Pdir)\ALBION.EXE
+	cd $(Pdir)
+
+!else
+
+C:\WORK\ALBION\ALBION.EXE : $(Object_files)
+	$(Linker) @$(Sdir)\ALBION.LST NAME $(Pdir)\ALBION.EXE
+	cd $(Pdir)
+
+!endif
+
+
+# These are the objects needed for making the main target :
+$(Ldir)\MAIN.OBJ : $(Sdir)\MAIN.C .AUTODEPEND
+
+$(Ldir)\GAME.OBJ : $(Sdir)\GAME.C $(Ldir)\GAME.H .AUTODEPEND
+
+$(Ldir)\CONTROL.OBJ : $(Sdir)\CONTROL.C $(Ldir)\CONTROL.H .AUTODEPEND
+
+$(Ldir)\MAP.OBJ : $(Sdir)\MAP.C $(Ldir)\MAP.H .AUTODEPEND
+
+$(Ldir)\2D_MAP.OBJ : $(Sdir)\2D_MAP.C $(Ldir)\2D_MAP.H .AUTODEPEND
+
+$(Ldir)\3D_MAP.OBJ : $(Sdir)\3D_MAP.C $(Ldir)\3D_MAP.H .AUTODEPEND
+
+$(Ldir)\ANIMATE.OBJ : $(Sdir)\ANIMATE.C $(Ldir)\ANIMATE.H .AUTODEPEND
+
+$(Ldir)\FONT.OBJ : $(Sdir)\FONT.C $(Ldir)\FONT.H .AUTODEPEND
+
+$(Ldir)\XFTYPES.OBJ : $(Sdir)\XFTYPES.C $(Ldir)\XFTYPES.H .AUTODEPEND
+
+
+# These are additional objects :
+$(Ldir3)\SCROLL.OBJ : $(Sdir3)\SCROLL\SCROLL.C $(Ldir3)\SCROLL.H .AUTODEPEND
+
+$(Ldir3)\XLOAD.OBJ : $(Sdir3)\XLOAD\XLOAD.C $(Ldir3)\XLOAD.H .AUTODEPEND
+
+$(Ldir3)\HDOB.OBJ : $(Sdir3)\HDOB\HDOB.C $(Ldir3)\HDOB.H .AUTODEPEND
+
+$(Ldir3)\GFXFUNC.OBJ : $(Sdir3)\GFXFUNC\GFXFUNC.C $(Ldir3)\GFXFUNC.H .AUTODEPEND
+
+$(Ldir3)\SORT.OBJ : $(Sdir3)\SORT\SORT.C $(Ldir3)\SORT.H .AUTODEPEND
+

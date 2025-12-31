@@ -1,0 +1,114 @@
+/************
+ * NAME     : BBMEMVAR.H
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 1-6-1994
+ * PROJECT  : Blue Byte memory manager V (Son of garbage collector)
+ * NOTES    :
+ * SEE ALSO : BBMEM.H
+ ************/
+
+#ifndef BBMEMVAR_H
+#define BBMEMVAR_H
+
+#include <BBDEF.H>
+#include <BBMEM.H>
+
+/*
+ ** Macro definitions ******************************************************
+ */
+
+#ifdef DEBUG
+
+#define MEM_Error(a) MEM_Report_error(a, __LINE__, __FILE__)
+#define MEM_Critical_error(a) MEM_Report_critical_error(a, __LINE__, __FILE__)
+
+#else
+
+#define MEM_Error(a) MEM_Report_error(a, 0, NULL)
+#define MEM_Critical_error(a) MEM_Report_critical_error(a, 0, NULL)
+
+#endif
+
+/*
+ ** Defines ****************************************************************
+ */
+
+#define SMALL_FISH	(5*1024)			/* Too small to manage */
+
+/* Error codes */
+#define MEMERR_OUT_OF_ENTRIES					(1)
+#define MEMERR_OUT_OF_HANDLES 				(2)
+#define MEMERR_HANDLE_MISMATCH				(3)
+#define MEMERR_REQUEST_DENIED					(4)
+#define MEMERR_ENTRY_OUTSIDE_ARRAY			(5)
+#define MEMERR_NULL_FILE_TYPE					(6)
+#define MEMERR_FREE_ENTRY_IN_CHAIN			(7)
+#define MEMERR_AREA_IN_CHAIN					(8)
+#define MEMERR_WRONG_BACKWARD_LINK			(9)
+#define MEMERR_BLOCK_OUTSIDE_AREA			(10)
+#define MEMERR_GAP_BETWEEN_BLOCKS			(11)
+#define MEMERR_WRONG_AREA_SIZE				(12)
+#define MEMERR_OUT_OF_MEMORY					(13)
+#define MEMERR_CLAIMED_FREE_HANDLE	 		(14)
+#define MEMERR_ILLEGAL_HANDLE					(15)
+#define MEMERR_FREED_FREE_HANDLE				(16)
+#define MEMERR_KILLED_FREE_HANDLE 			(17)
+
+#define MEMERR_MAX (17)
+
+/*
+ ** Structure definitions **************************************************
+ */
+
+/* Memory error data */
+struct Memory_error {
+	UNSHORT Code;
+	UNSHORT Line_nr;
+	UNCHAR *Filename;
+};
+
+/*
+ ** External global variables **********************************************
+ */
+
+extern struct Memory_entry MEM_Entries[MEMORY_ENTRIES_MAX];
+
+extern struct Memory_entry *MEM_Quick_free_entry;
+
+extern struct Grabbed_memory Grabbed_memory[];
+
+extern BOOLEAN MEM_Initialized;
+
+extern BOOLEAN MEM_Handles_invalid;
+
+extern MEM_Alloc_pass *MEM_Pass_list_ptr;
+
+extern UNCHAR MEM_Library_name[];
+
+extern UNCHAR *MEM_Error_strings[];
+
+/*
+ ** Prototypes *************************************************************
+ */
+
+void MEM_Report_error(UNSHORT Error_code, int Line_nr, char *Filename);
+
+void MEM_Report_critical_error(UNSHORT Error_code, int Line_nr, char *Filename);
+
+struct Memory_entry *MEM_Find_free_entry(void);
+
+void MEM_Add_entry(struct Memory_entry *New, struct Memory_entry *Target);
+
+void MEM_Delete_entry(struct Memory_entry *Target);
+
+MEM_HANDLE MEM_Create_memory_handle(struct Memory_entry *New_entry);
+
+void MEM_Destroy_memory_handle(struct Memory_entry *Target);
+
+void MEM_Drown_memory(struct Memory_entry *Area, UNSHORT Sea_level);
+
+struct Memory_entry *MEM_Merge_memory_block(struct Memory_entry *Merged);
+
+void MEM_Split_memory_block(struct Memory_entry *Split, UNLONG New_size);
+
+#endif

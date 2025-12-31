@@ -1,0 +1,1959 @@
+/************
+ * NAME     : BBMEMALO.C
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 1-6-1994
+ * PROJECT  : Blue Byte memory manager V (Son of garbage collector)
+ * NOTES    : - These functions assume that NULL and FALSE are 0.
+ * SEE ALSO : BBMEM.C, BBMEM.H
+ ************/
+
+/* includes */
+
+#include <BBDEF.H>
+
+#include <BBERROR.H>
+#include <BBBASMEM.H>
+#include <BBMEM.H>
+#include "INCLUDE\BBMEMVAR.H"
+
+/* prototypes */
+
+/* Memory allocation support functions */
+void MEM_Start_lengthy_operation(void);
+void MEM_End_lengthy_operation(void);
+
+MEM_HANDLE MEM_Allocate_block(UNLONG Size, struct Memory_entry *Entry);
+
+void MEM_Collect_garbage(struct Memory_entry *Area);
+
+BOOLEAN MEM_Do_reallocate(MEM_HANDLE New);
+
+struct Memory_entry *MEM_Relocate_memory_block(struct Memory_entry *Area, struct Memory_entry
+*Source);
+
+struct Memory_entry *MEM_Find_LFB_in_garbage(struct Memory_entry *Area, struct Memory_entry
+*Last);
+
+struct Memory_entry *MEM_Move_memory_block(struct Memory_entry *Source, struct Memory_entry
+*Target);
+
+struct Memory_entry *MEM_Find_LFB(struct Memory_entry *Area);
+
+void MEM_Validate_handles(void);
+
+void MEM_Kill_unclaimed_memory(void);
+
+MEM_HANDLE MEM_Search_persistent_block(UNLONG Findex, struct File_type *Ftype);
+
+struct Memory_entry *MEM_Find_memory_area(struct Memory_entry *Entry);
+
+struct Memory_workspace *MEM_Find_memory_workspace(struct Memory_entry *Area);
+
+/* global variables */
+
+static BOOLEAN Lengthy_operation_started;
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Start_lengthy_operation
+ * FUNCTION  : Indicate the start of a lengthy operation.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 27.08.95 20:04
+ * LAST      : 27.08.95 20:04
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Start_lengthy_operation(void)
+{
+	/* Not yet started / handler installed ? */
+	if (!Lengthy_operation_started && MEM_Start_lengthy_operation_handler)
+	{
+		/* Yes -> Set flag */
+		Lengthy_operation_started = TRUE;
+
+		/* Call handler */
+		(MEM_Start_lengthy_operation_handler)();
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_End_lengthy_operation
+ * FUNCTION  : Indicate the end of a lengthy operation.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 27.08.95 20:04
+ * LAST      : 27.08.95 20:04
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_End_lengthy_operation(void)
+{
+	/* Was a lengthy operation started ? */
+	if (Lengthy_operation_started)
+	{
+		/* Yes -> Clear flag */
+		Lengthy_operation_started = FALSE;
+
+		/* Handler installed ? */
+		if (MEM_End_lengthy_operation_handler)
+		{
+			/* Yes -> Call handler */
+			(MEM_End_lengthy_operation_handler)();
+		}
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Inquire_memory
+ * FUNCTION  : Inquire if a certain memory block could be allocated.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 06.07.94 15:33
+ * LAST      : 06.07.94 15:33
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : BOOLEAN : TRUE or FALSE.
+ * BUGS      : No known.
+ * NOTES     : - This function examines all areas of the right type and
+ *              calculates how much memory would be free when all persistent
+ *              blocks would be drowned.
+ *             - This is only a prediction. The result of this function can
+ *              be wrong occasionally.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+MEM_Inquire_memory(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Area;
+	UNSHORT i;
+	UNLONG V;
+	UNLONG Largest = 0;
+	BOOLEAN Result = FALSE;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Check all areas in the current workspace */
+	Area = &(Current->Areas[0]);
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Right type ? */
+		if (Area[i].MEMORY_TYPE & Type)
+		{
+			/* Yes -> Calculate TFM + EMG */
+			V = MEM_Calculate_TFM(&Area[i]) + MEM_Calculate_EMG(&Area[i], 255);
+
+			/* Larger than current ? */
+			if (V > Largest)
+			{
+				/* Yes -> New record */
+				Largest = V;
+			}
+		}
+	}
+
+	/* Is the largest block large enough ? */
+	if (Largest > Size)
+	{
+		Result = TRUE;
+	}
+
+	return Result;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Allocate_memory
+ * FUNCTION  : Allocate a block of free memory in the current workspace.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 10.06.94 10:32
+ * LAST      : 10.06.94 10:32
+ * INPUTS    : UNLONG Size - Desired size.
+ * RESULT    : MEM_HANDLE : Memory handle (NULL = no luck).
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Allocate_memory(UNLONG Size)
+{
+	return(MEM_Do_allocate(Size, (UNLONG) 0, &MEM_Default_file_type));
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Do_allocate
+ * FUNCTION  : Allocate a memory block in the current workspace.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 11:09
+ * LAST      : 22.07.95 15:51
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNLONG Findex - File index.
+ *             struct File_type *Ftype - File type.
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - The memory type will be derived from the file type.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Do_allocate(UNLONG Size, UNLONG Findex, struct File_type *Ftype)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle = NULL;
+	MEM_Alloc_pass Pass;
+	UNBYTE Type;
+	UNBYTE Old_size;
+	UNBYTE *P;
+
+	/* Get memory type */
+	Type = Ftype->Memory_type;
+
+	/* Memory debugging on ? */
+	if (MEM_Debugging2)
+	{
+		/* Yes -> Add size of debugging buffers */
+		Size += DEBUGGING_PAD_SIZE * 2;
+	}
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Clear flag */
+	Lengthy_operation_started = FALSE;
+
+	/* Call allocation init function (if any) */
+	if (Current->Alloc_init)
+	{
+		(Current->Alloc_init)();
+	}
+
+	/* Save size */
+	Old_size = Size;
+
+	/* Align size */
+	Size = BASEMEM_Align(Size);
+
+	/* Set minimum size if aligned size is zero */
+	if (!Size)
+	{
+		Size = BASEMEM_ALIGNMENT;
+	}
+
+	/* Go through this workspace's allocation pass list */
+	MEM_Pass_list_ptr = Current->Pass_list;
+	Pass = *MEM_Pass_list_ptr++;
+	while (Pass)
+	{
+		/* Execute pass */
+		Handle = (Pass)(Size, Type);
+
+		/* Exit if successful */
+		if (Handle)
+			break;
+
+		/* Else do the next pass */
+		Pass = *MEM_Pass_list_ptr++;
+	}
+
+	/* Any luck ? */
+	if (!Handle)
+	{
+		/* No -> Call out of memory handler (if any) */
+		if (Current->Out_of_memory)
+		{
+			(Current->Out_of_memory)();
+		}
+	}
+
+	/* Initialize handle */
+	Handle->Priority			= 128;
+	Handle->Load_counter		= 1;
+	Handle->Size_low_byte	= Old_size & 0x000000FF;
+	Handle->File_index		= Findex;
+	Handle->File_type_ptr	= Ftype;
+
+	/* Call allocation exit function (if any) */
+	if (Current->Alloc_exit)
+	{
+		(Current->Alloc_exit)();
+	}
+
+	/* Memory debugging on ? */
+	if (MEM_Debugging2)
+	{
+		/* Yes -> Fill block with debugging fill patterns */
+		Entry = Handle->Entry_ptr;
+
+		P = Entry->Start;
+		BASEMEM_FillMemLong(P, 16, MEM_FILLER_2);
+
+		P += (Entry->Size) - 16;
+		BASEMEM_FillMemLong(P, 16, MEM_FILLER_2);
+	}
+
+	/* End lengthy operation */
+	MEM_End_lengthy_operation();
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Armageddon
+ * FUNCTION  : Drown EVERYTHING & collect garbage in the current workspace.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 13:10
+ * LAST      : 07.06.94 13:10
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - This function is called by the allocation passes.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Armageddon(void)
+{
+	struct Memory_workspace *Current;
+	UNSHORT i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Check all areas */
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Drown all memory completely */
+		MEM_Drown_memory(&(Current->Areas[i]), 255);
+
+		/* Collect garbage */
+		MEM_Collect_garbage(&(Current->Areas[i]));
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Allocate_block
+ * FUNCTION  : Allocate a memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 13:14
+ * LAST      : 31.08.95 11:08
+ * INPUTS    : UNLONG Size - Desired size.
+ *             struct Memory_entry *Entry - Pointer to the memory entry which
+ *              will be allocated.
+ * RESULT    : MEM_HANDLE : Memory handle.
+ * BUGS      : No known.
+ * NOTES     : - This function is called by the allocation passes.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Allocate_block(UNLONG Size, struct Memory_entry *Entry)
+{
+	MEM_HANDLE Handle;
+
+	/* Does this entry already have the right size ? */
+	if (Entry->Size != Size)
+	{
+		/* No -> Split this memory block */
+		MEM_Split_memory_block(Entry, Size);
+	}
+
+	/* Note : there is no need to merge the remaining free memory block.
+	 Since this entire block used to be free, it should already have been
+	 merged with it's neighbours. If it has to be merged, remember to set
+	 a dummy handle in the first block so that it won't be merged as well. */
+
+	/* Create handle */
+	Handle = MEM_Create_memory_handle(Entry);
+
+	/* OK ? */
+	if (Handle)
+	{
+		/* Yes -> Mark it as allocated */
+		Handle->Flags |= MEM_ALLOCATED;
+
+		/* Memory debugging on ? */
+		if (MEM_Debugging2)
+		{
+			/* Yes -> Fill block with debugging fill patterns */
+			BASEMEM_FillMemLong(Entry->Start, Entry->Size, MEM_FILLER_3);
+		}
+	}
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Collect_garbage
+ * FUNCTION  : Collect garbage in a memory area.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 13:47
+ * LAST      : 07.06.94 13:47
+ * INPUTS    : struct Memory_entry *Area - Pointer to the memory area where
+ *              garbage must be collected.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - This function is called by the allocation passes.
+ *             - Optimal garbage collection may be impossible because of
+ *              claimed blocks.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Collect_garbage(struct Memory_entry *Area)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+	{
+		/* Get handle */
+		Handle = Entry->BLOCK_HANDLE;
+
+		/* Is this a free block ? */
+		if (Handle)
+		{
+			/* No -> Has it been claimed ? */
+			if (!Handle->Claim_counter)
+			{
+				/* No -> Try to relocate this block */
+				Entry = MEM_Relocate_memory_block(Area, Entry);
+			}
+		}
+		else
+		{
+			/* Yes -> Try to merge it with it's neighbours */
+			Entry = MEM_Merge_memory_block(Entry);
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Relocate_memory_block
+ * FUNCTION  : Relocate a memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 13:56
+ * LAST      : 07.06.94 13:56
+ * INPUTS    : struct Memory_entry *Area - Pointer to the memory area where
+ *              garbage is being collected.
+ *             struct Memory_entry *Source - Pointer to the source memory
+ *              entry.
+ * RESULT    : struct Memory_entry * : Pointer to the source memory entry
+ *              (empty if successful).
+ * BUGS      : No known.
+ * NOTES     : - This function is ONLY called by MEM_Collect_garbage().
+ *             - This function finds it's own target memory in the same area,
+ *              in front of the source memory entry.
+ *             - This function may assume that the source memory entry
+ *              remains valid, that the source entry has a handle and that
+ *              it isn't claimed.
+ *             - The handles will be validated by this function.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry *
+MEM_Relocate_memory_block(struct Memory_entry *Area, struct Memory_entry *Source)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Target;
+	struct File_type *Ftype;
+	UNLONG Source_size;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return Source;
+
+	/* Get source block size */
+	Source_size = Source->Size;
+
+	/* Get source block file type */
+	Ftype = Source->BLOCK_HANDLE->File_type_ptr;
+
+	/* Can this block type be relocated ? */
+	if (Ftype->Relocator)
+	{
+		/* Yes -> Try to find a free block in the collected part of the area */
+		Target = MEM_Find_LFB_in_garbage(Area,Source);
+
+		/* Found any ? */
+		if (Target)
+		{
+			/* Yes -> Is there enough room ? */
+			if (Source_size > Target->Size)
+			{
+				/* No -> There is no free block of the required size in front of
+				 the source block, so we'll have to try and move the source block
+				 down a bit.
+				 First we have to check whether there IS a previous block, and
+				 if it's free. Because we're collecting garbage, chances are
+				 relatively high. */
+
+				/* Get previous block */
+				Target = Source->Previous;
+
+				/* Can it be used ? */
+				if (Target)
+				{
+					if (!Target->BLOCK_HANDLE)
+					{
+						/* Yes -> Relocate */
+						(Ftype->Relocator)(Source->BLOCK_HANDLE, Source->Start,
+						 Target->Start, Source_size);
+
+						/* Switch the blocks */
+						Source->Size	= Target->Size;
+						Target->Size	= Source_size;
+						Source->Start	= Target->Start + Source_size;
+
+						/* Copy handle */
+						Target->BLOCK_HANDLE = Source->BLOCK_HANDLE;
+
+						/* Destroy the source block */
+						Source->BLOCK_HANDLE = NULL;
+	 					MEM_Merge_memory_block(Source);
+					}
+				}
+			}
+			else
+			{
+				/* Yes -> Is the target block too large ? */
+				if (Source_size < Target->Size)
+				{
+					/* Yes -> Split the target block. A call to
+					 MEM_Merge_memory_block is not necessary. */
+					MEM_Split_memory_block(Target,Source_size);
+				}
+
+				/* Relocate */
+				(Ftype->Relocator)(Source->BLOCK_HANDLE, Source->Start,
+				 Target->Start, Source_size);
+
+ 				/* Copy handle */
+				Target->BLOCK_HANDLE = Source->BLOCK_HANDLE;
+
+				/* Destroy the source block */
+				Source->BLOCK_HANDLE = NULL;
+				MEM_Merge_memory_block(Source);
+			}
+
+			/* All handles are now invalid */
+			MEM_Handles_invalid = TRUE;
+
+			/* Validate all handles */
+			MEM_Validate_handles();
+		}
+	}
+
+	return Source;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Find_LFB_in_garbage
+ * FUNCTION  : Find the Largest Free Block in the part of a memory area where
+ *             garbage has already been collected.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 14:55
+ * LAST      : 07.06.94 14:55
+ * INPUTS    : struct Memory_entry *Area - Pointer to the memory area where
+ *              garbage is being collected.
+ *             struct Memory_entry *Last - Pointer to the last source memory
+ *              entry.
+ * RESULT    : struct Memory_entry * : Pointer to LFB (NULL = no free memory).
+ * BUGS      : No known.
+ * NOTES     : - This function is ONLY called by MEM_Collect_garbage().
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry*
+MEM_Find_LFB_in_garbage(struct Memory_entry *Area, struct Memory_entry *Last)
+{
+	struct Memory_entry *Entry;
+	struct Memory_entry *LFB = NULL;
+	UNLONG Largest = 0;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+  	{
+		/* Exit if the last entry has been reached */
+		if (Entry == Last)
+			break;
+
+		/* Is this a block of free memory ? */
+		if (!Entry->BLOCK_HANDLE)
+		{
+			/* Yes -> Is this block larger than the current LFB ? */
+			if (Entry->Size > Largest)
+			{
+				/* Yes -> This is the new LFB */
+				LFB = Entry;
+				Largest = Entry->Size;
+			}
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+
+	return LFB;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Move_memory_block
+ * FUNCTION  : Move a memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 15:17
+ * LAST      : 07.06.94 15:17
+ * INPUTS    : struct Memory_entry *Source - Pointer to the source memory
+ *              entry.
+ *             struct Memory_entry *Target - Pointer to the target memory
+ *              entry.
+ * RESULT    : struct Memory_entry * : Pointer to the source memory entry
+ *              (empty if successful).
+ * BUGS      : No known.
+ * NOTES     : - Unlike [ Relocate_memory_block ], this function doesn't find
+ *              it's own target memory.
+ *             - This function is called by the allocation passes.
+ *             - This function may assume that the source memory entry is
+ *              valid, that the source entry has a handle and that it isn't
+ *              claimed.
+ *             - This function can also assume that the target memory entry
+ *              has EXACTLY the right size.
+ *             - The handles will be validated by this function.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry *
+MEM_Move_memory_block(struct Memory_entry *Source, struct Memory_entry *Target)
+{
+	struct Memory_workspace *Current;
+	struct File_type *Ftype;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return Source;
+
+	/* Get source block file type */
+	Ftype = Source->BLOCK_HANDLE->File_type_ptr;
+
+	/* Can this block type be relocated ? */
+	if (Ftype->Relocator)
+	{
+		/* Yes -> Relocate */
+		(Ftype->Relocator)(Source->BLOCK_HANDLE, Source->Start,
+		 Target->Start, Source->Size);
+
+		/* Copy handle */
+		Target->BLOCK_HANDLE = Source->BLOCK_HANDLE;
+
+		/* Destroy the source block */
+		Source->BLOCK_HANDLE = NULL;
+	 	MEM_Merge_memory_block(Source);
+
+		/* All handles are now invalid */
+		MEM_Handles_invalid = TRUE;
+
+		/* Validate all handles */
+		MEM_Validate_handles();
+	}
+
+	return Source;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Find_LFB
+ * FUNCTION  : Find the Largest Free Block in a memory area.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 10:37
+ * LAST      : 07.06.94 10:37
+ * INPUTS    : struct Memory_entry *Area - Pointer to memory area descriptor.
+ * RESULT    : struct Memory_entry * : Pointer to LFB (NULL = no free memory).
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry *
+MEM_Find_LFB(struct Memory_entry *Area)
+{
+	struct Memory_entry *Entry;
+	struct Memory_entry *LFB = NULL;
+	UNLONG Largest = 0;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+  	{
+		/* Is this a block of free memory ? */
+		if (!Entry->BLOCK_HANDLE)
+		{
+			/* Yes -> Is this block larger than the current LFB ? */
+			if (Entry->Size > Largest)
+			{
+				/* Yes -> This is the new LFB */
+				LFB = Entry;
+				Largest = Entry->Size;
+			}
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+
+	return LFB;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Calculate_TFM
+ * FUNCTION  : Calculate the Total Free Memory in a memory area.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 10:33
+ * LAST      : 07.06.94 10:33
+ * INPUTS    : struct Memory_entry *Area - Pointer to memory area descriptor.
+ * RESULT    : UNLONG : Total Free Memory.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+MEM_Calculate_TFM(struct Memory_entry *Area)
+{
+	struct Memory_entry *Entry;
+	UNLONG TFM = 0;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+  	{
+		/* Is this a block of free memory ? */
+		if (!Entry->BLOCK_HANDLE)
+		{
+			/* Yes -> Add size to TFM */
+			TFM += Entry->Size;
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+
+	return TFM;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Calculate_EMG
+ * FUNCTION  : Calculate the Extra Memory Gained in a memory area.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 10:25
+ * LAST      : 07.06.94 10:25
+ * INPUTS    : struct Memory_entry *Area - Pointer to memory area descriptor.
+ *             UNSHORT Sea_level - the minimum priority a block must have to
+ *              survive.
+ * RESULT    : UNLONG : Extra Memory Gained.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+MEM_Calculate_EMG(struct Memory_entry *Area, UNSHORT Sea_level)
+{
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle;
+	UNLONG EMG = 0;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+  	{
+		/* Get this entry's handle */
+		Handle = Entry->BLOCK_HANDLE;
+
+		/* Is this block free ? */
+		if (Handle)
+		{
+			/* No -> Has it been allocated ? */
+			if (!(Handle->Flags & MEM_ALLOCATED))
+			{
+				/* No -> Is the priority below sea level ? */
+				if (Handle->Priority <= Sea_level)
+				{
+					/* Yes -> Add size to EMG */
+					EMG += Entry->Size;
+				}
+			}
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+
+	return EMG;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Drown_memory
+ * FUNCTION  : "Drown" all memory blocks in a memory area which aren't
+ *             allocated and which have a priority below sea level.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 10:10
+ * LAST      : 07.06.94 10:10
+ * INPUTS    : struct Memory_entry *Area - Pointer to memory area descriptor.
+ *             UNSHORT Sea_level - the minimum priority a block must have to
+ *              survive.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Drown_memory(struct Memory_entry *Area, UNSHORT Sea_level)
+{
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle;
+
+	/* Check all entries in this area */
+	Entry = Area->Next;
+	while (Entry)
+  	{
+		/* Get this entry's handle */
+		Handle = Entry->BLOCK_HANDLE;
+
+		/* Is this block free ? */
+		if (Handle)
+		{
+			/* No -> Has it been allocated ? */
+			if (!(Handle->Flags & MEM_ALLOCATED))
+			{
+				/* No -> Is the priority below sea level ? */
+				if (Handle->Priority <= Sea_level)
+				{
+					/* Yes -> Kill */
+					MEM_Destroy_memory_handle(Entry);
+
+					/* Merge this block with it's neighbours */
+					Entry = MEM_Merge_memory_block(Entry);
+				}
+			}
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Merge_memory_block
+ * FUNCTION  : Try to merge memory block with previous and/or next entry.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 31.05.94 18:14
+ * LAST      : 31.05.94 18:14
+ * INPUTS    : struct Memory_entry *Merged - pointer to memory entry.
+ * RESULT    : struct Memory_entry * : Pointer to memory entry.
+ * BUGS      : No known.
+ * NOTES     : - The result points to the merged memory entry, or to the
+ *              original entry. Never assume the entry that comes out is the
+ *					 same entry as the one that went in!
+ *					- By calling this function whenever a block of memory becomes
+ *					 free, there will never be two free consecutive free blocks,
+ *					 making memory allocation easier.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry *
+MEM_Merge_memory_block(struct Memory_entry *Merged)
+{
+	struct Memory_entry *Other;
+
+	/* Exit if entry is NULL */
+	if (!Merged)
+		return NULL;
+
+	/* Is this a free block */
+	if (!Merged->BLOCK_HANDLE)
+	{
+		/* Yes -> Get the previous entry */
+		Other = Merged->Previous;
+
+		/* Is the input entry the area descriptor ? */
+		if (Other)
+		{
+			/* No -> Is the previous entry the area descriptor ? */
+			if (Other->Previous)
+			{
+				/* No -> Is the previous entry free ? */
+				if (!Other->BLOCK_HANDLE)
+				{
+					/* Yes -> Merge the previous entry with the input entry */
+					Other->Size += Merged->Size;
+
+					/* Delete the input entry */
+					MEM_Delete_entry(Merged);
+
+					/* The previous entry is now the entry to be merged */
+					Merged = Other;
+				}
+			}
+
+			/* Get the next entry */
+			Other = Merged->Next;
+
+			/* End of the chain ? */
+		   if (Other)
+			{
+				/* No -> Is the next entry free ? */
+				if (!Other->BLOCK_HANDLE)
+				{
+					/* Yes -> Merge the input entry with the next entry */
+					Merged->Size += Other->Size;
+
+					/* Delete the next entry */
+					MEM_Delete_entry(Other);
+				}
+			}
+		}
+	}
+
+	/* Memory debugging on ? */
+	if (MEM_Debugging2)
+	{
+		/* Yes -> Fill block with debugging fill pattern */
+		BASEMEM_FillMemLong(Merged->Start, Merged->Size, MEM_FILLER_1);
+	}
+
+	return Merged;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Split_memory_block
+ * FUNCTION  : Split a memory block in two parts.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 01.06.94 9:43
+ * LAST      : 31.08.95 11:05
+ * INPUTS    : struct Memory_entry *Split - pointer to memory entry.
+ *             UNLONG : New_size - Size of first block.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The start & size of the first block will be set.
+ *             - The start & size of the second block will be set.
+ *             - The links will be set properly for both blocks.
+ *             - The memory handle of the second block will be erased (i.e.
+ *              the second block is a block of free memory).
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Split_memory_block(struct Memory_entry *Split, UNLONG New_size)
+{
+	struct Memory_entry *New;
+
+	/* Align the new size */
+	New_size = BASEMEM_Align(New_size);
+
+	/* Set minimum size if aligned size is zero */
+	if (!New_size)
+	{
+		New_size = BASEMEM_ALIGNMENT;
+	}
+
+	/* Is the new size smaller than the current size ? */
+	if (New_size < Split->Size)
+	{
+		/* Yes -> Create a new entry */
+		New = MEM_Find_free_entry();
+
+		/* Any found ? */
+		if (New)
+		{
+			/* Yes -> Insert this entry */
+			MEM_Add_entry(New, Split);
+
+			/* Set the size and start of the new entry */
+			New->Size	= Split->Size - New_size;
+			New->Start	= Split->Start + New_size;
+
+			/* Set new size of split block */
+			Split->Size = New_size;
+		}
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Validate_handles
+ * FUNCTION  : Validate all memory handles in the current workspace.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 09:52
+ * LAST      : 07.06.94 09:52
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - When memory entries are moved around during allocation, the
+ *              Entry_ptr elements of the memory handles become invalid. This
+ *              function repairs the damage.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Validate_handles(void)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle;
+	UNSHORT i;
+
+	/* Are the handles invalid ? */
+	if (MEM_Handles_invalid == TRUE)
+	{
+		/* Yes -> Get current workspace */
+		Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+		/* Check all areas in the current workspace */
+		for (i=0;i<(Current->Nr_of_areas);i++)
+		{
+			/* Check all entries in the current area */
+			Entry = Current->Areas[i].Next;
+			while (Entry)
+			{
+				/* Get this entry's handle */
+				Handle = Entry->BLOCK_HANDLE;
+
+				/* Is the entry free ? */
+				if (Handle)
+				{
+					/* No -> Validate handle */
+					Handle->Entry_ptr = Entry;
+				}
+
+				/* Next entry */
+				Entry = Entry->Next;
+			}
+		}
+
+		/* Handles are no longer invalid */
+		MEM_Handles_invalid = FALSE;
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Kill_unclaimed_memory
+ * FUNCTION  : Kill all unclaimed memory blocks in the current workspace.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 01.06.94 10:40
+ * LAST      : 07.06.94 09:45
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - This function is needed by "last resort" allocation passes :
+ *              simply claim all the memory blocks you'll need, call this
+ *              function, save the game state and restart the game.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+MEM_Kill_unclaimed_memory(void)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle;
+	UNSHORT i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Check all areas in the current workspace */
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Check all entries in the current area */
+		Entry = Current->Areas[i].Next;
+		while (Entry)
+		{
+			/* Get this entry's handle */
+			Handle = Entry->BLOCK_HANDLE;
+
+			/* Is the entry free ? */
+			if (Handle)
+			{
+				/* No -> Has it been claimed ? */
+				if (!Handle->Claim_counter)
+				{
+					/* No -> Destroy the handle */
+					MEM_Destroy_memory_handle(Entry);
+
+					/* Merge the block with it's neighbours */
+					Entry = MEM_Merge_memory_block(Entry);
+				}
+			}
+
+			/* Next entry */
+			Entry = Entry->Next;
+		}
+	}
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Alloc_pass_standard
+ * FUNCTION  : Standard memory allocation pass.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 07.06.94 15:59
+ * LAST      : 07.06.94 15:59
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - This pass seeks the area of the right type with the
+ *              largest LFB.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Alloc_pass_standard(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Entry;
+	struct Memory_entry *LFB = NULL;
+	MEM_HANDLE Handle = NULL;
+	UNLONG Largest = 0;
+	UNSHORT i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Check all areas in the current worksapce */
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Does this area have the right memory type ? */
+		if (Current->Areas[i].MEMORY_TYPE & Type)
+		{
+			/* Yes -> Find the Largest Free Block */
+			Entry = MEM_Find_LFB(&(Current->Areas[i]));
+
+			/* Found any ? */
+			if (Entry)
+			{
+				/* Yes -> Is it larger than the current LFB ? */
+				if (Entry->Size > Largest)
+				{
+					/* Yes -> This is the new LFB */
+					LFB = Entry;
+					Largest = Entry->Size;
+				}
+			}
+		}
+	}
+
+	/* Is the largest LFB large enough ? */
+	if (Largest >= Size)
+	{
+		/* Yes -> Allocate it */
+		Handle = MEM_Allocate_block(Size, LFB);
+	}
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Alloc_pass_garbage
+ * FUNCTION  : Garbage collecting memory allocation pass.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 08.06.94 10:23
+ * LAST      : 22.07.95 15:52
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - This pass seeks the area of the right type with the
+ *              most TFM and collects garbage. After that it calls the
+ *              standard pass.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Alloc_pass_garbage(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Largest_area;
+	MEM_HANDLE Handle = NULL;
+	UNLONG V;
+	UNLONG Largest = 0;
+	UNSHORT i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return NULL;
+
+	/* Start lengthy operation */
+	MEM_Start_lengthy_operation();
+
+	/* Check all areas in the current worksapce */
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Does this area have the right memory type ? */
+		if (Current->Areas[i].MEMORY_TYPE & Type)
+		{
+			/* Yes -> Calculate Total Free Memory */
+			V = MEM_Calculate_TFM(&(Current->Areas[i]));
+
+			/* Is it larger than the current largest area ? */
+			if (V > Largest)
+			{
+				/* Yes -> This is the new largest area */
+				Largest_area = &(Current->Areas[i]);
+				Largest = V;
+			}
+		}
+	}
+
+	/* Is the largest TFM large enough ? */
+	if (Largest >= Size)
+	{
+		/* Yes -> Collect garbage */
+		MEM_Collect_garbage(Largest_area);
+
+		/* Allocate */
+		Handle = MEM_Alloc_pass_standard(Size, Type);
+	}
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Alloc_pass_drown
+ * FUNCTION  : Memory drowning allocation pass.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 08.06.94 10:30
+ * LAST      : 22.07.95 15:53
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - This pass seeks the area of the right type with the
+ *              most TFM and EMG, drowns old memory blocks and collects
+ *              garbage. After that it calls the standard pass.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Alloc_pass_drown(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Largest_area;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle = NULL;
+	UNLONG V;
+	UNLONG Largest = 0;
+	UNSHORT Sea_level;
+	UNSHORT i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return NULL;
+
+	/* Start lengthy operation */
+	MEM_Start_lengthy_operation();
+
+	/* Let the sea level rise */
+	for (Sea_level=0;Sea_level<256;Sea_level++)
+	{
+		/* Check all areas in the current worksapce */
+		for (i=0;i<(Current->Nr_of_areas);i++)
+		{
+			/* Does this area have the right memory type ? */
+			if (Current->Areas[i].MEMORY_TYPE & Type)
+			{
+				/* Yes -> Calculate Total Free Memory + Extra Memory Gained */
+				V = MEM_Calculate_TFM(&(Current->Areas[i])) +
+				 MEM_Calculate_EMG(&(Current->Areas[i]), Sea_level);
+
+				/* Is it larger than the current largest area ? */
+				if (V > Largest)
+				{
+					/* Yes -> This is the new largest area */
+					Largest_area = &(Current->Areas[i]);
+					Largest = V;
+				}
+			}
+		}
+
+		/* Is the largest large enough ? */
+		if (Largest >= Size)
+		{
+			/* Yes -> Drown memory */
+			MEM_Drown_memory(Largest_area, Sea_level);
+
+			/* Collect garbage */
+			MEM_Collect_garbage(Largest_area);
+
+			/* Find the largest free block in this area */
+			Entry = MEM_Find_LFB(Largest_area);
+
+			/* Is it large enough ? */
+			if (Entry->Size >= Size)
+			{
+				/* Yes -> Allocate */
+				Handle = MEM_Alloc_pass_standard(Size, Type);
+			}
+		}
+
+		/* Exit if success */
+		if (Handle)
+			break;
+	}
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Alloc_pass_juggle
+ * FUNCTION  : Memory juggling allocation pass.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 10.06.94 18:38
+ * LAST      : 22.07.95 15:53
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - This pass seeks the area of the right type with the
+ *              most TFM and tries to juggle blocks to other areas.
+ *              After that it calls the standard pass.
+ *             - Armageddon is invoked at the start of this pass.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Alloc_pass_juggle(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Largest_area;
+	struct Memory_entry *Entry;
+	MEM_HANDLE Handle = NULL;
+	MEM_HANDLE New_handle;
+	UNLONG V;
+	UNLONG Largest = 0;
+	UNSHORT i;
+	UNBYTE Old_area_memory_type;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return NULL;
+
+	/* Start lengthy operation */
+	MEM_Start_lengthy_operation();
+
+	/* Kill! Kill! Kill! */
+	MEM_Armageddon();
+
+	/* Check all areas in the current worksapce */
+	for (i=0;i<(Current->Nr_of_areas);i++)
+	{
+		/* Does this area have the right memory type ? */
+		if (Current->Areas[i].MEMORY_TYPE & Type)
+		{
+			/* Yes -> Calculate Total Free Memory */
+			V = MEM_Calculate_TFM(&(Current->Areas[i]));
+
+			/* Is it larger than the current largest area ? */
+			if (V > Largest)
+			{
+				/* Yes -> This is the new largest area */
+				Largest_area = &(Current->Areas[i]);
+				Largest = V;
+			}
+		}
+	}
+
+	/* Make sure that the largest area won't be used for allocation */
+	Old_area_memory_type = Largest_area->MEMORY_TYPE;
+	Largest_area->MEMORY_TYPE = 0;
+
+	/* Check all entries in this area */
+	Entry = Largest_area->Next;
+	while (Entry)
+	{
+		/* Get this entry's handle */
+		Handle = Entry->BLOCK_HANDLE;
+
+		/* Is the entry free ? */
+		if (Handle)
+		{
+			/* No -> Has it been claimed ? */
+			if (!Handle->Claim_counter)
+			{
+				/* No -> Try to allocate another block */
+				New_handle = MEM_Alloc_pass_standard(Entry->Size,
+				 Handle->File_type_ptr->Memory_type);
+
+				/* Success ? */
+				if (New_handle)
+				{
+					/* Yes -> Move the block */
+					Entry = MEM_Move_memory_block(Entry, New_handle->Entry_ptr);
+				}
+			}
+		}
+
+		/* Next entry */
+		Entry = Entry->Next;
+	}
+
+	/* Restore the area's memory type */
+	Largest_area->MEMORY_TYPE = Old_area_memory_type;
+
+	/* Collect garbage in this area */
+	MEM_Collect_garbage(Largest_area);
+
+	/* Try to allocate */
+	Handle = MEM_Alloc_pass_standard(Size, Type);
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Alloc_pass_clean
+ * FUNCTION  : Memory cleaning allocation pass.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 27.08.95 20:08
+ * LAST      : 27.08.95 20:08
+ * INPUTS    : UNLONG Size - Desired size.
+ *             UNBYTE Type - Desired memory type(s).
+ * RESULT    : MEM_HANDLE : Memory handle (0 = no luck).
+ * BUGS      : No known.
+ * NOTES     : - This pass invokes Armageddon.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Alloc_pass_clean(UNLONG Size, UNBYTE Type)
+{
+	struct Memory_workspace *Current;
+	MEM_HANDLE Handle = NULL;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Exit if memory movement is not allowed */
+	if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		return NULL;
+
+	/* Start lengthy operation */
+	MEM_Start_lengthy_operation();
+
+	/* Kill! Kill! Kill! */
+	MEM_Armageddon();
+
+	/* Try to allocate */
+	Handle = MEM_Alloc_pass_standard(Size, Type);
+
+	return Handle;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Reallocate_memory
+ * FUNCTION  : Find and re-allocate a persistent memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 05.07.94 15:04
+ * LAST      : 05.07.94 15:04
+ * INPUTS    : UNLONG Findex - File index.
+ *             struct File_type *Ftype - File type.
+ * RESULT    : MEM_HANDLE : Memory handle (0 = not found).
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Reallocate_memory(UNLONG Findex, struct File_type *Ftype)
+{
+	MEM_HANDLE New;
+	BOOLEAN Flag;
+
+	/* Find memory block */
+	New = MEM_Search_persistent_block(Findex, Ftype);
+
+	/* Found ? */
+	if (New)
+	{
+		/* Yes -> Reset priority */
+		New->Priority = 128;
+
+		/* Has it already been allocated ? */
+		if (New->Flags & MEM_ALLOCATED)
+		{
+			/* Yes -> Increase the load counter */
+			if (New->Load_counter != 255)
+				New->Load_counter++;
+		}
+		else
+		{
+			/* No -> Try to re-allocate */
+			Flag = MEM_Do_reallocate(New);
+
+			if (!Flag)
+				New = NULL;
+		}
+	}
+
+	return New;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Duplicate_memory
+ * FUNCTION  : Find and make a unique copy of a persistent memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 05.07.94 15:10
+ * LAST      : 05.07.94 15:10
+ * INPUTS    : UNLONG Findex - File index.
+ *             struct File_type *Ftype - File type.
+ * RESULT    : MEM_HANDLE : Memory handle (0 = not found).
+ * BUGS      : No known.
+ * NOTES     : - A copy will only be made if the block is already allocated.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Duplicate_memory(UNLONG Findex, struct File_type *Ftype)
+{
+	MEM_HANDLE New, Other_handle;
+	struct Memory_entry *Entry, *Other_entry;
+	BOOLEAN Flag;
+
+	/* Find memory block */
+	New = MEM_Search_persistent_block(Findex,Ftype);
+
+	/* Found ? */
+	if (New)
+	{
+		/* Yes -> Has it been allocated ? */
+		if (New->Flags & MEM_ALLOCATED)
+		{
+			/* Yes -> Try to allocate a new block */
+			Entry = New->Entry_ptr;
+			Other_handle = MEM_Do_allocate(Entry->Size, Findex, Ftype);
+
+			/* Success ? */
+			if (Other_handle)
+			{
+				/* Yes -> Get the other entry */
+				Other_entry = Other_handle->Entry_ptr;
+
+				/* Re-get the original entry (!) */
+				Entry = New->Entry_ptr;
+
+				/* Copy contents of block */
+				(Ftype->Relocator)(New, Entry->Start, Other_entry->Start,
+				 Entry->Size);
+
+				New = Other_handle;
+			}
+		}
+		else
+		{
+			/* No -> Reset priority */
+			New->Priority = 128;
+
+			/* Try to re-allocate */
+			Flag = MEM_Do_reallocate(New);
+			if (!Flag)
+				New = 0;
+		}
+	}
+
+	return New;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Search_persistent_block
+ * FUNCTION  : Search a certain valid persistent memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 04.07.94 14:13
+ * LAST      : 04.07.94 14:13
+ * INPUTS    : UNLONG Findex - File index.
+ *             struct File_type *Ftype - File type.
+ * RESULT    : MEM_HANDLE : Memory handle (0 = not found).
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+MEM_HANDLE
+MEM_Search_persistent_block(UNLONG Findex, struct File_type *Ftype)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Area;
+	MEM_HANDLE Handle;
+	UNLONG i;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Search all handles */
+	for (i=0;i<MEMORY_HANDLES_MAX;i++)
+	{
+		Handle = &MEM_Handles[i];
+
+		/* Does this handle have the correct file-type and -index ? */
+		if ((Handle->File_index == Findex) && (Handle->File_type_ptr == Ftype))
+		{
+			/* Yes -> Is it valid ? */
+			if (!(Handle->Flags & MEM_INVALID))
+			{
+				/* Yes -> Is it in the current workspace ? */
+				Area = MEM_Find_memory_area(Handle->Entry_ptr);
+
+				if (MEM_Find_memory_workspace(Area) == Current)
+				{
+					/* Yes -> Exit */
+					return Handle;
+				}
+			}
+		}
+	}
+
+	/* Not found */
+	return NULL;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Do_reallocate
+ * FUNCTION  : Actually re-allocate a memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 05.07.94 11:00
+ * LAST      : 05.07.94 11:00
+ * INPUTS    : MEM_HANDLE New - Handle of "new" memory block.
+ * RESULT    : TRUE - Success.
+ *             FALSE - Failure.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+MEM_Do_reallocate(MEM_HANDLE New)
+{
+	struct Memory_workspace *Current;
+	struct Memory_entry *Area;
+	struct Memory_entry *Entry;
+	struct Memory_entry *Other_entry;
+	MEM_HANDLE Other_handle;
+	struct File_type *Ftype;
+
+	/* Get current workspace */
+	Current = MEM_Workspace_stack[MEM_Workspace_stack_index];
+
+	/* Mark the new block as allocated */
+	New->Flags |= MEM_ALLOCATED;
+
+	New->Load_counter = 1;
+
+	Entry = New->Entry_ptr;
+	Ftype = New->File_type_ptr;
+
+	/* Check if the block is still in an area of the correct memory type. */
+	/* A memory allocation pass may have moved this block to another area */
+
+	/* Is this block still in an area of the correct memory type? */
+	Area = MEM_Find_memory_area(Entry);
+	if (Area->MEMORY_TYPE & Ftype->Memory_type)
+	{
+		/* No -> Is memory movement allowed ? */
+		if (Current->Flags & MEM_NO_MEMORY_MOVEMENT)
+		{
+			/* No -> Kill memory block */
+			MEM_Kill_memory(New);
+
+			return FALSE;
+		}
+
+		/* Try to allocate a new block with the correct memory type */
+		Other_handle = MEM_Do_allocate(Entry->Size, New->File_index, Ftype);
+
+		/* Success ? */
+		if (Other_handle)
+		{
+			/* Yes -> Get the other entry */
+			Other_entry = Other_handle->Entry_ptr;
+
+			/* Re-get the original entry (!) */
+			Entry = New->Entry_ptr;
+
+			/* Copy contents of block */
+			(Ftype->Relocator)(New, Entry->Start, Other_entry->Start,
+			 Entry->Size);
+
+			/* Switch entries and handles */
+			Other_entry->BLOCK_HANDLE	= New;
+			New->Entry_ptr					= Other_entry;
+			Entry->BLOCK_HANDLE			= Other_handle;
+			Other_handle->Entry_ptr		= Entry;
+
+			/* Kill old memory block (with new handle) */
+			MEM_Kill_memory(Other_handle);
+		}
+		else
+		{
+			/* No -> Kill memory block */
+			MEM_Kill_memory(New);
+
+			return FALSE;
+		}
+	}
+
+	return TRUE;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Find_memory_area
+ * FUNCTION  : Find the memory area belonging to a memory block.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 01.06.94 10:37
+ * LAST      : 01.06.94 10:37
+ * INPUTS    : struct Memory_entry *Entry - pointer to memory entry.
+ * RESULT    : struct Memory_entry * : pointer to memory area descriptor.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_entry *
+MEM_Find_memory_area(struct Memory_entry *Entry)
+{
+	struct Memory_entry *Other;
+
+	/* Get previous entry */
+	Other = Entry->Previous;
+
+	/* Is this entry the area descriptor ? */
+	while (Other)
+	{
+		/* No -> Seek backwards */
+		Entry = Other;
+		Other = Entry->Previous;
+	}
+
+	return Entry;
+}
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MEM_Find_memory_workspace
+ * FUNCTION  : Find the memory workspace belonging to a memory area.
+ * FILE      : BBMEMALO.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 05.07.94 10:40
+ * LAST      : 05.07.94 10:40
+ * INPUTS    : struct Memory_entry *Area - pointer to memory area.
+ * RESULT    : struct Memory_workspace * : pointer to memory workspace descriptor.
+ * BUGS      : No known.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+struct Memory_workspace *
+MEM_Find_memory_workspace(struct Memory_entry *Area)
+{
+	return(&MEM_Workspaces[Area->WORKSPACE_NUMBER]);
+}
+

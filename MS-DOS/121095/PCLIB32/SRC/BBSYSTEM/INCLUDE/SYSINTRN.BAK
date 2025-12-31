@@ -1,0 +1,97 @@
+#ifndef BBSYSTEM_I_H
+#define BBSYSTEM_I_H
+
+
+/************
+ * NAME     :  BBSYSTEM_I.H
+ * AUTOR    :  BlueByte
+ * PROJECT  :  Project 32
+ ************/
+
+
+/* Includes */
+
+#include <BBDEF.h>
+#include <BBDSA.h>
+#include <BBEXTRDF.H>
+
+/* Master defines */
+#define BBSYS_ERRORHANDLING
+
+/* Defines */
+#define RAWSHIFTL 42 /* Rawcode Shift links */
+#define RAWSHIFTR 54 /* Rawcode Shift rechts */
+#define RAWSTRG 29 /* Rawcode strg */
+#define RAWALT 56 /* Rawcode strg */
+#define RAWCAPS 58 /* Rawcode capslock */
+#define RAWNUM 69 /* Rawcode numlock */
+
+#define RAWSPECIAL 96 /*	Definition fr speziellen Tasten up code */
+
+#define MSP 65536 /* Code der angibt das diese Taste auch ohne Specialcode aktiviert werden kann */
+
+/* aktuelles Land */
+enum COUNTRY
+{
+	DEUTSCH,
+	DEUTSCHSHIFT,
+	AMERIKA,
+	AMERIKASHIFT,
+	FRANZOESISCH,
+	FRANZOESISCHSHIFT,
+	ASCTABSANZ
+};
+
+/* Aufruffrequenz fr alte Timer Routine */
+#define OLDTIMERFREQ ((SILONG)((TICKS_PER_SECOND*65536)/18.2))
+
+/* Alert id defines */
+#define SYSTEM_AboutDialog 	1000			/* And Resource ID for About box dialog. */
+
+/* Variable die die Zeit fr den Doppelclick festlegt */
+#define	SYSTEMVAR_doubleclicktime 20
+
+/* Variable gibt an um wieviele Pixel Maus verschoben werden muss um DoppelClick zu verhindern */
+#define SYSTEMVAR_mousedbmovedelta 2
+
+/* Error struct */
+#ifdef BBSYS_ERRORHANDLING
+	struct BBSYS_ErrorStruct
+	{
+		UNBYTE *errorname;
+		UNLONG	errordata;
+		UNLONG	errordata2;
+	};
+#endif
+
+/* ErrorPrintFunktion */
+#ifdef BBSYS_ERRORHANDLING
+	extern void SYS_PrintError( UNCHAR * buffer, UNBYTE * data );
+#endif
+
+/* externe Variablen */
+extern UNBYTE asciikeytabcountry[ASCTABSANZ][128];
+extern SILONG rawkeytab[];
+extern SIBYTE pressedkeytab[];
+
+extern UNBYTE mouseptrdata[];
+extern UNBYTE mousebusydata[];
+
+/* Mauszeiger Variablen fr copyopmtoscreen */
+/* Mauskoordinaaten fr Hintergrudnretten */
+extern struct OPM mousebackopm[]; /* Zeiger auf HintergrundDaten fr Mauszeiger um GTO zu erstellen */
+extern struct OPM mouseoldbackopm[]; /* Zeiger auf HintergrundDaten fr Mauszeiger */
+extern struct OPM bmousebackopm; /* Zeiger auf HintergrundDaten fr Mauszeiger um GTO zu erstellen */
+extern struct OPM bmouseoldbackopm; /* Zeiger auf HintergrundDaten fr Mauszeiger */
+extern SILONG mousebacksize; /* Gr”sse des MausHintergrundpuffers */
+extern struct GTO *mousegto; /* aktuelles Mausgto */
+
+/* Assembler unterfunktionen */
+
+extern void	_SYS_ASS_MouseBob(UNBYTE *mousebackopm,UNBYTE *mouseoldbackopm,struct GTO *mousegto,UNLONG transcol,UNLONG mousesize);
+#pragma aux _SYS_ASS_MouseBob parm caller [ESI] [EDI] [EBX] [EDX] [ECX] modify [EAX];
+
+//#define COUNT(x,min,max) if ((++(x)) >= (max)) { x = min; }
+
+#endif
+

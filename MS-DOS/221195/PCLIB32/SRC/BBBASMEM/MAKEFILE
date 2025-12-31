@@ -1,0 +1,5 @@
+!include ..\OPTIONS
+
+# compilieren
+..\..\LIB\bbbasmem.obj: bbbasmem.c $(OPTION) .AUTODEPEND
+

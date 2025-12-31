@@ -1,0 +1,1456 @@
+/************
+ * NAME     : BBOPM.c
+ * AUTOR    : R.Reber, BlueByte
+ * START    : 25.05.94 14:00
+ * PROJECT  : Poject32/Macintosh
+ * NOTES    : The 1.0 version of the OPM system supports only 1 byte
+ *            per pixel pixel maps.
+ *						Achtung !!!!!
+ *						Die FunktionsfÑhigkeit ist nur bis 800x600 mîglich
+ *						aus SpeicherplatzgrÅnden wegen Tabellen
+ * SEE ALSO : BBOPM.h
+ * VERSION  : 1.0
+ ************/
+
+/* System Includes */
+#include <string.h>
+#include <stdarg.h>
+
+/* Includes */
+
+#include <BBDEF.H>
+#include <BBBASMEM.H>
+#include <BBOPM.H>
+#include <BBMISC.H>
+#include <BBEXTRDF.H>
+#include "INCLUDE\FNTINTRN.H"
+#include "INCLUDE\OPMINTRN.H"
+#include "..\BBDSA\INCLUDE\DSAINTRN.H"
+
+/* Error handling */
+#ifdef BBOPM_ERRORHANDLING
+	#include <BBERROR.h>
+	#include <stdio.h>
+	/* Name of Library */
+	char BBOPM_LibraryName[] = "BBOPM Library";
+#endif
+
+/*
+ ******************************************************************************
+ Functions to handle OPMs.
+ ******************************************************************************
+*/
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_New
+ * FUNCTION  : Initialize a OPM structure. All fields of the OPM structure
+ *             are initialized.
+ *             Global OPM offset is set to (0|0).
+ *             Clipping retangle is set to (0|0)-(width|height).
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      : 25.05.94 14:20
+ * INPUTS    : UNSHORT width		: width of OPM.
+ *             UNSHORT height	: height of OPM.
+ *             UNSHORT depth		: depth of OPM (always 1 in OPM1.0).
+ *             struct OPM * opmptr : pointer to OPM structure to be filled out.
+ *             UNBYTE * data		: pointer to pixel buffer or NULL if OPM_New
+ *                                should allocate memory.
+ * RESULT    : SISHORT : TRUE = ok, FALSE = error
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SISHORT
+OPM_New( UNSHORT width, UNSHORT height, UNSHORT depth, struct OPM * opmptr, UNBYTE * data )
+{
+	/* Local variables */
+
+	UNLONG datasize;
+
+
+	/* Init status flag set */
+
+	opmptr->status = OPMSTAT_NULL;
+
+	/* virtual x,y auf 0 setzen fÅr Clipping */
+
+	opmptr->virtualx	= 0;
+	opmptr->virtualy	= 0;
+
+	/* Calc data size */
+
+	datasize = width * height * depth;
+
+
+	/* Set data size in OPM structure */
+
+	opmptr->datasize = datasize;
+
+
+	/* Do I have to allocate a buffer ? */
+
+	if ( data == NULL )
+	{
+		/* Yes: allocate buffer */
+
+		if ( ( opmptr->data = BASEMEM_Alloc( datasize , BASEMEM_Status_Normal ) )  == NULL )
+		{
+			/* No memory for buffer */
+
+			#ifdef BBOPM_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBOPM_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "OPM_New: Cannot Allocate Mem for PixelMap width,height ";
+				error.errordata	= width;
+				error.errordata2	= height;
+
+				/* Push error on stack */
+				ERROR_PushError( OPM_PrintError, ( UNCHAR * ) &BBOPM_LibraryName[0], sizeof( struct BBOPM_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+
+			return( FALSE );
+		}
+
+		/* Speicherbereich lîschen */
+		memset( opmptr->data, 0,datasize);
+
+		/* Set self_memory bit in status flag set */
+		opmptr->status |= OPMSTAT_SELFMEMORY;
+	}
+	else
+	{
+		/* No: set buffer to given pointer */
+		opmptr->data = data;
+	}
+
+
+	/* Init base values */
+	opmptr->width	= width;
+	opmptr->height	= height;
+
+
+	/* Set depth (always 1 in OPM1.0) */
+	opmptr->depth	= depth;
+
+
+	/* Init clip retangle */
+	opmptr->clip.left	= 0;
+	opmptr->clip.top	= 0;
+	opmptr->clip.width	= width;
+	opmptr->clip.height	= height;
+
+
+	/* Init global offset */
+	opmptr->xoffset	= 0;
+	opmptr->yoffset	= 0;
+
+
+	/* Set offset to next x pos (always 1 in OPM1.0) */
+	opmptr->nextxpos	= depth;
+
+	/* Set offset to next y pos (always width in OPM1.0) */
+	opmptr->nextypos	= depth * width;
+
+	/* Set status to initialized and changed */
+	opmptr->status |= (OPMSTAT_INIT|OPMSTAT_CHANGED);
+
+	/* No error */
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+#if FALSE
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Relocate
+ * FUNCTION  : Relocate an OPM.
+ * FILE      :
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 25.07.94 12:03
+ * LAST      : 29.04.95 15:45:27
+ * INPUTS    : MEM_HANDLE Handle - Handle of memory block.
+ *             UNBYTE *Source - Pointer to source.
+ *             UNBYTE *Target - Pointer to target.
+ *             UNLONG Size - Size of memory block.
+ * RESULT    : None.
+ * BUGS      : - This function doesn't work properly when the OPM has virtual
+ *              OPMs. This is because the virtual OPMs are not connected to
+ *              their parent OPMs.
+ * NOTES     : - Naturally, this is a bit of a cheat. None of the OPM
+ *              functions will ever claim a pointer. But it works anyway.
+ * SEE ALSO  : BBMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_Relocate(MEM_HANDLE Handle, UNBYTE *Source, UNBYTE *Target, UNLONG Size)
+{
+	/* Copy the memory block */
+	BASEMEM_CopyMem(Source, Target, Size);
+
+	/* Change pointer to data in OPM structure */
+	((struct OPM *) Handle->File_index)->data = Target;
+}
+#endif
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Del
+ * FUNCTION  : Free a OPM structure.
+ *             Free memory of OPM if it was allocated by OPM_New().
+ *             Invalid status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      : 25.05.94 14:20
+ * INPUTS    : struct OPM * opmptr : pointer to OPM structure to be freed.
+ * RESULT    : None
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_Del( struct OPM * opmptr )
+{
+	/* Is it a virtual OPM ? */
+	if(opmptr->status & OPMSTAT_VIRTUAL){
+		/* OPM Flas auf NULL */
+	}
+	else{
+		/* Memory allocated by OPM_New() ? */
+		if ( opmptr->status & OPMSTAT_SELFMEMORY ){
+			/* Yes: free memory */
+			BASEMEM_Free( opmptr->data );
+		}
+	}
+
+	/* Clear status flag set */
+	opmptr->status = OPMSTAT_NULL;
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_SetVirtualPosition
+ * FUNCTION  : Set the position of a virtual OPM.
+ *						 Routine verÑndert die Quellkopierposition -> opm.data, d.h.
+ *						 das OPM erscheint auf dem Bildschirm weiterhin an der gleichen
+ *						 Stelle nur mit dem Unterschied das von einem anderen Datenbereich
+ *						 kopiert wird. (NÅtzlich fÅr Scrollroutinen)
+ * FILE      : BBOPM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 25.07.94 10:30
+ * LAST      :
+ * INPUTS    : struct OPM * opmptr : pointer to virtual OPM structure.
+ *             SISHORT x : new x pos of virtual OPM.
+ *             SISHORT y : new y pos of virtual OPM.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The 1.0 version of the OPM system supports only 1 byte
+ *              per pixel pixel maps.
+ *             - This function will reset the clipping area of the virtual
+ *              OPM so that access outside of the base OPM is impossible.
+ *             - OPMSTAT_CHANGED is set in the OPM status flag set.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_SetVirtualPosition( struct OPM * opmptr, SISHORT x, SISHORT y )
+{
+	struct OPM *Base;
+	UNSHORT Width, Height;
+
+	/* Is this a virtual OPM ? */
+	if (opmptr->status & OPMSTAT_VIRTUAL)
+	{
+		/* Yes -> Get base OPM */
+		Base = opmptr->virtualsrc;
+
+		/* Get virtual OPM dimensions */
+		Width = opmptr->width;
+		Height = opmptr->height;
+
+		/* Clip left */
+		if (x < 0)
+		{
+			Width += x;
+			x = 0;
+		}
+
+		/* Clip right */
+		if (x + Width >= Base->width)
+			Width = Base->width - x;
+
+		/* Clip top */
+		if (y < 0)
+		{
+			Height += y;
+			y = 0;
+		}
+
+		/* Clip bottom */
+		if (y + Height >= Base->height)
+			Height = Base->height - y;
+
+		/* Set virtual OPM's clipping rectangle */
+		opmptr->clip.left = x;
+		opmptr->clip.top = y;
+		opmptr->clip.width = Width;
+		opmptr->clip.height = Height;
+
+		/* Set the virtual coordinates */
+//		opmptr->virtualx = x;
+//		opmptr->virtualy = y;
+
+		/* Set virtual OPM's data pointer */
+		opmptr->data = Base->data + y * opmptr->nextypos + x;
+	}
+}
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_CreateVirtualOPM
+ * FUNCTION  : Initialize a virtual OPM. A virtual OPM has no own pixel map.
+ *             It works on a part of a pixel map of a given OPM.
+ *						 Sollte der Quellopmbereich durch das virtuelle OPM Åberschritten werden
+ *						 so werden die Clippinggrenzen entsprechend gesetzt und xoffset,yoffset
+ *						 wird  verwendet um spÑter die richtige Position zu erreichen
+ *
+ *						 Diese Funktion kann auch verwendet werden um eine neue Position
+ *						 oder Grîsse fÅr das virtuelle OPM anzugeben, es wird kein Speicher
+ *					   angefordert oder freigegeben.
+ *
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      : 11.11.94 11:20
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             struct OPM * virtualopmptr : pointer to OPM structure of virtual OPM.
+ *             SISHORT left		: x pos of virtual OPM in source OPM.
+ *             SISHORT top		: y pos of virtual OPM in source OPM.
+ *             SISHORT width		: width of virtual OPM.
+ *             SISHORT height		: height of virtual OPM.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : OPM_New(), BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+/* Create a virtial child OPM */
+
+void
+OPM_CreateVirtualOPM( struct OPM * srcopmptr, struct OPM * virtualopmptr, SISHORT left, SISHORT top, UNSHORT o_width, UNSHORT o_height )
+{
+	SISHORT width,height;
+
+	/* width auf SISHORT casten */
+	width=(SISHORT)o_width;
+	height=(SISHORT)o_height;
+
+	/* Set status of virtual OPM to initialized, changed and virtual */
+	virtualopmptr->status = (OPMSTAT_INIT|OPMSTAT_CHANGED|OPMSTAT_VIRTUAL );
+
+	/* Save position of virtual OPM in source OPM */
+	/* virtuelle Position ist unbeeinflusst vom Clipping */
+	virtualopmptr->virtualx	= left;
+	virtualopmptr->virtualy	= top;
+
+	/* Breite und Hîhe ist unbeeinflu·t vom Clipping */
+	/* Set width and height */
+	virtualopmptr->width	= width;
+	virtualopmptr->height	= height;
+
+	/* Init Source OPM offset */
+	virtualopmptr->xoffset	= 0;
+	virtualopmptr->yoffset	= 0;
+
+	/* Grenzen auf innerhalb des Åbergeordneten OPMS setzen */
+	if(left<srcopmptr->clip.left){
+		width-=srcopmptr->clip.left-left;
+		virtualopmptr->xoffset=-(srcopmptr->clip.left-left); /* x Offset fÅr Berichtigung Position im QuellOPM */
+		left=srcopmptr->clip.left;
+		if(width<0){ /* links ausserhalb */
+			width=0; /* Breite auf 0 d.h. OPM ist nicht sichtbar */
+		}
+	}
+	if((left+width)>(srcopmptr->clip.left+srcopmptr->clip.width)){
+		width-=(left+width)-(srcopmptr->clip.left+srcopmptr->clip.width);
+		if(width<0){ /* rechts ausserhalb */
+			width=0; /* Breite auf 0 d.h. OPM ist nicht sichtbar */
+			left=srcopmptr->clip.left+srcopmptr->clip.width; /* linke Position nach rechts */
+		}
+	}
+	if(top<srcopmptr->clip.top){
+		height-=srcopmptr->clip.top-top;
+		virtualopmptr->yoffset=-(srcopmptr->clip.top-top); /* y Offset fÅr Berichtigung Position im QuellOPM */
+		top=srcopmptr->clip.top;
+		if(height<0){ /* oben ausserhalb */
+			height=0; /* Hîhe auf 0 d.h. OPM ist nicht sichtbar */
+		}
+	}
+	if((top+height)>(srcopmptr->clip.top+srcopmptr->clip.height)){
+		height-=(top+height)-(srcopmptr->clip.top+srcopmptr->clip.height);
+		if(height<0){ /* unten ausserhalb */
+			height=0; /* Hîhe auf 0 d.h. OPM ist nicht sichtbar */
+			top=srcopmptr->clip.top+srcopmptr->clip.height; /* obere position nach unten */
+		}
+	}
+
+	/* Init link to source OPM */
+	virtualopmptr->virtualsrc = srcopmptr;
+
+	/* Get depth from source OPM  */
+	virtualopmptr->depth	= srcopmptr->depth;
+
+	/* Init clip rectangle of virtual OPM */
+	virtualopmptr->clip.left	= 0;
+	virtualopmptr->clip.top		= 0;
+	virtualopmptr->clip.width	= width;
+	virtualopmptr->clip.height	= height;
+
+	/* Get offsets from source OPM */
+	virtualopmptr->nextxpos	= srcopmptr->depth;
+	virtualopmptr->nextypos	= srcopmptr->nextypos;
+
+	/* Calculate base pixel map pointer of virtual OPM */
+	virtualopmptr->data = srcopmptr->data + top * virtualopmptr->nextypos + left;
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ Functions to work on OPMs.
+ ******************************************************************************
+*/
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_SetPixel
+ * FUNCTION  : Set a pixel in an OPM object. The OPM offset is used and the
+ *             clip area is checked.
+ *             If the pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos of point.
+ *             SISHORT y : y pos of point.
+ *             UNBYTE color : color of point.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_SetPixel( struct OPM * opmptr, SISHORT x, SISHORT y, UNBYTE color )
+{
+	/* Add offset after clipping check, because the global OPM */
+	/* offset must also be added on the clipping retangle. */
+
+	/* Calc absolute offset */
+	x += opmptr->xoffset;
+	y += opmptr->yoffset;
+
+	/* X out of clip retangle ? */
+	if(x<opmptr->clip.left||x>=(opmptr->clip.left+opmptr->clip.width)
+	 ||y<opmptr->clip.top||y>=(opmptr->clip.top+opmptr->clip.height))
+		return;
+
+	/* Set changed bit in status flag set */
+	opmptr->status |= (OPMSTAT_CHANGED);
+
+	*(opmptr->data+(y*opmptr->nextypos+x))=color;
+}
+
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_GetPixel
+ * FUNCTION  : Get the color of a pixel on a given position in a given OPM.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos.
+ *             SISHORT y : y pos.
+ * RESULT    : UNBYTE color : color of pixel. 0 if the pixel is out of bounds of the OPM.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE
+OPM_GetPixel( struct OPM * opmptr, SISHORT x, SISHORT y )
+{
+	/* Add offset after clipping check, because the global OPM */
+	/* offset must also be added on the clipping retangle. */
+
+	/* Calc absolute offset */
+	x += opmptr->xoffset;
+	y += opmptr->yoffset;
+
+	/* X out of clip retangle ? */
+	if(x<opmptr->clip.left||x>=(opmptr->clip.left+opmptr->clip.width)
+	 ||y<opmptr->clip.top||y>=(opmptr->clip.top+opmptr->clip.height))
+		return(0);
+
+	return( *( opmptr->data + (y * opmptr->nextypos + x) ) );
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_HorLine
+ * FUNCTION  : Draw a horizontal line into an OPM object.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos of base point.
+ *             SISHORT y : y pos of base point.
+ *             UNSHORT width : width of hor. line.
+ *             UNBYTE color : color of line.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : Pixel (x+width|y) is not set.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_HorLine( struct OPM * opmptr, SISHORT x, SISHORT y, UNSHORT p_width, UNBYTE color )
+{
+	SISHORT width=(SISHORT)p_width;
+
+	x+=opmptr->xoffset;
+	y+=opmptr->yoffset;
+
+/* Clipping oben unten */
+	if(y<opmptr->clip.top){
+		return;
+	}
+	if(y>(opmptr->clip.top+opmptr->clip.height)){
+		return;
+	}
+/* Clipping rechts links */
+	if(x<opmptr->clip.left){
+		width-=opmptr->clip.left-x;
+		x=opmptr->clip.left;
+		if(width<=0){ /* links ausserhalb */
+			return;
+		}
+	}
+	if((x+width)>(opmptr->clip.left+opmptr->clip.width)){
+		width-=(x+width)-(opmptr->clip.left+opmptr->clip.width);
+		if(width<=0){ /* rechts ausserhalb */
+			return;
+		}
+	}
+
+/* Horizontale Linie zeichnen */
+	_OPM_ASS_HorLine(opmptr->data+(y*opmptr->nextypos+x),opmptr->nextypos,width,color);
+
+/* Set changed bit in status flag set */
+	opmptr->status |= (OPMSTAT_CHANGED);
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_VerLine
+ * FUNCTION  : Draw a vertical line into an OPM object.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos of base point.
+ *             SISHORT y : y pos of base point.
+ *             UNSHORT height : height of ver. line.
+ *             UNBYTE color : color of line.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : Pixel (x|y+height) is not set.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_VerLine( struct OPM * opmptr, SISHORT x, SISHORT y, UNSHORT p_height, UNBYTE color )
+{
+	SISHORT height=(SISHORT)p_height;
+
+	x+=opmptr->xoffset;
+	y+=opmptr->yoffset;
+
+	if(x<opmptr->clip.left){
+		return;
+	}
+	if(x>(opmptr->clip.left+opmptr->clip.width)){
+		return;
+	}
+	if(y<opmptr->clip.top){
+		height-=opmptr->clip.top-y;
+		y=opmptr->clip.top;
+		if(height<=0){ /* oben ausserhalb */
+			return;
+		}
+	}
+	if((y+height)>(opmptr->clip.top+opmptr->clip.height)){
+		height-=(y+height)-(opmptr->clip.top+opmptr->clip.height);
+		if(height<=0){ /* unten ausserhalb */
+			return;
+		}
+	}
+
+/* Vertikale Linie zeichnen */
+	_OPM_ASS_VerLine(opmptr->data+(y*opmptr->nextypos+x),opmptr->nextypos,height,color);
+
+/* Set changed bit in status flag set */
+	opmptr->status |= (OPMSTAT_CHANGED);
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Box
+ * FUNCTION  : Draw a box into an OPM.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos of base point.
+ *             SISHORT y : y pos of base point.
+ *             UNSHORT width : width of box.
+ *             UNSHORT height : height of box.
+ *             UNBYTE color : color of box.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : see: OPM_VerLine, OPM_HorLine.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_Box( struct OPM * opmptr, SISHORT x, SISHORT y, UNSHORT p_width, UNSHORT p_height, UNBYTE color )
+{
+	SISHORT width=(SISHORT)p_width;
+	SISHORT height=(SISHORT)p_height;
+	BOOLEAN lline=TRUE,rline=TRUE,oline=TRUE,uline=TRUE;
+
+	x+=opmptr->xoffset;
+	y+=opmptr->yoffset;
+
+/* Clipping rechts links */
+	if(x<opmptr->clip.left){
+		width-=opmptr->clip.left-x;
+		x=opmptr->clip.left;
+		lline=FALSE;
+		if(width<=0){ /* links ausserhalb */
+			return;
+		}
+	}
+	if((x+width)>(opmptr->clip.left+opmptr->clip.width)){
+		width-=(x+width)-(opmptr->clip.left+opmptr->clip.width);
+		rline=FALSE;
+		if(width<=0){ /* rechts ausserhalb */
+			return;
+		}
+	}
+
+/* Clipping oben unten */
+	if(y<opmptr->clip.top){
+		height-=opmptr->clip.top-y;
+		y=opmptr->clip.top;
+		oline=FALSE;
+		if(height<=0){ /* oben ausserhalb */
+			return;
+		}
+	}
+	if((y+height)>(opmptr->clip.top+opmptr->clip.height)){
+		height-=(y+height)-(opmptr->clip.top+opmptr->clip.height);
+		uline=FALSE;
+		if(height<=0){ /* unten ausserhalb */
+			return;
+		}
+	}
+
+/* links */
+	if(lline){
+		_OPM_ASS_VerLine(opmptr->data+(y*opmptr->nextypos+x),opmptr->nextypos,height,color);
+	}
+/* rechts */
+	if(rline){
+		_OPM_ASS_VerLine(opmptr->data+(y*opmptr->nextypos+(x+width-1)),opmptr->nextypos,height,color);
+	}
+/* oben */
+	if(oline){
+		_OPM_ASS_HorLine(opmptr->data+(y*opmptr->nextypos+x),opmptr->nextypos,width,color);
+	}
+/* unten */
+	if(uline){
+		_OPM_ASS_HorLine(opmptr->data+((y+height-1)*opmptr->nextypos+x),opmptr->nextypos,width,color);
+	}
+
+/* Set changed bit in status flag set */
+	opmptr->status |= (OPMSTAT_CHANGED);
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Box
+ * FUNCTION  : Draw a filled box into an OPM.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             SISHORT x : x pos of base point.
+ *             SISHORT y : y pos of base point.
+ *             UNSHORT width : width of box.
+ *             UNSHORT height : height of box.
+ *             UNBYTE color : color of box.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : see: OPM_VerLine, OPM_HorLine.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_FillBox( struct OPM * opmptr, SISHORT x, SISHORT y, UNSHORT p_width, UNSHORT p_height, UNBYTE color )
+{
+	SISHORT width,height;
+
+	width=(SISHORT)p_width;
+	height=(SISHORT)p_height;
+
+	x+=opmptr->xoffset;
+	y+=opmptr->yoffset;
+
+/* Clipping rechts links */
+	if(x<opmptr->clip.left){
+		width-=opmptr->clip.left-x;
+		x=opmptr->clip.left;
+		if(width<=0){ /* links ausserhalb */
+			return;
+		}
+	}
+	if((x+width)>(opmptr->clip.left+opmptr->clip.width)){
+		width-=(x+width)-(opmptr->clip.left+opmptr->clip.width);
+		if(width<=0){ /* rechts ausserhalb */
+			return;
+		}
+	}
+
+/* Clipping oben unten */
+	if(y<opmptr->clip.top){
+		height-=opmptr->clip.top-y;
+		y=opmptr->clip.top;
+		if(height<=0){ /* oben ausserhalb */
+			return;
+		}
+	}
+	if((y+height)>(opmptr->clip.top+opmptr->clip.height)){
+		height-=(y+height)-(opmptr->clip.top+opmptr->clip.height);
+		if(height<=0){ /* unten ausserhalb */
+			return;
+		}
+	}
+
+/* Block zeichnen */
+	_OPM_ASS_FillBlock(opmptr->data+(y*opmptr->nextypos+x),opmptr->nextypos-width,width,height,color);
+
+/* Set changed bit in status flag set */
+	opmptr->status |= (OPMSTAT_CHANGED);
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_CopyGTOOPM
+ * FUNCTION  : Copy a GTO into a OPM.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the OPM status flag set.
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to OPM structure.
+ *             UNBYTE * gtoptr : pointer to GTO object.
+ *             SISHORT x : x pos in OPM.
+ *             SISHORT y : y pos in OPM.
+ *             UNBYTE coloroffset : coloroffset.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ *					Comment from Kabaman Rolf:
+ *					mach des net so des gehd in bascal dausendmal schneller und besser
+ *					des is doch dodale scheisse was du do machst
+ *					ich hab do a routine in bascal die is nur halb so lang und dobbelt
+ *					so schnell.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_CopyGFXOPM( struct OPM * opmptr, UNBYTE *gfxptr, SISHORT x, SISHORT y, UNBYTE coloroffset )
+{
+	/* Switch on object format */
+
+	switch( *( gfxptr ) )
+	{
+
+		case 'I':
+		{
+			/* GFX object is a gto object */
+
+			/* Local vars */
+
+			UNBYTE	*gtodata,*dstdata;
+			UNBYTE	color;
+			UNBYTE	transcol;
+			UNSHORT	lx,ly;
+			SILONG	cx0,cy0,cx1,cy1;
+			SILONG	gtonextypos,dstnextypos,gtowidth,gtoheight;
+			struct GTO *gtoptr=(struct GTO *)gfxptr;
+
+			transcol=gtoptr->transcol;
+
+			gtowidth=(UNLONG)MISC_INTEL2UNSHORT(gtoptr->width);
+			gtoheight=(UNLONG)MISC_INTEL2UNSHORT(gtoptr->height);
+
+			gtonextypos=gtowidth;
+			gtodata=&gtoptr->bodychunk[4];
+
+			dstdata=opmptr->data;
+			dstnextypos=opmptr->nextypos;
+
+			x+=MISC_INTEL2UNSHORT(gtoptr->xoffset)+opmptr->xoffset;
+			y+=MISC_INTEL2UNSHORT(gtoptr->yoffset)+opmptr->yoffset;
+
+			cx0=opmptr->clip.left;
+			cy0=opmptr->clip.top;
+			cx1=cx0+opmptr->clip.width;
+			cy1=cy0+opmptr->clip.height;
+
+			/* Clipping links ? */
+			if(x<cx0){
+				if((cx0-x)>gtowidth){
+					/* ganz ausserhalb */
+					return;
+				}
+				else{
+					gtowidth-=(cx0-x);
+					gtodata+=(cx0-x);
+					x=cx0;
+				}
+			}
+			/* Clipping oben ? */
+			if(y<cy0){
+				if((cy0-y)>gtoheight){
+					/* ganz ausserhalb */
+					return;
+				}
+				else{
+					gtoheight-=(cy0-y);
+					gtodata+=((cy0-y)*gtoptr->width);
+					y=cy0;
+				}
+			}
+			/* Clipping rechts ? */
+			if((x+gtoptr->width)>cx1){
+				if(x>cx1){
+					/* ganz ausserhalb */
+					return;
+				}
+				else{
+					gtowidth-=(x+gtowidth-cx1);
+				}
+
+			}
+			/* Clipping unten ? */
+			if((y+gtoptr->height)>cy1){
+				if(y>cy1){
+					/* ganz ausserhalb */
+					return;
+				}
+				else{
+					gtoheight-=(y+gtoheight-cy1);
+				}
+			}
+
+			/* Wenn Breite oder Hîhe <1 dann Ende */
+			if(gtoheight<1||gtowidth<1)
+				return;
+
+			/* ZielKoordinaaten ausrechnen */
+			dstdata=opmptr->data+(y*dstnextypos)+x;
+
+//			color+=coloroffset;
+
+			/* Gto zeichnen */
+			for(ly=0;ly<gtoheight;ly++,dstdata+=dstnextypos,gtodata+=gtonextypos){
+				for(lx=0;lx<gtowidth;lx++){
+					if((color=*(gtodata+lx))!=transcol){
+						*(dstdata+lx)=color;
+					}
+				}
+			}
+
+			/* Set changed bit in status flag set */
+			opmptr->status |= (OPMSTAT_CHANGED);
+
+			break;
+		}
+		default:
+		{
+			#ifdef BBOPM_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBOPM_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "OPM_CopyGFXOPM: unbekanntes Bobformat ";
+				error.errordata	= (UNLONG)gfxptr;
+				error.errordata2	= 0;
+
+				/* Push error on stack */
+				ERROR_PushError( OPM_PrintError, ( UNCHAR * ) &BBOPM_LibraryName[0], sizeof( struct BBOPM_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+		}
+
+	}
+
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_CopyOPMOPM
+ * FUNCTION  : Copy a retangle from a source OPM into a destination OPM.
+ *             If a pixel is set OPMSTAT_CHANGED is set in the destination OPM status flag set.
+ *						 Es wird sowohl das Source Opm als auch das ZielOpm geclippt
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : struct OPM * srcopmptr : pointer to source OPM structure.
+ *             struct OPM * destopmptr : pointer to destintation OPM structure.
+ *             SISHORT scrx : x pos in source OPM of retangle to be copied.
+ *             SISHORT scry : y pos in source OPM of retangle to be copied.
+ *             SISHORT srcwidth : width of retangle to be copied.
+ *             SISHORT scrheight : height of retangle to be copied.
+ *             SISHORT destx : x pos in destination OPM.
+ *             SISHORT desty : y pos in destiantion OPM.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+OPM_CopyOPMOPM( struct OPM * srcopmptr, struct OPM * destopmptr, SISHORT srcx, SISHORT srcy, UNSHORT o_width, UNSHORT o_height, SISHORT destx, SISHORT desty )
+{
+	UNBYTE *sdata,*ddata;
+	SISHORT cx0,cy0,cx1,cy1;
+	UNSHORT offx,offy;
+	SISHORT width,height;
+
+	width=(SISHORT)o_width;
+	height=(SISHORT)o_height;
+
+	/* Quellopm + Quelloffset */
+	srcx+=srcopmptr->xoffset;
+	srcy+=srcopmptr->yoffset;
+
+	/* Zielopm + Zieloffset */
+	destx+=destopmptr->xoffset;
+	desty+=destopmptr->yoffset;
+
+	/* Source OPM clippen */
+	cx0=srcopmptr->clip.left;
+	cy0=srcopmptr->clip.top;
+	cx1=cx0+srcopmptr->clip.width;
+	cy1=cy0+srcopmptr->clip.height;
+
+	/* Offset auf 0 */
+	offx=0;
+	offy=0;
+
+	/* Clipping links ? */
+	if(srcx<cx0){
+		if((cx0-srcx)>width){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+ 			width-=(cx0-srcx);
+			if(width<=0){
+				return;
+			}
+			offx+=(cx0-srcx);
+			srcx=cx0;
+		}
+	}
+	/* Clipping oben ? */
+	if(srcy<cy0){
+		if((cy0-srcy)>height){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			height-=(cy0-srcy);
+			if(height<=0){
+				return;
+			}
+			offy+=(cy0-srcy);
+			srcy=cy0;
+		}
+	}
+	/* Clipping rechts ? */
+	if((srcx+width)>cx1){
+		if(srcx>cx1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			width-=(srcx+width-cx1);
+			if(width<=0){
+				return;
+			}
+		}
+
+	}
+	/* Clipping unten ? */
+	if((srcy+height)>cy1){
+		if(srcy>cy1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			height-=(srcy+height-cy1);
+			if(height<=0){
+				return;
+			}
+		}
+	}
+
+	/* Offset zu QuellPosition addieren */
+//	srcx+=offx; /* neue Position im QuellOPM */
+//	srcy+=offy; /* neue Position im QuellOPM */
+
+	/* Offset zu ZielPosition addieren */
+	destx+=offx; /* neue Position im ZielOPM */
+	desty+=offy; /* neue Position im ZielOPM */
+
+	/* Clipping ZielOPM */
+	cx0=destopmptr->clip.left;
+	cy0=destopmptr->clip.top;
+	cx1=cx0+destopmptr->clip.width;
+	cy1=cy0+destopmptr->clip.height;
+
+	/* Offset auf 0 */
+	offx=0;
+	offy=0;
+
+	/* Clipping links ? */
+	if(destx<cx0){
+		if((cx0-destx)>width){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			width-=(cx0-destx);
+			if(width<=0){
+				return;
+			}
+			offx+=(cx0-destx);
+			destx=cx0;
+		}
+	}
+	/* Clipping oben ? */
+	if(desty<cy0){
+		if((cy0-desty)>height){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			height-=(cy0-desty);
+			if(height<=0){
+				return;
+			}
+			offy+=(cy0-desty);
+			desty=cy0;
+		}
+	}
+	/* Clipping rechts ? */
+	if((destx+width)>cx1){
+		if(destx>cx1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			width-=(destx+width-cx1);
+			if(width<=0){
+				return;
+			}
+		}
+
+	}
+	/* Clipping unten ? */
+	if((desty+height)>cy1){
+		if(desty>cy1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			height-=(desty+height-cy1);
+			if(height<=0){
+				return;
+			}
+		}
+	}
+
+	/* Offset zu QuellPosition addieren */
+	srcx+=offx; /* neue Position im QuellOPM */
+	srcy+=offy; /* neue Position im QuellOPM */
+
+	/* Offset zu ZielPosition addieren */
+//	destx+=offx; /* neue Position im ZielOPM */
+//	desty+=offy; /* neue Position im ZielOPM */
+
+	/* edngÅltige Position */
+	sdata=srcopmptr->data+(srcy*srcopmptr->nextypos)+srcx;
+	ddata=destopmptr->data+(desty*destopmptr->nextypos)+destx;
+
+	if(srcopmptr->status&OPMSTAT_TRANSPARENT){
+		OPM_CopyBlockTrans( sdata,ddata,(SILONG)srcopmptr->nextypos-width,(SILONG)destopmptr->nextypos-width,(UNSHORT)width,(UNSHORT)height,(UNLONG)srcopmptr->transcol);
+	}
+	else{
+		OPM_CopyBlock( sdata,ddata,(SILONG)srcopmptr->nextypos-width,(SILONG)destopmptr->nextypos-width,(UNSHORT)width,(UNSHORT)height);
+	}
+
+	/* Set changed bit in status flag set */
+	destopmptr->status |= (OPMSTAT_CHANGED);
+
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Write
+ * FUNCTION  : Gibt einen Text mit internem Zeichensatz aus
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 25.05.94 14:20
+ * LAST      :
+ * INPUTS    : opm = Zeiger auf AusgabeOPM
+ *						 char *string = Zeiger auf Text
+ *						 SILONG x = X Position
+ *						 SILONG y = Y Position
+ *						 (SILONG forecol = Vordergrundfarbe -1 = durchsichtig)
+ *						 (SILONG backcol = Hintergrundfarbe -1 = durchsichtig)
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : The 1.0 version of the OPM system supports only 1 byte
+ *             per pixel pixel maps.
+ * SEE ALSO  : BBOPM.h
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+void OPM_Write(struct OPM *opm,char *string,SILONG x,SILONG y,UNBYTE color)
+{
+	/* Fenster setzten und Zeiger auf Fenster setzten fÅr Font */
+	_OPM_ASS_init_font(0,0,opm->width-1,opm->height-1,opm->data,opm->nextypos);
+
+	/* zeichnen */
+	_OPM_ASS_draw_text(x,y,color,8,string);
+}
+/* #FUNCTION END# */
+
+
+/*
+	******************************************************************************
+	* #FUNCTION HEADER BEGIN#
+	* NAME     : OPM_printf
+	* FUNCTION : éhnliche Funktionsweise wie printf nur mit OPMS
+	* FILE     : D:\PCLIB32\SRC\BBOPM\BBOPM.C
+	* AUTHOR   : Rainer Reber
+	* FIRST    : 04.07.95 14:34:18
+	* LAST     : 04.07.95 14:34:19
+	* INPUTS   : struct OPM *opm :
+	*             SISHORT x :
+	*             SISHORT y :
+	*             UNBYTE color :
+	*            UNCHAR *Format :
+	*             ... :
+	* RESULT   : None.
+	* BUGS     :
+	* NOTES    :
+	* VERSION  : 1.0
+	* #FUNCTION HEADER END#
+	*/
+
+/* #FUNCTION BEGIN# */
+
+void OPM_printf(struct OPM *opm, SISHORT x, SISHORT y, UNBYTE color,UNCHAR *Format, ...)
+{
+	va_list arglist;
+	UNCHAR String[201];
+
+	/* Build complete string */
+	va_start(arglist, Format);
+   vsprintf(&String[0], Format, arglist);
+   va_end(arglist);
+
+	/* Fenster setzten und Zeiger auf Fenster setzten fÅr Font */
+	_OPM_ASS_init_font(0,0,opm->width-1,opm->height-1,opm->data,opm->nextypos);
+
+	/* zeichnen */
+	_OPM_ASS_draw_text(x,y,color,8,&String[0]);
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_ChangeColor
+ * FUNCTION  : Jede Farbe eines OPMS anhand einer 256 Byte grossen IndexTabelle
+ *						 innerhalb des Clipfensters Ñndern.
+ *
+ * FILE      : BBOPM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 22.07.94 10:23
+ * LAST      : 22.07.94 10.23
+ * INPUTS    : struct OPM * OPM - Zeiger auf Ziel-OPM.
+ *             UNBYTE *Recolour_table - Pointer to recolouring table.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES		 : Sollte die Tabelle an einer 256 Byte Grenze liegen kommt eine optimierte
+ *						 Version zum Einsatz
+ *
+ * SEE ALSO  : GFXFUNC.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void OPM_ChangeColor(struct OPM *opmptr, UNBYTE *coltable)
+{
+	SILONG width,height,modulo;
+	UNBYTE *ptr;
+
+	/* Kopieren von linker oberer ClipGrenze */
+	ptr = (opmptr->data + (opmptr->clip.top * opmptr->nextypos) + opmptr->clip.left);
+
+	/* Breite und Hîhe des ClipBereichs */
+	width=opmptr->clip.width;
+	height=opmptr->clip.height;
+	modulo = opmptr->nextypos-width;
+
+	/* UmfÑrben */
+	_OPM_ASS_ChangeCol(ptr,coltable,modulo,width,height);
+
+	/* OPM has changed */
+	opmptr->status |= OPMSTAT_CHANGED;
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : OPM_Zoom
+ * FUNCTION  : Zoomt ein Opm in ein beliebieges anderes Opm
+ *
+ * FILE      : BBOPM.C
+ * AUTHOR    : R. Reber
+ * FIRST     : 22.07.94 10:23
+ * LAST      : 22.07.94 10.23
+ * INPUTS    : struct OPM * OPM - Zeiger auf Ziel-OPM.
+ *             UNBYTE *Recolour_table - Pointer to recolouring table.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES		 : Funktioniert nur bei Zielopm < 800*600
+ *
+ * SEE ALSO  : GFXFUNC.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void OPM_Zoom(struct OPM *srcopm,struct OPM *dstopm,UNLONG destxpos,UNLONG destypos,UNLONG destwidth,UNLONG destheight)
+{
+	if(dstopm->width<=800&&dstopm->height<=600){
+		/* Clipping Grenzen */
+		extern SILONG ZOOM_DESTCLIPX0;
+		extern SILONG ZOOM_DESTCLIPY0;
+		extern SILONG ZOOM_DESTCLIPX1;
+		extern SILONG ZOOM_DESTCLIPY1;
+
+		ZOOM_DESTCLIPX0=dstopm->clip.left;
+		ZOOM_DESTCLIPY0=dstopm->clip.top;
+		ZOOM_DESTCLIPX1=dstopm->clip.left+dstopm->clip.width;
+		ZOOM_DESTCLIPY1=dstopm->clip.top+dstopm->clip.height;
+
+		_OPM_ASS_Zoom(srcopm->data,dstopm->data,srcopm->nextypos,srcopm->width,srcopm->height,dstopm->nextypos,destwidth,destheight,destxpos,destypos);
+
+		/* OPM has changed */
+		dstopm->status |= OPMSTAT_CHANGED;
+	}
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : OPM_PrintError
+ * FUNCTION  : Print error function for OPM library
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BBOPM_ERRORHANDLING
+
+	void
+	OPM_PrintError( UNCHAR * buffer, UNBYTE * data )
+	{
+		/* Local vars */
+		struct BBOPM_ErrorStruct * OPMErrorStructPtr=( struct BBOPM_ErrorStruct * ) data;
+
+		/* sprintf error message into string buffer */
+		sprintf( ( char * ) buffer, "ERROR!: %s  %ld, %ld", ( char * ) OPMErrorStructPtr->errorname, OPMErrorStructPtr->errordata, OPMErrorStructPtr->errordata2 );
+	}
+
+#endif
+

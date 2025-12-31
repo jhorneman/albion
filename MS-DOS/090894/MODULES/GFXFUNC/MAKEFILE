@@ -1,0 +1,19 @@
+.ERASE
+
+Sdir = C:\WORK\MODULES\GFXFUNC
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir2)\BBBASMEM.H &
+	$(Ldir2)\BBOPM.H &
+	$(Ldir)\GFXFUNC.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\GFXFUNC.OBJ : $(Sdir)\GFXFUNC.C $(Header_files)
+	$(Compiler) GFXFUNC.C -fo$(Ldir)\GFXFUNC.OBJ
+

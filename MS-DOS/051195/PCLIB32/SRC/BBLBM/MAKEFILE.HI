@@ -1,0 +1,12 @@
+!include ..\OPTIONS.HI
+
+# linken
+..\..\LIB\bblbmhi.obj:	OBJS.HI\bblbm.obj &
+      			OBJS.HI\bbtga.obj
+	*wlib -b -n ..\..\lib\bblbmhi.obj +OBJS.HI\bblbm.obj +OBJS.HI\bbtga.obj
+
+# compilieren
+OBJS.HI\bblbm.obj: bblbm.c $(OPTION) .AUTODEPEND
+OBJS.HI\bbtga.obj: bbtga.c $(OPTION) .AUTODEPEND
+
+

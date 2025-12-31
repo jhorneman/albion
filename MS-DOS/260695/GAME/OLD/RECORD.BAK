@@ -1,0 +1,189 @@
+
+struct Record {
+	UNBYTE Event_type;
+	UNBYTE Counter;
+	union {
+		struct {
+			UNLONG X, Y;
+			UNLONG Graphics_offset;
+		} _2D;
+		struct {
+			SISHORT dX, dY;
+			UNLONG Camera_angle;
+			UNSHORT Camera_height;
+			UNSHORT Horizon_Y;
+		} _3D;
+		struct {
+			UNSHORT X, Y;
+			UNSHORT Map_nr;
+		} Map;
+	} Data;
+};
+
+// DIAGNOST.C
+
+BOOLEAN Recording;
+BOOLEAN Playback;
+
+MEM_HANDLE Recording_buffer_handle;
+UNSHORT Recording_buffer_size;
+UNSHORT Recording_buffer_index;
+
+UNCHAR *Recording_filename;
+
+void
+Start_recording(UNCHAR *Filename)
+{
+	Recording_filename = Filename;
+	Recording_buffer_size = 1000;
+	Recording_buffer_handle = MEM_Allocate_memory(Recording_buffer_size * sizeof(struct Record));
+	Recording_buffer_index = 0;
+	Recording = TRUE;
+}
+
+void
+Record_2D(UNLONG X, UNLONG Y, UNLONG Graphics_offset)
+{
+	struct Record *Ptr;
+
+	Ptr = (struct Record *) MEM_Claim_pointer(Recording_buffer_handle)
+	 + Recording_buffer_index;
+
+	if ((Ptr->Data._2D.X == X) && (Ptr->Data._2D.Y == Y)
+	 && (Ptr->Data._2D.Graphics_offset == Graphics_offset)
+	 && (Ptr->Counter < 0xFF))
+	{
+		Ptr->Counter++;
+	}
+	else
+	{
+		Ptr++;
+
+		Ptr->Data._2D.X = X;
+		Ptr->Data._2D.Y = Y;
+		Ptr->Data._2D.Graphics_offset = Graphics_offset;
+		Ptr->Counter = 1;
+
+		Recording_buffer_index++;
+	}
+
+	MEM_Free_pointer(Recording_buffer_handle);
+
+	if (Recording_buffer_index == Recording_buffer_size)
+		Stop_recording();
+}
+
+void
+Stop_recording(void)
+{
+	UNBYTE *Ptr;
+
+	Recording = FALSE;
+
+	Ptr = MEM_Claim_pointer(Recording_buffer_handle);
+	DOS_WriteFile(Recording_filename, Ptr, Recording_buffer_size * sizeof(struct Record));
+	MEM_Free_pointer(Recording_buffer_handle);
+
+	MEM_Free_memory(Recording_buffer_handle);
+
+	Recording_buffer_index = 0;
+}
+
+void
+Start_playback(UNCHAR *Filename)
+{
+	UNBYTE *Ptr;
+
+	Recording_buffer_size = 1000;
+	Recording_buffer_handle = MEM_Allocate_memory(Recording_buffer_size * sizeof(struct Record));
+	Recording_buffer_index = 1;
+
+	Ptr = MEM_Claim_pointer(Recording_buffer_handle);
+	Ptr = DOS_ReadFile(Filename, Ptr, NULL);
+	MEM_Free_pointer(Recording_buffer_handle);
+
+	if (!Ptr)
+	{
+		MEM_Free_memory(Recording_buffer_handle);
+	}
+	else
+	{
+		Playback = TRUE;
+	}
+}
+
+void
+Playback_2D(struct Record *Record)
+{
+	struct Record *Ptr;
+
+	Ptr = (struct Record *) MEM_Claim_pointer(Recording_buffer_handle)
+	 + Recording_buffer_index;
+
+	if (!Ptr->Counter)
+	{
+		Ptr++;
+		Recording_buffer_index++;
+	}
+
+	memcpy(Record, Ptr, sizeof(struct Record));
+	Ptr->Counter--;
+
+	MEM_Free_pointer(Recording_buffer_handle);
+
+	if (Recording_buffer_index == Recording_buffer_size)
+		Stop_playback();
+}
+
+void
+Stop_playback(void)
+{
+	Playback = FALSE;
+
+	MEM_Free_memory(Recording_buffer_handle);
+
+	Recording_buffer_index = 0;
+}
+
+// GAME.C
+
+	"record",
+	"playback"
+
+			case 2:
+				i++;
+				Start_recording(argv[i]);
+				break;
+			case 3:
+				i++;
+				Start_playback(argv[i]);
+				break;
+
+// 2D_MAP.C (Display_2D_map())
+
+	if (Recording)
+	{
+		Record_2D(Yoho_X, Yoho_Y, Party_objects[0].Graphics_offset);
+		OPM_FillBox(&Panel_OPM, 1, 7, 50, 10, BLACK);
+		xprintf(&Panel_OPM, 2, 8, "(R:%u)", Recording_buffer_size - Recording_buffer_index);
+	}
+
+	if (Playback)
+	{
+		struct Record Rec;
+
+		Playback_2D(&Rec);
+
+		Yoho_X = Rec.Data._2D.X;
+		Yoho_Y = Rec.Data._2D.Y;
+
+		Party_objects[0].X = Yoho_X;
+		Party_objects[0].Y = Yoho_Y;
+		Party_objects[0].Graphics_offset = Rec.Data._2D.Graphics_offset;
+
+		OPM_FillBox(&Panel_OPM, 1, 7, 50, 10, BLACK);
+		xprintf(&Panel_OPM, 2, 8, "(R:%u)", Recording_buffer_size - Recording_buffer_index);
+	}
+
+
+

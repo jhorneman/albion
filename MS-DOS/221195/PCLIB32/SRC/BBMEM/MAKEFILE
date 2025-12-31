@@ -1,0 +1,79 @@
+# Makefile for BBMEM
+
+# Optimize implicit rule checking
+.OPTIMIZE
+
+# Do not output commands
+.SILENT
+
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+
+# Define library and source directories
+Ldir = ..\..\LIB
+Odir = OBJS
+
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G OP CASEEXACT OP NOREDEFS OP
+#Compiler = *wcc386 /d0 /omiler /5r
+Compiler = *wcc386 /d0 /od /5r /dDEBUG
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G DEBUG ALL OP CASEEXACT OP NOREDEFS
+Compiler = *wcc386 /d2 /od /5r /dDEBUG
+
+!endif
+
+
+# Define object files
+Object_files = $(Odir)\BBMEMVAR.OBJ &
+	$(Odir)\BBMEM.OBJ &
+	$(Odir)\BBMEMALO.OBJ &
+	$(Odir)\BBMEMCHK.OBJ
+
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;$(Ldir);
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;$(Ldir);
+
+# .C-files can be found in these directories :
+.C : $(Sdir);
+
+
+# .C-files should be turned into .OBJ-files using the following command list :
+# (The first dependent of the target should be the main source-file.)
+.C.OBJ :
+	$(Compiler) $[@ -fo$^*.OBJ
+
+
+# This is the main target, which should not be erased if anything goes wrong :
+
+$(Ldir)\BBMEM.LIB : $(Object_files) MAKEFILE
+	$(Libmake) $(Ldir)\BBMEM.LIB -+$(Odir)\BBMEMVAR.OBJ &
+		-+$(Odir)\BBMEM.OBJ &
+		-+$(Odir)\BBMEMALO.OBJ &
+		-+$(Odir)\BBMEMCHK.OBJ
+
+
+# These are the objects needed for making the main target :
+
+$(Odir)\BBMEMVAR.OBJ : BBMEMVAR.C .AUTODEPEND
+
+$(Odir)\BBMEM.OBJ : BBMEM.C .AUTODEPEND
+
+$(Odir)\BBMEMALO.OBJ : BBMEMALO.C .AUTODEPEND
+
+$(Odir)\BBMEMCHK.OBJ : BBMEMCHK.C .AUTODEPEND
+

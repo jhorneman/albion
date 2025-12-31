@@ -1,0 +1,56 @@
+	*** PCLIB32 : Kommentare und Verbesserungsvorschl„ge ***
+
+- Mann sollte in der Lage sein um ein Screen zu ”ffen ohne ein OPM. Dazu
+msste man DSA_OpenScreen() die Breite, Hoehe und Tiefe bergeben; also al
+die Parameter die sonst aus das OPM kommen.
+
+- Praktisch w„re auch eine Funktion um der Mauszeiger ein zu sperren, auch
+wenn das auf manche Plattforme vielleicht nicht erlaubt ist. Ich wrde die
+Verantwortung an der Programmierer des Spieles berlassen. Wenn er oder sie
+keine Drop-down-menus oder andere GUI-Elemente einsetzt oder sowieso das
+ganze Bildschirm einnimmt, spricht ja nichts dagegen auch auf ein Macintosch
+der Mauszeiger einzusperren, vor allem wenn dieses nur kurzzeitig passiert.
+
+x Es w„re gut wenn DSA_OpenScreen() einfach ein Fehlercode zurckliefert wenn
+man versucht um ein gedoppelpuffertes Bildschirm zu ”ffnen wenn
+Doppelpufferung unm”glich ist. Besser noch w„re es wenn es einfach das
+Maul h„lt, und wenn DSA_DoubleBuffer() sich richtig verhalten wrde, d.h.
+einfach zurckkehren wenn Doppelpufferung nicht eingeschaltet ist. Dies
+w„re vor allem sinnvoll, wenn wir "optionale" Doppelpufferung haben, z.B.
+wenn das Spiel in super VGA l„uft, der Spieler aber zu wenig Speicher auf
+der Karte hat.
+
+- Es w„re auch nicht schlecht wenn BLEV_GetEvent() die BBEVENT-struktur auch
+mit sinnvolle Information fllen wrde wenn kein Event auftrat. Der Konstante
+BLEV_NO_EVENT (mit den Wert 0) k”nnte dazu benutzt werden. Man kann es auch
+selber machen, aber wenn BLEV_GetEvent() es macht, braucht man selber nicht
+mehr nach zu denken, was ja schlieálich das Ziel aller Programmierer ist.
+
+- Sinnvoll w„re es um eine Konstante BLEV_MOUSE_EVENT zu definieren, der
+dazu dient um fest zu stellen ob ein Event ein Mausevent war. Dazu msste
+man nur alle Maustastenkonstanten zusammenodern.
+
+- Nur was kleines : sicherheitshalber sollten wird vielleicht die
+Eventkonstanten als Bits definieren (z.B. (1<<6)) und nicht als Werte, um
+m”gliche Fehler zu verhindern. Sonst kommt irgendwer irgendwann mal auf den
+Gedanken um Konstanten zu definieren die keine einzelne Bits entsprechen.
+
+- Spricht was dagegen um eine globale Variabele zu machen die der aktuelle
+Zustand der Maustasten enth„lt ? Das einzige Problem sehe ich mit Ereignis-
+gesteuerte I/O.
+
+- SYSTEM_ShowMousePtr() ist etwas unsauber : irgendwann arbeiten wir mal auf
+ein Plattform mit virtuelles Speicher, bergeben 0, 1 oder 2 als Zeiger auf
+ein GTO, und kriegen eine der Defaultmauszeiger. K”nnten wir
+SYSTEM_MousePointerNormal etc. nicht als globale Zeiger definieren? Vor allem
+kommt man selber im Programm nicht an die Defaultmauszeiger ran, was auch
+nicht schlecht w„re.
+
+- Wir mssen unbedingt festlegen, welche Elemente der OPM-Struktur (und
+andere Strukturen ?), bedingslos ge„ndert werden drfen.
+
+- Ist es wirklich unm”glich irgendwie ber den Library eigene
+Interruptfunctionen zu schreiben ? Ich meine eigentlich nur Function die
+regelm„áig aufgerufen werden, um so z.B. flieáende Farbpalettenanimationen
+zu erm”glichen.
+

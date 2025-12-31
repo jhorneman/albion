@@ -1,0 +1,291 @@
+
+----------------- FEHLENDE TEILE DES PROGRAMMES -----------------
+
+x Jagende Monster
+x Apres Combat
+x Places
+x Modify auf Zeit
+x Change Used Item Event
+x Restliche Aktionen von rechter Teil vom Inventory
+x Generelle Inventory Umschaltlogik
+x Anzeige und Verwaltung der Special Items
+x Soundeffekte fr NPCs
+x NPCs in Automapper anzeigen
+x Events in Automapper anzeigen
+x Dezimalpunkt in Goldanzeige
+- Travelmodes verwalten
+- Travelmodes anzeigen
+x 3D NPC-Logik verbessern
+
+x Lichtverwaltung in Dungeons
+x Tag- / Nacht-Wechsel
+x Camp (und Kneipe) Bildschirm
+x Heal conditions
+x Kneipe
+x Learn spell
+
+x Logikproblem mit Saved Games l”sen
+x Saved Games laden
+
+x Kampfaufstellungsfenster
+x Gegenstand untersuchen Fenster
+x Linker Teile des Inventories
+
+x Flics streamen
+
+x KBS Benutzerfhrung
+x Monsterlogik
+
+x 2D Tastatursteuerung verbessern
+x 2D Pfadverwaltung beenden
+x 3D Maussteuerung verbessern
+x 3D Tastatursteuerung einbauen
+x Textfenster verz”gern
+x Hauptmen
+
+x Logik fr spezielle Monster
+
+x Optionsmen
+
+x GRUNDDATEN EINGEBEN: EP, Gegenst„nde, Spezialgegenst„nde wie z.B. Heiltr„nke,
+ Skills und Attribute der Rassen etc.
+
+x Drop gold & food
+- 2D NPC-Logik verbessern
+- Party Status Bildschirm
+- States verwalten
+
+x Improve magic spells by use
+
+x Fackel
+x KBS Shadetabellen nachladen
+
+x Tag- / Nacht-Wechsel beenden (FAKE CHEAT BOGUS suchen in Init_map !)
+
+x Restliche Zaubersprche
+x Zauberspruchst„rken eingeben
+x Heilerpreise eingeben
+
+x Diseased logik
+
+x Fernkampfwaffenproblem l”sen
+Soundeffekte im KBS
+
+x Levelmachen anzeigen
+x Destroy used item in ITEM USED query
+x Undroppable und gebrochene Gegenst„nde darf man nicht verkaufen k”nnen
+
+x Remove used magic item berprfen
+
+Funktion schreiben die Item slots freimacht
+
+Schlagkraftmesser
+
+
+Effekte fr Handlungen im Spiel (Places, Inventory, EP, "Sterben", etc.)
+Effekte wenn man durch ein Loch strzt in 3D
+Effekt wenn verfluchte Gegenst„nde zerst”rt werden
+Colourcycling in Scripts
+Gegenstand- und Automap-animationen synchronisieren
+
+Kamerah”he wenn aktiver Mitglied ein Iskai ist
+Kamerah”he nicht resetten wenn man in eine neue Karte kommt
+
+Cancel-Buttons statt RMT
+
+Credits Bildschirm
+Game Over Bildschirm
+
+x Lichtstatus speichern
+x Lokale Soundeffekte speichern
+
+? SVGA
+x Sprche die wegfallen richtig entfernen
+
+x Goto-point anklicken k”nnen
+
+x 2D-mapdarstellung synchronisieren
+- Permanente Textanzeige synchronisieren
+
+x Dunkelheitsquery
+x Datachange auf subject
+
+x Start Round Knopf unter das Taktikfenster
+x Party Member Abfrage beim Trinken
+
+- Rausfinden wie man DOS Speicher resized
+CD-Abfrage
+- HD critical error handlen
+- HD voll abfragen bei Saven
+
+---------------- NDERN ----------------
+
+x Lamed ist ein Combat-only Kondition
+x Man kann nichts mehr machen wenn man gelamed ist
+
+x Krankheiteffekt
+
+x Poisonspruch raus
+x Windgatespruch raus
+x Monsterwissen raus
+
+x Stamina Einfluá auf Rasten gehen
+
+x Charakterbits vom Opfer in Kampfsprche bercksichtigen
+
+x Text wenn ein Partymitglied an eine Falle entkommt
+
+----------------- ZU TUN -----------------
+
+x *** Zus„tzliche Sprche speziell fr Monster :
+x Panic
+x Poison
+- Lamed
+x Disease
+x Irritation
+
+- Lightning
+- Icestorm
+- Single-target ice spell
+
+*** Events :
+
+x Spinner
+x Trap
+x Remove party member (teilweise)
+x Single Item Chest (Gold und food)
+- Ask for surrender
+
+x Places
+x	Heal conditions
+x	Rent room
+x	Learn spell
+
+Datachange mit
+x	Current combat participant
+x	Current combat participant's victim
+Datachange auf
+-	Attacks per round
+-	Character level
+-	Portrait
+-	Full-body picture
+-	2D graphics
+-	Tactical icon ?
+-	Courage
+Query auf
+x	Light state
+-	Check action monster ?
+-	Battle situation
+-	Relative weight
+x	Visible
+Modify auf
+x	Light state
+-	View direction
+-	3D shading factor
+
+*** Am Programm :
+
+x Eine Versionsnummer + Anzeige dieses in das Programm einbauen.
+x Eine Parameterausgabe in das Programm einbauen.
+- Fingerprints in das Programm einbauen.
+xBBMEM und XFTYPES umbasteln, so das nur noch manche Speicherbl”cke gelockt
+ werden.
+
+Untersuchen ob es m”glich ist virtueller Speicher einzusetzen.
+
+šberprfen ob das Albion mit ausl„ndische Tastaturen l„uft.
+
+šberprfen ob irgendwelche Einstellungen an die Library gemacht werden
+ mssen wegen ausl„ndische Tastaturen.
+
+*** Zum Testen :
+
+x Auf "Knopfdruck" die Partymitglieder bewustlos und lebendig machen k”nnen.
+
+*** Datenm„ssig :
+
+x Alle Gegenstandsdaten durchnehmen und m”glichst korrekt einstellen.
+
+Vielleicht Kampf/Dialoge einbauen in Erik's R„ubertruppe.
+
+*** Fr Thomas Friedmann :
+
+x Fehlermeldungsprotokoll vorbereiten und dokumentieren.
+
+*** Fr Rainer :
+
+x Mit Rainer alle Sprucheffekte durchnehmen.
+x Ein Modus im KBS einbauen die es erlaubt die Sprche "rckw„rts" (d.h. von
+ Monster auf Party) zu sehen.
+
+x Die Mechanismen fr Fallen und permanente Effekte erweitern (haupts„chlich
+ wegen die šbergabe von COMOBs).
+
+x Alle Punkte finden wo noch Effekte im KBS gebraucht werden, hierfr ein
+ Modul anlegen, und Rainer die Effekte machen lassen.
+
+- Rainer fertig machen weil in SVGA der Bildschirm flackert.
+
+x Vertonung der Kampfsprche vorbereiten.
+
+*** Fr Jrgen :
+
+x Eine aktuelle Programmversion + Objektmodule auf ein CD brennen.
+x Alle aktuelle 3DM Fehler dokumentieren.
+x Dieses ganze ihm schicken.
+
+*** Fr Matthias :
+
+x Rausfinden wie wir XMIDI und wave-library songs zugleichzeitig abspielen
+x k”nnen.
+
+x Eine aktuelle Programmversion auf ein CD brennen.
+x Eine Liste der fehlende Lieder machen.
+x Eine Liste von Effekte fr das KBS machen.
+x Eine Liste von fehlende Soundeffekte machen.
+x Eine Liste von Jingles machen.
+
+- Ihm jegliche Sequenzen vertonen lassen, falls notwendig.
+
+x Ihm das gesmackte Intro schicken und vertonen lassen.
+
+Ihm das Extro schicken und vertonen lassen.
+
+*** Bis ende August :
+
+x Ein šbersetzungsbro ausw„hlen.
+x Ein Deal mit den vorbereiten und abschliessen.
+x Die Deutsche Texte der Previewversion zum šbersetzungsbro schicken.
+- Die Gegenstandsnahmen und Programm-interne Texte bersetzen.
+
+*** Bis die Reviewversion fertig ist :
+
+John Miles kontaktieren und :
+x rausfinden wieso wir keine XMIDI und wave-library songs zugleichzeitig
+x abspielen k”nnen.
+- rausfinden wie wir das SETSOUND lokalisieren k”nnen.
+
+x Ein Lizenzvertrag mit The Fat Man vorbereiten und abschliessen, damit wir
+ sein Instrumentensatz benutzen drfen.
+
+x Ein Lizenzvertrag mit RAD Software vorbereiten und abschliessen, damit wir
+ Smacker benutzen drfen.
+
+*** Am Installationsprogramm : ***
+
+- das Install-Befehl sollte auch Dateien umbenennen k”nnen.
+x es sollte m”glich sein andere DOS4GW Programme aufzurufen.
+x ein Befehl einbauen das das Quellpfad in den SETUP.INI eintr„gt.
+x den Fehler mit die freie Platz auf die Laufwerke finden.
+
+*** Bis Masterung:
+
+x Ein Installskript machen.
+- Das SETSOUND lokalisieren.
+
+Die Texte im Installationsprogram berprfen lassen.
+
+Kl„ren was fr andere Produkte bzw. Demos noch auf die CD kommen.
+
+- Im Installationsprogramm Werbung fr andere Produkte einbauen.
+

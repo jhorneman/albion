@@ -1,0 +1,17 @@
+.ERASE
+
+Sdir = C:\WORK\FINDCOL
+Ldir = C:\WORK\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir)\FINDCOL.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\FINDCOL.OBJ : $(Sdir)\FINDCOL.C $(Header_files)
+	$(Compiler) FINDCOL.C -fo$(Ldir)\FINDCOL.OBJ
+

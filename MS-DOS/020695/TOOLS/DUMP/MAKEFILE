@@ -1,0 +1,23 @@
+.ERASE
+
+# PCLIB32
+PCLIB	= c:\PCLIB32\LIB\PCLIB32.lib
+
+# Compiler + Optionen
+Compiler         = wcc386
+Compiler_Options = /D2 /ox
+compile          = $(Compiler) $(Compiler_Options)
+
+Linker_Options   = debug all
+System	        = dos4g
+
+# AusgabeDatei + zu linkende Objectfiles
+Exe_file         = ..\dump.exe
+Object_files 	 = dump.obj $(PCLIB)
+
+$(Exe_file): $(Object_files)
+	*wlink system $(System) $(Linker_Options) name $(Exe_file) file {$(Object_files)}
+
+dump.obj: dump.c
+	$(compile) dump.c
+

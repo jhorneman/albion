@@ -1,0 +1,402 @@
+Mark,
+
+this is the text. As you can see, they are in machine-readable format, and richly sprinkled with various text commands and special characters.
+
+Jurie.
+
+
+Block 1:
+[The floor panel in front of the door lights up when trodden on, and at the same time the door opens.]
+
+Block 2:
+[Floor panel lights up.]
+
+Block 3:
+[Here there is a floor panel with a transparent illuminated surface.]
+
+Block 4:
+[When this floor panel lights up, the door in the "west" of the room opens.]
+
+Block 5:
+[A switch.]
+
+Block 6:
+[The position of the switch will not change when it is pressed again.]
+
+Block 7:
+[The door tries to close, but remains open. A sensor must have registered that someone else is in the doorway.]
+
+Block 8:
+[There is a wall cupboard on the "north" wall.]
+
+Block 9:
+[The wall cupboard is empty, ready to put objects in.]
+
+Block 10:
+[A wall cupboard.]
+
+Block 11:
+[The noise came from the right, quite a distance away.]
+
+Block 12:
+[As soon as the door with the red lights opens, the one at the back with the green markings shuts. The way back is blocked!]
+
+Block 13:
+[This must be a service robot. It is carrying out some unknown task.]
+
+Block 14:
+[A door. You can't see how to open it.]
+
+Block 15:
+[A fluorescent tube. It sheds a cold white light.]
+
+Block 16:
+[A steel girder.]
+
+Block 17:
+[The translucent walls indicate a service entrance. The ladder in the centre leads upwards.]
+
+Block 18:
+[A numeric keypad for entering number codes.]
+
+Block 19:
+[A door with red lights at the side. There is no opening mechanism to be seen.]
+
+Block 20:
+[A door with green lights at the side. There is no opening mechanism to be seen.]
+
+Block 21:
+[A door with blue lights at the side.There is no opening mechanism to be seen.]
+
+Block 22:
+[The number combination must have been correct: the door next to the keypad has opened.]
+
+Block 23:
+[Nothing's happening.]
+
+Block 24:
+[Yeah! Made it!]
+
+Block 25:
+[A ladder. It leads upwards.]
+
+Block 26:
+[The floor panel is flashing rhythmically: it must have some special function.]
+
+Block 27:
+[A broken fluorescent tube.]
+
+Block 28:
+[{INK 001}Tom puts the gun in the wall cupboard.{INK 002}^^ "Right. Now, if I can get to the cupboard from the other side of this drain, I'll have fooled the Secus, and the gun will be mine!"]
+
+Block 29:
+[{CNTR}{FAHI}THAT'S ALL, FOLKS !]
+
+Block 30:
+[Load Picture:]
+
+Block 31:
+[Start FLC:]
+
+Block 32:
+[Play part of FLC:]
+
+Block 33:
+[Leave Script.]
+
+Block 34:
+["Nice start, Driscoll."]
+
+Block 35:
+["Thanks, I'm in the mood for flying today.^^There's a lot of routine stuff in my job, but flying to a new planet still gives me a buzz!"]
+
+Block 36:
+["You're telling me! Don't tell my boss, but I'd go without my pay to experience that feeling again!"]
+
+Block 37:
+["We're coming into range!^^Take a look at that, Hofstedt! Doesn't look like a barren planet to me."]
+
+Block 38:
+["You're right! There are plenty of clouds, and they're the wrong colour for dust clouds."]
+
+Block 39:
+["I'll talk to the TORONTO. Meanwhile, you try to pick up something on the instruments.^^Shuttle to TORONTO! Ned, how do you read me?"]
+
+Block 40:
+["Reading you loud and clear, Mr. Driscoll. Can you see your objective?"]
+
+Block 41:
+["Yes. The planet doesn't look much like a desert, though. Mr.
+Hofstedt is checking the instruments."]
+
+Block 42:
+["Interes..ng. Oh, I th..k the conn..tion is gett... weaker. Please cont..ue."]
+
+Block 43:
+["It's difficult to take measurements because of the thick cloud layer.^^Analysis indicates large quantities of raw materials...^^Seems to be more water than we..."]
+
+Block 44:
+["Just... moment, Mr. Hofst..t. The connec... is gett... weaker. Are y.. havi.. troub..? Mr. Driscoll?"]
+
+Block 45:
+["No. Everything seems to be A-OK."]
+
+Block 46:
+["Wow! Looks like I spoke too soon!^^ Servos out of action!
+Emergency circuits going down fast! Trying to do something manually!^^Hofstedt?"]
+
+Block 47:
+["Trying to carry out a check!"]
+Block 48:
+["Mr. Dr..coll? Your status indic...s crit.cal values. Please report!"]
+
+Block 49:
+["Several systems out of action! Manual control O.K.! Trying to turn round!"]
+
+Block 50:
+["We're having problems with the power supply. I... HEY!"]
+
+Block 51:
+["That was some bang! Damn, I'm losing control!^^ Hold tight, Hofstedt!^^WE'RE GOING DOWN!"]
+
+Block 52:
+[The Shuttle is now within the planet's gravitational pull and is hurtling down towards it!^^The small craft is rocked by violent shocks as it enters the planet's atmosphere.^^ Tom works feverishly and manages to make a bumpy crash landing...^^^^Slowly the men regain consciousness.]
+
+Block 53:
+["Ohh, my head!^^Remind me not to fly with you again, Driscoll."]
+
+Block 54:
+["At least, not in this old Shuttle.^^Anyway, you should thank me for saving your life! The automatic pilot would never have brought this old crate down safely!"]
+
+Block 55:
+["O.K., O.K. I get the picture.^^Now what?"]
+
+Block 56:
+["Now we grab our masks and get out of here. ^^If the air's breathable, we'll go through the spares and try to build a makeshift transmitter.^^If the air's not breathable... Good night, sweet Prince."]
+
+Block 57:
+[Oh, man.^^Well, I guess there's no sense putting it off.^^Let's go!"]
+
+Block 58:
+["WOW! So that's the so-called barren planet! I don't believe what I'm seeing! Take a look!"]
+
+Block 59:
+["Fantastic! Take a deep breath! Just listen! This place is teeming with life!"]
+
+Block 60:
+["The data the probe sent were way off! This is sensational!"]
+
+Block 61:
+["Let's get out of the Shuttle. In this oxygen-rich atmosphere it might..."]
+Block 62:
+[Everything around Tom is immersed first in light, then in darkness which lasts a long time. Then Tom begins to dream his dream again...]
+
+Block 63:
+[{CNTR}{FAHI} FEDDICH !]
+
+Block 64:
+[That dream again.]
+
+Block 65:
+[Must talk to Chris about it some time. Time to wake up. Got to prepare for the flight.]
+
+Block 66:
+[The flight.^^The Shuttle. ^^Been there already. ^^Already happened.
+^^^^Pain. ^^^^^Something's wrong, something's not right. More
+pain! ^^^^^^^What's happened?]
+
+Block 67:
+[Oh God, the crash!^^Then what happened? Oh, shit, the pain, why can't I wake up? ^^Hofstedt and I leave the Shuttle... ^^^^Plants and animals everywhere, the planet's alive! The colours, green everywhere, everything's green...]
+
+Block 68:
+[Srrniak? Rriiba nes anrji. Frinaard dra besiir wreniid?]
+
+Block 69:
+["What in the world... {FAT}^^WHERE AM I? ^^Who, WHAT'S that?{NORS}
+^^I thought I was AWAKE! ^^^Gotta get up and...^ "Aaahh! Oh, shit!"]
+
+Block 70:
+["Looks to me like you're on the mend. Welcome to the land of the living!"]
+
+Block 118:
+["That dream again. Must be the tenth time; what does it mean?^^ Can't ever remember dreaming in colour before...^^ Well, I guess I'll stretch my legs for a while. I hope the order comes through soon to take off for the Shuttle's reconnaissance flight."]
+
+Block 119:
+["Hi there, big guy! Had a good sleep?"]
+
+Block 120:
+["Christine! Good to see you, honey!^ I'm absolutely whacked. You were right; I should have stayed with you last night.
+I had that crazy dream again. Every time it gets... clearer."]
+
+Block 121:
+["It sure is crazy. You're not usually such a sensitive soul. It must be something to do with the over-c - leap. Stay with me tonight, and I'll make you forget these silly nightmares!"]
+
+Block 122:
+["The dream began before that, and it isn't really a nightmare. It's just so intense!^^ Ah, what the hell. I'm going for a walk.
+Maybe I'll meet Captain Brandt and find out when I'm supposed to take off with Snoopy."]
+
+Block 123:
+["Snoopy? Didn't you...? Wow, you must really be a deep sleeper. You could hear the explosion all over the segment!"]
+
+Block 124:
+["Explosion? What explosion do you mean? What are you talking about, Chris? What's happened to Snoopy?"]
+
+Block 125:
+["The Inspector was sitting at the over-c comcontrols during the leap.
+The equipment overloaded and just blew up. They say they found Snoopy's remains all over the place."]
+
+Block 126:
+["That's terrible! I just can't believe it! That means now Hofstedt is the only government official on board."]
+
+Block 127:
+["Yes, I've heard he'll be coming with you on the reconnaissance flight instead of Snoopy."]
+
+Block 128:
+["What a great start to the day. Oh well, Hofstedt's not so bad, and the accident probably won't make any difference to my flight plan. I'll have a talk with Joe about it."]
+
+Block 129:
+["Your pal's been assigned to the "north-east" of the segment today, near the entrance to the Comroom.^^ O.K., it's time I was going. I've got a lot of work to do. See you later, honey."]
+
+Block 130:
+["So long, Christine."]
+
+Block 131:
+[This door is locked.]
+
+Block 132:
+["Ahem, Driscoll: Nothing personal, but I'd rather be on my own right now. Stay outside please."]
+
+Block 133:
+["There's nothing to see here. Go on."]
+
+Block 134:
+[{INK 001}This is Rainer Hofstedt, physicist and xenobiologist and a government supervisory official. He begins to speak excitedly.]
+
+Block 135:
+["Driscoll! I'm glad I've met you! Have you heard about Inspector Beegle's death?"]
+
+Block 136:
+["Hello, Hofstedt. Yes, my partner just told me about it. It must have been a horrific sight."]
+
+Block 137:
+["That obstinate British idiot! I know he wasn't a technician, but he must have known how difficult it is to control the Comsystem during the over-c leap. We still don't fully understand this super-light technology yet. Poor devil!"]
+
+Block 138:
+["That makes you the only government official on board, doesn't it?"]
+
+Block 139:
+["The only nosey parker, yes. Don't remind me!^^ Anyway, I just talked to Captain Brandt. He wants to go ahead with the flight, with yours truly instead of Beegle.^^
+Looks like you've got a new passenger, Driscoll."]
+
+Block 140:
+["I don't want to sound hard-hearted, but it makes no difference to the Shuttle which two people are on board. I don't see why the flight shouldn't go ahead as planned."]
+
+Block 141:
+["I must admit, I'm really looking forward to the flight. We should be taking off in the next few days. We'll have to wait for a message from the Captain."]
+
+Block 142:
+["That's right.^ I'll see you before then. See you later, Hofstedt!"]
+
+Block 143:
+["See you, Driscoll."]
+
+Block 144:
+["Hi, Driscoll. Good luck with your flight."]
+
+Block 145:
+[{INK 001}The security man glances at Tom sullenly. He does not answer.]
+
+Block 146:
+["Hello, Driscoll! I hear you've got a new passenger, since they scraped the Inspector off the walls.^I'll keep my fingers crossed for you."]
+
+Block 147:
+["Hi, Tom. Sorry, I'm in a bit of a hurry. Heavy duty rota! See you later."]
+
+Block 148:
+["Hello, Tom. I'd like to see what the Comroom looks like since Snoopy got killed. Pity the Secus are guarding it."]
+
+Block 149:
+[{INK 001}Tom tries to access the latest news from the console. The following messages appear before the news reports:{TECF}^^ {CNTR}{INK 002}***Video data not available***^ ***Comconection not active***^^ Text mode activated.]
+
+Block 150:
+["Hello, Driscoll. Having a look at the Shuttle? Don't worry, everything's fine."]
+
+Block 285:
+["That's a racist term, Driscoll. The Grik'tra were a cultured race with a history two hundred thousand years longer than our own. There were only a few thousand of them when the Earth virus wiped them out."]
+
+Block 286:
+["Gaia shows that we seem to be incapable of learning from the mistakes of our own history. In our euphoria after the invention, or rather discovery, of over-c, Gaia had the misfortune to be the first planet we found which could sustain human life. The discovery of intelligent inhabitants, the Hoika, caused more of a sensation than the successful over-c tests; but that didn't stop the settlers treating the Hoika the same way many races were treated on Earth in the colonial period. Today we can see just how exceptional Gaia was, because it's still the only world we've found where human beings can live for long periods."]
+
+Block 287:
+["The Comsystem is supposed to have been totally destroyed. Personally, I didn't get on particularly well with Inspector Beegle. I wish I knew what he was doing fooling with the system during the leap.^ The high-energy over-c communication is so fantastically expensive, we evidently don't carry enough spares to repair the system."]
+
+Block 288:
+["I guess the conversion to a factory plant won't be possible now. I'm not even sure the TORONTO will be able to take off again unless we do something else."]
+
+Block 289:
+["You know, I used to be an active Environmentalist myself, until the radical wing got more and more involved in terrorism. But the official part of the organisation did achieve some great successes. Fortunately, since the tiger was genetically re-created last year, the public has been more positively disposed towards the Environmentalists. Since these scandals have been taking place on other planets, the condition of the last nature reserves on Earth has improved noticeably."]
+
+Block 290:
+["I think Brandt's OK. He's fascinated by Ned, our
+AI. Could be because he started off as a software engineer."]
+
+Block 291:
+["Looks like the data on this planet will have to be revised slightly!"]
+
+Block 292:
+[{BLOK000}"This is the fourth time I've checked the systems for landing today."
+{WRNR0206}]
+
+Block 293:
+["Hello, honey. Stretching your legs a bit before the Shuttle takes off? I'm checking the systems for landing this huge crate."
+{WRNR0205}{WRNR0206}{WRNR0207}]
+
+Block 294:
+["Bongiorno, honey. What's new?"]
+
+Block 295:
+["If everything goes OK, and I think it will, we'll have to strap ourselves in for about 45 minutes. By then, the landing will be completed and the segments of the ship will have opened out horizontally. The segments will have the correct gravitational pull in them. Don't forget to stow the stuff in your cabin securely."]
+
+Block 296:
+["Don't worry, honey. The systems and all the back-up circuits are working fine. It'll all go like clockwork."]
+
+Block 297:
+["I envy you and Hofstedt. You'll be the first people ever to set eyes on Nugget. I'll keep my fingers crossed for you, Tom. Take care of yourself, you hear?"{WRNR0200}{WRNR0186}]
+
+Block 298:
+["Well, if you're half as good a pilot as you're always telling me, I've got nothing to worry about. Seriously though, honey, don't do anything silly, OK? I really like you."]
+
+Block 299:
+["You can't get that dream out of your head, can you? It's weird the way it keeps coming back. But it's not really a nightmare. It's bound to go away sooner or later."]
+
+
+
+Hi Mark.
+
+That was weird, wasn't it? I warned you the texts were all out of context. Oh well, just as a bonus (?), here's a little text I wrote right at the beginning of the product. We'll be using it in the manual. Although I wrote this down pretty quickly, I would still like to know what you think of it (don't hold back! Basically your opinion will help me evaluate my English and writing skills, and based on this I will decide whether to put in more effort or leave it altogether).
+
+Thanks again!
+
+Jurie.
+
+
+
+				Prologue
+
+In 2227, Earth made it›s first step on the road to the universe when a group of scientists accidentally discovered the over-c drive and, at exactly the same time, it›s first and most important rule of use : do not activate near a large centre of gravity. At first, the general consensus was that the research team had been fooling around with sub-atomic particles, but after the data concerning their experiments had been extracted from their databanks (which were luckily stored in a data-node far away from the epicenter), the truth came to the light. Soon after, a ceremonial plaque commemorating the scientists and their sacrifice for humanity was placed next to the crater.
+
+It didn›t take very long for everyone to realize that the development of a practical form of interstellar travel opened up a whole new world, no, a whole galaxy that could be exploited. This came as a relief to the multinationals who were becoming a bit worried since Mother Earth seemed to slowly sink into a catatonic state. In a rare fit of cooperation, the ruling companies planned the best way to go about the exploitation of the universe in a neat and efficient manner.
+
+The initial enthusiasm dampened a bit when the costs of an expedition towards another star were  calculated. The over-c drive takes one from one star to another, but in order to get far enough away from any large centers of gravity, conventional propulsion methods are still needed. The costs of a ship which could carry enough machinery to exploit an entire planet and could send back the raw materials and hold a crew, were, well, astronomical. So it was decided that if the Earth was going to send out a ship to a distant planet, it better be a damn good one.
+
+In 2229 the Deep Probe was catapulted perpendicular to the plane of ecliptic to far outside the solar system, where it had a clear view of the universe and could sniff the surrounding star systems, looking critically at each planet, scanning it for valuable materials. Data was sent back to Earth where it was continuously evaluated by the company AI›s. Most were rejected. Some were considered, but the companies wanted to make as much profit as possible. Then they discovered what was later called the Nugget.
+It was a medium-sized planet, circling around a star called Fabricotti 342 at about the same distance as the Earth circled the sun. It had two moons. When it›s data was scrutinized by the AI›s, a lot of lights started flashing excitedly and CEOs around the world were called away from whatever they were doing, top priority. On the Deep Probe scale of interesting planets, from 0 to 100, this one rated 150. On the star-maps it stuck out like a sore thumb. No other planet had such a high concentration of valuable raw materials. Whatever room beneath it›s surface wasn›t filled by mineral oil or uranium was crammed full of rare elements.
+
+
+...
+
+?
+
+Hm. That's where I stopped, obviously. Writer's block, I guess. To find out the rest, you'll have play the game! I will send you a copy as soon as the English version is ready (hopefully a Christmas present).
+
+J.

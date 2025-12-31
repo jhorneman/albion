@@ -1,0 +1,25 @@
+
+.IGNORE
+
+.EXTENSIONS: .LBM .PAL
+
+C:\ALBION\XLDLIBS\PALETTES.XLD : C:\ALBION\DATA\PALETTES\001.PAL
+	COMPILE PALETTES
+
+# .LBM-files can be found in these directories :
+.LBM : F:\DATEN\4_ALL\PALETTEN
+.PAL : C:\ALBION\DATA\PALETTES
+
+# .LBM-files should be turned into .PAL-files using the following command list :
+# (The first dependent of the target should be the .LBM-file.)
+.LBM.PAL :
+	C:\WORK\TOOLS\XPAL\XPAL $[@ $^@ 0 192
+
+# Extract standard palette (top 64 colours)
+#C:\ALBION\XLD_LIBS\PALETTE.000 : F:\DATEN\4_ALL\PALETTEN\PAL000.LBM
+#	XPAL F:\DATEN\4_ALL\PALETTEN\PAL000.LBM C:\ALBION\XLD_LIBS\PALETTE.000 192 64
+
+# Extract palettes
+C:\ALBION\DATA\PALETTES\001.PAL : F:\DATEN\4_ALL\PALETTEN\PAL001.LBM
+#	C:\WORK\TOOLS\XPAL\XPAL $[@ $^@ 0 192
+

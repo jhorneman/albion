@@ -1,0 +1,43 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Sdir = C:\WORK\TEXT
+
+
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386P /3s /d2 /w3 /od
+
+Header_files = $(Ldir)\BBDEF.H &
+	$(Ldir)\BBERROR.H &
+	$(Ldir)\BBMEM.H &
+	$(Ldir)\TEXT.H &
+	$(Sdir)\TEXTVAR.H
+
+Object_files = $(Sdir)\TEXTVAR.OBJ &
+	$(Sdir)\TEXT.OBJ &
+	$(Sdir)\TEXTCOMM.OBJ &
+	$(Sdir)\TEXTPROC.OBJ
+
+.BEFORE
+	cd $(Sdir)
+
+
+
+$(Ldir)\TEXT.LIB : $(Object_files)
+	$(Libmake) $(Ldir)\TEXT.LIB -+TEXTVAR -+TEXT -+TEXTCOMM -+TEXTPROC
+
+
+$(Sdir)\TEXTVAR.OBJ : $(Sdir)\TEXTVAR.C $(Header_files)
+	$(Compiler) TEXTVAR.C
+
+$(Sdir)\TEXT.OBJ : $(Sdir)\TEXT.C $(Header_files)
+	$(Compiler) TEXT.C
+
+$(Sdir)\TEXTCOMM.OBJ : $(Sdir)\TEXTCOMM.C $(Header_files)
+	$(Compiler) TEXTCOMM.C
+
+$(Sdir)\TEXTPROC.OBJ : $(Sdir)\TEXTPROC.C $(Header_files)
+	$(Compiler) TEXTPROC.C
+

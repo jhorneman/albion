@@ -1,0 +1,634 @@
+	ALBION System texts (ENGLISH)
+
+	Party member on-line help
+[0000:%s (LP:%u, SP:%u)]
+
+	Party member pop-up menu
+[0070:Characterscreen]
+[0010:Use magic]
+[0004:Make leader]
+[0005:Talk to]
+
+[0425:{INK 006}{PUM }{NAME} doesn't know any spells yet!]
+
+	Map pop-up menu
+[0006:Talk to]
+[0007:Examine]
+[0008:Manipulate]
+[0009:Use item on]
+[0074:Take]
+
+[0011:{INK 002}Go on foot]
+[0130:{INK 002}Automapper]
+[0012:{INK 002}Build camp]
+[0013:{INK 002}Party status]
+
+[0014:Environment]
+
+	Inventory item pop-up menu
+[0015:Drop]
+[0016:Learn spell]
+[0017:Examine]
+[0018:Drink]
+[0019:Use spell]
+[0020:Read]
+[0131:Activate]
+
+	Inventory exit button on-line help
+[0021:Leave characterscreen]
+
+	Item on-line help
+[0022:%s]
+
+	Item types
+[0023:Armour]
+[0024:Helmet]
+[0025:Shoes]
+[0026:Shield]
+[0027:Short-range weapon]
+[0028:Long-range weapon]
+[0029:Ammunition]
+[0030:Text scroll]
+[0031:Spell scroll]
+[0032:Drink]
+[0033:Amulet]
+[0034:Brooch]
+[0035:Ring]
+[0036:Valuable]
+[0037:Tool]
+[0038:Key]
+[0039:Normal]
+[0040:Magic]
+[0041:Special]
+[0042:Transportation]
+
+	Damage display on-line help
+[0043:Damage : %u]
+
+	Protection display on-line help
+[0044:Protection : %u]
+
+	Weight display
+[0045:Weight : %u Kg]
+
+	Weight display on-line help
+[0046:Carried weight : %u g]
+
+	Backpack description
+[0047:Backpack]
+
+	Gold display on-line help
+[0048:%u gold coins]
+
+	Food rations on-line help
+[0049:%u food rations]
+
+	Inventory gold pop-up menu
+[0050:Drop]
+
+[0051:Gold]
+
+	Inventory food pop-up menu
+[0052:Drop]
+
+[0053:Food]
+
+	Left inventory radio buttons on-line help
+[0054:Charakterscreen 1]
+[0055:Charakterscreen 2]
+[0056:Charakterscreen 3]
+
+	Left inventory radio buttons text
+[0057:I]
+[0058:II]
+[0059:III]
+
+	Number input window buttons text
+[0064:OK]
+
+	Number input window buttons on-line help
+[0069:Accept number]
+
+	Lock pop-up menu
+[0071:Lock]
+
+[0072:Pick the lock]
+
+	Lock on-line help
+[0073:Lock]
+
+	High-level text commands
+[0075:he]
+[0076:she]
+[0077:it]
+
+[0078:him]
+[0079:her]
+[0080:it]
+
+[0081:his]
+[0082:her]
+[0083:its]
+
+[0084:man]
+[0085:woman]
+[0086:creature]
+
+	Race names
+[0456:Earthling]
+[0457:Iskai]
+[0458:Celt]
+[0459:Dark Druid]
+
+[0460:Illuminated]
+[0461:Normal]
+[0462:Decadent]
+[0463:Metalmaker]
+
+[0464:]
+[0465:]
+[0466:]
+[0467:]
+
+[0468:]
+[0469:]
+[0470:]
+[0471:Monster]
+
+	Class names
+[0095:]
+[0096:]
+[0097:]
+[0098:]
+
+[0099:]
+[0100:]
+[0101:]
+[0102:]
+
+[0103:]
+[0104:]
+[0105:]
+[0106:]
+
+[0107:]
+[0108:]
+[0109:]
+[0110:]
+
+[0111:]
+[0112:]
+[0113:]
+[0114:]
+
+[0115:]
+[0116:]
+[0117:]
+[0118:]
+
+[0119:]
+[0120:]
+[0121:]
+[0122:]
+
+[0123:]
+[0124:]
+[0125:]
+[0126:]
+
+	Racist insults
+[0472:Earthling]
+[0473:Iskai]
+[0474:Celt]
+[0475:Dark Druid]
+
+[0476:Illuminated]
+[0477:Normal]
+[0478:Decadent]
+[0479:Metalmaker]
+
+[0480:]
+[0481:]
+[0482:]
+[0483:]
+
+[0484:]
+[0485:]
+[0486:]
+[0487:Monster]
+
+	Class insults
+[0135:]
+[0136:]
+[0137:]
+[0138:]
+
+[0139:]
+[0140:]
+[0141:]
+[0142:]
+
+[0143:]
+[0144:]
+[0145:]
+[0146:]
+
+[0147:]
+[0148:]
+[0149:]
+[0150:]
+
+[0151:]
+[0152:]
+[0153:]
+[0154:]
+
+[0155:]
+[0156:]
+[0157:]
+[0158:]
+
+[0159:]
+[0160:]
+[0161:]
+[0162:]
+
+[0163:]
+[0164:]
+[0165:]
+[0166:]
+
+	Found a goto-point
+[0167:Found a goto-point!]
+
+	Automapper icon on-line help (2...17)
+[0168:Riddlemouth]
+[0169:Teleporter]
+[0170:Spinner]
+[0171:Trap]
+[0172:Trapdoor]
+[0173:Special]
+[0174:Monster]
+[0175:Closed door]
+[0176:Open door]
+[0177:Merchant]
+[0178:Inn]
+[0179:Closed chest]
+[0180:Map exit]
+[0181:Open chest]
+[0182:Trashpile]
+[0183:Person]
+
+	Inventory messages
+[0184:No charges left]
+[0185:Wrong class]
+[0186:Wrong spell area]
+[0187:Wrong spell class]
+[0188:Already know this spell]
+[0189:Level of spell too high]
+[0190:Yay! Learned the spell!]
+[0191:Item is broken]
+[0192:Drop how many items?]
+[0193:{INK 006}Don't drop this!]
+[0062:Really drop that item?]
+[0063:{INK 006}This item is cursed!]
+[0065:{INK 006}This item cannot be un-equipped in combat!]
+[0066:Take how many items?]
+[0067:{INK 006}This item cannot be equipped in combat!]
+[0068:{INK 006}This item cannot be equipped!]
+[0194:{INK 006}This item is broken!]
+[0195:{INK 006}Wrong class to use this item!]
+[0196:{INK 006}Wrong sex to use this item!]
+[0197:{INK 006}Not enough hands free!]
+[0132:{INK 006}You already have this item!]
+
+	Boolean requester
+[0060:Yes]
+[0061:No]
+
+	Tactical window pop-up menu
+[0001:Attack]
+[0002:Move]
+[0003:Use magic]
+[0198:Flee]
+[0199:Use magic item]
+
+[0200:Advance party]
+
+[0202:Start round]
+
+	Spell names for class 0
+[0203:Charge organic items]
+[0204:De-curse organic items]
+[0205:Freeze all monsters]
+[0206:Hurry]
+[0207:Show LP]
+
+[0208:Freeze bomb single]
+[0209:Freeze bomb row]
+[0210:Freeze bomb all]
+[0211:Weak healing single]
+[0212:Lame one monster]
+
+[0213:Blind monster single]
+[0214:Blind monster row]
+[0215:Blind monster all]
+[0216:Make monster sleep]
+[0217:Heal unconsciousness]
+
+[0218:Heal poison]
+[0219:Heal lamed]
+[0220:Heal stoned]
+[0221:Heal blind]
+[0222:Trap]
+
+[0223:Fungification]
+[0224:Light]
+[0225:Poison]
+[0226:]
+[0227:]
+
+[0228:]
+[0229:]
+[0230:]
+[0231:]
+[0232:]
+
+	Spell names for class 1
+[0233:Heal everything]
+[0234:Heal everything 2]
+[0235:Mega heal spell]
+[0236:Blink]
+[0237:"Windgate" spell]
+
+[0238:Flee]
+[0239:Levitation]
+[0240:Monster knowledge]
+[0241:Mega killer spell]
+[0242:Irritate]
+
+[0243:Nourish]
+[0244:Automap spells]
+[0245:]
+[0246:]
+[0247:]
+
+[0248:]
+[0249:]
+[0250:]
+[0251:]
+[0252:]
+
+[0253:]
+[0254:]
+[0255:]
+[0256:]
+[0257:]
+
+[0258:]
+[0259:]
+[0260:]
+[0261:]
+[0262:]
+
+	Spell names for class 2
+[0263:Berserker]
+[0264:Expel ghosts single]
+[0265:Expel ghosts row]
+[0266:Expel ghosts all]
+[0267:Boast]
+
+[0268:Magical defense]
+[0269:Medium healing]
+[0270:Scare one]
+[0271:Scare row]
+[0272:Scare all]
+
+[0273:Strength sucker]
+[0274:]
+[0275:]
+[0276:]
+[0277:]
+
+[0278:]
+[0279:]
+[0280:]
+[0281:]
+[0282:]
+
+[0283:]
+[0284:]
+[0285:]
+[0286:]
+[0287:]
+
+[0288:]
+[0289:]
+[0290:]
+[0291:]
+[0292:]
+
+	Spell names for class 3
+[0293:Long-range single]
+[0294:Long-range single 2]
+[0295:Long-range row]
+[0296:Long-range row 2]
+[0297:Long-range all]
+
+[0298:Long-range all 2]
+[0299:Energy trap single]
+[0300:Energy trap row]
+[0301:Magical mine single]
+[0302:Magical mine row]
+
+[0303:Magical bomb]
+[0304:LP-sucker]
+[0305:SP-sucker]
+[0306:Personal defense]
+[0307:Dissolve monster]
+
+[0308:]
+[0309:]
+[0310:]
+[0311:]
+[0312:]
+
+[0313:]
+[0314:]
+[0315:]
+[0316:]
+[0317:]
+
+[0318:]
+[0319:]
+[0320:]
+[0321:]
+[0322:]
+
+	Spell names for class 4
+[0323:]
+[0324:]
+[0325:]
+[0326:]
+[0327:]
+
+[0328:]
+[0329:]
+[0330:]
+[0331:]
+[0332:]
+
+[0333:]
+[0334:]
+[0335:]
+[0336:]
+[0337:]
+
+[0338:]
+[0339:]
+[0340:]
+[0341:]
+[0342:]
+
+[0343:]
+[0344:]
+[0345:]
+[0346:]
+[0347:]
+
+[0348:]
+[0349:]
+[0350:]
+[0351:]
+[0352:]
+
+	Spell names for class 5
+[0353:Charge metal items]
+[0354:De-curse metal items]
+[0355:Curse metal items]
+[0356:Identify items]
+[0357:Cause rust]
+
+[0368:Improve metallic weapons]
+[0369:Metallic items burn]
+[0370:Repair item]
+[0371:Make metallic items lighter]
+[0372:Sword Energy]
+
+[0373:]
+[0374:]
+[0375:]
+[0376:]
+[0377:]
+
+[0378:]
+[0379:]
+[0380:]
+[0381:]
+[0382:]
+
+[0383:]
+[0384:]
+[0385:]
+[0386:]
+[0387:]
+
+[0388:]
+[0389:]
+[0390:]
+[0391:]
+[0392:]
+
+	Spell names for class 6
+[0393:]
+[0394:]
+[0395:]
+[0396:]
+[0397:]
+
+[0398:]
+[0399:]
+[0400:]
+[0401:]
+[0402:]
+
+[0403:]
+[0404:]
+[0405:]
+[0406:]
+[0407:]
+
+[0408:]
+[0409:]
+[0410:]
+[0411:]
+[0412:]
+
+[0413:]
+[0414:]
+[0415:]
+[0416:]
+[0417:]
+
+[0418:]
+[0419:]
+[0420:]
+[0421:]
+[0422:]
+
+	Magic spell selector messages
+[0423:{INK 006}Wrong area for this spell]
+[0424:Requires %u spell-points]
+[0426:{INK 006}Not strong enough to cast spell]
+[0427:{INK 006}Requires %u SP and %u LP]
+
+	Map pop-up menu prompts
+[0430:Which item do you want to use here?]
+[0431:This item cannot be used here.]
+[0432:This word has no effect.]
+
+	Tactical window pop-up menu prompts
+[0437:{INK 006}{PUM }{NAME} can't attack!]
+[0438:{INK 006}{PUM }{NAME} can't do damage!]
+[0439:{INK 006}{PUM }{NAME} can't move!]
+[0440:{INK 006}{PUM }{NAME} can't flee!]
+
+	Combat action prompts
+[0433:{INK 006}No ammo for long-range weapon!]
+[0434:Attack what?]
+[0435:{INK 006}There's nothing for you to attack!]
+[0436:{INK 006}There are no targets in range!]
+[0441:Move where?]
+[0442:{INK 006}There's nowhere you can move to!]
+[0443:{INK 006}Move was blocked!]
+[0444:{COMB}{NAME} moves.]
+[0445:{COMB}{NAME} flees.]
+[0446:{COMB}{NAME} attacks {VICT}{NAME} with {WEAP}!]
+[0447:{VICT}{NAME} cannot be damaged!]
+[0448:The attack was deflected!]
+[0449:{COMB}{NAME} made a critical hit!]
+[0450:{COMB}{NAME} does {DAMG} damage!]
+[0451:No damage done!]
+[0452:{COMB}{NAME}'s attack failed!]
+[0453:{COMB}{NAME} missed!]
+[0454:{COMB}{NAME} used the last ammo!]
+[0455:{COMB}{NAME} attacks {VICT}{NAME}!]
+
+[0087:Cast on which party member?]
+[0088:Cast on which monster?]
+[0089:Cast on which row?]
+[0090:Which member's item?]
+[0091:Cast spell on what item?]
+[0092:%s casts %s!]
+[0093:{INK 006}This is not a magical item.]
+[0094:{INK 006}Item has no charges left.]
+[0127:{INK 006}This member is unconscious.]
+[0128:{INK 006}This item is not organic.]
+[0129:{INK 006}This item is fully charged.]
+[0133:Cast on which square?]
+[0134:%s casts %s from %s!]
+[0428:]
+[0429:]
+
+[0201:Enter a number]
+

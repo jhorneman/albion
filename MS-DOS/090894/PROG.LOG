@@ -1,0 +1,92 @@
+
+*** 20-7-1994 ***
+GFXFUNC angefangen.
+
+*** 22-7-1994 ***
+GFXFUNC fertiggekriegt.
+
+*** 23-7-1994 ***
+SORT geschrieben.
+XLOAD geschrieben.
+
+*** 25-7-1994 ***
+SCROLL angefangen.
+Habe DSA_CopyOPMToScreen angepasst. Ab jetzt wird bei virtuelle OPM's nicht
+ mehr den Modulo vom Screen, sondern vom Basis OPM verwendet. ZusÑtzlich
+ werden virtual_x und virtual_y nicht mehr auf die Darstellungskoordinaten
+ addiert.
+Habe OPM_DelVirtualOPM geschrieben. Macht nicht viel, ist aber wenigstens da.
+Habe eine Funktion namens OPM_SetVirtualPosition geschrieben. Hiermit kann
+ man der Position eines virtuelles OPM innerhalb das Basis OPM Ñndern. Es
+ gibt ein bi·chen Logik und der data-Zeiger wird neu gesetzt.
+
+*** 26-7-1994 ***
+SCROLL fertiggekriegt.
+Alle Ordner umorganisiert. Es gibt jetzt STUFF, wo alle Testprogramme drin
+ sind, MODULES, wo alle Module wie XLOAD drin sind, TOOLS, wo Tools wie XPal
+ und Compile drin sind, und ALBION, wo alle Albion-spezifische Sources sind.
+ MODULES und ALBION habe beide ein eigenes LIB-Verzeichnis.
+Proto-2D-Darstellung angefangen.
+XPAL tool geschrieben.
+Fehler in Compile entdeckt und beseitigt : Habe bei 0 angefangen zu zÑhlen,
+ obwohl es kein Subfile 0 gibt.
+Fehler in XLOAD entdeckt und beseitigt : Check auf Library ID in
+ XLD_Open_library() funktioniert nicht. Wei· nicht wieso; hab's enfernt.
+Fehler in BBDOS entdeckt und beseitigt : In DOS_Seek() sind die Parameter fÅr
+ lseek() vertauscht. Man kînnte in alle DOS-Fehlermeldungen noch den
+ Fehlercode von WATCOM einbauen (errno).
+
+*** 27-7-1994 ***
+Prog-log angefangen.
+Proto-2D-Darstellung tut jetzt. Es gab ein Fehler bei das Auslesen von der
+ Map, und hier und dort mu·te noch zwei abgezogen werden.
+Habe ein Modul mit eXtended File Types gemacht.
+MEM_List() erweitert. Gibt mehr Info und sieht besser aus.
+ParameterÅbergabe an Proto-2D-Darstellung eingebaut. Man kann jetzt die
+ Mapnummer angeben.
+XPAL tool erweitert; kann jetzt auch Teile von Paletten extrahieren.
+CONVLBM tool geschrieben.
+Haben in BBDOS alle DOS-Fehlermeldungen erweitert so das errno ausgegeben
+ wird.
+Fehler in BBDOS entdeckt und beseitigt : Wenn man eine Datei mit O_CREATE
+ îffnet, mu· man eine dritte Parameter (Zugriffsrechten) Åbergeben.
+Habe OPM File Type aus SCROLL enfernt und in BBOPM zugefÅgt.
+
+*** 28-7-1994 ***
+Habe der Proto-2D-Darstellung in hîhere Auflîsungen laufen lassen :
+ 640 x 480, 800 x 600 und 1024 x 768. Mu·te BASEMEM und der Speicherrequest
+ anpassen.
+ANIMATE geschrieben.
+2D_MAP angefangen.
+
+*** 29-7-1994 ***
+Fehler in BBMEM entdeckt und beseitigt : Maximum-Eintrag im Speicher-Request
+ wÅrde falsch ausgewertet.
+Habe Maximumwert in Speicher-Request in MAIN angegeben.
+Weitergemacht mit 2D_MAP.
+Scroll vector an SCROLL data Struktur zugefÅgt.
+Fehler in XPAL entdeckt und beseitigt : Default-werte waren undefiniert.
+
+*** 1-8-1994 ***
+OPM_DelVirtualOPM ist unnîtig : OPM_DelOPM macht das gleiche.
+
+*** 2-8-1994 ***
+Neue Library gekriegt. Virtuelle OPM's funktionieren offensichtlich anders
+ als gedacht.
+Habe OPM_SetVirtualPosition() entsprechend geÑndert. virtualx und virtualy
+ werden nicht mehr gesetzt. Vorschlag : zwei Koordinatenparen.
+
+*** 4-8-1994 ***
+Fehler in BBASMEM entdeckt und beseitigt : BASEMEM_CopyMem ruft memcpy() auf,
+ sollte aber memmove() aufrufen da Åberlappende Speicherbereiche
+ berÅcksichtigt werden sollten.
+CONTROL angefangen.
+
+*** 5-8-1994 ***
+XOPM angefangen.
+
+*** 8-8-1994 ***
+Fehlermeldungen in BBMEM korrigiert : bis jetzt wurde BBERROR nicht richtig
+ benutzt.
+Habe Fehlermeldungen an XLOAD zugefÅgt.
+

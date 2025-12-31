@@ -1,0 +1,5 @@
+!include ..\OPTIONS
+
+# compilieren
+..\..\LIB\bbevent.obj: bbevent.c $(OPTION) .AUTODEPEND
+

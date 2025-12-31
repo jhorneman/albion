@@ -1,0 +1,47 @@
+	Physikalische Lieder in Albion
+
+NR	BESCHREIBUNG	STIMMUNG / TYP
+
+1	Dunkle Druiden	bedrohlich
+2	Savanne		normal
+3	Dungeon		bedrohlich
+4	Toronto		normal
+5	Toronto		ambient
+6	Savanne		ambient
+7	Dekadente	ambient
+8	Jungle		ambient
+9    	Naturhoehle	ambient
+10	City		ambient
+11	Former Dungeon	ambient
+12	Erleuchteten	ambient
+13	Hafen		ambient
+14	Metallmacher	ambient
+15	Dunkle Druiden	ambient
+16	Normalokneipe	ambient
+17	Dekadenten	normal
+18	Metallmacher	normal
+19	Iskai		bedrohlich
+20	Toronto		action
+21	Gem„ssigt	ambient
+22	Toronto	2	ambient
+23	Harfenmusik	speziell
+24	Iskai		normal
+25	Jungle		normal
+26	Combat		k„mpfig
+27	Former Dungeon	bedrohlich
+28	Normalo Stadt	ambient ged„mpft
+29	Dunkle Druiden	ambient ged„mpft
+30	Metallmacher	ambient ged„mpft
+31	Iskai Stadt	ambient
+32	Iskai Stadt	ambient ged„mpft
+33	Iskai Kneipe	ambient
+34	Dungeon		ambient
+35	Gem„ssigt	normal
+36	Gem„ssigt	ambient ged„mpft
+37	Dunkle Druiden	normal
+38	Dungeon		sehr gef„hrlich
+39	Shuttle-Flug	speziell
+40	Ur-Kelten	normal
+41	Normalos	normal (ha)
+42	Erleuchteten	normal
+

@@ -1,0 +1,38 @@
+**************
+
+Fehler gemeldet von: Lutz Rafflenbeul
+
+
+-----
+Am:14.9.95
+
+Programmversion: V0.73
+Programmdatum:14.9.95
+
+Unter welche Bedingungen trat der Fehler auf und was ist genau passiert?
+
+
+Fehler: Der Spieler kann über Mauern hinweg mit anderen reden, Objekte anschauen und wegnehmen
+
+Fehler: Wenn im Charakterbildschirm von Tom der Metallschild aus der Hand genommen wird, kann man
+	ihn nicht mehr zurücknehmen. Es erscheint die Meldung : "Falsche Klasse um Gegenstand zu benutzen"
+
+Anmerkung: Im Raum von Inspector Beegels kann man nicht rechts am Tisch vorbeilaufen. Auch links von der Konsole nicht.
+
+Fehler: Man kann an vielen Ecken der 3D-Welt in die Mauer laufen. (z.B. Map: 150, X: 34, Y: 14, VD: 3)
+
+Fehler: Wenn man im CHarakterbildschirm mit einem Objekt mit der LMT auf ein anderes klickt und dazu die RMT
+	stürtzt das Programm ab.
+		Control: Reference to illegal object handle.
+		Memory Manager: Illegal handle.
+
+Fehler: Wenn man die Pistole in der rechten Hand hält und dann mit 23 Patronen auf die Pistole klickt, verschwinden
+	22 Patronen, und eine ist in der linken Hand.
+
+Fehler: Nachdem der Mord passiert war, kann der Spieler die Stadt nicht mehr verlassen, weil bei jedem Versuch vorgeschlagen wird
+	zur Feier zu gehen.
+
+Anmerkung: Bei Map: 113, X: 166, Y: 8, VD: 0 kann man den Charakter Drirr schon als Anführer bestimmen, obwohl er noch
+	gar nicht bei der Gruppe ist.
+
+Fehler: Nachdem der Mörder aus dem Magierhaus geflüchtet ist bekommt man keinen Hinweis, wo das Spiel weitergeht.

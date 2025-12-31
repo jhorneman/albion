@@ -1,0 +1,791 @@
+--- Module:   g:\albion\src\commagic\commag0.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+          _
+   sparks=calc_strength(Strength,C0_Spell_1_MIN_SPARKS,C0_Spell_1_MAX_SPARKS);
+g:\albion\src\commagic\commag0.c  99  Info 718: calc_strength undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag0.c  99  Info 746: call to calc_strength() not
+    made in the presence of a prototype
+   _
+   Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&sx,&sy,&sz);
+g:\albion\src\commagic\commag0.c  123  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag0.c  123  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag0.c  123  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag0.c  126  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+      _
+      Get_part_rectangle(Victim_part,&m_left,&m_top,&m_right,&m_bottom);
+g:\albion\src\commagic\commag0.c  174  Info 718: Get_part_rectangle undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag0.c  174  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag0.c  174  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commag0.c  258  Warning 550: sparks (line 88) not
+    accessed
+g:\albion\src\commagic\commag0.c  258  Warning 529: time (line 88) not
+    subsequently referenced
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag0.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag0.c'
+
+--- Module:   g:\albion\src\commagic\commag1.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+               _
+               Convert_tactical_to_3D_coordinates(Destination_X,
+g:\albion\src\commagic\commag1.c  134  Info 718: Convert_tactical_to_3D_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag1.c  134  Info 746: call to Convert_tactical_to_3D_coordinates()
+    not made in the presence of a prototype
+                                                 _
+                &(Victim_part->Main_COMOB->Z_3D));
+g:\albion\src\commagic\commag1.c  136  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag1.c  136  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag1.c  136  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag1.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag1.c'
+
+--- Module:   g:\albion\src\commagic\commag2.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag2.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag2.c'
+
+--- Module:   g:\albion\src\commagic\commag3.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                 _
+      Nr_steps = Prepare_COMOB_movement(Current_use_magic_data.Casting_participant,
+g:\albion\src\commagic\commag3.c  107  Info 718: Prepare_COMOB_movement
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  107  Info 746: call to Prepare_COMOB_movement()
+    not made in the presence of a prototype
+                                                                            _
+       Fireball_COMOB, Victim_part->Tactical_X, Victim_part->Tactical_Y, 15);
+g:\albion\src\commagic\commag3.c  108  Error 15: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) redeclared (signed/unsigned,precision, Arg. no. 3:
+    promotion, Arg. no. 4: promotion, Arg. no. 5: promotion) (line 1301, file
+    g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  108  Warning 516: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 3 -- int vs. unsigned
+    short) with line 1301, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  108  Warning 516: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 4 -- int vs. unsigned
+    short) with line 1301, file g:\albion\src\comshow.c
+                                                                                                                                                      _
+         Gen_Sparks(X_3D + COMOB->dX_3D,Y_3D + COMOB->dY_3D,Z_3D + COMOB->dZ_3D,40/*amount*/,200/*speed*/,100/*life*/,40/*size*/,GEN_SPARK_TYP_ORANGE);
+g:\albion\src\commagic\commag3.c  220  Warning 530: COMOB (line 80) not
+    initialized
+_
+}
+g:\albion\src\commagic\commag3.c  233  Warning 529: Behaviour_data (line 81)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  233  Warning 529: j (line 85) not
+    subsequently referenced
+                      _
+   C3_Spell_2_ENERGIE=calc_strength(Strength,3,C3_Spell_2_MAX_ENERGIE-3);
+g:\albion\src\commagic\commag3.c  301  Info 718: calc_strength undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag3.c  301  Info 746: call to calc_strength() not
+    made in the presence of a prototype
+   _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  307  Info 718: Get_part_rectangle undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag3.c  307  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  307  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+      _
+      Get_3D_part_coordinates(Victim_part,&COMOB[t]->X_3D,&COMOB[t]->Y_3D,&COMOB[t]->Z_3D);
+g:\albion\src\commagic\commag3.c  327  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  327  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  327  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                         _
+      Delete_COMOB_behaviour(behave_x[t]);
+g:\albion\src\commagic\commag3.c  455  Info 771: behave_x (line 280)
+    conceivably not initialized
+                                         _
+      Delete_COMOB_behaviour(behave_y[t]);
+g:\albion\src\commagic\commag3.c  456  Info 771: behave_y (line 281)
+    conceivably not initialized
+                          _
+      ox[t]=COMOB[t]->X_3D;
+g:\albion\src\commagic\commag3.c  464  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag3.c  470  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                          _
+         COMOB[t]->Display_width=C3_Spell_2_ENERGIE_SIZE-s;
+g:\albion\src\commagic\commag3.c  478  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                                  _
+         COMOB[t]->X_3D=aip3d(ox[t],zx,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  480  Info 771: ox (line 284) conceivably not
+    initialized
+                                                                  _
+         COMOB[t]->Y_3D=aip3d(oy[t],zy,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  481  Info 771: oy (line 284) conceivably not
+    initialized
+                                                                  _
+         COMOB[t]->Z_3D=aip3d(oz[t],zz,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  482  Info 771: oz (line 284) conceivably not
+    initialized
+                            _
+      Delete_COMOB(COMOB[t]);
+g:\albion\src\commagic\commag3.c  505  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                      _
+         Delete_COMOB(SCH_COMOB[t][s]);
+g:\albion\src\commagic\commag3.c  507  Info 771: SCH_COMOB (line 279)
+    conceivably not initialized
+                                                                                             _
+         Get_3D_part_coordinates(Victim_part,&COMOB[t]->X_3D,&COMOB[t]->Y_3D,&COMOB[t]->Z_3D);
+g:\albion\src\commagic\commag3.c  535  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                              _
+         oly[t]=COMOB[t]->Y_3D;
+g:\albion\src\commagic\commag3.c  564  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                                           _
+            COMOB[t]->Y_3D=ip3d(oly[t],0,C3_Spell_2_LEUCHTKUGELFALLSTEPS,s);
+g:\albion\src\commagic\commag3.c  572  Info 771: oly (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  572  Info 771: COMOB (line 278) conceivably
+    not initialized
+                         _
+         COMOB[t]->Y_3D=0;
+g:\albion\src\commagic\commag3.c  579  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag3.c  585  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                                          _
+         calc_delta_xyz(olx[t],0,olz[t],olx[t]+(px*COMOB_DEC_FACTOR),0,olz[t]+(pz*COMOB_DEC_FACTOR),&mx[t],NULL,&mz[t],3*COMOB_DEC_FACTOR);
+g:\albion\src\commagic\commag3.c  594  Info 771: olx (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  594  Info 771: olz (line 286) conceivably not
+    initialized
+                            _
+               olx[t]+=mx[t];
+g:\albion\src\commagic\commag3.c  603  Info 771: olx (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  603  Info 771: mx (line 287) conceivably not
+    initialized
+                            _
+               olz[t]+=mz[t];
+g:\albion\src\commagic\commag3.c  604  Info 771: olz (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  604  Info 771: mz (line 287) conceivably not
+    initialized
+                                    _
+               COMOB[t]->X_3D=olx[t];
+g:\albion\src\commagic\commag3.c  605  Info 771: COMOB (line 278) conceivably
+    not initialized
+                               _
+         Delete_COMOB(COMOB[t]);
+g:\albion\src\commagic\commag3.c  622  Info 771: COMOB (line 278) conceivably
+    not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  631  Warning 529: Z_3D (line 285) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: behave_shadow (line 282)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: max_steps (line 288) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: steps (line 288) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: bool (line 293) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: X_3D (line 285) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: Y_3D (line 285) not
+    subsequently referenced
+                                                                                  _
+   Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  711  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  731  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commag3.c  854  Warning 529: behave_size (line 683) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  854  Warning 550: flameballsize (line 694)
+    not accessed
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  979  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                              _
+      halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  1035  Info 771: Recolour_table_handle (line
+    901) conceivably not initialized
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  1104  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                      _
+               halo_COMOB[t]->X_3D = x;
+g:\albion\src\commagic\commag3.c  1145  Info 771: halo_COMOB (line 909)
+    conceivably not initialized
+                                                                  _
+         Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  1222  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                _
+      MEM_Free_pointer(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  1277  Info 771: Recolour_table_handle (line
+    901) conceivably not initialized
+                                 _
+      Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1283  Info 771: halo_COMOB (line 909)
+    conceivably not initialized
+                              _
+   Delete_COMOB(explode_COMOB);
+g:\albion\src\commagic\commag3.c  1291  Warning 644: explode_COMOB (line 908)
+    may not have been initialized
+_
+}
+g:\albion\src\commagic\commag3.c  1300  Warning 529: v (line 918) not
+    subsequently referenced
+                                 _
+   if((glow_COMOB=gen_Dummy_COMOB())==NULL){
+g:\albion\src\commagic\commag3.c  1396  Info 746: call to gen_Dummy_COMOB() not
+    made in the presence of a prototype
+                                     _
+                  Delete_COMOB(COMOB);
+g:\albion\src\commagic\commag3.c  1490  Warning 530: COMOB (line 1357) not
+    initialized
+                                     _
+                  Delete_COMOB(COMOB);
+g:\albion\src\commagic\commag3.c  1554  Warning 530: COMOB (line 1357) not
+    initialized
+                                            _
+               ball_COMOB[t]->X_3D = xpos[t];
+g:\albion\src\commagic\commag3.c  1591  Warning 644: xpos (line 1352) may not
+    have been initialized
+                                            _
+               ball_COMOB[t]->Y_3D = ypos[t];
+g:\albion\src\commagic\commag3.c  1592  Warning 644: ypos (line 1352) may not
+    have been initialized
+                                            _
+               ball_COMOB[t]->Z_3D = zpos[t];
+g:\albion\src\commagic\commag3.c  1593  Warning 644: zpos (line 1352) may not
+    have been initialized
+                                 _
+      Delete_COMOB(ball_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1689  Warning 644: ball_COMOB (line 1354) may
+    not have been initialized
+                                  _
+      Delete_COMOB(flame_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1694  Warning 644: flame_COMOB (line 1355)
+    may not have been initialized
+_
+}
+g:\albion\src\commagic\commag3.c  1706  Warning 529: behave_size (line 1344)
+    not subsequently referenced
+                                                                               _
+      if(!(behave = Add_COMOB_behaviour(energie_COMOB, COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  1961  Info 720: Boolean test of assignment
+                                                                    _
+            halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  1981  Info 771: Recolour_table_handle (line
+    1757) conceivably not initialized
+                                                                                            _
+            if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],energie_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  1984  Info 720: Boolean test of assignment
+                                                      _
+         Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2041  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                  _
+         Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2059  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                               _
+      MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  2123  Info 771: Recolour_table_handle (line
+    1757) conceivably not initialized
+   _
+   Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&tx,&tz);
+g:\albion\src\commagic\commag3.c  2179  Info 718: Convert_tactical_to_3D_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  2179  Info 746: call to Convert_tactical_to_3D_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  2179  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  2179  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  2179  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  2349  Warning 529: x (line 2175) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2349  Warning 529: y (line 2175) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2349  Warning 529: z (line 2175) not
+    subsequently referenced
+                                                _
+   Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2421  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2422  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                                    _
+   Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&tx,&tz);
+g:\albion\src\commagic\commag3.c  2712  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  2712  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  2712  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  2881  Warning 529: x (line 2708) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2881  Warning 529: y (line 2708) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2881  Warning 529: z (line 2708) not
+    subsequently referenced
+                                                _
+   Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2942  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2943  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                                 _
+         halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  3178  Info 771: Recolour_table_handle (line
+    3098) conceivably not initialized
+                                                                                                   _
+         if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3183  Info 720: Boolean test of assignment
+                                                         _
+         Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3214  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                        _
+         Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3227  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                            _
+               lp_COMOB[t]->X_3D+=delta_x[t];
+g:\albion\src\commagic\commag3.c  3304  Info 771: lp_COMOB (line 3102)
+    conceivably not initialized
+g:\albion\src\commagic\commag3.c  3304  Info 771: delta_x (line 3106)
+    conceivably not initialized
+                                            _
+               lp_COMOB[t]->Y_3D+=delta_y[t];
+g:\albion\src\commagic\commag3.c  3305  Info 771: delta_y (line 3107)
+    conceivably not initialized
+                                            _
+               lp_COMOB[t]->Z_3D+=delta_z[t];
+g:\albion\src\commagic\commag3.c  3306  Info 771: delta_z (line 3108)
+    conceivably not initialized
+                                  _
+         Delete_COMOB(lp_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3314  Info 771: lp_COMOB (line 3102)
+    conceivably not initialized
+                                    _
+         Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3322  Info 771: halo_COMOB (line 3101)
+    conceivably not initialized
+                                                  _
+         MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  3334  Info 771: Recolour_table_handle (line
+    3098) conceivably not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  3341  Warning 529: v (line 3113) not
+    subsequently referenced
+                                                                 _
+         halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  3452  Info 771: Recolour_table_handle (line
+    3380) conceivably not initialized
+                                                                                                   _
+         if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3457  Info 720: Boolean test of assignment
+                                                         _
+         Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3488  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                        _
+         Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3501  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                            _
+               sp_COMOB[t]->X_3D+=delta_x[t];
+g:\albion\src\commagic\commag3.c  3578  Info 771: sp_COMOB (line 3384)
+    conceivably not initialized
+g:\albion\src\commagic\commag3.c  3578  Info 771: delta_x (line 3388)
+    conceivably not initialized
+                                            _
+               sp_COMOB[t]->Y_3D+=delta_y[t];
+g:\albion\src\commagic\commag3.c  3579  Info 771: delta_y (line 3389)
+    conceivably not initialized
+                                            _
+               sp_COMOB[t]->Z_3D+=delta_z[t];
+g:\albion\src\commagic\commag3.c  3580  Info 771: delta_z (line 3390)
+    conceivably not initialized
+                                  _
+         Delete_COMOB(sp_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3588  Info 771: sp_COMOB (line 3384)
+    conceivably not initialized
+                                    _
+         Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3596  Info 771: halo_COMOB (line 3383)
+    conceivably not initialized
+                                                  _
+         MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  3615  Info 771: Recolour_table_handle (line
+    3380) conceivably not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  3622  Warning 529: v (line 3393) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commag3.c  3661  Warning 529: behave_glow (line 3648)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  3661  Warning 529: glow_COMOB (line 3647) not
+    subsequently referenced
+                                                         _
+   Get_3D_part_coordinates(Victim_part,&orgx,&orgy,&orgz);
+g:\albion\src\commagic\commag3.c  3739  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                _
+         if(!(behave = Add_COMOB_behaviour(light_COMOB[aktlightcomob],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3759  Info 720: Boolean test of assignment
+                                                            _
+            Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3789  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+            Get_3D_part_coordinates(Victim_part,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3802  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                 _
+            if((s=calc_delta_xyz(sx,sy,sz,dx,dy,dz,&delta_x,&delta_y,&delta_z,C3_Spell_14_MOVESPEED))>delta_steps){
+g:\albion\src\commagic\commag3.c  3810  Warning 530: delta_steps (line 3715)
+    not initialized
+                                                                                    _
+            if(!(behave = Add_COMOB_behaviour(energie_COMOB,NULL, lifedead_handler))){
+g:\albion\src\commagic\commag3.c  3844  Info 720: Boolean test of assignment
+                                                 _
+         Delete_COMOB(light_COMOB[aktlightcomob]);
+g:\albion\src\commagic\commag3.c  3877  Warning 644: light_COMOB (line 3705)
+    may not have been initialized
+                                                                                    _
+            if(!(behave = Add_COMOB_behaviour(ball_COMOB[t],NULL, lifedead_handler))){
+g:\albion\src\commagic\commag3.c  3973  Info 720: Boolean test of assignment
+_
+}
+g:\albion\src\commagic\commag3.c  4001  Warning 529: load_COMOB (line 3703) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  4001  Warning 529: COMOB (line 3704) not
+    subsequently referenced
+                                                                           _
+            Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&x,&z);
+g:\albion\src\commagic\commag3.c  4056  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  4056  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  4056  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  4087  Warning 529: y (line 4034) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  4087  Warning 550: COMOB (line 4032) not
+    accessed
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag3.c
+
+Info 750: local macro C3_Spell_4_MIN_FLASHTIME (line 890, file
+    g:\albion\src\commagic\commag3.c) not referenced
+Info 750: local macro C3_Spell_4_MAX_FLASHTIME (line 891, file
+    g:\albion\src\commagic\commag3.c) not referenced
+Info 750: local macro C3_Spell_4_MAX_FLASHTIMELIGHT (line 892, file
+    g:\albion\src\commagic\commag3.c) not referenced
+
+--- Module:   g:\albion\src\commagic\commag5.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+               _
+               Put_item_in_apres_pool(&(Char->Body_items[i]));
+g:\albion\src\commagic\commag5.c  270  Info 718: Put_item_in_apres_pool
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag5.c  270  Info 746: call to Put_item_in_apres_pool()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag5.c  270  Error 15: Put_item_in_apres_pool(struct
+    Item_packet *) redeclared (void/nonvoid) (line 101, file
+    g:\albion\src\apres.c)
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag5.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag5.c'
+
+--- Module:   g:\albion\src\commagic\commsub.c
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                                            _
+SILONG calc_strength(SILONG strength,SILONG min,SILONG max)
+g:\albion\src\commagic\commsub.c  279  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  279  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+      _
+   if(max>min){
+g:\albion\src\commagic\commsub.c  283  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  283  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                      _
+      ret=((strength*(max-min))/100)+min;
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+          _
+      ret=max-((strength*(max-min))/100);
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                    _
+SILONG rndmm(SILONG min,SILONG max)
+g:\albion\src\commagic\commsub.c  372  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  372  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                  _
+   rnd=rand() % ((max+1)-min);
+g:\albion\src\commagic\commsub.c  376  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  376  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+              _
+   return(rnd+min);
+g:\albion\src\commagic\commsub.c  379  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                     _
+SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii)
+g:\albion\src\commagic\commsub.c  400  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  400  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                     _
+      rnd=rand() % ((max+1)-min);
+g:\albion\src\commagic\commsub.c  406  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  406  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                 _
+      return(rnd+min);
+g:\albion\src\commagic\commsub.c  407  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                                                                                    _
+         if(!(behave = Add_COMOB_behaviour(Halo_COMOB, base_COMOB, connect_handler))){
+g:\albion\src\commagic\commsub.c  549  Info 720: Boolean test of assignment
+_
+}
+g:\albion\src\commagic\commsub.c  934  Warning 529: ldata (line 871) not
+    subsequently referenced
+   _
+   Get_part_rectangle(victim,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commsub.c  1060  Info 718: Get_part_rectangle
+    undeclared, assumed to return int
+g:\albion\src\commagic\commsub.c  1060  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commsub.c  1060  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+   _
+   Get_3D_part_coordinates(victim,&x,&y,&z);
+g:\albion\src\commagic\commsub.c  1063  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commsub.c  1063  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commsub.c  1063  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commsub.c  1178  Warning 529: t (line 1030) not
+    subsequently referenced
+g:\albion\src\commagic\commsub.c  1178  Warning 550: gfxsizeh (line 1037) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1406  Warning 550: COMOB (line 1382) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1453  Warning 529: u (line 1430) not
+    subsequently referenced
+g:\albion\src\commagic\commsub.c  1453  Warning 550: COMOB (line 1429) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1662  Warning 529: behave_bounce (line 1549)
+    not subsequently referenced
+g:\albion\src\commagic\commsub.c  1662  Warning 529: ldata (line 1551) not
+    subsequently referenced
+                                  _
+    sin((Value * 2 * PI) / Period);
+g:\albion\src\commagic\commsub.c  1725  Warning 524: Loss of precision
+    (assignment) (double to int)
+_
+}
+g:\albion\src\commagic\commsub.c  1885  Warning 529: t (line 1811) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commsub.c  1952  Warning 529: t (line 1914) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commsub.c  2059  Warning 529: y (line 2035) not
+    subsequently referenced
+

@@ -1,0 +1,10 @@
+
+Albion v0.73 (created on Sep 06 1995 10:54:46)
+Copyright 1995 Blue Byte Software GmbH
+
+BBERROR: ERRORSTACK START:--------------
+Memory manager: Memory request denied.
+BBERROR: ERRORSTACK END-----------------
+
+Thank you for playing Albion.
+

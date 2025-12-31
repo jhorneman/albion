@@ -1,0 +1,48 @@
+.ERASE
+
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+Sdir = C:\WORK\MODULES\TEXT
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /ox
+
+Object_files = $(Sdir)\TEXTVAR.OBJ &
+	$(Sdir)\TEXT.OBJ &
+	$(Sdir)\TEXTCOMM.OBJ &
+	$(Sdir)\TEXTPROC.OBJ &
+	$(Sdir)\TEXTDISP.OBJ &
+	$(Sdir)\TEXTGFX.OBJ &
+	$(Sdir)\TEXTMNG.OBJ
+
+.BEFORE
+	cd $(Sdir)
+
+
+$(Ldir)\TEXT.LIB : $(Object_files)
+	$(Libmake) $(Ldir)\TEXT.LIB -+TEXTVAR -+TEXT -+TEXTCOMM &
+	-+TEXTPROC -+TEXTDISP -+TEXTGFX -+TEXTMNG
+
+
+$(Sdir)\TEXTVAR.OBJ : $(Sdir)\TEXTVAR.C .AUTODEPEND
+	$(Compiler) TEXTVAR.C
+
+$(Sdir)\TEXT.OBJ : $(Sdir)\TEXT.C .AUTODEPEND
+	$(Compiler) TEXT.C
+
+$(Sdir)\TEXTCOMM.OBJ : $(Sdir)\TEXTCOMM.C .AUTODEPEND
+	$(Compiler) TEXTCOMM.C
+
+$(Sdir)\TEXTPROC.OBJ : $(Sdir)\TEXTPROC.C .AUTODEPEND
+	$(Compiler) TEXTPROC.C
+
+$(Sdir)\TEXTDISP.OBJ : $(Sdir)\TEXTDISP.C .AUTODEPEND
+	$(Compiler) TEXTDISP.C
+
+$(Sdir)\TEXTGFX.OBJ : $(Sdir)\TEXTGFX.C .AUTODEPEND
+	$(Compiler) TEXTGFX.C
+
+$(Sdir)\TEXTMNG.OBJ : $(Sdir)\TEXTMNG.C .AUTODEPEND
+	$(Compiler) TEXTMNG.C
+

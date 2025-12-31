@@ -1,0 +1,660 @@
+WATCOM Linker Version 10.0
+Copyright by WATCOM International Corp. 1985, 1994. All rights reserved.
+Created on:       95/05/22 11:56:43
+Executable Image: G:\ALBION\TOOLS\COMPILE.EXE
+creating a DOS/4G executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0006:00000000        00024db0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000010
+_TEXT                  CODE                          0001:00000010   0000a941
+SYS                    CODE                          0002:00000000   00000017
+DSA                    CODE                          0003:00000000   00001a3b
+FNT_CODE               CODE                          0004:00000000   000002e9
+OPM                    CODE                          0005:00000000   0000189c
+_NULL                  BEGDATA        DGROUP         0006:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0006:00000004   00000000
+CONST                  DATA           DGROUP         0006:00000004   00000ba0
+CONST2                 DATA           DGROUP         0006:00000ba4   00000104
+_DATA                  DATA           DGROUP         0006:00000ca8   00000c80
+FNT_DATA               DATA                          0007:00000000   00001e54
+OPM_DATA               DATA                          0007:00001e60   00000050
+XIB                    DATA           DGROUP         0006:00001928   00000000
+XI                     DATA           DGROUP         0006:00001928   00000012
+XIE                    DATA           DGROUP         0006:0000193a   00000000
+YIB                    DATA           DGROUP         0006:0000193a   00000000
+YI                     DATA           DGROUP         0006:0000193a   00000006
+YIE                    DATA           DGROUP         0006:00001940   00000000
+TIB                    DATA           DGROUP         0006:00001940   00000000
+TI                     DATA           DGROUP         0006:00001940   00000000
+TIE                    DATA           DGROUP         0006:00001940   00000000
+DATA                   DATA           DGROUP         0006:00001940   00000000
+_BSS                   BSS            DGROUP         0006:00001940   0001f468
+STACK                  STACK          DGROUP         0006:00020db0   00004000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: COMPILE.OBJ(G:\ALBION\TOOLS\COMPILER\COMPILE.C)
+0006:00001940+ _Output_length
+0006:00001944+ _Source_path
+0006:000019a8+ _Output_address
+0006:000019ac+ _Library_path
+0006:00001a10+ _Buffer
+0006:00001a14+ _Total_unpacked
+0006:00001a18+ _Subfile
+0006:00001a1c+ _Subfiles
+0006:000029b8+ _Subfilenames
+0006:0001aff4+ _Library
+0006:0001aff8+ _Lengths
+0006:0001bf94+ _Nr_index
+0001:00000010+ BBMAIN_
+0001:00000667+ Read_info_file_
+0001:000007fb+ Get_subfile_data_
+0001:000009ac+ Encrypt_block_
+0001:00000a17+ Load_subfile_
+0006:00000ca8+ _Zero
+0006:00000cac+ _XLD_ID
+0006:00000cb0+ _Format
+0006:00000cb1+ _Library_types
+0006:0001bf96+ _Max_subfiles
+0006:0001bf98+ _Highest_subfile
+0006:0001bf9a+ _Packed
+0006:0001bf9c+ _Nr_subfiles
+0006:0001bf9e+ _Encrypted
+0006:0001bfa0+ _Source_fname
+Module: MAIN.OBJ(G:\TOOLS\COMPILER\MAIN.C)
+0001:00000a7e+ MainErrorStringOutputFunction_
+0001:00000ab4  main_
+0001:00000b07+ main_init_
+0001:00000bc6+ main_exit_
+0001:00000c30  Init_AIL_system_
+0001:00000c5b  Exit_AIL_system_
+Module: G:\PCLIB32\LIB\PCBASE.LIB(sys_ass.asm)
+0002:00000000  _SYS_ASS_MouseBob_
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBSYSTEM\stdmousp.c)
+0006:00000cb8  _mouseptrdata
+0006:00000d4f  _mousebusydata
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBSYSTEM\keyintrn.c)
+0006:00000e70  _asciikeytabcountry
+0006:00001170  _rawkeytab
+0006:00001370+ _pressedkeytab
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBSYSTEM\bbsystem.c)
+0006:0001bfb0+ _SYSTEMVAR_oldmposy
+0006:0001bfb8+ _SYSTEMVAR_oldmposx
+0006:0001bfc0+ _keyevent
+0006:0001bfd8+ _intr_stack
+0006:0001c3d8+ _mouseevent
+0006:0001c3f0+ _mousebackopm
+0006:0001c4a0  _mouseoldbackopm
+0006:0001c550+ _msodata
+0006:0001c554+ _msowidth
+0006:0001c558+ _mscx1
+0006:0001c55c+ _mscx0
+0006:0001c560+ _mscy1
+0006:0001c564+ _mscy0
+0006:0001c568+ _msoheight
+0006:0001c56c+ _msopmptr
+0006:0001c570+ _spc
+0006:0001c574+ _intr_stack_ptr
+0006:0001c594+ _ticks
+0006:0001c598+ _oldtimercall
+0006:0001c5a8  _SYSTEMVAR_mousey
+0006:0001c5ac  _SYSTEMVAR_mousex
+0006:0001c5b0  _mousebacksize
+0006:0001c5b4  _mousegto
+0006:0001c5b8  _SYSTEMVAR_mouseclipy0
+0006:0001c5bc  _SYSTEMVAR_mouseclipy1
+0006:0001c5c0  _SYSTEMVAR_mouseclipx0
+0006:0001c5c4  _SYSTEMVAR_mouseclipx1
+0006:0001c5c8  _bmousebackopm
+0006:0001c5f4  _bmouseoldbackopm
+0006:0001c620+ _save_int_regs
+0006:0001c628+ _prev_int_08
+0006:0001c62e+ _prev_int_09
+0006:0001c634  _intmouse
+0006:0001c636  _inMouseInterrupt
+0006:0001c638+ _msy
+0006:0001c63a+ _msx
+0006:0001c63c+ _SYSTEMVAR_asc
+0006:0001c63e+ _SYSTEMVAR_lbut
+0006:000013f0+ _SYSTEM_Timer_was_installed
+0006:000013f2+ _BBSYS_LibraryName
+0006:00001400  _SYSTEM_ActiveScreenPort
+0006:00001404+ _SYSTEM_ActiveWindow
+0006:00001408+ _SYSTEM_Library_Status
+0006:0000140c+ _SYSTEM_Init_Flags
+0006:00001410* _SYSTEMVAR_KEYMAP
+0006:00001414+ _cbd
+0001:00000c80+ SYSTEM_Int09_
+0001:00000f20+ SYSTEM_Int08_
+0001:00000f80+ SYSTEM_Timer_function_
+0001:00001080+ cbc_end_
+0001:00001090+ Mouse_handler_
+0001:00001620  lock_region_
+0001:00001680  SYSTEM_Init_
+0001:00001990  SYSTEM_Exit_
+0001:00001b10* SYSTEM_SystemTask_
+0001:00001e10* SYSTEM_SystemAlert_
+0001:00001e20  SYSTEM_GetBLEVStatusLong_
+0001:00001e90  SYSTEM_MouseRestore_
+0001:000021c0  SYSTEM_MouseDisplay_
+0001:00002660* SYSTEM_ShowMousePtr_
+0001:00002a70  SYSTEM_HideMousePtr_
+0001:00002ab0* SYSTEM_GetTicks_
+0001:00002ac0* SYSTEM_WaitTicks_
+0001:00002af0* SYSTEM_SetMouseArea_
+0001:00002bb0* SYSTEM_SetMousePtr_
+0001:00002bd0+ SYS_PrintError_
+0006:00001492  _SYSTEMVAR_ShowMouse
+0006:00001494+ _mousebackwidth
+0006:00001498+ _mousebackheight
+0006:0001c640+ _SYSTEMVAR_rbut
+0006:0001c642+ _SYSTEMVAR_noMouseInterrupt
+0006:0001c644+ _SYSTEM_QuitProgramFlag
+0006:0001c646+ _asc
+0006:0001c647+ _nextspecial
+0006:0001c648+ _shifted
+0006:0001c649+ _key
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBDSA\bbdsa.c)
+0006:0001c64c  _videoscreenypos
+0006:0001c65c  _videoram
+0006:0001c66c+ _global_screenport
+0006:0001c67c+ _availvesamem
+0006:0001c680  _windowsize
+0006:0001c684  _screensize
+0006:0001c694  _windowstep
+0006:0001c6b4  _screenheight
+0006:0001c6b8  _screenwidth
+0006:0001c6bc+ _global_palette
+0006:0001cac0+ _DSA_OpenScreen_error
+0006:0001caf6+ _virtuellscreen
+0006:0001caf8  _lastpage
+0006:0001cafa  _twowindows
+0006:0001cafc+ _oldmode
+0006:0001cafe  _savepage
+0006:0001cb00  _anzdoublepages
+0006:0001cb02  _special
+0006:0001cb04  _doublepage
+0006:0001cb06  _chain4savereadselect
+0006:0001cb07  _chain4savewriteselect
+0006:0001cb08  _chain4lastwriteselect
+0006:0000149c+ _BBDSA_LibraryName
+0006:000014aa+ _DSA_Library_Status
+0006:000014ac+ _vesainfo
+0006:000014b0+ _vesamodeinfo
+0006:000014b4+ _actmode
+0001:00002bfa  DSA_Init_
+0001:00002c60  DSA_Exit_
+0001:00002c8d* DSA_OpenScr_
+0001:00002cae+ DSA_OpenScreen_
+0001:0000364a* DSA_CloseScr_
+0001:00003659+ DSA_CloseScreen_
+0001:000036de* DSA_DoubleBuffer_
+0001:0000380e* DSA_WaitTOF_
+0001:0000381a* DSA_WaitBOF_
+0001:00003826* DSA_CopyMainOPMToScr_
+0001:00003b9f* DSA_CopyOPMToScr_
+0001:000040a2* DSA_CopyScrToOPM_
+0001:00004361* DSA_SPal_
+0001:000043ef  DSA_APal_
+0001:00004413  DSA_SCol_
+0001:00004442+ DSA_PrintError_
+0006:0001cb09  _chain4lastreadselect
+0006:0001cb0a  _chain4writeselectok
+0006:0001cb0b  _chain4readselectok
+Module: G:\PCLIB32\LIB\PCBASE.LIB(dsa_ass.asm)
+0003:00001186  _DSA_ASS_CopyScreenToOPM_
+0003:0000193c  _DSA_ASS_WaitEndVBL_
+0003:000019b8  _DSA_ASS_SaveCHAIN4Page_
+0003:00000000  _DSA_ASS_ActivatePal_
+0003:00000158  _DSA_ASS_CopyMainOPMToScreenCHN_
+0003:00000bc1  _DSA_ASS_CopyOPMToScreen_
+0003:0000197b  _DSA_ASS_RestoreVesaPage_
+0003:0000014c  _DSA_ASS_CopyMainOPMToScreenONE_
+0003:000019cd  _DSA_ASS_RestoreCHAIN4Page_
+0003:0000196e  _DSA_ASS_SaveVesaPage_
+0003:00001909  _DSA_ASS_SetVideoramCHN_
+0003:000013cb  _DSA_ASS_CopyScreenToOPMCHN_
+0003:00001a00* _DSA_ASS_FLASH_
+0003:0000004a  _DSA_ASS_CopyMainOPMToScreen_
+0003:00001379  _DSA_ASS_CopyScreenToOPMONE_
+0003:00001932  _DSA_ASS_WaitVBL_
+0003:0000174c  _DSA_ASS_ActivateCHAINFOUR_
+0003:00000e05  _DSA_ASS_CopyOPMToScreenCHN_
+0003:00000db3  _DSA_ASS_CopyOPMToScreenONE_
+0003:0000195a  _DSA_ASS_WaitBOF_
+0003:00001946  _DSA_ASS_WaitTOF_
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBOPM\bbopm.c)
+0001:00004466  OPM_New_
+0001:00004548+ OPM_Relocate_
+0001:00004566  OPM_Del_
+0001:00004587* OPM_SetVirtualPosition_
+0001:0000464f* OPM_CreateVirtualOPM_
+0001:000047db* OPM_SetPixel_
+0001:00004848* OPM_GetPixel_
+0001:000048b0* OPM_HorLine_
+0001:0000499a* OPM_VerLine_
+0001:00004a84* OPM_Box_
+0001:00004ccf* OPM_FillBox_
+0001:00004e30* OPM_CopyGFXOPM_
+0001:0000502e  OPM_CopyOPMOPM_
+0001:0000539b* OPM_Write_
+0001:000053f1* OPM_ChangeColor_
+0001:00005438* OPM_Zoom_
+0001:000054f9+ OPM_PrintError_
+0006:0000153c+ _BBOPM_LibraryName
+0006:0000154a+ _OPM_fname
+0006:0000154e+ _OPM_ftype
+Module: G:\PCLIB32\LIB\PCBASE.LIB(fnt_ass.asm)
+0004:00000000  _OPM_ASS_init_font_
+0004:00000035  _OPM_ASS_draw_text_
+0004:000000f0* _OPM_ASS_draw_char_
+Module: G:\PCLIB32\LIB\PCBASE.LIB(opm_ass.asm)
+0007:00001ea4  _ZOOM_DESTCLIPY1
+0007:00001ea0  _ZOOM_DESTCLIPX1
+0005:000014d2  _OPM_ASS_Zoom_
+0005:000001ad  _OPM_ASS_VerLine_
+0005:00000000  _OPM_ASS_FillBlock_
+0005:00001861  _OPM_ASS_Blit_Trans_
+0005:000014bb  _OPM_ASS_ChangeCol_
+0005:0000148c  _OPM_ASS_HorLine_
+0005:000016d2  _OPM_ASS_Blit_
+0007:00001e9c  _ZOOM_DESTCLIPY0
+0007:00001e98  _ZOOM_DESTCLIPX0
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBEVENT\bbevent.c)
+0001:00005520  BLEV_Init_
+0001:00005593  BLEV_Exit_
+0001:000055ad* BLEV_IsEventWaiting_
+0001:000055c1* BLEV_ClearAllEvents_
+0001:000055e2  BLEV_PutEvent_
+0001:00005661* BLEV_GetEvent_
+0001:00005717* BLEV_GetMousePos_
+0001:0000573d+ BLEV_PrintError_
+0006:0000155c+ _BLEV_Library_Status
+0006:0000155e+ _BBBLEV_LibraryName
+0006:0001cb0c+ _a_events
+0006:0001ce0c+ _sl_next_put_event
+0006:0001ce10+ _sl_next_get_event
+0006:0001ce14+ _en_bufferstatus
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBERROR\bberror.c)
+0001:00005765  ERROR_Init_
+0001:0000577a+ ERROR_ClearStack_
+0001:0000578a+ ERROR_SetOutputFuncPtr_
+0001:00005794  ERROR_PushError_
+0001:00005863  ERROR_PrintAllErrors_
+0001:000059e4+ BBERROR_LocalPrintError_
+0006:00001570+ _BBERROR_LibraryName
+0006:00001580+ _BBERROR_StackFullMessage
+0006:0000158b+ _BBERROR_TooMuchDataMessage
+0006:0001ce18+ _BBERROR_ErrorStack
+0006:0001cf08+ _BBERROR_MessageString
+0006:0001cfd0+ _BBERROR_OutputFuncPtr
+0006:0001cfd4+ _BBERROR_StackEntries
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBDOS\bbdos.c)
+0001:000059f8  DOS_Init_
+0001:00005a8b  DOS_Exit_
+0001:00005ad4+ DOS_Open_
+0001:00005cde+ DOS_Close_
+0001:00005d53+ DOS_Read_
+0001:00005e6c+ DOS_Write_
+0001:00005f79* DOS_Seek_
+0001:000060a2* DOS_ReadFile_
+0001:00006363* DOS_WriteFile_
+0001:000064cb* DOS_Delete_
+0001:000064d5+ DOS_GetFileLength_
+0001:00006630+ DOS_PrintError_
+0006:0000159c+ _DOS_Library_Status
+0006:0000159e+ _BBDOS_PcSeekModes
+0006:000015aa+ _BBDOS_LibraryName
+0006:000015b8+ _errornofile
+0006:000015ba+ _errorfilecount
+0006:0001cfd8+ _BBDOS_filenames
+0006:0001e8d8+ _BBDOS_FileHandleArray
+0006:0001e9a0+ _errorfilenames
+Module: G:\PCLIB32\LIB\PCBASE.LIB(G:\PCLIB32\SRC\BBBASMEM\bbbasmem.c)
+0001:0000665b  BASEMEM_Init_
+0001:0000669b  BASEMEM_Exit_
+0001:000066e4+ BASEMEM_Error_
+0001:0000670e+ BASEMEM_Print_error_
+0001:00006743* BASEMEM_Get_largest_block_
+0001:000067f8* BASEMEM_Get_free_memory_
+0001:00006891  BASEMEM_Alloc_
+0001:00006c72  BASEMEM_Free_
+0001:00006df3* BASEMEM_Resize_
+0001:00007193  BASEMEM_FillMemByte_
+0001:000071a7* BASEMEM_FillMemLong_
+0001:000071bb  BASEMEM_CopyMem_
+0001:000071cd* BASEMEM_Align_
+0006:000015c0+ _BASEMEM_Library_Status
+0006:000015c2+ _BASEMEM_Library_name
+0006:000015d1+ _BASEMEM_Error_strings
+0006:000209a0+ _BASEMEM_Table
+Module: G:\WATCOM\lib386\dos\clib3r.lib(stk386)
+0001:000071f3* __STK
+0001:000071e0  __CHK
+0001:000071f0* __GRO
+0001:00007211  __STKOVERFLOW_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(printf)
+0001:00007220  printf_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(atoi)
+0001:00007242  atoi_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(strlen)
+0001:00007299  strlen_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(sprintf)
+0001:000072c5  sprintf_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(open)
+0001:000072f5  open_
+0001:00007319  sopen_
+0001:000074de* __set_binary_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(write)
+0001:00007543  write_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(lseek)
+0001:00007714  lseek_
+0001:00007714* _lseek_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(close)
+0001:00007755  close_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fopen)
+0001:0000775a+ __open_flags_
+0001:000078d6+ _fsopen_
+0001:000078f1  fopen_
+0001:00007963* freopen_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fgets)
+0001:00007987  fgets_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fclose)
+0001:000079ea  fclose_
+0001:00007a19  __shutdown_stream_
+0001:00007a3a+ __MkTmpFile_
+0001:00007aa3  __doclose_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(strcpy)
+0001:00007b2c  strcpy_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(strstr)
+0001:00007b4b  strstr_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(strcat)
+0001:00007c0d  strcat_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(find386)
+0001:00007c44  _dos_findfirst_
+0001:00007c61  _dos_findnext_
+0001:00007c7d* _dos_findclose_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(filelen)
+0001:00007cc6  filelength_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(read)
+0001:00007d03  read_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(cstrt386)
+0001:00000003* ___begtext
+0006:00000000* __nullarea
+0006:00001940* __start_TI
+0006:00001940* __end_TI
+0006:00001624* __GDAptr
+0006:00001628* __D16Infoseg
+0006:0000162a* __x386_zero_base_selector
+0001:00007e18  _cstart_
+0001:000080a7  __exit_
+0001:000080a9  __do_exit_with_msg__
+0001:000080e4  __GETDS
+Module: G:\WATCOM\lib386\dos\clib3r.lib(argcv386)
+0006:0000162c  __argc
+0006:00001630  __argv
+Module: G:\WATCOM\lib386\dos\clib3r.lib(inp)
+0001:000080f0  inp_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(outp)
+0001:000080f8  outp_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(chint386)
+0001:00008106  _chain_intr_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(int386)
+0001:0000811f  int386_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(d_getvec)
+0001:0000813a  _dos_getvect_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(d_setvec)
+0001:0000816e  _dos_setvect_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(intx386)
+0001:00008199  int386x_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(set386)
+0001:000081c0  memset_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(errno)
+0001:000081d8  __get_errno_ptr_
+0001:000081de  __get_doserrno_ptr_
+0006:00020d88+ __doserrno
+0006:00020d8c+ _errno
+Module: G:\WATCOM\lib386\dos\clib3r.lib(memmove)
+0001:000081e4  memmove_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00008230* __exit_with_msg_
+0001:00008235  __fatal_runtime_error_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(crwd386)
+0006:00001644  __psp
+0006:0000166f  __osmajor
+0006:00001670  __osminor
+0006:00001666  __Extender
+0006:00001667  __ExtenderSubtype
+0006:00001668  __X32VM
+0006:00001648* __x386_stacklow
+0006:0000163c  __LpCmdLine
+0006:00001640  __LpPgmName
+0006:00001634  __dynend
+0006:00001638  __curbrk
+0006:00001648  __STACKLOW
+0006:0000164c  __STACKTOP
+0006:00001650  __ASTACKSIZ
+0006:00001654  __ASTACKPTR
+0006:00001658  __cbyte
+0006:0000165c* __cbyte2
+0006:00001660  __child
+0006:00001669  __Envptr
+0006:0000166d  __Envseg
+0006:00001664  __no87
+0006:00001671  __FPE_handler
+0006:00001671  ___FPE_handler
+Module: G:\WATCOM\lib386\dos\clib3r.lib(iob)
+0006:00001678  ___iob
+0006:00001880* ___tmpfnext
+0006:00001881  __fmode
+0006:00020d90  ___ClosedStreams
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fprtf)
+0001:00008264  __fprtf_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(istable)
+0006:00000ba4  __IsTable
+Module: G:\WATCOM\lib386\dos\clib3r.lib(prtf)
+0001:000082e9  __prtf_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(isatt)
+0001:00008ce3  isatty_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(seterrno)
+0001:00008d01* __set_EDOM_
+0001:00008d06  __set_errno_
+0001:00008d12* __set_ERANGE_
+0001:00008d19* __set_EINVAL_
+0001:00008d29  __set_doserrno_
+0001:00008d35* __FPE_exception_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(dosret)
+0001:00008d3c* _dosret0_
+0001:00008d43* _dosretax_
+0001:00008d48  __set_errno_dos_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(umaskval)
+0006:000018a0  ___umaskval
+Module: G:\WATCOM\lib386\dos\clib3r.lib(iomode)
+0001:00008dae  __IOMode_
+0001:00008e03  __SetIOMode_
+0006:000018a4+ ___NFiles
+0006:000018a8+ ___init_mode
+0006:000018f8+ __iomode
+Module: G:\WATCOM\lib386\dos\clib3r.lib(stack386)
+0001:00008e18  stackavail_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(_clse)
+0001:00008e21  __close_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(tolower)
+0001:00008e53  tolower_
+0001:00008e53* _tolower_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(allocfp)
+0001:00008e61  __allocfp_
+0001:00008f09  __freefp_
+0001:00008f42  __purgefp_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fseek)
+0001:00008fa2  fseek_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(chktty)
+0001:0000909e  __chktty_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(stinit)
+0006:00020d94  ___OpenStreams
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fgetc)
+0001:000090d0  fgetc_
+0001:00009159+ __filbuf_
+0001:00009188+ __fill_buffer_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(gtpid)
+0001:00009233  getpid_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(flush)
+0001:00009239  __flush_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(ftell)
+0001:000092f8  ftell_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(nfree)
+0001:00009328  _nfree_
+0001:00009328  free_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(remove)
+0001:00009386  remove_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(error386)
+0001:0000938c  __doserror_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:0000939f  __CMain
+Module: G:\WATCOM\lib386\dos\clib3r.lib(inirt386)
+0001:000093ee  __InitRtns
+0001:00009439  __FiniRtns
+Module: G:\WATCOM\lib386\dos\clib3r.lib(seg386)
+0000:00001234  __DOSseg__
+Module: G:\WATCOM\lib386\dos\clib3r.lib(initargv)
+0001:00009488  __Init_Argv_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(segread)
+0001:0000962e  segread_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(intxa386)
+0001:00009656  __int386x_
+0001:000096b3* _DoINTR_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(__stos)
+0001:00009a40  __STOSB
+0001:00009a77* __STOSD
+Module: G:\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:00009ae3  __EnterWVIDEO_
+0006:000018fc+ ___WD_Present
+Module: G:\WATCOM\lib386\dos\clib3r.lib(fputc)
+0001:00009b09  fputc_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(ioalloc)
+0001:00009bad  __ioalloc_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(itoa)
+0001:00009c49+ utoa_
+0001:00009c93  itoa_
+0001:00009c93* _itoa_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(noefgfmt)
+0006:00001900  ___EFG_printf
+0006:00001904* ___EFG_scanf
+Module: G:\WATCOM\lib386\dos\clib3r.lib(ltoa)
+0001:00009ce5  ultoa_
+0001:00009d2e  ltoa_
+0001:00009d2e* _ltoa_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(toupper)
+0001:00009d49  toupper_
+0001:00009d49* _toupper_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(nmalloc)
+0001:00009d57+ _nmalloc_
+0001:00009d57  malloc_
+0006:00001908  ___nheapbeg
+0006:0000190c  ___MiniHeapRover
+0006:00001910  ___LargestSizeB4MiniHeapRover
+Module: G:\WATCOM\lib386\dos\clib3r.lib(tell)
+0001:00009e3a  tell_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(initfile)
+0001:00009e4b  __InitFiles_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(ioexit)
+0001:00009ec3  __full_io_exit_
+0001:00009ecf* fcloseall_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(flushall)
+0001:00009f26* flushall_
+0001:00009f2b  __flushall_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(gtche)
+0001:00009f5a  getche_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(qread)
+0001:00009f77  __qread_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(qwrit)
+0001:00009f96  __qwrite_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(memalloc)
+0001:0000a012  __MemAllocator
+0001:0000a0ba  __MemFree
+Module: G:\WATCOM\lib386\dos\clib3r.lib(heapmod)
+0006:00020d98* ___fheap_clean
+0006:00020d99  ___nheap_clean
+Module: G:\WATCOM\lib386\dos\clib3r.lib(unlnk)
+0001:0000a1c5  unlink_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:0000a1e4  __CommonInit_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(___argc)
+0006:00020d9c  ____Argc
+0006:00020da0  ____Argv
+Module: G:\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:0000a1ef+ __null_int23_exit_
+0001:0000a1f0  exit_
+0001:0000a208+ _exit_
+0006:00001914+ ___atexit
+0006:00001918+ ___int23_exit
+0006:0000191c+ ___FPE_handler_exit
+Module: G:\WATCOM\lib386\dos\clib3r.lib(grownear)
+0001:0000a25d+ __FreeDPMIBlocks_
+0001:0000a2bb* __ReAllocDPMIBlock_
+0001:0000a432+ __LastFree_
+0001:0000a602  __ExpandDGROUP_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(nmemneed)
+0001:0000a7bd  __nmemneed_
+Module: G:\WATCOM\lib386\dos\clib3r.lib(amblksiz)
+0006:00001920  __amblksiz
+Module: G:\WATCOM\lib386\dos\clib3r.lib(minreal)
+0006:00020da4  ___minreal
+Module: G:\WATCOM\lib386\dos\clib3r.lib(heapen)
+0001:0000a7c0* _heapenable_
+0006:00001924  ___heap_enabled
+Module: G:\WATCOM\lib386\dos\clib3r.lib(sbrk386)
+0001:0000a7d0* sbrk_
+0001:0000a88f  __brk_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+G:\WATCOM\lib386\dos\clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  4000 (16384.)
+Memory size:  00034b88 (215944.)
+Entry point address: 0001:00007e18

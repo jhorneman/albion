@@ -1,0 +1,720 @@
+
+--- Module:   g:\albion\outside\bbsetup\src\baseio.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+
+--- Module:   g:\albion\outside\bbsetup\src\basewin.c 
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                                                                               _
+         if (PixelStringLength (Buffer)+PixelCharLength('-')*(x != x1 && WasWithinWord==FALSE) > x2-x-1)
+g:\albion\outside\bbsetup\src\basewin.c  234  Warning 514: Unusual use of a
+    Boolean
+                                   _
+         for (d=0; d<strlen(Buffer); d++)
+g:\albion\outside\bbsetup\src\basewin.c  254  Warning 574: Signed-unsigned mix
+    with relational
+                                   _
+         pTarget[tx]=pSource[sx>>10];
+g:\albion\outside\bbsetup\src\basewin.c  348  Info 702: Shift right of signed
+    quantity (int)
+
+--- Module:   g:\albion\outside\bbsetup\src\browser.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                                   _
+            if (strlen(BrowseScript.Line[c+CursorY])>38)
+g:\albion\outside\bbsetup\src\browser.c  194  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                          _
+            PrintTextInFrame (BrowseScript.Line[c+CursorY],
+g:\albion\outside\bbsetup\src\browser.c  197  Error 64: Type mismatch (arg. no.
+    1) (ptrs to signed/unsigned)
+                                                                               _
+   Script->Line = (UNCHAR**)THMalloc ( (Script->AnzLines+1) * sizeof(UNCHAR*) );
+g:\albion\outside\bbsetup\src\browser.c  336  Error 64: Type mismatch
+    (assignment) (ptrs to ptrs to signed/unsigned)
+                                                       _
+   Script->Line[ Script->AnzLines ] = Script->ScriptMem;
+g:\albion\outside\bbsetup\src\browser.c  341  Error 64: Type mismatch
+    (assignment) (ptrs to signed/unsigned)
+                                                                 _
+         Script->Line[ Script->AnzLines ] = Script->ScriptMem+i+1;
+g:\albion\outside\bbsetup\src\browser.c  352  Error 64: Type mismatch
+    (assignment) (ptrs to signed/unsigned)
+                                                        _
+         while ( strlen(Script->Line[Script->AnzLines-1]) > 0 &&
+g:\albion\outside\bbsetup\src\browser.c  363  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                                                           _
+                 ( (Script->Line[Script->AnzLines-1])[strlen(Script->Line[Script->AnzLines-1])-1] == 10 ||
+g:\albion\outside\bbsetup\src\browser.c  364  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                                                            _
+                   (Script->Line[Script->AnzLines-1])[strlen(Script->Line[Script->AnzLines-1])-1] == 13 ||
+g:\albion\outside\bbsetup\src\browser.c  365  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                                                            _
+                   (Script->Line[Script->AnzLines-1])[strlen(Script->Line[Script->AnzLines-1])-1] == 26))
+g:\albion\outside\bbsetup\src\browser.c  366  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                                                    _
+             (Script->Line[Script->AnzLines])[strlen(Script->Line[Script->AnzLines-1])-1] = 0;
+g:\albion\outside\bbsetup\src\browser.c  369  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+
+--- Module:   g:\albion\outside\bbsetup\src\debug.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                    _
+void InternalError (SISHORT ErrNum, ...)
+g:\albion\outside\bbsetup\src\debug.c  9  Warning 579: parameter preceding
+    ellipsis has invalid type
+
+--- Module:   g:\albion\outside\bbsetup\src\event.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+
+--- Module:   g:\albion\outside\bbsetup\src\global.c 
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                _
+   {  -1,     -1,  -1,  -1 }  //Tabellenende
+g:\albion\outside\bbsetup\src\global.c  75  Warning 570: Loss of sign
+    (initialization) (int to unsigned char)
+g:\albion\outside\bbsetup\src\global.c  75  Warning 570: Loss of sign
+    (initialization) (int to unsigned char)
+g:\albion\outside\bbsetup\src\global.c  75  Warning 570: Loss of sign
+    (initialization) (int to unsigned char)
+
+--- Module:   g:\albion\outside\bbsetup\src\ini.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+_
+}
+g:\albion\outside\bbsetup\src\ini.c  254  Warning 550: VarFound (line 166) not
+    accessed
+
+--- Module:   g:\albion\outside\bbsetup\src\io.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                                  _
+               rmdir (ErrorBuffer[AnzErrorBuffer]); //..und l”schen sie !
+g:\albion\outside\bbsetup\src\io.c  176  Warning 530: ErrorBuffer (line 144)
+    not initialized
+                                        _
+      free (ErrorBuffer[AnzErrorBuffer]);
+g:\albion\outside\bbsetup\src\io.c  195  Warning 644: ErrorBuffer (line 144)
+    may not have been initialized
+                                             _
+      ContainsWildcards |= (Filespec[c]=='*');
+g:\albion\outside\bbsetup\src\io.c  317  Warning 514: Unusual use of a Boolean
+                                             _
+      ContainsWildcards |= (Filespec[c]=='?');
+g:\albion\outside\bbsetup\src\io.c  318  Warning 514: Unusual use of a Boolean
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  440  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  444  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  454  Warning 527: Unreachable
+
+--- Module:   g:\albion\outside\bbsetup\src\messages.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+      _
+      },
+g:\albion\outside\bbsetup\src\messages.c  50  Info 785: Too few initializers
+    for aggregate
+      _
+      },
+g:\albion\outside\bbsetup\src\messages.c  120  Info 785: Too few initializers
+    for aggregate
+      _
+      "Bitte Zielpfad w„hlen:",
+g:\albion\outside\bbsetup\src\messages.c  140  Info 786: String concatenation
+    within initializer
+   _
+   }
+g:\albion\outside\bbsetup\src\messages.c  149  Info 785: Too few initializers
+    for aggregate
+
+--- Module:   g:\albion\outside\bbsetup\src\script.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+_
+{
+g:\albion\outside\bbsetup\src\script.c  18  Warning 578: Declaration of
+    'ScriptFilename' hides 'ScriptFilename' (line 13, file global.h)
+                                                                               _
+   Script->Line = (UNCHAR**)THMalloc ( (Script->AnzLines+1) * sizeof(UNCHAR*) );
+g:\albion\outside\bbsetup\src\script.c  81  Error 64: Type mismatch
+    (assignment) (ptrs to ptrs to signed/unsigned)
+                                                       _
+   Script->Line[ Script->AnzLines ] = Script->ScriptMem;
+g:\albion\outside\bbsetup\src\script.c  86  Error 64: Type mismatch
+    (assignment) (ptrs to signed/unsigned)
+                                                                 _
+         Script->Line[ Script->AnzLines ] = Script->ScriptMem+i+1;
+g:\albion\outside\bbsetup\src\script.c  97  Error 64: Type mismatch
+    (assignment) (ptrs to signed/unsigned)
+                               _
+      l=strlen (Script->Line[i]);
+g:\albion\outside\bbsetup\src\script.c  113  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                       _
+            strcpy (Script->Line[i]+j+1, Script->Line[i]+j+2);
+g:\albion\outside\bbsetup\src\script.c  131  Error 64: Type mismatch (arg. no.
+    1) (ptrs to signed/unsigned)
+g:\albion\outside\bbsetup\src\script.c  131  Error 64: Type mismatch (arg. no.
+    2) (ptrs to qualification,signed/unsigned)
+                                    _
+      while ( strlen(Script->Line[i]) > 0 &&
+g:\albion\outside\bbsetup\src\script.c  144  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                        _
+              ( (Script->Line[i])[strlen(Script->Line[i])-1] == 10 ||
+g:\albion\outside\bbsetup\src\script.c  145  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                        _
+                (Script->Line[i])[strlen(Script->Line[i])-1] == 13 ||
+g:\albion\outside\bbsetup\src\script.c  146  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                        _
+                (Script->Line[i])[strlen(Script->Line[i])-1] == 26 ||
+g:\albion\outside\bbsetup\src\script.c  147  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                        _
+                (Script->Line[i])[strlen(Script->Line[i])-1] == 32 ||
+g:\albion\outside\bbsetup\src\script.c  148  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                        _
+                (Script->Line[i])[strlen(Script->Line[i])-1] == 9))
+g:\albion\outside\bbsetup\src\script.c  149  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                 _
+          (Script->Line[i])[strlen(Script->Line[i])-1] = 0;
+g:\albion\outside\bbsetup\src\script.c  152  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+_
+{
+g:\albion\outside\bbsetup\src\script.c  161  Warning 578: Declaration of
+    'TokenTable' hides 'TokenTable' (line 28, file global.h)
+                                           _
+                   Script->Line[Linenumber],
+g:\albion\outside\bbsetup\src\script.c  176  Error 64: Type mismatch (arg. no.
+    2) (ptrs to qualification,signed/unsigned)
+                                      _
+         if (strcmp (Script->Line[i]+1, Label) ==0 )
+g:\albion\outside\bbsetup\src\script.c  204  Error 64: Type mismatch (arg. no.
+    1) (ptrs to qualification,signed/unsigned)
+                                                           _
+   Token = SCRIPT_GetTokenNumber (Script, Line, &TokenTable);
+g:\albion\outside\bbsetup\src\script.c  233  Warning 545: Suspicious use of &
+g:\albion\outside\bbsetup\src\script.c  233  Error 64: Type mismatch (arg. no.
+    3) (struct STRUCT_TOKEN * = struct STRUCT_TOKEN (*)[])
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  264  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  270  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  292  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  301  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  310  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  319  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  326  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  333  Warning 527: Unreachable
+                                                          _
+         Copy (Parameter[1], Parameter[2], AnzParameter==4);
+g:\albion\outside\bbsetup\src\script.c  375  Info 730: Boolean argument to
+    function
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  591  Warning 527: Unreachable
+                                     _
+   strcpy (Buffer, Script->Line[Line]);
+g:\albion\outside\bbsetup\src\script.c  695  Error 64: Type mismatch (arg. no.
+    2) (ptrs to qualification,signed/unsigned)
+
+--- Module:   g:\albion\outside\bbsetup\src\setup.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                          _
+   SetupFilename = argv[0];
+g:\albion\outside\bbsetup\src\setup.c  39  Error 64: Type mismatch (assignment)
+    (ptrs to signed/unsigned)
+                             _
+         if (stricmp (argv[1], "/VGA")==0)
+g:\albion\outside\bbsetup\src\setup.c  60  Error 64: Type mismatch (arg. no. 1)
+    (ptrs to qualification,signed/unsigned)
+                                      _
+         else ScriptFilename = argv[1];
+g:\albion\outside\bbsetup\src\setup.c  65  Error 64: Type mismatch (assignment)
+    (ptrs to signed/unsigned)
+                             _
+         if (stricmp (argv[1], "/VGA")==0)
+g:\albion\outside\bbsetup\src\setup.c  70  Error 64: Type mismatch (arg. no. 1)
+    (ptrs to qualification,signed/unsigned)
+                                    _
+            ScriptFilename = argv[2];
+g:\albion\outside\bbsetup\src\setup.c  73  Error 64: Type mismatch (assignment)
+    (ptrs to signed/unsigned)
+                                  _
+         else if (stricmp (argv[2], "/VGA")==0)
+g:\albion\outside\bbsetup\src\setup.c  75  Error 64: Type mismatch (arg. no. 1)
+    (ptrs to qualification,signed/unsigned)
+                                    _
+            ScriptFilename = argv[1];
+g:\albion\outside\bbsetup\src\setup.c  78  Error 64: Type mismatch (assignment)
+    (ptrs to signed/unsigned)
+
+--- Module:   g:\albion\outside\bbsetup\src\token.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+
+--- Module:   g:\albion\outside\bbsetup\src\vesa.c 
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                _
+   Regs.x.ebx = (size + 15) >> 4; //Number of paragraphs requested
+g:\albion\outside\bbsetup\src\vesa.c  50  Info 704: Shift right of signed
+    quantity (long)
+
+    --- Wrap-up for Module: g:\albion\outside\bbsetup\src\vesa.c
+
+Info 754: local structure member VgaInfoBlock::Capabilities (line 15, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member VgaInfoBlock::Dummy (line 18, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member VesaModeInfoBlock::Dummy (line 24, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::ESI (line 31, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::EBP (line 32, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::reserved_by_system (line 33, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::EBX (line 34, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::EDX (line 35, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::flags (line 38, file
+    g:\albion\outside\bbsetup\src\vesa.c) not referenced
+Info 754: local structure member rminfo::DS (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::FS (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::GS (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::IP (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::CS (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::SP (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+Info 754: local structure member rminfo::SS (line 39, file g:\albion\outside\bbsetup\src\vesa.c)
+    not referenced
+
+--- Module:   g:\albion\outside\bbsetup\src\window.c 
+                                    _
+void InternalError (SISHORT ErrNum, ...);
+proto.h  37  Warning 579: parameter preceding ellipsis has invalid type
+                                         _
+                RESOLUTION_X/2 - Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  60  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  60  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  60  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                         _
+                RESOLUTION_X/2 + Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  62  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  62  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  62  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + 4,
+g:\albion\outside\bbsetup\src\window.c  71  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  71  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  71  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - 4,
+g:\albion\outside\bbsetup\src\window.c  73  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  73  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  73  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                            _
+                   RESOLUTION_X/2 - Size*1.6 + 5,
+g:\albion\outside\bbsetup\src\window.c  79  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  79  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  79  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                            _
+                   RESOLUTION_X/2 + Size*1.6 - 4,
+g:\albion\outside\bbsetup\src\window.c  81  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  81  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  81  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                               _
+                                       RESOLUTION_X/2 - Size*1.6 + (MENU_BORDER_WIDTH + 3),
+g:\albion\outside\bbsetup\src\window.c  89  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  89  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  89  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                               _
+                                       RESOLUTION_X/2 + Size*1.6 - (MENU_BORDER_WIDTH + 3),
+g:\albion\outside\bbsetup\src\window.c  91  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  91  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  91  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + 5,
+g:\albion\outside\bbsetup\src\window.c  101  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  101  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  101  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - 5,
+g:\albion\outside\bbsetup\src\window.c  103  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  103  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  103  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + (5+1),
+g:\albion\outside\bbsetup\src\window.c  110  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  110  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  110  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - (5+1),
+g:\albion\outside\bbsetup\src\window.c  112  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  112  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  112  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                       _
+                               RESOLUTION_X/2 - Size*1.6 + (5+2),
+g:\albion\outside\bbsetup\src\window.c  121  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  121  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  121  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                       _
+                               RESOLUTION_X/2 + Size*1.6 - (5+2),
+g:\albion\outside\bbsetup\src\window.c  123  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  123  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  123  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                                               _
+                   RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4+1,
+g:\albion\outside\bbsetup\src\window.c  132  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  132  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  132  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                                               _
+                   RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4-1,
+g:\albion\outside\bbsetup\src\window.c  134  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  134  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  134  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                                                   _
+                                       RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4 + (1+1),
+g:\albion\outside\bbsetup\src\window.c  142  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  142  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  142  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                                                   _
+                                       RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4 - (1+1),
+g:\albion\outside\bbsetup\src\window.c  144  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  144  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  144  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                           _
+                  RESOLUTION_X/2 - Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  158  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  158  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  158  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                           _
+                  RESOLUTION_X/2 + Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  160  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  160  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  160  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                                          _
+                     (SILONG)(RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4+1),
+g:\albion\outside\bbsetup\src\window.c  168  Warning 653: Possible loss of
+    fraction
+                                                                          _
+                     (SILONG)(RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4-1),
+g:\albion\outside\bbsetup\src\window.c  170  Warning 653: Possible loss of
+    fraction
+                                         _
+                RESOLUTION_X/2 - Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  201  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  201  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  201  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                         _
+                RESOLUTION_X/2 + Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  203  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  203  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  203  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + 4,
+g:\albion\outside\bbsetup\src\window.c  212  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  212  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  212  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - 4,
+g:\albion\outside\bbsetup\src\window.c  214  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  214  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  214  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + 5,
+g:\albion\outside\bbsetup\src\window.c  220  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  220  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  220  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - 4,
+g:\albion\outside\bbsetup\src\window.c  222  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  222  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  222  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                               _
+                                       RESOLUTION_X/2 - Size*1.6 + (MENU_BORDER_WIDTH + 3),
+g:\albion\outside\bbsetup\src\window.c  232  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  232  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  232  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                               _
+                                       RESOLUTION_X/2 + Size*1.6 - (MENU_BORDER_WIDTH + 3),
+g:\albion\outside\bbsetup\src\window.c  234  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  234  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  234  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + 5,
+g:\albion\outside\bbsetup\src\window.c  244  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  244  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  244  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - 5,
+g:\albion\outside\bbsetup\src\window.c  246  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  246  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  246  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                             _
+                    RESOLUTION_X/2 - Size*1.6 + (5+1),
+g:\albion\outside\bbsetup\src\window.c  253  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  253  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  253  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                             _
+                    RESOLUTION_X/2 + Size*1.6 - (5+1),
+g:\albion\outside\bbsetup\src\window.c  255  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  255  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  255  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                       _
+                               RESOLUTION_X/2 - Size*1.6 + (5+2),
+g:\albion\outside\bbsetup\src\window.c  264  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  264  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  264  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                       _
+                               RESOLUTION_X/2 + Size*1.6 - (5+2),
+g:\albion\outside\bbsetup\src\window.c  266  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  266  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  266  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                                               _
+                   RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4+1,
+g:\albion\outside\bbsetup\src\window.c  275  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  275  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  275  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                                                                   _
+                                       RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4 + (1+1),
+g:\albion\outside\bbsetup\src\window.c  285  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  285  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  285  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                               _
+                   RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4-1,
+g:\albion\outside\bbsetup\src\window.c  298  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  298  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  298  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                                                   _
+                                       RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4 - (1+1),
+g:\albion\outside\bbsetup\src\window.c  308  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  308  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  308  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int
+                                           _
+                  RESOLUTION_X/2 - Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  322  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  322  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  322  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                           _
+                  RESOLUTION_X/2 + Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  324  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  324  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  324  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                                               _
+                            (SILONG)(RESOLUTION_X/2 - Size + MENU_BORDER_WIDTH*1.4+1),
+g:\albion\outside\bbsetup\src\window.c  333  Warning 653: Possible loss of
+    fraction
+                                                                               _
+                            (SILONG)(RESOLUTION_X/2 + Size - MENU_BORDER_WIDTH*1.4-1),
+g:\albion\outside\bbsetup\src\window.c  342  Warning 653: Possible loss of
+    fraction
+                                                               _
+               for (d=0; d<strlen(pMenu->MenuEntry[c].Shortcut); d++)
+g:\albion\outside\bbsetup\src\window.c  448  Warning 574: Signed-unsigned mix
+    with relational
+_
+}
+g:\albion\outside\bbsetup\src\window.c  1281  Warning 529: Regs (line 1212) not
+    subsequently referenced
+                                           _
+                   RESOLUTION_X/2 - Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  1633  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  1633  Warning 524: Loss of precision
+    (arg. no. 2) (double to int)
+g:\albion\outside\bbsetup\src\window.c  1633  Info 747: Significant prototype
+    coercion (arg. no. 2) double to int
+                                           _
+                   RESOLUTION_X/2 + Size*1.6,
+g:\albion\outside\bbsetup\src\window.c  1635  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  1635  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  1635  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                        _
+                               RESOLUTION_X/2 - Size*1.6 + MENU_BORDER_WIDTH+2,
+g:\albion\outside\bbsetup\src\window.c  1645  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  1645  Warning 524: Loss of precision
+    (arg. no. 4) (double to int)
+g:\albion\outside\bbsetup\src\window.c  1645  Info 747: Significant prototype
+    coercion (arg. no. 4) double to int
+                                                        _
+                               RESOLUTION_X/2 + Size*1.6 - MENU_BORDER_WIDTH-2,
+g:\albion\outside\bbsetup\src\window.c  1647  Warning 653: Possible loss of
+    fraction
+g:\albion\outside\bbsetup\src\window.c  1647  Warning 524: Loss of precision
+    (arg. no. 6) (double to int)
+g:\albion\outside\bbsetup\src\window.c  1647  Info 747: Significant prototype
+    coercion (arg. no. 6) double to int

@@ -1,0 +1,487 @@
+# Makefile for Albion
+# PC CD-ROM version
+
+# Optimize implicit rule checking
+.OPTIMIZE
+
+# Do not output commands
+.SILENT
+
+
+# Define version number
+Version_nr = 0
+Subversion_nr = 78
+
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+# Default user is Jurie
+!ifndef User
+User = Jurie
+!endif
+
+
+!ifeq User Jurie
+
+# Define library and source directories
+Ldir = G:\ALBION\LIB
+Ldir2 = G:\PCLIB32\LIB
+Ldir3 = G:\AIL\AIL_303
+Sdir = G:\ALBION\SRC
+Pdir = G:\ALBION
+
+!else
+
+# Define library and source directories
+Ldir = D:\ALBION\LIB
+Ldir2 = D:\ALBION\LIB
+Ldir3 = D:\ALBION\LIB
+Sdir = D:\ALBION\SRC
+Pdir = D:\ALBION
+
+!endif
+
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G OP CASEEXACT OP NOREDEFS OP STACK=16K OP CACHE
+
+#Compiler = *wcc386 /w1 /d0 /od /5r
+#Fast_compiler = $(Compiler)
+
+Compiler = *wcc386 /w1 /d0 /ox /5r
+Fast_compiler = *wcc386 /w1 /d0 /ox /5r
+
+#Compiler = *wcc386 /w1 /d0 /oneatx /5r /fp3 /zp4
+#Fast_compiler = *wcc386 /w1 /d0 /oneatx /5r /fp3 /zp4
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake	= *wlib -n
+Linker = *wlink SYSTEM DOS4G DEBUG ALL OP CASEEXACT OP NOREDEFS OP STACK=16K OP CACHE
+Compiler = *wcc386 /w1 /d2 /od /5r
+Fast_compiler = *wcc386 /w1 /d0 /ox /5r
+
+!endif
+
+
+# Define object files
+Object_files = $(Ldir)\MAIN.OBJ &
+	$(Ldir)\GAME.OBJ &
+	$(Ldir)\MAP.OBJ &
+	$(Ldir)\2D_MAP.OBJ &
+	$(Ldir)\2D_COLL.OBJ &
+	$(Ldir)\2D_PATH.OBJ &
+	$(Ldir)\2D_DISPL.OBJ &
+	$(Ldir)\3D_MAP.OBJ &
+	$(Ldir)\3D_PREP.OBJ &
+	$(Ldir)\3D_MOVE.OBJ &
+	$(Ldir)\3D_SEL.OBJ &
+	$(Ldir)\SPECITEM.OBJ &
+	$(Ldir)\ICCHANGE.OBJ &
+	$(Ldir)\MAP_PUM.OBJ &
+	$(Ldir)\ANIMATE.OBJ &
+	$(Ldir)\XFTYPES.OBJ &
+	$(Ldir)\SAVELOAD.OBJ &
+	$(Ldir)\GRAPHICS.OBJ &
+	$(Ldir)\DIAGNOST.OBJ &
+	$(Ldir)\INVENTO.OBJ &
+	$(Ldir)\INVLEFT.OBJ &
+	$(Ldir)\BATFORM.OBJ &
+	$(Ldir)\INVITEMS.OBJ &
+	$(Ldir)\EXAMITEM.OBJ &
+	$(Ldir)\STATAREA.OBJ &
+	$(Ldir)\EVELOGIC.OBJ &
+	$(Ldir)\PRTLOGIC.OBJ &
+	$(Ldir)\EVENTS.OBJ &
+	$(Ldir)\QUERMOD.OBJ &
+	$(Ldir)\NPCS.OBJ &
+	$(Ldir)\NPCSOUND.OBJ &
+	$(Ldir)\GAMETIME.OBJ &
+	$(Ldir)\GAMETEXT.OBJ &
+	$(Ldir)\DIALOGUE.OBJ &
+	$(Ldir)\MUSIC.OBJ &
+	$(Ldir)\ITMLOGIC.OBJ &
+	$(Ldir)\COMBAT.OBJ &
+	$(Ldir)\COMACTS.OBJ &
+	$(Ldir)\MONLOGIC.OBJ &
+	$(Ldir)\COMSHOW.OBJ &
+	$(Ldir)\COMOBS.OBJ &
+	$(Ldir)\TACTICAL.OBJ &
+	$(Ldir)\CHEST.OBJ &
+	$(Ldir)\DOOR.OBJ &
+	$(Ldir)\AUTOMAP.OBJ &
+	$(Ldir)\MAGIC.OBJ &
+	$(Ldir)\SPELLS.OBJ &
+	$(Ldir)\APRES.OBJ &
+	$(Ldir)\PLACES.OBJ &
+	$(Ldir)\MERCHANT.OBJ &
+	$(Ldir)\CAMP.OBJ &
+	$(Ldir)\MAINMENU.OBJ &
+	$(Ldir)\GOLDFOOD.OBJ &
+	$(Ldir)\SCRIPT.OBJ &
+	$(Ldir)\SCROLL.OBJ &
+	$(Ldir)\XLOAD.OBJ &
+	$(Ldir)\HDOB.OBJ &
+	$(Ldir)\GFXFUNC.OBJ &
+	$(Ldir)\SORT.OBJ &
+	$(Ldir)\FINDCOL.OBJ &
+	$(Ldir)\FLC.OBJ &
+	$(Ldir)\FASTFLC.OBJ &
+	$(Ldir)\FLCVAR.OBJ &
+	$(Ldir)\CONTROL.OBJ &
+	$(Ldir)\FONT.OBJ &
+	$(Ldir)\USERFACE.OBJ &
+	$(Ldir)\POPUP.OBJ &
+	$(Ldir)\SCROLBAR.OBJ &
+	$(Ldir)\ITEMLIST.OBJ &
+	$(Ldir)\BUTTONS.OBJ &
+	$(Ldir)\INPUT.OBJ &
+	$(Ldir)\INPUTNR.OBJ &
+	$(Ldir)\TEXTWIN.OBJ &
+	$(Ldir)\MEMBRSEL.OBJ &
+	$(Ldir)\ITEMSEL.OBJ &
+	$(Ldir)\BOOLREQ.OBJ &
+	$(Ldir)\SELWIN.OBJ &
+	$(Ldir)\COLOURS.OBJ &
+	$(Ldir3)\DLLLOAD.OBJ
+
+Library_files = $(Ldir)\TEXT.LIB &
+	$(Ldir)\COMMAGIC.LIB &
+	$(Ldir)\ZOOMFUNC.LIB &
+	$(Ldir)\3DM.LIB &
+	$(Ldir2)\PCBASE.LIB &
+	$(Ldir2)\BBMEM.LIB &
+	$(Ldir3)\AIL.LIB
+
+
+!ifeq User Jurie
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;G:\ALBION\LIB;G:\AIL\AIL_303
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB;G:\ALBION\LIB
+
+# .C-files can be found in these directories :
+.C : $(Sdir);$(Sdir)\EXTRA;$(Sdir)\UI;$(Sdir)\TEXT;$(Sdir)\COMMAGIC;$(Sdir)\COMBAT;$(Sdir)\MAP;
+
+!else
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=C:\CC\WC\H;$(Ldir);D:\ALBION\LIB
+	set LIB=C:\CC\WC\LIB386\DOS;C:\CC\WC\LIB386;$(Ldir);D:\ALBION\LIB
+
+# .C-files can be found in these directories :
+.C : $(Sdir);$(Sdir)\COMMAGIC;
+
+!endif
+
+
+# .C-files should be turned into .OBJ-files using the following command list :
+# (The first dependent of the target should be the main source-file.)
+.C.OBJ :
+	$(Compiler) $[@ -fo$^*.OBJ
+
+
+# This is the main target, which should not be erased if anything goes wrong :
+!ifeq Mode Production
+
+$(Pdir)\ALBION.EXE : $(Object_files) $(Library_files) $(Sdir)\MAKEFILE
+	$(Compiler) $(Sdir)\VERSION.C -fo$(Ldir)\VERSION.OBJ &
+	-dALBION_VERSION_NR=$(Version_nr) -dALBION_SUBVERSION_NR=$(Subversion_nr)
+	$(Linker) FILE {$(Ldir)\VERSION.OBJ $(Object_files)} &
+		LIBRARY {$(Library_files)} &
+		NAME $(Pdir)\ALBION.EXE
+	cd $(Pdir)
+
+!else
+
+$(Pdir)\ALBION.EXE : $(Object_files) $(Library_files) $(Sdir)\MAKEFILE
+	$(Compiler) $(Sdir)\VERSION.C -fo$(Ldir)\VERSION.OBJ &
+	-dALBION_VERSION_NR=$(Version_nr) -dALBION_SUBVERSION_NR=$(Subversion_nr)
+	$(Linker) FILE {$(Ldir)\VERSION.OBJ $(Object_files)} &
+		LIBRARY {$(Library_files)} &
+		NAME $(Pdir)\ALBION.EXE
+	cd $(Pdir)
+
+!endif
+
+
+!ifeq User Jurie
+
+# These are game objects :
+
+$(Ldir)\MAIN.OBJ : $(Sdir)\MAIN.C .AUTODEPEND
+
+$(Ldir)\GAME.OBJ : $(Sdir)\GAME.C .AUTODEPEND
+
+$(Ldir)\ANIMATE.OBJ : $(Sdir)\ANIMATE.C .AUTODEPEND
+
+$(Ldir)\XFTYPES.OBJ : $(Sdir)\XFTYPES.C .AUTODEPEND
+
+$(Ldir)\SAVELOAD.OBJ : $(Sdir)\SAVELOAD.C .AUTODEPEND
+
+$(Ldir)\GRAPHICS.OBJ : $(Sdir)\GRAPHICS.C .AUTODEPEND
+
+$(Ldir)\DIAGNOST.OBJ : $(Sdir)\DIAGNOST.C .AUTODEPEND
+
+$(Ldir)\INVENTO.OBJ : $(Sdir)\INVENTO.C .AUTODEPEND
+
+$(Ldir)\INVLEFT.OBJ : $(Sdir)\INVLEFT.C .AUTODEPEND
+
+$(Ldir)\BATFORM.OBJ : $(Sdir)\BATFORM.C .AUTODEPEND
+
+$(Ldir)\INVITEMS.OBJ : $(Sdir)\INVITEMS.C .AUTODEPEND
+
+$(Ldir)\EXAMITEM.OBJ : $(Sdir)\EXAMITEM.C .AUTODEPEND
+
+$(Ldir)\STATAREA.OBJ : $(Sdir)\STATAREA.C .AUTODEPEND
+
+$(Ldir)\EVELOGIC.OBJ : $(Sdir)\EVELOGIC.C .AUTODEPEND
+
+$(Ldir)\PRTLOGIC.OBJ : $(Sdir)\PRTLOGIC.C .AUTODEPEND
+
+$(Ldir)\EVENTS.OBJ : $(Sdir)\EVENTS.C .AUTODEPEND
+
+$(Ldir)\QUERMOD.OBJ : $(Sdir)\QUERMOD.C .AUTODEPEND
+
+$(Ldir)\NPCS.OBJ : $(Sdir)\NPCS.C .AUTODEPEND
+
+$(Ldir)\NPCSOUND.OBJ : $(Sdir)\NPCSOUND.C .AUTODEPEND
+
+$(Ldir)\GAMETIME.OBJ : $(Sdir)\GAMETIME.C .AUTODEPEND
+
+$(Ldir)\GAMETEXT.OBJ : $(Sdir)\GAMETEXT.C .AUTODEPEND
+
+$(Ldir)\DIALOGUE.OBJ : $(Sdir)\DIALOGUE.C .AUTODEPEND
+
+$(Ldir)\MUSIC.OBJ : $(Sdir)\MUSIC.C .AUTODEPEND
+
+$(Ldir)\ITMLOGIC.OBJ : $(Sdir)\ITMLOGIC.C .AUTODEPEND
+
+$(Ldir)\CHEST.OBJ : $(Sdir)\CHEST.C .AUTODEPEND
+
+$(Ldir)\DOOR.OBJ : $(Sdir)\DOOR.C .AUTODEPEND
+
+$(Ldir)\AUTOMAP.OBJ : $(Sdir)\AUTOMAP.C .AUTODEPEND
+
+$(Ldir)\MAGIC.OBJ : $(Sdir)\MAGIC.C .AUTODEPEND
+
+$(Ldir)\SPELLS.OBJ : $(Sdir)\SPELLS.C .AUTODEPEND
+
+$(Ldir)\APRES.OBJ : $(Sdir)\APRES.C .AUTODEPEND
+
+$(Ldir)\PLACES.OBJ : $(Sdir)\PLACES.C .AUTODEPEND
+
+$(Ldir)\MERCHANT.OBJ : $(Sdir)\MERCHANT.C .AUTODEPEND
+
+$(Ldir)\CAMP.OBJ : $(Sdir)\CAMP.C .AUTODEPEND
+
+$(Ldir)\MAINMENU.OBJ : $(Sdir)\MAINMENU.C .AUTODEPEND
+
+$(Ldir)\GOLDFOOD.OBJ : $(Sdir)\GOLDFOOD.C .AUTODEPEND
+
+$(Ldir)\SCRIPT.OBJ : $(Sdir)\SCRIPT.C .AUTODEPEND
+
+
+# These are map objects :
+
+$(Ldir)\MAP.OBJ : $(Sdir)\MAP\MAP.C .AUTODEPEND
+
+$(Ldir)\2D_MAP.OBJ : $(Sdir)\MAP\2D_MAP.C .AUTODEPEND
+
+$(Ldir)\2D_DISPL.OBJ : $(Sdir)\MAP\2D_DISPL.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\MAP\2D_DISPL.C -fo$(Ldir)\2D_DISPL.OBJ
+
+$(Ldir)\2D_COLL.OBJ : $(Sdir)\MAP\2D_COLL.C .AUTODEPEND
+
+$(Ldir)\2D_PATH.OBJ : $(Sdir)\MAP\2D_PATH.C .AUTODEPEND
+
+$(Ldir)\3D_MAP.OBJ : $(Sdir)\MAP\3D_MAP.C .AUTODEPEND
+
+$(Ldir)\3D_PREP.OBJ : $(Sdir)\MAP\3D_PREP.C .AUTODEPEND
+
+$(Ldir)\3D_MOVE.OBJ : $(Sdir)\MAP\3D_MOVE.C .AUTODEPEND
+
+$(Ldir)\3D_SEL.OBJ : $(Sdir)\MAP\3D_SEL.C .AUTODEPEND
+
+$(Ldir)\SPECITEM.OBJ : $(Sdir)\MAP\SPECITEM.C .AUTODEPEND
+
+$(Ldir)\ICCHANGE.OBJ : $(Sdir)\MAP\ICCHANGE.C .AUTODEPEND
+
+$(Ldir)\MAP_PUM.OBJ : $(Sdir)\MAP\MAP_PUM.C .AUTODEPEND
+
+
+# These are combat objects :
+
+$(Ldir)\COMBAT.OBJ : $(Sdir)\COMBAT\COMBAT.C .AUTODEPEND
+
+$(Ldir)\COMACTS.OBJ : $(Sdir)\COMBAT\COMACTS.C .AUTODEPEND
+
+$(Ldir)\MONLOGIC.OBJ : $(Sdir)\COMBAT\MONLOGIC.C .AUTODEPEND
+
+$(Ldir)\COMSHOW.OBJ : $(Sdir)\COMBAT\COMSHOW.C .AUTODEPEND
+
+$(Ldir)\COMOBS.OBJ : $(Sdir)\COMBAT\COMOBS.C .AUTODEPEND
+
+$(Ldir)\TACTICAL.OBJ : $(Sdir)\COMBAT\TACTICAL.C .AUTODEPEND
+
+
+# These are user interface objects :
+
+$(Ldir)\CONTROL.OBJ : $(Sdir)\UI\CONTROL.C .AUTODEPEND
+
+$(Ldir)\USERFACE.OBJ : $(Sdir)\UI\USERFACE.C .AUTODEPEND
+
+$(Ldir)\FONT.OBJ : $(Sdir)\UI\FONT.C .AUTODEPEND
+
+$(Ldir)\POPUP.OBJ : $(Sdir)\UI\POPUP.C .AUTODEPEND
+
+$(Ldir)\SCROLBAR.OBJ : $(Sdir)\UI\SCROLBAR.C .AUTODEPEND
+
+$(Ldir)\ITEMLIST.OBJ : $(Sdir)\UI\ITEMLIST.C .AUTODEPEND
+
+$(Ldir)\BUTTONS.OBJ : $(Sdir)\UI\BUTTONS.C .AUTODEPEND
+
+$(Ldir)\INPUT.OBJ : $(Sdir)\UI\INPUT.C .AUTODEPEND
+
+$(Ldir)\INPUTNR.OBJ : $(Sdir)\UI\INPUTNR.C .AUTODEPEND
+
+$(Ldir)\TEXTWIN.OBJ : $(Sdir)\UI\TEXTWIN.C .AUTODEPEND
+
+$(Ldir)\MEMBRSEL.OBJ : $(Sdir)\UI\MEMBRSEL.C .AUTODEPEND
+
+$(Ldir)\ITEMSEL.OBJ : $(Sdir)\UI\ITEMSEL.C .AUTODEPEND
+
+$(Ldir)\BOOLREQ.OBJ : $(Sdir)\UI\BOOLREQ.C .AUTODEPEND
+
+$(Ldir)\SELWIN.OBJ : $(Sdir)\UI\SELWIN.C .AUTODEPEND
+
+$(Ldir)\COLOURS.OBJ : $(Sdir)\UI\COLOURS.C .AUTODEPEND
+
+
+# These are extra objects :
+
+$(Ldir)\SCROLL.OBJ : $(Sdir)\EXTRA\SCROLL.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\SCROLL.C -fo$(Ldir)\SCROLL.OBJ
+
+$(Ldir)\XLOAD.OBJ : $(Sdir)\EXTRA\XLOAD.C .AUTODEPEND
+
+$(Ldir)\HDOB.OBJ : $(Sdir)\EXTRA\HDOB.C .AUTODEPEND
+
+$(Ldir)\GFXFUNC.OBJ : $(Sdir)\EXTRA\GFXFUNC.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\GFXFUNC.C -fo$(Ldir)\GFXFUNC.OBJ
+
+$(Ldir)\SORT.OBJ : $(Sdir)\EXTRA\SORT.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\SORT.C -fo$(Ldir)\SORT.OBJ
+
+$(Ldir)\FINDCOL.OBJ : $(Sdir)\EXTRA\FINDCOL.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\FINDCOL.C -fo$(Ldir)\FINDCOL.OBJ
+
+$(Ldir)\FLC.OBJ : $(Sdir)\EXTRA\FLC.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\FLC.C -fo$(Ldir)\FLC.OBJ
+
+$(Ldir)\FASTFLC.OBJ : $(Sdir)\EXTRA\FASTFLC.C .AUTODEPEND
+	$(Fast_compiler) $(Sdir)\EXTRA\FASTFLC.C -fo$(Ldir)\FASTFLC.OBJ
+
+$(Ldir)\FLCVAR.OBJ : $(Sdir)\EXTRA\FLCVAR.C .AUTODEPEND
+
+
+# This is the text library :
+
+$(Ldir)\TEXT.LIB : $(Sdir)\TEXT\TEXTVAR.OBJ &
+	$(Sdir)\TEXT\TEXT.OBJ &
+	$(Sdir)\TEXT\TEXTCOMM.OBJ &
+	$(Sdir)\TEXT\TEXTPROC.OBJ &
+	$(Sdir)\TEXT\TEXTDISP.OBJ &
+	$(Sdir)\TEXT\TEXTGFX.OBJ &
+	$(Sdir)\TEXT\TEXTMNG.OBJ
+	$(Libmake) $(Ldir)\TEXT.LIB -+$(Sdir)\TEXT\TEXTVAR.OBJ &
+		-+$(Sdir)\TEXT\TEXT.OBJ &
+		-+$(Sdir)\TEXT\TEXTCOMM.OBJ &
+		-+$(Sdir)\TEXT\TEXTPROC.OBJ &
+		-+$(Sdir)\TEXT\TEXTDISP.OBJ &
+		-+$(Sdir)\TEXT\TEXTGFX.OBJ &
+		-+$(Sdir)\TEXT\TEXTMNG.OBJ
+
+$(Sdir)\TEXT\TEXTVAR.OBJ : $(Sdir)\TEXT\TEXTVAR.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXT.OBJ : $(Sdir)\TEXT\TEXT.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXTCOMM.OBJ : $(Sdir)\TEXT\TEXTCOMM.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXTPROC.OBJ : $(Sdir)\TEXT\TEXTPROC.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXTDISP.OBJ : $(Sdir)\TEXT\TEXTDISP.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXTGFX.OBJ : $(Sdir)\TEXT\TEXTGFX.C .AUTODEPEND
+
+$(Sdir)\TEXT\TEXTMNG.OBJ : $(Sdir)\TEXT\TEXTMNG.C .AUTODEPEND
+
+
+# This is the combat magic library :
+
+$(Ldir)\COMMAGIC.LIB : $(Sdir)\COMMAGIC\COMMAG0.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG1.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG2.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG3.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG4.OBJ &
+	$(Sdir)\COMMAGIC\COMMSUB.OBJ
+	$(Libmake) $(Ldir)\COMMAGIC.LIB -+$(Sdir)\COMMAGIC\COMMAG0.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG1.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG2.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG3.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG4.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMSUB.OBJ
+
+$(Sdir)\COMMAGIC\COMMAG0.OBJ : $(Sdir)\COMMAGIC\COMMAG0.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG1.OBJ : $(Sdir)\COMMAGIC\COMMAG1.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG2.OBJ : $(Sdir)\COMMAGIC\COMMAG2.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG3.OBJ : $(Sdir)\COMMAGIC\COMMAG3.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG4.OBJ : $(Sdir)\COMMAGIC\COMMAG4.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMSUB.OBJ : $(Sdir)\COMMAGIC\COMMSUB.C .AUTODEPEND
+
+!else
+
+
+# This is the combat magic library :
+
+$(Ldir)\COMMAGIC.LIB : $(Sdir)\COMMAGIC\COMMAG0.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG1.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG2.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG3.OBJ &
+	$(Sdir)\COMMAGIC\COMMAG4.OBJ &
+	$(Sdir)\COMMAGIC\COMMSUB.OBJ
+	$(Libmake) $(Ldir)\COMMAGIC.LIB -+$(Sdir)\COMMAGIC\COMMAG0.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG1.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG2.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG3.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMAG4.OBJ &
+		-+$(Sdir)\COMMAGIC\COMMSUB.OBJ
+
+$(Sdir)\COMMAGIC\COMMAG0.OBJ : $(Sdir)\COMMAGIC\COMMAG0.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG1.OBJ : $(Sdir)\COMMAGIC\COMMAG1.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG2.OBJ : $(Sdir)\COMMAGIC\COMMAG2.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG3.OBJ : $(Sdir)\COMMAGIC\COMMAG3.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMAG4.OBJ : $(Sdir)\COMMAGIC\COMMAG4.C .AUTODEPEND
+
+$(Sdir)\COMMAGIC\COMMSUB.OBJ : $(Sdir)\COMMAGIC\COMMSUB.C .AUTODEPEND
+
+!endif
+

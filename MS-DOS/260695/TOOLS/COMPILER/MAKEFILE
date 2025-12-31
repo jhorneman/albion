@@ -1,0 +1,25 @@
+.ERASE
+
+Pdir = G:\ALBION\TOOLS
+Ldir = G:\MODULES\LIB
+Ldir2 = G:\PCLIB32\LIB
+Sdir = G:\ALBION\TOOLS\COMPILER
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G OP CASEEXACT OP NOREDEFS OP STACK=16K OP MAP
+Compiler = WCC386 /d2 /od
+
+.BEFORE
+	cd $(Sdir)
+
+
+$(Pdir)\COMPILE.EXE : $(Sdir)\COMPILE.OBJ $(Sdir)\MAIN.OBJ
+	$(Linker) @$(Sdir)\COMPILE.LST
+
+
+$(Sdir)\COMPILE.OBJ : $(Sdir)\COMPILE.C
+	$(Compiler) COMPILE.C
+
+$(Sdir)\MAIN.OBJ : $(Sdir)\MAIN.C
+	$(Compiler) MAIN.C
+

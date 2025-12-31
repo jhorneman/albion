@@ -1,0 +1,40 @@
+
+ModInit
+	#if FALSE
+	/* Make background buffer and OPM */
+	Dialogue_background_handle =
+	 MEM_Allocate_memory(DIALOGUE_WINDOW_WIDTH * DIALOGUE_WINDOW_HEIGHT);
+
+	Ptr = MEM_Claim_pointer(Dialogue_background_handle);
+	OPM_New(DIALOGUE_WINDOW_WIDTH, DIALOGUE_WINDOW_HEIGHT, 1,
+	 &Dialogue_background_OPM, Ptr);
+	MEM_Free_pointer(Dialogue_background_handle);
+
+	/* Save background */
+	OPM_CopyOPMOPM(&Main_OPM, &Dialogue_background_OPM, DIALOGUE_WINDOW_X,
+	 DIALOGUE_WINDOW_Y, DIALOGUE_WINDOW_WIDTH, DIALOGUE_WINDOW_HEIGHT, 0, 0);
+	#endif
+
+ModExit
+	#if FALSE
+	/* Destroy background buffer and OPM */
+	OPM_Del(&Dialogue_background_OPM);
+	MEM_Free_memory(Dialogue_background_handle);
+	#endif
+
+DisInit
+	#if FALSE
+	/* Restore background */
+	OPM_CopyOPMOPM(&Dialogue_background_OPM, &Main_OPM, 0, 0,
+	 DIALOGUE_WINDOW_WIDTH, DIALOGUE_WINDOW_HEIGHT, DIALOGUE_WINDOW_X,
+	 DIALOGUE_WINDOW_Y);
+	#endif
+
+DisExit
+	#if FALSE
+	/* Restore background */
+	OPM_CopyOPMOPM(&Dialogue_background_OPM, &Main_OPM, 0, 0,
+	 DIALOGUE_WINDOW_WIDTH, DIALOGUE_WINDOW_HEIGHT, DIALOGUE_WINDOW_X,
+	 DIALOGUE_WINDOW_Y);
+	#endif
+

@@ -1,0 +1,2 @@
+bbdos.c(737): Warning! W202: Symbol 'ioptr' has been defined, but not referenced
+bbdos.c(1009): Warning! W202: Symbol 'filenameptr' has been defined, but not referenced

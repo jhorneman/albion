@@ -1,0 +1,134 @@
+/************
+ * NAME     : LIBTEST.C
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 19-7-1994
+ * PROJECT  :
+ * NOTES    :
+ * SEE ALSO :
+ ************/
+
+
+#include <stdio.h>
+
+/* Includes */
+
+#include <BBDEF.H>
+#include <BBBASMEM.h>
+#include <BBDOS.h>
+#include <BBDSA.H>
+#include <BBERROR.h>
+#include <BBEVENT.h>
+#include <BBOPM.h>
+#include <BBSYSTEM.h>
+
+void BBMAIN(void);
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BBMAIN
+ * FUNCTION  : Test PCLIB32.
+ * FILE      : LIBTEST.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 19.07.94 12:20
+ * LAST      : 19.07.94 12:20
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BBMAIN ( void )
+{
+	struct BBPALETTE palp;
+	struct SCREENPORT scrp;
+	struct OPM myprivateopm;
+	struct BBPOINT pnt;
+	SISHORT s,t,Quit_flag = FALSE;
+	UNSHORT x,y,colour;
+	UNBYTE a,b,c;
+
+	/* Main OPM mit Grîsse 360x240 1 Byte pro Pixel generieren */
+	if ( !OPM_New( 360, 240, 1, &myprivateopm, NULL ) ){
+		printf( "\n\nKonnte OPM nicht generieren !!!\n\n" );
+		return;
+	}
+
+	/* Bildschirm im CHAIN4 Modus mit Doublebuffer aufmachen */
+	if(!DSA_OpenScreen( &scrp, &myprivateopm, &palp, NULL, 0,0,SCREENTYPE_DOUBLEBUFFER)){
+		printf("DSA Screen Konnte nicht geîffnet werden! \n");
+		return;
+	}
+
+//  	DSA_SetPal(&scrp, &palp, 0, 256, 0);
+//	DSA_ActivatePal(&scrp );
+
+	/* Mauszeiger darstellen Achtung !!! setzt Farbe 0 auf Schwartz und 255 auf weiss */
+	SYSTEM_ShowMouseptr(SYSTEM_MousePointerNormal);
+
+	/* Gesamten Bildschirm aus dem Ram in beide Chain4 Bildschirme kopieren */
+	DSA_CopyMainOPMToScreen(&scrp,DSA_CMOPMTS_ALWAYS);
+	DSA_DoubleBuffer();
+	DSA_CopyMainOPMToScreen(&scrp,DSA_CMOPMTS_ALWAYS);
+
+	do
+	{
+		struct BLEV_Event_struct event;
+
+		/* Events generieren ( Auf Pc im Prinzip unnîtig da Events im Interrupt generiert werden ) */
+		SYSTEM_SystemTask();
+
+		/* Mausposition auslesen */
+		BLEV_GetMousePos(&pnt);
+
+		if( BLEV_GetEvent( &event ) )
+		{
+			switch( event.sl_eventtype )
+			{
+				/* linke Maustaste doppelclick */
+				case BLEV_MOUSELDBL:
+				{
+	 				Quit_flag = TRUE;
+					break;
+				}
+				case BLEV_MOUSERDBL:
+				{
+	 				Quit_flag = TRUE;
+					break;
+				}
+				/* rechte Maustaste losgelassen */
+				case BLEV_MOUSERDOWN:
+				{
+	 				Quit_flag = TRUE;
+					break;
+				}
+				/* rechte Maustaste gedrÅckt */
+				case BLEV_MOUSERUP:
+				{
+	 				Quit_flag = TRUE;
+					break;
+				}
+				case BLEV_KEYDOWN:
+				{
+					if(event.sl_key_code=='Q'){
+		 				Quit_flag = TRUE;
+					}
+					break;
+				}
+
+			}
+		}
+	}
+	while (!Quit_flag);
+
+	/* Bildschirm wieder schliessen */
+	DSA_CloseScreen(&scrp);
+
+	/* OPM freigeben */
+	OPM_Del(&myprivateopm);
+}
+

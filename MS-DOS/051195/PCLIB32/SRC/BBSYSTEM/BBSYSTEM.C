@@ -1,0 +1,1963 @@
+/************
+ * NAME     : BBSYSTEM.c
+ * AUTOR    : R.Reber, BlueByte
+ * START    : 26.05.94 08:00
+ * PROJECT  : Poject32/Macintosh
+ * NOTES    :
+ * SEE ALSO :
+ * VERSION  : 1.0
+ ************/
+
+/* Includes */
+
+#include <stdio.h>
+#include <dos.h>
+#include <i86.h>
+#include	<conio.h>
+
+#include <BBDEF.H>
+#include "include\SYSINTRN.H"
+#include <BBSYSTEM.H>
+#include <BBDSA.H>
+#include <BBEVENT.H>
+#include <BBOPM.H>
+#include <BBBASMEM.H>
+#include <BBEXTRDF.H>
+#include "..\BBDSA\INCLUDE\DSAINTRN.H"
+#include "..\..\lib\asminc\BB_INL_A.H"
+#include <BBERROR.H>
+
+#ifdef BB32_DOSAIL
+/* These functions have to be implemented externally when AIL is used */
+extern BOOLEAN Init_AIL_system(void);
+extern void Exit_AIL_system(void);
+#endif
+
+/* Added by JH */
+
+#define SYSTEM_TIMER_INT_INSTALLED		(1 << 0)
+#define SYSTEM_KEYBOARD_INT_INSTALLED	(1 << 1)
+#define SYSTEM_MOUSE_INT_INSTALLED		(1 << 2)
+
+UNLONG SYSTEM_State = 0;
+
+
+/* Error handling */
+#ifdef BBSYS_ERRORHANDLING
+	#include <stdio.h>
+	/* Name of Library */
+	char BBSYS_LibraryName[] = "BBSYS Library";
+#endif
+
+/* Stack fÅr InterruptRoutinen */
+UNBYTE intr_stack[4096];
+UNBYTE *intr_stack_ptr;
+UNBYTE save_int_regs[2+4];
+
+/* Global variables */
+BOOLEAN SYSTEM_QuitProgramFlag;				/* Quit program flag  */
+struct SCREENPORT *SYSTEM_ActiveScreenPort=NULL;		/* Pointer to active screen port */
+SILONG SYSTEM_ActiveWindow=-1; /* unbenutzt */
+
+/* SYSTEM Library status */
+BOOLEAN SYSTEM_Library_Status = FALSE;
+
+/* SYSTEM init flags standartmÑ·ig auf 0 (wenn hier NOMOUSE*/
+UNLONG SYSTEM_Init_Flags=0;
+
+/* globale Variablen fÅr DosInterruptSimulation */
+static union REGS regs;
+static struct SREGS sregs;
+
+/* Tastaturinterrupt */
+void (__interrupt __far *prev_int_09)();
+UNBYTE key,asc,nextspecial,shifted;
+SILONG spc;
+struct BLEV_Event_struct keyevent; /* TastaturEvent */
+UNBYTE SYSTEMVAR_KEYMAP=DEUTSCH; /* Keymap defaultmÑ·ig auf deutsch */
+
+/* Timerinterrupt */
+void (__interrupt __far *prev_int_08)();
+
+UNLONG ticks; /* ZÑhler fÅr TimerInterrupt */
+SILONG oldtimercall; /* Wie oft wird er alte Timerinterrupt noch aufgerufen */
+
+/* Mouse_Handler */
+struct BLEV_Event_struct mouseevent;
+/* Data touched at mouse callback time -- they are in a structure to
+   simplify calculating the size of the region to lock. */
+struct callback_data
+{
+	SISHORT mcode,mx,my,rmx,rmy,ormx,ormy; /* absolute x,y Position, relative x,y Position zum letzen aufruf */
+	/* Variablen fÅr MAusdoppelclick */
+	BOOLEAN ldouble;
+	BOOLEAN rdouble;
+	BOOLEAN lup;
+	BOOLEAN rup;
+	SILONG ltime;
+	SILONG rtime;
+	struct BLEV_Event_struct levent;
+	struct BLEV_Event_struct revent;
+	struct BLEV_Event_struct lupevent;
+	struct BLEV_Event_struct rupevent;
+} cbd = { 0 };
+/* In diesen Variablen steht die aktuelle absolute Position */
+SILONG SYSTEMVAR_mousex,SYSTEMVAR_mousey;
+/* Maustaste momentan gedrÅckt */
+BOOLEAN SYSTEMVAR_lbut,SYSTEMVAR_rbut;
+/* irgendeine Taste gedrÅckt */
+BOOLEAN SYSTEMVAR_asc;
+/* MausClippingKoordinaaten */
+SILONG SYSTEMVAR_mouseclipx0;
+SILONG SYSTEMVAR_mouseclipy0;
+SILONG SYSTEMVAR_mouseclipx1;
+SILONG SYSTEMVAR_mouseclipy1;
+/* spezielle Variablen fÅr Mauszeiger */
+BOOLEAN SYSTEMVAR_ShowMouse=FALSE; /* Kein Mauszeiger darstellen */
+struct GTO *mousegto; /* Zeiger auf GTODaten fÅr Mauszeiger */
+struct OPM mousebackopm[MAXSCREENS]; /* Zeiger auf HintergrundDaten fÅr Mauszeiger um GTO zu erstellen */
+struct OPM mouseoldbackopm[MAXSCREENS]; /* Zeiger auf HintergrundDaten fÅr Mauszeiger */
+struct OPM bmousebackopm; /* Zeiger auf HintergrundDaten(dsa) fÅr Mauszeiger um GTO zu erstellen */
+struct OPM bmouseoldbackopm; /* Zeiger auf HintergrundDaten(dsa) fÅr Mauszeiger */
+SISHORT SYSTEMVAR_oldmposx[MAXSCREENS]; /* Alte Maushintergrundpos fÅr Hintergrund retten */
+SISHORT SYSTEMVAR_oldmposy[MAXSCREENS];
+SILONG mousebacksize; /* Grîsse des MausHintergrundpuffers */
+SILONG mousebackwidth=-1; /* Grîsse des MausHintergrundpuffers */
+SILONG mousebackheight=-1; /* Grîsse des MausHintergrundpuffers */
+/* Variablen fÅr maus nach Bildschirm */
+UNBYTE *msodata;
+SILONG msowidth,msoheight;
+SILONG mscx0,mscy0,mscx1,mscy1;
+struct OPM * msopmptr;
+SISHORT msx,msy;
+/* externe Variable fÅr DSA_ASS gibt an ob Mausinterrupt ausgefÅhrt werden darf */
+BOOLEAN intmouse;
+/* Variable kann zusÑtzlich gesetzt werden um Mausinterrupt zu sperren */
+BOOLEAN SYSTEMVAR_noMouseInterrupt;
+/* Variable ist auf TRUE wenn im Mausinterrupt fÅr DSA_Copytoscreen notwendig */
+BOOLEAN inMouseInterrupt;
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Int09
+ * FUNCTION  : TastaturInterruptRoutine
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void __interrupt __far SYSTEM_Int09()
+{
+
+	/* Wenn ShiftTaste gedrÅckt dann geshiftetes Asciizeichen */
+	if(pressedkeytab[RAWSHIFTL]||pressedkeytab[RAWSHIFTR])
+		shifted=1;
+	else
+		shifted=0;
+
+	key=inp(0x60);
+	if(key<128){
+
+		/* Taste gedrÅckt */
+		pressedkeytab[key]=TRUE;
+
+		/* Asciicode */
+		if((asc=asciikeytabcountry[shifted][key])!=0&&nextspecial==FALSE){
+
+			SYSTEMVAR_asc=TRUE;
+
+			keyevent.sl_eventtype 	= BLEV_KEYDOWN;
+			keyevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			keyevent.ul_pressed_keys = SYSTEM_GetBLEVStatusLong();
+			keyevent.sl_key_code		= asc;
+			keyevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			keyevent.sl_mouse_y		= SYSTEMVAR_mousey;
+
+			/* Insert event */
+			BLEV_PutEvent( &keyevent );
+
+		}
+
+		/* Specialcode F1-Fx,home,entf usw ... */
+		if((spc=rawkeytab[key])!=0&&(nextspecial==TRUE||spc&MSP)){
+
+			keyevent.sl_eventtype 	= BLEV_KEYDOWN;
+			keyevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			keyevent.ul_pressed_keys = SYSTEM_GetBLEVStatusLong();
+			keyevent.sl_key_code		= spc&(MSP-1);
+			keyevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			keyevent.sl_mouse_y		= SYSTEMVAR_mousey;
+
+			/* Insert event */
+			BLEV_PutEvent( &keyevent );
+
+		}
+
+		/* Specialcode rÅcksetzen */
+		nextspecial=FALSE;
+
+	}
+	else{
+		key&=127;
+
+		/* Taste losgelassen */
+		pressedkeytab[key]=FALSE;
+
+		/* Asciicode */
+		if((asc=asciikeytabcountry[shifted][key])!=0&&nextspecial==FALSE){
+
+			SYSTEMVAR_asc=FALSE;
+
+			keyevent.sl_eventtype 	= BLEV_KEYUP;
+			keyevent.p_screenport  	= SYSTEM_ActiveScreenPort;
+			keyevent.ul_pressed_keys = SYSTEM_GetBLEVStatusLong();
+			keyevent.sl_key_code		= asc;
+			keyevent.sl_mouse_x		= SYSTEMVAR_mousex;
+  		keyevent.sl_mouse_y	 	= SYSTEMVAR_mousey;
+
+			/* Insert event */
+			BLEV_PutEvent( &keyevent );
+		}
+
+		/* Specialcode F1-Fx,home,entf usw ... */
+		if((spc=rawkeytab[key])!=0&&(nextspecial==TRUE||spc&MSP)){
+
+			keyevent.sl_eventtype 	= BLEV_KEYUP;
+			keyevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			keyevent.ul_pressed_keys = SYSTEM_GetBLEVStatusLong();
+			keyevent.sl_key_code		= spc&(MSP-1);
+			keyevent.sl_mouse_x		= SYSTEMVAR_mousex;
+	  	keyevent.sl_mouse_y		= SYSTEMVAR_mousey;
+
+			/* Insert event */
+			BLEV_PutEvent( &keyevent );
+		}
+
+		/* Specialcode rÅcksetzen */
+		nextspecial=FALSE;
+
+		/* Up code der angibt das beim nÑchsten Interrupt eine Specialtaste gedrÅckt wurde */
+		if(key==RAWSPECIAL){
+			nextspecial=TRUE;
+		}
+
+	}
+
+	/* Scancode bestÑtigen */
+	key=inp(0x61);
+ 	outp(0x61,key|0x80);
+ 	outp(0x61,key);
+
+	/* InterrupthÑndler bestÑtigen */
+	outp(0x20,0x20);
+
+}
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Int08
+ * FUNCTION  : TimerInterruptRoutine zÑhlt 1/100 sek
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+
+void __interrupt __far SYSTEM_Int08()
+{
+	SYSTEM_Timer_function();
+
+	/* alten Timer hochzÑhlen */
+	if((oldtimercall-=65536)<0){
+		oldtimercall=OLDTIMERFREQ;
+		_chain_intr( prev_int_08 );
+	}
+
+	/* InterrupthÑndler bestÑtigen */
+	outp(0x20,0x20);
+}
+
+#pragma on (check_stack)
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Timer_function
+ * FUNCTION  : Does the same that SYSTEM_Timer does, but as a normal function.
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+
+void
+SYSTEM_Timer_function(void)
+{
+	/* ticks hochzÑhlen */
+	ticks++;
+
+	/* linke MausTaste gedrÅckt und Doppelclickzeit verstrichen oder die Maus wurde bewegt */
+	if(cbd.ltime!=-1&&((ticks-cbd.ltime)>SYSTEMVAR_doubleclicktime||(cbd.levent.sl_mouse_x-SYSTEMVAR_mousex)>=SYSTEMVAR_mousedbmovedelta||(cbd.levent.sl_mouse_y-SYSTEMVAR_mousey)>=SYSTEMVAR_mousedbmovedelta)){
+		/* Kein Doppelclick in dieser Zeit */
+		if(!cbd.ldouble){
+			cbd.ltime=-1;
+			BLEV_PutEvent( &cbd.levent );
+			/* WÑhrend der Wartezeit fÅr Doppelclick kam der UP-Event nachtrÑglich senden */
+			if(cbd.lup){
+				cbd.lup=FALSE;
+				BLEV_PutEvent( &cbd.lupevent );
+			}
+		}
+	}
+	/* rechte MausTaste gedrÅckt und Doppelclickzeit verstrichen oder die Maus wurde bewegt */
+	if(cbd.rtime!=-1&&((ticks-cbd.rtime)>SYSTEMVAR_doubleclicktime||(cbd.revent.sl_mouse_x-SYSTEMVAR_mousex)>=SYSTEMVAR_mousedbmovedelta||(cbd.revent.sl_mouse_y-SYSTEMVAR_mousey)>=SYSTEMVAR_mousedbmovedelta)){
+		/* Kein Doppelclick in dieser Zeit */
+		if(!cbd.rdouble){
+			cbd.rtime=-1;
+			BLEV_PutEvent( &cbd.revent );
+			/* WÑhrend der Wartezeit fÅr Doppelclick kam der UP-Event nachtrÑglich senden */
+			if(cbd.rup){
+				cbd.rup=FALSE;
+				BLEV_PutEvent( &cbd.rupevent );
+			}
+		}
+	}
+}
+
+#pragma on (check_stack)
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : MouseHandler
+ * FUNCTION  : Routine Wird bei Mausbewegung sowie MouseClick aufgerufen
+ *							Hier wird au·erdem die Maus aktualisert, dazu verwendet sie
+ *							eigene Routinen die aus DSA_CopyOPMtoScreen sind
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+void _loadds far Mouse_handler (SILONG max, SILONG mbx, SILONG mcx, SILONG mdx, SILONG msi, SILONG mdi)
+{
+#pragma aux Mouse_handler parm [EAX] [EBX] [ECX] [EDX] [ESI] [EDI]
+
+	/* eax vorher umkopieren da es sonst gerettet werden muss auf dem Stack !!! */
+	cbd.mcode=(SISHORT)max; /* Mausevents */
+
+	/* neuen Stack anlegen */
+	intr_stack_ptr=&intr_stack[4000];
+	beginn_int((UNBYTE *)&save_int_regs[0],intr_stack_ptr);
+
+	inMouseInterrupt=TRUE;
+
+	/* bei ausgeschaltetem Mausinterrupt Bewegung nicht aktualisieren */
+	if(!intmouse&&!SYSTEMVAR_noMouseInterrupt){
+
+//		cbd.mx=(SISHORT)mcx; /* MausPosx */
+//		cbd.my=(SISHORT)mdx; /* MausPosy */
+
+		if(cbd.rmx!=-10000){
+			cbd.ormx=cbd.rmx; /* alte Maus X pos */
+			cbd.ormy=cbd.rmy; /* alte Maus Y pos */
+		}
+		else{
+			cbd.ormx=(SISHORT)msi; /* alte Maus X pos auf aktuelle setzen zu beginn*/
+			cbd.ormy=(SISHORT)mdi; /* alte Maus Y pos */
+		}
+
+		cbd.rmx=(SISHORT)msi; /* relative MausPosx */
+		cbd.rmy=(SISHORT)mdi; /* relative MausPosy */
+
+		SYSTEMVAR_mousex+=cbd.rmx-cbd.ormx; /* relative Bewegung X */
+		SYSTEMVAR_mousey+=cbd.rmy-cbd.ormy; /* relative Bewegung Y */
+
+		/* MausKoordinaaten clippen */
+		if(SYSTEMVAR_mousex<SYSTEMVAR_mouseclipx0){
+		 SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx0;
+		}
+		else if(SYSTEMVAR_mousex>SYSTEMVAR_mouseclipx1){
+		 SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx1;
+		}
+		if(SYSTEMVAR_mousey<SYSTEMVAR_mouseclipy0){
+		 SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy0;
+		}
+		else if(SYSTEMVAR_mousey>SYSTEMVAR_mouseclipy1){
+		 SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy1;
+		}
+	}
+
+	/* Maustasten abfragen */
+	if(cbd.mcode&2){ /* linke Taste gedrÅckt */
+		/* Einzelner Click mit linker Maustaste */
+		mouseevent.sl_eventtype = BLEV_MOUSELSDOWN;
+		mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		mouseevent.sl_key_code		= 0;
+		mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		BLEV_PutEvent( &mouseevent );
+		SYSTEMVAR_lbut=TRUE;
+		if(cbd.ltime!=-1&&(ticks-cbd.ltime)<SYSTEMVAR_doubleclicktime){
+			/* Doppelclick mit linker Maustaste */
+			cbd.ldouble=TRUE;
+			cbd.ltime=-1;
+			mouseevent.sl_eventtype = BLEV_MOUSELDBL;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			BLEV_PutEvent( &mouseevent );
+		}
+		else if(cbd.ltime==-1){
+			/* 1. Click mit linker Maustaste */
+			cbd.levent.sl_eventtype 	= BLEV_MOUSELDOWN;
+			cbd.levent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			cbd.levent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			cbd.levent.sl_key_code		= 0;
+			cbd.levent.sl_mouse_x		= SYSTEMVAR_mousex;
+			cbd.levent.sl_mouse_y		= SYSTEMVAR_mousey;
+			cbd.ltime=ticks;
+		}
+	}
+	else if(cbd.mcode&4){ /* linke Taste losgelassen */
+		mouseevent.sl_eventtype = BLEV_MOUSELSUP;
+		mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		mouseevent.sl_key_code		= 0;
+		mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		BLEV_PutEvent( &mouseevent );
+
+		SYSTEMVAR_lbut=FALSE;
+		cbd.lup=TRUE; /* UpEvent */
+		cbd.lupevent.sl_eventtype 	= BLEV_MOUSELUP;
+		cbd.lupevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		cbd.lupevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		cbd.lupevent.sl_key_code		= 0;
+		cbd.lupevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		cbd.lupevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		/* Nachdem beim Doppelclick die Taste losgelassen wird Up-Event */
+		if(cbd.ldouble||cbd.ltime==-1){
+			cbd.lup=FALSE;
+			cbd.ldouble=FALSE;
+			BLEV_PutEvent( &cbd.lupevent );
+		}
+	}
+	if(cbd.mcode&8){ /* rechte Taste gedrÅckt */
+		/* Einzelner Click mit rechter Maustaste */
+		mouseevent.sl_eventtype = BLEV_MOUSERSDOWN;
+		mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		mouseevent.sl_key_code		= 0;
+		mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		BLEV_PutEvent( &mouseevent );
+		SYSTEMVAR_rbut=TRUE;
+		if(cbd.rtime!=-1&&(ticks-cbd.rtime)<SYSTEMVAR_doubleclicktime){
+			/* Doppelclick mit linker Maustaste */
+			cbd.rdouble=TRUE;
+			cbd.rtime=-1;
+			SYSTEMVAR_rbut=TRUE;
+			mouseevent.sl_eventtype = BLEV_MOUSERDBL;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			BLEV_PutEvent( &mouseevent );
+		}
+		else if(cbd.rtime==-1){
+			/* 1. Click mit linker Maustaste */
+			cbd.revent.sl_eventtype 	= BLEV_MOUSERDOWN;
+			cbd.revent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			cbd.revent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			cbd.revent.sl_key_code		= 0;
+			cbd.revent.sl_mouse_x		= SYSTEMVAR_mousex;
+			cbd.revent.sl_mouse_y		= SYSTEMVAR_mousey;
+			cbd.rtime=ticks;
+		}
+	}
+	else if(cbd.mcode&16){ /* rechte Taste losgelassen */
+		/* Einzelner Click mit rechter Maustaste */
+		mouseevent.sl_eventtype = BLEV_MOUSERSUP;
+		mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		mouseevent.sl_key_code		= 0;
+		mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		BLEV_PutEvent( &mouseevent );
+		SYSTEMVAR_rbut=FALSE;
+		cbd.rup=TRUE; /* UpEvent */
+		cbd.rupevent.sl_eventtype 	= BLEV_MOUSERUP;
+		cbd.rupevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+		cbd.rupevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+		cbd.rupevent.sl_key_code		= 0;
+		cbd.rupevent.sl_mouse_x		= SYSTEMVAR_mousex;
+		cbd.rupevent.sl_mouse_y		= SYSTEMVAR_mousey;
+		/* Nachdem beim Doppelclick die Taste losgelassen wird Up-Event */
+		if(cbd.rdouble||cbd.rtime==-1){
+			cbd.rup=FALSE;
+			cbd.rdouble=FALSE;
+			BLEV_PutEvent( &cbd.rupevent );
+		}
+	}
+
+	/* bei ausgeschaltetem Mausinterrupt Mauscursor nicht aktualisieren */
+	/* Mauszeiger darstellen */
+	if(SYSTEMVAR_ShowMouse&&!intmouse&&!SYSTEMVAR_noMouseInterrupt){
+		switch(special){
+	 		case VESAMD: // Vesamodus aktiv
+				/* alte Page retten */
+				_DSA_ASS_SaveVesaPage();
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				/* Assemblerfunktion restauriert alte VesaPage */
+				_DSA_ASS_SaveCHAIN4Page();
+				break;
+		}
+
+		/* Maus Hintergrund zurÅckschreiben */
+		SYSTEM_MouseRestore();
+		/* Maus darstellen */
+		SYSTEM_MouseDisplay();
+
+		switch(special){
+	 		case VESAMD: // Vesamodus aktiv
+				/* Assemblerfunktion restauriert alte VesaPage */
+				_DSA_ASS_RestoreVesaPage();
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				/* Assemblerfunktion restauriert alte VesaPage */
+				_DSA_ASS_RestoreCHAIN4Page();
+				break;
+		}
+
+	}
+
+	/* lastclick nach MAusbewegung setzen */
+//	if(cbd.mcode&2){ /* linke Taste gedrÅckt */
+//		cbd.lastlclick=ticks;
+//	}
+//	if(cbd.mcode&8){ /* rechte Taste gedrÅckt */
+//		cbd.lastrclick=ticks;
+//	}
+
+	inMouseInterrupt=FALSE;
+
+	/* alten Stack restaurieren */
+	end_int((UNBYTE *)&save_int_regs[0]);
+
+}
+void cbc_end (void)       /* Dummy function so we can */
+{                                                                                               /* calculate size of code to lock */
+}                                                                                               /* (cbc_end - click_handler) */
+#pragma on (check_stack)
+
+/* #FUNCTION END# */
+
+#if FALSE
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : lock_region
+ * FUNCTION  : Routine linkt einen DosSpeicherbereich in einen Flat Memory
+ *					Speicherbereich, wird fÅr MausHandler benîtigt
+ * INPUTS    : None.
+ * RESULT    : int : 0 = Failure, <> 0 = Success.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+int lock_region (void *address, unsigned length)
+{
+	#if FALSE
+	unsigned linear;
+
+	/* Thanks to DOS/4GW's zero-based flat memory model, converting
+                a pointer of any type to a linear address is trivial. */
+	linear = (unsigned) address;
+
+	regs.w.ax = 0x600;                                              /* DPMI Lock Linear Region */
+	regs.w.bx = (linear >> 16);                     /* Linear address in BX:CX */
+	regs.w.cx = (linear & 0xFFFF);
+	regs.w.si = (length >> 16);                     /* Length in SI:DI */
+	regs.w.di = (length & 0xFFFF);
+	int386 (0x31, &regs, &regs);
+
+	return (! regs.w.cflag);                                /* Return 0 if can't lock */
+	#endif
+
+	BOOLEAN Result;
+
+	Result = BASEMEM_Lock_region(address, length);
+
+	return ((int) Result);
+}
+#endif
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Init
+ * FUNCTION  : Init operating system and internal variables
+ *					Mausclipping wird standartmÑ·if auf 0,0,639,479 gesetzt
+ *					bis OpenScreen ausgefÅhrt wird
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 28.05.94 - 17:00
+ * LAST      :
+ * INPUTS    : None
+ * RESULT    : TRUE = OK, FALSE = error.
+ * BUGS      :
+ * NOTES     : flags = NOMOUSEINT -> MAusinterrupt in SYSTEM_TASK aktivieren
+ *             In der Variable **SYSTEM_Init_Flags** kînnen folgende Bits gesetzt
+ *						 werden die dann bei der Initialisierung beachtet werden
+ *						 SYSTEM_FLAG_NOMOUSEINT 1L ->Mausinterrupt nicht aktivieren
+ *							wird ebenfalls gesetzt falls kein Maustreiber zur VerfÅgung steht
+ *						 SYSTEM_FLAG_NOTIMERINT 2L -> TimerInterrupt nicht aktivieren
+ *						 SYSTEM_FLAG_NOKEYINT 4L -> Tastaturinterrupt nicht aktivieren
+ *
+ *						Folgende Flags sind dazu da um Interrupts zu umgehen und so eventuell
+ *						Debugging zu ermîglichen,
+ *						 SYSTEM_FLAG_MOUSESYSTEMTASK 8L -> Maus in SYSTEMTASK aktivieren
+ *						 	nur in Zusammenhang mit NOMOUSEINT sinnvoll. Doppelclick, sowie
+ *							Eventgenerierung ist ziemlich ungenau
+ *						 SYSTEM_FLAG_TIMERSYSTEMTASK 16L -> Timer in SYSTEM_Task
+ *							hochzÑhlen, zÑhlt nur bei jedem Bildschirmaufbau hoch
+ *						 SYSTEM_FLAG_KEYSYSTEMTASK 32L -> Tastatur in SYSTEMTASK abfragen
+ *							im Moment nicht eingebaut
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+SYSTEM_Init( void )
+{
+	/* es register mit ds gleichsetzten */
+	copydstoes();
+
+	/* BLEVLibrary wird benîtigt */
+	if(!BLEV_Init()){
+		#ifdef BBSYS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBSYS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "SYSTEM_Init: Cannot init EVENT";
+			error.errordata	= 0;
+			error.errordata2	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+	/* Library already initialised ? */
+	if( SYSTEM_Library_Status ){
+		/* Yes: nothing to do */
+		return(TRUE);
+	}
+
+	{
+		UNSHORT t;
+		UNSHORT cntr;
+		void (far _loadds *function_ptr)();
+
+		/* flag to detect when Quit command is chosen */
+		SYSTEM_QuitProgramFlag = FALSE;
+		SYSTEM_ActiveScreenPort=NULL; /* noch kein Bildschirm offen */
+		SYSTEM_ActiveWindow=-1; /* noch kein Bildschirm offen */
+
+		/* TastaturTabelle auf 0 */
+		for(t=0;t<128;t++)
+			pressedkeytab[t]=FALSE;
+
+		/* nÑchste Taste keine SpecialTaste */
+		nextspecial=FALSE;
+
+		/* Tastaturinterrupt inaktiv */
+		if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOKEYINT){
+		}
+		/* TastaturInterrupt normal */
+		else{
+			/* neuen Tastaturtreiber initialiseren */
+	    prev_int_09 = _dos_getvect( 0x09 );
+	    _dos_setvect( 0x09, SYSTEM_Int09 );
+		}
+
+		/* ticks auf 0 zu Beginn */
+		ticks=0;
+
+		/* Timerinterrupt Simulation in SYSTEMTask */
+		if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOTIMERINT){
+		}
+		/* TimerInterrupt normal */
+		else{
+			/* ZÑhler fÅr Interruptroutine lîschen */
+			oldtimercall=-1;
+
+			#ifndef BB32_DOSAIL
+				/* TimerInterrupt AufrufFrequenc neu einstellen */
+				cntr = 1193180 / TICKS_PER_SECOND;
+				outp(0x43,0x36);
+				outp(0x40,cntr&255);
+				outp(0x40,cntr/256);
+
+				/* neuen TimerInterrupt initialiseren */
+				prev_int_08 = _dos_getvect( 0x08 );
+		    	_dos_setvect( 0x08, SYSTEM_Int08 );
+
+				/* Indicate timer interrupt has been installed */
+				SYSTEM_State |= SYSTEM_TIMER_INT_INSTALLED;
+			#endif
+
+			#ifdef BB32_DOSAIL
+			{
+				BOOLEAN Result;
+
+				/* Init AIL system */
+				Result = Init_AIL_system();
+
+				/* Success ? */
+				if (!Result)
+				{
+					/* No -> Install normal timer */
+					/* TimerInterrupt AufrufFrequenc neu einstellen */
+					cntr = 1193180 / TICKS_PER_SECOND;
+					outp(0x43,0x36);
+					outp(0x40,cntr&255);
+					outp(0x40,cntr/256);
+
+					/* neuen TimerInterrupt initialiseren */
+					prev_int_08 = _dos_getvect( 0x08 );
+			    	_dos_setvect( 0x08, SYSTEM_Int08 );
+
+					/* Indicate timer interrupt has been installed */
+					SYSTEM_State |= SYSTEM_TIMER_INT_INSTALLED;
+				}
+			}
+			#endif
+		}
+
+		/* Maus Clipping Koordinaaten setzten */
+		/* kein Screenport aktiv auf 0,0,639,479 setzen  */
+		SYSTEMVAR_mouseclipx0=0;
+		SYSTEMVAR_mouseclipy0=0;
+		SYSTEMVAR_mouseclipx1=639;
+		SYSTEMVAR_mouseclipy1=479;
+
+		/* Mauskoordinaaten setzen auf Mitte des bildschirms */
+		SYSTEMVAR_mousex=(SYSTEMVAR_mouseclipx1-SYSTEMVAR_mouseclipx0)/2;
+		SYSTEMVAR_mousey=(SYSTEMVAR_mouseclipy1-SYSTEMVAR_mouseclipy0)/2;
+		cbd.rmx=-10000;
+
+		/* Mauszeiger inaktiv */
+		SYSTEMVAR_ShowMouse=FALSE;
+
+		/* FÅr Show und HideMouse um festzustellen ob ein OPM der gleichen Grîsse neu angelegt wird */
+		mousebackwidth=-1; /* Grîsse des MausHintergrundpuffers */
+		mousebackheight=-1; /* Grîsse des MausHintergrundpuffers */
+
+		/* Alte MausHintergrundposition invalid */
+		for(t=0;t<MAXSCREENS;t++)
+			SYSTEMVAR_oldmposx[t]=-32000;
+
+		/* MausinterruptRoutine deaktivieren und stattdessen Routine in SYSTEMTASK verwenden */
+		if((SYSTEM_Init_Flags & SYSTEM_FLAG_NOMOUSEINT)&&
+		 !(SYSTEM_Init_Flags & SYSTEM_FLAG_MOUSESYSTEMTASK))
+		{
+		}
+		/* normale MausinterruptRoutine aktivieren */
+		else
+		{
+			/* Maustreiber aktivieren und Mausstatus reseten */
+		 	regs.w.ax = 0x0000; // aktuellen Modus ermitteln
+			int386(0x33,&regs,&regs);
+
+			if(!regs.w.ax)
+			{
+				/* Falls kein Masutreiber existiert SYSTEM_Init_Flags setzen */
+				SYSTEM_Init_Flags|=SYSTEM_FLAG_NOMOUSEINT;
+			}
+		}
+
+		/* MausinterruptRoutine deaktivieren und stattdessen Routine in SYSTEMTASK verwenden */
+		if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOMOUSEINT)
+		{
+		}
+		/* normale MausinterruptRoutine aktivieren */
+		else
+		{
+			BOOLEAN Result;
+
+			Result = BASEMEM_Lock_region
+			(
+				(UNBYTE *) &cbd,
+				(UNLONG) sizeof(cbd)
+			);
+
+			Result &= BASEMEM_Lock_region
+			(
+				(UNBYTE *) Mouse_handler,
+				(UNLONG)((char *) cbc_end - (char near *) Mouse_handler)
+			);
+
+			#if FALSE
+			/* lock callback code and data (essential under VMM!)
+	  	     note that click_handler, although it does a far return and
+	  	     is installed using a full 48-bit pointer, is really linked
+	  	     into the flat model code segment -- so we can use a regular
+	  	     (near) pointer in the lock_region() call. */
+	 		if ((! lock_region (&cbd, sizeof(cbd))) ||
+			 (! lock_region ((void near *) Mouse_handler,
+	  	          (char *) cbc_end - (char near *) Mouse_handler)))
+			#endif
+
+			if (!Result)
+			{
+				#ifdef BBSYS_ERRORHANDLING
+
+				struct BBSYS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "SYSTEM_Init: Cannot lock Region for Mouse Driver Interrupt ";
+				error.errordata	= 0;
+				error.errordata2	= 0;
+
+				/* Push error on stack */
+				ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+
+				#endif
+
+				return FALSE;
+			}
+
+			/* MausEvent installieren */
+			function_ptr = Mouse_handler;
+
+			BASEMEM_FillMemByte((UNBYTE *) &sregs, sizeof(sregs), 0);
+
+			regs.w.ax	= 0xC;
+			regs.w.cx	= 1+2+4+8+16+32+64;
+			regs.x.edx	= FP_OFF (function_ptr);
+			sregs.es		= FP_SEG (function_ptr);
+
+			int386x(0x33, &regs, &regs, &sregs);
+
+			/* Indicate mouse interrupt has been installed */
+			SYSTEM_State |= SYSTEM_MOUSE_INT_INSTALLED;
+		}
+	}
+
+	/* Variablen fÅr MausDoppelclick initialisieren */
+	cbd.ldouble=FALSE;
+	cbd.rdouble=FALSE;
+	cbd.lup=FALSE;
+	cbd.rup=FALSE;
+	cbd.ltime=-1;
+	cbd.rtime=-1;
+
+	/* Maustasten nicht gedrÅckt */
+	SYSTEMVAR_lbut=FALSE;
+	SYSTEMVAR_rbut=FALSE;
+	SYSTEMVAR_asc=FALSE;
+
+	SYSTEM_Library_Status=TRUE;
+
+	/* Ok */
+	return( TRUE );
+
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Exit
+ * FUNCTION  : Exit GUI and reinit operating system.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 28.05.94 - 17:00
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYSTEM_Exit( void )
+{
+	UNSHORT t;
+
+	/* War Library initialisiert ? */
+	if( !SYSTEM_Library_Status ){
+		/* Yes: nothing to do */
+		return;
+	}
+
+	/* Tastaturinterrupt inaktiv */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOKEYINT){
+	}
+	/* TastaturInterrupt normal */
+	else{
+		/* alten Tastaturtreiber reaktivieren */
+		_dos_setvect( 0x09, prev_int_09 );
+	}
+
+	/* Timerinterrupt in SYSTEMTask */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOTIMERINT){
+	}
+	/* TimerInterrupt normal */
+	else{
+		#ifndef BB32_DOSAIL
+			/* TimerInterrupt AufrufFrequenc neu einstellen */
+			outp(0x43,0x36);
+			outp(0x40,~0);
+			outp(0x40,~0);
+
+			/* alten TimerInterrupt reaktivieren */
+			_dos_setvect( 0x08, prev_int_08 );
+		#endif
+
+		#ifdef BB32_DOSAIL
+		{
+			/* Exit AIL system */
+			Exit_AIL_system();
+
+			/* Was a timer installed ? */
+			if (SYSTEM_State & SYSTEM_TIMER_INT_INSTALLED)
+			{
+				/* Yes -> Remove timer */
+				/* TimerInterrupt AufrufFrequenc neu einstellen */
+				outp(0x43,0x36);
+				outp(0x40,-1);
+				outp(0x40,-1);
+
+				/* alten TimerInterrupt reaktivieren */
+				_dos_setvect( 0x08, prev_int_08 );
+
+				/* Clear flag */
+				SYSTEM_State &= ~SYSTEM_TIMER_INT_INSTALLED;
+			}
+		}
+		#endif
+	}
+
+	/* Maushandler wieder entfernen wenn aktiviert */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_NOMOUSEINT){
+	}
+	else if(SYSTEM_Init_Flags&SYSTEM_FLAG_MOUSESYSTEMTASK){
+
+	}
+	else{
+		/* MausHandler wieder entfernen */
+		regs.w.ax = 0;
+		int386 (0x33, &regs, &regs);
+
+		/* Wenn Mauszeiger initialisiert wurde OPMS wieder freigeben */
+		if(mousebackwidth!=-1&&mousebackwidth!=-1){
+			/* Maus noch eingeschaltet ? */
+			if(SYSTEMVAR_ShowMouse){
+				SYSTEM_HideMousePtr();
+			}
+			/* MaushintergrÅnde wieder freigeben */
+			for(t=0;t<anzdoublepages;t++){
+				/* OPMs freigeben */
+				OPM_Del(&mousebackopm[t]);
+				OPM_Del(&mouseoldbackopm[t]);
+				/* OPMs(DSA) freigeben */
+			}
+			OPM_Del(&bmousebackopm);
+			OPM_Del(&bmouseoldbackopm);
+		}
+
+	}
+
+	SYSTEM_Library_Status=FALSE;
+
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_SystemTask
+ * FUNCTION  : Let the operating system some time to work.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 28.05.94 - 17:00
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     : Nur zu debugzwecken aktiv
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYSTEM_SystemTask( void )
+{
+	/* Tastaturinterrupt simulieren */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_KEYSYSTEMTASK){
+	}
+
+	/* Timerinterrupt simulieren */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_TIMERSYSTEMTASK){
+		ticks++;
+	}
+
+	/* Mausinterrupt simulieren */
+	if(SYSTEM_Init_Flags&SYSTEM_FLAG_MOUSESYSTEMTASK){
+
+		inMouseInterrupt=TRUE;
+
+		/* MausTasten auslesen */
+		regs.w.ax = 0x03;
+		int386 (0x33, &regs, &regs);
+		cbd.mcode=(SISHORT)regs.w.bx; /* Mausevents */
+
+		/* bei ausgeschaltetem Mausinterrupt Bewegung nicht aktualisieren */
+		if(!intmouse&&!SYSTEMVAR_noMouseInterrupt){
+
+			/* MausBewegung auslesen */
+			regs.w.ax = 0x0b;
+			int386 (0x33, &regs, &regs);
+
+			cbd.ormx=cbd.rmx; /* alte Maus X pos */
+			cbd.ormy=cbd.rmy; /* alte Maus Y pos */
+
+			cbd.rmx=(SISHORT)regs.w.cx; /* relative MausPosx */
+			cbd.rmy=(SISHORT)regs.w.dx; /* relative MausPosy */
+
+			SYSTEMVAR_mousex+=cbd.rmx;//-cbd.ormx; /* relative Bewegung X */
+			SYSTEMVAR_mousey+=cbd.rmy;//-cbd.ormy; /* relative Bewegung Y */
+
+			/* MausKoordinaaten clippen */
+			if(SYSTEMVAR_mousex<SYSTEMVAR_mouseclipx0){
+			 SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx0;
+			}
+			else if(SYSTEMVAR_mousex>SYSTEMVAR_mouseclipx1){
+			 SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx1;
+			}
+			if(SYSTEMVAR_mousey<SYSTEMVAR_mouseclipy0){
+			 SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy0;
+			}
+			else if(SYSTEMVAR_mousey>SYSTEMVAR_mouseclipy1){
+			 SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy1;
+			}
+		}
+
+		/* Maustasten abfragen */
+		if(cbd.mcode&1){ /* linke Taste gedrÅckt */
+			mouseevent.sl_eventtype 	= BLEV_MOUSELDOWN;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			/* Doppelclick ? */
+//			if((ticks-cbd.lastlclick)<SYSTEMVAR_doubleclicktime){
+//				mouseevent.sl_eventtype = BLEV_MOUSELDBL;
+//			}
+			BLEV_PutEvent( &mouseevent );
+			SYSTEMVAR_lbut=TRUE;
+		}
+		else{
+			mouseevent.sl_eventtype 	= BLEV_MOUSELUP;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			BLEV_PutEvent( &mouseevent );
+			SYSTEMVAR_lbut=FALSE;
+		}
+
+		if(cbd.mcode&2){ /* rechte Taste gedrÅckt */
+			mouseevent.sl_eventtype 	= BLEV_MOUSERDOWN;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			/* Doppelclick ? */
+//			if((ticks-cbd.lastrclick)<SYSTEMVAR_doubleclicktime){
+//				mouseevent.sl_eventtype = BLEV_MOUSERDBL;
+//			}
+			BLEV_PutEvent( &mouseevent );
+			SYSTEMVAR_rbut=TRUE;
+		}
+		else{
+			mouseevent.sl_eventtype 	= BLEV_MOUSERUP;
+			mouseevent.p_screenport 	= SYSTEM_ActiveScreenPort;
+			mouseevent.ul_pressed_keys	= SYSTEM_GetBLEVStatusLong();
+			mouseevent.sl_key_code		= 0;
+			mouseevent.sl_mouse_x		= SYSTEMVAR_mousex;
+			mouseevent.sl_mouse_y		= SYSTEMVAR_mousey;
+			BLEV_PutEvent( &mouseevent );
+			SYSTEMVAR_rbut=FALSE;
+		}
+
+		/* bei ausgeschaltetem Mausinterrupt Mauscursor nicht aktualisieren */
+		/* Mauszeiger darstellen */
+		if(SYSTEMVAR_ShowMouse&&!intmouse&&!SYSTEMVAR_noMouseInterrupt){
+			switch(special){
+		 		case VESAMD: // Vesamodus aktiv
+					/* alte Page retten */
+					_DSA_ASS_SaveVesaPage();
+					break;
+				case CHAIN4: // Chain4 Modus aktiv
+					/* Assemblerfunktion restauriert alte VesaPage */
+					_DSA_ASS_SaveCHAIN4Page();
+					break;
+			}
+
+			/* Maus Hintergrund zurÅckschreiben */
+			SYSTEM_MouseRestore();
+			/* Maus darstellen */
+			SYSTEM_MouseDisplay();
+
+			switch(special){
+		 		case VESAMD: // Vesamodus aktiv
+					/* Assemblerfunktion restauriert alte VesaPage */
+					_DSA_ASS_RestoreVesaPage();
+					break;
+				case CHAIN4: // Chain4 Modus aktiv
+					/* Assemblerfunktion restauriert alte VesaPage */
+					_DSA_ASS_RestoreCHAIN4Page();
+					break;
+			}
+
+		}
+
+		/* lastclick nach MAusbewegung setzen */
+//		if(cbd.mcode&1){ /* linke Taste gedrÅckt */
+//			cbd.lastlclick=ticks;
+//		}
+//		if(cbd.mcode&2){ /* rechte Taste gedrÅckt */
+//			cbd.lastrclick=ticks;
+//		}
+
+		inMouseInterrupt=FALSE;
+
+	}
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_SystemAlert
+ * FUNCTION  : Show a dialog box.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 28.05.94 - 17:00
+ * LAST      :
+ * INPUTS    : short dialogId : Resource id of dialog box.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     : not yet implented
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYSTEM_SystemAlert( short dialogId )
+{
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_GetBLEVStatusLong
+ * FUNCTION  : Generate status for BBEVENT messages (-> BBEVENT.h).
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    : none
+ * RESULT    : UNLONG status: Welche Tasten sind momentan gedrÅckt
+ * BUGS      :
+ * NOTES     :BLEV_NOKEY = Keine Taste gedrÅckt
+ *						BLEV_MOUSELPRESSED	= linke  Maustaste gedrÅckt
+ *						BLEV_MOUSERPRESSED	= rechte Maustaste gedrÅckt
+ *						BLEV_ASCII = beliebige Taste gedrÅckt
+ *						BLEV_SHIFT = Shift Taste gedrÅckt
+ *						BLEV_CTRL = STRG Taste gedrÅckt
+ *						BLEV_ALT = ALT Taste gedrÅckt
+ *						BLEV_KEYPRESSED	=	eine oder meherer der oben genannten Tasten gedrÅckt
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+
+UNLONG
+SYSTEM_GetBLEVStatusLong( void )
+{
+	/* Local vars */
+	UNLONG ret = 0;
+
+	/* linker Mouse button ? */
+	if(SYSTEMVAR_lbut)
+		ret |= BLEV_MOUSELPRESSED;
+
+	/* rechter Mouse button ? */
+	if(SYSTEMVAR_rbut)
+		ret |= BLEV_MOUSERPRESSED;
+
+	/* Irgendeine Taste gedrÅckt ? */
+	if(SYSTEMVAR_asc)
+		ret |= BLEV_ASCII;
+
+	/* Shift key ? nur akzeptieren wenn kein Specialcode fÅr Sondertasten */
+	if(pressedkeytab[RAWSHIFTL]||pressedkeytab[RAWSHIFTR]&&nextspecial==FALSE)
+		ret |= BLEV_SHIFT;
+
+	/* Control key ? nur akzeptieren wenn kein Specialcode fÅr Sondertasten */
+	if(pressedkeytab[RAWSTRG]&&nextspecial==FALSE)
+		ret |= BLEV_CTRL;
+
+	/* Control key ? nur akzeptieren wenn kein Specialcode fÅr Sondertasten */
+	if(pressedkeytab[RAWALT]&&nextspecial==FALSE)
+		ret |= BLEV_ALT;
+
+	/* Return status */
+	return( ret );
+}
+
+#pragma on (check_stack)
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      :	SYSTEM_MouseRestore
+ * FUNCTION  : 	schreibt geretteten Hintergrund fÅr Maus zurÅck
+ * 						 	und verhindet das bei nochmaligen Aufruf der Hintergrund
+ *							erneut gerettet wird
+ * FILE      : 	BBSYSTEM.C
+ * AUTHOR    : 	R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    :
+ * RESULT    :
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+
+void SYSTEM_MouseRestore(void)
+{
+	if(SYSTEMVAR_oldmposx[doublepage]!=-32000){
+		/* Variablen fÅr Kopierroutine */
+		msopmptr=&mouseoldbackopm[doublepage];
+		msx=SYSTEMVAR_oldmposx[doublepage];
+		msy=SYSTEMVAR_oldmposy[doublepage];
+
+		/* alte Mausposition invalid setzten so das der Hintergrund nicht zweimal gerettet wird */
+		SYSTEMVAR_oldmposx[doublepage]=-32000;
+
+		/* Clipping ausrechnen */
+		msodata=msopmptr->data;
+		msowidth=msopmptr->width;
+		msoheight=msopmptr->height;
+
+		mscx0=SYSTEM_ActiveScreenPort->screenopmptr->clip.left;
+		/* Clipping links ? */
+		if(msx<mscx0){
+			if((mscx0-msx)>msowidth){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msowidth-=(mscx0-msx);
+				msodata+=(mscx0-msx);
+				msx=mscx0;
+			}
+		}
+		mscy0=SYSTEM_ActiveScreenPort->screenopmptr->clip.top;
+		/* Clipping oben ? */
+		if(msy<mscy0){
+			if((mscy0-msy)>msoheight){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msoheight-=(mscy0-msy);
+				msodata+=((mscy0-msy)*msopmptr->nextypos);
+				msy=mscy0;
+			}
+		}
+		mscx1=mscx0+SYSTEM_ActiveScreenPort->screenopmptr->clip.width;
+		/* Clipping rechts ? */
+		if((msx+msopmptr->width)>mscx1){
+			if(msx>mscx1){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msowidth-=(msx+msowidth-mscx1);
+			}
+
+		}
+		mscy1=mscy0+SYSTEM_ActiveScreenPort->screenopmptr->clip.height;
+		/* Clipping unten ? */
+		if((msy+msopmptr->height)>mscy1){
+			if(msy>mscy1){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msoheight-=(msy+msoheight-mscy1);
+			}
+		}
+
+		/* Wenn Breite oder Hîhe <1 dann Ende */
+		if(msoheight<1||msowidth<1)
+			return;
+
+		/* Bob in Screen schreiben */
+		/* copy opm to VesaScreen */
+		switch(special){
+	 		case VESAMD: // Vesamodus aktiv
+				_DSA_ASS_CopyOPMToScreen(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy+videoscreenypos[1-doublepage],msowidth,msoheight);
+				break;
+			case ONESEG: // 1 Segment Modus aktiv
+				_DSA_ASS_CopyOPMToScreenONE(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				_DSA_ASS_CopyOPMToScreenCHN(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+		}
+
+	}
+}
+
+#pragma on (check_stack)
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      :	SYSTEM_MouseDisplay
+ * FUNCTION  : 	stellt Mauszeiger dar wird normalerweise vom Mausinterrupt aufge
+ *							rufen
+ * FILE      : 	BBSYSTEM.C
+ * AUTHOR    : 	R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    :
+ * RESULT    :
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#pragma off (check_stack)
+
+void SYSTEM_MouseDisplay(void)
+{
+		SYSTEMVAR_oldmposx[doublepage]=SYSTEMVAR_mousex+mousegto->xoffset;
+		SYSTEMVAR_oldmposy[doublepage]=SYSTEMVAR_mousey+mousegto->yoffset;
+
+		/* Variablen fÅr Kopierroutine */
+		msopmptr=&mousebackopm[doublepage];
+		msx=SYSTEMVAR_oldmposx[doublepage];
+		msy=SYSTEMVAR_oldmposy[doublepage];
+
+		/* Clipping ausrechnen */
+		msodata=msopmptr->data;
+		msowidth=msopmptr->width;
+		msoheight=msopmptr->height;
+
+		mscx0=SYSTEM_ActiveScreenPort->screenopmptr->clip.left;
+		/* Clipping links ? */
+		if(msx<mscx0){
+			if((mscx0-msx)>msowidth){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msowidth-=(mscx0-msx);
+				msodata+=(mscx0-msx);
+				msx=mscx0;
+			}
+		}
+		mscy0=SYSTEM_ActiveScreenPort->screenopmptr->clip.top;
+		/* Clipping oben ? */
+		if(msy<mscy0){
+			if((mscy0-msy)>msoheight){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msoheight-=(mscy0-msy);
+				msodata+=((mscy0-msy)*msopmptr->nextypos);
+				msy=mscy0;
+			}
+		}
+		mscx1=mscx0+SYSTEM_ActiveScreenPort->screenopmptr->clip.width;
+		/* Clipping rechts ? */
+		if((msx+msopmptr->width)>mscx1){
+			if(msx>mscx1){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msowidth-=(msx+msowidth-mscx1);
+			}
+
+		}
+		mscy1=mscy0+SYSTEM_ActiveScreenPort->screenopmptr->clip.height;
+		/* Clipping unten ? */
+		if((msy+msopmptr->height)>mscy1){
+			if(msy>mscy1){
+				/* ganz ausserhalb */
+				return;
+			}
+			else{
+				msoheight-=(msy+msoheight-mscy1);
+			}
+		}
+
+		/* Wenn Breite oder Hîhe <1 dann Ende */
+		if(msoheight<1||msowidth<1)
+			return;
+
+		/* Mausinterrupt verbieten so das Maushintergrund nicht verschoben werden kann*/
+		SYSTEMVAR_noMouseInterrupt=TRUE;
+
+		/* Hintergrund retten */
+		/* copy Vesascreen to opm */
+		switch(special){
+	 		case VESAMD: // Vesamodus aktiv
+				_DSA_ASS_CopyScreenToOPM(videoram[1-doublepage],msodata,msopmptr->nextypos,msx,msy+videoscreenypos[1-doublepage],msowidth,msoheight);
+				break;
+			case ONESEG: // 1 Segment Modus aktiv
+				_DSA_ASS_CopyScreenToOPMONE(videoram[1-doublepage],msodata,msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				_DSA_ASS_CopyScreenToOPMCHN(videoram[1-doublepage],msodata,msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+		}
+
+		/* Spezialroutine die Daten in ein 2 MAINOPM kopiert und in das erste ein GTO kopiert */
+		_SYS_ASS_MouseBob((UNBYTE *)mousebackopm[doublepage].data,(UNBYTE *)mouseoldbackopm[doublepage].data,(UNBYTE *)&mousegto->bodychunk[4],mousegto->transcol,mousebacksize);
+
+		/* OPM nach Bildschirm kopieren */
+		/* copy opm to VesaScreen */
+		switch(special){
+	 		case VESAMD: // Vesamodus aktiv
+				_DSA_ASS_CopyOPMToScreen(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy+videoscreenypos[1-doublepage],msowidth,msoheight);
+				break;
+			case ONESEG: // 1 Segment Modus aktiv
+				_DSA_ASS_CopyOPMToScreenONE(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				_DSA_ASS_CopyOPMToScreenCHN(msodata,videoram[1-doublepage],msopmptr->nextypos,msx,msy,msowidth,msoheight);
+				break;
+		}
+
+		/* Mausinterrupt verbieten */
+		SYSTEMVAR_noMouseInterrupt=FALSE;
+
+}
+
+#pragma on (check_stack)
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      :	SYSTEM_ShowMousePtr(struct GTO *gto)
+ * FUNCTION  : Schaltet Mauszeiger ein und updatet in unabhÑngig
+ *					von den OPMToScreen Routinen im Interrupt
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    : struct GTO *gto: Zeiger auf Gto das als Mauszeiger verwendet wird
+ *							SYSTEM_MousePointerNormal = eingebauter Mauszeiger Normal
+ *							SYSTEM_MousePointerSleep = eingebauter Mauszeiger Sleep
+ *							SYSTEM_MousePointerOld = alten Mauszeiger reaktivieren
+ *							anderer Wert = Zeiger auf GTO
+ * RESULT    : TRUE = Alles Ok,FALSE = Fehler.
+ * BUGS      :
+ * NOTES     : Wenn bereits ein Mauszeiger dargestellt wird und ein neues Image
+ *					   gezeigt werden soll braucht SYSTEM_HideMousePtr nicht aufgerufen werden
+ *						 dies erledigt die Routine selbst
+ *							Der HotSpotw wird Åber xoffset und yoffset des GTOS angegeben
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+BOOLEAN SYSTEM_ShowMousePtr(struct GTO *gto)
+{
+	UNSHORT t;
+
+	/* Wenn keine Maus installiert kann sie auch nicht dargestellt werden */
+	if((SYSTEM_Init_Flags&SYSTEM_FLAG_NOMOUSEINT)&&!(SYSTEM_Init_Flags&SYSTEM_FLAG_MOUSESYSTEMTASK)){
+		return(TRUE);
+	}
+
+	/* alten MAuszeiger reaktivieren */
+	if((UNLONG)gto==SYSTEM_MousePointerOld){
+		/* Wurde Åberhaupt schon ein Mauszeiger vorher initialisiert ? */
+		if(mousebackwidth==-1&&mousebackheight==-1){
+			#ifdef BBSYS_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBSYS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "SYSTEM_ShowMousePtr: Parameter:SYSTEM_MousePointerOld - No MousePtr initialized ";
+				error.errordata	= 0;
+				error.errordata2	= 0;
+
+				/* Push error on stack */
+				ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+		 	return(FALSE);
+		}
+		else{
+			if(SYSTEMVAR_ShowMouse){
+				SYSTEM_MouseRestore();
+			}
+			SYSTEM_MouseDisplay();
+			SYSTEMVAR_ShowMouse=TRUE;
+			return(TRUE);
+		}
+	}
+
+	/* feststellen ob StandartMauszeiger verwendet werden soll */
+	if((UNLONG)gto==SYSTEM_MousePointerNormal
+	 ||(UNLONG)gto==SYSTEM_MousePointerSleep){
+		if((UNLONG)gto==SYSTEM_MousePointerNormal){
+			mousegto=(struct GTO *)&mouseptrdata[0];
+		}
+		else{
+			mousegto=(struct GTO *)&mousebusydata[0];
+		}
+	}
+	else{
+		mousegto=gto; /* Zeiger auf GTO speichern */
+	}
+
+	/* Hat alter Mauszeiger die gleiche Grîsse dann OPMS nicht lîschen und beenden */
+	if(mousebackwidth==mousegto->width&&mousebackheight==mousegto->height){
+		if(SYSTEMVAR_ShowMouse){
+			SYSTEM_MouseRestore();
+		}
+		SYSTEM_MouseDisplay();
+		SYSTEMVAR_ShowMouse=TRUE;
+		return(TRUE);
+	}
+
+	/* Mauszeiger OPM lîschen wenn neuer Mauszeiger andere Grîsse hat */
+	/* wurde vorher schon ein OPM angelegt wenn ja dann lîschen */
+	if(mousebackwidth!=-1){
+		SYSTEM_HideMousePtr();
+		/* MaushintergrÅnde wieder freigeben */
+		for(t=0;t<anzdoublepages;t++){
+			/* OPMs freigeben */
+			OPM_Del(&mousebackopm[t]);
+			OPM_Del(&mouseoldbackopm[t]);
+			/* OPMs(DSA) freigeben */
+		}
+		OPM_Del(&bmousebackopm);
+		OPM_Del(&bmouseoldbackopm);
+	}
+
+	mousebackwidth=mousegto->width;
+	mousebackheight=mousegto->height;
+	mousebacksize=mousegto->width*mousegto->height;
+
+	/* soviele MaushintergrÅnde anlegen wie DoublebufferBildschirme offen */
+	for(t=0;t<anzdoublepages;t++){
+		/* OPM fÅr MauszeigerHintergrund mit GTO anlegen */
+		if (!OPM_New( mousegto->width, mousegto->height, 1, &mousebackopm[t], NULL)){//memmousebackopm)){
+			#ifdef BBSYS_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBSYS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "SYSTEM_ShowMousePtr: Couldn't allocate Mem for mouseback - width,height";
+				error.errordata	= mousegto->width;
+				error.errordata2	= mousegto->height;
+
+				/* Push error on stack */
+				ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+			return(FALSE);
+		}
+		/* OPM fÅr MauszeigerHintergrund anlegen */
+		if (!OPM_New( mousegto->width, mousegto->height, 1, &mouseoldbackopm[t], NULL)){// memmouseoldbackopm)){
+			#ifdef BBSYS_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBSYS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "SYSTEM_ShowMousePtr: Couldn't allocate Mem for mouseoldback - width,height";
+				error.errordata	= mousegto->width;
+				error.errordata2	= mousegto->height;
+
+				/* Push error on stack */
+				ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+			return(FALSE);
+		}
+	}
+
+	/* OPM fÅr MauszeigerHintergrund(DSA) mit GTO anlegen */
+	if (!OPM_New( mousegto->width, mousegto->height, 1, &bmousebackopm, NULL)){//memmousebackopm)){
+		#ifdef BBSYS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBSYS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "SYSTEM_ShowMousePtr: Couldn't allocate Mem for bmouseback - width,height";
+			error.errordata	= mousegto->width;
+			error.errordata2	= mousegto->height;
+
+			/* Push error on stack */
+			ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+	/* OPM fÅr MauszeigerHintergrund anlegen */
+	if (!OPM_New( mousegto->width, mousegto->height, 1, &bmouseoldbackopm, NULL)){// memmouseoldbackopm)){
+		#ifdef BBSYS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBSYS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "SYSTEM_ShowMousePtr: Couldn't allocate Mem for bmouseoldback - width,height";
+			error.errordata	= mousegto->width;
+			error.errordata2	= mousegto->height;
+
+			/* Push error on stack */
+			ERROR_PushError( SYS_PrintError, ( UNCHAR * ) &BBSYS_LibraryName[0], sizeof( struct BBSYS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+	/* MauszeigerPalette setzen */
+//	DSA_SetColor(SYSTEM_ActiveScreenPort,0,0,0,0,0);
+//	DSA_SetColor(SYSTEM_ActiveScreenPort,255,255,255,255,0);
+//	DSA_ActivatePal(SYSTEM_ActiveScreenPort);
+
+	/* Variablen werden in DSA_CopyOpmtoScreenChain4 benîtigt
+	 	 sie werden bei Kopiervorgang auf -1 gesetzt sonst °st ein retten
+		 und wiederherstellen der PageselectRegister im CHAIN4 Modus nicht notwendig	*/
+	chain4writeselectok=0;
+	chain4readselectok=0;
+
+	/* Wenn erneut dargestellt neue Position = alte Position */
+	cbd.rmx=-10000;
+
+	/* Mauszeiger darstellen */
+	SYSTEM_MouseDisplay();
+
+	SYSTEMVAR_noMouseInterrupt=FALSE;
+	intmouse=FALSE;
+	SYSTEMVAR_ShowMouse=TRUE;
+
+	return(TRUE);
+}
+/* #FUNCTION END# */
+
+ /*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      :	SYSTEM_HideMousePtr( SISHORT flag )
+ * FUNCTION  : 	Schaltet Mauszeiger aus
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    :
+ * RESULT    :
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+void SYSTEM_HideMousePtr( void )
+{
+	/* Wenn keine Maus installiert kann sie auch nicht dargestellt werden */
+	if((SYSTEM_Init_Flags&SYSTEM_FLAG_NOMOUSEINT)&&!(SYSTEM_Init_Flags&SYSTEM_FLAG_MOUSESYSTEMTASK)){
+		return;
+	}
+
+	/* Wenn Mauszeiger bereits deaktiviert return */
+	if(!SYSTEMVAR_ShowMouse){
+		return;
+	}
+
+	/* MAuszeiger ausschalten und Hintergrund restaurieren */
+	SYSTEMVAR_ShowMouse=FALSE;
+	SYSTEM_MouseRestore();
+	if(anzdoublepages==2){
+		doublepage=1-doublepage;
+		SYSTEM_MouseRestore();
+		doublepage=1-doublepage;
+	}
+}
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      :
+ * FUNCTION  : SYSTEM_GetTicks
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : Aktuelle TicksVariable ,zÑhlt in 1/60 sek wird bei Aufruf
+ *						 von SYSTEM_Init initialisiert.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+UNLONG SYSTEM_GetTicks( void )
+{
+	return(ticks);
+}
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      :
+ * FUNCTION  : SYSTEM_WaitTicks( UNLONG waitticks )
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     :
+ * LAST      :
+ * INPUTS    : waitticks = Anzahl 1/60 sekunden die gewartet werden soll
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+void SYSTEM_WaitTicks( UNLONG waitticks )
+{
+	UNLONG startticks;
+
+	/* startticks holen */
+	startticks=SYSTEM_GetTicks();
+
+/*  Theoretisch kînnte man die Variable Ticks direkt einsetzten
+ 						 dann funktioniert die Routine nicht, weil der Compiler
+ 						 dann ticks 'wegoptimiert'
+*/
+	/* warten */
+	while((SYSTEM_GetTicks()-startticks)<waitticks);
+
+}
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_SetMouseArea
+ * FUNCTION  : Set the mouse clip area.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 07.01.95 17:43
+ * LAST      : 07.01.95 17:43
+ * INPUTS    : struct BBRECT *Area - Pointer to new mouse area.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The mouse coordinates will be clipped.
+ *              changes.
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYSTEM_SetMouseArea(struct BBRECT *Area)
+{
+	SYSTEM_MouseRestore();
+
+	/* Mausinterrupt verbieten */
+	SYSTEMVAR_noMouseInterrupt=TRUE;
+
+	/* Set new area variables */
+	SYSTEMVAR_mouseclipx0 = Area->left;
+	SYSTEMVAR_mouseclipx1 = Area->left + Area->width - 1;
+	SYSTEMVAR_mouseclipy0 = Area->top;
+	SYSTEMVAR_mouseclipy1 = Area->top + Area->height - 1;
+
+	/* MausKoordinaaten clippen */
+	if(SYSTEMVAR_mousex<SYSTEMVAR_mouseclipx0){
+		SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx0;
+	}
+	else if(SYSTEMVAR_mousex>SYSTEMVAR_mouseclipx1){
+		SYSTEMVAR_mousex=SYSTEMVAR_mouseclipx1;
+	}
+	if(SYSTEMVAR_mousey<SYSTEMVAR_mouseclipy0){
+		SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy0;
+	}
+	else if(SYSTEMVAR_mousey>SYSTEMVAR_mouseclipy1){
+		SYSTEMVAR_mousey=SYSTEMVAR_mouseclipy1;
+	}
+
+	/* Mausinterrupt erlauben */
+	SYSTEMVAR_noMouseInterrupt=FALSE;
+
+	SYSTEM_MouseDisplay();
+}
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_SetMousePtr
+ * FUNCTION  : Set the position of the mouse pointer.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 07.01.95 17:32
+ * LAST      : 07.01.95 17:32
+ * INPUTS    : SISHORT X - New X-coordinate.
+ *             SISHORT Y - New Y-coordinate.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The coordinates will be clipped.
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYSTEM_SetMousePtr(SISHORT X, SISHORT Y)
+{
+//	SYSTEM_MouseRestore();
+
+	SYSTEMVAR_mousex=X;
+	SYSTEMVAR_mousey=Y;
+
+//	SYSTEM_MouseDisplay();
+}
+
+#ifdef BBSYS_ERRORHANDLING
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : SYS_PrintError
+ * FUNCTION  : Print error function for SYS library
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+SYS_PrintError( UNCHAR * buffer, UNBYTE * data )
+{
+	struct BBSYS_ErrorStruct * SYSErrorStructPtr=( struct BBSYS_ErrorStruct * ) data;
+
+	/* sprintf error message into string buffer */
+	sprintf( ( char * ) buffer, "ERROR!: %s  %ld, %ld", ( char * ) SYSErrorStructPtr->errorname, SYSErrorStructPtr->errordata, SYSErrorStructPtr->errordata2 );
+}
+
+#endif
+

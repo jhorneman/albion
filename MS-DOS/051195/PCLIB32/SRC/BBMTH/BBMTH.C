@@ -1,0 +1,307 @@
+/************
+ * NAME     : BBMTH.c
+ * AUTOR    : R.Reber, BlueByte
+ * START    : 25.05.94 14:00
+ * PROJECT  : Poject32
+ * NOTES    : Library stellt verschiedene mathematische Funktionen zur VerfÅgung
+ * SEE ALSO :
+ * VERSION  : 1.0
+ ************/
+
+#include <dos.h>
+#include <string.h>
+#include <i86.h>
+
+/* Includes */
+
+#include <BBERROR.H>
+#include <BBDEF.H>
+#include <BBEXTRDF.H>
+#include <BBMTH.H>
+#include "include/mthintrn.h"
+
+/* Error handling */
+#ifdef BBMTH_ERRORHANDLING
+	#include <stdio.h>
+
+	struct BBMTH_ErrorStruct bbmth_error;
+
+	/* Name of Library */
+	char BBMTH_LibraryName[] = "BBMTH Library";
+#endif
+
+/* DSA Library status */
+BOOLEAN MTH_Library_Status = FALSE;
+
+/* globale Variablen */
+SILONG MTH_randomseed=1;
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_sqrt
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMATH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 12:05:59
+ * LAST     : 26.05.95 12:05:59
+ * INPUTS   : SILONG val : Zahl von der die Wurzel gezogen wird
+ * RESULT   : SILONG : Wurzel aus VAL
+ * BUGS     :
+ * NOTES    : Es gibt noch eine Variante die aus einer 64 Bit Zahl eine
+ *						Wurzel ziehen kann, diese ist jedoch nur unter Assembler
+ *						zugÑngig (_MTH_ASS_SQRT64)
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SILONG MTH_sqrt(SILONG val)
+{
+	if(val>=0){
+		return(_MTH_ASS_SQRT(val));
+	}
+	#ifdef BBMTH_ERRORHANDLING
+		bbmth_error.errorname = "MTH_sqrt: Negative sqrt Value";
+		bbmth_error.errordata = 0;
+		ERROR_PushError( MTH_PrintError, ( UNCHAR * ) &BBMTH_LibraryName[0], sizeof( struct BBMTH_ErrorStruct ), ( UNBYTE * ) &bbmth_error );
+	#endif
+
+	return(_MTH_ASS_SQRT(-val));
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_initrnd
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 13:41:53
+ * LAST     : 26.05.95 13:41:53
+ * INPUTS   : SILONG seed : Initialisierungswert fÅr MTH_rnd
+ * RESULT   : None.
+ * BUGS     :
+ * NOTES    : siehe MTH_rnd
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void MTH_initrnd(SILONG seed)
+{
+	MTH_randomseed=seed;
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_rnd
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 13:43:03
+ * LAST     : 26.05.95 13:43:03
+ * INPUTS   :  void :
+ * RESULT   : UNSHORT : ZufallsZahl von 0-65535
+ * BUGS     :
+ * NOTES    :  siehe MTH_initrnd
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNSHORT MTH_rnd( void)
+{
+	return(_MTH_ASS_Random());
+}
+
+/* #FUNCTION END# */
+
+/*
+	******************************************************************************
+	* #FUNCTION HEADER BEGIN#
+	* NAME     : MTH_VektorLen
+	* FUNCTION : LÑnge des Åbergebenen Vektors ausrechnen
+	* FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+	* AUTHOR   : Rainer Reber
+	* FIRST    : 26.05.95 14:05:07
+	* LAST     : 26.05.95 14:05:07
+	* INPUTS   : SILONG x :
+	*            SILONG y :
+	*            SILONG z :
+	* RESULT   : SILONG : LÑnge des Åbergebenen Vektors
+	* BUGS     :
+	* NOTES    :
+	* VERSION  : 1.0
+	* #FUNCTION HEADER END#
+	*/
+
+/* #FUNCTION BEGIN# */
+
+UNLONG MTH_veklen(SILONG x,SILONG y,SILONG z)
+{
+	return(_MTH_ASS_VektorLen(x,y,z));
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_sin
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 16:42:50
+ * LAST     : 26.05.95 16:42:50
+ * INPUTS   : UNSHORT winkel : Winkel von 0-65535 (entspricht 0-360 Grad)
+ * RESULT   : SISHORT : sinusWert daraus von -16384 - +16384 (entspricht -1 - +1)
+ * BUGS     :
+ * NOTES    : SinusWert existiert intern nur mit 1/8 der Genauigkeit
+ *					  (0-8191) ist der Einfachheit halber auf 65535 normiert
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SISHORT MTH_sin(UNSHORT winkel)
+{
+	extern SISHORT MTH_sinusdata[];
+	SISHORT sinus;
+
+/* sinus aus Tabelle lesen */
+	sinus=MTH_sinusdata[(winkel&32767)>>3];
+
+/* Åber 32768 bzw 180 Grad dann spÑter Winkel negieren */
+	if(winkel>32767){
+		return(-sinus);
+	}
+	else{
+		return(sinus);
+	}
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_cos
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 16:42:50
+ * LAST     : 26.05.95 16:42:50
+ * INPUTS   : UNSHORT winkel : Winkel von 0-65535 (entspricht 0-360 Grad)
+ * RESULT   : SISHORT : cosinusWert daraus von -16384 - +16384 (entspricht -1 - +1)
+ * BUGS     :
+ * NOTES    : CoSinusWert existiert intern nur mit 1/8 der Genauigkeit
+ *					  (0-8191) ist der Einfachheit halber auf 65535 normiert
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SISHORT MTH_cos(UNSHORT winkel)
+{
+	extern SISHORT MTH_sinusdata[];
+	SISHORT sinus;
+
+/* sinus + 90 Grad = cosinus */
+	winkel+=16384;
+
+/* sinus aus Tabelle lesen */
+	sinus=MTH_sinusdata[(winkel&32767)>>3];
+
+/* Åber 32768 bzw 180 Grad dann spÑter Winkel negieren */
+	if(winkel>32767){
+		return(-sinus);
+	}
+	else{
+		return(sinus);
+	}
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : MTH_atan
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 26.05.95 17:40:21
+ * LAST     : 26.05.95 17:40:21
+ * INPUTS   : SILONG x : X Vektor
+ *            SILONG y : Y Vektor
+ * RESULT   : UNSHORT : Winkel des Vektors (0-65535)
+ * BUGS     :
+ * NOTES    :
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNSHORT MTH_atan(SILONG x,SILONG y)
+{
+	return(_MTH_ASS_ArcTangens(x,y));
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : MTH_PrintError
+ * FUNCTION  : Print error function for MTH library
+ * FILE      : BBMTH.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 03.06.94 18:00
+ * LAST      : 30.04.05 14:00
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BBMTH_ERRORHANDLING
+
+	void
+	MTH_PrintError( UNCHAR * buffer, UNBYTE * data )
+	{
+		/* Local vars */
+		struct BBMTH_ErrorStruct * MTHErrorStructPtr=( struct BBMTH_ErrorStruct * ) data;
+
+		/* sprintf error message into string buffer */
+		sprintf( ( char * ) buffer, "ERROR!: %s  %ld, %ld", ( char * ) MTHErrorStructPtr->errorname, MTHErrorStructPtr->errordata, MTHErrorStructPtr->errordata2 );
+	}
+
+#endif
+
+
+

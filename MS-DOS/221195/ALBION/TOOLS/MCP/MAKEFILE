@@ -1,0 +1,51 @@
+# Makefile for Albion MCP
+# PC CD-ROM version
+
+.ERASE
+
+# Do not output commands
+.SILENT
+
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+
+# Define library and source directories
+Pdir = G:\ALBION
+Ldir = G:\ALBION\LIB
+Sdir = G:\ALBION\TOOLS\MCP
+Pname = ALBION
+
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS OP CASEEXACT OP NOREDEFS OP MAP
+Compiler = *wcc /d0 /ox /4 /ms
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS DEBUG ALL OP CASEEXACT OP NOREDEFS OP MAP
+Compiler = *wcc /d2 /od /4 /ms
+
+!endif
+
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;G:\ALBION\LIB
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB;G:\ALBION\LIB
+
+
+$(Pdir)\$(Pname).EXE : $(Sdir)\MCP.OBJ
+	$(Linker) FILE {$(Sdir)\MCP.OBJ} NAME $(Pdir)\$(Pname).EXE
+
+$(Sdir)\MCP.OBJ : $(Sdir)\MCP.C
+	$(Compiler) $(Sdir)\MCP.C -fo$(Sdir)\MCP.OBJ
+

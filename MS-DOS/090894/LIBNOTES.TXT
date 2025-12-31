@@ -1,0 +1,29 @@
+	*** PCLIB32 : Kommentare und Verbesserungsvorschl„ge ***
+
+- Mann sollte in der Lage sein um ein Screen zu ”ffen ohne ein OPM. Dazu
+msste man DSA_OpenScreen() die Breite, Hoehe und Tiefe bergeben; also al die
+Parameter die sonst aus das OPM kommen.
+
+- Praktisch w„re auch eine Funktion um der Mauszeiger ein zu sperren, auch
+wenn das auf manche Plattforme vielleicht nicht erlaubt ist.
+
+- Es w„re gut wenn DSA_OpenScreen() einfach ein Fehlercode zurckliefer wenn
+man versucht um ein gedoppelpuffertes Bildschirm zu ”ffnen wenn
+Doppelpufferung unm”glich ist. Besser noch w„re es wenn es einfach das
+Maul h„lt, und wenn DSA_DoubleBuffer() dementsprechend reagieren wrde.
+
+- Es w„re auch nicht schlecht wenn BLEV_GetEvent() die BBEVENT-struktur auch
+mit sinnvolle Information fllen wrde wenn kein Event auftrat. Der Konstante
+BLEV_NO_EVENT (mit den Wert 0) k”nnte dazu benutzt werden.
+
+- Es w„re sinnvoll um eine Konstante BLEV_MOUSE_EVENT zu definieren, der
+dazu dient um fest zu stellen ob ein Event ein Mausevent war. Dazu msste
+man nur alle Maustastenkonstanten zusammenodern.
+
+- Nur was kleines : sicherheitshalber sollten wird vielleicht die
+Eventkonstanten als Bits definieren (z.B. (1<<6)) und nicht als Werte, um
+m”gliche Fehler zu verhindern.
+
+- Spricht was dagegen um eine globale Variabele zu machen die der aktuelle
+Zustand der Maustasten enth„lt ?
+

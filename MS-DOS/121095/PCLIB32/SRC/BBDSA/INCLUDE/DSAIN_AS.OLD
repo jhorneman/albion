@@ -1,0 +1,55 @@
+;/************
+; * NAME     :  VESA.H
+; * AUTOR    :  BlueByte
+; * PROJECT  :  Project 32
+; ************/
+
+;/* Includes */
+
+;/* defines */
+
+;/* Strukturen */
+
+VESAMODEINFO STRUCT
+	 	Attributes WORD 1 ;			// 1.0
+	 	WinAAtt BYTE 1 ;
+	 	WinBAtt BYTE 1 ;
+	 	WinGran WORD 1 ;
+	 	WinSize WORD 1 ;
+	 	WinAStartSeg WORD 1 ;
+	 	WinBStartSeg WORD 1 ;
+		WinPosFunc DWORD 1 ;
+	 	BytePerScanLine WORD 1 ;
+
+	 	PixelWidth WORD 1 ;			// OEM
+	 	PixelHeight WORD 1 ;
+	 	PixelWidthChar BYTE 1 ;
+	 	PixelHeightChar BYTE 1 ;
+	 	NumOfPlanes BYTE 1 ;
+	 	BitsPerPixel BYTE 1 ;
+	 	NumOfBanks BYTE 1 ;
+	 	MemoryModel BYTE 1 ;
+	 	SizeOfBank BYTE 1 ;
+
+	 	RedMaskSize BYTE 1 ;			// 1.2
+	 	RedFieldPos BYTE 1 ;
+	 	GreenMaskSize BYTE 1 ;
+	 	GreenFieldPos BYTE 1 ;
+	 	BlueMaskSize BYTE 1 ;
+	 	BlueFieldPos BYTE 1 ;
+	 	ReservedMaskSize BYTE 1 ;
+	 	ReservedMaskPos BYTE 1 ;
+	 	DirectColorMode BYTE 1 ;
+	 	Reserved BYTE 1 ;
+
+	 	FutureUse BYTE 256-39 ;	// X.X
+
+	 	ModeNumber WORD 1 ;			// own variable
+VESAMODEINFO ENDS
+
+
+; extern Declarations
+
+	EXTERN	_vesamodeinfo:DWORD
+
+

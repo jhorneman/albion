@@ -1,0 +1,99 @@
+
+
+Fehler raus für Presseversion:
+
+JURIE
+
+? Kampf sollte komplett funktionieren (bis auf Endkampf m. AI)
+
+x Rasten-Erschöpfungs-Zyklus
+
+x Ganz wichtig: Geschwindigkeitsregelung oder -synchronisation 2D
+
+x Campen: manche Leute bekommen keine SP oder LP hinzu (#425)
+
+x Medipaks (#471)
+
+x Hindrehen zu angreifenden Monstern, dann Text "Ein Angriff!"? Auch wichtig für jagende Dialogpartner in 3D
+
+x Der ganze Heilungskomplex, Zaubern & normal, Große Heilung tut nicht richtig.
+
+  Abstürze im Kampf
+
+x Iskai-Schwanz-Ausrüstungsfehler (#322)
+
+? Songs und Samples komplettieren, damit keine Fehlermeldungen auftauchen
+
+x kleine Steuerungsfehler (Geschw., etwas mehr Rückwärts-Bereich, Rückwärts auch bei Klicken in Bereich)
+   nach dem Fliehen Monster kürzer "freezen"
+
+x KBS: richtige Verwaltung von Heilung, Bewußtlosigkeit (entweder nicht heilbar-> Response
+  oder wiederauftauchen der Taktikfiguren)
+  Im Kampf werden Bewußtlose geheilt -> danach immer noch bewußtlos
+
+x KBS: Abfangen der Konditionenheilung (weil wir ja bald
+  Monster haben, die auch Konditionen setzen).
+
+x Harriet Zusätzlichen "normalen" Heilspruch geben.
+
+(x Laden aus dem KBS heraus)
+
+x feedback im KBS bei verschiedenen Aktionen prüfen (gemerkt hab ich's bei Zaubern auf Reihe, mag.
+   Geg. anwenden, Items brechen, gibt aber wohl noch mehr Aktionen, wo kein Feedback kommt)
+
+x Kritahs editieren
+
+x Permanenttext&Bodenplatten-Problem (Spielstand 34 "Ich hänge fest." -> Erik fragen. gibt in der Nähe Bodenplatten
+  zum Testen.
+
+x Tag- & Nachtzyklus Städte
+
+x Camp-Bild einbauen
+
+x (Farbliche Kennzeichnung noch nicht angeklickter Wörter (bronze) im Wortrequester bei Langdialogen)
+
+? Drehfehler
+x Dialogwortfarben
+? Speicherleck?
+x KBS-Monsteranimationen
+x (Nacht-Kampfhintergründe)
+
+x Nachtpaletten an der dunkelsten Stelle bitte etwas heller bei Paletten Städte 3D (weil
+  Lichtquellen nicht tun) und wichtig: in der Wüstenpalette (Marcus muß sonst sehr viel umeditieren
+  Man kommt ausgerechnet dann an seinem Gefängnis an, wenn es stockfinster ist -> durchspielen
+  gefährdet)
+
+
+ERIK
+-#AI-Körper mit Codekarte machen!
+-#Text bei Überbrückung Kampf mit AI erweitern.
+-#Endsequenz so weit wie möglich fertigmachen.
+
+  Game-Over abbrechbar oder kürzen
+
+() = nicht soo wichtig
+
+
+
+
+LAST MINUTE
+
+x Hindrehen bei NPC Typ "Object" raus, sonst viele Puzzles unspielbar
+
+x Party dreht sich unkontrolliert, gut zu sehen in Map 155
+
+x Query Success nach Kampf funktioniert nicht mehr (evtl. auch andere?)
+
+x Nacht-KBS führt zu Fehler und evtl. Absturz. Fehlermeldung:
+BBERROR: ERRORSTACK START:--------------
+BBDOS Library:  DOS_Read: read() oserror - FILENAME: XLDLIBS\COMBACK0.XLD - DATA: 0 - OSERROR: 1
+Xload: Read failed.
+     (Name : Combat background, Subfile number : 18)
+Albion: File access error.
+BBERROR: ERRORSTACK END-----------------
+
+x Sequenz Kamulos und Abreise von Beloveno: oberste 64 Farben bleiben schwarz. Tip: dunklergerechnete
+Eingabefelder im Hauptmenü und anderswo haben wieder Falschfarben.
+
+x Bei Marcus reproduzierbarer Totalabsturz bei Angriff von Monstern: Einfach in die Map 246 springen, rest
+geht automatisch. Kein speicherproblem, passiert auch bei maxmem 10000.

@@ -1,0 +1,6 @@
+wmake -f albion01.mak "User = %1"
+wmake -f albion02.mak "User = %1"
+wmake -f albion03.mak "User = %1"
+wmake -f albion04.mak "User = %1"
+wmake -f albion05.mak "User = %1"
+wmake -f albion06.mak "User = %1"

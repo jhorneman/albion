@@ -1,0 +1,18 @@
+
+--- Module:   g:\albion\game\dialogue.c 
+                                                                             _
+         memcpy((UNBYTE *) &(Entry_OID.Data), (UNBYTE *) (OID->Entry_list[i]),
+g:\albion\game\dialogue.c  333  Error 70: can't cast from struct to pointer
+                                              _
+          Y, MC_ENTRY_WIDTH, Entry_heights[i]);
+g:\albion\game\dialogue.c  338  Info 771: Entry_heights (line 278) conceivably
+    not initialized
+                           _
+      Y += Entry_heights[i];
+g:\albion\game\dialogue.c  342  Info 771: Entry_heights (line 278) conceivably
+    not initialized
+
+    --- Wrap-up for Module: g:\albion\game\dialogue.c
+
+Warning 528: MC_window_Class (line 73, file g:\albion\game\dialogue.c) not
+    referenced

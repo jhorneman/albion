@@ -1,0 +1,47 @@
+.ERASE
+
+# Do not output commands
+.SILENT
+
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+
+# Define library and source directories
+Pdir = G:\ALBION\TOOLS
+Ldir = G:\ALBION\LIB
+Sdir = G:\ALBION\TOOLS\CALCCOL
+
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G OP CASEEXACT OP NOREDEFS OP STACK=16K
+Compiler = *wcc386 /d0 /omiler /5r
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G DEBUG ALL OP CASEEXACT OP NOREDEFS OP STACK=16K
+Compiler = *wcc386 /d2 /od /5r
+
+!endif
+
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;G:\ALBION\LIB
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB;G:\ALBION\LIB
+
+
+$(Pdir)\CALCCOL.EXE : $(Sdir)\CALCCOL.OBJ
+	$(Linker) FILE {$(Sdir)\CALCCOL.OBJ $(Ldir)\FINDCOL.OBJ $(Ldir)\SORT.OBJ} NAME G:\ALBION\TOOLS\CALCCOL.EXE
+
+$(Sdir)\CALCCOL.OBJ : $(Sdir)\CALCCOL.C
+	$(Compiler) $(Sdir)\CALCCOL.C -fo$(Sdir)\CALCCOL.OBJ
+

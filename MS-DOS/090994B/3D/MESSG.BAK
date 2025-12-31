@@ -1,0 +1,22 @@
+
+hallo jurie,
+
+folgende Komponenten sind zu I3DM dazu gekommen:
+
+UNSHORT Horizon_angle_factor;	/* Gibt an, wie oft die Hintergrundgrafik im Sichtkreis (360') wiederholt wird */
+UNSHORT	Cm_to_Units_log2;	/* Umrechnungs-Shifts cm -> Units */
+
+Der Zweck sollte eigentlich klar sein...Horizon_angle_factor ist nur fÅr
+die Hintergrund-Grafiken.
+
+
+Es gibt zwei neue (alte) Funktionen:
+
+UNSHORT	Set_3DM_AspectRatio( UNSHORT ratio);	/* Zur Anpassung an verschiedenen Monitor-Geometrien */
+UNSHORT	Set_3DM_SquareSize( UNSHORT cm);	/* Grî·e der Felder in Zentimetern festsetzen. */
+
+Die erste dient dazu, die Bildgrî·e zu skalieren. ratio = 100 ist die Normal-
+verzerrung, kleinere bzw. grî·ere Werte dehnen bzw. stauchen das Bild.
+
+
+

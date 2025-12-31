@@ -1,0 +1,25 @@
+     Songs in Albion
+
+NR	BESCHREIBUNG
+
+1	Dunkele Druiden / bedrohlich
+2	Savanne
+3	Dungeon
+4	Toronto
+5	Toronto / ambient
+6	Savanne / ambient
+7	Dekadente / ambient
+8	Jungle / ambient
+9    	Naturhoehle / ambient
+10	City / ambient
+11	Dekadenten / ambient
+12	Erleuchteten / ambient
+13	Hafen / ambient
+14	Metalmacher / ambient
+15	Dunkele Druiden / ambient
+16	Normalokneipe / ambient
+17	Dekadenten / fr”hlicher Garten (huepf)
+18	Metalmacher / bedrohlich
+19	Iskai / bedrohlich
+20	Toronto / bedrohlich
+

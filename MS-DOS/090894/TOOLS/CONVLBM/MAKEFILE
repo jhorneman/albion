@@ -1,0 +1,19 @@
+.ERASE
+
+X = CONVLBM
+Sdir = C:\WORK\TOOLS\CONVLBM
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /od
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+
+.BEFORE
+	cd $(Sdir)
+
+$(Sdir)\$(X).EXE : $(Sdir)\$(X).OBJ
+	$(Linker) FILE {$(X).OBJ C:\PCLIB32\LIB\PCLIB32.LIB} NAME $(X).EXE
+
+$(Sdir)\$(X).OBJ : $(Sdir)\$(X).C
+	$(Compiler) $(X).C
+

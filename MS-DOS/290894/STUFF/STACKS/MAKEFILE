@@ -1,0 +1,23 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Sdir = C:\WORK\STACKS
+
+
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386P /3s /d2 /w3 /od
+
+Header_files = $(Ldir)\BBDEF.H &
+	$(Ldir)\BBERROR.H &
+	$(Ldir)\STACKS.H
+
+.BEFORE
+	cd $(Sdir)
+
+
+
+$(Ldir)\STACKS.OBJ : $(Sdir)\STACKS.C $(Header_files)
+	$(Compiler) STACKS.C -fo=$(Ldir)\STACKS.OBJ
+

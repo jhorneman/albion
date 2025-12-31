@@ -1,0 +1,1711 @@
+/************
+ * NAME     : BBBASMEM.C
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 28-12-1994
+ * PROJECT  : Base memory management / DPMI
+ * VERSION  : 2.0
+ * SEE ALSO : BBBASMEM.H
+ ************/
+
+/*
+ ** Includes ***************************************************************
+ */
+
+#include <stdio.h>
+#include <dos.h>
+#include <string.h>
+#include <i86.h>
+
+#include <BBDEF.H>
+#include <BBBASMEM.H>
+#include <BBSYSTEM.H>
+#include <BBERROR.H>
+
+/*
+ ** Defines ****************************************************************
+ */
+
+/* Number of entries in base memory table */
+#define BASEMEM_ENTRIES_MAX	(50)
+
+/* Values for BASEMEM_TableEntry.status */
+#define BASEMEM_Status_Free	(0L)					/* Entry is free */
+#define BASEMEM_Status_Locked	(0x40000000) 		/* Entry is locked */
+#define BASEMEM_Status_InUse	(0x80000000)		/* Entry is in use */
+
+/* DPMI host interrupt */
+#define DPMI_INT	0x31
+
+/* DPMI flags */
+#define DPMI_386_IMPLEMENTATION		(1 << 0)
+#define DPMI_NO_V86_MODE				(1 << 1)
+#define DPMI_VIRTUAL_MEM_SUPPORTED	(1 << 2)
+
+/* ErrorHandling aktiv */
+#define BBBASEMEM_ERRORHANDLING
+
+/* Error codes */
+#define BASEMEMERR_NO_FREE_ENTRY						(1)
+#define BASEMEMERR_OUT_OF_DOS_MEMORY				(2)
+#define BASEMEMERR_OUT_OF_XMS_MEMORY				(3)
+#define BASEMEMERR_LDT_DESC_ALLOCATION				(4)
+#define BASEMEMERR_SET_SEGMENT_BASE					(5)
+#define BASEMEMERR_SET_SEGMENT_LIMIT				(6)
+#define BASEMEMERR_ENTRY_NOT_FOUND					(7)
+#define BASEMEMERR_COULD_NOT_FREE_DOS_MEMORY		(8)
+#define BASEMEMERR_COULD_NOT_FREE_LDT_DESC		(9)
+#define BASEMEMERR_COULD_NOT_FREE_XMS_MEMORY		(10)
+#define BASEMEMERR_COULD_NOT_RESIZE_DOS_MEMORY	(11)
+#define BASEMEMERR_COULD_NOT_RESIZE_XMS_MEMORY	(12)
+#define BASEMEMERR_UNSUPPORTED_MEMORY_TYPE		(13)
+#define BASEMEMERR_COULD_NOT_LOCK_REGION			(14)
+#define BASEMEMERR_COULD_NOT_UNLOCK_REGION		(15)
+#define BASEMEMERR_COULD_NOT_GET_PAGE_SIZE		(16)
+
+#define BASEMEMERR_MAX (16)
+
+/*
+ ** Structure definitions **************************************************
+ */
+
+/* Base memory table entry */
+struct BASEMEM_TableEntry
+{
+	UNLONG Status;
+	UNBYTE *Ptr;
+	UNLONG Size;
+	UNSHORT Selector;
+	UNSHORT Segment;
+	UNLONG Handle;
+};
+
+/* DPMI memory info */
+struct meminfo {
+    unsigned LargestBlockAvail;
+    unsigned MaxUnlockedPage;
+    unsigned LargestLockablePage;
+    unsigned LinAddrSpace;
+    unsigned NumFreePagesAvail;
+    unsigned NumPhysicalPagesFree;
+    unsigned TotalPhysicalPages;
+    unsigned FreeLinAddrSpace;
+    unsigned SizeOfPageFile;
+    unsigned Reserved[3];
+};
+
+/* BASEMEM error data */
+struct Base_memory_error {
+	UNSHORT Code;
+	UNSHORT DPMI_error_code;
+};
+
+/*
+ ** Prototypes *************************************************************
+ */
+
+void BASEMEM_Error(UNSHORT Error_code, UNSHORT DPMI_error_code);
+void BASEMEM_Print_error(UNCHAR *buffer, UNBYTE *data);
+
+/*
+ ** Global variables *******************************************************
+ */
+
+/* BASEMEM library status */
+static BOOLEAN BASEMEM_Library_Status = FALSE;
+
+/* BASEMEM memory entry table */
+static struct BASEMEM_TableEntry BASEMEM_Table[BASEMEM_ENTRIES_MAX];
+
+/* DPMI version information */
+static UNSHORT DPMI_version_nr;
+static UNSHORT DPMI_subversion_nr;
+static UNSHORT DPMI_flags;
+static UNSHORT DPMI_CPU_type;
+
+static UNLONG DPMI_page_size;
+
+#ifdef BBBASEMEM_ERRORHANDLING
+
+/* BASEMEM error handling data */
+static UNCHAR BASEMEM_Library_name[] = "BASEMEM / DPMI";
+
+static UNCHAR *BASEMEM_Error_strings[BASEMEMERR_MAX + 1] = {
+	"Illegal error code.",
+	"No free entry in table.",
+	"Out of DOS memory (DPMI error code : %#x).",
+	"Out of XMS memory (DPMI error code : %#x).",
+	"Could not allocate LDT segment descriptor (DPMI error code : %#x).",
+	"Could not set segment base (DPMI error code : %#x).",
+	"Could not set segment upper limit (DPMI error code : %#x).",
+	"Entry not found.",
+	"Could not free DOS memory (DPMI error code : %#x).",
+	"Could not free LDT segment descriptor (DPMI error code : %#x).",
+	"Could not free XMS memory (DPMI error code : %#x).",
+	"Couldn't resize DOS memory (DPMI error code : %#x).",
+	"Could not resize XMS memory (DPMI error code : %#x).",
+	"Unsupported memory type.",
+	"Could not lock memory region (DPMI error code : %#x)",
+	"Could not unlock memory region (DPMI error code : %#x)",
+	"Could not get DPMI page size."
+};
+#endif
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Init
+ * FUNCTION  : Initialize base memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 11:10
+ * LAST      : 28.12.94 11:10
+ * INPUTS    : None.
+ * RESULT    : BOOLEAN : Initialization successful.
+ * BUGS      : No known.
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+BASEMEM_Init(void)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	UNSHORT i;
+
+	/* Library already initialized ? */
+	if(!BASEMEM_Library_Status)
+	{
+		/* No -> Clear all entries */
+		for(i=0;i<BASEMEM_ENTRIES_MAX;i++)
+		{
+			BASEMEM_Table[i].Status = BASEMEM_Status_Free;
+		}
+
+		/* Try to get DPMI version information from DPMI host */
+		BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+		regs.w.ax = 0x0400;
+
+		int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+		/* Get DPMI version */
+		DPMI_version_nr		= (UNSHORT) regs.h.ah;
+		DPMI_subversion_nr	= (UNSHORT) regs.h.al;
+
+		/* Get DPMI flags */
+		DPMI_flags = (UNSHORT) regs.w.bx;
+
+		/* Get processor type */
+		DPMI_CPU_type = (UNSHORT) regs.h.cl;
+
+		/* Try to get page size from DPMI host */
+		BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+		regs.w.ax = 0x0604;
+
+		int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+		/* Success ? */
+		if (!regs.x.cflag)
+		{
+			/* Yes -> Get page size */
+			DPMI_page_size = (regs.w.bx << 16) + regs.w.cx;
+		}
+		else
+		{
+			/* No -> Set page size to default value */
+			DPMI_page_size = 4096;
+
+			/* Report error */
+//			BASEMEM_Error(BASEMEMERR_COULD_NOT_GET_PAGE_SIZE, 0);
+		}
+
+		/* Library is initialized */
+		BASEMEM_Library_Status = TRUE;
+	}
+
+	return TRUE;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Exit
+ * FUNCTION  : Exit base memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 11:14
+ * LAST      : 28.12.94 11:14
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_Exit(void)
+{
+	UNSHORT i;
+
+	/* Library initialized ? */
+	if(BASEMEM_Library_Status)
+	{
+		/* Yes -> Free all allocated memory blocks */
+		for(i=0;i<BASEMEM_ENTRIES_MAX;i++)
+		{
+			if(BASEMEM_Table[i].Status & BASEMEM_Status_InUse)
+			{
+				BASEMEM_Free(BASEMEM_Table[i].Ptr);
+			}
+		}
+
+		/* Library is no longer initialized */
+		BASEMEM_Library_Status = FALSE;
+	}
+}
+
+/* #FUNCTION END# */
+
+#ifdef BBBASEMEM_ERRORHANDLING
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Error
+ * FUNCTION  : Report a base memory management error.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 12:43
+ * LAST      : 15.08.95 16:07
+ * INPUTS    : UNSHORT Error_code - Error code.
+ *             UNSHORT DPMI_error_code - DPMI error code.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBBASMEM.H, BBERROR.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_Error(UNSHORT Error_code, UNSHORT DPMI_error_code)
+{
+	struct Base_memory_error Error;
+
+	/* Initialize base memory error structure */
+	Error.Code					= Error_code;
+	Error.DPMI_error_code	= DPMI_error_code;
+
+	/* Push error on the error stack */
+	ERROR_PushError(BASEMEM_Print_error, BASEMEM_Library_name,
+	 sizeof(struct Base_memory_error), (UNBYTE *) &Error);
+}
+
+/* #FUNCTION END# */
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Print_error
+ * FUNCTION  : Print a base memory management error.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 12:44
+ * LAST      : 19.08.95 20:10
+ * INPUTS    : UNCHAR *buffer - Pointer to output buffer.
+ *             UNBYTE *data - Pointer to error data written by BASEMEM_Error.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - Output length should not exceed BBERROR_OUTSTRINGSIZE.
+ * SEE ALSO  : BBBASMEM.H, BBERROR.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_Print_error(UNCHAR *buffer, UNBYTE *data)
+{
+	struct Base_memory_error *Error;
+	UNSHORT Error_code;
+	UNSHORT DPMI_error_code;
+
+	/* Get error code */
+	Error = (struct Base_memory_error *) data;
+	Error_code = Error->Code;
+
+	/* Catch illegal errors */
+	if (Error_code > BASEMEMERR_MAX)
+		Error_code = 0;
+
+	/* Get DPMI error code */
+	DPMI_error_code = Error->DPMI_error_code;
+
+	/* Is real error code ? */
+	if (!(DPMI_error_code & 0x8000))
+	{
+		/* No -> Set to zero */
+		DPMI_error_code = 0;
+	}
+
+	/* Print error */
+	_bprintf
+	(
+		buffer,
+		BBERROR_OUTSTRINGSIZE,
+		BASEMEM_Error_strings[Error_code],
+		DPMI_error_code
+	);
+}
+
+/* #FUNCTION END# */
+
+#else
+
+#define BASEMEM_Error(a, b)
+
+#endif
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Get_largest_block
+ * FUNCTION  : Return the size of the largest, possibly virtual, free block
+ *              of memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 21.07.94 14:04
+ * LAST      : 24.08.95 15:39
+ * INPUTS    : UNLONG flagset: Flags determining memory type.
+ * RESULT    : UNLONG : Size of largest free block.
+ * BUGS      : No known.
+ * NOTES     : - If an error occurs, the returned size will be 0.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+BASEMEM_Get_largest_block(UNLONG flagset)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	UNLONG Size = 0;
+
+	/* Which memory type ? */
+	switch (flagset & 0x000000FF)
+	{
+		/* DOS memory */
+		case BASEMEM_Status_Dos:
+		{
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0100;
+			regs.w.bx = 0xFFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return value */
+			Size = (UNLONG) regs.w.bx << 4;
+
+			break;
+		}
+		/* Flat memory */
+		case BASEMEM_Status_Flat:
+		{
+			struct meminfo MemInfo;
+
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0500;
+			seg_regs.es = FP_SEG(&MemInfo);
+			regs.x.edi = FP_OFF(&MemInfo);
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (!regs.x.cflag)
+			{
+				/* Yes -> Get size of largest block */
+				Size = MemInfo.LargestBlockAvail;
+
+				/* Subtract 64K */
+				Size -= 65536;
+			}
+			break;
+		}
+	}
+
+	return Size;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Get_largest_real_block
+ * FUNCTION  : Return the size of the largest NON-VIRTUAL free block of
+ *              memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 24.08.95 15:38
+ * LAST      : 24.08.95 15:38
+ * INPUTS    : UNLONG flagset: Flags determining memory type.
+ * RESULT    : UNLONG : Size of largest non-virtual free block.
+ * BUGS      : No known.
+ * NOTES     : - If an error occurs, the returned size will be 0.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+BASEMEM_Get_largest_real_block(UNLONG flagset)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	UNLONG Size = 0;
+
+	/* Which memory type ? */
+	switch (flagset & 0x000000FF)
+	{
+		/* DOS memory */
+		case BASEMEM_Status_Dos:
+		{
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0100;
+			regs.w.bx = 0xFFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return value */
+			Size = (UNLONG) regs.w.bx << 4;
+
+			break;
+		}
+		/* Flat memory */
+		case BASEMEM_Status_Flat:
+		{
+			struct meminfo MemInfo;
+
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0500;
+			seg_regs.es = FP_SEG(&MemInfo);
+			regs.x.edi = FP_OFF(&MemInfo);
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (!regs.x.cflag)
+			{
+				/* Yes -> Is virtual memory supported ? */
+				if (DPMI_flags & DPMI_VIRTUAL_MEM_SUPPORTED)
+				{
+					/* Yes -> Is more information available ? */
+					if (MemInfo.LargestLockablePage != 0xFFFFFFFF)
+					{
+						/* Yes -> Get size of real largest block */
+						Size = MemInfo.LargestLockablePage * DPMI_page_size;
+					}
+				}
+				else
+				{
+					/* Yes -> Get size of largest block */
+					Size = MemInfo.LargestBlockAvail;
+
+					/* Subtract 64K */
+					Size -= 65536;
+				}
+			}
+			break;
+		}
+	}
+
+	return Size;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Get_free_memory
+ * FUNCTION  : Return the total amount of free memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 06.01.95 15:49
+ * LAST      : 15.08.95 16:19
+ * INPUTS    : UNLONG flagset: Flags determining memory type.
+ * RESULT    : UNLONG : Total amount of free memory.
+ * BUGS      : No known.
+ * NOTES     : - If an error occurs, the returned size will be 0.
+ *             - For DOS memory, this function will return the largest free
+ *              block, rather than the total amount of free memory, as I have
+ *              found no practical way for doing this.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+BASEMEM_Get_free_memory(UNLONG flagset)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	UNLONG Size = 0;
+
+	/* Which memory type ? */
+	switch (flagset & 0x000000FF)
+	{
+		/* DOS memory */
+		case BASEMEM_Status_Dos:
+		{
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0100;
+			regs.w.bx = 0xFFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return value */
+			Size = (UNLONG) regs.w.bx << 4;
+
+			#if FALSE
+			/* Ask DOS */
+			regs.h.ah = 0x48;
+			regs.w.bx = 0xFFFF;
+
+			int386(0x12, &regs, &regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				Size = (UNLONG) regs.w.bx * 16;
+			}
+			#endif
+
+			break;
+		}
+		/* Flat memory */
+		case BASEMEM_Status_Flat:
+		{
+			struct meminfo MemInfo;
+
+			/* Ask DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0500;
+			seg_regs.es = FP_SEG(&MemInfo);
+			regs.x.edi = FP_OFF(&MemInfo);
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (!regs.x.cflag)
+			{
+				/* Yes -> Is more information available ? */
+				if (MemInfo.NumPhysicalPagesFree != 0xFFFFFFFF)
+				{
+					/* Yes -> Get total amount of free memory */
+					Size = MemInfo.NumPhysicalPagesFree * DPMI_page_size;
+
+					/* Subtract 64K */
+					Size -= 65536;
+				}
+			}
+			break;
+		}
+		/* Unsupported memory type */
+		default:
+		{
+			/* Report error */
+			BASEMEM_Error(BASEMEMERR_UNSUPPORTED_MEMORY_TYPE, 0);
+		}
+	}
+
+	return Size;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Alloc
+ * FUNCTION  : Allocate a block of memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 13:31
+ * LAST      : 24.08.95 13:17
+ * INPUTS    : UNLONG size	- Size of block to allocate.
+ *             UNLONG flagset - Flags.
+ * RESULT    : UNBYTE * : Pointer to memory block / NULL = error.
+ * BUGS      : No known.
+ * NOTES     : - This function does NOT call BASEMEM_Align.
+ *             - Both DOS and flat memory are allocated using DPMI.
+ * SEE ALSO  : BBBASMEM.H
+ * VERSION   : 2.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE *
+BASEMEM_Alloc(UNLONG size, UNLONG flagset)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	BOOLEAN Result;
+	UNLONG Handle;
+	UNSHORT Selector;
+	UNSHORT Segment;
+	UNSHORT DPMI_error_code;
+	UNSHORT Table_index;
+	UNSHORT i;
+	UNBYTE *Memory_pointer = NULL;
+
+	/* Exit if size is zero */
+	if (!size)
+		return NULL;
+
+	/* Search a free entry */
+	Table_index = 0xFFFF;
+	for(i=0;i<BASEMEM_ENTRIES_MAX;i++)
+	{
+		/* Is this entry free ? */
+		if (BASEMEM_Table[i].Status == BASEMEM_Status_Free)
+		{
+			/* Yes */
+			Table_index = i;
+			break;
+		}
+	}
+
+	/* Free slot found ? */
+	if (Table_index == 0xFFFF)
+	{
+		/* No -> Error */
+		BASEMEM_Error(BASEMEMERR_NO_FREE_ENTRY, 0);
+		return NULL;
+	}
+
+	/* Which memory type ? */
+	switch (flagset & 0x000000FF)
+	{
+		/*** DOS memory ***/
+		case BASEMEM_Status_Dos:
+		{
+			/* Align required size to paragraph size */
+			size = (size + 15) & 0xFFFFFFF0;
+
+			/* Try to allocate memory from DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0100;
+			regs.w.bx = size >> 4;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return values */
+			Segment	= regs.w.ax;
+			Selector	= regs.w.dx;
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_OUT_OF_DOS_MEMORY, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Calculate pointer to memory block */
+			Memory_pointer = (UNBYTE *) ((UNLONG) Segment << 4);
+
+			/* No memory handle */
+			Handle = 0;
+			break;
+		}
+		/*** Flat memory ***/
+		case BASEMEM_Status_Flat:
+		{
+			/* Yes -> Align required size to 4K page size */
+			size = (size + 4095) & 0xFFFFF000;
+
+			/* Try to allocate memory from DPMI host */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0501;
+			regs.w.bx = (size & 0xFFFF0000) >> 16;
+			regs.w.cx = size & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return values */
+			Memory_pointer = (UNBYTE *) (((UNLONG) regs.w.bx << 16) +
+			(UNLONG) regs.w.cx);
+			Handle = (regs.w.si << 16) + regs.w.di;
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_OUT_OF_XMS_MEMORY, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Try to allocate LDT Segment descriptor */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0000;
+			regs.w.cx = 1;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return value */
+			Selector = regs.w.ax;
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Free memory */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0502;
+				regs.w.si = (Handle & 0xFFFF0000) >> 16;
+				regs.w.di = Handle & 0x0000FFFF;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_LDT_DESC_ALLOCATION, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Set base address of Segment */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0007;
+			regs.w.bx = Selector;
+			regs.w.cx = (((UNLONG) Memory_pointer) & 0xFFFF0000) >> 16;
+			regs.w.dx = ((UNLONG) Memory_pointer) & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Free LDT Segment descriptor */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0001;
+				regs.w.bx = Selector;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Free memory */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0502;
+				regs.w.si = (Handle & 0xFFFF0000) >> 16;
+				regs.w.di = Handle & 0x0000FFFF;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_SET_SEGMENT_BASE, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Set upper limit of Segment */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0008;
+			regs.w.bx = Selector;
+			regs.w.cx = ((size - 1 + (UNLONG) Memory_pointer) & 0xFFFF0000) >> 16;
+			regs.w.dx = (size - 1 + (UNLONG) Memory_pointer) & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Free LDT Segment descriptor */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0001;
+				regs.w.bx = Selector;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Free memory */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0502;
+				regs.w.si = (Handle & 0xFFFF0000) >> 16;
+				regs.w.di = Handle & 0x0000FFFF;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_SET_SEGMENT_LIMIT, DPMI_error_code);
+				return NULL;
+			}
+			break;
+		}
+		/* Unsupported memory type */
+		default:
+		{
+			/* Report error */
+			BASEMEM_Error(BASEMEMERR_UNSUPPORTED_MEMORY_TYPE, 0);
+		}
+	}
+
+	/* Any luck ? */
+	if (Memory_pointer)
+	{
+		/* Yes -> Insert data in memory table */
+		BASEMEM_Table[Table_index].Status	= flagset | BASEMEM_Status_InUse;
+		BASEMEM_Table[Table_index].Ptr		= Memory_pointer;
+		BASEMEM_Table[Table_index].Size		= size;
+		BASEMEM_Table[Table_index].Selector	= Selector;
+		BASEMEM_Table[Table_index].Segment	= Segment;
+		BASEMEM_Table[Table_index].Handle	= Handle;
+
+		/* Lock memory region ? */
+		if (flagset & BASEMEM_Status_Lock)
+		{
+			/* Yes -> Try to lock */
+			Result = BASEMEM_Lock_region(Memory_pointer, size);
+
+			/* Success ? */
+			if (Result)
+			{
+				/* Yes -> Indicate this block is locked */
+				flagset |= BASEMEM_Status_Locked;
+			}
+			else
+			{
+				/* No -> Free memory */
+				BASEMEM_Free(Memory_pointer);
+
+				/* Error */
+				return NULL;
+			}
+		}
+
+		/* Clear memory ? */
+		if (flagset & BASEMEM_Status_Clear)
+		{
+			/* Yes */
+			BASEMEM_FillMemByte(Memory_pointer, size, 0);
+		}
+	}
+
+	return Memory_pointer;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Free
+ * FUNCTION  : Free an allocated memory block.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 28.12.94 13:20
+ * LAST      : 24.08.95 13:17
+ * INPUTS    : UNBYTE *pointer - Pointer to memory block to set free.
+ * RESULT    : BOOLEAN : FALSE if memory wasn't allocated.
+ * BUGS      : No known.
+ * NOTES     : - Both DOS and flat memory are freed using DPMI.
+ * SEE ALSO  : BBBASMEM.H
+ * VERSION   : 2.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+BASEMEM_Free(UNBYTE *pointer)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	UNSHORT DPMI_error_code;
+	UNSHORT Table_index;
+	UNSHORT i;
+
+	/* Search memory table entry corresponding to input pointer */
+	Table_index = 0xFFFF;
+	for(i=0;i<BASEMEM_ENTRIES_MAX;i++)
+	{
+		/* Is this the entry ? */
+		if ((BASEMEM_Table[i].Status & BASEMEM_Status_InUse) &&
+		 (BASEMEM_Table[i].Ptr == pointer))
+		{
+			/* Yes */
+			Table_index = i;
+			break;
+		}
+	}
+
+	/* Entry found ? */
+	if (Table_index == 0xFFFF)
+	{
+		/* No -> Error */
+		BASEMEM_Error(BASEMEMERR_ENTRY_NOT_FOUND, 0);
+		return FALSE;
+	}
+
+	/* Was this block locked ? */
+	if (BASEMEM_Table[Table_index].Status & BASEMEM_Status_Locked)
+	{
+		/* Yes -> Unlock */
+		BASEMEM_Unlock_region(BASEMEM_Table[Table_index].Ptr,
+		 BASEMEM_Table[Table_index].Size);
+
+		/* Clear flag */
+		BASEMEM_Table[Table_index].Status &= ~BASEMEM_Status_Locked;
+	}
+
+	/* Which memory type ? */
+	switch (BASEMEM_Table[Table_index].Status & 0x000000FF)
+	{
+		/*** DOS memory ***/
+		case BASEMEM_Status_Dos:
+		{
+			/* Yes -> Free memory */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0101;
+	   	regs.w.dx = BASEMEM_Table[Table_index].Selector;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_COULD_NOT_FREE_DOS_MEMORY, DPMI_error_code);
+			}
+
+			break;
+		}
+		/*** Flat memory ***/
+		case BASEMEM_Status_Flat:
+		{
+			/* Yes -> Free LDT segment descriptor */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0001;
+			regs.w.bx = BASEMEM_Table[Table_index].Selector;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_COULD_NOT_FREE_LDT_DESC, DPMI_error_code);
+				break;
+			}
+
+			/* Free memory */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0502;
+			regs.w.si = (BASEMEM_Table[Table_index].Handle & 0xFFFF0000) >> 16;
+			regs.w.di = BASEMEM_Table[Table_index].Handle & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_COULD_NOT_FREE_XMS_MEMORY, DPMI_error_code);
+			}
+			break;
+		}
+	}
+
+	/* Clear memory table entry */
+	BASEMEM_Table[Table_index].Status = BASEMEM_Status_Free;
+
+	return TRUE;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Resize
+ * FUNCTION  : Resize a block of memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 06.01.95 16:14
+ * LAST      : 24.08.95 13:18
+ * INPUTS    : UNBYTE *pointer - Pointer to memory block to resize.
+ *             UNLONG size	- New size of memory block.
+ * RESULT    : UNBYTE * : Pointer to memory block / NULL = error.
+ * BUGS      : - This function cannot resize DOS memory.
+ * NOTES     : - This function does NOT call BASEMEM_Align.
+ *             - Both DOS and flat memory are resized using DPMI.
+ *             - It is best to use this function to shrink memory blocks.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE *
+BASEMEM_Resize(UNBYTE *pointer, UNLONG size)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	BOOLEAN Result;
+	UNLONG Handle;
+	UNSHORT DPMI_error_code;
+	UNSHORT Table_index;
+	UNSHORT i;
+	UNBYTE *Memory_pointer = NULL;
+
+	/* Exit if size is zero */
+	if (!size)
+		return NULL;
+
+	/* Search memory table entry corresponding to input pointer */
+	Table_index = 0xFFFF;
+	for(i=0;i<BASEMEM_ENTRIES_MAX;i++)
+	{
+		/* Is this the entry ? */
+		if ((BASEMEM_Table[i].Status & BASEMEM_Status_InUse) &&
+		 (BASEMEM_Table[i].Ptr == pointer))
+		{
+			/* Yes */
+			Table_index = i;
+			break;
+		}
+	}
+
+	/* Entry found ? */
+	if (Table_index == 0xFFFF)
+	{
+		/* No -> Error */
+		BASEMEM_Error(BASEMEMERR_ENTRY_NOT_FOUND, 0);
+		return FALSE;
+	}
+
+	/* Was this block locked ? */
+	if (BASEMEM_Table[Table_index].Status & BASEMEM_Status_Locked)
+	{
+		/* Yes -> Unlock */
+		BASEMEM_Unlock_region(BASEMEM_Table[Table_index].Ptr,
+		 BASEMEM_Table[Table_index].Size);
+
+		/* Clear flag */
+		BASEMEM_Table[Table_index].Status &= ~BASEMEM_Status_Locked;
+	}
+
+	/* Which memory type ? */
+	switch (BASEMEM_Table[Table_index].Status & 0x000000FF)
+	{
+		/*** DOS memory ***/
+		case BASEMEM_Status_Dos:
+		{
+			/* Align required size to paragraph size */
+			size = (size + 15) & 0xFFFFFFF0;
+
+			/* Ask DPMI host to resize memory */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0102;
+			regs.w.bx = (UNSHORT)(size >> 4);
+			regs.w.dx = BASEMEM_Table[Table_index].Selector;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_COULD_NOT_RESIZE_DOS_MEMORY, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Get pointer to memory block */
+			Memory_pointer = BASEMEM_Table[Table_index].Ptr;
+
+			/* No memory handle */
+			Handle = 0;
+
+			break;
+		}
+		/*** Flat memory ***/
+		case BASEMEM_Status_Flat:
+		{
+			/* Yes -> Align required size to 4K page size */
+			size = (size + 4095) & 0xFFFFF000;
+
+			/* Ask DPMI host to resize memory */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0503;
+			regs.w.bx = (size & 0xFFFF0000) >> 16;
+			regs.w.cx = size & 0x0000FFFF;
+			regs.w.si = (BASEMEM_Table[Table_index].Handle & 0xFFFF0000) >> 16;
+			regs.w.di = BASEMEM_Table[Table_index].Handle & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Get return values */
+			Memory_pointer = (UNBYTE *) (((UNLONG) regs.w.bx << 16) +
+			(UNLONG) regs.w.cx);
+			Handle = (regs.w.si << 16) + regs.w.di;
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_COULD_NOT_RESIZE_XMS_MEMORY, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Set base address of Segment */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0007;
+			regs.w.bx = BASEMEM_Table[Table_index].Selector;
+			regs.w.cx = (((UNLONG) Memory_pointer) & 0xFFFF0000) >> 16;
+			regs.w.dx = ((UNLONG) Memory_pointer) & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Free LDT Segment descriptor */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0001;
+				regs.w.bx = BASEMEM_Table[Table_index].Selector;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Free memory */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0502;
+				regs.w.si = (Handle & 0xFFFF0000) >> 16;
+				regs.w.di = Handle & 0x0000FFFF;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_SET_SEGMENT_BASE, DPMI_error_code);
+				return NULL;
+			}
+
+			/* Set upper limit of Segment */
+			BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+			regs.w.ax = 0x0008;
+			regs.w.bx = BASEMEM_Table[Table_index].Selector;
+			regs.w.cx = ((size - 1 + (UNLONG) Memory_pointer) & 0xFFFF0000) >> 16;
+			regs.w.dx = (size - 1 + (UNLONG) Memory_pointer) & 0x0000FFFF;
+
+			int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+			/* Success ? */
+			if (regs.x.cflag)
+			{
+				/* No -> Get error code */
+				DPMI_error_code = regs.w.ax;
+
+				/* Free LDT Segment descriptor */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0001;
+				regs.w.bx = BASEMEM_Table[Table_index].Selector;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Free memory */
+				BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+				regs.w.ax = 0x0502;
+				regs.w.si = (Handle & 0xFFFF0000) >> 16;
+				regs.w.di = Handle & 0x0000FFFF;
+
+				int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+				/* Report error */
+				BASEMEM_Error(BASEMEMERR_SET_SEGMENT_LIMIT, DPMI_error_code);
+				return NULL;
+			}
+			break;
+		}
+		/* Unsupported memory type */
+		default:
+		{
+			/* Report error */
+			BASEMEM_Error(BASEMEMERR_UNSUPPORTED_MEMORY_TYPE, 0);
+		}
+	}
+
+	/* Any luck ? */
+	if (Memory_pointer)
+	{
+		/* Yes -> Lock memory region ? */
+		if (BASEMEM_Table[Table_index].Status & BASEMEM_Status_Lock)
+		{
+			/* Yes -> Try to lock */
+			Result = BASEMEM_Lock_region(Memory_pointer, size);
+
+			/* Success ? */
+			if (Result)
+			{
+				/* Yes -> Indicate this block is locked */
+				BASEMEM_Table[Table_index].Status |= BASEMEM_Status_Locked;
+			}
+			else
+			{
+				/* No -> Error */
+				return NULL;
+			}
+		}
+
+		/* Insert new data in memory table */
+		BASEMEM_Table[Table_index].Ptr		= Memory_pointer;
+		BASEMEM_Table[Table_index].Size		= size;
+		BASEMEM_Table[Table_index].Handle	= Handle;
+	}
+
+	return Memory_pointer;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Lock_region
+ * FUNCTION  : Lock a region of memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 15.08.95 15:59
+ * LAST      : 24.08.95 13:08
+ * INPUTS    : UNBYTE *pointer - Pointer to memory block to lock.
+ *             UNLONG size	- Size of memory block.
+ * RESULT    : BOOLEAN : Success.
+ * BUGS      : No known.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+BASEMEM_Lock_region(UNBYTE *pointer, UNLONG size)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	BOOLEAN Result = TRUE;
+	UNSHORT DPMI_error_code;
+
+	/* Lock region */
+	BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+	regs.w.ax = 0x0600;
+	regs.w.bx = ((UNLONG) pointer & 0xFFFF0000) >> 16;
+	regs.w.cx = (UNLONG) pointer & 0x0000FFFF;
+	regs.w.si = (size & 0xFFFF0000) >> 16;
+	regs.w.di = size & 0x0000FFFF;
+
+	int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+	/* Error ? */
+	if (regs.x.cflag)
+	{
+		/* No -> Get error code */
+		DPMI_error_code = regs.w.ax;
+
+		/* Report error */
+		BASEMEM_Error(BASEMEMERR_COULD_NOT_LOCK_REGION, DPMI_error_code);
+
+		Result = FALSE;
+	}
+
+	return Result;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Unlock_region
+ * FUNCTION  : Unlock a region of memory.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 19.08.95 20:08
+ * LAST      : 24.08.95 13:09
+ * INPUTS    : UNBYTE *pointer - Pointer to memory block to lock.
+ *             UNLONG size	- Size of memory block.
+ * RESULT    : BOOLEAN : Success.
+ * BUGS      : No known.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+BASEMEM_Unlock_region(UNBYTE *pointer, UNLONG size)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	BOOLEAN Result = TRUE;
+	UNSHORT DPMI_error_code;
+
+	/* Unlock region */
+	BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+	regs.w.ax = 0x0601;
+	regs.w.bx = ((UNLONG) pointer & 0xFFFF0000) >> 16;
+	regs.w.cx = (UNLONG) pointer & 0x0000FFFF;
+	regs.w.si = (size & 0xFFFF0000) >> 16;
+	regs.w.di = size & 0x0000FFFF;
+
+	int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+	/* Error ? */
+	if (regs.x.cflag)
+	{
+		/* No -> Get error code */
+		DPMI_error_code = regs.w.ax;
+
+		/* Report error */
+		BASEMEM_Error(BASEMEMERR_COULD_NOT_UNLOCK_REGION, DPMI_error_code);
+
+		Result = FALSE;
+	}
+
+	return Result;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_FillMemByte
+ * FUNCTION  : Fills a buffer with a byte value.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 12.06.94 14:00
+ * LAST      : 28.12.94 13:19
+ * INPUTS    : UNBYTE *ptr - Pointer to buffer to fill.
+ *             UNLONG size - Size of buffer to fill.
+ *             UNBYTE fillbyte - Fill value.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_FillMemByte(UNBYTE * ptr, UNLONG size, UNBYTE fillbyte)
+{
+	memset(ptr, fillbyte, size);
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_FillMemLong
+ * FUNCTION  : Fills a buffer with a longword value.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 12.06.94 14:00
+ * LAST      : 28.12.94 13:18
+ * INPUTS    : UNBYTE *ptr - Pointer to buffer to fill.
+ *             UNLONG size - Size of buffer to fill (in bytes !!!).
+ *             UNLONG filllong - Fill value.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - Size should be aligned to a longword boundary.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_FillMemLong(UNBYTE * ptr, UNLONG size, UNLONG filllong)
+{
+	UNLONG *lptr = (UNLONG *) ptr;
+	UNLONG lsize = size >> 2;
+
+	for(;lsize>0;lsize--)
+		*lptr++ = filllong;
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_CopyMem
+ * FUNCTION  : Copy one buffer into an other.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 12.06.94 14:00
+ * LAST      : 28.12.94 13:16
+ * INPUTS    : UNBYTE * srcptr - Pointer to source buffer.
+ *             UNBYTE * destptr - Pointer to destination buffer.
+ *             UNLONG bytestocopy - Number of bytes to copy.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The source and target buffers may overlap.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_CopyMem(UNBYTE * srcptr, UNBYTE * destptr, UNLONG bytestocopy)
+{
+	memmove(destptr, srcptr, bytestocopy);
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_CopyBlock
+ * FUNCTION  : Copy block into an other.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 12.06.94 14:00
+ * LAST      : 28.12.94 13:12
+ * INPUTS    : UNBYTE * srcptr - Pointer to source buffer.
+ *           : UNBYTE * destptr - Pointer to destination buffer.
+ *           : SISHORT srcmod - Source modulo.
+ *           : SISHORT destmod - Destination modulo.
+ *           : UNSHORT width - Width of copied block.
+ *           : UNSHORT height - Height of copied block.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - Funktion wird von bestimmten OPM Funktion gebraucht und ist
+ *              dazu da einen Block aus einem Grafikbereich in einen anderen
+ *              zu kopieren.
+ *             - Diese Funktion wird in BBBASMEM.H direkt als Assemblerfunktion
+ *              definiert.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+/*
+void
+BASEMEM_CopyBlock(UNBYTE * srcptr, UNBYTE * destptr, SILONG srcmod,
+  SILONG dstmod, UNLONG width, UNLONG height)
+{
+	_BAS_ASS_Blit(srcptr, destptr, srcmod, dstmod, width, height);
+}
+*/
+
+/* #FUNCTION END# */
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Align
+ * FUNCTION  : Align the size or address of a memory block.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 01.06.94 10:05
+ * LAST      : 28.12.94 13:12
+ * INPUTS    : UNLONG Value - a size or address.
+ * RESULT    : UNLONG : Properly aligned value.
+ * BUGS      : No known.
+ * NOTES		 : - This function ensures that all memory blocks are aligned to
+ *					 a value most practical to the host platform.
+ *             - This function is NOT called by BASEMEM_Alloc !!!
+ *             - BASEMEM_ALIGNMENT must be a power of 2!
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNLONG
+BASEMEM_Align(UNLONG Value)
+{
+	return((Value + BASEMEM_ALIGNMENT - 1) & (0 - BASEMEM_ALIGNMENT));
+}
+
+/* #FUNCTION END# */
+
+/*
+ *****************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BASEMEM_Report
+ * FUNCTION  : Print a memory report.
+ * FILE      : BBBASMEM.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 05.09.95 20:34
+ * LAST      : 26.10.95 16:19
+ * INPUTS    : FILE *Output_file - Output file (NULL = stdout).
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  : BBBASMEM.H
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+BASEMEM_Report(FILE *Output_file)
+{
+	union REGS regs;
+	struct SREGS seg_regs;
+	struct meminfo MemInfo;
+
+	/* Output to stdout if argument is NULL */
+	if (Output_file == NULL)
+		Output_file = stdout;
+
+	/* Ask DPMI host for DPMI information */
+	BASEMEM_FillMemByte((UNBYTE *) &seg_regs, sizeof(seg_regs), 0);
+	regs.w.ax = 0x0500;
+	seg_regs.es = FP_SEG(&MemInfo);
+	regs.x.edi = FP_OFF(&MemInfo);
+
+	int386x(DPMI_INT, &regs, &regs, &seg_regs);
+
+	/* Print this information (from DPMI 0.9 specification) */
+	fprintf(Output_file, "\nBASEMEM report\n\n");
+
+   fprintf
+	(
+		Output_file,
+		"Largest available free block in bytes  : %lu\n",
+		MemInfo.LargestBlockAvail
+	);
+
+	if (MemInfo.MaxUnlockedPage != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Maximum unlocked page allocation       : %lu\n",
+			MemInfo.MaxUnlockedPage
+		);
+	}
+
+   if (MemInfo.LargestLockablePage != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Maximum locked page allocation         : %lu\n",
+			MemInfo.LargestLockablePage
+		);
+	}
+
+   if (MemInfo.LinAddrSpace != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Linear addr space size in pages        : %lu\n",
+			MemInfo.LinAddrSpace
+		);
+	}
+
+   if (MemInfo.NumFreePagesAvail != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Total number of unlocked pages         : %lu\n",
+			MemInfo.NumFreePagesAvail
+		);
+	}
+
+   if (MemInfo.NumPhysicalPagesFree != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Number of free pages                   : %lu\n",
+			MemInfo.NumPhysicalPagesFree
+		);
+	}
+
+	if (MemInfo.TotalPhysicalPages != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Total number of physical pages         : %lu\n",
+			MemInfo.TotalPhysicalPages
+		);
+	}
+
+   if (MemInfo.FreeLinAddrSpace != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Free linear address space in pages     : %lu\n",
+			MemInfo.FreeLinAddrSpace
+		);
+	}
+
+   if (MemInfo.SizeOfPageFile != 0xFFFFFFFF)
+	{
+		fprintf
+		(
+			Output_file,
+			"Size of paging file/partition in pages : %lu\n",
+			MemInfo.SizeOfPageFile
+		);
+	}
+
+	fprintf(Output_file, "\n");
+}
+
+/* #FUNCTION END# */
+

@@ -1,0 +1,1110 @@
+//------------------------------------------------------------------------------
+//Ini.c - Bietet High-Level-funktionen zum Umgang mit ini-Dateien
+//------------------------------------------------------------------------------
+#include "setup.h"
+
+BOOLEAN Read_INI_variable(UNCHAR *Section_name, UNCHAR *Variable_name,
+ UNCHAR *Value_buffer, UNSHORT Max_variable_length);
+
+BOOLEAN Write_INI_variable(UNCHAR *Section_name, UNCHAR *Variable_name,
+ UNCHAR *Value_buffer);
+
+//static UNCHAR INI_filename[] = "SETUP.INI";
+
+static UNCHAR Evil_characters[] = " \r\n\t";
+
+UNCHAR *
+IniRead(UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name)
+{
+	static UNCHAR Stupid_buffer[100];
+	BOOLEAN Read_successful;
+
+	Read_successful = Read_INI_variable
+	(
+		Section,
+		Name,
+		Stupid_buffer,
+		100
+	);
+
+	if (Read_successful)
+		return Stupid_buffer;
+	else
+		return NULL;
+}
+
+BOOL
+IniSet(UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name, UNCHAR *Value)
+{
+	return Write_INI_variable
+	(
+		Section,
+		Name,
+		Value
+	);
+}
+
+BOOL
+BrutalIniSet(UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name, UNCHAR *Value)
+{
+	return Write_INI_variable
+	(
+		Section,
+		Name,
+		Value
+	);
+}
+
+//------------------------------------------------------------------------------
+//Hinweis: Alle Ini-Funktionen setzen vorraus, daá die Datei schon existiert.
+//         Sie darf leer sein, aber sie muá vorhanden sein.
+//Hinweis: Leerzeichen vor oder nach dem Gleichheitszeichen sind nicht erlaubt.
+//------------------------------------------------------------------------------
+
+#if FALSE
+//---------------------------------------------------------------------------
+//entfernt alle CodeString-Zeichen die am Ende des Strings vorkommen:
+//---------------------------------------------------------------------------
+char *StrRemoveEndingCodes (char *String, char *CodeString)
+{
+   SILONG c;
+
+   for (c=strlen(String)-1; c>=0; c--)
+   {
+      //cancel the loop, when String[c] is not in CodeString:
+      if (strchr (CodeString, String[c])==NULL)
+         break;
+   }
+
+   //Cut bad things of:
+   String[c+1]=0;
+
+   return (String);
+}
+
+//------------------------------------------------------------------------------
+//Žndert eine Variable in "Filename" (bzw. fgt sie ggf. hinzu)
+//------------------------------------------------------------------------------
+BOOL IniSet (UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name, UNCHAR *Value)
+{
+   FILE   *Input, *Output;
+   BOOL   VarFound;
+   UNCHAR TempFilename[80];
+   UNCHAR Line  [256];
+   UNCHAR Drive [_MAX_DRIVE];
+   UNCHAR Dir   [_MAX_DIR];
+   UNCHAR FName [_MAX_FNAME];
+   UNCHAR Ext   [_MAX_EXT];
+   UNCHAR CurrentSection[80];
+   BOOL   WasSection  = FALSE;
+   BOOL   WasAnything = FALSE;
+
+   CurrentSection[0]=0;
+
+	//INI-Datei muá existieren:
+	if (!IfExistsFile (Filename)) return (NULL);
+
+	VarFound = FALSE;
+
+	//Wir kopieren das File in ein Tmp-Filem, l”schen das Origal und renamen..
+	_splitpath (Filename, Drive, Dir, NULL, NULL);
+	_makepath  (TempFilename, Drive, Dir, "install", "tmp");
+
+	//Open Files:
+	Input  = fopen (Filename, "r");
+
+	//War das ™ffnen erfolgreich ?
+	if (Input==NULL) return (NULL);
+
+	Output = fopen (TempFilename, "w");
+	if (Output==NULL)
+	{
+		fclose (Input);
+		return (NULL);
+	}
+
+	while (1)
+	{
+		if (fgets (Line, 255, Input)==0)
+		{
+			if (!VarFound)
+			{
+            if (WasSection)
+            {
+               //Die Variable fehlte, aber die Section war da!
+               fclose (Output);
+               fclose (Input);
+               if (remove (TempFilename)!=0) return (NULL);
+               return (BrutalIniSet (Filename, Section, Name, Value));
+            }
+            else
+            {
+               //Variable und Section fehlen:
+               if (WasAnything)
+                  if (fputs ("\n", Output)==0) { fclose (Output); fclose (Input); return (NULL); }
+
+               sprintf (Line, "[%s]\n", Section);
+               if (fputs (Line, Output)==0) { fclose (Output); fclose (Input); return (NULL); }
+
+               sprintf (Line, "%s=%s\n", Name, Value);
+               if (fputs (Line, Output)==0) { fclose (Output); fclose (Input); return (NULL); }
+				}
+			}
+
+			fclose (Output);
+			fclose (Input);
+
+			if (remove (Filename)!=0) return (NULL);
+
+			_splitpath (Filename, NULL, NULL, FName, Ext);
+			_makepath  (Line, NULL, NULL, FName, Ext);
+			if (rename (TempFilename, Filename)!=0) return (NULL);
+			return (TRUE);
+		}
+
+      StrRemoveEndingCodes (Line, "\xd\xa\1a\x20\x9");
+
+      //Test, ob Zeile eine neue Section einleitet:
+      if (strlen(Line)>2 && Line[0]=='[' && Line[strlen(Line)-1]==']')
+      {
+         strcpy (CurrentSection, Line+1);
+         CurrentSection [strlen (CurrentSection)-1] = 0;
+      }
+      //Sind wir in einer relevanten Section ?
+      else if (stricmp (CurrentSection, Section)==0)
+      {
+         WasSection = TRUE;
+
+         //Zeilenanfang mit Bezeichner vergleichen:
+         if (strnicmp (Line, Name, strlen(Name))==0)
+         {
+            if (Line[strlen(Name)]=='=')
+            {
+               VarFound = TRUE;
+
+               //Zeile ersetzen:
+               sprintf (Line, "%s=%s", Name, Value);
+            }
+         }
+      }
+
+      WasAnything = TRUE;
+      if (*Line)
+      {
+         if (fputs (Line, Output)==0 || fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+      else
+      {
+         if (fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+//Fgt eine Variable in "Filename" ohne Rcksicht hinzu:
+//------------------------------------------------------------------------------
+BOOL BrutalIniSet (UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name, UNCHAR *Value)
+{
+   FILE   *Input, *Output;
+   BOOL   VarFound;
+   UNCHAR TempFilename[80];
+   UNCHAR Line  [256];
+   UNCHAR Drive [_MAX_DRIVE];
+   UNCHAR Dir   [_MAX_DIR];
+   UNCHAR FName [_MAX_FNAME];
+   UNCHAR Ext   [_MAX_EXT];
+   UNCHAR CurrentSection[80];
+
+   CurrentSection[0]=0;
+
+	//INI-Datei muá existieren:
+	if (!IfExistsFile (Filename)) return (NULL);
+
+	VarFound = FALSE;
+
+	//Wir kopieren das File in ein Tmp-Filem, l”schen das Origal und renamen..
+	_splitpath (Filename, Drive, Dir, NULL, NULL);
+	_makepath  (TempFilename, Drive, Dir, "install", "tmp");
+
+	//Open Files:
+	Input  = fopen (Filename, "r");
+
+	//War das ™ffnen erfolgreich ?
+	if (Input==NULL) return (NULL);
+
+	Output = fopen (TempFilename, "w");
+	if (Output==NULL)
+	{
+		fclose (Input);
+		return (NULL);
+	}
+
+	while (1)
+	{
+		if (fgets (Line, 255, Input)==0)
+		{
+			fclose (Output);
+			fclose (Input);
+
+			if (remove (Filename)!=0) return (NULL);
+
+			_splitpath (Filename, NULL, NULL, FName, Ext);
+			_makepath  (Line, NULL, NULL, FName, Ext);
+			if (rename (TempFilename, Filename)!=0) return (NULL);
+			return (TRUE);
+		}
+
+      StrRemoveEndingCodes (Line, "\xd\xa\1a\x20\x9");
+
+      //Test, ob Zeile eine neue Section einleitet:
+      if (strlen(Line)>2 && Line[0]=='[' && Line[strlen(Line)-1]==']')
+      {
+         strcpy (CurrentSection, Line+1);
+         CurrentSection [strlen (CurrentSection)-1] = 0;
+
+         if (stricmp (CurrentSection, Section)==0)
+         {
+            //Zeile einfgen:
+            if (fputs (Line, Output)==0 || fputs ("\n", Output)==0)
+            {
+               fclose (Output);
+               fclose (Input);
+               return (NULL);
+            }
+            sprintf (Line, "%s=%s", Name, Value);
+         }
+      }
+
+      if (*Line)
+      {
+         if (fputs (Line, Output)==0 || fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+      else
+      {
+         if (fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+//L”scht ein Variable aus "Filename" (Sections werden nicht gel”scht)
+//------------------------------------------------------------------------------
+BOOL IniDelete (UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name)
+{
+   FILE   *Input, *Output;
+   UNCHAR TempFilename[80];
+   UNCHAR Line  [256];
+   UNCHAR Drive [_MAX_DRIVE];
+   UNCHAR Dir   [_MAX_DIR];
+   UNCHAR FName [_MAX_FNAME];
+   UNCHAR Ext   [_MAX_EXT];
+   UNCHAR CurrentSection[80];
+
+   CurrentSection[0]=0;
+
+	//INI-Datei muá existieren:
+	if (!IfExistsFile (Filename)) return (NULL);
+
+	//Wir kopieren das File in ein Tmp-Filem, l”schen das Origal und renamen..
+	_splitpath (Filename, Drive, Dir, NULL, NULL);
+	_makepath  (TempFilename, Drive, Dir, "install", "tmp");
+
+	//Open Files:
+	Input  = fopen (Filename, "r");
+
+	//War das ™ffnen erfolgreich ?
+	if (Input==NULL) return (NULL);
+
+	Output = fopen (TempFilename, "w");
+	if (Output==NULL)
+	{
+		fclose (Input);
+		return (NULL);
+	}
+
+	while (1)
+	{
+		if (fgets (Line, 255, Input)==0)
+		{
+			fclose (Output);
+			fclose (Input);
+
+			if (remove (Filename)!=0) return (NULL);
+
+			_splitpath (Filename, NULL, NULL, FName, Ext);
+			_makepath  (Line, NULL, NULL, FName, Ext);
+			if (rename (TempFilename, Filename)!=0) return (NULL);
+			return (TRUE);
+		}
+
+      StrRemoveEndingCodes (Line, "\xd\xa\1a\x20\x9");
+
+      //Test, ob Zeile eine neue Section einleitet:
+      if (strlen(Line)>2 && Line[0]=='[' && Line[strlen(Line)-1]==']')
+      {
+         strcpy (CurrentSection, Line+1);
+         CurrentSection [strlen (CurrentSection)-1] = 0;
+      }
+      //Sind wir in einer relevanten Section ?
+      else if (stricmp (CurrentSection, Section)==0)
+      {
+         //Zeilenanfang mit Bezeichner vergleichen:
+         if (strnicmp (Line, Name, strlen(Name))==0)
+         {
+            if (Line[strlen(Name)]=='=')
+            {
+               //Diese Zeile wird nicht kopiert.
+               continue;
+            }
+         }
+		}
+
+      if (*Line)
+      {
+         if (fputs (Line, Output)==0 || fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+      else
+      {
+         if (fputs ("\n", Output)==0)
+         {
+            fclose (Output);
+            fclose (Input);
+            return (NULL);
+         }
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+//Gibt einen Pointer auf einen static-buffer mit dem Eintrag zurck (oder NULL)
+//------------------------------------------------------------------------------
+UNCHAR *IniRead (UNCHAR *Filename, UNCHAR *Section, UNCHAR *Name)
+{
+	FILE *Input;
+	static UNCHAR Buffer[100];
+	UNCHAR Line[256];
+   UNCHAR CurrentSection[80];
+
+   CurrentSection[0]=0;
+
+	//INI-Datei muá existieren:
+	if (!IfExistsFile (Filename)) return (NULL);
+
+	//Open File for text-input:
+	Input=fopen (Filename, "r");
+
+	//War das ”ffnen erfolgreich ?
+	if (Input==NULL) return (NULL);
+
+	while (1)
+	{
+		if (fgets (Line, 255, Input)==0)
+		{
+			fclose (Input);
+			return (NULL);
+		}
+
+      StrRemoveEndingCodes (Line, "\xd\xa\1a\x20\x9");
+
+      //Test, ob Zeile eine neue Section einleitet:
+      if (strlen(Line)>2 && Line[0]=='[' && Line[strlen(Line)-1]==']')
+      {
+         strcpy (CurrentSection, Line+1);
+         CurrentSection [strlen (CurrentSection)-1] = 0;
+      }
+      //Sind wir in einer relevanten Section ?
+      else if (stricmp (CurrentSection, Section)==0)
+      {
+         //Zeilenanfang mit Bezeichner vergleichen:
+         if (strnicmp (Line, Name, strlen(Name))==0)
+         {
+            if (Line[strlen(Name)]=='=')
+            {
+               fclose (Input);
+               strcpy (Buffer, Line+strlen(Name)+1);
+               return (Buffer);
+            }
+         }
+		}
+	}
+}
+#endif
+
+//------------------------------------------------------------------------------
+//Aktualisiert alle Daten in der INI-Datei:
+//------------------------------------------------------------------------------
+void UpdateIni (void)
+{
+	UNCHAR   Buffer  [200];
+
+	//Es ist Vorraussetzung, daá bereits eine INI-Datei existiert. Sonst tut
+	//diese Routine keinen Hammerschlag. Sie auch "setup.sam".
+	if (IfExistsFile (IniFilename))
+	{
+		#if FALSE
+		itoa (BenchPixelSpeed(), Buffer, 10);
+      IniSet (IniFilename, "SYSTEM", "PIXEL_PRO_SEC", Buffer);
+
+      IniSet (IniFilename, "SYSTEM", "INSTALLED", "Y");
+		#endif
+
+		if (VESA_IsAvailable())
+         IniSet (IniFilename, "SYSTEM", "VESA", "Y");
+		else
+         IniSet (IniFilename, "SYSTEM", "VESA", "N");
+
+		if (_bios_equiplist()&2)
+         IniSet (IniFilename, "SYSTEM", "FPU", "Y");
+		else
+         IniSet (IniFilename, "SYSTEM", "FPU", "N");
+
+		if (SetupCDDrive)
+		{
+			sprintf (Buffer, "%c", SetupCDDrive);
+         IniSet (IniFilename, "SYSTEM", "CD_ROM_DRIVE", Buffer);
+		}
+
+		if(SetupTargetDrive)
+		{
+			sprintf (Buffer, "%s", SetupSourcePath);
+		   IniSet (IniFilename, "SYSTEM", "SOURCE_PATH", Buffer);
+		}
+
+		itoa (Language+1, Buffer, 10);
+      IniSet (IniFilename, "SYSTEM", "LANGUAGE", Buffer);
+	}
+}
+
+//------------------------------------------------------------------------------
+//Probiert die Ini zu laden:
+//------------------------------------------------------------------------------
+void LoadIni (void)
+{
+	UNCHAR *rc;
+
+   rc = IniRead (IniFilename, "SYSTEM", "LANGUAGE");
+	if (rc) Language = atoi(rc)-1;
+
+   rc = IniRead (IniFilename, "SYSTEM", "CD_ROM_DRIVE");
+	if (rc) SetupCDDrive = rc[0];
+}
+
+#if FALSE
+//------------------------------------------------------------------------------
+//Probiert wieviele Pixel man pro sec in die Grafikkarte schieben kann:
+//------------------------------------------------------------------------------
+SILONG BenchPixelSpeed (void)
+{
+	SILONG Time;
+	SILONG CountFrames;
+
+	Time=*((long*)0x46C);
+	CountFrames=0;
+
+	//Eine halbe Sekunde lang benchen:
+	while (*((long*)0x46C)-Time < 9)
+	{
+		//bench, bench:
+		DSA_CopyMainOPMToScr (DSA_CMOPMTS_ALWAYS);
+
+		CountFrames++;
+	}
+
+	//So viele Pixel werden pro Sekunde kopiert:
+	return (CountFrames * RESOLUTION_X * RESOLUTION_Y * 2);
+}
+#endif
+
+//------------------------------------------------------------------------------
+//Den Ini-Pfad ableiten:
+//------------------------------------------------------------------------------
+void CalculateIniFilename (void)
+{
+	UNCHAR Drive   [_MAX_DRIVE];
+   UNCHAR Dir     [_MAX_DIR];
+   UNCHAR FName   [_MAX_FNAME];
+
+   if (*SetupTargetPath)
+   {
+      UNCHAR Buffer[200];
+
+      sprintf (Buffer, "%s\\x.x", SetupTargetPath);
+
+      //Spiel wird installiert; Ini kommt in den Target-Path:
+      _splitpath (Buffer, Drive, Dir, FName, NULL);
+   }
+   else
+   {
+      //Spiel wurde nur neukonfiguriert; Es gibt keinen Target-Path:
+      _splitpath (SetupFilename, Drive, Dir, FName, NULL);
+   }
+   //Den Ini-Filenamen vom Script ableiten:
+   _splitpath (SetupFilename, NULL, NULL, FName, NULL);
+
+   _makepath  (IniFilename, Drive, Dir, FName, "ini");
+}
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Read_INI_variable
+ * FUNCTION  : Read a variable from the INI file.
+ * FILE      : INI.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 27.09.95 20:23
+ * LAST      : 27.09.95 21:37
+ * INPUTS    : UNCHAR *Section_name - Pointer to section name.
+ *             UNCHAR *Variable_name - Pointer to variable name.
+ *             UNCHAR *Value_buffer - Pointer to output buffer of variable.
+ *             UNSHORT Max_variable_length - Length of output buffer.
+ * RESULT    : BOOLEAN : Success.
+ * BUGS      : No known.
+ * NOTES     : - This function can be called before PCLIB32 is initialised!
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+Read_INI_variable(UNCHAR *Section_name, UNCHAR *Variable_name,
+ UNCHAR *Value_buffer, UNSHORT Max_variable_length)
+{
+	FILE *INI_file_handle;
+
+	BOOLEAN Section_found;
+	BOOLEAN Variable_found;
+	UNSHORT Length;
+	UNCHAR Line_buffer[200];
+	UNCHAR *Ptr;
+
+	/* Clear value buffer */
+	memset(Value_buffer, '\0', Max_variable_length);
+
+	/* Try to open INI file */
+	INI_file_handle = fopen
+	(
+		INI_filename,
+		"rt"
+	);
+
+	/* Success ? */
+	if (!INI_file_handle)
+	{
+		/* No -> Error */
+//		Error(ERROR_SETUP_INI_ACCESS_ERROR);
+		return FALSE;
+	}
+
+	/* Scan INI file */
+	Section_found = FALSE;
+	Variable_found = FALSE;
+	for (;;)
+	{
+		/* Read next line */
+		Ptr = fgets
+		(
+			Line_buffer,
+			199,
+			INI_file_handle
+		);
+
+		/* Exit if no line could be read */
+		if (!Ptr)
+			break;
+
+		/* Strip offending characters from the start of the string */
+		Length = strspn(Line_buffer, Evil_characters);
+		if (Length)
+		{
+			memmove
+			(
+				Line_buffer,
+				Line_buffer + Length,
+				strlen(Line_buffer - Length + 1)
+			);
+		}
+
+		/* Strip offending characters from the end of the string */
+		Length = strcspn(Line_buffer,	Evil_characters);
+		Line_buffer[Length] = '\0';
+
+		/* Continue if the string is empty */
+		if (!strlen(Line_buffer))
+			continue;
+
+		/* Is this a section header ? */
+		if ((Line_buffer[0] == '[') &&
+		 (Line_buffer[strlen(Line_buffer) - 1] == ']'))
+		{
+			/* Yes -> Was the section found already ? */
+			if (Section_found)
+			{
+				/* Yes -> The variable isn't in this section */
+				break;
+			}
+			else
+			{
+				/* No -> Is it the section we're looking for ? */
+				if (!strnicmp
+				(
+					Line_buffer + 1,
+					Section_name,
+					strlen(Line_buffer) - 2
+				))
+				{
+					/* Yes -> Yay! */
+					Section_found = TRUE;
+				}
+			}
+		}
+		else
+		{
+			/* No -> Is this variable we're looking for ? */
+			if (!strnicmp
+			(
+				Line_buffer,
+				Variable_name,
+				min(strlen(Line_buffer), strlen(Variable_name))
+			))
+			{
+				/* Yes -> Look for = */
+				Ptr = strchr(Line_buffer,(int) '=');
+
+				/* Found ? */
+				if (Ptr)
+				{
+					/* Yes -> Copy variable to output buffer */
+					strncpy
+					(
+						Value_buffer,
+						Ptr + 1,
+						Max_variable_length - 1
+					);
+
+					/* Insert EOL */
+					Value_buffer[Max_variable_length - 1] = '\0';
+				}
+				else
+				{
+					/* No -> Clear output buffer */
+					Value_buffer[0] = '\0';
+				}
+
+				/* Yay! */
+				Variable_found = TRUE;
+				break;
+			}
+		}
+	}
+
+	/* Close file */
+	fclose(INI_file_handle);
+
+	return Variable_found;
+}
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Write_INI_variable
+ * FUNCTION  : Write a variable in the INI file.
+ * FILE      : INI.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 27.09.95 20:24
+ * LAST      : 10.10.95 19:09
+ * INPUTS    : UNCHAR *Section_name - Pointer to section name.
+ *             UNCHAR *Variable_name - Pointer to variable name.
+ *             UNCHAR *Value - Pointer to new variable value.
+ * RESULT    : BOOLEAN : Success.
+ * BUGS      : No known.
+ * NOTES     : - This function can be called before PCLIB32 is initialised!
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+Write_INI_variable(UNCHAR *Section_name, UNCHAR *Variable_name,
+ UNCHAR *Value_buffer)
+{
+	FILE *INI_file_handle;
+	FILE *Temp_file_handle;
+	int Return;
+
+	BOOLEAN Section_found;
+	BOOLEAN Variable_found;
+	UNSHORT Length;
+	UNCHAR Line_buffer[200];
+	UNCHAR Line_buffer2[200];
+	UNCHAR *Ptr;
+
+	UNCHAR Temp_filename[_MAX_PATH];
+	UNCHAR Drive[_MAX_DRIVE];
+	UNCHAR Dir[_MAX_DIR];
+	UNCHAR Fname[_MAX_FNAME];
+	UNCHAR Ext[_MAX_EXT];
+
+	/* Deconstruct INI filename */
+	_splitpath
+	(
+		INI_filename,
+		Drive,
+		Dir,
+		Fname,
+		Ext
+	);
+
+	/* Build temporary filename */
+	_makepath
+	(
+		Temp_filename,
+		Drive,
+		Dir,
+		Fname,
+		"TMP"
+	);
+
+	/* Try to open INI file */
+	INI_file_handle = fopen
+	(
+		INI_filename,
+		"rt"
+	);
+
+	/* Success ? */
+	if (!INI_file_handle)
+	{
+		/* No -> Error */
+//		Error(ERROR_SETUP_INI_ACCESS_ERROR);
+		return FALSE;
+	}
+
+	/* Try to open temporary file */
+	Temp_file_handle = fopen
+	(
+		Temp_filename,
+		"wt"
+	);
+
+	/* Success ? */
+	if (!Temp_file_handle)
+	{
+		/* No -> Close INI file */
+		fclose(INI_file_handle);
+
+		/* Error */
+//		Error(ERROR_SETUP_INI_ACCESS_ERROR);
+		return FALSE;
+	}
+
+	/* Scan INI file */
+	Section_found = FALSE;
+	Variable_found = FALSE;
+	for (;;)
+	{
+		/* Read next line */
+		Ptr = fgets
+		(
+			Line_buffer,
+			199,
+			INI_file_handle
+		);
+
+		/* Exit if no line could be read */
+		if (!Ptr)
+			break;
+
+		/* Strip offending characters from the start of the string */
+		Length = strspn(Line_buffer, Evil_characters);
+		if (Length)
+		{
+			memmove
+			(
+				Line_buffer,
+				Line_buffer + Length,
+				strlen(Line_buffer - Length + 1)
+			);
+		}
+
+		/* Strip offending characters from the end of the string */
+		Length = strcspn(Line_buffer,	Evil_characters);
+		Line_buffer[Length] = '\0';
+
+		/* Is the string empty ? */
+		if (!strlen(Line_buffer))
+		{
+			/* Yes -> Write empty string to output file */
+			Return = fputs
+			(
+				"\n",
+				Temp_file_handle
+			);
+
+			/* Success ? */
+			if (Return <= 0)
+			{
+				/* No -> Error */
+//				Error(ERROR_SETUP_INI_ACCESS_ERROR);
+				break;
+			}
+
+			/* Continue with next line */
+			continue;
+		}
+
+		/* Already found the variable ? */
+		if (!Variable_found)
+		{
+			/* No -> Is this a section header ? */
+			if ((Line_buffer[0] == '[') &&
+			 (Line_buffer[strlen(Line_buffer) - 1] == ']'))
+			{
+				/* Yes -> Was the section found already ? */
+				if (Section_found)
+				{
+					/* Yes -> The variable isn't in this section, so we'll just
+					  have to insert it here */
+					_bprintf
+					(
+						Line_buffer2,
+						200,
+						"%s=%s\n",
+						Variable_name,
+						Value_buffer
+					);
+
+					/* Write line to output file */
+					Return = fputs
+					(
+						Line_buffer2,
+						Temp_file_handle
+					);
+
+					/* Success ? */
+					if (Return <= 0)
+					{
+						/* No -> Error */
+//						Error(ERROR_SETUP_INI_ACCESS_ERROR);
+						break;
+					}
+
+					/* Yay! */
+					Variable_found = TRUE;
+				}
+				else
+				{
+					/* No -> Is it the section we're looking for ? */
+					if (!strnicmp
+					(
+						Line_buffer + 1,
+						Section_name,
+						strlen(Line_buffer) - 2
+					))
+					{
+						/* Yes -> Yay! */
+						Section_found = TRUE;
+					}
+				}
+			}
+			else
+			{
+				/* No -> Is this variable we're looking for ? */
+				if (!strnicmp
+				(
+					Line_buffer,
+					Variable_name,
+					min(strlen(Line_buffer), strlen(Variable_name))
+				))
+				{
+					/* Yes -> Re-write it
+					 (this line will be written to the output file later on) */
+					_bprintf
+					(
+						Line_buffer,
+						200,
+						"%s=%s",
+						Variable_name,
+						Value_buffer
+					);
+
+					/* Yay! */
+					Variable_found = TRUE;
+				}
+			}
+		}
+
+		/* Write line to output file */
+		Return = fputs
+		(
+			Line_buffer,
+			Temp_file_handle
+		);
+
+		/* Success ? */
+		if (Return <= 0)
+		{
+			/* No -> Error */
+//			Error(ERROR_SETUP_INI_ACCESS_ERROR);
+			break;
+		}
+
+		/* Write end-of-line to output file */
+		Return = fputs
+		(
+			"\n",
+			Temp_file_handle
+		);
+
+		/* Success ? */
+		if (Return <= 0)
+		{
+			/* No -> Error */
+//			Error(ERROR_SETUP_INI_ACCESS_ERROR);
+			break;
+		}
+	}
+
+	/* Found the section ? */
+	if (!Section_found)
+	{
+		/* No -> Then we must create it */
+		_bprintf
+		(
+			Line_buffer,
+			200,
+			"[%s]\n",
+			Section_name
+		);
+
+		/* Write line to output file */
+		Return = fputs
+		(
+			Line_buffer,
+			Temp_file_handle
+		);
+
+		/* Success ? */
+		if (Return <= 0)
+		{
+			/* No -> Error */
+//			Error(ERROR_SETUP_INI_ACCESS_ERROR);
+		}
+		else
+		{
+			/* Yes -> Then we must create the variable */
+			_bprintf
+			(
+				Line_buffer,
+				200,
+				"%s=%s\n",
+				Variable_name,
+				Value_buffer
+			);
+
+			/* Write line to output file */
+			Return = fputs
+			(
+				Line_buffer,
+				Temp_file_handle
+			);
+
+			/* Success ? */
+			if (Return <= 0)
+			{
+				/* No -> Error */
+//				Error(ERROR_SETUP_INI_ACCESS_ERROR);
+			}
+			else
+			{
+				/* Yes -> Yay! */
+				Variable_found = TRUE;
+			}
+		}
+	}
+	else
+	{
+		/* Yes -> Found the variable ? */
+		if (!Variable_found)
+		{
+			/* Yes -> We'll just have to insert it here */
+			_bprintf
+			(
+				Line_buffer,
+				200,
+				"%s=%s\n",
+				Variable_name,
+				Value_buffer
+			);
+
+			/* Write line to output file */
+			Return = fputs
+			(
+				Line_buffer,
+				Temp_file_handle
+			);
+
+			/* Success ? */
+			if (Return <= 0)
+			{
+				/* No -> Error */
+//				Error(ERROR_SETUP_INI_ACCESS_ERROR);
+			}
+			else
+			{
+				/* Yes -> Yay! */
+				Variable_found = TRUE;
+			}
+		}
+	}
+
+	/* Close files */
+	fclose(INI_file_handle);
+	fclose(Temp_file_handle);
+
+	/* Were we successful ? */
+	if (Variable_found)
+	{
+		/* Yes -> Delete the original INI file */
+		remove(INI_filename);
+
+		/* Rename the temporary file, making it the INI file */
+		rename(Temp_filename, INI_filename);
+	}
+	else
+	{
+		/* No -> Delete the temporary file */
+		remove(Temp_filename);
+	}
+
+	return Variable_found;
+}
+

@@ -1,0 +1,89 @@
+
+--- Module:   g:\albion\outside\bbsetup\src\baseio.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\basewin.c 
+                                   _
+         for (d=0; d<strlen(Buffer); d++)
+g:\albion\outside\bbsetup\src\basewin.c  267  Warning 574: Signed-unsigned mix
+    with relational
+
+--- Module:   g:\albion\outside\bbsetup\src\browser.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\debug.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\event.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\global.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\ini.c 
+_
+}
+g:\albion\outside\bbsetup\src\ini.c  254  Warning 550: VarFound (line 166) not
+    accessed
+
+--- Module:   g:\albion\outside\bbsetup\src\io.c 
+                                                  _
+               rmdir (ErrorBuffer[AnzErrorBuffer]); //..und l”schen sie !
+g:\albion\outside\bbsetup\src\io.c  176  Warning 530: ErrorBuffer (line 144)
+    not initialized
+                                        _
+      free (ErrorBuffer[AnzErrorBuffer]);
+g:\albion\outside\bbsetup\src\io.c  195  Warning 644: ErrorBuffer (line 144)
+    may not have been initialized
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  456  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  460  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\io.c  470  Warning 527: Unreachable
+
+--- Module:   g:\albion\outside\bbsetup\src\messages.c 
+      _
+      },
+g:\albion\outside\bbsetup\src\messages.c  50  Info 785: Too few initializers
+    for aggregate
+      _
+      },
+g:\albion\outside\bbsetup\src\messages.c  121  Info 785: Too few initializers
+    for aggregate
+
+--- Module:   g:\albion\outside\bbsetup\src\script.c 
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  284  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  290  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  312  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  321  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  330  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  348  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  355  Warning 527: Unreachable
+         _
+         break;
+g:\albion\outside\bbsetup\src\script.c  627  Warning 527: Unreachable
+
+--- Module:   g:\albion\outside\bbsetup\src\setup.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\token.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\vesa.c 
+
+--- Module:   g:\albion\outside\bbsetup\src\window.c 
+_
+}
+g:\albion\outside\bbsetup\src\window.c  1285  Warning 529: Regs (line 1216) not
+    subsequently referenced

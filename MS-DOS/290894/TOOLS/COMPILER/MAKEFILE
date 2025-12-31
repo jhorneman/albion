@@ -1,0 +1,24 @@
+.ERASE
+
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+Sdir = C:\WORK\TOOLS\COMPILER
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /ox
+
+.BEFORE
+	cd $(Sdir)
+
+
+$(Sdir)\COMPILE.EXE : $(Sdir)\COMPILE.OBJ $(Sdir)\MAIN.OBJ
+	$(Linker) FILE {COMPILE.OBJ MAIN.OBJ C:\PCLIB32\LIB\PCLIB32.LIB} NAME COMPILE.EXE
+
+
+$(Sdir)\COMPILE.OBJ : $(Sdir)\COMPILE.C
+	$(Compiler) COMPILE.C
+
+$(Sdir)\MAIN.OBJ : $(Sdir)\MAIN.C
+	$(Compiler) MAIN.C
+

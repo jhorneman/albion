@@ -1,0 +1,126 @@
+# Makefile for BBSETUP
+
+# Optimize implicit rule checking
+.OPTIMIZE
+
+# Do not output commands
+.SILENT
+
+
+# Default mode is debugging
+!ifndef Mode
+Mode = Debugging
+!endif
+
+
+# Define library and source directories
+Ldir = G:\PCLIB32\LIB
+Sdir = G:\ALBION\OUTSIDE\BBSETUP\SRC
+Pdir = G:\ALBION\OUTSIDE\BBSETUP
+
+
+!ifeq Mode Production
+
+# Define linker and compiler calls for production version
+Libmake = *wlib -n
+Linker = *wlink SYSTEM DOS4G OP CASEEXACT OP NOREDEFS OP STACK=16K
+Compiler = *wcc386 /w1 /d0 /ox /5r
+
+!else
+
+# Define linker and compiler calls for debugging version
+Libmake = *cwlib -n
+Linker = *wlink SYSTEM DOS4G DEBUG ALL OP CASEEXACT OP NOREDEFS OP STACK=16K OP MAP
+Compiler = *wcc386 /w1 /d2 /od /5r
+
+!endif
+
+
+# Define object files
+Object_files = $(Sdir)\BASEIO.OBJ &
+	$(Sdir)\BASEWIN.OBJ &
+	$(Sdir)\BROWSER.OBJ &
+	$(Sdir)\DEBUG.OBJ &
+	$(Sdir)\EVENT.OBJ &
+	$(Sdir)\GLOBAL.OBJ &
+	$(Sdir)\INI.OBJ &
+	$(Sdir)\IO.OBJ &
+	$(Sdir)\MESSAGES.OBJ &
+	$(Sdir)\SCRIPT.OBJ &
+	$(Sdir)\SETUP.OBJ &
+	$(Sdir)\TOKEN.OBJ &
+	$(Sdir)\VESA.OBJ &
+	$(Sdir)\WINDOW.OBJ &
+	$(Ldir)\BBBASMEM.OBJ &
+	$(Ldir)\BBDOS.OBJ &
+	$(Ldir)\BBDSA.OBJ &
+	$(Ldir)\BBERROR.OBJ &
+	$(Ldir)\BBEVENT.OBJ &
+	$(Ldir)\BBLBM.OBJ &
+	$(Ldir)\BBOPM.OBJ &
+	$(Ldir)\BBSYSTEM.OBJ
+
+
+# Set include and library directories (only during make)
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;G:\ALBION\OUTSIDE\BBSETUP\SRC
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB
+
+# .C-files can be found in these directories :
+.C : $(Sdir)
+
+
+# .C-files should be turned into .OBJ-files using the following command list :
+# (The first dependent of the target should be the main source-file.)
+.C.OBJ :
+	$(Compiler) $[@ -fo$^*.OBJ
+
+
+# This is the main target, which should not be erased if anything goes wrong :
+!ifeq Mode Production
+
+$(Pdir)\SETUP.EXE : $(Object_files) $(Sdir)\MAKEFILE
+	$(Linker) FILE {$(Object_files)} &
+		NAME $(Pdir)\SETUP.EXE
+	cd $(Pdir)
+
+!else
+
+$(Pdir)\SETUP.EXE : $(Object_files) $(Sdir)\MAKEFILE
+	$(Linker) FILE {$(Object_files)} &
+		NAME $(Pdir)\SETUP.EXE
+	cd $(Pdir)
+
+!endif
+
+
+# These are the objects needed for making the main target :
+
+$(Sdir)\BASEIO.OBJ : $(Sdir)\BASEIO.C .AUTODEPEND
+
+$(Sdir)\BASEWIN.OBJ : $(Sdir)\BASEWIN.C .AUTODEPEND
+
+$(Sdir)\BROWSER.OBJ : $(Sdir)\BROWSER.C .AUTODEPEND
+
+$(Sdir)\DEBUG.OBJ : $(Sdir)\DEBUG.C .AUTODEPEND
+
+$(Sdir)\EVENT.OBJ : $(Sdir)\EVENT.C .AUTODEPEND
+
+$(Sdir)\GLOBAL.OBJ : $(Sdir)\GLOBAL.C .AUTODEPEND
+
+$(Sdir)\INI.OBJ : $(Sdir)\INI.C .AUTODEPEND
+
+$(Sdir)\IO.OBJ : $(Sdir)\IO.C .AUTODEPEND
+
+$(Sdir)\MESSAGES.OBJ : $(Sdir)\MESSAGES.C .AUTODEPEND
+
+$(Sdir)\SCRIPT.OBJ : $(Sdir)\SCRIPT.C .AUTODEPEND
+
+$(Sdir)\SETUP.OBJ : $(Sdir)\SETUP.C .AUTODEPEND
+
+$(Sdir)\TOKEN.OBJ : $(Sdir)\TOKEN.C .AUTODEPEND
+
+$(Sdir)\VESA.OBJ : $(Sdir)\VESA.C .AUTODEPEND
+
+$(Sdir)\WINDOW.OBJ : $(Sdir)\WINDOW.C .AUTODEPEND
+

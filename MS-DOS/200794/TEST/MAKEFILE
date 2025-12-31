@@ -1,0 +1,25 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Sdir = C:\WORK\TEST
+
+
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /w3 /od
+
+Header_files = $(Ldir)\BBDEF.H &
+	$(Ldir)\BBMEM.H
+
+.BEFORE
+	cd $(Sdir)
+
+
+
+$(Sdir)\TEST.EXE : $(Sdir)\TEST.OBJ $(Ldir)\BBMEM.LIB
+	$(Linker) FILE TEST.OBJ LIBRARY BBMEM.LIB NAME TEST.EXE
+
+$(Sdir)\TEST.OBJ : $(Sdir)\TEST.C $(Header_files)
+	$(Compiler) TEST.C
+

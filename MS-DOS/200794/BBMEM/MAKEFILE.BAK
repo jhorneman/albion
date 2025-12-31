@@ -1,0 +1,40 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Sdir = C:\WORK\BBMEM
+
+
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386P /3s /d2 /w3 /od
+
+Header_files = $(Ldir)\BBDEF.H &
+	$(Ldir)\BBERROR.H &
+	$(Ldir)\BBMEM.H
+
+Object_files = $(Sdir)\BBMEMVAR.OBJ &
+	$(Sdir)\BBMEM.OBJ &
+	$(Sdir)\BBMEMALO.OBJ &
+	$(Sdir)\BBMEMCHK.OBJ
+
+.BEFORE
+	cd $(Sdir)
+
+
+
+$(Ldir)\BBMEM.LIB : $(Object_files)
+	$(Libmake) $(Ldir)\BBMEM.LIB -+BBMEMVAR -+BBMEM -+BBMEMALO -+BBMEMCHK
+
+
+$(Sdir)\BBMEMVAR.OBJ : $(Sdir)\BBMEMVAR.C $(Header_files)
+	$(Compiler) BBMEMVAR.C
+
+$(Sdir)\BBMEM.OBJ : $(Sdir)\BBMEM.C $(Header_files) $(Sdir)\BBMEMVAR.H
+	$(Compiler) BBMEM.C
+
+$(Sdir)\BBMEMALO.OBJ : $(Sdir)\BBMEMALO.C $(Header_files) $(Sdir)\BBMEMVAR.H
+	$(Compiler) BBMEMALO.C
+
+$(Sdir)\BBMEMCHK.OBJ : $(Sdir)\BBMEMCHK.C $(Header_files) $(Sdir)\BBMEMVAR.H
+	$(Compiler) BBMEMCHK.C

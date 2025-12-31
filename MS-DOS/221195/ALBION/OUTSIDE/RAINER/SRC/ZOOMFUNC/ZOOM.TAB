@@ -1,0 +1,286 @@
+; ************
+; * NAME     : ZOOM.asm
+; * AUTOR    : R.Reber, BlueByte
+; * START    : 25.05.94 14:00
+; * PROJECT  : ALBION
+; * NOTES    :
+; * SEE ALSO :
+; * VERSION  : 1.0
+; ************/
+
+	.386p
+
+	ASSUME DS:ZOOM_DATA
+
+	.MODEL FLAT
+	.CODE
+
+; Public Functions
+	PUBLIC	C ZOOM_BLOCK_ 						; horizontale Linie
+
+; Public Variablen
+	PUBLIC	_ZOOMFUNC_DESTCLIPX0 ; Clipping Variablen fÅr ZoomBob
+	PUBLIC	_ZOOMFUNC_DESTCLIPY0
+	PUBLIC	_ZOOMFUNC_DESTCLIPX1
+	PUBLIC	_ZOOMFUNC_DESTCLIPY1
+
+; Include Files
+	INCLUDE d:\PCLIB32\LIB\ASMINC\BBMACRO.INC
+	INCLUDE d:\PCLIB32\LIB\ASMINC\BBHARD.INC
+
+; Zoommodes
+ZOOMMODE_NORMAL=0
+ZOOMMODE_SILHOUETTE=1
+ZOOMMODE_RECOLOUR=2
+ZOOMMODE_TRANSPARENT=3
+
+ZOOM_CODE SEGMENT PARA USE32 'CODE'	;
+
+;ZOOMBOB
+;******************************************************************************
+;* #FUNCTION HEADER BEGIN#
+;* NAME      : ZOOM_BLOCK
+;* FUNCTION  : Stellt OPM mit wahlweiser Breite und Hîhe dar (interne Funktion)
+;*					Farbe 0 wird durchsichtig dargestellt
+;*
+;* INPUTS    : OPM(EDI)= Zeiger auf OPM
+;*					Xpos(EAX) = X Position Bildschirm
+;*					Ypos(EBX) = Y Position Bildschirm
+;*					sizex(ECX) = neue Grîsse in X
+;*					sizey(EDX) = neue Grîsse in Y
+;* INPUTS    : sourceptr = Zeiger auf QUELLOPM
+;*					destptr = Zeiger auf Zielopm
+;*					sourcenextypos = Breite QuellHauptopm
+;*					sourcewidth = Breite QuellBereich
+;*					sourceheight = Hîhe QuellBereich
+;*					destnextypos = Breite ZielHauptopm
+;*					destwidth = neue Breite ZielBereich
+;*					destheight = neue Hîhe ZielBereich
+;*					destx = xpos ZielBereich
+;*					desty = ypos ZielBereich
+;*					color = Zeichenfarbe (nur wenn shilouetteMode)
+;*					zoommode = ZOOMMODE_NORMAL = Graphik mit Farbe 0 transparent zeichnen
+;*                        ZOOMMODE_SILHOUETTE = GraphikUmriss mit color zeichnen
+;*                        ZOOMMODE_RECOLOUR = Graphik mittels Umrechnungstabelle zeichnen
+;*                        ZOOMMODE_TRANSPARENT = Graphik mittels Urechnungstabelle transparent zeichnen
+;*
+;* zusÑtzlich mÅssen folgende Globale Variablen initialisiert sein !
+;*					destcx0 = Clipx0 Zielbereich
+;*					destcy0 = Clipy0 Zielbereich
+;*					destcx1 = Clipx1 Zielbereich
+;*					destcy1 = Clipy1 Zielbereich
+;* RESULT    :
+;*
+;* FILE      : SCREEN.ASM
+;* AUTHOR    : VIPER
+;* FIRST     : 30.08.94 13:35:58
+;* LAST      : 18.01.95 15:40:55
+;* BUGS      :
+;* NOTES     : Das QuellOPM darf kein virtuelles OPM sein !!!
+;* SEE ALSO  :
+;* VERSION   : 0.1
+;* #FUNCTION HEADER END#
+
+ZOOM_BLOCK_ PROC C USES EBP sourceptr:DWORD,destptr:DWORD,sourcenextypos:DWORD,sourcewidth:DWORD,sourceheight:DWORD,destnextypos:DWORD,destwidth:DWORD,destheight:DWORD,destxpos:DWORD,destypos:DWORD,color:DWORD,zoommode:DWORD
+
+; ZielBob zentrieren
+	movme	ZOOM_DWIDTH,DESTWIDTH
+	movme	ZOOM_DHEIGHT,DESTHEIGHT
+
+;	Breite / Hîhe des OPMS
+	mov 	EAX,SOURCEWIDTH  ; Breite
+	sal	EAX,16
+	mov	ZOOM_SWIDTH,EAX
+	mov	ZOOM_SBAKWIDTH,EAX
+
+	mov 	EAX,SOURCEHEIGHT  ; Hîhe des OPM
+	sal	EAX,16
+	mov	ZOOM_SHEIGHT,EAX
+	mov	ZOOM_SBAKHEIGHT,EAX
+
+; Clipping
+	movme	ZOOM_SXOFFSET,ZOOM_SBAKWIDTH ; Offset auf QuellBitmap
+	mov	ZOOM_SYOFFSET,0
+
+; links
+	mov	EAX,DESTXPOS
+	sub 	EAX,_ZOOMFUNC_DESTCLIPX0
+	jns	CLIPZOMLEFT_BLOCK
+	neg	EAX
+	sub	ZOOM_DWIDTH,EAX ; Ziel Breite - X offset
+	test	ZOOM_DWIDTH,-1 ; Breite <=0 dann Object ausserhalb des Screens
+	jle	WRONGZOOMSIZE_BLOCK
+	imul	ZOOM_SBAKWIDTH ; * Breite Quell
+	idiv	DESTWIDTH ; / Breite Ziel
+	sub	ZOOM_SWIDTH,EAX ; Quell Breite - skalierter Offset
+	movme	DESTXPOS,_ZOOMFUNC_DESTCLIPX0
+CLIPZOMLEFT_BLOCK:
+
+; rechts
+	mov	EAX,DESTXPOS
+	add	EAX,ZOOM_DWIDTH
+	dec	EAX
+	sub 	EAX,_ZOOMFUNC_DESTCLIPX1
+	jle	CLIPZOMRIGHT_BLOCK
+	sub	ZOOM_DWIDTH,EAX ; Ziel Breite - X offset
+	test	ZOOM_DWIDTH,-1 ; Breite <=0 dann Object ausserhalb des Screens
+	jle	WRONGZOOMSIZE_BLOCK
+	imul	ZOOM_SBAKWIDTH ; * Breite Quell
+	idiv	DESTWIDTH ; / Breite Ziel
+	sub	ZOOM_SWIDTH,EAX ; Quell Breite - skalierter Offset
+	neg	EAX
+	rol	EAX,16 ; Hi mit LoWort vertauschen
+	mov	ZOOM_SXOFFSET,EAX ; X Offset der auf QuellBitmap aufaddiert wird
+CLIPZOMRIGHT_BLOCK:
+
+; oben
+	mov	EAX,DESTYPOS
+	sub	EAX,_ZOOMFUNC_DESTCLIPY0
+	jns	CLIPZOMTOP_BLOCK
+	neg	EAX
+	sub	ZOOM_DHEIGHT,EAX ; Ziel Breite - X offset
+	test	ZOOM_DHEIGHT,-1 ; Breite <=0 dann Object ausserhalb des Screens
+	jle	WRONGZOOMSIZE_BLOCK
+	imul	ZOOM_SBAKHEIGHT ; * Breite Quell
+	idiv	DESTHEIGHT ; / Breite Ziel
+	sub	ZOOM_SHEIGHT,EAX ; Quell Breite - skalierter Offset
+	rol	EAX,16 ; Hi mit LoWort vertauschen
+	mov	ZOOM_SYOFFSET,EAX ; X Offset der auf QuellBitmap aufaddiert wird
+	movme	DESTYPOS,_ZOOMFUNC_DESTCLIPY0
+CLIPZOMTOP_BLOCK:
+
+; unten
+	mov	EAX,DESTYPOS
+	add	EAX,ZOOM_DHEIGHT
+	dec	EAX
+	sub	EAX,_ZOOMFUNC_DESTCLIPY1
+	jle	CLIPZOMBOTTOM_BLOCK
+	sub	ZOOM_DHEIGHT,EAX ; Ziel Breite - X offset
+	test	ZOOM_DHEIGHT,-1 ; Breite <=0 dann Object ausserhalb des Screens
+	jle	WRONGZOOMSIZE_BLOCK
+	imul	ZOOM_SBAKHEIGHT ; * Breite Quell
+	idiv	DESTHEIGHT ; / Breite Ziel
+	sub	ZOOM_SHEIGHT,EAX ; Quell Breite - skalierter Offset
+CLIPZOMBOTTOM_BLOCK:
+
+; an rechte Grenze setzen
+	mov 	EAX,SOURCEPTR  ; Bitmap des OPMs
+	add	EAX,SOURCEWIDTH
+	mov	ZOOM_SBITMAP,EAX ; an rechte Grenze setzen
+	mov	EDI,DESTPTR ; AusgabeBildschirm
+
+	mov	EAX,DESTYPOS ; Position am Bildschirm
+	imul 	EAX,DESTNEXTYPOS
+	add	EAX,DESTXPOS
+	add	EDI,EAX
+
+	mov	EAX,ZOOM_SWIDTH
+	mov	EBX,ZOOM_DWIDTH ; neue Breite
+	neg	EBX
+	cdq
+	idiv EBX
+	rol 	EAX,16  ; Hi mit LoWort vertauschen
+	mov	ZOOM_MX,EAX ; Steigung fÅr X
+
+	mov	EAX,ZOOM_SHEIGHT
+ 	mov	EBX,ZOOM_DHEIGHT ; neue Hîhe
+	cdq
+	idiv EBX
+	rol 	EAX,16  ; Hi mit LoWort vertauschen
+	mov	ZOOM_MY,EAX ; Steigung fÅr Y
+
+	movme	SOURCEWIDTHII,SOURCENEXTYPOS
+	movme	DESTWIDTHII,DESTNEXTYPOS
+
+	push	EBP
+
+; gezoomtes OPM darstellen
+	mov	EBX,ZOOM_MX
+	mov	EBP,ZOOM_SYOFFSET ; Clip Y Offset
+	movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+YZOMDRAW_BLOCK:
+	mov	ESI,ZOOM_SBITMAP ; StartAddresse Screen
+	movzx	EDX,BP ; LoWort = Ganzzahl
+	imul	EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+	add	ESI,EDX ; nÑchste Zeile Quellopm
+
+	mov	EAX,ZOOM_SXOFFSET ; Clip X Offset
+	mov	EDX,ZOOM_DWIDTH
+
+	shl	EDX,2
+	add 	EDX,ZOOMBOBJMPTABLE
+	jmp 	[EDX]
+TXTOFFSET = MAXSCREENWIDTH_PCLIB-1
+TXTLABELNUM = MAXSCREENWIDTH_PCLIB-1
+	repeat MAXSCREENWIDTH_PCLIB  ; Macro generiert 640/2 eintrÑge mit Label
+	txtlabel CATSTR <ZOMBOBLAB>,%TXTLABELNUM
+
+ 	add	EAX,EBX ; X addieren
+	adc	EAX,0
+	movsx	EDX,AX ; LoWort = Ganzzahl
+
+	mov	dl,[ESI+EDX] ; Pixel lesem
+	or		dl,dl
+	je 	@F
+	mov	TXTOFFSET[EDI],dl
+@@:
+
+%TXTLABEL:
+	txtoffset = txtoffset - 1
+	txtlabelnum = txtlabelnum - 1
+	ENDM
+
+	add	EBP,ZOOM_MY ; Y addieren
+	adc	EBP,0
+	add	EDI,DESTWIDTHII ; Modulo nÑchste Zeile Bildschirm
+	dec 	ZOOM_LOPVAR
+	jg 	YZOMDRAW_BLOCK
+
+	pop	EBP
+
+WRONGZOOMSIZE_BLOCK:
+
+	ret
+ZOOM_BLOCK_ ENDP
+
+; Sprungtabelle fÅr Langworte geshadedtes TexturePolygon
+ZOOMBOBJMPTABLE:
+	txtlabelnum = 0
+	REPEAT MAXSCREENWIDTH_PCLIB
+	txtlabel	CATSTR <ZOMBOBLAB>,%txtlabelnum
+	DD txtlabel
+	txtlabelnum = txtlabelnum + 1
+	ENDM
+
+ZOOM_CODE  	ENDS 				;
+
+ZOOM_DATA	SEGMENT PARA USE32 'DATA'	;
+
+; Lokale Variablen ZoomBobFunktion
+ZOOM_DWIDTH DD ?
+ZOOM_DHEIGHT DD ?
+ZOOM_SBITMAP DD ?
+ZOOM_SWIDTH DD ?
+ZOOM_SHEIGHT DD ?
+ZOOM_SBAKWIDTH DD ?
+ZOOM_SBAKHEIGHT DD ?
+ZOOM_SXOFFSET DD ?
+ZOOM_SYOFFSET DD ?
+ZOOM_MX DD ?
+ZOOM_MY DD ?
+ZOOM_DWIDTHMODULO DD ?
+SOURCEWIDTHII DD ?
+DESTWIDTHII DD ?
+_ZOOMFUNC_DESTCLIPX0 DD ?
+_ZOOMFUNC_DESTCLIPY0 DD ?
+_ZOOMFUNC_DESTCLIPX1 DD ?
+_ZOOMFUNC_DESTCLIPY1 DD ?
+ZOOM_LOPVAR DD ?
+YLOP DD ? ; Schleifenvariable
+
+ZOOM_DATA	ENDS
+
+END
+
+
+

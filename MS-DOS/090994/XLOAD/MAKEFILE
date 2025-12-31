@@ -1,0 +1,20 @@
+.ERASE
+
+Sdir = C:\WORK\MODULES\XLOAD
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /od
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir2)\BBBASMEM.H &
+	$(Ldir2)\BBMEM.H &
+	$(Ldir2)\BBDOS.H &
+	$(Ldir)\XLOAD.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\XLOAD.OBJ : $(Sdir)\XLOAD.C $(Header_files)
+	$(Compiler) XLOAD.C -fo$(Ldir)\XLOAD.OBJ
+

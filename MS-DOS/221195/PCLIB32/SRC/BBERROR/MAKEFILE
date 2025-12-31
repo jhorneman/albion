@@ -1,0 +1,5 @@
+!include ..\OPTIONS
+
+# compilieren
+..\..\LIB\bberror.obj: bberror.c $(OPTION) .AUTODEPEND
+

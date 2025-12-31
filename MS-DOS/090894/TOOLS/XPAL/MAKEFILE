@@ -1,0 +1,18 @@
+.ERASE
+
+Sdir = C:\WORK\TOOLS\XPAL
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+
+.BEFORE
+	cd $(Sdir)
+
+$(Sdir)\XPAL.EXE : $(Sdir)\XPAL.OBJ
+	$(Linker) FILE {XPAL.OBJ C:\PCLIB32\LIB\PCLIB32.LIB} NAME XPAL.EXE
+
+$(Sdir)\XPAL.OBJ : $(Sdir)\XPAL.C
+	$(Compiler) XPAL.C
+

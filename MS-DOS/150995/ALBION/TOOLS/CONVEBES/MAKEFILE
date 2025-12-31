@@ -1,0 +1,20 @@
+.ERASE
+
+X = CONVEBES
+Pdir = G:\TOOLS
+Sdir = G:\TOOLS\CONVEBES
+Ldir = G:\TOOLS\LIB
+Ldir2 = G:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /od
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+
+.BEFORE
+	cd $(Sdir)
+
+$(Pdir)\$(X).EXE : $(Sdir)\$(X).OBJ
+	$(Linker) FILE {$(X).OBJ $(Ldir2)\PCLIB32.LIB} NAME $(Pdir)\$(X).EXE
+
+$(Sdir)\$(X).OBJ : $(Sdir)\$(X).C
+	$(Compiler) $(X).C
+

@@ -1,0 +1,5 @@
+!include ..\OPTIONS
+
+# compilieren
+..\..\LIB\bbdos.obj: bbdos.c $(OPTION) .AUTODEPEND
+

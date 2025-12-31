@@ -1,0 +1,1568 @@
+/************
+ * NAME     : BBDSA.c
+ * AUTOR    : viper, BlueByte
+ * START    : 25.05.94 14:00
+ * PROJECT  : Poject32/Macintosh
+ * NOTES    : The 1.0 version of the OPM system supports only 1 byte
+ *            per pixel pixel maps.
+ * SEE ALSO : BBOPM.h
+ * VERSION  : 1.0
+ ************/
+
+#include <dos.h>
+#include <string.h>
+#include <i86.h>
+
+/* Includes */
+
+#include <BBERROR.H>
+#include <BBDEF.H>
+#include <BBBASMEM.H>
+#include <BBOPM.H>
+#include <BBDSA.H>
+#include <BBSYSTEM.H>
+#include <BBEXTRDF.H>
+#include "include/dsaintrn.h"
+#include "..\BBSYSTEM\include/sysintrn.h"
+
+/* Error handling */
+#ifdef BBDSA_ERRORHANDLING
+	#include <stdio.h>
+	/* Name of Library */
+	char BBDSA_LibraryName[] = "BBDSA Library";
+#endif
+
+/* DSA Library status */
+BOOLEAN DSA_Library_Status = FALSE;
+
+/* globale Variablen fr DosInterruptSimulation */
+static union REGS regs;
+static struct SREGS sregs;
+static struct RMINFO rmi;
+
+/* globale Variablen fr VesaRoutinen teilweise in DSA_ASS gebraucht*/
+struct VESAINFO *vesainfo = NULL;
+struct VESAMODEINFO *vesamodeinfo = NULL;
+
+/* enth„lt Fehler wenn DSA_OpenScreen falsch zurckliefert */
+SILONG DSA_OpenScreen_error;
+
+/* Variablen zur Kommunikation mit Assemblerroutinen */
+/* chain 4 */
+UNBYTE chain4lastwriteselect; // letzter eingeschalteter Schreibmodus CHAIN4
+UNBYTE chain4lastreadselect; // letzter eingeschalteter Lesemodus CHAIN4
+UNBYTE chain4savewriteselect; // letzter eingeschalteter Schreibmodus CHAIN4
+UNBYTE chain4savereadselect; // letzter eingeschalteter Lesemodus CHAIN4
+UNBYTE chain4writeselectok; // wiederherstellen notwendig ?
+UNBYTE chain4readselectok; // wiederherstellen notwendig ?
+/* VESA */
+UNSHORT	lastpage; // letze aktuelle Vesaseite
+UNSHORT	savepage; // gesicherte Vesaseite
+SISHORT twowindows; // 2 Fenster notwendig
+UNLONG	windowsize;  // maximale Gr”sse eines eingeblendeten Windows
+UNLONG	windowstep;  // Anzahl Schritte bis zum n„chsten Window
+UNSHORT	oldmode; // alter Videomodus
+SISHORT	actmode=-1; // eingeschalteter Videomodus -1 = nicht initialisiert
+UNLONG	availvesamem; // Gr”sse des VideoRams im Vesamodus
+/* allgemein */
+UNSHORT	doublepage; // aktuell eingeschaltete DoublebufferPage
+UNSHORT	anzdoublepages; // Anzahl Bildschirme die ansprechbar sind max 2 (Doublebuffer verwendet max 3)
+UNBYTE	*videoram[MAXSCREENS]; // BildschirmAddressen im Videoram es sind
+SILONG	videoscreenypos[MAXSCREENS]; // BildschirmAddressen im Videoram „ndern anhand Y Pos
+UNLONG	screensize;  // Gr”sse des ge”ffneten Screens in Bytes
+UNLONG	screenwidth; // Breite einer Zeile des Bildschirms in Bytes
+UNLONG	screenheight; // H”he des Bildschirms
+UNSHORT	special; // spezielle Eigenschaften des eingestellen Modus
+BOOLEAN virtuellscreen; // Fr 360x240 Vesamode notwendig
+
+/* Globale Variablen fr Mauszeiger aktiv */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_Init
+ * FUNCTION  : Initialize the SCREENPORT structures.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : TRUE = Ok
+ *					FALSE = Fehler
+ * BUGS      :
+ * NOTES     :
+ *						 	Achtung !!! Wenn DSA_Init aufgerufen wurde sollte danach auf jeden
+ *							Fall auch SYSTEM_Init und BLEV_Init aufgerufen werden
+ *
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DSA_Init( void )
+{
+	/* BasememLibrary wird ben”tigt */
+	if(!BASEMEM_Init()){
+		/* Error while initing BASEMEM ! */
+		#ifdef BBDSA_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDSA_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "DSA_Init: Cannot init BASEMEM";
+			error.errordata	= 0;
+			error.errordata2	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( &DSA_PrintError, ( UNCHAR * ) &BBDSA_LibraryName[0], sizeof( struct BBDSA_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+	/* Library already initialised ? */
+	if( DSA_Library_Status ){
+		/* Yes: nothing to do */
+		return(TRUE);
+	}
+
+	DSA_Library_Status=TRUE;
+
+	return(TRUE);
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_ExitSystem
+ * FUNCTION  :
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_Exit( void )
+{
+	/* Library not initialised ? */
+	if( !DSA_Library_Status ){
+		/* Yes: nothing to do */
+		return;
+	}
+
+	/* Ist Bildschirm noch offen ? */
+	if(SYSTEM_ActiveScreenPort!=NULL)
+		DSA_CloseScreen(SYSTEM_ActiveScreenPort);
+
+	DSA_Library_Status=FALSE;
+
+}
+
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_OpenScreen
+ * FUNCTION  : Open a screen (GUI: window) with the size of the given OPM.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 17:15
+ * LAST      : 25.05.94 17:15
+ * INPUTS    : struct SCREENPORT * scrnptr : Pointer to SCREENPORT structure to be filled out.
+ *             struct OPM * opmptr : Pointer to base OPM structure.
+ *             struct BBPALETTE * palettenptr : Pointer to palette for screen. If NULL we will allocate the memory for a palette.
+ *             char * titlestrptr  : GUI: Pointer to title string for window.
+ *             SISHORT xpos          : GUI: Base x pos of window.
+ *             SISHORT ypos          : GUI: Base y pos of window.
+ * RESULT    : 0: no error occured.
+ * BUGS      :
+ * NOTES     : Manche Modi sind mehrmals vorhanden z.B. als Chain4 oder VesaMode
+ *					   Wird im ScreenportType durch FORCE nicht spezielle angegeben
+ *						 ob ein CHAIN4 oder VesaMode aktiviert werden soll wird automatisch
+ *					   der bessere Modus verwendet in diesem Fall der Vesamode, steht in
+ * 						 der ModeTabelle ganz oben
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+/* alle momentan m”glichen Vesamodi
+	weitere Modi werden hier eingetragen
+	Format Breite,H”he,ModeNr,Anzahl Byte pro Pixel
+	Bei 320x200 Punkte sollte zuerst der ONESEG Modus kommen,
+	weil sonst bei nicht Angabe von Doublebuffer der CHAIN4
+	Modus verwendet wird */
+static struct VESAMODEDEF vmodes[]=
+{
+	{640,400,1,0x0100,VESAMD,DOUBLEBF},
+	{640,480,1,0x0101,VESAMD,DOUBLEBF},
+	{800,600,1,0x0103,VESAMD,DOUBLEBF},
+	{1024,768,1,0x0105,VESAMD,DOUBLEBF},
+	{1280,1024,1,0x0107,VESAMD,DOUBLEBF},
+	{360,240,1,0x0157,VESAMD,DOUBLEBF}, /* funktioniert nur mit UNIVBE 2.0 */
+	{360,240,1,0x013,CHAIN4,DOUBLEBF},
+	{320,200,1,0x013,ONESEG,NODOUBLEBF},
+	{320,200,1,0x0153,VESAMD,DOUBLEBF},
+	{320,200,1,0x013,CHAIN4,DOUBLEBF},
+	{0,0,0,0,0}
+};
+
+BOOLEAN
+DSA_OpenScreen( struct SCREENPORT * scrnptr, struct OPM * opmptr, struct BBPALETTE * palettenptr, char * titlestrptr, SISHORT xpos, SISHORT ypos,UNLONG type)
+{
+	/* Local vars */
+
+	/* Bildschirm bereits ge”ffnet ? */
+	if(actmode!=-1){
+		/* in diesem Fall alten Screen vorher schliessen */
+		DSA_CloseScreen(SYSTEM_ActiveScreenPort);
+	}
+
+	{
+		UNSHORT t;
+		UNBYTE	*videoramin;  // Addresse videoram bleibt konstant w„hrend Bildschirm ge”ffnet ist wird nur von Doublebuffer ge„ndert
+		BOOLEAN use;
+
+		/* Set screen type */
+		scrnptr->screentype = type;
+
+		/* der Aufl”sung entsprechenden Modus finden */
+		actmode=0;
+		t=0;
+		do{
+			if(vmodes[t].width==opmptr->width
+				&&vmodes[t].height==opmptr->height
+				&&vmodes[t].depth==opmptr->depth){
+				// wird spezieller Modi explizit angefordert ? */
+				use=TRUE;
+				if(scrnptr->screentype&SCREENTYPE_FORCE){
+					/* es wird ein VesaMode angefordert */
+					if(scrnptr->screentype&SCREENTYPE_FORCE_VESA){
+						/* Ist aktuell gefundener Mode kein Vesamode dann weitersuchen */
+						if(vmodes[t].special!=VESAMD){
+							use=FALSE;
+						}
+					}
+					/* es wird ein Chain4Mode angefordert */
+					if(scrnptr->screentype&SCREENTYPE_FORCE_CHAIN4){
+						/* Ist aktuell gefundener Mode kein Vesamode dann weitersuchen */
+						if(vmodes[t].special!=CHAIN4){
+							use=FALSE;
+						}
+					}
+				}
+				if(use){
+					if(scrnptr->screentype&SCREENTYPE_DOUBLEBUFFER){
+						if(vmodes[t].doublebuffer==DOUBLEBF){
+							actmode=vmodes[t].mode;
+							special=vmodes[t].special;
+							break;
+						}
+					}
+					else{
+						actmode=vmodes[t].mode;
+						special=vmodes[t].special;
+						break;
+					}
+				}
+			}
+		}while(vmodes[t++].width>0);
+
+		/* Fehler! Routine hat die Aufl”sung nicht gefunden */
+		if(actmode==0){
+			#ifdef BBDSA_ERRORHANDLING
+			{
+				/* Local vars */
+				struct BBDSA_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname = "DSA_OpenScreen: unknown resolution width,height:";
+				error.errordata	= opmptr->width;
+				error.errordata2	= opmptr->height;
+
+				/* Push error on stack */
+				ERROR_PushError( &DSA_PrintError, ( UNCHAR * ) &BBDSA_LibraryName[0], sizeof( struct BBDSA_ErrorStruct ), ( UNBYTE * ) &error );
+			}
+			#endif
+			scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+			return(FALSE);
+		}
+
+		xpos=0;
+		ypos=0;
+		titlestrptr=NULL;
+
+		/* Kein virtueller Screen (360x240 Vesamode (intern 368x240)) */
+		virtuellscreen=FALSE;
+
+		/* Init SCREENPORT status */
+		scrnptr->screenstatus = SCREENPORTSTAT_INUSE;
+
+		/* Set SCREENPORT opm pointer */
+		scrnptr->screenopmptr = opmptr;
+
+		/* Set SCREENPORT pal pointer */
+
+		if ( palettenptr != NULL ){
+		/* If pointer is not NULL */
+			scrnptr->screenpalptr = palettenptr;
+		}
+		else{
+			/* Otherwise allocate memory for SCREEN palette */
+
+			/* Local variables */
+			SISHORT i;
+			struct BBPALETTE * paletteptr;
+			struct BBCOLOR * colorentryptr;
+
+			/* Get memory for palette */
+			paletteptr = ( struct BBPALETTE * ) BASEMEM_Alloc( sizeof( struct BBPALETTE ), BASEMEM_Status_Normal  );
+
+			/* Set palette pointer in SCREENPORT */
+			scrnptr->screenpalptr = paletteptr;
+
+
+			/* Init palette structure */
+			paletteptr->entries = SCREEN_PALETTE_ENTRIES;
+			paletteptr->version = 0;
+
+
+			/* Init all colors to black */
+			colorentryptr = &paletteptr->color[0];
+
+			for ( i=0; i<SCREEN_PALETTE_ENTRIES; i++, colorentryptr++ ){
+				colorentryptr->red		= 0;
+				colorentryptr->green	= 0;
+				colorentryptr->blue		= 0;
+				colorentryptr->alpha	= 0;
+			}
+
+			/* Set allocated_memory_for_palette flag in SCREENPORT status flag set */
+			scrnptr->screenstatus |= SCREENPORTSTAT_SELFPAL;
+		}
+
+		/* Bildschirm ”ffnen */
+
+		SYSTEM_ActiveScreenPort=scrnptr;
+		SYSTEM_ActiveWindow=0;
+
+		/* MausClipping setzen */
+
+		SYSTEMVAR_mouseclipx0=0;
+		SYSTEMVAR_mouseclipy0=0;
+		SYSTEMVAR_mouseclipx1=SYSTEM_ActiveScreenPort->screenopmptr->width-1;
+		SYSTEMVAR_mouseclipy1=SYSTEM_ActiveScreenPort->screenopmptr->height-1;
+
+		/* Mauskoordinaaten setzen auf Mitte des bildschirms */
+
+		SYSTEMVAR_mousex=(SYSTEMVAR_mouseclipx1-SYSTEMVAR_mouseclipx0)/2;
+		SYSTEMVAR_mousey=(SYSTEMVAR_mouseclipy1-SYSTEMVAR_mouseclipy0)/2;
+
+		/* Gr”sse des Bildschirms und Breite fr Assembler routinen*/
+
+		screensize=opmptr->datasize; // Gr”sse der Plane in Bytes
+		screenwidth=opmptr->nextypos; // Breite einer Bildschirmzeile
+		screenheight=opmptr->height; // Breite einer Bildschirmzeile
+
+		/* ONESEG Mode aktiviert  */
+		if(special==ONESEG){
+			regs.w.ax = 0x0F00; // aktuellen Modus ermitteln
+			int386(0x10,&regs,&regs);
+			oldmode=(UNSHORT)regs.h.al; // alten Videomodus nach oldmode
+			regs.w.ax = 0x013; // Modus einschalten
+			int386(0x10,&regs,&regs);
+			videoramin = (UNBYTE *)SCREEN_ONESEG; // videoramin Addresse
+			for(t=0;t<MAXSCREENS;t++){ // alle Addressen initialisieren
+				videoram[t] = videoramin;
+				videoscreenypos[t] = 0;
+			}
+			anzdoublepages=1;
+			doublepage=0;
+			scrnptr->screentype&=~SCREENTYPE_DOUBLEBUFFER; // kein Doublebuffer m”glich
+			return( TRUE );
+		}
+		/* CHAIN4 Mode aktiviert  */
+		else if(special==CHAIN4){
+			regs.w.ax = 0x0F00; // aktuellen Modus ermitteln
+			int386(0x10,&regs,&regs);
+			oldmode=(UNSHORT)regs.h.al; // alten Videomodus nach oldmode
+			regs.w.ax = actmode; // Modus einschalten
+			int386(0x10,&regs,&regs);
+			windowsize=screensize/4; // Gr”sse bildschirm in Bytes/4 (Planegr”sse in Chain4)
+			videoramin = (UNBYTE *)SCREEN_CHAIN4; // videoramin Addresse wird in Activate verwendet
+			_DSA_ASS_ActivateCHAINFOUR(opmptr->width,opmptr->height); // entsprechenden Chain 4 aktivieren
+			/* Doublebuffer requested ? */
+			if(scrnptr->screentype&SCREENTYPE_DOUBLEBUFFER){
+				for(t=0;t<MAXSCREENS;t++){ // alle Addressen initialisieren
+					videoram[t] = videoramin+(t*(windowsize+16));
+					videoscreenypos[t] = 0;
+				}
+				anzdoublepages=2;
+				doublepage=1;
+				_DSA_ASS_SetVideoramCHN(videoram[0]); // Bildschirm auf Startaddresse Videoram setzen
+			}
+			else{
+				for(t=0;t<MAXSCREENS;t++){ // alle Addressen initialisieren
+					videoram[t] = videoramin;
+					videoscreenypos[t] = 0;
+				}
+				anzdoublepages=1;
+				doublepage=0;
+				_DSA_ASS_SetVideoramCHN(videoram[0]); // Bildschirm auf Startaddresse Videoram setzen
+			}
+			return( TRUE );
+		}
+		/* VESAMODE Mode aktiviert  */
+		else if(special==VESAMD){
+			/* Vesainfo holen */
+
+			/* Speicher im Dos belegen */
+			vesainfo = (struct VESAINFO *)BASEMEM_Alloc( sizeof(struct VESAINFO), BASEMEM_Status_Dos | BASEMEM_Status_Clear  );
+
+			BASEMEM_FillMemByte((UNBYTE *)&rmi,sizeof(rmi),0);
+			rmi.EAX = 0x00004f00;
+			rmi.ES = (UNSHORT) (((UNLONG) vesainfo)>>4); //FP_SEG(vesainfo);
+			rmi.EDI = 0;
+
+			regs.w.ax = 0x0300;
+			regs.h.bl = 0x10;
+			regs.h.bh = 0;
+			regs.w.cx = 0;
+			sregs.es = FP_SEG(&rmi);
+			regs.x.edi = FP_OFF(&rmi);
+			int386x(0x31,&regs,&regs,&sregs);				// simulate real mode interrupt with DOS4GW DPMI call 0x0300
+
+			if ( (rmi.EAX & 0x0000ffff) != 0x004f ){
+				BASEMEM_Free((UNBYTE *)vesainfo); // Speicher wieder freigeben
+				DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_NODRIVER;
+				scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+				return ( FALSE );			// no vesa driver availible
+			}
+
+			/* vesamodeinfo holen */
+
+			vesamodeinfo = (struct VESAMODEINFO *)BASEMEM_Alloc( sizeof(struct VESAMODEINFO), BASEMEM_Status_Dos | BASEMEM_Status_Clear  );
+
+			BASEMEM_FillMemByte((UNBYTE *)&rmi,sizeof(rmi),0);
+			rmi.EAX = 0x00004f01;
+			rmi.ECX = (UNLONG) actmode;
+			rmi.ES = FP_SEG(vesamodeinfo);
+			rmi.ES = (UNSHORT) (((UNLONG) vesamodeinfo)>>4);
+			rmi.EDI = 0;
+
+			regs.w.ax = 0x0300;
+	  	regs.h.bl = 0x10;
+	  	regs.h.bh = 0;
+	  	regs.w.cx = 0;
+	  	sregs.es = FP_SEG(&rmi);
+	  	regs.x.edi = FP_OFF(&rmi);
+	  	int386x(0x31,&regs,&regs,&sregs);				// simulate real mode interrupt with DOS4GW DPMI call 0x0300
+
+			if ( (rmi.EAX & 0x0000ffff) != 0x004f ){
+				BASEMEM_Free((UNBYTE *)vesamodeinfo); // Speicher wieder freigeben
+				DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_COULDNOTACTVATEMODE;
+				scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+	  		return ( FALSE );
+	  	}
+
+			/* Fenster a ist nicht les und schreibbar 2 Fenster notwendig */
+			if((vesamodeinfo->WinAAtt&2)&&(vesamodeinfo->WinAAtt&4)){
+				twowindows=0;
+			}
+			else{
+				twowindows=-1;
+			}
+
+			// alten Videomodus sichern
+	  	regs.w.ax = 0x4f03; /* alten Videomodus sichern */
+			int386(0x10,&regs,&regs);
+		 	oldmode=regs.w.bx;
+
+		 	// vesa driver availible
+
+		 	// gewnschten Vesa Mode aktivieren
+		  regs.w.ax = 0x4f02;
+		  regs.w.bx = actmode;
+		  int386(0x10,&regs,&regs);
+
+		  // Modus konnte nicht aktiviert werden
+		  if ( regs.h.ah ){
+				DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_COULDNOTACTVATEMODE;
+				scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+				return ( FALSE );
+			}
+			lastpage=-1; // aktuelle Page im Vesascreen muss von DSA_ASS initialisiert werden
+
+			if(scrnptr->screentype&SCREENTYPE_DOUBLEBUFFER){
+			/* feststellen ob gengend Videoram fr Doublebuffer verfgbar */
+				regs.w.ax = 0x4f06;
+				regs.h.bl = 1;
+				int386(0x10,&regs,&regs);
+				if ( regs.h.ah  ){
+					/* alten Videomodus durch Vesafunktion reaktivieren */
+					regs.w.ax = 0x4f02;
+					regs.w.bx = oldmode;
+					int386(0x10,&regs,&regs);
+					DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_COULDNOTGETSIZEOFVIDEORAM;
+					scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+					return(FALSE); // kein Doublebuffer m”glich im Vesamode
+				}
+				availvesamem=(UNLONG)regs.w.bx*(UNLONG)regs.w.dx;
+
+				if(availvesamem<(screensize*2)){
+					/* alten Videomodus durch Vesafunktion reaktivieren */
+					DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_NOTENOUGHVIDEORAM;
+					regs.w.ax = 0x4f02;
+					regs.w.bx = oldmode;
+					int386(0x10,&regs,&regs);
+					scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+					return(FALSE); // kein Doublebuffer m”glich im Vesamode
+				}
+				anzdoublepages=2;
+				doublepage=1;
+
+		  	// globale Variablen berechnen
+		  	videoramin = (UNBYTE *)(vesamodeinfo->WinAStartSeg<<4); // 32Bit Zeiger auf VesaVideoram ablegen
+				for(t=0;t<MAXSCREENS;t++){ // alle Addressen initialisieren
+					videoram[t] = videoramin;
+					videoscreenypos[t] = t*screenheight;
+				}
+				windowsize=vesamodeinfo->WinSize*1024; // Gr”sse des Fensters in Bytes
+		  	windowstep=vesamodeinfo->WinSize/vesamodeinfo->WinGran; // Anzahl Schritte bis zum n„chsten Segment
+
+				regs.w.ax = 0x4f07;
+				regs.h.bh = 0;						// 00 = reserved
+				regs.h.bl = 0;						// 00 = set display start
+				regs.w.cx = 0;	// x pos
+				regs.w.dx = videoscreenypos[0];
+// y pos Bildschirm auf 2 Position setzen
+				int386(0x10,&regs,&regs);
+
+				if ( regs.h.ah  ){
+					DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_SETTINGPOSITION;
+					/* alten Videomodus durch Vesafunktion reaktivieren */
+					regs.w.ax = 0x4f02;
+					regs.w.bx = oldmode;
+					int386(0x10,&regs,&regs);
+					scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+					return ( FALSE );
+				}
+
+			}
+			else{
+			/* feststellen ob gengend Videoram fr Doublebuffer verfgbar */
+				regs.w.ax = 0x4f06;
+				regs.h.bl = 1;
+				int386(0x10,&regs,&regs);
+				if ( regs.h.ah  ){
+					/* alten Videomodus durch Vesafunktion reaktivieren */
+					regs.w.ax = 0x4f02;
+					regs.w.bx = oldmode;
+					int386(0x10,&regs,&regs);
+					DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_COULDNOTGETSIZEOFVIDEORAM;
+					scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+					return(FALSE); // kein Doublebuffer m”glich im Vesamode
+				}
+				availvesamem=(UNLONG)regs.w.bx*(UNLONG)regs.w.dx;
+
+				if(availvesamem<screensize){
+					/* alten Videomodus durch Vesafunktion reaktivieren */
+					DSA_OpenScreen_error = DSA_OPENSCREEN_ERROR_VESA_NOTENOUGHVIDEORAM;
+					regs.w.ax = 0x4f02;
+					regs.w.bx = oldmode;
+					int386(0x10,&regs,&regs);
+					scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+					return(FALSE); // kein Doublebuffer m”glich im Vesamode
+				}
+				anzdoublepages=1;
+				doublepage=0;
+
+		  	// globale Variablen berechnen
+		  	videoramin = (UNBYTE *)(vesamodeinfo->WinAStartSeg<<4); // 32Bit Zeiger auf VesaVideoram ablegen
+				for(t=0;t<MAXSCREENS;t++){ // alle Addressen initialisieren
+					videoram[t] = videoramin;
+					videoscreenypos[t] = 0;
+				}
+				windowsize=vesamodeinfo->WinSize*1024; // Gr”sse des Fensters in Bytes
+		  	windowstep=vesamodeinfo->WinSize/vesamodeinfo->WinGran; // Anzahl Schritte bis zum n„chsten Segment
+
+			}
+
+			/* Die Anzahl Byte pro Pixel in einer Zeile unterscheiden sich von der
+				eigentlichen Breite des Bildschirms im 360x240 Modus der Fall (368x240) */
+			if(vesamodeinfo->BytePerScanLine!=screenwidth){
+				/* Bildschirmbreite auf BytesperScanline setzten */
+				screenwidth=vesamodeinfo->BytePerScanLine;
+ 				virtuellscreen=TRUE;
+			}
+
+		 	/* Return SCREENPORT id */
+	  	return( TRUE );
+		}
+	}
+	return ( TRUE );
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_CloseScreen
+ * FUNCTION  : Close a screen (GUI: window ).
+ *             Frees all memory allocated by DSA_OpenScreen().
+ *							Schaltet Mauszeiger aus
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 17:15
+ * LAST      : 25.05.94 17:15
+ * INPUTS    : struct SCREENPORT * scrnptr: Pointer to SCREENPORT to close.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_CloseScreen( struct SCREENPORT * scrnptr )
+{
+
+	/* SCREENPORT in use ? */
+	if( ! ( scrnptr->screenstatus & SCREENPORTSTAT_INUSE ) ){
+		/* No: we cannot close a window, we have not openend ! */
+		return;
+	}
+
+	/* Mauszeiger aus */
+	SYSTEM_HideMousePtr();
+
+	/* Free SCREENPORT structure */
+	scrnptr->screenstatus = SCREENPORTSTAT_NULL;
+
+	/* SYSTEM rcksetzen */
+	SYSTEM_ActiveScreenPort=NULL;
+	SYSTEM_ActiveWindow=-1;
+
+	/* VesaBildschirm schliessen bzw VesaInformation freigeben */
+	if ( vesainfo != NULL ){
+		BASEMEM_Free((UNBYTE *)vesainfo); // Speicher wieder freigeben
+	}
+	if ( vesamodeinfo != NULL ){
+		BASEMEM_Free((UNBYTE *)vesamodeinfo); // Speicher wieder freigeben
+		/* alten Videomodus durch Vesafunktion reaktivieren */
+		regs.w.ax = 0x4f02;
+		regs.w.bx = oldmode;
+		int386(0x10,&regs,&regs);
+	}
+	else {
+		/* wenn kein Speicher fr vesamodeinfo belegt wurde dann war kein Vesamode aktiv */
+		regs.w.ax = oldmode;
+		int386(0x10,&regs,&regs);
+	}
+	actmode=-1; /* kein Screen ge”ffnet */
+
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_Doublebuffer
+ * FUNCTION  : schaltet Bildschirme um wenn das entsprechende Bit
+ *							im System_ActiveScreenport gesetzt ist
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void DSA_DoubleBuffer( void )
+{
+	if(SYSTEM_ActiveScreenPort->screentype&SCREENTYPE_DOUBLEBUFFER){
+		BOOLEAN mousein=FALSE;
+
+		if(SYSTEMVAR_ShowMouse){
+			mousein=TRUE;
+			SYSTEMVAR_ShowMouse=FALSE;
+			doublepage=1-doublepage;
+			SYSTEM_MouseDisplay();
+			doublepage=1-doublepage;
+		}
+
+		/* entsprechendem Modus Bildschirmaddressen vertauschen */
+		switch(special){
+			case CHAIN4: // Chain4 Modus aktiv
+				/* Zeichenbildschirm nach vorne bringen */
+				/* Addressen austauschen */
+				_DSA_ASS_SetVideoramCHN(videoram[doublepage]);
+				break;
+			case VESAMD: // VESA Modus aktiv
+				_DSA_ASS_WaitVBL();
+//				_DSA_ASS_WaitTOF();
+				regs.w.ax = 0x4f07; // Routine wartet selbst auf VBL
+				regs.h.bh = 0;						// 00 = reserved
+				regs.h.bl = 0;						// 00 = set display start
+				regs.w.cx = 0;	// x pos
+				regs.w.dx = (SISHORT)videoscreenypos[doublepage];  // 2 Bildschirmseite bei Screenheight
+				int386(0x10,&regs,&regs);
+//				_DSA_ASS_WaitVBL();
+				_DSA_ASS_WaitEndVBL();
+				break;
+		}
+
+		/* n„chsten DoublebufferScreen aktivieren */
+		doublepage=1-doublepage;
+
+		/* Maus im neuen hinteren Bildschirm Hintergrund zurckkopieren */
+		if(mousein){
+			doublepage=1-doublepage;
+			SYSTEM_MouseRestore();
+			doublepage=1-doublepage;
+			SYSTEMVAR_ShowMouse=TRUE;
+		}
+
+
+	}
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_WaitTOF
+ * FUNCTION  : wartet auf Rasterzeilen Anfang
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void DSA_WaitTOF( void )
+{
+	_DSA_ASS_WaitTOF();
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_WaitBOF
+ * FUNCTION  : wartet auf Rasterzeilen Ende
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void DSA_WaitBOF( void )
+{
+	_DSA_ASS_WaitBOF();
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_CopyMainOPMToScreen
+ * FUNCTION  : Copy base OPM of screen (GUI: window) onto physical display.
+ *             Function checks if the OPMSTAT_CHANGED bit is set in the OPM status flag set.
+ *             If the copyflag is set, the OPMSTAT_CHANGED flag is not checked.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    : struct SCREENPORT * scrnptr: Pointer to SCREENPORT.
+ *             UNSHORT copyflag: Copy flag (see: BBDSA.H -> DSA_CopyMainOPMToScreen copyflag values).
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void DSA_CopyMainOPMToScreen( struct SCREENPORT * scrnptr, UNSHORT copyflag )
+{
+	/* Local vars */
+	struct OPM *opmptr;
+	BOOLEAN mousein;
+	SISHORT mx,my,smx,smy;
+
+	/* Is SCREENPORT initialized ? */
+	if( ! ( scrnptr->screenstatus & SCREENPORTSTAT_INUSE ) )
+		return;
+
+	/* Get pointer to base OPM */
+
+	opmptr = scrnptr->screenopmptr;
+
+	/* OPM changed ? */
+	if ( ! ( opmptr->status & OPMSTAT_CHANGED ) && ( copyflag == DSA_CMOPMTS_CHANGED ) ){
+		/* No: do not copy to screen */
+		return;
+	}
+
+	mousein=FALSE;
+	/* Mauszeiger aktiv ? */
+	if(SYSTEMVAR_ShowMouse&&!(SYSTEM_ActiveScreenPort->screentype&SCREENTYPE_DOUBLEBUFFER)){
+		/* Mauszeiger deaktivieren */
+		SYSTEMVAR_ShowMouse=FALSE;
+
+		/* Mausposition */
+		smx=mx=SYSTEMVAR_mousex;
+		smy=my=SYSTEMVAR_mousey;
+
+		/* Maus im Opm */
+		mousein=TRUE;
+
+		/* neue Mausposition im OPM */
+		mx+=mousegto->xoffset;
+		my+=mousegto->yoffset;
+
+		switch(special){
+			case VESAMD: // Vesamodus aktiv
+				/* Maushintergrund jetzt aus OPM kopieren */
+				OPM_CopyOPMOPM(opmptr,&bmousebackopm,mx,my+videoscreenypos[doublepage],mousegto->width,mousegto->height,0,0);
+				break;
+			case CHAIN4: // Chain4 Modus aktiv
+				/* Maushintergrund jetzt aus OPM kopieren */
+				OPM_CopyOPMOPM(opmptr,&bmousebackopm,mx,my,mousegto->width,mousegto->height,0,0);
+				break;
+			case ONESEG: // ONESEG Modus aktiv
+				/* Maushintergrund jetzt aus OPM kopieren */
+				OPM_CopyOPMOPM(opmptr,&bmousebackopm,mx,my,mousegto->width,mousegto->height,0,0);
+				break;
+		}
+		/* Spezialroutine die Daten in ein 2 MAINOPM kopiert und in das erste ein GTO kopiert */
+		_SYS_ASS_MouseBob((UNBYTE *)bmousebackopm.data,(UNBYTE *)bmouseoldbackopm.data,(struct GTO *)&mousegto->bodychunk[4],mousegto->transcol,mousebacksize);
+
+		/* Maushintergrund + GTO in OPM kopieren */
+		OPM_CopyOPMOPM(&bmousebackopm,opmptr,0,0,mousegto->width,mousegto->height,mx,my);
+	}
+
+	/* copy opm to Screen */
+	switch(special){
+		case VESAMD: // Vesamodus aktiv
+			/* bei virtuellem VesaMode (360x240 OPM 368x240 Videoram) mit copyopmtoscreen kopieren */
+			if(virtuellscreen){
+				_DSA_ASS_CopyOPMToScreen(opmptr->data,videoram[doublepage],opmptr->nextypos,0,videoscreenypos[doublepage],opmptr->width,opmptr->height);
+			}
+			/* bei aktiviertem Doublebuffering 2 Seite vorerst mit copyopmtoscreen kopieren */
+			else if(doublepage==1){
+				_DSA_ASS_CopyOPMToScreen(opmptr->data,videoram[doublepage],opmptr->nextypos,0,videoscreenypos[doublepage],opmptr->width,opmptr->height);
+			}
+			else{
+				_DSA_ASS_CopyMainOPMToScreen(opmptr->data,videoram[doublepage]);
+			}
+			break;
+		case ONESEG: // 1 Segment Modus aktiv
+			_DSA_ASS_CopyMainOPMToScreenONE(opmptr->data,videoram[doublepage]);
+			break;
+		case CHAIN4: // Chain4 Modus aktiv
+			_DSA_ASS_CopyMainOPMToScreenCHN(opmptr->data,videoram[doublepage]);
+			break;
+	}
+
+	/* Mauszeiger aktiv ? */
+	if(mousein){
+		/* Hintergrund im OPM wieder restaurieren */
+		OPM_CopyOPMOPM(&bmouseoldbackopm,opmptr,0,0,mousegto->width,mousegto->height,mx,my);
+
+		/* OPM Hintergrund in Mauszeiger Hintergrund kopieren */
+		OPM_CopyOPMOPM(opmptr,&mouseoldbackopm[doublepage],mx,my,mousegto->width,mousegto->height,0,0);
+
+		/* Wurde Maus w„hrend Kopiervorgang bewegt */
+		if(smx!=SYSTEMVAR_mousex||smy!=SYSTEMVAR_mousey){
+			SYSTEM_MouseRestore();
+			SYSTEM_MouseDisplay();
+		}
+
+		/* Mauszeiger reaktivieren */
+		SYSTEMVAR_ShowMouse=TRUE;
+	}
+
+	/* Clear changed bit in OPM status flag set */
+	opmptr->status &= ~OPMSTAT_CHANGED;
+
+}
+
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_CopyOPMToScreen
+ * FUNCTION  : Copy one OPM into a screen (GUI: window).
+ *             Function checks if the OPMSTAT_CHANGED bit is set in the OPM status flag set.
+ *             If the copyflag is set, the OPMSTAT_CHANGED flag is not checked.
+ *             To copy a virtual OPM to the position you created it, pass (0|0) for offest.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    : struct SCREENPORT * scrnptr : Pointer to SCREENPORT.
+ *             struct OPM * opmptr : Pointer to OPM to b- copied into screen.
+ *             SISHORT x : x offset on screen.
+ *             SISHORT y : y offset on screen.
+ *             UNSHORT copyflag: Copy flag (see: BBDSA.H -> DSA_CopyMainOPMToScreen copyflag values).
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_CopyOPMToScreen( struct SCREENPORT * scrnptr, struct OPM * opmptr, SISHORT x, SISHORT y, UNSHORT copyflag )
+{
+	UNBYTE *odata;
+	SILONG onextypos,owidth,oheight;
+	SILONG cx0,cy0,cx1,cy1;
+	BOOLEAN mousein;
+	SISHORT ox,oy,mx,my,smx,smy;
+
+	/* Is SCREENPORT initialized ? */
+	if(!( scrnptr->screenstatus & SCREENPORTSTAT_INUSE ) ){
+		return;
+	}
+
+	/* OPM changed ? */
+	if (!( opmptr->status & OPMSTAT_CHANGED ) && ( copyflag == DSA_CMOPMTS_CHANGED ) ){
+		return;
+	}
+
+	odata=opmptr->data;
+	owidth=opmptr->width;
+	oheight=opmptr->height;
+
+	/* Bei virtuellem OPM ClipKoordinaaten von bergeordnetem OPM (normalerweise BaseOpm)*/
+	if(opmptr->status&OPMSTAT_VIRTUAL){
+		cx0=opmptr->virtualsrc->clip.left+opmptr->virtualsrc->virtualx;
+		cy0=opmptr->virtualsrc->clip.top+opmptr->virtualsrc->virtualy;
+		cx1=cx0+opmptr->virtualsrc->clip.width;
+		cy1=cy0+opmptr->virtualsrc->clip.height;
+//		onextypos=scrnptr->screenopmptr->nextypos; // virtuelles Opm nextypos vom Screen wird nicht ver„ndert
+		onextypos=opmptr->nextypos;
+		x+=opmptr->virtualx;
+		y+=opmptr->virtualy;
+		if(opmptr->xoffset<0){
+			x-=opmptr->xoffset;
+			owidth+=opmptr->xoffset;
+			if(owidth<1){
+				return;
+			}
+		}
+		if(opmptr->yoffset<0){
+			y-=opmptr->yoffset;
+			oheight+=opmptr->yoffset;
+			if(oheight<1){
+				return;
+			}
+		}
+	}
+	/* Bei BaseOPM ClipKoordinaaten von ScreenOPM */
+	else{
+		cx0=scrnptr->screenopmptr->clip.left;
+		cy0=scrnptr->screenopmptr->clip.top;
+		cx1=cx0+scrnptr->screenopmptr->clip.width;
+		cy1=cy0+scrnptr->screenopmptr->clip.height;
+		onextypos=opmptr->nextypos; // wird nur bei BASIS Opm verwendet das separat im Speicher liegt
+	}
+
+	ox=x;
+	oy=y;
+
+	/* Clipping links ? */
+	if(x<cx0){
+		if((cx0-x)>owidth){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			owidth-=(cx0-x);
+			odata+=(cx0-x);
+			x=cx0;
+		}
+	}
+	/* Clipping oben ? */
+	if(y<cy0){
+		if((cy0-y)>oheight){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			oheight-=(cy0-y);
+			odata+=((cy0-y)*opmptr->nextypos);
+			y=cy0;
+		}
+	}
+	/* Clipping rechts ? */
+	if((x+opmptr->width)>cx1){
+		if(x>cx1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			owidth-=(x+owidth-cx1);
+		}
+
+	}
+	/* Clipping unten ? */
+	if((y+opmptr->height)>cy1){
+		if(y>cy1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			oheight-=(y+oheight-cy1);
+		}
+	}
+
+	/* Wenn Breite oder H”he <1 dann Ende */
+	if(oheight<1||owidth<1)
+		return;
+
+	mousein=FALSE;
+	/* Mauszeiger aktiv ? */
+	if(SYSTEMVAR_ShowMouse&&!(SYSTEM_ActiveScreenPort->screentype&SCREENTYPE_DOUBLEBUFFER)){
+		SYSTEMVAR_ShowMouse=FALSE;
+		smx=mx=SYSTEMVAR_mousex;
+		smy=my=SYSTEMVAR_mousey;
+		if((mx+mousegto->width)>x&&mx<(x+owidth)&&(my+mousegto->height)>y&&my<(y+oheight)){
+			/* Maus im Opm */
+			mousein=TRUE;
+
+			/* neue Mausposition im OPM */
+			mx+=mousegto->xoffset;
+			my+=mousegto->yoffset;
+
+			/* Maushintergrund jetzt aus OPM kopieren */
+			OPM_CopyOPMOPM(opmptr,&bmousebackopm,mx-ox,my-oy,mousegto->width,mousegto->height,0,0);
+
+			/* Spezialroutine die Daten in ein 2 MAINOPM kopiert und in das erste ein GTO kopiert */
+			_SYS_ASS_MouseBob((UNBYTE *)bmousebackopm.data,(UNBYTE *)bmouseoldbackopm.data,(struct GTO *)&mousegto->bodychunk[4],mousegto->transcol,mousebacksize);
+
+			/* Maushintergrund + GTO in OPM kopieren */
+			OPM_CopyOPMOPM(&bmousebackopm,opmptr,0,0,mousegto->width,mousegto->height,mx-ox,my-oy);
+
+		}
+		else{
+			/* nicht im Bereich Maus wieder an */
+			SYSTEMVAR_ShowMouse=TRUE;
+
+		}
+
+	}
+
+	/* copy opm to VesaScreen */
+	switch(special){
+ 		case VESAMD: // Vesamodus aktiv
+			_DSA_ASS_CopyOPMToScreen(odata,videoram[doublepage],onextypos,x,y+videoscreenypos[doublepage],owidth,oheight);
+			break;
+		case ONESEG: // 1 Segment Modus aktiv
+			_DSA_ASS_CopyOPMToScreenONE(odata,videoram[doublepage],onextypos,x,y,owidth,oheight);
+			break;
+		case CHAIN4: // Chain4 Modus aktiv
+			_DSA_ASS_CopyOPMToScreenCHN(odata,videoram[doublepage],onextypos,x,y,owidth,oheight);
+			break;
+	}
+
+	/* Mauszeiger aktiv ? */
+	if(mousein){
+		/* Hintergrund im OPM wieder restaurieren */
+		OPM_CopyOPMOPM(&bmouseoldbackopm,opmptr,0,0,mousegto->width,mousegto->height,mx-ox,my-oy);
+
+		/* OPM Hintergrund in Mauszeiger Hintergrund kopieren */
+		OPM_CopyOPMOPM(opmptr,&mouseoldbackopm[doublepage],mx-ox,my-oy,mousegto->width,mousegto->height,0,0);
+
+		/* Wurde Maus w„hrend Kopiervorgang bewegt */
+		if(smx!=SYSTEMVAR_mousex||smy!=SYSTEMVAR_mousey){
+			SYSTEM_MouseRestore();
+			SYSTEM_MouseDisplay();
+		}
+
+		/* Mauszeiger reaktivieren */
+		SYSTEMVAR_ShowMouse=TRUE;
+	}
+
+	/* Clear changed bit in OPM status flag set */
+	opmptr->status &= ~OPMSTAT_CHANGED;
+
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_CopyScreenToOPM
+ * FUNCTION  : Copy screen to opm (GUI: window).
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 25.05.94 14:00
+ * LAST      :
+ * INPUTS    : struct OPM * opmptr : Zeiger auf OPM Struktur wird ausgefllt.
+ *			 			 struct SCREENPORT * scrnptr : Pointer to SCREENPORT.
+ *             SISHORT x : x offset on screen.
+ *             SISHORT y : y offset on screen.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_CopyScreenToOPM( struct OPM * opmptr, struct SCREENPORT * scrnptr, SISHORT x, SISHORT y)
+{
+	UNBYTE *odata;
+	SILONG onextypos,owidth,oheight;
+	SILONG cx0,cy0,cx1,cy1;
+
+	/* Is SCREENPORT initialized ? */
+	if( ! ( scrnptr->screenstatus & SCREENPORTSTAT_INUSE ) )
+		return;
+
+	/* Set changed bit in OPM status flag set */
+	opmptr->status |= OPMSTAT_CHANGED;
+
+	odata=opmptr->data;
+	owidth=opmptr->width;
+	oheight=opmptr->height;
+
+	/* Bei virtuellem OPM ClipKoordinaaten von bergeordnetem OPM (normalerweise BaseOpm)*/
+	if(opmptr->status&OPMSTAT_VIRTUAL){
+		cx0=opmptr->virtualsrc->clip.left+opmptr->virtualsrc->virtualx;
+		cy0=opmptr->virtualsrc->clip.top+opmptr->virtualsrc->virtualy;
+		cx1=cx0+opmptr->virtualsrc->clip.width;
+		cy1=cy0+opmptr->virtualsrc->clip.height;
+//		onextypos=scrnptr->screenopmptr->nextypos; // virtuelles Opm nextypos vom Screen wird nicht ver„ndert
+		onextypos=opmptr->nextypos;
+		x+=opmptr->virtualx;
+		y+=opmptr->virtualy;
+		if(opmptr->xoffset<0||opmptr->yoffset<0){
+			odata+=opmptr->xoffset+(opmptr->yoffset*opmptr->nextypos);
+			owidth-=opmptr->xoffset;
+			if(owidth<1){
+				return;
+			}
+			oheight-=opmptr->yoffset;
+			if(oheight<1){
+				return;
+			}
+		}
+	}
+	/* Bei BaseOPM ClipKoordinaaten von ScreenOPM */
+	else{
+		cx0=scrnptr->screenopmptr->clip.left;
+		cy0=scrnptr->screenopmptr->clip.top;
+		cx1=cx0+scrnptr->screenopmptr->clip.width;
+		cy1=cy0+scrnptr->screenopmptr->clip.height;
+		onextypos=opmptr->nextypos; // wird nur bei BASIS Opm verwendet das separat im Speicher liegt
+	}
+
+	/* Clipping links ? */
+	if(x<cx0){
+		if((cx0-x)>owidth){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			owidth-=(cx0-x);
+			odata+=(cx0-x);
+			x=cx0;
+		}
+	}
+	/* Clipping oben ? */
+	if(y<cy0){
+		if((cy0-y)>oheight){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			oheight-=(cy0-y);
+			odata+=((cy0-y)*opmptr->nextypos);
+			y=cy0;
+		}
+	}
+	/* Clipping rechts ? */
+	if((x+opmptr->width)>cx1){
+		if(x>cx1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			owidth-=(x+owidth-cx1);
+		}
+
+	}
+	/* Clipping unten ? */
+	if((y+opmptr->height)>cy1){
+		if(y>cy1){
+			/* ganz ausserhalb */
+			return;
+		}
+		else{
+			oheight-=(y+oheight-cy1);
+		}
+	}
+
+	/* Wenn Breite oder H”he <1 dann Ende */
+	if(oheight<1||owidth<1)
+		return;
+
+	/* copy Screen to OPM */
+	switch(special){
+ 		case VESAMD: // Vesamodus aktiv
+			_DSA_ASS_CopyScreenToOPM(videoram[doublepage],odata,onextypos,x,y+videoscreenypos[doublepage],owidth,oheight);
+			break;
+		case ONESEG: // 1 Segment Modus aktiv
+			_DSA_ASS_CopyScreenToOPMONE(videoram[doublepage],odata,onextypos,x,y,owidth,oheight);
+			break;
+		case CHAIN4: // Chain4 Modus aktiv
+			_DSA_ASS_CopyScreenToOPMCHN(videoram[doublepage],odata,onextypos,x,y,owidth,oheight);
+			break;
+	}
+
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_SetPal
+ * FUNCTION  : Copy a part of a given palette into the screen palette.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 28.05.94 - 16:10
+ * LAST      :
+ * INPUTS    : struct SCREENPORT * scrnptr : Pointer to SCREENPORT.
+ *             struct BBPALETTE * srcpalprt : Pointer to source palette.
+ *             UNSHORT scrstartcolor : First color in source palette.
+ *             UNSHORT colorstocopy : Colors to copy from source palette into SCREENPORTs palette.
+ *             UNSHORT deststartcolor : First color in SCREENPORTs palette.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_SetPal( struct SCREENPORT * scrnptr, struct BBPALETTE * srcpalptr, UNSHORT srcstartcolor, UNSHORT colorstocopy, UNSHORT deststartcolor )
+{
+	/* Local variables */
+
+	struct BBPALETTE * destpalptr;
+	struct BBCOLOR * destcolptr;
+	struct BBCOLOR * srccolptr;
+	UNSHORT i;
+
+	/* Get pointer to palette */
+	destpalptr = scrnptr->screenpalptr;
+
+	/* Could I set the color in the palette ? */
+	if ( srcstartcolor >= destpalptr->entries ){
+		/* No the color id is out of range */
+		return;
+	}
+
+	/* Get pointer to color in SCREENPORTS palette */
+	destcolptr = &destpalptr->color[ deststartcolor ];
+
+	/* Get pointer to color in source palette */
+	srccolptr = &srcpalptr->color[ srcstartcolor ];
+
+	/* Copy colors */
+
+	for ( i=0; i<colorstocopy; i++ ){
+		/* Destination palette overflow ? */
+		if ( deststartcolor + i >= destpalptr->entries ){
+			/* Yes: return */
+			return;
+		}
+		/* Copy color */
+		destcolptr->red		= srccolptr->red;
+		destcolptr->green	= srccolptr->green;
+		destcolptr->blue	= srccolptr->blue;
+		destcolptr->alpha	= srccolptr->alpha;
+		/* Inc destination color pointer */
+		destcolptr++;
+		/* Inc source color pointer */
+		srccolptr++;
+	}
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_ActivatePal
+ * FUNCTION  : Activate the pal of the given screenport.
+ *             VESA: Copy SCREENPORTs pal into hardware registers.
+ *             GUI: Tell system palettte to display.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 28.05.94 - 16:10
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_ActivatePal( struct SCREENPORT * scrnptr )
+{
+	_DSA_ASS_ActivatePal(&scrnptr->screenpalptr->color[0].red,(UNLONG)scrnptr->screenpalptr->entries);
+}
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_SetColor
+ * FUNCTION  : Set one color in SCREENPORTs palette.
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     : 28.05.94 - 16:10
+ * LAST      :
+ * INPUTS    : struct SCREENPORT * scrnptr : Pointer to SCREENPORT.
+ *             UNSHORT colorid : Entry in SCREENPORTs palette to be modified.
+ *             UNBYTE red   : Red value of color.
+ *             UNBYTE green : Green value of color.
+ *             UNBYTE blue  : Blue value of color.
+ *             UNBYTE alpha : Alpha value of color.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DSA_SetColor( struct SCREENPORT * scrnptr, UNSHORT colorid, UNBYTE red, UNBYTE green, UNBYTE blue, UNBYTE alpha )
+{
+	/* Local variables */
+
+	struct BBPALETTE * paletteptr;
+	struct BBCOLOR * colorptr;
+
+	/* Get pointer to palette */
+
+	paletteptr = scrnptr->screenpalptr;
+
+	/* Could I set tthe color in the palette ? */
+
+	if ( colorid >= paletteptr->entries ){
+		/* No the color id is out of range */
+		return;
+	}
+
+	/* Get pointer to color entry in palette */
+
+	colorptr = &paletteptr->color[ colorid ];
+
+	/* Set entry */
+
+	colorptr->red 		= red;
+	colorptr->green		= green;
+	colorptr->blue		= blue;
+	colorptr->alpha		= alpha;
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_PrintError
+ * FUNCTION  : Print error function for DSA library
+ * FILE      : BBDSA.C
+ * AUTHOR    : VIPER
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BBDSA_ERRORHANDLING
+
+	void
+	DSA_PrintError( UNCHAR * buffer, UNBYTE * data )
+	{
+		/* Local vars */
+		struct BBDSA_ErrorStruct * DSAErrorStructPtr=( struct BBDSA_ErrorStruct * ) data;
+
+		/* sprintf error message into string buffer */
+		sprintf( ( char * ) buffer, "ERROR!: %s  %ld, %ld", ( char * ) DSAErrorStructPtr->errorname, DSAErrorStructPtr->errordata, DSAErrorStructPtr->errordata2 );
+	}
+
+#endif
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      :
+ * FUNCTION  :
+ * FILE      : BBDSA.C
+ * AUTHOR    : viper
+ * FIRST     :
+ * LAST      :
+ * INPUTS    :
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+/* #FUNCTION END# */
+
+
+
+
+
+
+
+
+
+
+
+#if FALSE
+//			if(!opmptr->status&OPMSTAT_VIRTUAL) // bei virtuellem OPM nicht notwendig
+//				onextypos-=(cx0-x);
+
+//			if(!opmptr->status&OPMSTAT_VIRTUAL) // bei virtuellem OPM nicht notwendig
+//				onextypos-=(cx0-x);
+
+//			if(!opmptr->status&OPMSTAT_VIRTUAL) // bei virtuellem OPM nicht notwendig
+//				onextypos-=(x+owidth-cx1);
+
+//			if(!opmptr->status&OPMSTAT_VIRTUAL) // bei virtuellem OPM nicht notwendig
+//				onextypos-=(x+owidth-cx1);
+
+/* Vesa Information ausgeben */
+	printf("Attributes   : %d \n", vesamodeinfo->Attributes);
+	printf("WinAAtt      : %d \n", vesamodeinfo->WinAAtt);
+	printf("WinBAtt      : %d \n", vesamodeinfo->WinBAtt);
+	printf("WinGran      : %d \n", vesamodeinfo->WinGran);
+	printf("WinSize      : %d \n", vesamodeinfo->WinSize);
+	printf("WinAStartSeg : %x \n", vesamodeinfo->WinAStartSeg);
+	printf("WinBStartSeg : %x \n", vesamodeinfo->WinBStartSeg);
+	printf("ScanLineBytes: %d \n", vesamodeinfo->BytePerScanLine);
+	printf("WidthInPixel : %d \n", vesamodeinfo->PixelWidth);
+	printf("HeightInPixel: %d \n", vesamodeinfo->PixelHeight);
+	printf("NumOfPlanes  : %d \n", vesamodeinfo->NumOfPlanes);
+	printf("BitsPerPixel : %d \n", vesamodeinfo->BitsPerPixel);
+	printf("NumOfBanks   : %d \n", vesamodeinfo->NumOfBanks);
+	printf("MemoryModel  : %d \n", vesamodeinfo->MemoryModel);
+	printf("SizeOfBank   : %d \n", vesamodeinfo->SizeOfBank);
+
+
+
+//		segm=*(((UNSHORT *)&vesamodeinfo->WinPosFunc)+1); // direktes anspringem
+//		offs=*(((UNSHORT *)&vesamodeinfo->WinPosFunc));
+//		selectjump=((UNLONG)segm*16)+offs;
+
+#endif
+

@@ -1,0 +1,15 @@
+.ERASE
+
+Library		= ..\LIB\PCBASE.lib
+
+$(Library):	..\LIB\bbbasmem.obj &
+		..\LIB\bbdos.obj &
+ 		..\LIB\bberror.obj &
+ 		..\LIB\bbevent.obj &
+ 	..\LIB\bbopm.obj &
+		..\LIB\bbdsa.obj &
+		..\LIB\bbsystem.obj
+
+	*wlib -b -n $(Library) +..\LIB\bbbasmem.obj +..\LIB\bbdos.obj +..\LIB\bberror.obj +..\LIB\bbevent.obj +..\LIB\bbopm.obj +..\LIB\bbdsa.obj +..\LIB\bbsystem.obj
+
+

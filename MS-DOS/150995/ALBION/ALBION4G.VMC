@@ -1,0 +1,6 @@
+! DOS/4GW VMM parameters for Albion
+minmem = 512
+maxmem = 4096
+virtualsize = 16384
+!deleteswap
+swapname = ALBION4G.SWP

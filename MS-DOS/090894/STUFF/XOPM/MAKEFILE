@@ -1,0 +1,19 @@
+.ERASE
+
+Sdir = C:\WORK\MODULES\XOPM
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir2)\BBBASMEM.H &
+	$(Ldir2)\BBOPM.H &
+	$(Ldir)\XOPM.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\XOPM.OBJ : $(Sdir)\XOPM.C $(Header_files)
+	$(Compiler) XOPM.C -fo$(Ldir)\XOPM.OBJ
+

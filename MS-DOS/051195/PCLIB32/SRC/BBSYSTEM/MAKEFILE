@@ -1,0 +1,16 @@
+!include ..\OPTIONS
+
+# Compilieren
+.c.obj:
+  	$(compiler) $[* /fo=$^* $(Compiler_Options_int)
+
+# linken
+..\..\LIB\bbsystem.obj:	OBJS\bbsystem.obj OBJS\keyintrn.obj OBJS\stdmousp.obj OBJS\sys_ass.obj
+	*wlib -b -n ..\..\lib\bbsystem.obj +OBJS\bbsystem.obj +OBJS\keyintrn.obj +OBJS\stdmousp.obj +OBJS\sys_ass.obj
+
+# compilieren
+OBJS\bbsystem.obj: bbsystem.c $(OPTION) .AUTODEPEND
+OBJS\keyintrn.obj: keyintrn.c $(OPTION) .AUTODEPEND
+OBJS\stdmousp.obj: stdmousp.c $(OPTION) .AUTODEPEND
+OBJS\sys_ass.obj: sys_ass.asm $(OPTIONASM) .AUTODEPEND
+

@@ -1,0 +1,3 @@
+Wenn man im Inventory-Bildschirm mehrere Gegenstände (in ein Slot) fallen lässt.
+Das Programm stürzt kreischend ab.
+In die Funktion Drop_items() wird die Unterfunktion Switch_screens() aufgerufen. Der Debugger hat gezeigt das während der Ausführung dieser Funktion die Inhalt des Stacks geändert wird, und zwar beim auslesen der Mauskoordinaten. Das Rätselhafte ist, das dieses unabhängig davon scheint zu sein *wie* diese Mauskoordinaten ausgelesen werden (Funktion SYSTEM_GetMousePtr() oder direkt aus Mouse_X und Mouse_Y). Dieses suggeriert das der lokale Variabele in den die Koordinate gespeichert werden irgendwie faul ist.

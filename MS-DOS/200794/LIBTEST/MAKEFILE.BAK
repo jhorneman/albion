@@ -1,0 +1,25 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Ldir2 = C:\PCLIB32\LIB
+Sdir = C:\WORK\LIBTEST
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /ox
+
+## Header_files =
+
+.BEFORE
+	cd $(Sdir)
+
+
+$(Sdir)\LIBTEST.EXE : $(Sdir)\LIBTEST.OBJ $(Sdir)\MAIN.OBJ C:\PCLIB32\LBM\LBM.OBJ
+	$(Linker) FILE {LIBTEST.OBJ MAIN.OBJ $(Ldir2)\PCLIB32.LIB C:\PCLIB32\LBM\LBM.OBJ} NAME LIBTEST.EXE
+
+$(Sdir)\LIBTEST.OBJ : $(Sdir)\LIBTEST.C
+	$(Compiler) LIBTEST.C
+
+$(Sdir)\MAIN.OBJ : $(Sdir)\MAIN.C
+	$(Compiler) MAIN.C
+

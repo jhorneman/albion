@@ -1,0 +1,1035 @@
+/************
+ * NAME     : BBTGA.c
+ * AUTOR    : R.Reber, BlueByte
+ * START    : 20.07.94
+ * PROJECT  : Poject32
+ * NOTES    :
+ * SEE ALSO :
+ * VERSION  : 1.0
+ ************/
+
+/* Includes */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <PCLIBHI.h>
+#include "include\lbmintrn.h"
+
+/* Error handling */
+#ifdef BBLBM_ERRORHANDLING
+
+	/* Name of Library */
+	char BBLBM_LibraryName[] = "BBLBM Library";
+
+	/* Hier werden alle Filenamen von BBDOS_OPEN eingetragen die offen sind */
+	char BBLBM_errorfilenames[ BBLBM_MAXERRORFILES ][128];
+
+	char BBLBM_errornofile[]=" ";
+
+	/* ZÑhler fÅr Momentanes File */
+	UNLONG BBLBM_errorfilecount=0;
+
+#endif
+
+/* typedefs */
+
+typedef struct {unsigned short Red, Green, Blue, Filter;} IMAGE_COLOUR;
+
+/* globale Variablen */
+
+static UNCHAR idbuf[256];
+
+#ifdef BBLBM_ERRORHANDLING
+	static UNBYTE *globaltgafilename;
+#endif
+static SISHORT tgafilehandle;
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : convert_targa_color
+ * FUNCTION  : intern
+ * FILE      : BBTGA.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN convert_targa_color(IMAGE_COLOUR *tcolor,int pixelsize,unsigned char *bytes)
+{
+  switch (pixelsize)
+  {
+  case 1:
+    tcolor->Red   = bytes[0];
+    tcolor->Green = bytes[0];
+    tcolor->Blue  = bytes[0];
+    tcolor->Filter = 0;
+    break;
+  case 2:
+    tcolor->Red   = ((bytes[1] & 0x7c) << 1);
+    tcolor->Green = (((bytes[1] & 0x03) << 3) |
+      ((bytes[0] & 0xe0) >> 5)) << 3;
+    tcolor->Blue  = (bytes[0] & 0x1f) << 3;
+    tcolor->Filter = (bytes[1] & 0x80 ? 255 : 0);
+    break;
+  case 3:
+    tcolor->Red   = bytes[2];
+    tcolor->Green = bytes[1];
+    tcolor->Blue  = bytes[0];
+    tcolor->Filter = 0;
+    break;
+  case 4:
+    tcolor->Red   = bytes[2];
+    tcolor->Green = bytes[1];
+    tcolor->Blue  = bytes[0];
+    tcolor->Filter = bytes[3];
+    break;
+  default:
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: Bad Pixel Size in Targa Color";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = pixelsize;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+	return(TRUE);
+}
+
+/* #FUNCTION END# */
+
+
+
+/*****************************************************************************\
+*  void read_tga_picture(char *file_name,int *tga_width,int *tga_height,char **body)
+*
+*  liest TGA-File mit 16,24,32-Bit komprimiert u. unkomprimiert
+*  und schreibt die Daten nach *body, wofÅr Speicher alloziert wird
+\*****************************************************************************/
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_DisplayTGA
+ * FUNCTION  :
+ * FILE      : BBLBM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : UNBYTE * tganame: name of TGA
+ *             struct OPM * opmptr: pointer to OPM to display LBM in.
+ *						 flag = How to Use Given OPM (look in BBLBM.H)
+ * RESULT    : TRUE = OK ,FALSE = Error
+ * BUGS      :
+ * NOTES     : A buffer for the LBM is allocated temporary.
+ *			LBMSTAT_USEOPM		0L				in Åbergebenes OPM direkt einschreiben
+ * 			LBMSTAT_MAKENEWOPM	( 1L << 0L )	OPM von der Grîsse des Bildes anlegen
+ *			LBMSTAT_WRITESIZEOPM	( 1L << 1L )	Die Breite und Hîhe direkt in OPM schreiben
+ *																				 vorhandenen OPMSpeicherPtr Åbernehmen
+ *																				OPM muss mit OPM_New initialisiert sein
+ *			LBMSTAT_GETFROMMEM ( 1L << 16L )  Statt eines Zeigers auf einen Namen
+ *																			 wird ein Zeiger auf einen Speicherbereich
+ *																				 Åbergeben und daraus gelesen
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN LBM_DisplayTGA( UNBYTE * tganame, struct OPM * opmptr, UNLONG flag)
+{
+	SILONG ftype, idlen, cmlen, cmsiz, psize, orien, compression_flag;
+	SILONG width, height;
+	SILONG row,column,ypos,yposadd;
+	SILONG rle,i;
+	UNBYTE readbyte;
+	UNBYTE bytes[4],tgaheader[18];
+	BOOLEAN fill_mode;
+	IMAGE_COLOUR pixel;
+
+	#ifdef BBLBM_ERRORHANDLING
+		globaltgafilename=tganame;
+	#endif
+
+/* TGA File îffnen */
+	if((tgafilehandle=DOS_Open( tganame, BBDOSFILESTAT_READ))==-1){
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: Cannot open Targa File";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+/* Header einlesen */
+	if(DOS_Read( tgafilehandle,tgaheader,18)!=18){
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: Cannot read Targa File Header (18 Bytes) ";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = 18;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+  /* Decipher the header information */
+  idlen  = tgaheader[ 0];		     // LÑnge des Kommentars
+  ftype  = tgaheader[ 2];		     // wenn !=1 Dann RGB
+  cmlen  = tgaheader[ 5] + (tgaheader[ 6] << 8);
+  cmsiz  = tgaheader[ 7] / 8;
+  width  = tgaheader[12] + (tgaheader[13] << 8);
+  height = tgaheader[14] + (tgaheader[15] << 8);
+  psize  = tgaheader[16] / 8; 	 // Anzahl der Bits bez. hier Bytes pro Pixel 16,24,32
+  orien  = tgaheader[17] & 0x20; /* Right side up ? */
+
+  /* Determine if this is a supported Targa type */
+  if (ftype == 9 || ftype == 10)
+    compression_flag = TRUE;
+  else if (ftype == 1 || ftype == 2 || ftype == 3)
+    compression_flag = FALSE;
+	else
+  {
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: unsupported Targa Type";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = ftype;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+  }
+  if (cmlen > 0)
+  {
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: unsupported Targa Type (Index Color Format)";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = ftype;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+  }
+
+	/* Skip over the picture ID information */
+  if (idlen > 0 && DOS_Read(tgafilehandle,idbuf, idlen) != idlen){
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: error reading identification field";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = idlen;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+	/* OPM entsprechend der Grîsse des LBM's erstellen */
+	if(flag&LBMSTAT_MAKENEWOPM){
+		/* Create OPM */
+		if ( !OPM_New( width, height, 2, opmptr, NULL ) ){
+			return(FALSE);
+		}
+	}
+	/* Grîsse des Bildes in OPM eintragen (fÅr Speicherptr hochzÑhlen) */
+	else if(flag&LBMSTAT_WRITESIZEOPM){
+		opmptr->width = width;
+		opmptr->height  = height;
+		opmptr->nextypos = opmptr->width;
+		opmptr->datasize= opmptr->width*opmptr->height*opmptr->depth;
+		opmptr->clipwidth=opmptr->width;
+		opmptr->clipheight=opmptr->height;
+	}
+
+	/* Orientierung */
+	if(orien==0)
+	{
+		ypos=height-1;
+		yposadd=-1;
+	}
+	else
+	{
+		ypos=0;
+		yposadd=1;
+	}
+
+	row=0; 		/* row counter */
+  column=0; /* column counter */
+
+	while (row < height)
+	{
+
+		if( compression_flag == TRUE )
+		{
+
+			if(DOS_Read(tgafilehandle,&readbyte,1)!=1){
+				#ifdef BBLBM_ERRORHANDLING
+				{
+					/* Local vars */
+					struct BBLBM_ErrorStruct error;
+
+					/* Fill out error structure */
+					error.errorname = "LBM_DisplayTGA: compression_flag Premature EOF in Image file";
+					strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+					error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+					if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+						BBLBM_errorfilecount=0;
+					error.errordata = 0;
+					error.erroros	= tgafilehandle;
+
+					/* Push error on stack */
+					ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+				}
+				#endif
+				return(FALSE);
+			}
+			rle=(SILONG)readbyte;
+
+			if(rle&0x80)
+				fill_mode=TRUE;
+			else
+				fill_mode=FALSE;
+
+			rle&=0x7f;
+		}
+		else
+		{
+			/* Daten unkomprimiert */
+			rle=width*height;
+			fill_mode=FALSE;
+		}
+
+		for(i=0;i<rle;i++)
+    {
+			/* je nach Mode nur beim ersten Mal FÅllwert laden, oder immer */
+			if(fill_mode==FALSE || i==0)
+			{
+				if(DOS_Read(tgafilehandle,&bytes[0],psize)!=psize){
+					#ifdef BBLBM_ERRORHANDLING
+					{
+						/* Local vars */
+						struct BBLBM_ErrorStruct error;
+
+						/* Fill out error structure */
+						error.errorname = "LBM_DisplayTGA: imagedata Premature EOF in Image file";
+						strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+						error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+						if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+							BBLBM_errorfilecount=0;
+						error.errordata = psize;
+						error.erroros	= tgafilehandle;
+
+						/* Push error on stack */
+						ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+					}
+					#endif
+					return(FALSE);
+				}
+
+				/* Pixel je nach Anzahl Bytes pro Pixel konvertieren */
+				convert_targa_color(&pixel,psize,&bytes[0]);
+			}
+
+			/* Pixel ins OPM kopieren */
+			OPM_SetPixel(opmptr,column,ypos,HCOL(pixel.Red,pixel.Green,pixel.Blue));
+
+			column++;
+			if(column==width)
+	    {
+	      row++;
+				ypos+=yposadd;
+	      column=0;
+	    }
+    }
+	} /* End while */
+
+	/* File schlie·en */
+	if(!DOS_Close(tgafilehandle)){
+		#ifdef BBLBM_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBLBM_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "LBM_DisplayTGA: Error unknown FileHandle";
+			strcpy(&BBLBM_errorfilenames[BBLBM_errorfilecount][0],globaltgafilename);
+			error.errorfile=&BBLBM_errorfilenames[BBLBM_errorfilecount++][0];
+			if(BBLBM_errorfilecount>BBLBM_MAXERRORFILES)
+				BBLBM_errorfilecount=0;
+			error.errordata = 0;
+			error.erroros	= tgafilehandle;
+
+			/* Push error on stack */
+			ERROR_PushError( &LBM_PrintError, ( UNCHAR * ) &BBLBM_LibraryName[0], sizeof( struct BBLBM_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+}
+
+/* #FUNCTION BEGIN# */
+
+
+
+
+
+
+
+#if FALSE
+/*****************************************************************************\
+*  void write_tga_picture(char *file_name,int width,int height,char *body)
+*
+*  schreibt TGA-File mit 24-Bit unkomprimiert
+\*****************************************************************************/
+void write_tga_picture(char *file_name,int width,int height,char *body)
+{
+int i;
+FILE *handle;
+unsigned char tgaheader[18];
+
+	/* Cipher the header information */
+  for (i = 0; i < 12; i++)	/* 00, 00, 02, then 9 00's... */
+		tgaheader[i]=0;
+
+  /*ftype  =*/ tgaheader[ 2]=2;		     // wenn !=1 Dann RGB
+  /*width  =*/ tgaheader[12]=width&0xff;
+							 tgaheader[13]=width>>8;
+  /*height =*/ tgaheader[14]=height&0xff;
+							 tgaheader[15]=height>>8;
+  /*psize  =*/ tgaheader[16]=24;	 	 	// Anzahl der Bits bez. hier Bytes pro Pixel 16,24,32
+  /*orien  =*/ tgaheader[17]=0x20; 	 	/* Right side up ? */
+
+
+	/* Start by trying to open the file */
+  if ((handle = fopen(file_name,"wb")) == NULL)
+  {
+    sprintf(msg_string, "Cannot open Targa file %s\n", file_name);
+		fatal_error(msg_string);
+	}
+  if (fwrite(tgaheader, 18, 1, handle) != 1)
+  {
+    sprintf(msg_string,"Error writing header of Targa image: %s\n", file_name);
+		fatal_error(msg_string);
+  }
+
+  if (fwrite(body, width*height, 3, handle) != 3)
+  {
+    sprintf(msg_string,"Error writing data of Targa image: %s\n", file_name);
+		fatal_error(msg_string);
+  }
+
+	fclose(handle);
+}
+
+#endif
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_PrintError
+ * FUNCTION  : Print error function for DOS library
+ * FILE      : BBLBM.C
+ * AUTHOR    : R.Reber
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BBLBM_ERRORHANDLING
+
+	void
+	LBM_PrintError( UNCHAR * buffer, UNBYTE * data )
+	{
+		/* Local vars */
+		struct BBLBM_ErrorStruct * LBMErrorStructPtr=( struct BBLBM_ErrorStruct * ) data;
+
+		/* sprintf error message into string buffer */
+		sprintf( ( char * ) buffer, " %s - FILENAME: %s - DATA: %ld - FILEHANDLE: %d", ( char * ) LBMErrorStructPtr->errorname, ( char * ) LBMErrorStructPtr->errorfile, LBMErrorStructPtr->errordata, LBMErrorStructPtr->erroros );
+	}
+
+#endif
+
+/* #FUNCTION END# */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#if FALSE
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_FindChunk
+ * FUNCTION  : Search a chunk in LBM file memory.
+ * FILE      : BBTGA.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : struct LBM * lbmptr: pointer to LBM structure.
+ *             UNCHAR chunk[4]: chunk to look for.
+ * RESULT    : UNBYTE * : pointer to chunk or NULL if chunk not found.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE *
+LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
+{
+	/* locals */
+
+	UNBYTE * wptr;
+	SILONG wsize;
+	UNLONG os;
+	UNSHORT i, count;
+
+
+	/* set work pointer */
+
+	wptr = lbmptr->lbmptr;
+
+	/* get size of lbm */
+
+	wsize = lbmptr->lbmsize;
+
+
+	/* search chunk */
+
+	for ( os=0 ; os<wsize ; os++ )
+	{
+
+		count = 0;
+
+		for ( i=0 ; i<4 ; i++ )
+			if ( ( *( wptr + os +i ) ) == chunk[i] )
+				count++;
+
+		if ( count == 4 )
+			return( lbmptr->lbmptr + os );
+	}
+
+
+	/* chunk not found */
+
+	return ( NULL );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_GetPal
+ * FUNCTION  : Copy pal of LBM into BB palette.
+ * FILE      : BBTGA.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : struct LBM * lbmptr: pointer to LBM structure.
+ *             struct BBPALETTE * palptr: pointer to BBPALETTE structure.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+LBM_GetPal( struct LBM * lbmptr, struct BBPALETTE * palptr )
+{
+	/* locals */
+	UNBYTE * lbmpalptr;
+	struct BBCOLOR * destcolorptr;
+	UNSHORT i;
+#ifdef WORDPIXEL
+	UNSHORT red,green,blue;
+#endif
+
+	/* get pointer to CMAP chunk */
+	lbmpalptr = lbmptr->cmapptr + 8L;
+
+#ifdef BYTEPIXEL
+	/* get pointer to BBPALETTE color 0 */
+	destcolorptr = &palptr->color[0];
+
+	/* set all colors */
+	for ( i=0; i<256; i++ ){
+		/* copy one color */
+		destcolorptr->red	= ( *lbmpalptr++ );
+		destcolorptr->green	= ( *lbmpalptr++ );
+		destcolorptr->blue	= ( *lbmpalptr++ );
+
+		/* inc dest color pointer */
+		destcolorptr++;
+	}
+
+	/* EintrÑge setzen */
+	palptr->entries=256;
+#endif
+
+#ifdef WORDPIXEL
+	/* set all colors */
+	for ( i=0; i<256; i++ ){
+		/* copy one color */
+		red	= (UNSHORT)( *lbmpalptr++ );
+		green	= (UNSHORT)( *lbmpalptr++ );
+		blue	= (UNSHORT)( *lbmpalptr++ );
+
+		/* true to hicolor */
+		hicolors[i]=HCOL(red,green,blue);
+	}
+#endif
+}
+
+/* #FUNCTION END# */
+
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_DisplayLBMinOPM
+ * FUNCTION  : Display a LBM into an OPM.
+ * FILE      : BBTGA.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : struct LBM * lbmptr: pointer to LBM structure.
+ *             struct OPM * opmptr: pointer to OPM structure.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BYTEPIXEL
+#define LBM_COLORDEF color
+#endif
+
+#ifdef WORDPIXEL
+#define LBM_COLORDEF hicolors[color]
+#endif
+
+void
+LBM_DisplayLBMinOPM( struct LBM * lbmptr, struct OPM * opmptr )
+{
+	/* locals */
+
+	UNSHORT	x, y, i, j;
+  UNBYTE 	color;
+  UNBYTE	cbyte;
+
+	UNBYTE * wbodyptr;
+
+	UNSHORT	iffhoehe, iffbreite, iffpacked;
+
+	UNBYTE * bmhdptr;
+
+	/* get pointer to BMHD chunk */
+
+ 	bmhdptr = lbmptr->bmhdptr;
+
+	/* get LBM parameter */
+
+	iffbreite = abs( ( ( ( UNSHORT ) *( bmhdptr +  8 ) ) << 8 ) + * ( bmhdptr +  9 ) );
+	iffhoehe  = abs( ( ( ( UNSHORT ) *( bmhdptr + 10 ) ) << 8 ) + * ( bmhdptr + 11 ) );
+	iffpacked = *( bmhdptr + 18 );
+
+	/* set work body */
+
+	wbodyptr = lbmptr->bodyptr + 8L;
+
+
+	/* display lbm file */
+
+	if ( iffpacked == 0 )
+	{
+		/* non packed lbm file */
+
+		for( y = 0 ; y < iffhoehe ; y++ )
+		{
+			for( x = 0 ; x < iffbreite ; x++ )
+			{
+				color = *wbodyptr++;
+
+				OPM_SetPixel( opmptr, x, y, LBM_COLORDEF );
+			}
+		}
+	}
+	else
+	{
+		/* packed lbm */
+
+		/* init out pos */
+
+		x = 0;
+		y = 0;
+
+		/* depack it */
+
+		do
+		{
+			/* get todo byte */
+
+			cbyte = *wbodyptr++;
+
+
+			/* work on byte */
+
+			if( cbyte < 0x80 )
+			{
+				/* copy bytes */
+
+				/* number of bytes to copy */
+
+				cbyte++;
+				j = cbyte;
+
+				/* copy it */
+
+				for ( i=0; i<j; i++ )
+				{
+					color = *wbodyptr++;
+					OPM_SetPixel( opmptr, x, y, LBM_COLORDEF );
+					x++;
+				}
+
+			}
+			else if ( cbyte > 0x80 )
+			{
+				/* fill with one byte */
+
+				/* number of bytes to fill up */
+
+				cbyte = ~cbyte + 2;
+				j = cbyte;
+
+				/* get byte to fill with */
+
+				color = *wbodyptr++;
+
+				/* fill it */
+
+				for ( i=0; i<j; i++ )
+				{
+					OPM_SetPixel( opmptr, x, y, LBM_COLORDEF );
+					x++;
+				}
+			}
+
+
+			/* line done ? */
+
+			if ( x == iffbreite )
+			{
+				/* yes: start next line */
+
+				x = 0;
+				y++;
+			}
+
+		}
+		while ( y < iffhoehe );
+	}
+}
+
+/* #FUNCTION END# */
+
+
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_DisplayLBM
+ * FUNCTION  : Loads and displays a LBM.
+ * FILE      : BBTGA.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : UNBYTE * lbmname: name of lbm.
+ *             struct OPM * opmptr: pointer to OPM to display LBM in.
+ *             struct BBPALETTE * palptr: pointer to BBPALETTE structure.
+ *																				NULL dont read Palette
+ *						 flag = How to Use Given OPM (look in BBLBM.H)
+ * RESULT    : TRUE = OK ,FALSE = Error
+ * BUGS      :
+ * NOTES     : A buffer for the LBM is allocated temporary.
+ *			LBMSTAT_USEOPM		0L				in Åbergebenes OPM direkt einschreiben
+ * 			LBMSTAT_MAKENEWOPM	( 1L << 0L )	OPM von der Grîsse des Bildes anlegen
+ *			LBMSTAT_WRITESIZEOPM	( 1L << 1L )	Die Breite und Hîhe direkt in OPM schreiben
+ *																				 vorhandenen OPMSpeicherPtr Åbernehmen
+ *																				OPM muss mit OPM_New initialisiert sein
+ *			LBMSTAT_GETFROMMEM ( 1L << 16L )  Statt eines Zeigers auf einen Namen
+ *																			 wird ein Zeiger auf einen Speicherbereich
+ *																				 Åbergeben und daraus gelesen
+ *					   Achtung !!!!
+ *						 Diese Routine kann nur LBMS laden die eine durch 2 teilbare
+ *						 Breite besitzen also 320x200 160x60 jedoch nicht
+ *						 321x20 11x12 ...
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+LBM_DisplayLBM( UNBYTE * lbmname, struct OPM * opmptr, struct BBPALETTE * palptr,UNLONG flag)
+{
+	/* local */
+	struct LBM mylbm;
+	UNBYTE *bmhdptr;
+	UNSHORT iffbreite;
+	UNSHORT iffhoehe;
+
+	/* LBM aus Speicher lesen */
+	if(flag&LBMSTAT_GETFROMMEM){
+		mylbm.lbmsize = 100000000;
+		mylbm.lbmptr = lbmname;
+	}
+	/* LBM von Disk lesen */
+	else{
+		/* get length of LBM file */
+		if( ( mylbm.lbmsize = DOS_GetFileLength( lbmname ) ) < 0 )
+			return( FALSE );
+		/* load LBM file */
+		if( ( mylbm.lbmptr = DOS_ReadFile( lbmname, NULL, NULL ) ) == NULL )
+			return( FALSE );
+	}
+
+	/* search BMHD chunk */
+	if( ( mylbm.bmhdptr = LBM_FindChunk( &mylbm, "BMHD" ) ) == NULL )
+		return( FALSE );
+
+	/* search BODY chunk */
+	if( ( mylbm.bodyptr = LBM_FindChunk( &mylbm, "BODY" ) ) == NULL )
+		return( FALSE );
+
+	/* search CMAP chunk */
+	if( ( myBBTGA.Cmapptr = LBM_FindChunk( &mylbm, "CMAP" ) ) == NULL )
+		return( FALSE );
+
+#ifdef WORDPIXEL
+	/* get palette of LBM always in Hicolor if not NULL*/
+	LBM_GetPal( &mylbm, palptr );
+#endif
+
+#ifdef BYTEPIXEL
+	/* get palette of LBM if not NULL*/
+	if(palptr!=NULL){
+		LBM_GetPal( &mylbm, palptr );
+	}
+#endif
+
+	bmhdptr = mylbm.bmhdptr;
+	iffbreite = abs( ( ( ( UNSHORT ) *( bmhdptr +  8 ) ) << 8 ) + * ( bmhdptr +  9 ) );
+	iffhoehe  = abs( ( ( ( UNSHORT ) *( bmhdptr + 10 ) ) << 8 ) + * ( bmhdptr + 11 ) );
+
+	/* OPM entsprechend der Grîsse des LBM's erstellen */
+	if(flag&LBMSTAT_MAKENEWOPM){
+		/* Create OPM */
+		if ( !OPM_New( iffbreite, iffhoehe, ANZBYTEPROPIXEL, opmptr, NULL ) ){
+			return(FALSE);
+		}
+	}
+	/* Grîsse des Bildes in OPM eintragen (fÅr Speicherptr hochzÑhlen) */
+	else if(flag&LBMSTAT_WRITESIZEOPM){
+		opmptr->width = iffbreite;
+		opmptr->height  = iffhoehe;
+		opmptr->nextypos = opmptr->width;
+		opmptr->datasize= opmptr->width*opmptr->height*opmptr->depth;
+#ifdef WORDPIXEL
+		opmptr->clipwidth=opmptr->width;
+		opmptr->clipheight=opmptr->height;
+#endif
+#ifdef BYTEPIXEL
+		opmptr->clip.left=0;
+		opmptr->clip.top=0;
+		opmptr->clip.width=opmptr->width;
+		opmptr->clip.height=opmptr->height;
+#endif
+	}
+
+	/* display LBM in OPM */
+	LBM_DisplayLBMinOPM( &mylbm, opmptr );
+
+	/* Wenn Object aus Speicher gelesen nicht freigeben */
+	if(!(flag&LBMSTAT_GETFROMMEM)){
+		/* free memory of LBM */
+		BASEMEM_Free( mylbm.lbmptr );
+	}
+
+	/* ok */
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_
+ * FUNCTION  :
+ * FILE      : BBTGA.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+/* #FUNCTION END# */
+
+#endif
+

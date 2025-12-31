@@ -1,0 +1,4 @@
+bbsystem.c(358): Warning! W202: Symbol 'mdx' has been defined, but not referenced
+bbsystem.c(358): Warning! W202: Symbol 'mcx' has been defined, but not referenced
+bbsystem.c(358): Warning! W202: Symbol 'mbx' has been defined, but not referenced
+bbsystem.c(1214): Warning! W202: Symbol 'dialogId' has been defined, but not referenced

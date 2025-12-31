@@ -1,0 +1,83 @@
+/************
+ * NAME     : 3D_PREP.H
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 19-7-1994
+ * PROJECT  : Albion
+ * NOTES    :
+ * SEE ALSO :
+ ************/
+
+#ifndef PREP3D_H
+#define PREP3D_H
+
+#include <BBDEF.H>
+
+/*
+ ** Defines ****************************************************************
+ */
+
+//#define PREP_3D_DEBUG_FLAG
+
+#define MAX_3D_FLOORS 		(50)
+#define MAX_3D_WALLS	 		(60)
+
+/*
+ ** Structure definitions **************************************************
+ */
+
+struct Texture_3D {
+	UNSHORT X;
+	UNSHORT Width,Height;
+	union {
+		MEM_HANDLE Handle;
+		struct Texture_3D **Ptr;
+	} p;
+};
+
+/*
+ ** External global variables **********************************************
+ */
+
+extern UNSHORT Nr_3D_object_groups;
+extern UNSHORT Nr_3D_floors;
+extern UNSHORT Nr_3D_objects;
+extern UNSHORT Nr_3D_walls;
+
+extern MEM_HANDLE Lab_data_handle;
+extern MEM_HANDLE Shade_table_handle;
+extern MEM_HANDLE Background_gfx_handle;
+
+extern BOOLEAN Shade_tables_are_valid;
+
+extern struct Texture_3D Floor_textures[MAX_3D_FLOORS][8];
+extern UNLONG Wall_offsets[MAX_3D_WALLS];
+
+/*
+ ** Prototypes *************************************************************
+ */
+
+BOOLEAN Init_3D_data(void);
+void Exit_3D_data(void);
+
+void Make_all_shade_tables(UNSHORT Target_R, UNSHORT Target_G,
+ UNSHORT Target_B);
+
+void Put_overlays_on_walls(void);
+
+void Colour_cycle_forward_3D(UNSHORT Start, UNSHORT Size);
+
+/* 3DM interface functions */
+UNBYTE *Get_object_graphics(UNSHORT NPC_nr, UNSHORT Object_nr, UNSHORT Hash_nr);
+UNBYTE *Get_floor_graphics(UNSHORT Floor_nr, UNSHORT Hash_nr, UNSHORT Resolution);
+UNBYTE *Get_wall_graphics(UNSHORT Wall_nr, UNSHORT Hash_nr);
+UNBYTE *Get_wall_shade_table(UNSHORT Wall_nr);
+
+void Relocate_on_256_byte_boundary(MEM_HANDLE Handle, UNBYTE *Source,
+ UNBYTE *Target, UNLONG Size);
+
+void Convert_lab_data(UNBYTE *Ptr, MEM_HANDLE Handle);
+
+UNBYTE *Get_shade_table_address(void);
+
+#endif
+

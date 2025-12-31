@@ -1,0 +1,9 @@
+!include ..\OPTIONS
+
+# kopieren
+..\..\LIB\bblbm.obj: OBJS\bblbm.obj
+	copy $[@ $^@
+
+# compilieren
+OBJS\bblbm.obj: bblbm.c $(OPTION) .AUTODEPEND
+

@@ -1,0 +1,23 @@
+.ERASE
+
+Assembler          = ml
+Assembler_Options  = /VM /Zm /c /Cx
+assemble	   = $(Assembler) $(Assembler_Options)
+
+Compiler         = wcc386
+Compiler_Options = /W3
+compile          = $(Compiler) $(Compiler_Options)
+
+Ldir = G:\ALBION\LIB
+Sdir = G:\ALBION\GAME\ZOOMFUNC
+
+$(Ldir)\ZOOMFUNC.LIB : $(Sdir)\OBJS\ZOOM.OBJ $(Sdir)\OBJS\ZOOMFUNC.OBJ
+	*wlib -b -n $(Ldir)\ZOOMFUNC.LIB +$(Sdir)\OBJS\ZOOMFUNC.OBJ
+	*wlib -b $(Ldir)\ZOOMFUNC.LIB +$(Sdir)\OBJS\ZOOM.OBJ
+
+$(Sdir)\OBJS\ZOOMFUNC.OBJ : $(Sdir)\ZOOMFUNC.C .AUTODEPEND
+	$(compile) $(Sdir)\ZOOMFUNC.C /fo=$(Sdir)\OBJS\ZOOMFUNC.OBJ
+
+$(Sdir)\OBJS\ZOOM.OBJ: $(Sdir)\ZOOM.ASM
+	$(assemble) /Fo$(Sdir)\OBJS\ZOOM.OBJ $(Sdir)\ZOOM.ASM
+

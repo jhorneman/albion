@@ -1,0 +1,202 @@
+/************
+ * NAME     : XPAL.C
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 20-7-1994
+ * PROJECT  : eXtract PALette tool
+ * NOTES    : - Contains LBM-code by Maverick.
+ * SEE ALSO :
+ ************/
+
+/* includes */
+
+#include <BBDEF.H>
+#include <BBOPM.H>
+#include <BBDSA.H>
+#include <BBMISC.H>
+#include <BBDOS.H>
+#include <BBERROR.h>
+
+/* structure definitions */
+
+struct LBM
+{
+	UNBYTE * lbmptr;	/* pointer to buffer of LBM file */
+	SILONG lbmsize;		/* size of LBM file */
+
+	UNBYTE * bmhdptr;	/* pointer to BMHD chunk */
+	UNBYTE * bodyptr;	/* pointer to BODY chunk */
+	UNBYTE * cmapptr;	/* pointer to CMAP chunk */
+};
+
+/* global variables */
+
+/* prototypes */
+
+void main(int argc, char** argv);
+UNBYTE *LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] );
+void Main_error_output_function(UNCHAR * buffer);
+
+/* yo-ho */
+
+void
+main(int argc, char** argv)
+{
+	struct LBM mylbm;
+	UNBYTE Palette[256*3];
+	UNSHORT First = 0, Number = 256;
+
+	/* Exit if number of parameters is wrong */
+	if ((argc < 3) || (argc > 5))
+	{
+		printf("\n");
+		printf("Syntax : XPal {.LBM filename} {palette filename}");
+		printf(" {first colour} {number of colours}.\n");
+		printf("Written by J.Horneman.\n");
+		printf("Start : 26-7-1994.\n");
+		printf("\n");
+		printf("This tool will extract the palette from an .LBM-picture.\n");
+		printf("\n");
+		return;
+	}
+
+	if (argc > 3)
+	{
+		First = atoi(argv[3]);
+		Number = atoi(argv[4]);
+	}
+
+	ERROR_Init(&Main_error_output_function);
+
+	BASEMEM_Init();
+	DOS_Init();
+
+	printf("\nSource : %s.\n",argv[1]);
+	printf("Target : %s.\n",argv[2]);
+	printf("     First colour : %u.\n",First);
+	printf("Number of colours : %u.\n\n",Number);
+
+	/* get length of LBM file */
+
+	if( ( mylbm.lbmsize = DOS_GetFileLength( argv[1] ) ) < 0 )
+		return;
+
+	/* load LBM file */
+
+	if( ( mylbm.lbmptr = DOS_ReadFile( argv[1], NULL, NULL ) ) == NULL )
+		return;
+
+	/* search CMAP chunk */
+
+	if( ( mylbm.cmapptr = LBM_FindChunk( &mylbm, "CMAP" ) ) == NULL )
+		return;
+
+	/* get palette of LBM */
+
+	{
+		UNBYTE *lbmpalptr, *destcolorptr;
+		UNSHORT i;
+
+		lbmpalptr = mylbm.cmapptr + 8L;
+		destcolorptr =  &Palette[0];
+
+		for ( i=0; i< 3*256; i++ )
+			*destcolorptr++ = *lbmpalptr++;
+	}
+
+	/* save palette */
+	{
+		SISHORT		fh;
+
+		/* Open file */
+		fh = DOS_Open(argv[2], BBDOSFILESTAT_WRITE);
+
+		if (fh != -1)
+		{
+			/* Write file */
+			DOS_Write(fh, &Palette[First*3], (UNLONG) 3*Number);
+
+			/* Close file */
+			DOS_Close( fh );
+		}
+	}
+
+	/* free memory of LBM */
+
+	BASEMEM_Free( mylbm.lbmptr );
+
+	DOS_Exit();
+	BASEMEM_Exit();
+
+	ERROR_PrintAllErrors(BBERROR_PAE_NORMAL);
+}
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_FindChunk
+ * FUNCTION  : Search a chunk in LBM file memory.
+ * FILE      : LBM.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 20.07.94
+ * LAST      :
+ * INPUTS    : struct LBM * lbmptr: pointer to LBM structure.
+ *             UNCHAR chunk[4]: chunk to look for.
+ * RESULT    : UNBYTE * : pointer to chunk or NULL if chunk not found.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE *
+LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
+{
+	/* locals */
+
+	UNBYTE * wptr;
+	SILONG wsize;
+	UNLONG os;
+	UNSHORT i, count;
+
+
+	/* set work pointer */
+
+	wptr = lbmptr->lbmptr;
+
+	/* get size of lbm */
+
+	wsize = lbmptr->lbmsize;
+
+
+	/* search chunk */
+
+	for ( os=0 ; os<wsize ; os++ )
+	{
+
+		count = 0;
+
+		for ( i=0 ; i<4 ; i++ )
+			if ( ( *( wptr + os +i ) ) == chunk[i] )
+				count++;
+
+		if ( count == 4 )
+			return( lbmptr->lbmptr + os );
+	}
+
+
+	/* chunk not found */
+
+	return ( NULL );
+}
+
+/* #FUNCTION END# */
+
+void
+Main_error_output_function(UNCHAR * buffer)
+{
+	printf("%s",(char *) buffer);
+}
+

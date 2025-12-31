@@ -1,0 +1,15 @@
+!include ..\OPTIONS
+
+# linken
+..\..\LIB\bbmth.obj:	OBJS\mth_ass.obj &
+      			OBJS\sintab.obj &
+      			OBJS\tantab.obj &
+      			OBJS\bbmth.obj
+	*wlib -b -n ..\..\lib\bbmth.obj +OBJS\mth_ass.obj +OBJS\sintab.obj +OBJS\tantab.obj +OBJS\bbmth.obj
+
+# compilieren
+OBJS\bbmth.obj: bbmth.c $(OPTION) .AUTODEPEND
+OBJS\sintab.obj: sintab.c $(OPTION) .AUTODEPEND
+OBJS\tantab.obj: tantab.c $(OPTION) .AUTODEPEND
+OBJS\mth_ass.obj: mth_ass.asm $(OPTIONASM) .AUTODEPEND
+

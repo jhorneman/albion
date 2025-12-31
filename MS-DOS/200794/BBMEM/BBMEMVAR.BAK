@@ -1,0 +1,74 @@
+/************
+ * NAME     : BBMEMVAR.C
+ * AUTHOR   : Jurie Horneman, BlueByte
+ * START    : 1-6-1994
+ * PROJECT  : Blue Byte memory manager V (Son of garbage collector)
+ * NOTES    :
+ * SEE ALSO : BBMEM.C, BBMEM.H
+ ************/
+
+/* includes */
+
+#include <BBDEF.H>
+#include <BBERROR.H>
+#include <BBMEM.H>
+#include <TEST.H>
+
+/* global variable declarations */
+
+struct Memory_entry MEM_Entries[MEMORY_ENTRIES_MAX];
+struct Memory_handle MEM_Handles[MEMORY_HANDLES_MAX];
+struct Memory_workspace MEM_Workspaces[MEMORY_WORKSPACES_MAX];
+
+struct Memory_workspace *MEM_First_workspace = &MEM_Workspaces[0];
+
+struct Memory_entry *MEM_Quick_free_entry = NULL;
+
+struct Memory_workspace *MEM_Workspace_stack[WORKSPACE_STACK_MAX];
+UNSHORT MEM_Workspace_stack_index = 0;
+
+UNBYTE MEM_Initialized = FALSE;
+UNBYTE MEM_Debugging = FALSE;
+UNBYTE MEM_Debugging2 = FALSE;
+UNBYTE MEM_Handles_invalid = FALSE;
+
+UNCHAR MEM_Default_ftype_name[] = "Normal memory";
+
+struct File_type MEM_Default_file_type = {
+	MEM_Relocate,
+	0xff,
+	MEM_KILL_ALWAYS,					/* MUST BE SET FOR NORMAL MEMORY */
+	MEM_Default_ftype_name
+};
+
+MEM_Alloc_pass *MEM_Pass_list_ptr;
+MEM_Alloc_pass MEM_Default_pass_list[] = {
+	MEM_Alloc_pass_standard,
+	MEM_Alloc_pass_garbage,
+	MEM_Alloc_pass_drown,
+	MEM_Alloc_pass_juggle,
+	NULL									/* End of list */
+};
+
+UNCHAR MEM_Library_name[] = "Memory manager V";
+
+UNCHAR *MEM_Error_strings[] = {
+	"Illegal error code.",		  	/* Error code was 0 or > MEMERR_MAX. */
+	"Out of memory entries.",    	/* Find_new_entry() failed. */
+	"Out of memory handles.",	  	/* Create_memory_handle() failed. */
+	"Memory handle mismatch.",	  	/* BLOCK_HANDLE didn't match Entry_ptr. */
+	"No memory areas.",			  	/* Init_memory() failed. */
+	"Entry lies outside array.",
+	"File type is NULL.",
+	"Free entry in chain.",
+	"Area descriptor in chain.",
+	"Wrong backward link.",
+	"Memory block lies outside area.",
+	"Gap between memory blocks.",	/* End of one block is not the start of the next. */
+	"Sum of blocks doesn't match area size.",
+	"Out of memory.",
+	"Out of memory workspaces.",
+	"Workspace stack overflow.",
+	"Workspace stack underflow."
+};
+

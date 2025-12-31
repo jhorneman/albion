@@ -1,0 +1,48 @@
+
+Konventioneller Speicher:
+
+  Name                 Grî·e (dezimal)       Grî·e (Hex)
+-------------       ---------------------   -------------
+  MSDOS              16608     ( 16.2KB)       40E0
+  ASPI2DOS            9664     (  9.4KB)       25C0
+  ASPIDISK            2592     (  2.5KB)        A20
+  HIMEM               1184     (  1.2KB)        4A0
+  BOOTCON              336     (  0.3KB)        150
+  QEMM386             3088     (  3.0KB)        C10
+  LOADHI               256     (  0.3KB)        100
+  LOADHI               256     (  0.3KB)        100
+  LOADHI               256     (  0.3KB)        100
+  COMMAND             3776     (  3.7KB)        EC0
+  FREI                  64     (  0.1KB)         40
+  FREI              616976     (602.5KB)      96A10
+
+Insgesamt FREI:     617040     (602.6KB) 
+
+Hoher Speicher (Upper Memory) 
+
+  Name                 Grî·e (dezimal)       Grî·e (Hex)
+-------------       ---------------------   -------------
+  SYSTEM            262176     (256.0KB)      40020
+  MVSOUND             9136     (  8.9KB)       23B0
+  GCDR520             9648     (  9.4KB)       25B0
+  MOUSE              14160     ( 13.8KB)       3750
+  KEYB                6208     (  6.1KB)       1840
+  MSCDEX             27936     ( 27.3KB)       6D20
+  IFSHLP              3856     (  3.8KB)        F10
+  FREI                 176     (  0.2KB)         B0
+  FREI               30864     ( 30.1KB)       7890
+  FREI                4288     (  4.2KB)       10C0
+
+Insgesamt FREI:      35328     ( 34.5KB) 
+
+Insg. verfÅgbarer Arbeitsspeicher (Konventioneller+hoher):    652368  (637.1KB)
+Maximale Grî·e fÅr ausfÅhrbares Programm:                     616784  (602.3KB)
+Grî·ter freier Block im hohen Speicher (Upper Memory):         30864  ( 30.1KB)
+
+   7864320 Byte EMS-Speicher insgesamt
+   7274496 Byte EMS-Speicher frei
+
+   7602176 Byte fortlaufender Erweiterungsspeicher insgesamt
+         0 Byte fortlaufender Erweiterungsspeicher verfÅgbar
+   7208960 Byte XMS-Speicher verfÅgbar
+           MS-DOS resident im oberen Speicherbereich (High Memory Area)

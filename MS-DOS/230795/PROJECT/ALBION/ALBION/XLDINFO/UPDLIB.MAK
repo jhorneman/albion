@@ -1,0 +1,594 @@
+# Makefile for Albion headers, objects and libraries
+# PC CD-ROM version
+
+# Ignore return values and do not check if target was made
+.IGNORE
+
+# Default user is Jurie
+!ifndef User
+User = Jurie
+!endif
+
+
+!ifeq User Jurie
+
+# Paths for Jurie
+Sdir = G:\ALBION
+Tdir = U:\PROJECT\ALBION\ALBION
+Bdir = Q:\PROGRAM\RELAYER\RAINER
+
+Back_files = $(Sdir)\GAME\COMMAGIC\COMMAG0.C &
+	$(Sdir)\GAME\COMMAGIC\COMMAG1.C &
+	$(Sdir)\GAME\COMMAGIC\COMMAG2.C &
+	$(Sdir)\GAME\COMMAGIC\COMMAG3.C &
+	$(Sdir)\GAME\COMMAGIC\COMMAG5.C &
+	$(Sdir)\GAME\COMMAGIC\COMMSUB.C &
+	$(Sdir)\LIB\COMMAGIC.H &
+	$(Sdir)\LIB\COMMSUB.H
+
+!else
+
+# Paths for non-Juries
+Sdir = U:\PROJECT\ALBION\ALBION
+Tdir = D:\ALBION
+Bdir = Q:\PROGRAM\RELAYER\RAINER
+
+Back_files = $(Bdir)\GAME\COMMAGIC\COMMAG0.C &
+	$(Bdir)\GAME\COMMAGIC\COMMAG1.C &
+	$(Bdir)\GAME\COMMAGIC\COMMAG2.C &
+	$(Bdir)\GAME\COMMAGIC\COMMAG3.C &
+	$(Bdir)\GAME\COMMAGIC\COMMAG5.C &
+	$(Bdir)\GAME\COMMAGIC\COMMSUB.C &
+	$(Bdir)\LIB\COMMAGIC.H &
+	$(Bdir)\LIB\COMMSUB.H
+
+!endif
+
+
+# Define header files
+Header_files = $(Tdir)\LIB\MAIN.H &
+	$(Tdir)\LIB\GAME.H &
+	$(Tdir)\LIB\GAMEVAR.H &
+	$(Tdir)\LIB\CONTROL.H &
+	$(Tdir)\LIB\USERFACE.H &
+	$(Tdir)\LIB\MAP.H &
+	$(Tdir)\LIB\2D_MAP.H &
+	$(Tdir)\LIB\2D_DISPL.H &
+	$(Tdir)\LIB\3D_MAP.H &
+	$(Tdir)\LIB\3D_PREP.H &
+	$(Tdir)\LIB\3DM.H &
+	$(Tdir)\LIB\3DCOMMON.H &
+	$(Tdir)\LIB\ANIMATE.H &
+	$(Tdir)\LIB\FONT.H &
+	$(Tdir)\LIB\XFTYPES.H &
+	$(Tdir)\LIB\GRAPHICS.H &
+	$(Tdir)\LIB\DIAGNOST.H &
+	$(Tdir)\LIB\POPUP.H &
+	$(Tdir)\LIB\SCROLBAR.H &
+	$(Tdir)\LIB\INVENTO.H &
+	$(Tdir)\LIB\INVITEMS.H &
+	$(Tdir)\LIB\STATAREA.H &
+	$(Tdir)\LIB\EVELOGIC.H &
+	$(Tdir)\LIB\EVENTS.H &
+	$(Tdir)\LIB\NPCS.H &
+	$(Tdir)\LIB\GAMETIME.H &
+	$(Tdir)\LIB\GAMETEXT.H &
+	$(Tdir)\LIB\DIALOGUE.H &
+	$(Tdir)\LIB\MUSIC.H &
+	$(Tdir)\LIB\ITEMLIST.H &
+	$(Tdir)\LIB\ITMLOGIC.H &
+	$(Tdir)\LIB\BUTTONS.H &
+	$(Tdir)\LIB\INPUT.H &
+	$(Tdir)\LIB\COMBAT.H &
+	$(Tdir)\LIB\COMACTS.H &
+	$(Tdir)\LIB\COMSHOW.H &
+	$(Tdir)\LIB\COMOBS.H &
+	$(Tdir)\LIB\TACTICAL.H &
+	$(Tdir)\LIB\CHEST.H &
+	$(Tdir)\LIB\DOOR.H &
+	$(Tdir)\LIB\AUTOMAP.H &
+	$(Tdir)\LIB\MAGIC.H &
+	$(Tdir)\LIB\SPELLS.H &
+	$(Tdir)\LIB\APRES.H &
+	$(Tdir)\LIB\GOLDFOOD.H &
+	$(Tdir)\LIB\SCROLL.H &
+	$(Tdir)\LIB\XLOAD.H &
+	$(Tdir)\LIB\HDOB.H &
+	$(Tdir)\LIB\GFXFUNC.H &
+	$(Tdir)\LIB\SORT.H &
+	$(Tdir)\LIB\FINDCOL.H &
+	$(Tdir)\LIB\FLC.H &
+	$(Tdir)\LIB\TEXT.H &
+	$(Tdir)\LIB\ZOOMFUNC.H &
+	$(Tdir)\LIB\3DM.H
+
+# Define object files
+Object_files = $(Tdir)\LIB\MAIN.OBJ &
+	$(Tdir)\LIB\GAME.OBJ &
+	$(Tdir)\LIB\CONTROL.OBJ &
+	$(Tdir)\LIB\USERFACE.OBJ &
+	$(Tdir)\LIB\MAP.OBJ &
+	$(Tdir)\LIB\2D_MAP.OBJ &
+	$(Tdir)\LIB\2D_DISPL.OBJ &
+	$(Tdir)\LIB\3D_MAP.OBJ &
+	$(Tdir)\LIB\3D_PREP.OBJ &
+	$(Tdir)\LIB\ANIMATE.OBJ &
+	$(Tdir)\LIB\FONT.OBJ &
+	$(Tdir)\LIB\XFTYPES.OBJ &
+	$(Tdir)\LIB\GRAPHICS.OBJ &
+	$(Tdir)\LIB\DIAGNOST.OBJ &
+	$(Tdir)\LIB\POPUP.OBJ &
+	$(Tdir)\LIB\SCROLBAR.OBJ &
+	$(Tdir)\LIB\INVENTO.OBJ &
+	$(Tdir)\LIB\INVITEMS.OBJ &
+	$(Tdir)\LIB\STATAREA.OBJ &
+	$(Tdir)\LIB\EVELOGIC.OBJ &
+	$(Tdir)\LIB\EVENTS.OBJ &
+	$(Tdir)\LIB\NPCS.OBJ &
+	$(Tdir)\LIB\GAMETIME.OBJ &
+	$(Tdir)\LIB\GAMETEXT.OBJ &
+	$(Tdir)\LIB\DIALOGUE.OBJ &
+	$(Tdir)\LIB\MUSIC.OBJ &
+	$(Tdir)\LIB\ITEMLIST.OBJ &
+	$(Tdir)\LIB\ITMLOGIC.OBJ &
+	$(Tdir)\LIB\BUTTONS.OBJ &
+	$(Tdir)\LIB\INPUT.OBJ &
+	$(Tdir)\LIB\COMBAT.OBJ &
+	$(Tdir)\LIB\COMACTS.OBJ &
+	$(Tdir)\LIB\COMSHOW.OBJ &
+	$(Tdir)\LIB\COMOBS.OBJ &
+	$(Tdir)\LIB\TACTICAL.OBJ &
+	$(Tdir)\LIB\CHEST.OBJ &
+	$(Tdir)\LIB\DOOR.OBJ &
+	$(Tdir)\LIB\AUTOMAP.OBJ &
+	$(Tdir)\LIB\MAGIC.OBJ &
+	$(Tdir)\LIB\SPELLS.OBJ &
+	$(Tdir)\LIB\APRES.OBJ &
+	$(Tdir)\LIB\GOLDFOOD.OBJ &
+	$(Tdir)\LIB\SCROLL.OBJ &
+	$(Tdir)\LIB\XLOAD.OBJ &
+	$(Tdir)\LIB\HDOB.OBJ &
+	$(Tdir)\LIB\GFXFUNC.OBJ &
+	$(Tdir)\LIB\SORT.OBJ &
+	$(Tdir)\LIB\FINDCOL.OBJ &
+	$(Tdir)\LIB\FLC.OBJ &
+	$(Tdir)\LIB\DLLLOAD.OBJ
+
+Library_files = $(Tdir)\LIB\TEXT.LIB &
+	$(Tdir)\LIB\ZOOMFUNC.LIB &
+	$(Tdir)\LIB\3DM.LIB &
+	$(Tdir)\LIB\AIL.LIB &
+	$(Tdir)\LIB\BBMEM.LIB &
+	$(Tdir)\LIB\PCBASE.LIB
+
+Other_files = $(Tdir)\GAME\MAKEFILE
+
+
+# This is the main "target"
+
+ALL : $(Header_files) $(Object_files) $(Library_files) $(Other_files) $(Back_files)
+
+
+# Copy the header files : */
+
+$(Tdir)\LIB\MAIN.H : $(Sdir)\LIB\MAIN.H
+	copy $(Sdir)\LIB\MAIN.H $(Tdir)\LIB\MAIN.H
+
+$(Tdir)\LIB\GAME.H : $(Sdir)\LIB\GAME.H
+	copy $(Sdir)\LIB\GAME.H $(Tdir)\LIB\GAME.H
+
+$(Tdir)\LIB\GAMEVAR.H : $(Sdir)\LIB\GAMEVAR.H
+	copy $(Sdir)\LIB\GAMEVAR.H $(Tdir)\LIB\GAMEVAR.H
+
+$(Tdir)\LIB\CONTROL.H : $(Sdir)\LIB\CONTROL.H
+	copy $(Sdir)\LIB\CONTROL.H $(Tdir)\LIB\CONTROL.H
+
+$(Tdir)\LIB\USERFACE.H : $(Sdir)\LIB\USERFACE.H
+	copy $(Sdir)\LIB\USERFACE.H $(Tdir)\LIB\USERFACE.H
+
+$(Tdir)\LIB\MAP.H : $(Sdir)\LIB\MAP.H
+	copy $(Sdir)\LIB\MAP.H $(Tdir)\LIB\MAP.H
+
+$(Tdir)\LIB\2D_MAP.H : $(Sdir)\LIB\2D_MAP.H
+	copy $(Sdir)\LIB\2D_MAP.H $(Tdir)\LIB\2D_MAP.H
+
+$(Tdir)\LIB\2D_DISPL.H : $(Sdir)\LIB\2D_DISPL.H
+	copy $(Sdir)\LIB\2D_DISPL.H $(Tdir)\LIB\2D_DISPL.H
+
+$(Tdir)\LIB\3D_MAP.H : $(Sdir)\LIB\3D_MAP.H
+	copy $(Sdir)\LIB\3D_MAP.H $(Tdir)\LIB\3D_MAP.H
+
+$(Tdir)\LIB\3D_PREP.H : $(Sdir)\LIB\3D_PREP.H
+	copy $(Sdir)\LIB\3D_PREP.H $(Tdir)\LIB\3D_PREP.H
+
+$(Tdir)\LIB\3DM.H : $(Sdir)\LIB\3DM.H
+	copy $(Sdir)\LIB\3DM.H $(Tdir)\LIB\3DM.H
+
+$(Tdir)\LIB\3DCOMMON.H : $(Sdir)\LIB\3DCOMMON.H
+	copy $(Sdir)\LIB\3DCOMMON.H $(Tdir)\LIB\3DCOMMON.H
+
+$(Tdir)\LIB\ANIMATE.H : $(Sdir)\LIB\ANIMATE.H
+	copy $(Sdir)\LIB\ANIMATE.H $(Tdir)\LIB\ANIMATE.H
+
+$(Tdir)\LIB\FONT.H : $(Sdir)\LIB\FONT.H
+	copy $(Sdir)\LIB\FONT.H $(Tdir)\LIB\FONT.H
+
+$(Tdir)\LIB\XFTYPES.H : $(Sdir)\LIB\XFTYPES.H
+	copy $(Sdir)\LIB\XFTYPES.H $(Tdir)\LIB\XFTYPES.H
+
+$(Tdir)\LIB\GRAPHICS.H : $(Sdir)\LIB\GRAPHICS.H
+	copy $(Sdir)\LIB\GRAPHICS.H $(Tdir)\LIB\GRAPHICS.H
+
+$(Tdir)\LIB\DIAGNOST.H : $(Sdir)\LIB\DIAGNOST.H
+	copy $(Sdir)\LIB\DIAGNOST.H $(Tdir)\LIB\DIAGNOST.H
+
+$(Tdir)\LIB\POPUP.H : $(Sdir)\LIB\POPUP.H
+	copy $(Sdir)\LIB\POPUP.H $(Tdir)\LIB\POPUP.H
+
+$(Tdir)\LIB\SCROLBAR.H : $(Sdir)\LIB\SCROLBAR.H
+	copy $(Sdir)\LIB\SCROLBAR.H $(Tdir)\LIB\SCROLBAR.H
+
+$(Tdir)\LIB\INVENTO.H : $(Sdir)\LIB\INVENTO.H
+	copy $(Sdir)\LIB\INVENTO.H $(Tdir)\LIB\INVENTO.H
+
+$(Tdir)\LIB\INVITEMS.H : $(Sdir)\LIB\INVITEMS.H
+	copy $(Sdir)\LIB\INVITEMS.H $(Tdir)\LIB\INVITEMS.H
+
+$(Tdir)\LIB\STATAREA.H : $(Sdir)\LIB\STATAREA.H
+	copy $(Sdir)\LIB\STATAREA.H $(Tdir)\LIB\STATAREA.H
+
+$(Tdir)\LIB\EVELOGIC.H : $(Sdir)\LIB\EVELOGIC.H
+	copy $(Sdir)\LIB\EVELOGIC.H $(Tdir)\LIB\EVELOGIC.H
+
+$(Tdir)\LIB\EVENTS.H : $(Sdir)\LIB\EVENTS.H
+	copy $(Sdir)\LIB\EVENTS.H $(Tdir)\LIB\EVENTS.H
+
+$(Tdir)\LIB\NPCS.H : $(Sdir)\LIB\NPCS.H
+	copy $(Sdir)\LIB\NPCS.H $(Tdir)\LIB\NPCS.H
+
+$(Tdir)\LIB\GAMETIME.H : $(Sdir)\LIB\GAMETIME.H
+	copy $(Sdir)\LIB\GAMETIME.H $(Tdir)\LIB\GAMETIME.H
+
+$(Tdir)\LIB\GAMETEXT.H : $(Sdir)\LIB\GAMETEXT.H
+	copy $(Sdir)\LIB\GAMETEXT.H $(Tdir)\LIB\GAMETEXT.H
+
+$(Tdir)\LIB\DIALOGUE.H : $(Sdir)\LIB\DIALOGUE.H
+	copy $(Sdir)\LIB\DIALOGUE.H $(Tdir)\LIB\DIALOGUE.H
+
+$(Tdir)\LIB\MUSIC.H : $(Sdir)\LIB\MUSIC.H
+	copy $(Sdir)\LIB\MUSIC.H $(Tdir)\LIB\MUSIC.H
+
+$(Tdir)\LIB\ITEMLIST.H : $(Sdir)\LIB\ITEMLIST.H
+	copy $(Sdir)\LIB\ITEMLIST.H $(Tdir)\LIB\ITEMLIST.H
+
+$(Tdir)\LIB\ITMLOGIC.H : $(Sdir)\LIB\ITMLOGIC.H
+	copy $(Sdir)\LIB\ITMLOGIC.H $(Tdir)\LIB\ITMLOGIC.H
+
+$(Tdir)\LIB\BUTTONS.H : $(Sdir)\LIB\BUTTONS.H
+	copy $(Sdir)\LIB\BUTTONS.H $(Tdir)\LIB\BUTTONS.H
+
+$(Tdir)\LIB\INPUT.H : $(Sdir)\LIB\INPUT.H
+	copy $(Sdir)\LIB\INPUT.H $(Tdir)\LIB\INPUT.H
+
+$(Tdir)\LIB\COMBAT.H : $(Sdir)\LIB\COMBAT.H
+	copy $(Sdir)\LIB\COMBAT.H $(Tdir)\LIB\COMBAT.H
+
+$(Tdir)\LIB\COMACTS.H : $(Sdir)\LIB\COMACTS.H
+	copy $(Sdir)\LIB\COMACTS.H $(Tdir)\LIB\COMACTS.H
+
+$(Tdir)\LIB\COMSHOW.H : $(Sdir)\LIB\COMSHOW.H
+	copy $(Sdir)\LIB\COMSHOW.H $(Tdir)\LIB\COMSHOW.H
+
+$(Tdir)\LIB\COMOBS.H : $(Sdir)\LIB\COMOBS.H
+	copy $(Sdir)\LIB\COMOBS.H $(Tdir)\LIB\COMOBS.H
+
+$(Tdir)\LIB\TACTICAL.H : $(Sdir)\LIB\TACTICAL.H
+	copy $(Sdir)\LIB\TACTICAL.H $(Tdir)\LIB\TACTICAL.H
+
+$(Tdir)\LIB\CHEST.H : $(Sdir)\LIB\CHEST.H
+	copy $(Sdir)\LIB\CHEST.H $(Tdir)\LIB\CHEST.H
+
+$(Tdir)\LIB\DOOR.H : $(Sdir)\LIB\DOOR.H
+	copy $(Sdir)\LIB\DOOR.H $(Tdir)\LIB\DOOR.H
+
+$(Tdir)\LIB\AUTOMAP.H : $(Sdir)\LIB\AUTOMAP.H
+	copy $(Sdir)\LIB\AUTOMAP.H $(Tdir)\LIB\AUTOMAP.H
+
+$(Tdir)\LIB\MAGIC.H : $(Sdir)\LIB\MAGIC.H
+	copy $(Sdir)\LIB\MAGIC.H $(Tdir)\LIB\MAGIC.H
+
+$(Tdir)\LIB\SPELLS.H : $(Sdir)\LIB\SPELLS.H
+	copy $(Sdir)\LIB\SPELLS.H $(Tdir)\LIB\SPELLS.H
+
+$(Tdir)\LIB\APRES.H : $(Sdir)\LIB\APRES.H
+	copy $(Sdir)\LIB\APRES.H $(Tdir)\LIB\APRES.H
+
+$(Tdir)\LIB\GOLDFOOD.H : $(Sdir)\LIB\GOLDFOOD.H
+	copy $(Sdir)\LIB\GOLDFOOD.H $(Tdir)\LIB\GOLDFOOD.H
+
+$(Tdir)\LIB\SCROLL.H : $(Sdir)\LIB\SCROLL.H
+	copy $(Sdir)\LIB\SCROLL.H $(Tdir)\LIB\SCROLL.H
+
+$(Tdir)\LIB\XLOAD.H : $(Sdir)\LIB\XLOAD.H
+	copy $(Sdir)\LIB\XLOAD.H $(Tdir)\LIB\XLOAD.H
+
+$(Tdir)\LIB\HDOB.H : $(Sdir)\LIB\HDOB.H
+	copy $(Sdir)\LIB\HDOB.H $(Tdir)\LIB\HDOB.H
+
+$(Tdir)\LIB\GFXFUNC.H : $(Sdir)\LIB\GFXFUNC.H
+	copy $(Sdir)\LIB\GFXFUNC.H $(Tdir)\LIB\GFXFUNC.H
+
+$(Tdir)\LIB\SORT.H : $(Sdir)\LIB\SORT.H
+	copy $(Sdir)\LIB\SORT.H $(Tdir)\LIB\SORT.H
+
+$(Tdir)\LIB\FINDCOL.H : $(Sdir)\LIB\FINDCOL.H
+	copy $(Sdir)\LIB\FINDCOL.H $(Tdir)\LIB\FINDCOL.H
+
+$(Tdir)\LIB\FLC.H : $(Sdir)\LIB\FLC.H
+	copy $(Sdir)\LIB\FLC.H $(Tdir)\LIB\FLC.H
+
+$(Tdir)\LIB\TEXT.H : $(Sdir)\LIB\TEXT.H
+	copy $(Sdir)\LIB\TEXT.H $(Tdir)\LIB\TEXT.H
+
+$(Tdir)\LIB\ZOOMFUNC.H : $(Sdir)\LIB\ZOOMFUNC.H
+	copy $(Sdir)\LIB\ZOOMFUNC.H $(Tdir)\LIB\ZOOMFUNC.H
+
+$(Tdir)\LIB\3DM.H : $(Sdir)\LIB\3DM.H
+	copy $(Sdir)\LIB\3DM.H $(Tdir)\LIB\3DM.H
+
+
+# Copy the object files : */
+
+$(Tdir)\LIB\MAIN.OBJ : $(Sdir)\LIB\MAIN.OBJ
+	copy $(Sdir)\LIB\MAIN.OBJ $(Tdir)\LIB\MAIN.OBJ
+
+$(Tdir)\LIB\GAME.OBJ : $(Sdir)\LIB\GAME.OBJ
+	copy $(Sdir)\LIB\GAME.OBJ $(Tdir)\LIB\GAME.OBJ
+
+$(Tdir)\LIB\CONTROL.OBJ : $(Sdir)\LIB\CONTROL.OBJ
+	copy $(Sdir)\LIB\CONTROL.OBJ $(Tdir)\LIB\CONTROL.OBJ
+
+$(Tdir)\LIB\USERFACE.OBJ : $(Sdir)\LIB\USERFACE.OBJ
+	copy $(Sdir)\LIB\USERFACE.OBJ $(Tdir)\LIB\USERFACE.OBJ
+
+$(Tdir)\LIB\MAP.OBJ : $(Sdir)\LIB\MAP.OBJ
+	copy $(Sdir)\LIB\MAP.OBJ $(Tdir)\LIB\MAP.OBJ
+
+$(Tdir)\LIB\2D_MAP.OBJ : $(Sdir)\LIB\2D_MAP.OBJ
+	copy $(Sdir)\LIB\2D_MAP.OBJ $(Tdir)\LIB\2D_MAP.OBJ
+
+$(Tdir)\LIB\2D_DISPL.OBJ : $(Sdir)\LIB\2D_DISPL.OBJ
+	copy $(Sdir)\LIB\2D_DISPL.OBJ $(Tdir)\LIB\2D_DISPL.OBJ
+
+$(Tdir)\LIB\3D_MAP.OBJ : $(Sdir)\LIB\3D_MAP.OBJ
+	copy $(Sdir)\LIB\3D_MAP.OBJ $(Tdir)\LIB\3D_MAP.OBJ
+
+$(Tdir)\LIB\3D_PREP.OBJ : $(Sdir)\LIB\3D_PREP.OBJ
+	copy $(Sdir)\LIB\3D_PREP.OBJ $(Tdir)\LIB\3D_PREP.OBJ
+
+$(Tdir)\LIB\ANIMATE.OBJ : $(Sdir)\LIB\ANIMATE.OBJ
+	copy $(Sdir)\LIB\ANIMATE.OBJ $(Tdir)\LIB\ANIMATE.OBJ
+
+$(Tdir)\LIB\FONT.OBJ : $(Sdir)\LIB\FONT.OBJ
+	copy $(Sdir)\LIB\FONT.OBJ $(Tdir)\LIB\FONT.OBJ
+
+$(Tdir)\LIB\XFTYPES.OBJ : $(Sdir)\LIB\XFTYPES.OBJ
+	copy $(Sdir)\LIB\XFTYPES.OBJ $(Tdir)\LIB\XFTYPES.OBJ
+
+$(Tdir)\LIB\GRAPHICS.OBJ : $(Sdir)\LIB\GRAPHICS.OBJ
+	copy $(Sdir)\LIB\GRAPHICS.OBJ $(Tdir)\LIB\GRAPHICS.OBJ
+
+$(Tdir)\LIB\DIAGNOST.OBJ : $(Sdir)\LIB\DIAGNOST.OBJ
+	copy $(Sdir)\LIB\DIAGNOST.OBJ $(Tdir)\LIB\DIAGNOST.OBJ
+
+$(Tdir)\LIB\POPUP.OBJ : $(Sdir)\LIB\POPUP.OBJ
+	copy $(Sdir)\LIB\POPUP.OBJ $(Tdir)\LIB\POPUP.OBJ
+
+$(Tdir)\LIB\SCROLBAR.OBJ : $(Sdir)\LIB\SCROLBAR.OBJ
+	copy $(Sdir)\LIB\SCROLBAR.OBJ $(Tdir)\LIB\SCROLBAR.OBJ
+
+$(Tdir)\LIB\INVENTO.OBJ : $(Sdir)\LIB\INVENTO.OBJ
+	copy $(Sdir)\LIB\INVENTO.OBJ $(Tdir)\LIB\INVENTO.OBJ
+
+$(Tdir)\LIB\INVITEMS.OBJ : $(Sdir)\LIB\INVITEMS.OBJ
+	copy $(Sdir)\LIB\INVITEMS.OBJ $(Tdir)\LIB\INVITEMS.OBJ
+
+$(Tdir)\LIB\STATAREA.OBJ : $(Sdir)\LIB\STATAREA.OBJ
+	copy $(Sdir)\LIB\STATAREA.OBJ $(Tdir)\LIB\STATAREA.OBJ
+
+$(Tdir)\LIB\EVELOGIC.OBJ : $(Sdir)\LIB\EVELOGIC.OBJ
+	copy $(Sdir)\LIB\EVELOGIC.OBJ $(Tdir)\LIB\EVELOGIC.OBJ
+
+$(Tdir)\LIB\EVENTS.OBJ : $(Sdir)\LIB\EVENTS.OBJ
+	copy $(Sdir)\LIB\EVENTS.OBJ $(Tdir)\LIB\EVENTS.OBJ
+
+$(Tdir)\LIB\NPCS.OBJ : $(Sdir)\LIB\NPCS.OBJ
+	copy $(Sdir)\LIB\NPCS.OBJ $(Tdir)\LIB\NPCS.OBJ
+
+$(Tdir)\LIB\GAMETIME.OBJ : $(Sdir)\LIB\GAMETIME.OBJ
+	copy $(Sdir)\LIB\GAMETIME.OBJ $(Tdir)\LIB\GAMETIME.OBJ
+
+$(Tdir)\LIB\GAMETEXT.OBJ : $(Sdir)\LIB\GAMETEXT.OBJ
+	copy $(Sdir)\LIB\GAMETEXT.OBJ $(Tdir)\LIB\GAMETEXT.OBJ
+
+$(Tdir)\LIB\DIALOGUE.OBJ : $(Sdir)\LIB\DIALOGUE.OBJ
+	copy $(Sdir)\LIB\DIALOGUE.OBJ $(Tdir)\LIB\DIALOGUE.OBJ
+
+$(Tdir)\LIB\MUSIC.OBJ : $(Sdir)\LIB\MUSIC.OBJ
+	copy $(Sdir)\LIB\MUSIC.OBJ $(Tdir)\LIB\MUSIC.OBJ
+
+$(Tdir)\LIB\ITEMLIST.OBJ : $(Sdir)\LIB\ITEMLIST.OBJ
+	copy $(Sdir)\LIB\ITEMLIST.OBJ $(Tdir)\LIB\ITEMLIST.OBJ
+
+$(Tdir)\LIB\ITMLOGIC.OBJ : $(Sdir)\LIB\ITMLOGIC.OBJ
+	copy $(Sdir)\LIB\ITMLOGIC.OBJ $(Tdir)\LIB\ITMLOGIC.OBJ
+
+$(Tdir)\LIB\BUTTONS.OBJ : $(Sdir)\LIB\BUTTONS.OBJ
+	copy $(Sdir)\LIB\BUTTONS.OBJ $(Tdir)\LIB\BUTTONS.OBJ
+
+$(Tdir)\LIB\INPUT.OBJ : $(Sdir)\LIB\INPUT.OBJ
+	copy $(Sdir)\LIB\INPUT.OBJ $(Tdir)\LIB\INPUT.OBJ
+
+$(Tdir)\LIB\COMBAT.OBJ : $(Sdir)\LIB\COMBAT.OBJ
+	copy $(Sdir)\LIB\COMBAT.OBJ $(Tdir)\LIB\COMBAT.OBJ
+
+$(Tdir)\LIB\COMACTS.OBJ : $(Sdir)\LIB\COMACTS.OBJ
+	copy $(Sdir)\LIB\COMACTS.OBJ $(Tdir)\LIB\COMACTS.OBJ
+
+$(Tdir)\LIB\COMSHOW.OBJ : $(Sdir)\LIB\COMSHOW.OBJ
+	copy $(Sdir)\LIB\COMSHOW.OBJ $(Tdir)\LIB\COMSHOW.OBJ
+
+$(Tdir)\LIB\COMOBS.OBJ : $(Sdir)\LIB\COMOBS.OBJ
+	copy $(Sdir)\LIB\COMOBS.OBJ $(Tdir)\LIB\COMOBS.OBJ
+
+$(Tdir)\LIB\TACTICAL.OBJ : $(Sdir)\LIB\TACTICAL.OBJ
+	copy $(Sdir)\LIB\TACTICAL.OBJ $(Tdir)\LIB\TACTICAL.OBJ
+
+$(Tdir)\LIB\CHEST.OBJ : $(Sdir)\LIB\CHEST.OBJ
+	copy $(Sdir)\LIB\CHEST.OBJ $(Tdir)\LIB\CHEST.OBJ
+
+$(Tdir)\LIB\DOOR.OBJ : $(Sdir)\LIB\DOOR.OBJ
+	copy $(Sdir)\LIB\DOOR.OBJ $(Tdir)\LIB\DOOR.OBJ
+
+$(Tdir)\LIB\AUTOMAP.OBJ : $(Sdir)\LIB\AUTOMAP.OBJ
+	copy $(Sdir)\LIB\AUTOMAP.OBJ $(Tdir)\LIB\AUTOMAP.OBJ
+
+$(Tdir)\LIB\MAGIC.OBJ : $(Sdir)\LIB\MAGIC.OBJ
+	copy $(Sdir)\LIB\MAGIC.OBJ $(Tdir)\LIB\MAGIC.OBJ
+
+$(Tdir)\LIB\SPELLS.OBJ : $(Sdir)\LIB\SPELLS.OBJ
+	copy $(Sdir)\LIB\SPELLS.OBJ $(Tdir)\LIB\SPELLS.OBJ
+
+$(Tdir)\LIB\APRES.OBJ : $(Sdir)\LIB\APRES.OBJ
+	copy $(Sdir)\LIB\APRES.OBJ $(Tdir)\LIB\APRES.OBJ
+
+$(Tdir)\LIB\GOLDFOOD.OBJ : $(Sdir)\LIB\GOLDFOOD.OBJ
+	copy $(Sdir)\LIB\GOLDFOOD.OBJ $(Tdir)\LIB\GOLDFOOD.OBJ
+
+$(Tdir)\LIB\SCROLL.OBJ : $(Sdir)\LIB\SCROLL.OBJ
+	copy $(Sdir)\LIB\SCROLL.OBJ $(Tdir)\LIB\SCROLL.OBJ
+
+$(Tdir)\LIB\XLOAD.OBJ : $(Sdir)\LIB\XLOAD.OBJ
+	copy $(Sdir)\LIB\XLOAD.OBJ $(Tdir)\LIB\XLOAD.OBJ
+
+$(Tdir)\LIB\HDOB.OBJ : $(Sdir)\LIB\HDOB.OBJ
+	copy $(Sdir)\LIB\HDOB.OBJ $(Tdir)\LIB\HDOB.OBJ
+
+$(Tdir)\LIB\GFXFUNC.OBJ : $(Sdir)\LIB\GFXFUNC.OBJ
+	copy $(Sdir)\LIB\GFXFUNC.OBJ $(Tdir)\LIB\GFXFUNC.OBJ
+
+$(Tdir)\LIB\SORT.OBJ : $(Sdir)\LIB\SORT.OBJ
+	copy $(Sdir)\LIB\SORT.OBJ $(Tdir)\LIB\SORT.OBJ
+
+$(Tdir)\LIB\FINDCOL.OBJ : $(Sdir)\LIB\FINDCOL.OBJ
+	copy $(Sdir)\LIB\FINDCOL.OBJ $(Tdir)\LIB\FINDCOL.OBJ
+
+$(Tdir)\LIB\FLC.OBJ : $(Sdir)\LIB\FLC.OBJ
+	copy $(Sdir)\LIB\FLC.OBJ $(Tdir)\LIB\FLC.OBJ
+
+
+# Copy the library files : */
+
+$(Tdir)\LIB\TEXT.LIB : $(Sdir)\LIB\TEXT.LIB
+	copy $(Sdir)\LIB\TEXT.LIB $(Tdir)\LIB\TEXT.LIB
+
+$(Tdir)\LIB\ZOOMFUNC.LIB : $(Sdir)\LIB\ZOOMFUNC.LIB
+	copy $(Sdir)\LIB\ZOOMFUNC.LIB $(Tdir)\LIB\ZOOMFUNC.LIB
+
+$(Tdir)\LIB\3DM.LIB : $(Sdir)\LIB\3DM.LIB
+	copy $(Sdir)\LIB\3DM.LIB $(Tdir)\LIB\3DM.LIB
+
+
+# Copy the other files : */
+
+$(Tdir)\GAME\MAKEFILE : $(Sdir)\GAME\MAKEFILE
+	copy $(Sdir)\GAME\MAKEFILE $(Tdir)\GAME\MAKEFILE
+
+
+!ifeq User Jurie
+
+# Copy special files : */
+
+$(Tdir)\LIB\DLLLOAD.OBJ : G:\AIL\AIL_303\DLLLOAD.OBJ
+	copy G:\AIL\AIL_303\DLLLOAD.OBJ $(Tdir)\LIB\DLLLOAD.OBJ
+
+$(Tdir)\LIB\BBMEM.LIB : G:\PCLIB32\LIB\BBMEM.LIB
+	copy G:\PCLIB32\LIB\BBMEM.LIB $(Tdir)\LIB\BBMEM.LIB
+
+$(Tdir)\LIB\AIL.LIB : G:\AIL\AIL_303\AIL.LIB
+	copy G:\AIL\AIL_303\AIL.LIB $(Tdir)\LIB\AIL.LIB
+
+$(Tdir)\LIB\PCBASE.LIB : G:\PCLIB32\LIB\PCBASE.LIB
+	copy G:\PCLIB32\LIB\PCBASE.LIB $(Tdir)\LIB\PCBASE.LIB
+
+# Copy files back : */
+
+$(Sdir)\GAME\COMMAGIC\COMMAG0.C : $(Bdir)\GAME\COMMAGIC\COMMAG0.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMAG0.C $(Sdir)\GAME\COMMAGIC\COMMAG0.C
+
+$(Sdir)\GAME\COMMAGIC\COMMAG1.C : $(Bdir)\GAME\COMMAGIC\COMMAG1.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMAG1.C $(Sdir)\GAME\COMMAGIC\COMMAG1.C
+
+$(Sdir)\GAME\COMMAGIC\COMMAG2.C : $(Bdir)\GAME\COMMAGIC\COMMAG2.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMAG2.C $(Sdir)\GAME\COMMAGIC\COMMAG2.C
+
+$(Sdir)\GAME\COMMAGIC\COMMAG3.C : $(Bdir)\GAME\COMMAGIC\COMMAG3.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMAG3.C $(Sdir)\GAME\COMMAGIC\COMMAG3.C
+
+$(Sdir)\GAME\COMMAGIC\COMMAG5.C : $(Bdir)\GAME\COMMAGIC\COMMAG5.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMAG5.C $(Sdir)\GAME\COMMAGIC\COMMAG5.C
+
+$(Sdir)\GAME\COMMAGIC\COMMSUB.C : $(Bdir)\GAME\COMMAGIC\COMMSUB.C
+	copy $(Bdir)\GAME\COMMAGIC\COMMSUB.C $(Sdir)\GAME\COMMAGIC\COMMSUB.C
+
+$(Sdir)\LIB\COMMAGIC.H : $(Bdir)\LIB\COMMAGIC.H
+	copy $(Bdir)\LIB\COMMAGIC.H $(Sdir)\LIB\COMMAGIC.H
+
+$(Sdir)\LIB\COMMSUB.H : $(Bdir)\LIB\COMMSUB.H
+	copy $(Bdir)\LIB\COMMSUB.H $(Sdir)\LIB\COMMSUB.H
+
+!else
+
+
+# Copy special files : */
+
+$(Tdir)\LIB\DLLLOAD.OBJ : $(Sdir)\LIB\DLLLOAD.OBJ
+	copy $(Sdir)\LIB\DLLLOAD.OBJ $(Tdir)\LIB\DLLLOAD.OBJ
+
+$(Tdir)\LIB\BBMEM.LIB : $(Sdir)\LIB\BBMEM.LIB
+	copy $(Sdir)\LIB\BBMEM.LIB $(Tdir)\LIB\BBMEM.LIB
+
+$(Tdir)\LIB\AIL.LIB : $(Sdir)\LIB\AIL.LIB
+	copy $(Sdir)\LIB\AIL.LIB $(Tdir)\LIB\AIL.LIB
+
+$(Tdir)\LIB\PCBASE.LIB : $(Sdir)\LIB\PCBASE.LIB
+	copy $(Sdir)\LIB\PCBASE.LIB $(Tdir)\LIB\PCBASE.LIB
+
+# Copy files back : */
+
+$(Bdir)\GAME\COMMAGIC\COMMAG0.C : $(Tdir)\GAME\COMMAGIC\COMMAG0.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMAG0.C $(Bdir)\GAME\COMMAGIC\COMMAG0.C
+
+$(Bdir)\GAME\COMMAGIC\COMMAG1.C : $(Tdir)\GAME\COMMAGIC\COMMAG1.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMAG1.C $(Bdir)\GAME\COMMAGIC\COMMAG1.C
+
+$(Bdir)\GAME\COMMAGIC\COMMAG2.C : $(Tdir)\GAME\COMMAGIC\COMMAG2.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMAG2.C $(Bdir)\GAME\COMMAGIC\COMMAG2.C
+
+$(Bdir)\GAME\COMMAGIC\COMMAG3.C : $(Tdir)\GAME\COMMAGIC\COMMAG3.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMAG3.C $(Bdir)\GAME\COMMAGIC\COMMAG3.C
+
+$(Bdir)\GAME\COMMAGIC\COMMAG5.C : $(Tdir)\GAME\COMMAGIC\COMMAG5.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMAG5.C $(Bdir)\GAME\COMMAGIC\COMMAG5.C
+
+$(Bdir)\GAME\COMMAGIC\COMMSUB.C : $(Tdir)\GAME\COMMAGIC\COMMSUB.C
+	copy $(Tdir)\GAME\COMMAGIC\COMMSUB.C $(Bdir)\GAME\COMMAGIC\COMMSUB.C
+
+$(Bdir)\LIB\COMMAGIC.H : $(Tdir)\LIB\COMMAGIC.H
+	copy $(Tdir)\LIB\COMMAGIC.H $(Bdir)\LIB\COMMAGIC.H
+
+$(Bdir)\LIB\COMMSUB.H : $(Tdir)\LIB\COMMSUB.H
+	copy $(Tdir)\LIB\COMMSUB.H $(Bdir)\LIB\COMMSUB.H
+
+!endif
+

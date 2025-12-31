@@ -1,0 +1,24 @@
+.ERASE
+
+Sdir = C:\WORK\SORT
+Ldir = C:\WORK\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir)\SORT.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Sdir)\SORTTEST.EXE : $(Sdir)\SORTTEST.OBJ $(Ldir)\SORT.OBJ
+	$(Linker) FILE {SORTTEST.OBJ $(Ldir)\SORT.OBJ} NAME SORTTEST.EXE
+
+$(Sdir)\SORTTEST.OBJ : $(Sdir)\SORTTEST.C $(Header_files)
+	$(Compiler) SORTTEST.C
+
+$(Ldir)\SORT.OBJ : $(Sdir)\SORT.C $(Header_files)
+	$(Compiler) SORT.C -fo$(Ldir)\SORT.OBJ
+

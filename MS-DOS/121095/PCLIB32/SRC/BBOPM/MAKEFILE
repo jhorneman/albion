@@ -1,0 +1,13 @@
+!include ..\OPTIONS
+
+# linken
+..\..\LIB\BBOPM.obj:	OBJS\OPM_ass.obj &
+      			OBJS\FNT_ass.obj &
+      			OBJS\BBOPM.obj
+	*wlib -b -n ..\..\lib\BBOPM.obj +OBJS\OPM_ass.obj +OBJS\FNT_ass.obj +OBJS\BBOPM.obj
+
+# compilieren
+OBJS\BBOPM.obj: BBOPM.c $(OPTION) .AUTODEPEND
+OBJS\OPM_ass.obj: OPM_ass.asm $(OPTIONASM) .AUTODEPEND
+OBJS\FNT_ass.obj: FNT_ass.asm $(OPTIONASM) .AUTODEPEND
+

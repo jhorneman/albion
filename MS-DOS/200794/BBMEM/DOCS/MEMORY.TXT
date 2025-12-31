@@ -1,0 +1,343 @@
+DYNAMIC MEMORY MANAGER
+by Jurie Horneman
+
+Introduction
+The goal of this document is to explain the concepts and functions of the dynamic memory manager as 
+implemented in DDT on the Amiga and to propose changes and improvements which will turn it into a 
+memory manager which can be used by the entire development staff at Blue Byte.
+
+This document is written is in English to avoid misunderstandings caused by my use of the German 
+language. The function and variable names used in this document are the ones I have used until now. I 
+do not insist on these names but only use them because it is easier.
+
+Constraints of the new memory manager :
+1.	All memory (that is to be used by the memory manager) must be allocated once when the memory 
+manager is initialized and won´t be returned until the memory manager is terminated.
+2.	All memory must have a linear structure (flat memory model). Although segmented memory can be 
+supported, single memory blocks can´t be longer than one memory segment.
+3.	It should be possible to distinguish real memory from virtual memory. Virtual memory can be 
+supported by creating a new memory type and writing special allocation passes, but I don´t know if 
+this is very useful.
+4.	The memory address space may not exceed 4 Gigabyte (32-bit addresses).
+5.	All memory manager arrays are static and not dynamic. The maximum number of memory areas, 
+memory handles or memory list entries cannot be changed without re-compiling.
+
+Capabilities of the new memory manager :
+1.	The machine-specific details of memory management are hidden from the application.
+2.	Memory is managed dynamically. Efficient use of memory is ensured by intelligent allocation 
+methods.
+3.	Memory blocks can be re-allocated transparently and can be kept in memory after de-allocation.
+4.	An interface between the memory manager and the application is provided which enables the 
+application to deal with memory shortage on a very high level (see Allocation passes).
+5.	The internal consistency of the memory manager variables can be checked.
+6.	Wrong use of memory by the application can be detected.
+7.	It is possible to ignore "advanced" functions such as memory types, garbage collection and 
+persistent memory blocks without much overhead, so that the memory manager can be easily used 
+in small projects. On the other hand, the memory manager is powerful enough to be used in large 
+projects.
+
+
+Concepts
+Memory area
+A large block of memory to be managed by the memory manager.
+All memory areas are allocated when a workspace is initialized, and are then sub-divided into memory 
+blocks when needed by the application. The maximum number of memory areas is determined by a 
+constant called Max_memory_areas. The advantages of being able to manage more than one memory 
+area are :
+1.	All memory can be used efficiently on platforms which have a dynamic memory manager 
+implemented in the OS, because memory may be fragmented when the application is started 
+(examples : Windows, Mac, Amiga).
+2.	It is possible to manage more than one type of memory (examples : Windows virtual memory, 
+Amiga´s chip and fast RAM, Atari TT´s ST and TT RAM).
+The overhead of managing more than one memory area is low. The application will never have 
+anything to do with memory areas.
+
+Memory workspace
+One or more memory areas which form one unit. Although allocation passes may copy memory blocks 
+from one area to another, they can never copy from workspace to another workspace.
+
+Memory block
+The units managed by the memory manager.
+In the beginning, each memory area consists of one memory block, which is then split again and again 
+whenever the application requires memory. Memory blocks may have the state allocated, non-
+allocated or free.
+
+Persistent memory block
+A persistent memory block behaves much like a normal memory block except that it isn´t destroyed 
+when it is freed.
+It is marked non-allocated and will only be destroyed by high-priority allocation passes (i.e. when there 
+is not enough free memory for the application). File loading can be sped up dramatically by first 
+checking whether a file is already (or rather, still) in memory. Any extra RAM the user of the application 
+has is used with maximum efficiency.
+The use of persistent memory blocks has the following implications :
+1.	Extra information is needed for each persistent memory block, so that it can be identified and found 
+again.
+2.	It should be possible to avoid the automatic re-allocation for two reasons :
+a.	Once a memory block has been changed, it usually becomes "invalid", i.e. when you load it 
+again you want the disk version and not the one that is still hanging around in memory.
+b.	When you want to load the same file more than once and then modify each in different 
+ways, it is quite disastrous if the memory manager returns the same memory block´s 
+handle every time.
+3.	Garbage collections will occur more often.
+Persistent memory blocks require more data then normal memory blocks. This data is associated with 
+the memory handle.
+
+Memory list
+The linked list of memory block descriptors belonging to one memory area. The memory area 
+descriptor is always at the head of the memory list, followed by at least one memory block descriptor.
+
+Memory entry
+A memory block descriptor which may or may not be a part of a memory list. There is a fixed number of 
+memory entries (determined by a constant called Max_memory_entries), which are organized as an 
+array.
+
+Memory handle
+For garbage collection to work, the application cannot reference memory directly because memory 
+blocks may be moved around without the application´s knowing. This is why the memory allocation 
+function returns handles instead of pointers. Whenever the application wants to use a memory block, it 
+must claim it´s handle. A 32-bit pointer will be returned which can be used in the normal manner. 
+Should a garbage collection occur, claimed memory blocks won´t be moved around. When the 
+application is done with the memory block, it must free the handle.
+The memory handle mechanism causes a bit of overhead speed-wise, which is why the Claim_pointer  
+function should be as fast as possible. The application should be written in such a way that as few 
+handles as possible are claimed when new memory blocks are allocated.
+Each non-free block of memory has it´s own unique handle. The maximum number of handles is 
+determined by a constant called Max_memory_handles.
+Since a handle may be claimed more than once, a claim counter is used to determine how often a 
+handle has been claimed.
+
+Memory allocation
+The central function of the memory manager and the one which is the most complex. This function tries 
+to find memory of the length (and type) desired by the application.
+
+Allocation passes
+These are the different methods used by the memory allocation function to get the desired memory. 
+Initial passes simply try to find a free memory block. Later passes may involve garbage collection, 
+moving memory blocks around or destroying non-allocated persistent memory blocks. The application 
+may have it´s own allocation passes which perform high-level memory-saving actions such as 
+removing files not in use at the moment, switching off music, etc.
+Each allocation pass has a priority which indicates how radical the operation is going to be.
+
+
+Structure of the memory manager
+Machine-dependent functions
+Consists of Get_all_memory, which tries to get as much memory as possible from the OS and initializes 
+the memory area structures and Free_all_memory, which returns all the memory areas to the OS.
+These functions must be rewritten for each platform.
+
+Memory initialization functions
+These functions take care of all initializations (see below).
+
+Memory list manipulation functions
+Consists of Find_free_entry, Add_entry and Delete_entry. By using these functions, memory list 
+manipulation errors are minimized.
+
+Memory handle manipulation functions
+Consists of functions for creating and destroying memory handles and quickly finding the memory entry 
+associated with a memory handle.
+
+Memory allocation functions
+This is the largest and most complex part of the memory manager. Various functions such as garbage 
+collection and area analysis are needed by the allocation passes.
+
+Public functions
+Consists of various functions, such as Kill_memory, which provide services to the application and don´t 
+have a direct relationship with any internal parts of the memory manager.
+
+Self-check and debugging functions
+See below.
+
+
+Public functions of the memory manager
+General memory manager functions
+void MEM_Init_memory ()
+Initializes the memory manager. This function will call MEM_Get_all_memory. All memory will 
+be snatched away from the OS. Workspace #0 will be initialized automatically.
+void MEM_Exit_memory ()
+Exits the memory manager. This function will call MEM_Free_all_memory.
+void MEM_Reset_memory ()
+Resets the memory manager. All areas and workspaces are cleared and all data structures are 
+reset.
+
+USHORT MEM_Add_workspace (ULONG size, UBYTE memory_types)
+Initializes a workspace and returns the workspace number.
+void MEM_Delete_workspace (USHORT workspace_number)
+Terminates a workspace.
+void MEM_Reset_workspace (USHORT workspace_number)
+Resets a workspace. All areas are cleared.
+
+void MEM_Push_workspace (USHORT workspace_number)
+Pushes a new workspace on the workspace stack.
+void MEM_Pop_workspace ()
+Pops a workspace from the top of the workspace stack.
+void MEM_Change_workspace (USHORT workspace_number)
+Changes the workspace number at the top of the workspace stack.
+
+USHORT MEM_Allocate_memory (ULONG size, UBYTE memory_type)
+Tries to find a block of memory and returns a memory handle.
+void MEM_Shrink_memory (USHORT memory_handle, ULONG new_size)
+Shrinks a block of memory to a new size without copying (!).
+void MEM_Expand_memory (USHORT memory_handle, ULONG new_size)
+Expands a block of memory to a new size by copying the current contents to a larger block.
+void MEM_Free_memory (USHORT memory_handle)
+Indicates a block of memory is no longer needed by the application.
+void MEM_Clear_memory (USHORT memory_handle)
+Clears a memory block.
+ULONG MEM_Get_memory_length (USHORT memory_handle)
+Returns the length of a memory block.
+UBYTE MEM_Ask_memory (ULONG size, UBYTE memory_type, USHORT 
+maximum_allocation_priority)
+Ask if memory is available. TRUE or FALSE is returned.
+
+UBYTE *MEM_Claim_pointer (USHORT memory_handle)
+Returns the pointer to the memory block and increases the claim counter for this handle.
+void MEM_Free_pointer (USHORT memory_handle)
+Decreases the claim counter for this handle.
+UBYTE *MEM_Get_pointer (USHORT memory_handle)
+Returns the pointer to the memory block associated with the handle.
+
+Persistent memory functions
+USHORT MEM_Reallocate_memory (struct File_type *file_type, USHORT file_index, USHORT 
+file_subindex)
+Tries to find and re-allocate a persistent memory block. Returns a memory handle or 0 if the 
+persistent memory block wasn´t found.
+USHORT MEM_Duplicate_memory (struct File_type *file_type, USHORT file_index, USHORT 
+file_subindex)
+Tries to find and make another copy of a persistent memory block. Returns a memory handle or 
+0 if the persistent memory block wasn´t found.
+USHORT MEM_Allocate_persistent_memory (ULONG size, struct File_type *file_type, USHORT 
+file_index, USHORT file_subindex)
+Calls MEM_Allocate_memory and then inserts persistent memory data. Returns a memory 
+handle.
+USHORT MEM_Kill_memory (USHORT memory_handle)
+A memory block´s state is set to free memory (it won´t be re-allocated). Non-persistent 
+memory blocks are automatically killed by MEM_Free_memory.
+void MEM_Invalidate_memory (USHORT memory_handle)
+Indicates a memory block should not be re-allocatable after it is freed. MEM_Free_memory will 
+kill this memory block. 
+
+
+Data structures
+
+struct Memory_entry {
+	UBYTE *Start;				/* Start address */
+	ULONG Size;					/* Size, 0 means free block */
+	struct Memory_entry * Previous;	/* Always NULL for areas */
+	struct Memory_entry * Next;		/* NULL means end of list */
+	union {
+		struct {
+			UBYTE xArea_number;	/* Area number */
+			UBYTE xMemory_type;	/* Memory type */
+		} xArea_info;
+		struct {
+			USHORT xBlock_handle;	/* Handle number */
+		} xBlock_info;
+	} xInfo;
+};
+
+#define AREA_NUMBER	xInfo.xArea_info.xArea_number
+#define MEMORY_TYPE	xInfo.xArea_info.xMemory_type
+#define BLOCK_HANDLE	xInfo.xBlock_info.xBlock_handle
+
+struct Memory_handle {
+	UBYTE Flags;
+	UBYTE Priority;
+	UBYTE Claim_counter;
+	UBYTE Load_counter;
+	UBYTE Length_low_byte;
+	ULONG File_ID;
+	ULONG File_index;
+	struct Memory_entry *Entry_ptr;	/* NULL means free handle */
+};
+
+#define ALLOCATED	0x01              	/* Bitmasks for Memory_handle.Flags */
+#define INVALID	0x02
+#define CHECKED	0x04
+
+struct File_type {
+	ULONG File_ID;
+	void (*Relocator)();
+	UBYTE Memory_type;
+	UBYTE Flags;
+};
+
+struct Memory_workspace {
+	USHORT Nr_of_areas;
+	struct Memory_entry Areas[MEMORY_AREAS_MAX];
+};
+
+
+Debugging and self-checking
+
+The following checks can be made for each memory area :
+1.	If all memory blocks lie within the memory area (address calculation error).
+2.	If all memory entries lie within the memory entries array (linked list error).
+3.	If circular links or links to other memory lists exist (linked list error).
+4.	If all memory blocks in one area form one consistent whole (address calculation error).
+
+The following debugging aids are available :
+1.	Free memory is filled with 0xC0DEDBAD.
+2.	Allocated memory is filled with 0xABADCAFE.
+3.	Killed memory is filled with 0xDEADFACE.
+4.	Allocated memory blocks are preceded by 0xDEADBEEF and followed by 0xDEADF00D, 
+repeated several times. Additional information, such as the allocating module, can be inserted.
+These hex values were chosen because they are a) unlikely, b) probably lethal when used wrongly and 
+c) easily recognizable in hex debuggers.
+
+Multi-level debugging information and error reporting is supported.
+
+
+Persistent memory data
+
+I strongly recommend that we use the following scheme for the persistent memory data :
+1.	Four bytes of file ID 
+2.	Four bytes index
+This scheme supports a library- (or Omnifile-) type file organization, where a lot of files of the same 
+type are joined together in one big file.
+
+The greatest advantage is the fact that certain data can be associated directly with a file type. An 
+example from DDT Amiga : per file type the following data was defined  :
+1.	Priority (see below).
+2.	Memory type.
+3.	Unpacking offset .
+4.	A pointer to a relocation function (see below).
+Other information could be flags which indicate whether memory blocks should be invalidated always, 
+never or automatically (by calculating a checksum).
+
+The priority gives the application greater control over which file types are removed first. Various 
+allocation passes will "drown" non-allocated persistent memory blocks depending on their priority. 
+Some file types are needed extremely rarely and are given priority 0, others are needed almost all the 
+time but should be discardable when memory is tight and are given maximum priority. As an example :  
+the screen layouts in Ambermoon were implemented as packed pictures with a very high priority.
+
+I have experimented with aging techniques which ensure that older files are discarded earlier (very 
+practical in RPGs), but I haven´t come up with the most efficient technique yet. It may be practical to let 
+the application handle this so the best aging method can always be selected and persistent memory 
+aging can even be left out.
+
+Some file types cannot be simply moved around but must be properly relocated. Examples are music 
+files which are being played, large special-purpose buffers and of course program parts. This is why a 
+pointer to a relocator is defined for each file type. If this pointer is NULL, this file type cannot be 
+relocated, if the file type can be moved around without any problems, the pointer points to the usual 
+Copy_memory function. In this way maximum flexibility is ensured.
+
+
+Problems
+
+- Multiple workspaces mean an extra parameter for some functions.
+- File-loading routines must be adapted for efficient loading / memory use.
+
+  In relation to claiming, I use the terms handle, pointer and memory block at will. I assume this won´t 
+cause any confusion since all three are in fact claimed.
+  I use "file" because a) persistent memory blocks will usually contain files and b) it is a more distinctive 
+term than "persistent memory type".
+  Additionally the filename and, in Ambermoon, the disk number was defined in relation to the file type, 
+but this has nothing to do with the memory manager.
+  The packer I used needed this as a parameter : it indicates how far the data should be copied up so 
+that the unpacked data won´t overwrite the packed data. Obviously,  well-packed data needs a higher 
+unpacking offset and the file-handling routines need this value to determine how much memory must 
+be allocated.
+
+Blue Byte technical information	1	19.05.94 17:47
+
+

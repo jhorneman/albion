@@ -1,0 +1,1439 @@
+/************
+ * NAME     : BBDOS.c
+ * AUTOR    : Viper, BlueByte
+ * START    : 07.06.94 18:00
+ * PROJECT  : Poject32/Macintosh
+ * NOTES    :
+ * SEE ALSO :
+ * VERSION  : 1.0
+ ************/
+
+/* Includes */
+
+#include <BBDEF.h>
+
+#include <BBDOS.h>
+#include "include/dosintrn.h"
+
+#include <BBBASMEM.H>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include	<sys\types.h>
+#include	<sys\stat.h>
+#include	<fcntl.h>
+#include  <io.h>
+#include  <ctype.h>
+
+#include <errno.h>
+
+#include <dos.h>
+#include <direct.h>
+
+#ifdef BBDOS_ERRORHANDLING
+	#include <BBERROR.h>
+	#include <stdio.h>
+#endif
+
+
+/* Global variables */
+
+/* DOS Library status */
+BOOLEAN DOS_Library_Status = FALSE;
+
+/* Internal file handling structure array */
+struct BBDOS_FileHandleStruct BBDOS_FileHandleArray[ BBDOS_MAXFILES ];
+
+/* Seekmodes */
+int BBDOS_PcSeekModes[ BBDOS_SEEKMODES ] =
+{
+	SEEK_CUR,		/* Seek from current position */
+	SEEK_SET,	/* Seek from start of file */
+	SEEK_END		/* Seek from end of file */
+};
+
+
+/* Error handling */
+#ifdef BBDOS_ERRORHANDLING
+
+	/* Name of Library */
+	char BBDOS_LibraryName[] = "BBDOS Library";
+
+	/* Hier werden alle Filenamen von BBDOS_OPEN eingetragen die offen sind */
+	char BBDOS_filenames[ BBDOS_MAXFILES ][128];
+
+	/* Hier werden alle Filenamen von BBDOS_OPEN eingetragen die offen sind */
+	char errorfilenames[ BBDOS_MAXERRORFILES ][128];
+
+	/* ZÑhler fÅr Momentanes File */
+	UNLONG errorfilecount=0;
+
+#endif
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Init
+ * FUNCTION  : Initialize DOS library and structures.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 07.06.94 18:00
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : FALSE: Error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DOS_Init( void )
+{
+
+	/* Error handling */
+	#ifdef BBDOS_ERRORHANDLING
+		errorfilecount=0;
+	#endif
+
+	/* BasememLibrary wird benîtigt */
+	if(!BASEMEM_Init()){
+
+		/* Error while initing BASEMEM ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname = "DOS_Init: Cannot init BASEMEM";
+			error.errorfile = " ";
+			error.errordata	= 0;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+		return(FALSE);
+	}
+
+	/* Library already initialised ? */
+	if( DOS_Library_Status ){
+		/* Yes: nothing to do */
+		return(TRUE);
+	}
+
+	{
+		/* Local vars */
+		UNSHORT i;
+		struct BBDOS_FileHandleStruct * fht_ptr;
+
+		/* Set all entries free */
+
+		fht_ptr = &BBDOS_FileHandleArray[0];
+		for( i=0; i<BBDOS_MAXFILES; i++, fht_ptr++ )
+			fht_ptr->status = BBDOSFILESTAT_FREE;
+
+	}
+
+	/* Library initialisiert */
+	DOS_Library_Status=TRUE;
+
+	/* We got it */
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Exit
+ * FUNCTION  : Exit DOS library.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 07.06.94 18:00
+ * LAST      :
+ * INPUTS    : None.
+ * RESULT    : FALSE: Error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+DOS_Exit( void )
+{
+	/* Library initialised ? */
+	if( !DOS_Library_Status ){
+		/* No: nothing to do */
+		return;
+	}
+
+	{
+		/* Local vars */
+
+		UNSHORT i;
+		struct BBDOS_FileHandleStruct * fht_ptr;
+
+		/* Close all files */
+
+		fht_ptr = &BBDOS_FileHandleArray[0];
+		for( i=0; i<BBDOS_MAXFILES; i++, fht_ptr++ )
+		{
+			/* Is file opened ? */
+
+			if ( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+			{
+				/* No: go on */
+
+				continue;
+			}
+
+
+			/* Close file */
+
+			DOS_Close( i );
+		}
+	}
+
+	/* Library nicht initialisiert */
+	DOS_Library_Status=FALSE;
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Open
+ * FUNCTION  : Open a file.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * filenamptr: Pointer to filename.
+ *             UNSHORT mode: File mode.
+ * RESULT    : SISHORT id, -1 error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SISHORT
+DOS_Open( UNCHAR * filenameptr, UNSHORT filemode )
+{
+	/* Local vars */
+
+	SISHORT fht_id;
+	struct BBDOS_FileHandleStruct * fht_ptr;
+
+	short refNum;
+
+	short	mode;
+
+	/* Search a free entry */
+
+	fht_ptr = &BBDOS_FileHandleArray[0];
+	for( fht_id=0; fht_id<BBDOS_MAXFILES; fht_id++, fht_ptr++ )
+		if ( fht_ptr->status == BBDOSFILESTAT_FREE )
+			break;
+
+	if( fht_id == BBDOS_MAXFILES )
+	{
+		/* Error while getting vRefNum ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Open: No free entry";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= 0;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+
+		/* Error */
+		return( -1 );
+	}
+
+	switch(filemode){
+		case BBDOSFILESTAT_READ:
+			mode=O_RDONLY|O_BINARY;
+			break;
+		case BBDOSFILESTAT_WRITE:
+			mode=O_WRONLY|O_CREAT|O_TRUNC|O_BINARY;
+			break;
+		case BBDOSFILESTAT_READWRITE:
+			mode=O_RDWR|O_BINARY;
+			break;
+		case BBDOSFILESTAT_APPEND:
+			mode=O_WRONLY|O_APPEND|O_BINARY;
+			break;
+	}
+
+	/* Open file */
+
+	if (mode & O_APPEND)
+		refNum =  open( filenameptr, mode , S_IRWXU | S_IRWXG | S_IRWXO);
+	else if(mode & O_CREAT)
+		refNum =  open( filenameptr, mode , S_IRWXU | S_IRWXG | S_IRWXO);
+	else
+		refNum =  open( filenameptr, mode);
+
+	if(refNum == -1 )
+	{
+		/* Error while openning file ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Open: open() oserror";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= 0;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Error */
+		return( -1 );
+	}
+
+	/* Set file handle table entry */
+	fht_ptr->status = BBDOSFILESTAT_OPEN | filemode;
+	fht_ptr->refNum = refNum;
+
+	/* Wenn ERRORLIB aktiv Filenamen eintragen */
+	#ifdef BBDOS_ERRORHANDLING
+		strcpy(&BBDOS_filenames[fht_id][0],filenameptr);
+	#endif
+
+	/* Return file handle tab id */
+	return( fht_id );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Close
+ * FUNCTION  : Close file
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : SISHORT fh: file handle tab entry.
+ * RESULT    : BOOLEAN false: error: file was not open.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DOS_Close( SISHORT fh )
+{
+	/* Local vars */
+	struct BBDOS_FileHandleStruct * fht_ptr;
+
+	/* Get pointer to file handle structure */
+	fht_ptr = &BBDOS_FileHandleArray[fh];
+
+	/* File opened ? */
+	if( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+	{
+		/* No ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Close: File is not open";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+
+		/* Error */
+		return( FALSE );
+	}
+
+	/* Close file */
+	close( fht_ptr->refNum );
+
+	fht_ptr->status = BBDOSFILESTAT_FREE; /* wieder freigeben */
+
+	/* Ok */
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Read
+ * FUNCTION  : Read a given number of bytes from an opened file.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : SISHORT fh: File handle tab entry.
+ *             UNBYTE * bufptr: Pointer to buffer to load to.
+ *             UNLONG bytestoread: Number of bytes to read.
+ * RESULT    : SILONG Number of bytes read, -1 error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SILONG
+DOS_Read( SISHORT fh, UNBYTE * bufptr, UNLONG bytestoread )
+{
+	/* Local vars */
+	struct	BBDOS_FileHandleStruct * fht_ptr;
+	long	bytesread;
+
+	/* Get pointer to file handle structure */
+	fht_ptr = &BBDOS_FileHandleArray[fh];
+
+	/* File opened ? */
+	if( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+	{
+		/* File not oppened ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Read: File not open";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+
+		/* Error ! */
+		return( -1L );
+	}
+
+	/* Try to read */
+	if( ( bytesread =  read( fht_ptr->refNum, bufptr, bytestoread ) ) != bytestoread )
+	{
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Read: read() oserror";
+			strcpy(&errorfilenames[errorfilecount][0],&BBDOS_filenames[fh][0]);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+
+		/* Error ! */
+		return( -1 );
+	}
+
+	/* Ok: return number of bytes read */
+	return( bytesread );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Write
+ * FUNCTION  : Write a given number of bytes to an opened file.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 11.06.94 12:30
+ * LAST      :
+ * INPUTS    : SISHORT fh: File handle tab entry.
+ *             UNBYTE * bufptr: Pointer to buffer to write from.
+ *             UNLONG bytestoread: Number of bytes to write.
+ * RESULT    : SILONG Number of bytes written, -1 error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SILONG
+DOS_Write( SISHORT fh, UNBYTE * bufptr, UNLONG bytestowrite )
+{
+	/* Local vars */
+	struct	BBDOS_FileHandleStruct * fht_ptr;
+	long	byteswrote;
+
+
+	/* Get pointer to file handle structure */
+	fht_ptr = &BBDOS_FileHandleArray[fh];
+
+
+	/* File opened ? */
+	if( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+	{
+		/* File not oppened ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Write: File not open";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Error ! */
+		return( -1L );
+	}
+
+	/* Try to read */
+	if( ( byteswrote =  write( fht_ptr->refNum, bufptr, bytestowrite ) ) == -1 )
+	{
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Write: write() oserror";
+			strcpy(&errorfilenames[errorfilecount][0],&BBDOS_filenames[fh][0]);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+		/* Error ! */
+		return( -1 );
+	}
+
+	/* Ok: return number of bytes written to file */
+	return(byteswrote);
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Seek
+ * FUNCTION  : Set offset to a given position
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 11.06.94 12:45
+ * LAST      :
+ * INPUTS    : SISHORT fh: file handle.
+ *             UNSHORT seekmode: seek mode (->BB_DOS.h)
+ *             SILONG offset: Position offset.
+ * RESULT    : BOOLEAN: FALSE error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DOS_Seek( SISHORT fh, UNSHORT seekmode, SILONG offset )
+{
+	/* Local vars */
+	struct	BBDOS_FileHandleStruct * fht_ptr;
+
+	/* Get pointer to file handle structure */
+	fht_ptr = &BBDOS_FileHandleArray[fh];
+
+	/* File opened ? */
+	if( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+	{
+		/* File not oppened ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Seek: File not open";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Error ! */
+		return( FALSE );
+	}
+
+	/* Set file pos */
+	if( lseek( fht_ptr->refNum, offset,BBDOS_PcSeekModes[seekmode] ) == -1 )
+	{
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_Seek: SetFPos() oserror";
+			strcpy(&errorfilenames[errorfilecount][0],&BBDOS_filenames[fh][0]);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+		/* Error ! */
+		return( FALSE );
+	}
+
+	/* O.k. */
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_ReadFile
+ * FUNCTION  : Read a complete file.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * filenameptr: Pointer to filename.
+ *             UNBYTE * filebufferptr: Pointer to buffer or NULL.
+ #             UNBYTE * ioptr: Pointer to io buffer (if NULL: we temporary allocate an io buffer).
+ * RESULT    : Pointer to file, NULL error.
+ * BUGS      :
+ * NOTES     : ioptr wird in dieser Version der Library ignoriert
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+UNBYTE *
+DOS_ReadFile( UNCHAR * filenameptr, UNBYTE * filebufferptr, UNBYTE * ioptr )
+{
+	/* Local vars */
+	SISHORT		fh;
+	SILONG		filelength;
+	UNSHORT		flagset;
+
+	/* Init flag set */
+	flagset = 0;
+
+	/* Get length of file */
+	if( ( filelength = DOS_GetFileLength( filenameptr ) ) < 0 )
+	{
+		/* OS Error occured */
+
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_ReadFile: DOS_GetFileLength() error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= 0;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+
+		/* Error ! */
+		return( NULL );
+	}
+
+	/* File buffer given ? */
+	if( filebufferptr == NULL )
+	{
+		/* No: allocate buffer for file */
+		if( ( filebufferptr = BASEMEM_Alloc( filelength, BASEMEM_Status_Normal ) ) == NULL )
+		{
+			/* No memory for file buffer ! */
+			#ifdef BBDOS_ERRORHANDLING
+
+			{
+				/* Local vars */
+				struct BBDOS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname	= "DOS_ReadFile: No Mem for File Buf";
+				strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+				error.errorfile=&errorfilenames[errorfilecount++][0];
+				if(errorfilecount>=BBDOS_MAXERRORFILES)
+					errorfilecount=0;
+				error.errordata	= filelength;
+				error.erroros	= 0;
+
+				/* Push error on stack */
+				ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+			}
+
+			#endif
+
+			/* Error ! */
+			return( NULL );
+		}
+
+		/* Set flag for allocated file buffer */
+		flagset |= 1;
+	}
+
+	/* Open file */
+	if( ( fh = DOS_Open( filenameptr, BBDOSFILESTAT_READ ) ) < 0 )
+	{
+		/* Error occured while openning file */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_ReadFile: xxx DOS_Open() error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Free file buffer if allocated */
+		if( flagset & 1 )
+			BASEMEM_Free( filebufferptr );
+
+		/* Return */
+		return( NULL );
+	}
+
+	/* Read file */
+	if( DOS_Read( fh, filebufferptr, filelength ) < 0 )
+	{
+		/* Error occured while reading file */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+
+			error.errorname	= "DOS_ReadFile: DOS_Read() error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+		/* Close file */
+		DOS_Close( fh );
+
+		/* Return */
+		return( NULL );
+	}
+
+	/* Close file */
+	DOS_Close( fh );
+
+	/* Return pointer to file buffer */
+	return( filebufferptr );
+}
+
+/* #FUNCTION END# */
+
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_WriteFile
+ * FUNCTION  : Write a buffer as a file to disk.
+ * FILE      : BBDOS.C
+ * AUTHOR    : Viper
+ * FIRST     : 06.07.94 14:23
+ * LAST      :
+ * INPUTS    : UNCHAR * filenameptr: Pointer to filename.
+ *           : UNBYTE * filebuffer: Pointer to buffer to write to disk.
+ *             UNLONG filelength: Number of bytes to write to disk.
+ * RESULT    : BOOLEAN false: error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DOS_WriteFile( UNCHAR * filenameptr, UNBYTE * filebufferptr, UNLONG filelength )
+{
+	/* Local vars */
+	SISHORT		fh;
+
+	/* Open file */
+	if((fh = DOS_Open( filenameptr, BBDOSFILESTAT_WRITE)) < 0 )
+	{
+		/* Error occured while openning file */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_WriteFile: DOS_Open() error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Return */
+		return( FALSE );
+	}
+
+	/* Write file */
+	if(DOS_Write(fh, filebufferptr, filelength) < 0 )
+	{
+		/* Error occured while reading file */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_WriteFile: DOS_Write() error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+		}
+		#endif
+
+		/* Close file */
+		DOS_Close( fh );
+
+		/* Return */
+		return( FALSE );
+	}
+
+	/* Close file */
+	DOS_Close( fh );
+
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_Delete
+ * FUNCTION  : Deletes a file.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * filenameptr: pointer to filename.
+ * RESULT    : BOOLEAN false: error.
+ * BUGS      :
+ * NOTES     : Not yet implendet
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN
+DOS_Delete( UNCHAR * filenameptr )
+{
+
+	return( TRUE );
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DOS_GetFileLength
+ * FUNCTION  : Get the length of a file in bytes.
+ * FILE      : BBDOS.C
+ * AUTHOR    : MAVERICK
+ * FIRST     : 03.06.94 18:00
+ * LAST      :
+ * INPUTS    : UNCHAR * filenameptr: pointer to filname.
+ * RESULT    : length of file, -1 error.
+ * BUGS      :
+ * NOTES     :
+ * SEE ALSO  :
+ * VERSION   : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+SILONG
+DOS_GetFileLength( UNCHAR * filenameptr )
+{
+	/* Local vars */
+	SISHORT fh;
+	long length;
+
+	/* Open file */
+	if( ( fh = DOS_Open( filenameptr, BBDOSFILESTAT_READ ) ) < 0 )
+	{
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_GetFileLength: Open error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+		/* Error ! */
+		return( -1 );
+	}
+
+	/* Get end of file mark */
+	if((length=filelength( BBDOS_FileHandleArray[fh].refNum)) == -1 )
+	{
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_GetFileLength: filelength error";
+			strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= fh;
+			error.erroros	= 0;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+		/* Error ! */
+		return( -1 );
+	}
+
+	/* Close file */
+	DOS_Close( fh );
+
+	/* Return file length */
+	return( length );
+
+}
+
+/* #FUNCTION END# */
+
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : DOS_exist
+ * FUNCTION : Funktion stellt fest ob File existiert
+ * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 11.08.95 10:50:57
+ * LAST     : 11.08.95 10:50:57
+ * INPUTS   : UNCHAR *Filename :
+ * RESULT   : TRUE = File existiert / FALSE = File existiert nicht
+ * BUGS     :
+ * NOTES    :
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN DOS_exist(UNCHAR *filenameptr)
+{
+	BOOLEAN Result = TRUE;
+	short ID;
+
+	/* Try to open the file */
+	ID = open(filenameptr, O_RDONLY | O_BINARY);
+
+	/* Failure ? */
+	if (ID == -1)
+	{
+		/* Yes -> File not found ? */
+		if (errno == ENOENT)
+		{
+			/* Yes -> File does not exist */
+			Result = FALSE;
+		}
+		else{
+			/* OS Error occured */
+			#ifdef BBDOS_ERRORHANDLING
+
+			{
+				/* Local vars */
+				struct BBDOS_ErrorStruct error;
+
+				/* Fill out error structure */
+				error.errorname	= "DOS_exists: unknown error";
+				strcpy(&errorfilenames[errorfilecount][0],filenameptr);
+				error.errorfile=&errorfilenames[errorfilecount++][0];
+				if(errorfilecount>=BBDOS_MAXERRORFILES)
+					errorfilecount=0;
+				error.errordata	= 0;
+				error.erroros	= errno;
+
+				/* Push error on stack */
+				ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+			}
+
+			#endif
+
+			Result = FALSE;
+
+		}
+	}
+	else
+	{
+		/* No -> Close file */
+		close(ID);
+	}
+
+	return Result;
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : DOS_getcurrentdir
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 11.08.95 11:01:01
+ * LAST     : 11.08.95 11:01:01
+ * INPUTS   : keine
+ * RESULT   : Zeiger auf Pfad oder NULL fÅr Fehler
+ * BUGS     :
+ * NOTES    :
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+static UNCHAR DOS_getcurrentdir_path[_MAX_PATH];
+
+UNCHAR *DOS_getcurrentdir( void )
+{
+	char *cwd;
+
+	/* Get current working directory */
+	cwd = getcwd(DOS_getcurrentdir_path,_MAX_PATH);
+
+	if(cwd==NULL){
+
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_getcurrentdir: unknown error";
+			strcpy(&errorfilenames[errorfilecount][0],"---");
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= 0;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+
+		#endif
+
+
+		return(NULL);
+	}
+
+	/* Zeiger auf aktuellen Pfad */
+	return(cwd);
+}
+
+/* #FUNCTION END# */
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : DOS_setcurrentdir
+ * FUNCTION :
+ * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 11.08.95 11:12:03
+ * LAST     : 11.08.95 11:12:03
+ * INPUTS   : path : Zeiger auf zu setztenden Pfad
+ * RESULT   : TRUE = OK / FALSE = ERROR
+ * BUGS     :
+ * NOTES    : Achtung !!! der Pfad darf an der rechten Stelle kein '\\' enthalten
+ *						ansonsten wird FALSE zurÅckgeliefert
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN DOS_setcurrentdir(UNCHAR *path)
+{
+	unsigned int dummy;
+	unsigned int drive_nr;
+
+	/* Does the pathname contain a drive letter ? */
+	if (strlen(path) > 2)
+	{
+		if (*(path + 1) == ':')
+		{
+			/* Yes -> Change to this drive */
+		 	drive_nr = (unsigned int) toupper(path[0]) - (unsigned int) 'A' + 1;
+
+			_dos_setdrive(drive_nr, &dummy);
+
+		}
+	}
+
+	/* Change directory */
+	if(chdir(path)==-1){
+		/* OS Error occured */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_setcurrentdir: unknown error";
+			strcpy(&errorfilenames[errorfilecount][0],path);
+			error.errorfile=&errorfilenames[errorfilecount++][0];
+			if(errorfilecount>=BBDOS_MAXERRORFILES)
+				errorfilecount=0;
+			error.errordata	= 0;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+		return(FALSE);
+	}
+
+	return(TRUE);
+}
+
+/* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME     : DOS_eof
+ * FUNCTION : Testet ob Filezeiger sich am Ende Des Files befindet
+ * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
+ * AUTHOR   : Rainer Reber
+ * FIRST    : 11.08.95 11:21:01
+ * LAST     : 11.08.95 11:21:01
+ * INPUTS   : SISHORT fh :
+ * RESULT   : TRUE = Ende Des Files erreicht / FALSE = Ende noch nicht erreicht
+ * BUGS     :
+ * NOTES    :
+ * VERSION  : 1.0
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+BOOLEAN DOS_eof(SISHORT fh)
+{
+	/* Local vars */
+	BOOLEAN result;
+	struct BBDOS_FileHandleStruct * fht_ptr;
+
+	/* Get pointer to file handle structure */
+	fht_ptr = &BBDOS_FileHandleArray[fh];
+
+	/* File opened ? */
+	if( ! ( fht_ptr->status & BBDOSFILESTAT_OPEN ) )
+	{
+		/* File not oppened ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_eof: File not open";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+
+		/* Error ! */
+		return( FALSE );
+	}
+
+	/* Ende des Files erreicht */
+	result = eof(fht_ptr->refNum);
+
+	if(errno==EBADF){
+		/* File not oppened ! */
+		#ifdef BBDOS_ERRORHANDLING
+		{
+			/* Local vars */
+			struct BBDOS_ErrorStruct error;
+
+			/* Fill out error structure */
+			error.errorname	= "DOS_eof: invalid File Handle";
+			error.errorfile = " ";
+			error.errordata	= fh;
+			error.erroros	= errno;
+
+			/* Push error on stack */
+			ERROR_PushError( DOS_PrintError, ( UNCHAR * ) &BBDOS_LibraryName[0], sizeof( struct BBDOS_ErrorStruct ), ( UNBYTE * ) &error );
+
+		}
+		#endif
+	}
+
+	return(result);
+}
+
+/* #FUNCTION END# */
+
+
+
+
+
+
+/*
+ ******************************************************************************
+ * #SMALL FUNCTION HEADER BEGIN#
+ * NAME      : DOS_PrintError
+ * FUNCTION  : Print error function for DOS library
+ * INPUTS    : UNCHAR * buffer	:Pointer to string buffer.
+ *             UNBYTE * data	:Pointer to error stack data area.
+ * RESULT    : None.
+ * #SMALL FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+#ifdef BBDOS_ERRORHANDLING
+
+	void
+	DOS_PrintError( UNCHAR * buffer, UNBYTE * data )
+	{
+		/* Local vars */
+		struct BBDOS_ErrorStruct * DOSErrorStructPtr=( struct BBDOS_ErrorStruct * ) data;
+
+		/* sprintf error message into string buffer */
+		sprintf( ( char * ) buffer, " %s - FILENAME: %s - DATA: %ld - OSERROR: %d", ( char * ) DOSErrorStructPtr->errorname, ( char * ) DOSErrorStructPtr->errorfile, DOSErrorStructPtr->errordata, DOSErrorStructPtr->erroros );
+	}
+
+#endif
+
+/* #FUNCTION END# */
+

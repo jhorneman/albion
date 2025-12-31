@@ -1,0 +1,21 @@
+.ERASE
+
+Sdir = C:\WORK\MODULES\SCROLL
+Ldir = C:\WORK\MODULES\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /od
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir2)\BBDSA.H &
+	$(Ldir2)\BBOPM.H &
+	$(Ldir2)\BBMEM.H &
+	$(Ldir)\SCROLL.H
+
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\SCROLL.OBJ : $(Sdir)\SCROLL.C $(Header_files)
+	$(Compiler) SCROLL.C -fo$(Ldir)\SCROLL.OBJ
+

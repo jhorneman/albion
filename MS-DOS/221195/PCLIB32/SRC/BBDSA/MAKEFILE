@@ -1,0 +1,11 @@
+!include ..\OPTIONS
+
+# linken
+..\..\LIB\bbdsa.obj:	OBJS\dsa_ass.obj &
+      			OBJS\bbdsa.obj
+	*wlib -b -n ..\..\lib\bbdsa.obj +OBJS\dsa_ass.obj +OBJS\bbdsa.obj
+
+# compilieren
+OBJS\bbdsa.obj: bbdsa.c $(OPTION) .AUTODEPEND
+OBJS\dsa_ass.obj: dsa_ass.asm $(OPTIONASM) .AUTODEPEND
+

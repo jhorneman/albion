@@ -1,0 +1,15 @@
+
+***
+
+In die Texte der Toronto-Besatzungsmitglieder die referenzen nach Richtungen
+("Nord-Osten") nicht in Anfhrungszeichen, damit man das Gefhl kriegt das
+es sich hier um ein normales Idiom handelt.
+
+***
+
+In die Teleporterh”hlen keine Sound- und Farb-Effekte beim Teleportieren
+einbauen, sondern den TELEPORT-Modus verwenden.
+
+***
+
+

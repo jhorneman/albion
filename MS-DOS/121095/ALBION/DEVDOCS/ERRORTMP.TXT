@@ -1,0 +1,16 @@
+**************
+
+Fehler gemeldet von:
+Am:
+
+Programmversion:
+Programmdatum:
+
+Unter welche Bedingungen trat der Fehler auf und was ist genau passiert?
+
+Beseitigt von:
+Am:
+
+Wie wurde der Fehler beseitigt?
+
+

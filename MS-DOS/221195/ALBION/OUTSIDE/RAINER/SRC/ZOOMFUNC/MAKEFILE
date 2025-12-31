@@ -1,0 +1,25 @@
+.ERASE
+
+Assembler          = G:\MASM\BIN\ml
+Assembler_Options  = /VM /Zm /c /Cx
+assemble	   = $(Assembler) $(Assembler_Options)
+
+Compiler         = wcc386
+Compiler_Options = /W3
+compile          = $(Compiler) $(Compiler_Options)
+
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;G:\ALBION\LIB;G:\AIL\AIL_303
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB;G:\ALBION\LIB
+
+..\..\LIB\ZOOMFUNC.obj:	OBJS\ZOOM.obj &
+      			OBJS\ZOOMFUNC.obj
+	*wlib -b -n ..\..\lib\ZOOMFUNC.obj +OBJS\ZOOMFUNC.obj
+	*wlib -b ..\..\lib\ZOOMFUNC.obj +OBJS\ZOOM.obj
+
+OBJS\ZOOMFUNC.obj: ZOOMFUNC.c ..\..\LIB\ZOOMFUNC.h
+	$(compile) ZOOMFUNC.c /fo=OBJS\ZOOMFUNC.obj
+
+OBJS\ZOOM.obj: ZOOM.asm
+	$(assemble) /FoOBJS\ZOOM.obj ZOOM.asm
+

@@ -1,0 +1,20 @@
+.ERASE
+
+Sdir = C:\WORK\HDOB
+Ldir = C:\WORK\LIB
+Ldir2 = C:\PCLIB32\LIB
+
+Compiler = WCC386 /d2 /ox
+
+Header_files = $(Ldir2)\BBDEF.H &
+	$(Ldir2)\BBMEM.H &
+	$(Ldir2)\BBOPM.H &
+	$(Ldir)\GFXFUNC.H &
+	$(Ldir)\HDOB.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Ldir)\HDOB.OBJ : $(Sdir)\HDOB.C $(Header_files)
+	$(Compiler) HDOB.C -fo$(Ldir)\HDOB.OBJ
+

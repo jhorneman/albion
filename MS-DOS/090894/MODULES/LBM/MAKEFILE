@@ -1,0 +1,14 @@
+.ERASE
+
+Sdir = C:\PCLIB32\LBM
+
+Compiler = WCC386 /d2 /w3 /od
+
+Header_files = 	$(Sdir)\LBM.H
+
+.BEFORE
+	cd $(Sdir)
+
+$(Sdir)\LBM.OBJ : $(Sdir)\LBM.C $(Header_files)
+	$(Compiler) LBM.C
+

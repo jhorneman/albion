@@ -1,0 +1,49 @@
+.ERASE
+
+Ldir = C:\WORK\ALBION\LIB
+Ldir2 = C:\PCLIB32\LIB
+Ldir3 = C:\WORK\MODULES\LIB
+Sdir = C:\WORK\ALBION\GAME
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /od
+
+Object_files = $(Ldir)\MAIN.OBJ &
+	$(Ldir)\GAME.OBJ &
+	$(Ldir)\CONTROL.OBJ &
+	$(Ldir)\2D_MAP.OBJ &
+	$(Ldir)\ANIMATE.OBJ &
+	$(Ldir)\XFTYPES.OBJ &
+	$(Ldir3)\SCROLL.OBJ &
+	$(Ldir3)\XLOAD.OBJ &
+	$(Ldir3)\HDOB.OBJ &
+	$(Ldir3)\GFXFUNC.OBJ &
+	$(Ldir3)\SORT.OBJ &
+	$(Ldir2)\PCLIB32.LIB
+
+.BEFORE
+	cd $(Sdir)
+
+C:\WORK\ALBION\ALBION.EXE : $(Object_files)
+	$(Linker) @ALBION.LST NAME C:\WORK\ALBION\ALBION.EXE
+	cd C:\WORK\ALBION
+
+$(Ldir)\MAIN.OBJ : $(Sdir)\MAIN.C
+	$(Compiler) MAIN.C -fo$(Ldir)\MAIN.OBJ
+
+$(Ldir)\GAME.OBJ : $(Sdir)\GAME.C $(Ldir)\GAME.H
+	$(Compiler) GAME.C -fo$(Ldir)\GAME.OBJ
+
+$(Ldir)\CONTROL.OBJ : $(Sdir)\CONTROL.C $(Ldir)\CONTROL.H
+	$(Compiler) CONTROL.C -fo$(Ldir)\CONTROL.OBJ
+
+$(Ldir)\2D_MAP.OBJ : $(Sdir)\2D_MAP.C $(Ldir)\2D_MAP.H
+	$(Compiler) 2D_MAP.C -fo$(Ldir)\2D_MAP.OBJ
+
+$(Ldir)\ANIMATE.OBJ : $(Sdir)\ANIMATE.C $(Ldir)\ANIMATE.H
+	$(Compiler) ANIMATE.C -fo$(Ldir)\ANIMATE.OBJ
+
+$(Ldir)\XFTYPES.OBJ : $(Sdir)\XFTYPES.C $(Ldir)\XFTYPES.H
+	$(Compiler) XFTYPES.C -fo$(Ldir)\XFTYPES.OBJ
+

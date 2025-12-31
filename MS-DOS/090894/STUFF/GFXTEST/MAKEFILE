@@ -1,0 +1,25 @@
+.ERASE
+
+Ldir = C:\WORK\LIB
+Ldir2 = C:\PCLIB32\LIB
+Sdir = C:\WORK\GFXTEST
+
+Libmake = wlib -n
+Linker = wlink SYSTEM DOS4G DEBUG ALL
+Compiler = WCC386 /d2 /ox
+
+## Header_files =
+
+.BEFORE
+	cd $(Sdir)
+
+
+$(Sdir)\GFXTEST.EXE : $(Sdir)\GFXTEST.OBJ $(Sdir)\MAIN.OBJ $(Ldir)\GFXFUNC.OBJ
+	$(Linker) @GFXTEST.LST
+
+$(Sdir)\GFXTEST.OBJ : $(Sdir)\GFXTEST.C
+	$(Compiler) GFXTEST.C
+
+$(Sdir)\MAIN.OBJ : $(Sdir)\MAIN.C
+	$(Compiler) MAIN.C
+

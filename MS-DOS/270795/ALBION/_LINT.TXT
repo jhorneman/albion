@@ -1,0 +1,3235 @@
+
+--- Module:   g:\albion\src\main.c 
+
+--- Module:   g:\albion\src\game.c 
+                      _
+       (UNBYTE *) Ptr);
+g:\albion\src\game.c  210  Warning 530: Ptr (line 207) not initialized
+   _
+   };
+g:\albion\src\game.c  415  Info 785: Too few initializers for aggregate
+         _
+         case 9:
+g:\albion\src\game.c  493  Warning 616: control flows into case/default
+                                       _
+       sin(((double) i * 2 * PI) / 360);
+g:\albion\src\game.c  834  Warning 524: Loss of precision (assignment) (double
+    to unsigned short)
+                                       _
+       cos(((double) i * 2 * PI) / 360);
+g:\albion\src\game.c  836  Warning 524: Loss of precision (assignment) (double
+    to unsigned short)
+_
+}
+g:\albion\src\game.c  1099  Warning 529: String2 (line 1057) not subsequently
+    referenced
+         _
+         break;
+g:\albion\src\game.c  1542  Warning 527: Unreachable
+         _
+         break;
+g:\albion\src\game.c  1650  Warning 527: Unreachable
+         _
+         break;
+g:\albion\src\game.c  1774  Warning 527: Unreachable
+               _
+               break;
+g:\albion\src\game.c  1811  Warning 527: Unreachable
+                                                             _
+      Write_bit_array(CD_BIT_ARRAY, CD_bit_nr, SET_BIT_ARRAY);
+g:\albion\src\game.c  4148  Warning 644: CD_bit_nr (line 4065) may not have
+    been initialized
+
+--- Module:   g:\albion\src\map.c 
+                                        _
+      struct Icon_2D_data *Icon_data_ptr;
+g:\albion\src\map.c  1213  Warning 578: Declaration of 'Icon_data_ptr' hides
+    'Icon_data_ptr' (line 87, file g:\albion\lib\2d_map.h)
+                  _
+                  Do_text_file_window(Map_text_handle,
+g:\albion\src\map.c  1702  Info 718: Do_text_file_window undeclared, assumed to
+    return int
+g:\albion\src\map.c  1702  Info 746: call to Do_text_file_window() not made in
+    the presence of a prototype
+                                           _
+                   VNPCs[NPC_index].Number);
+g:\albion\src\map.c  1724  Warning 644: Char_file_type (line 1650) may not have
+    been initialized
+_
+}
+g:\albion\src\map.c  1774  Warning 529: Char_type (line 1649) not subsequently
+    referenced
+g:\albion\src\map.c  1774  Warning 529: Known_languages (line 1652) not
+    subsequently referenced
+                              _
+   Selected_item_slot_index = Select_character_item(Active_char_handle,
+g:\albion\src\map.c  1924  Info 718: Select_character_item undeclared, assumed
+    to return int
+g:\albion\src\map.c  1924  Info 746: call to Select_character_item() not made
+    in the presence of a prototype
+      _
+      memcpy((UNBYTE *) &(List->Modifications[0]), Data,
+g:\albion\src\map.c  2179  Info 718: memcpy undeclared, assumed to return int
+g:\albion\src\map.c  2179  Info 746: call to memcpy() not made in the presence
+    of a prototype
+                                                            _
+       MODIFICATIONS_PER_LIST * sizeof(struct Modification));
+g:\albion\src\map.c  2180  Error 15: memcpy(void *, const void *, unsigned int)
+    redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                                             _
+       MODIFICATIONS_PER_LIST) * sizeof(struct Modification));
+g:\albion\src\map.c  2204  Error 15: memcpy(void *, const void *, unsigned int)
+    redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                   _
+       sizeof(struct Modification));
+g:\albion\src\map.c  2305  Error 15: memcpy(void *, const void *, unsigned int)
+    redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                     _
+       * sizeof(struct Modification));
+g:\albion\src\map.c  2320  Error 15: memcpy(void *, const void *, unsigned int)
+    redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+      _
+      }
+g:\albion\src\map.c  2714  Warning 529: i (line 2700) not subsequently
+    referenced
+
+    --- Wrap-up for Module: g:\albion\src\map.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\map.c'
+
+--- Module:   g:\albion\src\2d_map.c 
+   _
+   Initialize_located_effects(Map_width * Map_square_size, Map_height *
+g:\albion\src\2d_map.c  235  Info 718: Initialize_located_effects undeclared,
+    assumed to return int
+g:\albion\src\2d_map.c  235  Info 746: call to Initialize_located_effects() not
+    made in the presence of a prototype
+                                          _
+    Map_square_size, 20 * Map_square_size);
+g:\albion\src\2d_map.c  236  Error 15: Initialize_located_effects(unsigned int,
+    unsigned int, unsigned int) redeclared (void/nonvoid) (line 58, file
+    g:\albion\lib\music.h, module g:\albion\src\game.c)
+   _
+   Set_listener_position(PARTY_DATA.X * 16, PARTY_DATA.Y * 16, 0);
+g:\albion\src\2d_map.c  565  Info 718: Set_listener_position undeclared,
+    assumed to return int
+g:\albion\src\2d_map.c  565  Info 746: call to Set_listener_position() not made
+    in the presence of a prototype
+g:\albion\src\2d_map.c  565  Error 15: Set_listener_position(int, int, unsigned
+    short) redeclared (void/nonvoid, Arg. no. 3: promotion) (line 68, file
+    g:\albion\lib\music.h, module g:\albion\src\game.c)
+                                                                    _
+      Set_listener_position(PARTY_DATA.X * 16, PARTY_DATA.Y * 16, 0);
+g:\albion\src\2d_map.c  856  Error 15: Set_listener_position(int, int, unsigned
+    short) redeclared (void/nonvoid, Arg. no. 3: promotion) (line 68, file
+    g:\albion\lib\music.h, module g:\albion\src\game.c)
+                                     _
+   struct Icon_2D_data *Icon_data_ptr;
+g:\albion\src\2d_map.c  2429  Warning 578: Declaration of 'Icon_data_ptr' hides
+    'Icon_data_ptr' (line 202)
+                                     _
+   struct Icon_2D_data *Icon_data_ptr;
+g:\albion\src\2d_map.c  2513  Warning 578: Declaration of 'Icon_data_ptr' hides
+    'Icon_data_ptr' (line 202)
+         _
+         Make_2D_path_entry((PARTY_DATA.X - 1) * 16,
+g:\albion\src\2d_map.c  3207  Info 718: Make_2D_path_entry undeclared, assumed
+    to return int
+g:\albion\src\2d_map.c  3207  Info 746: call to Make_2D_path_entry() not made
+    in the presence of a prototype
+_
+}
+g:\albion\src\2d_map.c  3250  Warning 550: X (line 3145) not accessed
+g:\albion\src\2d_map.c  3250  Warning 550: Y (line 3145) not accessed
+                                      _
+{
+g:\albion\src\2d_map.c  3431  Error 18: Make_2D_path_entry() redeclared
+    (void/nonvoid, Arg. no. 1: promotion, Arg. no. 2: promotion) conflicts with
+    line 3207
+g:\albion\src\2d_map.c  3431  Warning 516: Make_2D_path_entry(unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 1 -- unsigned short vs.
+    int) with line 3208
+g:\albion\src\2d_map.c  3431  Warning 516: Make_2D_path_entry(unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 2 -- unsigned short vs.
+    int) with line 3208
+
+    --- Wrap-up for Module: g:\albion\src\2d_map.c
+
+Info 750: local macro FIRST_ICON_SET_SIZE (line 46, file g:\albion\src\2d_map.c)
+    not referenced
+
+--- Module:   g:\albion\src\2d_displ.c 
+
+--- Module:   g:\albion\src\3d_map.c 
+                                     _
+   I3DM.Wall_pointers = &Wall_ptrs[0];
+g:\albion\src\3d_map.c  500  Info 789: Assigning address of auto (Wall_ptrs) to
+    static
+_
+}
+g:\albion\src\3d_map.c  1570  Warning 529: Result (line 1480) not subsequently
+    referenced
+_
+}
+g:\albion\src\3d_map.c  1630  Warning 529: Result (line 1594) not subsequently
+    referenced
+                                                 _
+      Party_3D_move_data.dX            = dX >> 16;
+g:\albion\src\3d_map.c  2072  Info 702: Shift right of signed quantity (int)
+                                                 _
+      Party_3D_move_data.dY            = dY >> 16;
+g:\albion\src\3d_map.c  2073  Info 702: Shift right of signed quantity (int)
+                                    _
+   *Dungeon_X_ptr = ((UNLONG) Map_X - 1) * f + (f / 2);
+g:\albion\src\3d_map.c  2679  Warning 571: Suspicious cast
+                                                 _
+   *Dungeon_Y_ptr = (UNLONG)(Map_height - Map_Y) * f + (f / 2);
+g:\albion\src\3d_map.c  2680  Warning 571: Suspicious cast
+
+    --- Wrap-up for Module: g:\albion\src\3d_map.c
+
+Info 766: Header file 'g:\albion\lib\animate.h' not used in module
+    'g:\albion\src\3d_map.c'
+Info 766: Header file 'g:\albion\lib\sort.h' not used in module
+    'g:\albion\src\3d_map.c'
+
+--- Module:   g:\albion\src\animate.c 
+
+--- Module:   g:\albion\src\xftypes.c 
+
+--- Module:   g:\albion\src\graphics.c 
+
+--- Module:   g:\albion\src\diagnost.c 
+            _
+            Redraw_2D_map();
+g:\albion\src\diagnost.c  291  Info 718: Redraw_2D_map undeclared, assumed to
+    return int
+g:\albion\src\diagnost.c  291  Info 746: call to Redraw_2D_map() not made in
+    the presence of a prototype
+g:\albion\src\diagnost.c  291  Error 15: Redraw_2D_map(void) redeclared
+    (void/nonvoid) (line 1205, file g:\albion\src\2d_displ.c)
+            _
+            Put_masked_block(&Slab_OPM, 360 - T1_WIDTH, 240 - T1_HEIGHT,
+g:\albion\src\diagnost.c  301  Info 718: Put_masked_block undeclared, assumed
+    to return int
+g:\albion\src\diagnost.c  301  Info 746: call to Put_masked_block() not made in
+    the presence of a prototype
+                                                  _
+             T1_WIDTH, T1_HEIGHT, &(T1_symbol[0]));
+g:\albion\src\diagnost.c  302  Error 15: Put_masked_block(struct OPM *, short,
+    short, short, short, unsigned char *) redeclared (void/nonvoid, Arg. no. 2:
+    promotion, Arg. no. 3: promotion, Arg. no. 4: promotion, Arg. no. 5: prom)
+    (line 38, file g:\albion\lib\gfxfunc.h, module g:\albion\src\game.c)
+               _
+          48 - T1_HEIGHT);
+g:\albion\src\diagnost.c  314  Info 778: Constant expression evaluates to 0 in
+    operation '-'
+         _
+         }
+g:\albion\src\diagnost.c  378  Warning 529: i (line 361) not subsequently
+    referenced
+g:\albion\src\diagnost.c  378  Warning 529: j (line 361) not subsequently
+    referenced
+                                                  _
+               Default_spell_strength = (UNSHORT) Input_number(50, 1, 100,
+g:\albion\src\diagnost.c  458  Info 718: Input_number undeclared, assumed to
+    return int
+g:\albion\src\diagnost.c  458  Info 746: call to Input_number() not made in the
+    presence of a prototype
+         _
+         case BLEV_F6:
+g:\albion\src\diagnost.c  462  Warning 616: control flows into case/default
+
+--- Module:   g:\albion\src\invento.c 
+
+    --- Wrap-up for Module: g:\albion\src\invento.c
+
+Warning 528: Party_inventory_modes (line 125, file g:\albion\src\invento.c) not
+    referenced
+
+--- Module:   g:\albion\src\invitems.c 
+                                 _
+            Quantity = (UNSHORT) Input_number_with_symbol(1, 0,
+g:\albion\src\invitems.c  954  Info 718: Input_number_with_symbol undeclared,
+    assumed to return int
+g:\albion\src\invitems.c  954  Info 746: call to Input_number_with_symbol() not
+    made in the presence of a prototype
+                  _
+         Result = Boolean_requester(System_text_ptrs[531]);
+g:\albion\src\invitems.c  1796  Info 718: Boolean_requester undeclared, assumed
+    to return int
+g:\albion\src\invitems.c  1796  Info 746: call to Boolean_requester() not made
+    in the presence of a prototype
+      _
+      Do_text_window(System_text_ptrs[189]);
+g:\albion\src\invitems.c  1856  Info 718: Do_text_window undeclared, assumed to
+    return int
+g:\albion\src\invitems.c  1856  Info 746: call to Do_text_window() not made in
+    the presence of a prototype
+
+--- Module:   g:\albion\src\statarea.c 
+                                        _
+      Party_member_PUM.Title = Char_name;
+g:\albion\src\statarea.c  724  Info 789: Assigning address of auto (Char_name)
+    to static
+
+--- Module:   g:\albion\src\evelogic.c 
+                                                                   _
+   xprintf(&Diag_OPM, 0, Y, "Chain number : %u", Context->Chain_nr);
+g:\albion\src\evelogic.c  3688  Warning 644: Y (line 3596) may not have been
+    initialized
+
+--- Module:   g:\albion\src\events.c 
+            _
+            Do_text_file_window(Text_handle, Block_nr);
+g:\albion\src\events.c  625  Info 718: Do_text_file_window undeclared, assumed
+    to return int
+g:\albion\src\events.c  625  Info 746: call to Do_text_file_window() not made
+    in the presence of a prototype
+               _
+               Do_text_file_window_with_symbol(Text_handle, Block_nr, 34, 37,
+g:\albion\src\events.c  656  Info 718: Do_text_file_window_with_symbol
+    undeclared, assumed to return int
+g:\albion\src\events.c  656  Info 746: call to Do_text_file_window_with_symbol()
+    not made in the presence of a prototype
+                         _
+             Attr->Magic), (UNLONG) Attr->Maximum, Modify_mode,
+g:\albion\src\events.c  1146  Warning 571: Suspicious cast
+                          _
+             Skill->Magic), (UNLONG) Skill->Maximum, Modify_mode,
+g:\albion\src\events.c  1164  Warning 571: Suspicious cast
+                     _
+            Result = Boolean_requester_with_buttons(Text_ptr, Text_ptr +
+g:\albion\src\events.c  2083  Info 718: Boolean_requester_with_buttons
+    undeclared, assumed to return int
+g:\albion\src\events.c  2083  Info 746: call to Boolean_requester_with_buttons()
+    not made in the presence of a prototype
+                     _
+            Result = Boolean_requester(Text_ptr);
+g:\albion\src\events.c  2089  Info 718: Boolean_requester undeclared, assumed
+    to return int
+g:\albion\src\events.c  2089  Info 746: call to Boolean_requester() not made in
+    the presence of a prototype
+                                _
+            Quantity = (UNLONG) Input_number(0, 0, 9999,
+g:\albion\src\events.c  2290  Info 718: Input_number undeclared, assumed to
+    return int
+g:\albion\src\events.c  2290  Info 746: call to Input_number() not made in the
+    presence of a prototype
+
+--- Module:   g:\albion\src\npcs.c 
+                                      _
+   static UNSHORT View_directions[18] = {
+g:\albion\src\npcs.c  2157  Warning 578: Declaration of 'View_directions' hides
+    'View_directions' (line 208, file g:\albion\lib\map.h)
+                  _
+            Q += 3;
+g:\albion\src\npcs.c  2212  Warning 644: Q (line 2169) may not have been
+    initialized
+                  _
+            Q += 6;
+g:\albion\src\npcs.c  2217  Warning 644: Q (line 2169) may not have been
+    initialized
+               _
+         Q += 9;
+g:\albion\src\npcs.c  2224  Warning 644: Q (line 2169) may not have been
+    initialized
+                              _
+      tVD = View_directions[Q];
+g:\albion\src\npcs.c  2228  Warning 644: Q (line 2169) may not have been
+    initialized
+            _
+            Move_2D(0, 0, FALSE);
+g:\albion\src\npcs.c  2253  Info 718: Move_2D undeclared, assumed to return int
+g:\albion\src\npcs.c  2253  Info 746: call to Move_2D() not made in the
+    presence of a prototype
+g:\albion\src\npcs.c  2253  Error 15: Move_2D(short, short, short) redeclared
+    (void/nonvoid, Arg. no. 1: promotion, Arg. no. 2: promotion, Arg. no. 3:
+    promotion) (line 3143, file g:\albion\src\2d_map.c)
+                             _
+         Move_2D(0, 0, FALSE);
+g:\albion\src\npcs.c  2260  Error 15: Move_2D(short, short, short) redeclared
+    (void/nonvoid, Arg. no. 1: promotion, Arg. no. 2: promotion, Arg. no. 3:
+    promotion) (line 3143, file g:\albion\src\2d_map.c)
+
+    --- Wrap-up for Module: g:\albion\src\npcs.c
+
+Info 753: local struct NPC_sound_set (line 51, file g:\albion\src\npcs.c) not
+    referenced
+Info 754: local structure member NPC_sound_effect::Effect_nr (line 43, file
+    g:\albion\src\npcs.c) not referenced
+Info 754: local structure member NPC_sound_effect::Priority (line 44, file
+    g:\albion\src\npcs.c) not referenced
+Info 754: local structure member NPC_sound_effect::Volume (line 45, file
+    g:\albion\src\npcs.c) not referenced
+Info 754: local structure member NPC_sound_effect::Probability (line 46, file
+    g:\albion\src\npcs.c) not referenced
+Info 754: local structure member NPC_sound_effect::Frequency (line 47, file
+    g:\albion\src\npcs.c) not referenced
+Info 754: local structure member NPC_sound_set::Effects (line 52, file
+    g:\albion\src\npcs.c) not referenced
+
+--- Module:   g:\albion\src\gametime.c 
+
+--- Module:   g:\albion\src\gametext.c 
+                                                                              _
+   {ERROR_TOO_MANY_WORDS,            "Too many words in the merged dictionary."},
+g:\albion\src\gametext.c  261  Info 784: Nul character truncated from string
+   _
+   Init_dictionary();
+g:\albion\src\gametext.c  305  Info 718: Init_dictionary undeclared, assumed to
+    return int
+g:\albion\src\gametext.c  305  Info 746: call to Init_dictionary() not made in
+    the presence of a prototype
+   _
+   Exit_dictionary();
+g:\albion\src\gametext.c  343  Info 718: Exit_dictionary undeclared, assumed to
+    return int
+g:\albion\src\gametext.c  343  Info 746: call to Exit_dictionary() not made in
+    the presence of a prototype
+                _
+{
+g:\albion\src\gametext.c  667  Error 18: Init_dictionary() redeclared
+    (void/nonvoid) conflicts with line 305
+                _
+{
+g:\albion\src\gametext.c  733  Error 18: Exit_dictionary() redeclared
+    (void/nonvoid) conflicts with line 343
+                _
+            if (toupper(Word_ptr[j]) != toupper(Input_word[j]))
+g:\albion\src\gametext.c  864  Info 718: toupper undeclared, assumed to return
+    int
+g:\albion\src\gametext.c  864  Info 746: call to toupper() not made in the
+    presence of a prototype
+      _
+      Dialogue_error(ERROR_TOO_MANY_WORDS);
+g:\albion\src\gametext.c  1031  Info 718: Dialogue_error undeclared, assumed to
+    return int
+g:\albion\src\gametext.c  1031  Info 746: call to Dialogue_error() not made in
+    the presence of a prototype
+   _
+   Shellsort(Swap_words, Compare_words, Word_window->Nr_words, NULL);
+g:\albion\src\gametext.c  1158  Info 718: Shellsort undeclared, assumed to
+    return int
+g:\albion\src\gametext.c  1158  Info 746: call to Shellsort() not made in the
+    presence of a prototype
+g:\albion\src\gametext.c  1158  Error 15: Shellsort(void (*)(unsigned int,
+    unsigned int, unsigned char *), short (*)(unsigned int, unsigned int,
+    unsigned char *), unsigned int, unsigned char *) redeclared (void/nonvoid)
+    (line 66, file g:\albion\lib\sort.h, module g:\albion\src\2d_displ.c)
+   _
+   Put_recoloured_box(OPM, 10, 10, W - 10, H - 10, &(Recolour_tables[0][0]));
+g:\albion\src\gametext.c  1276  Info 718: Put_recoloured_box undeclared,
+    assumed to return int
+g:\albion\src\gametext.c  1276  Info 746: call to Put_recoloured_box() not made
+    in the presence of a prototype
+g:\albion\src\gametext.c  1276  Error 15: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) redeclared (void/nonvoid, Arg.
+    no. 2: promotion, Arg. no. 3: promotion, Arg. no. 4: promotion, Arg. no. 5:
+    prom) (line 50, file g:\albion\lib\gfxfunc.h, module g:\albion\src\game.c)
+g:\albion\src\gametext.c  1276  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 4 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+g:\albion\src\gametext.c  1276  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 5 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+                                                  _
+    Object->Rect.height, &(Recolour_tables[6][0]));
+g:\albion\src\gametext.c  1842  Error 15: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) redeclared (void/nonvoid, Arg.
+    no. 2: promotion, Arg. no. 3: promotion, Arg. no. 4: promotion, Arg. no. 5:
+    prom) (line 50, file g:\albion\lib\gfxfunc.h, module g:\albion\src\game.c)
+g:\albion\src\gametext.c  1842  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 2 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+g:\albion\src\gametext.c  1842  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 3 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+g:\albion\src\gametext.c  1842  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 4 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+g:\albion\src\gametext.c  1842  Warning 516: Put_recoloured_box(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 5 -- int vs. short) with line 50, file g:\albion\lib\gfxfunc.h, module
+    g:\albion\src\game.c
+
+    --- Wrap-up for Module: g:\albion\src\gametext.c
+
+Info 752: local declarator 'HLC_New_word(unsigned char *)' (line 134, file
+    g:\albion\src\gametext.c) not referenced
+Info 754: local structure member Word_window_object::Background_handle (line
+    79, file g:\albion\src\gametext.c) not referenced
+Info 754: local structure member Word_window_object::Background_OPM (line 80,
+    file g:\albion\src\gametext.c) not referenced
+
+--- Module:   g:\albion\src\dialogue.c 
+                                       _
+void Dialogue_error(UNSHORT Error_code);
+g:\albion\src\dialogue.c  217  Error 15: Dialogue_error() redeclared
+    (void/nonvoid, Arg. no. 1: promotion) (line 1031, file g:\albion\src\gametext.c)
+                    _
+      BOOLEAN Result;
+g:\albion\src\dialogue.c  475  Warning 578: Declaration of 'Result' hides
+    'Result' (line 384)
+      _
+      BASEMEM_FillMemByte((UNBYTE *) &Dialogue_starts_action,
+g:\albion\src\dialogue.c  478  Info 718: BASEMEM_FillMemByte undeclared,
+    assumed to return int
+g:\albion\src\dialogue.c  478  Info 746: call to BASEMEM_FillMemByte() not made
+    in the presence of a prototype
+                                      _
+       sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  479  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                        _
+      if (!Node.Flags & DIALOGUE_NO_DEFAULT)
+g:\albion\src\dialogue.c  809  Warning 514: Unusual use of a Boolean
+                                                        _
+       Load_subfile(Char_file_type, Dialogue_char_index);
+g:\albion\src\dialogue.c  958  Warning 644: Char_file_type (line 912) may not
+    have been initialized
+                                   _
+    sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  1302  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                   _
+    sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  1450  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                     _
+   Item_slot_index = Select_character_item(Active_char_handle,
+g:\albion\src\dialogue.c  1457  Info 718: Select_character_item undeclared,
+    assumed to return int
+g:\albion\src\dialogue.c  1457  Info 746: call to Select_character_item() not
+    made in the presence of a prototype
+                                   _
+    sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  1574  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                   _
+    sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  1647  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                   _
+    sizeof(struct Event_action), 0);
+g:\albion\src\dialogue.c  1728  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                              _
+          Y, MC_ENTRY_WIDTH, Entry_heights[i]);
+g:\albion\src\dialogue.c  2244  Info 771: Entry_heights (line 2136) conceivably
+    not initialized
+                               _
+      Y += Entry_heights[i] + 1;
+g:\albion\src\dialogue.c  2248  Info 771: Entry_heights (line 2136) conceivably
+    not initialized
+   _
+   ERROR_PushError(Dialogue_print_error, Dialogue_library_name,
+g:\albion\src\dialogue.c  2599  Info 718: ERROR_PushError undeclared, assumed
+    to return int
+g:\albion\src\dialogue.c  2599  Info 746: call to ERROR_PushError() not made in
+    the presence of a prototype
+                                            _
+    sizeof(UNSHORT), (UNBYTE *) &Error_code);
+g:\albion\src\dialogue.c  2600  Error 15: ERROR_PushError(void (*)(unsigned
+    char *, unsigned char *), unsigned char *, unsigned short, unsigned char *)
+    redeclared (precision, Arg. no. 3: promotion) (line 72, file
+    g:\pclib32\lib\bberror.h, module g:\albion\src\main.c)
+   _
+   sprintf((char *)buffer, Dialogue_error_strings[i]);
+g:\albion\src\dialogue.c  2636  Info 718: sprintf undeclared, assumed to return
+    int
+g:\albion\src\dialogue.c  2636  Info 746: call to sprintf() not made in the
+    presence of a prototype
+g:\albion\src\dialogue.c  2636  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+
+    --- Wrap-up for Module: g:\albion\src\dialogue.c
+
+Info 753: local struct Dialogue_portrait_OID (line 111, file
+    g:\albion\src\dialogue.c) not referenced
+Info 753: local struct Dialogue_portrait_object (line 118, file
+    g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_OID::Char_handle (line 112,
+    file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_OID::Portrait_gfx_handle
+    (line 113, file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_OID::Mirror_flag (line 114,
+    file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_object::Object (line 119,
+    file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_object::Char_handle (line
+    120, file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_object::Portrait_gfx_handle
+    (line 121, file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member Dialogue_portrait_object::Mirror_flag (line
+    122, file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member MC_window_object::Background_handle (line 137,
+    file g:\albion\src\dialogue.c) not referenced
+Info 754: local structure member MC_window_object::Background_OPM (line 138,
+    file g:\albion\src\dialogue.c) not referenced
+Info 766: Header file 'g:\albion\lib\sort.h' not used in module
+    'g:\albion\src\dialogue.c'
+
+--- Module:   g:\albion\src\music.c 
+_
+}
+g:\albion\src\music.c  936  Warning 529: i (line 910) not subsequently
+    referenced
+_
+}
+g:\albion\src\music.c  1311  Warning 529: Lowest (line 1227) not subsequently
+    referenced
+_
+}
+g:\albion\src\music.c  1484  Warning 529: Volume_deviation (line 1404) not
+    subsequently referenced
+g:\albion\src\music.c  1484  Warning 529: Lowest (line 1406) not subsequently
+    referenced
+g:\albion\src\music.c  1484  Warning 529: New_frequency (line 1400) not
+    subsequently referenced
+g:\albion\src\music.c  1484  Warning 529: New_volume (line 1403) not
+    subsequently referenced
+g:\albion\src\music.c  1484  Warning 529: Frequency_deviation (line 1401) not
+    subsequently referenced
+   _
+   Shuttlesort(Swap_sound_effects, Compare_sound_effects,
+g:\albion\src\music.c  1900  Info 718: Shuttlesort undeclared, assumed to
+    return int
+g:\albion\src\music.c  1900  Info 746: call to Shuttlesort() not made in the
+    presence of a prototype
+                                                                       _
+    Nr_active_sound_effects, (UNBYTE *) &(Active_sound_effect_list[0]));
+g:\albion\src\music.c  1901  Error 15: Shuttlesort(void (*)(unsigned int,
+    unsigned int, unsigned char *), short (*)(unsigned int, unsigned int,
+    unsigned char *), unsigned int, unsigned char *) redeclared (void/nonvoid)
+    (line 68, file g:\albion\lib\sort.h, module g:\albion\src\2d_displ.c)
+      _
+      }
+g:\albion\src\music.c  1939  Info 787: enum constant SOUND_EFFECT_FREE not used
+    within switch
+g:\albion\src\music.c  1939  Info 787: enum constant SOUND_EFFECT_STOPPED not
+    used within switch
+_
+}
+g:\albion\src\music.c  2017  Warning 529: T (line 2002) not subsequently
+    referenced
+
+    --- Wrap-up for Module: g:\albion\src\music.c
+
+Warning 551: Effect_space_width (line 227, file g:\albion\src\music.c) not
+    accessed
+Warning 551: Effect_space_height (line 228, file g:\albion\src\music.c) not
+    accessed
+Info 750: local macro MAX_DIGI_CHANNELS (line 75, file g:\albion\src\music.c)
+    not referenced
+Info 750: local macro MUSICERR_NO_FREE_SONG (line 85, file g:\albion\src\music.c)
+    not referenced
+Info 766: Header file 'g:\ail\ail_303\dll.h' not used in module
+    'g:\albion\src\music.c'
+
+--- Module:   g:\albion\src\itmlogic.c 
+                                                           _
+      Take_item_from_char_action.Action_data = &Action_data;
+g:\albion\src\itmlogic.c  271  Info 789: Assigning address of auto
+    (Action_data) to static
+                                                        _
+      Put_item_in_char_action.Action_data = &Action_data;
+g:\albion\src\itmlogic.c  415  Info 789: Assigning address of auto
+    (Action_data) to static
+
+--- Module:   g:\albion\src\combat.c 
+   _
+   Exit_party_combat_data();
+g:\albion\src\combat.c  347  Info 718: Exit_party_combat_data undeclared,
+    assumed to return int
+g:\albion\src\combat.c  347  Info 746: call to Exit_party_combat_data() not
+    made in the presence of a prototype
+   _
+   Exit_monster_combat_data();
+g:\albion\src\combat.c  348  Info 718: Exit_monster_combat_data undeclared,
+    assumed to return int
+g:\albion\src\combat.c  348  Info 746: call to Exit_monster_combat_data() not
+    made in the presence of a prototype
+_
+}
+g:\albion\src\combat.c  368  Warning 529: i (line 341) not subsequently
+    referenced
+_
+}
+g:\albion\src\combat.c  541  Warning 529: i (line 459) not subsequently
+    referenced
+   _
+   memcpy((UNBYTE *) &T, (UNBYTE *) &Combat_event_list[A],
+g:\albion\src\combat.c  1516  Info 718: memcpy undeclared, assumed to return
+    int
+g:\albion\src\combat.c  1516  Info 746: call to memcpy() not made in the
+    presence of a prototype
+                                _
+    sizeof(struct Combat_event));
+g:\albion\src\combat.c  1517  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                _
+    sizeof(struct Combat_event));
+g:\albion\src\combat.c  1519  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                _
+    sizeof(struct Combat_event));
+g:\albion\src\combat.c  1521  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                       _
+{
+g:\albion\src\combat.c  1643  Error 18: Exit_party_combat_data() redeclared
+    (void/nonvoid) conflicts with line 347
+                         _
+{
+g:\albion\src\combat.c  1833  Error 18: Exit_monster_combat_data() redeclared
+    (void/nonvoid) conflicts with line 348
+                                                        _
+   memcpy(Target, Source, sizeof(struct Character_data));
+g:\albion\src\combat.c  1890  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+
+    --- Wrap-up for Module: g:\albion\src\combat.c
+
+Warning 551: Combat_status (line 66, file g:\albion\src\combat.c) not accessed
+
+--- Module:   g:\albion\src\comacts.c 
+
+--- Module:   g:\albion\src\comshow.c 
+_
+}
+g:\albion\src\comshow.c  1269  Warning 529: i (line 1191) not subsequently
+    referenced
+
+--- Module:   g:\albion\src\comobs.c 
+_
+}
+g:\albion\src\comobs.c  1101  Warning 529: Bottom_3D (line 1075) not
+    subsequently referenced
+g:\albion\src\comobs.c  1101  Warning 529: Right_3D (line 1075) not
+    subsequently referenced
+                                  _
+    sin((Value * 2 * PI) / Period);
+g:\albion\src\comobs.c  1607  Warning 524: Loss of precision (assignment)
+    (double to int)
+
+--- Module:   g:\albion\src\tactical.c 
+                                              _
+         Tactical_square_PUM.Title = Char_name;
+g:\albion\src\tactical.c  829  Info 789: Assigning address of auto (Char_name)
+    to static
+              _
+         if (1) //Get_damage(Char_handle))
+g:\albion\src\tactical.c  1062  Warning 506: Constant value Boolean
+                              _
+   Selected_item_slot_index = Select_character_item(Part->Char_handle,
+g:\albion\src\tactical.c  1476  Info 718: Select_character_item undeclared,
+    assumed to return int
+g:\albion\src\tactical.c  1476  Info 746: call to Select_character_item() not
+    made in the presence of a prototype
+
+--- Module:   g:\albion\src\chest.c 
+      _
+      Do_text_file_window(Context->Text_handle, Chest_first_text_block_nr);
+g:\albion\src\chest.c  351  Info 718: Do_text_file_window undeclared, assumed
+    to return int
+g:\albion\src\chest.c  351  Info 746: call to Do_text_file_window() not made in
+    the presence of a prototype
+_
+}
+g:\albion\src\chest.c  353  Warning 529: Ptr (line 321) not subsequently
+    referenced
+   _
+   Inventory_ModExit();
+g:\albion\src\chest.c  377  Info 718: Inventory_ModExit undeclared, assumed to
+    return int
+g:\albion\src\chest.c  377  Info 746: call to Inventory_ModExit() not made in
+    the presence of a prototype
+g:\albion\src\chest.c  377  Error 15: Inventory_ModExit(void) redeclared
+    (void/nonvoid) (line 498, file g:\albion\src\invento.c)
+_
+}
+g:\albion\src\chest.c  597  Warning 529: Ptr (line 580) not subsequently
+    referenced
+_
+}
+g:\albion\src\chest.c  667  Warning 529: Ptr (line 622) not subsequently
+    referenced
+                      _
+   Inventory_ModExit();
+g:\albion\src\chest.c  707  Error 15: Inventory_ModExit(void) redeclared
+    (void/nonvoid) (line 498, file g:\albion\src\invento.c)
+_
+}
+g:\albion\src\chest.c  952  Warning 529: Ptr (line 931) not subsequently
+    referenced
+                                 _
+            Quantity = (UNSHORT) Input_number_with_symbol(1, 0,
+g:\albion\src\chest.c  1000  Info 718: Input_number_with_symbol undeclared,
+    assumed to return int
+g:\albion\src\chest.c  1000  Info 746: call to Input_number_with_symbol() not
+    made in the presence of a prototype
+               _
+               memcpy(&Drag_packet, &Swap_packet, sizeof(struct Item_packet));
+g:\albion\src\chest.c  1264  Info 718: memcpy undeclared, assumed to return int
+g:\albion\src\chest.c  1264  Info 746: call to memcpy() not made in the
+    presence of a prototype
+g:\albion\src\chest.c  1264  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+          _
+      if (Boolean_requester(System_text_ptrs[62]))
+g:\albion\src\chest.c  1453  Info 718: Boolean_requester undeclared, assumed to
+    return int
+g:\albion\src\chest.c  1453  Info 746: call to Boolean_requester() not made in
+    the presence of a prototype
+   _
+   BASEMEM_FillMemByte((UNBYTE *) &HDOB, sizeof(struct HDOB), 0);
+g:\albion\src\chest.c  1549  Info 718: BASEMEM_FillMemByte undeclared, assumed
+    to return int
+g:\albion\src\chest.c  1549  Info 746: call to BASEMEM_FillMemByte() not made
+    in the presence of a prototype
+g:\albion\src\chest.c  1549  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                                              _
+      Take_item_from_chest_action.Action_data   = &Action_data;
+g:\albion\src\chest.c  1654  Info 789: Assigning address of auto (Action_data)
+    to static
+_
+}
+g:\albion\src\chest.c  1678  Warning 529: Char (line 1628) not subsequently
+    referenced
+                                                                        _
+         memcpy(Data->Packet, Source_packet, sizeof(struct Item_packet));
+g:\albion\src\chest.c  1707  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                                           _
+      Put_item_in_chest_action.Action_data   = &Action_data;
+g:\albion\src\chest.c  1778  Info 789: Assigning address of auto (Action_data)
+    to static
+                                        _
+             sizeof(struct Item_packet));
+g:\albion\src\chest.c  1819  Error 15: memcpy(void *, const void *, unsigned
+    int) redeclared (basic) (line 26, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+
+--- Module:   g:\albion\src\door.c 
+      _
+      Do_text_file_window(Context->Text_handle, Door_first_text_block_nr);
+g:\albion\src\door.c  270  Info 718: Do_text_file_window undeclared, assumed to
+    return int
+g:\albion\src\door.c  270  Info 746: call to Do_text_file_window() not made in
+    the presence of a prototype
+_
+}
+g:\albion\src\door.c  272  Warning 529: Ptr (line 240) not subsequently
+    referenced
+   _
+   Inventory_ModExit();
+g:\albion\src\door.c  296  Info 718: Inventory_ModExit undeclared, assumed to
+    return int
+g:\albion\src\door.c  296  Info 746: call to Inventory_ModExit() not made in
+    the presence of a prototype
+g:\albion\src\door.c  296  Error 15: Inventory_ModExit(void) redeclared
+    (void/nonvoid) (line 498, file g:\albion\src\invento.c)
+_
+}
+g:\albion\src\door.c  427  Warning 529: Ptr (line 383) not subsequently
+    referenced
+_
+}
+g:\albion\src\door.c  528  Warning 529: Ptr (line 511) not subsequently
+    referenced
+
+    --- Wrap-up for Module: g:\albion\src\door.c
+
+Warning 551: Door_lock_type (line 84, file g:\albion\src\door.c) not accessed
+Info 754: local structure member Lock_object::Object (line 44, file
+    g:\albion\src\door.c) not referenced
+
+--- Module:   g:\albion\src\automap.c 
+                                _
+               Mask[4] = Mask[0];
+g:\albion\src\automap.c  1734  Info 771: Mask (line 1353) conceivably not
+    initialized
+
+    --- Wrap-up for Module: g:\albion\src\automap.c
+
+Info 750: local macro RIDDLEMOUTH_AUTO_ICON (line 77, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro TELEPORTER_AUTO_ICON (line 78, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro SPINNER_AUTO_ICON (line 79, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro TRAP_AUTO_ICON (line 80, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro TRAPDOOR_AUTO_ICON (line 81, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro SPECIAL_AUTO_ICON (line 82, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro MONSTER_AUTO_ICON (line 83, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro CLOSED_DOOR_AUTO_ICON (line 84, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro OPEN_DOOR_AUTO_ICON (line 85, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro MERCHANT_AUTO_ICON (line 86, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro INN_AUTO_ICON (line 87, file g:\albion\src\automap.c) not
+    referenced
+Info 750: local macro CLOSED_CHEST_AUTO_ICON (line 88, file
+    g:\albion\src\automap.c) not referenced
+Info 750: local macro MAP_EXIT_AUTO_ICON (line 89, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro OPEN_CHEST_AUTO_ICON (line 90, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro TRASHPILE_AUTO_ICON (line 91, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro SHOW_TRAPS_FUNCTION (line 100, file g:\albion\src\automap.c)
+    not referenced
+Info 750: local macro SHOW_HIDDEN_FUNCTION (line 101, file g:\albion\src\automap.c)
+    not referenced
+
+--- Module:   g:\albion\src\magic.c 
+                           _
+            Member_index = Select_party_member(System_text_ptrs[90], NULL);
+g:\albion\src\magic.c  786  Info 718: Select_party_member undeclared, assumed
+    to return int
+g:\albion\src\magic.c  786  Info 746: call to Select_party_member() not made in
+    the presence of a prototype
+                _
+                Select_character_item(Party_char_handles[Member_index - 1],
+g:\albion\src\magic.c  793  Info 718: Select_character_item undeclared, assumed
+    to return int
+g:\albion\src\magic.c  793  Info 746: call to Select_character_item() not made
+    in the presence of a prototype
+
+--- Module:   g:\albion\src\spells.c 
+
+--- Module:   g:\albion\src\apres.c 
+
+    --- Wrap-up for Module: g:\albion\src\apres.c
+
+Warning 551: Apres_gold_coins (line 37, file g:\albion\src\apres.c) not
+    accessed
+Warning 551: Apres_food_rations (line 38, file g:\albion\src\apres.c) not
+    accessed
+Info 766: Header file 'g:\albion\lib\gfxfunc.h' not used in module
+    'g:\albion\src\apres.c'
+
+--- Module:   g:\albion\src\goldfood.c 
+      _
+      sprintf(String, System_text_ptrs[48], Value);
+g:\albion\src\goldfood.c  373  Info 718: sprintf undeclared, assumed to return
+    int
+g:\albion\src\goldfood.c  373  Info 746: call to sprintf() not made in the
+    presence of a prototype
+g:\albion\src\goldfood.c  373  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+                                                  _
+      sprintf(String, System_text_ptrs[49], Value);
+g:\albion\src\goldfood.c  378  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+                                    _
+               Quantity = (UNSHORT) Input_number_with_symbol(1, 0,
+g:\albion\src\goldfood.c  477  Info 718: Input_number_with_symbol undeclared,
+    assumed to return int
+g:\albion\src\goldfood.c  477  Info 746: call to Input_number_with_symbol() not
+    made in the presence of a prototype
+                                        _
+                NULL, &(Gold_symbol[0]));
+g:\albion\src\goldfood.c  479  Warning 516: Input_number_with_symbol() has arg.
+    type conflict (arg. no. 8 -- basic) with line 956, file
+    g:\albion\src\invitems.c
+                                        _
+                NULL, &(Food_symbol[0]));
+g:\albion\src\goldfood.c  486  Warning 516: Input_number_with_symbol() has arg.
+    type conflict (arg. no. 8 -- basic) with line 956, file
+    g:\albion\src\invitems.c
+      _
+      Build_gold_food_graphics(Gold_food, Quantity);
+g:\albion\src\goldfood.c  685  Info 718: Build_gold_food_graphics undeclared,
+    assumed to return int
+g:\albion\src\goldfood.c  685  Info 746: call to Build_gold_food_graphics() not
+    made in the presence of a prototype
+                                          _
+   sprintf(String, "%u", Gold_food->Value);
+g:\albion\src\goldfood.c  848  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+_
+}
+g:\albion\src\goldfood.c  1065  Warning 550: PUMES (line 1061) not accessed
+         _
+{
+g:\albion\src\goldfood.c  1141  Error 18: Build_gold_food_graphics() redeclared
+    (void/nonvoid, Arg. no. 2: promotion) conflicts with line 685
+g:\albion\src\goldfood.c  1141  Warning 516: Build_gold_food_graphics(struct
+    Gold_food_object *, unsigned short) has arg. type conflict (arg. no. 2 --
+    unsigned short vs. int) with line 685
+                                  _
+   sprintf(String, "%u", Quantity);
+g:\albion\src\goldfood.c  1168  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+
+--- Module:   g:\albion\src\extra\scroll.c 
+
+--- Module:   g:\albion\src\extra\xload.c 
+
+    --- Wrap-up for Module: g:\albion\src\extra\xload.c
+
+Info 754: local structure member XLD_Library::Format (line 60, file
+    g:\albion\src\extra\xload.c) not referenced
+
+--- Module:   g:\albion\src\extra\hdob.c 
+                                                         _
+      Length = (SILONG) sqrt((double) (dX * dX + dY * dY));
+g:\albion\src\extra\hdob.c  896  Info 790: Suspicious truncation, integral to
+    float
+
+--- Module:   g:\albion\src\extra\gfxfunc.c 
+
+--- Module:   g:\albion\src\extra\sort.c 
+
+--- Module:   g:\albion\src\extra\findcol.c 
+
+--- Module:   g:\albion\src\extra\flc.c 
+                                          _
+            Output[Index].Data_ptr = Start;
+g:\albion\src\extra\flc.c  983  Warning 644: Start (line 957) may not have been
+    initialized
+                                    _
+      Output[Index].Data_ptr = Start;
+g:\albion\src\extra\flc.c  1018  Warning 644: Start (line 957) may not have
+    been initialized
+
+--- Module:   g:\albion\src\ui\control.c 
+                            _
+         Object->Next = Self;
+g:\albion\src\ui\control.c  1261  Info 771: Object (line 1224) conceivably not
+    initialized
+                            _
+         Object->Next = Self;
+g:\albion\src\ui\control.c  1283  Info 771: Object (line 1224) conceivably not
+    initialized
+_
+}
+g:\albion\src\ui\control.c  3879  Warning 529: No_main_OPM (line 3735) not
+    subsequently referenced
+
+--- Module:   g:\albion\src\ui\userface.c 
+
+--- Module:   g:\albion\src\ui\font.c 
+_
+};
+g:\albion\src\ui\font.c  84  Info 785: Too few initializers for aggregate
+_
+};
+g:\albion\src\ui\font.c  145  Info 785: Too few initializers for aggregate
+   _
+   Destroy_text_cache();
+g:\albion\src\ui\font.c  377  Info 718: Destroy_text_cache undeclared, assumed
+    to return int
+g:\albion\src\ui\font.c  377  Info 746: call to Destroy_text_cache() not made
+    in the presence of a prototype
+
+--- Module:   g:\albion\src\ui\popup.c 
+
+--- Module:   g:\albion\src\ui\scrolbar.c 
+
+--- Module:   g:\albion\src\ui\itemlist.c 
+                                        _
+   struct Item_descriptor *Selected_item;
+g:\albion\src\ui\itemlist.c  524  Warning 578: Declaration of 'Selected_item'
+    hides 'Selected_item' (line 40, file g:\albion\lib\invitems.h)
+
+--- Module:   g:\albion\src\ui\buttons.c 
+
+--- Module:   g:\albion\src\ui\input.c 
+
+    --- Wrap-up for Module: g:\albion\src\ui\input.c
+
+Info 754: local structure member Input_object::Object (line 56, file
+    g:\albion\src\ui\input.c) not referenced
+Info 766: Header file 'g:\watcom\h\stdio.h' not used in module
+    'g:\albion\src\ui\input.c'
+Info 766: Header file 'g:\albion\lib\hdob.h' not used in module
+    'g:\albion\src\ui\input.c'
+
+--- Module:   g:\albion\src\ui\nrbar.c 
+                        _
+ UNLONG Graphics_offset);
+g:\albion\lib\nrbar.h  36  Error 15: Input_number_with_symbol() redeclared
+    (Arg. no. 5: promotion, Arg. no. 6: promotion) (line 954, file
+    g:\albion\src\invitems.c)
+   _
+   sprintf(String, "%ld", *(Number_bar->Value_ptr));
+g:\albion\src\ui\nrbar.c  1064  Info 718: sprintf undeclared, assumed to return
+    int
+g:\albion\src\ui\nrbar.c  1064  Info 746: call to sprintf() not made in the
+    presence of a prototype
+g:\albion\src\ui\nrbar.c  1064  Error 15: sprintf(unsigned char *, const
+    unsigned char *, ...) redeclared (ellipsis) (line 146, file
+    g:\watcom\h\stdio.h, module g:\albion\src\main.c)
+
+    --- Wrap-up for Module: g:\albion\src\ui\nrbar.c
+
+Info 754: local structure member InputNr_object::Object (line 64, file
+    g:\albion\src\ui\nrbar.c) not referenced
+Info 754: local structure member InputNr_object::Background_handle (line 65,
+    file g:\albion\src\ui\nrbar.c) not referenced
+Info 754: local structure member InputNr_object::Background_OPM (line 66, file
+    g:\albion\src\ui\nrbar.c) not referenced
+
+--- Module:   g:\albion\src\ui\textwin.c 
+                                                                            _
+void Do_text_file_window(MEM_HANDLE Text_file_handle, UNSHORT Text_block_nr);
+g:\albion\lib\textwin.h  36  Error 15: Do_text_file_window() redeclared
+    (void/nonvoid, Arg. no. 2: promotion) (line 1702, file g:\albion\src\map.c)
+g:\albion\lib\textwin.h  36  Warning 516: Do_text_file_window(struct
+    Memory_handle *, unsigned short) has arg. type conflict (arg. no. 2 --
+    unsigned short vs. int) with line 1703, file g:\albion\src\map.c
+                                                    _
+ MEM_HANDLE Graphics_handle, UNLONG Graphics_offset);
+g:\albion\lib\textwin.h  39  Error 15: Do_text_file_window_with_symbol()
+    redeclared (void/nonvoid, Arg. no. 2: promotion, Arg. no. 3: promotion,
+    Arg. no. 4: promotion) (line 656, file g:\albion\src\events.c)
+g:\albion\lib\textwin.h  39  Warning 516: Do_text_file_window_with_symbol(struct
+    Memory_handle *, unsigned short, unsigned short, unsigned short, struct
+    Memory_handle *, unsigned int) has arg. type conflict (arg. no. 2 --
+    unsigned short vs. int) with line 657, file g:\albion\src\events.c
+                                _
+void Do_text_window(UNBYTE *Ptr);
+g:\albion\lib\textwin.h  41  Error 15: Do_text_window() redeclared
+    (void/nonvoid) (line 1856, file g:\albion\src\invitems.c)
+
+    --- Wrap-up for Module: g:\albion\src\ui\textwin.c
+
+Info 766: Header file 'g:\albion\lib\hdob.h' not used in module
+    'g:\albion\src\ui\textwin.c'
+
+--- Module:   g:\albion\src\ui\membrsel.c 
+                                                                     _
+UNSHORT Select_party_member(UNCHAR *Text, Member_evaluator Evaluator);
+g:\albion\lib\membrsel.h  39  Error 15: Select_party_member() redeclared
+    (signed/unsigned,precision) (line 786, file g:\albion\src\magic.c)
+
+    --- Wrap-up for Module: g:\albion\src\ui\membrsel.c
+
+Info 754: local structure member MemberSel_window_object::Background_handle
+    (line 52, file g:\albion\src\ui\membrsel.c) not referenced
+Info 754: local structure member MemberSel_window_object::Background_OPM (line
+    53, file g:\albion\src\ui\membrsel.c) not referenced
+Info 754: local structure member SelMember_object::Object (line 68, file
+    g:\albion\src\ui\membrsel.c) not referenced
+Info 766: Header file 'g:\albion\lib\hdob.h' not used in module
+    'g:\albion\src\ui\membrsel.c'
+
+--- Module:   g:\albion\src\ui\itemsel.c 
+                          _
+ Item_evaluator Evaluator);
+g:\albion\lib\itemsel.h  41  Error 15: Select_character_item() redeclared
+    (signed/unsigned,precision) (line 1924, file g:\albion\src\map.c)
+            _
+            memcpy((UNBYTE *) &Slots[Counter],
+g:\albion\src\ui\itemsel.c  176  Info 718: memcpy undeclared, assumed to return
+    int
+g:\albion\src\ui\itemsel.c  176  Info 746: call to memcpy() not made in the
+    presence of a prototype
+                                                                           _
+             (UNBYTE *) &(Char->Body_items[i]), sizeof(struct Item_packet));
+g:\albion\src\ui\itemsel.c  177  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                                                                            _
+          (UNBYTE *) &(Char->Backpack_items[i]), sizeof(struct Item_packet));
+g:\albion\src\ui\itemsel.c  206  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+      _
+      BASEMEM_FillMemByte((UNBYTE *) &Slots[i], sizeof(struct Item_packet), 0);
+g:\albion\src\ui\itemsel.c  223  Info 718: BASEMEM_FillMemByte undeclared,
+    assumed to return int
+g:\albion\src\ui\itemsel.c  223  Info 746: call to BASEMEM_FillMemByte() not
+    made in the presence of a prototype
+g:\albion\src\ui\itemsel.c  223  Error 15: BASEMEM_FillMemByte(unsigned char *,
+    unsigned int, unsigned char) redeclared (void/nonvoid, Arg. no. 3:
+    promotion) (line 118, file g:\pclib32\lib\bbbasmem.h, module
+    g:\albion\src\main.c)
+                                                          _
+      Selected_item = Item_slot_indices[Selected_item - 1];
+g:\albion\src\ui\itemsel.c  248  Warning 644: Item_slot_indices (line 147) may
+    not have been initialized
+
+    --- Wrap-up for Module: g:\albion\src\ui\itemsel.c
+
+Info 754: local structure member ItemSel_window_object::Background_handle (line
+    57, file g:\albion\src\ui\itemsel.c) not referenced
+Info 754: local structure member ItemSel_window_object::Background_OPM (line
+    58, file g:\albion\src\ui\itemsel.c) not referenced
+Info 766: Header file 'g:\albion\lib\hdob.h' not used in module
+    'g:\albion\src\ui\itemsel.c'
+
+--- Module:   g:\albion\src\ui\boolreq.c 
+                                       _
+BOOLEAN Boolean_requester(UNCHAR *Text);
+g:\albion\lib\boolreq.h  36  Error 15: Boolean_requester() redeclared
+    (precision) (line 1796, file g:\albion\src\invitems.c)
+                        _
+ UNCHAR *No_button_text);
+g:\albion\lib\boolreq.h  38  Error 15: Boolean_requester_with_buttons()
+    redeclared (precision) (line 2083, file g:\albion\src\events.c)
+
+    --- Wrap-up for Module: g:\albion\src\ui\boolreq.c
+
+Info 754: local structure member BooleanReq_object::Background_handle (line 53,
+    file g:\albion\src\ui\boolreq.c) not referenced
+Info 754: local structure member BooleanReq_object::Background_OPM (line 54,
+    file g:\albion\src\ui\boolreq.c) not referenced
+Info 766: Header file 'g:\albion\lib\hdob.h' not used in module
+    'g:\albion\src\ui\boolreq.c'
+
+--- Module:   g:\albion\src\text\textvar.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+                             _
+void Destroy_text_cache(void);
+g:\albion\src\text\textvar.h  124  Error 15: Destroy_text_cache() redeclared
+    (void/nonvoid) (line 377, file g:\albion\src\ui\font.c)
+
+--- Module:   g:\albion\src\text\text.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+
+    --- Wrap-up for Module: g:\albion\src\text\text.c
+
+Info 766: Header file 'g:\watcom\h\string.h' not used in module
+    'g:\albion\src\text\text.c'
+
+--- Module:   g:\albion\src\text\textcomm.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+                    _
+   return((UNSHORT) strtoul(Number, NULL, 10));
+g:\albion\src\text\textcomm.c  127  Info 718: strtoul undeclared, assumed to
+    return int
+g:\albion\src\text\textcomm.c  127  Info 746: call to strtoul() not made in the
+    presence of a prototype
+g:\albion\src\text\textcomm.c  127  Error 15: strtoul(const unsigned char *,
+    unsigned char **, int) redeclared (nominal,signed/unsigned) (line 80, file
+    g:\watcom\h\stdlib.h, module g:\albion\src\main.c)
+
+--- Module:   g:\albion\src\text\textproc.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+ _
+};
+g:\albion\src\text\textproc.c  66  Error 19: Useless Declaration
+   _
+   memcpy(&Current_text_style, Textstyle_stack[Textstyle_stack_index],
+g:\albion\src\text\textproc.c  97  Info 718: memcpy undeclared, assumed to
+    return int
+g:\albion\src\text\textproc.c  97  Info 746: call to memcpy() not made in the
+    presence of a prototype
+                             _
+    sizeof(struct Textstyle));
+g:\albion\src\text\textproc.c  98  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                                                                          _
+   memcpy(&This_line_style, &Current_text_style, sizeof(struct Textstyle));
+g:\albion\src\text\textproc.c  101  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                            _
+                        j = strlen(Add_ptr);
+g:\albion\src\text\textproc.c  183  Info 718: strlen undeclared, assumed to
+    return int
+g:\albion\src\text\textproc.c  183  Info 746: call to strlen() not made in the
+    presence of a prototype
+g:\albion\src\text\textproc.c  183  Error 15: strlen(const unsigned char *)
+    redeclared (signed/unsigned) (line 37, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+                                     _
+            while (*(--Space_ptr) != COMSTART_CHAR);
+g:\albion\src\text\textproc.c  376  Info 722: Suspicious use of ;
+                                                                 _
+      memcpy(&Info, &Current_line_info, sizeof(struct Line_info));
+g:\albion\src\text\textproc.c  661  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                                                                       _
+      memcpy(&(Info.Style), &This_line_style, sizeof(struct Textstyle));
+g:\albion\src\text\textproc.c  662  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                                                  _
+      memcpy(Ptr, &Info, sizeof(struct Line_info));
+g:\albion\src\text\textproc.c  665  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                                                                             _
+      memcpy(&This_line_style, &Current_text_style, sizeof(struct Textstyle));
+g:\albion\src\text\textproc.c  670  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+      _
+      strncpy(Ptr, Start, Current_line_info.String_length);
+g:\albion\src\text\textproc.c  673  Info 718: strncpy undeclared, assumed to
+    return int
+g:\albion\src\text\textproc.c  673  Info 746: call to strncpy() not made in the
+    presence of a prototype
+g:\albion\src\text\textproc.c  673  Error 15: strncpy(unsigned char *, const
+    unsigned char *, unsigned int) redeclared (basic) (line 40, file
+    g:\watcom\h\string.h, module g:\albion\src\main.c)
+                                                                                    _
+   memcpy(&(Current_line_info.Style), &Current_text_style, sizeof(struct Textstyle));
+g:\albion\src\text\textproc.c  732  Error 15: memcpy(void *, const void *,
+    unsigned int) redeclared (basic) (line 26, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+                      _
+   Size = strlen(Text);
+g:\albion\src\text\textproc.c  760  Error 15: strlen(const unsigned char *)
+    redeclared (signed/unsigned) (line 37, file g:\watcom\h\string.h, module
+    g:\albion\src\main.c)
+      _
+      memmove(Target, Target + Processing_buffer_index,
+g:\albion\src\text\textproc.c  957  Info 718: memmove undeclared, assumed to
+    return int
+g:\albion\src\text\textproc.c  957  Info 746: call to memmove() not made in the
+    presence of a prototype
+                                                 _
+       LINE_LENGTH_MAX - Processing_buffer_index);
+g:\albion\src\text\textproc.c  958  Error 15: memmove(void *, const void *,
+    unsigned int) redeclared (basic) (line 27, file g:\watcom\h\string.h,
+    module g:\albion\src\main.c)
+
+--- Module:   g:\albion\src\text\textdisp.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+
+--- Module:   g:\albion\src\text\textgfx.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+
+--- Module:   g:\albion\src\text\textmng.c 
+                             _
+extern UNSHORT PA_stack_index;
+g:\albion\src\text\textvar.h  92  Info 762: Declaration PA_stack_index
+    superseded by declaration at line 125, file g:\albion\lib\text.h
+                                          _
+extern struct Textstyle *Textstyle_stack[];
+g:\albion\src\text\textvar.h  94  Info 762: Declaration Textstyle_stack
+    superseded by declaration at line 127, file g:\albion\lib\text.h
+                                    _
+extern UNSHORT Textstyle_stack_index;
+g:\albion\src\text\textvar.h  95  Info 762: Declaration Textstyle_stack_index
+    superseded by declaration at line 128, file g:\albion\lib\text.h
+                                               _
+   if (Processed->Text_height > PA->Area.height)
+g:\albion\src\text\textmng.c  218  Warning 574: Signed-unsigned mix with
+    relational
+                                                                              _
+      while ((Processed->Text_height - Current_text_Y) > (2 * PA->Area.height))
+g:\albion\src\text\textmng.c  231  Warning 574: Signed-unsigned mix with
+    relational
+                                                                        _
+         if (Current_text_Y >= Processed->Text_height  - PA->Area.height)
+g:\albion\src\text\textmng.c  248  Warning 574: Signed-unsigned mix with
+    relational
+                                                                            _
+               if (Current_text_Y < Processed->Text_height - PA->Area.height)
+g:\albion\src\text\textmng.c  294  Warning 574: Signed-unsigned mix with
+    relational
+                                                                                 _
+                  if (Current_text_Y >= Processed->Text_height  - PA->Area.height)
+g:\albion\src\text\textmng.c  298  Warning 574: Signed-unsigned mix with
+    relational
+_
+}
+g:\albion\src\text\textmng.c  369  Warning 529: Ptr (line 192) not subsequently
+    referenced
+g:\albion\src\text\textmng.c  369  Warning 529: i (line 191) not subsequently
+    referenced
+_
+}
+g:\albion\src\text\textmng.c  572  Warning 550: PA (line 403) not accessed
+_
+}
+g:\albion\src\text\textmng.c  744  Warning 550: PA (line 725) not accessed
+_
+}
+g:\albion\src\text\textmng.c  813  Warning 529: Handle (line 774) not
+    subsequently referenced
+   _
+   Put_masked_block(OPM, X, Y, Cached->Width, Cached->Height, Ptr);
+g:\albion\src\text\textmng.c  952  Info 718: Put_masked_block undeclared,
+    assumed to return int
+g:\albion\src\text\textmng.c  952  Info 746: call to Put_masked_block() not
+    made in the presence of a prototype
+g:\albion\src\text\textmng.c  952  Error 15: Put_masked_block(struct OPM *,
+    short, short, short, short, unsigned char *) redeclared (void/nonvoid, Arg.
+    no. 2: promotion, Arg. no. 3: promotion, Arg. no. 4: promotion, Arg. no. 5:
+    prom) (line 263, file g:\albion\src\extra\gfxfunc.c)
+g:\albion\src\text\textmng.c  952  Warning 516: Put_masked_block(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 2 -- int vs. short) with line 263, file g:\albion\src\extra\gfxfunc.c
+g:\albion\src\text\textmng.c  952  Warning 516: Put_masked_block(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 3 -- int vs. short) with line 263, file g:\albion\src\extra\gfxfunc.c
+g:\albion\src\text\textmng.c  952  Warning 516: Put_masked_block(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 4 -- int vs. short) with line 263, file g:\albion\src\extra\gfxfunc.c
+g:\albion\src\text\textmng.c  952  Warning 516: Put_masked_block(struct OPM *,
+    short, short, short, short, unsigned char *) has arg. type conflict (arg.
+    no. 5 -- int vs. short) with line 263, file g:\albion\src\extra\gfxfunc.c
+
+--- Module:   g:\albion\src\commagic\commag0.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+          _
+   sparks=calc_strength(Strength,C0_Spell_1_MIN_SPARKS,C0_Spell_1_MAX_SPARKS);
+g:\albion\src\commagic\commag0.c  99  Info 718: calc_strength undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag0.c  99  Info 746: call to calc_strength() not
+    made in the presence of a prototype
+   _
+   Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&sx,&sy,&sz);
+g:\albion\src\commagic\commag0.c  123  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag0.c  123  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag0.c  123  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag0.c  126  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+      _
+      Get_part_rectangle(Victim_part,&m_left,&m_top,&m_right,&m_bottom);
+g:\albion\src\commagic\commag0.c  174  Info 718: Get_part_rectangle undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag0.c  174  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag0.c  174  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commag0.c  258  Warning 550: sparks (line 88) not
+    accessed
+g:\albion\src\commagic\commag0.c  258  Warning 529: time (line 88) not
+    subsequently referenced
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag0.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag0.c'
+
+--- Module:   g:\albion\src\commagic\commag1.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+               _
+               Convert_tactical_to_3D_coordinates(Destination_X,
+g:\albion\src\commagic\commag1.c  134  Info 718: Convert_tactical_to_3D_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag1.c  134  Info 746: call to Convert_tactical_to_3D_coordinates()
+    not made in the presence of a prototype
+                                                 _
+                &(Victim_part->Main_COMOB->Z_3D));
+g:\albion\src\commagic\commag1.c  136  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag1.c  136  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag1.c  136  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag1.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag1.c'
+
+--- Module:   g:\albion\src\commagic\commag2.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag2.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag2.c'
+
+--- Module:   g:\albion\src\commagic\commag3.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                 _
+      Nr_steps = Prepare_COMOB_movement(Current_use_magic_data.Casting_participant,
+g:\albion\src\commagic\commag3.c  107  Info 718: Prepare_COMOB_movement
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  107  Info 746: call to Prepare_COMOB_movement()
+    not made in the presence of a prototype
+                                                                            _
+       Fireball_COMOB, Victim_part->Tactical_X, Victim_part->Tactical_Y, 15);
+g:\albion\src\commagic\commag3.c  108  Error 15: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) redeclared (signed/unsigned,precision, Arg. no. 3:
+    promotion, Arg. no. 4: promotion, Arg. no. 5: promotion) (line 1301, file
+    g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  108  Warning 516: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 3 -- int vs. unsigned
+    short) with line 1301, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  108  Warning 516: Prepare_COMOB_movement(struct
+    Combat_participant *, struct COMOB *, unsigned short, unsigned short,
+    unsigned short) has arg. type conflict (arg. no. 4 -- int vs. unsigned
+    short) with line 1301, file g:\albion\src\comshow.c
+                                                                                                                                                      _
+         Gen_Sparks(X_3D + COMOB->dX_3D,Y_3D + COMOB->dY_3D,Z_3D + COMOB->dZ_3D,40/*amount*/,200/*speed*/,100/*life*/,40/*size*/,GEN_SPARK_TYP_ORANGE);
+g:\albion\src\commagic\commag3.c  220  Warning 530: COMOB (line 80) not
+    initialized
+_
+}
+g:\albion\src\commagic\commag3.c  233  Warning 529: Behaviour_data (line 81)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  233  Warning 529: j (line 85) not
+    subsequently referenced
+                      _
+   C3_Spell_2_ENERGIE=calc_strength(Strength,3,C3_Spell_2_MAX_ENERGIE-3);
+g:\albion\src\commagic\commag3.c  301  Info 718: calc_strength undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag3.c  301  Info 746: call to calc_strength() not
+    made in the presence of a prototype
+   _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  307  Info 718: Get_part_rectangle undeclared,
+    assumed to return int
+g:\albion\src\commagic\commag3.c  307  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  307  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+      _
+      Get_3D_part_coordinates(Victim_part,&COMOB[t]->X_3D,&COMOB[t]->Y_3D,&COMOB[t]->Z_3D);
+g:\albion\src\commagic\commag3.c  327  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  327  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  327  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                         _
+      Delete_COMOB_behaviour(behave_x[t]);
+g:\albion\src\commagic\commag3.c  455  Info 771: behave_x (line 280)
+    conceivably not initialized
+                                         _
+      Delete_COMOB_behaviour(behave_y[t]);
+g:\albion\src\commagic\commag3.c  456  Info 771: behave_y (line 281)
+    conceivably not initialized
+                          _
+      ox[t]=COMOB[t]->X_3D;
+g:\albion\src\commagic\commag3.c  464  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag3.c  470  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                          _
+         COMOB[t]->Display_width=C3_Spell_2_ENERGIE_SIZE-s;
+g:\albion\src\commagic\commag3.c  478  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                                  _
+         COMOB[t]->X_3D=aip3d(ox[t],zx,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  480  Info 771: ox (line 284) conceivably not
+    initialized
+                                                                  _
+         COMOB[t]->Y_3D=aip3d(oy[t],zy,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  481  Info 771: oy (line 284) conceivably not
+    initialized
+                                                                  _
+         COMOB[t]->Z_3D=aip3d(oz[t],zz,C3_Spell_2_HITACCELSTEPS,s);
+g:\albion\src\commagic\commag3.c  482  Info 771: oz (line 284) conceivably not
+    initialized
+                            _
+      Delete_COMOB(COMOB[t]);
+g:\albion\src\commagic\commag3.c  505  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                      _
+         Delete_COMOB(SCH_COMOB[t][s]);
+g:\albion\src\commagic\commag3.c  507  Info 771: SCH_COMOB (line 279)
+    conceivably not initialized
+                                                                                             _
+         Get_3D_part_coordinates(Victim_part,&COMOB[t]->X_3D,&COMOB[t]->Y_3D,&COMOB[t]->Z_3D);
+g:\albion\src\commagic\commag3.c  535  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                              _
+         oly[t]=COMOB[t]->Y_3D;
+g:\albion\src\commagic\commag3.c  564  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                                           _
+            COMOB[t]->Y_3D=ip3d(oly[t],0,C3_Spell_2_LEUCHTKUGELFALLSTEPS,s);
+g:\albion\src\commagic\commag3.c  572  Info 771: oly (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  572  Info 771: COMOB (line 278) conceivably
+    not initialized
+                         _
+         COMOB[t]->Y_3D=0;
+g:\albion\src\commagic\commag3.c  579  Info 771: COMOB (line 278) conceivably
+    not initialized
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&zx,&zy,&zz);
+g:\albion\src\commagic\commag3.c  585  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                                          _
+         calc_delta_xyz(olx[t],0,olz[t],olx[t]+(px*COMOB_DEC_FACTOR),0,olz[t]+(pz*COMOB_DEC_FACTOR),&mx[t],NULL,&mz[t],3*COMOB_DEC_FACTOR);
+g:\albion\src\commagic\commag3.c  594  Info 771: olx (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  594  Info 771: olz (line 286) conceivably not
+    initialized
+                            _
+               olx[t]+=mx[t];
+g:\albion\src\commagic\commag3.c  603  Info 771: olx (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  603  Info 771: mx (line 287) conceivably not
+    initialized
+                            _
+               olz[t]+=mz[t];
+g:\albion\src\commagic\commag3.c  604  Info 771: olz (line 286) conceivably not
+    initialized
+g:\albion\src\commagic\commag3.c  604  Info 771: mz (line 287) conceivably not
+    initialized
+                                    _
+               COMOB[t]->X_3D=olx[t];
+g:\albion\src\commagic\commag3.c  605  Info 771: COMOB (line 278) conceivably
+    not initialized
+                               _
+         Delete_COMOB(COMOB[t]);
+g:\albion\src\commagic\commag3.c  622  Info 771: COMOB (line 278) conceivably
+    not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  631  Warning 529: Z_3D (line 285) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: behave_shadow (line 282)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: max_steps (line 288) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: steps (line 288) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: bool (line 293) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: X_3D (line 285) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  631  Warning 529: Y_3D (line 285) not
+    subsequently referenced
+                                                                                  _
+   Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  711  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  731  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commag3.c  854  Warning 529: behave_size (line 683) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  854  Warning 550: flameballsize (line 694)
+    not accessed
+                                                   _
+   Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  979  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                              _
+      halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  1035  Info 771: Recolour_table_handle (line
+    901) conceivably not initialized
+                                                      _
+      Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  1104  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                      _
+               halo_COMOB[t]->X_3D = x;
+g:\albion\src\commagic\commag3.c  1145  Info 771: halo_COMOB (line 909)
+    conceivably not initialized
+                                                                  _
+         Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  1222  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                _
+      MEM_Free_pointer(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  1277  Info 771: Recolour_table_handle (line
+    901) conceivably not initialized
+                                 _
+      Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1283  Info 771: halo_COMOB (line 909)
+    conceivably not initialized
+                              _
+   Delete_COMOB(explode_COMOB);
+g:\albion\src\commagic\commag3.c  1291  Warning 644: explode_COMOB (line 908)
+    may not have been initialized
+_
+}
+g:\albion\src\commagic\commag3.c  1300  Warning 529: v (line 918) not
+    subsequently referenced
+                                 _
+   if((glow_COMOB=gen_Dummy_COMOB())==NULL){
+g:\albion\src\commagic\commag3.c  1396  Info 746: call to gen_Dummy_COMOB() not
+    made in the presence of a prototype
+                                     _
+                  Delete_COMOB(COMOB);
+g:\albion\src\commagic\commag3.c  1490  Warning 530: COMOB (line 1357) not
+    initialized
+                                     _
+                  Delete_COMOB(COMOB);
+g:\albion\src\commagic\commag3.c  1554  Warning 530: COMOB (line 1357) not
+    initialized
+                                            _
+               ball_COMOB[t]->X_3D = xpos[t];
+g:\albion\src\commagic\commag3.c  1591  Warning 644: xpos (line 1352) may not
+    have been initialized
+                                            _
+               ball_COMOB[t]->Y_3D = ypos[t];
+g:\albion\src\commagic\commag3.c  1592  Warning 644: ypos (line 1352) may not
+    have been initialized
+                                            _
+               ball_COMOB[t]->Z_3D = zpos[t];
+g:\albion\src\commagic\commag3.c  1593  Warning 644: zpos (line 1352) may not
+    have been initialized
+                                 _
+      Delete_COMOB(ball_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1689  Warning 644: ball_COMOB (line 1354) may
+    not have been initialized
+                                  _
+      Delete_COMOB(flame_COMOB[t]);
+g:\albion\src\commagic\commag3.c  1694  Warning 644: flame_COMOB (line 1355)
+    may not have been initialized
+_
+}
+g:\albion\src\commagic\commag3.c  1706  Warning 529: behave_size (line 1344)
+    not subsequently referenced
+                                                                               _
+      if(!(behave = Add_COMOB_behaviour(energie_COMOB, COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  1961  Info 720: Boolean test of assignment
+                                                                    _
+            halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  1981  Info 771: Recolour_table_handle (line
+    1757) conceivably not initialized
+                                                                                            _
+            if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],energie_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  1984  Info 720: Boolean test of assignment
+                                                      _
+         Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2041  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                  _
+         Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2059  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                               _
+      MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  2123  Info 771: Recolour_table_handle (line
+    1757) conceivably not initialized
+   _
+   Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&tx,&tz);
+g:\albion\src\commagic\commag3.c  2179  Info 718: Convert_tactical_to_3D_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag3.c  2179  Info 746: call to Convert_tactical_to_3D_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag3.c  2179  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  2179  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  2179  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  2349  Warning 529: x (line 2175) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2349  Warning 529: y (line 2175) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2349  Warning 529: z (line 2175) not
+    subsequently referenced
+                                                _
+   Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2421  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2422  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                                    _
+   Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&tx,&tz);
+g:\albion\src\commagic\commag3.c  2712  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  2712  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  2712  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  2881  Warning 529: x (line 2708) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2881  Warning 529: y (line 2708) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  2881  Warning 529: z (line 2708) not
+    subsequently referenced
+                                                _
+   Get_3D_part_coordinates(Victim_part,&x,&y,&z);
+g:\albion\src\commagic\commag3.c  2942  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+   Get_part_rectangle(Victim_part,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commag3.c  2943  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+                                                                 _
+         halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  3178  Info 771: Recolour_table_handle (line
+    3098) conceivably not initialized
+                                                                                                   _
+         if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3183  Info 720: Boolean test of assignment
+                                                         _
+         Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3214  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                        _
+         Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3227  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                            _
+               lp_COMOB[t]->X_3D+=delta_x[t];
+g:\albion\src\commagic\commag3.c  3304  Info 771: lp_COMOB (line 3102)
+    conceivably not initialized
+g:\albion\src\commagic\commag3.c  3304  Info 771: delta_x (line 3106)
+    conceivably not initialized
+                                            _
+               lp_COMOB[t]->Y_3D+=delta_y[t];
+g:\albion\src\commagic\commag3.c  3305  Info 771: delta_y (line 3107)
+    conceivably not initialized
+                                            _
+               lp_COMOB[t]->Z_3D+=delta_z[t];
+g:\albion\src\commagic\commag3.c  3306  Info 771: delta_z (line 3108)
+    conceivably not initialized
+                                  _
+         Delete_COMOB(lp_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3314  Info 771: lp_COMOB (line 3102)
+    conceivably not initialized
+                                    _
+         Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3322  Info 771: halo_COMOB (line 3101)
+    conceivably not initialized
+                                                  _
+         MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  3334  Info 771: Recolour_table_handle (line
+    3098) conceivably not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  3341  Warning 529: v (line 3113) not
+    subsequently referenced
+                                                                 _
+         halo_COMOB[t]->Special_handle = Recolour_table_handle[t];
+g:\albion\src\commagic\commag3.c  3452  Info 771: Recolour_table_handle (line
+    3380) conceivably not initialized
+                                                                                                   _
+         if(!(behave = Add_COMOB_behaviour(halo_COMOB[t],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3457  Info 720: Boolean test of assignment
+                                                         _
+         Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3488  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                        _
+         Get_3D_part_coordinates(Current_use_magic_data.Casting_participant,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3501  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                            _
+               sp_COMOB[t]->X_3D+=delta_x[t];
+g:\albion\src\commagic\commag3.c  3578  Info 771: sp_COMOB (line 3384)
+    conceivably not initialized
+g:\albion\src\commagic\commag3.c  3578  Info 771: delta_x (line 3388)
+    conceivably not initialized
+                                            _
+               sp_COMOB[t]->Y_3D+=delta_y[t];
+g:\albion\src\commagic\commag3.c  3579  Info 771: delta_y (line 3389)
+    conceivably not initialized
+                                            _
+               sp_COMOB[t]->Z_3D+=delta_z[t];
+g:\albion\src\commagic\commag3.c  3580  Info 771: delta_z (line 3390)
+    conceivably not initialized
+                                  _
+         Delete_COMOB(sp_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3588  Info 771: sp_COMOB (line 3384)
+    conceivably not initialized
+                                    _
+         Delete_COMOB(halo_COMOB[t]);
+g:\albion\src\commagic\commag3.c  3596  Info 771: halo_COMOB (line 3383)
+    conceivably not initialized
+                                                  _
+         MEM_Free_memory(Recolour_table_handle[t]);
+g:\albion\src\commagic\commag3.c  3615  Info 771: Recolour_table_handle (line
+    3380) conceivably not initialized
+_
+}
+g:\albion\src\commagic\commag3.c  3622  Warning 529: v (line 3393) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commag3.c  3661  Warning 529: behave_glow (line 3648)
+    not subsequently referenced
+g:\albion\src\commagic\commag3.c  3661  Warning 529: glow_COMOB (line 3647) not
+    subsequently referenced
+                                                         _
+   Get_3D_part_coordinates(Victim_part,&orgx,&orgy,&orgz);
+g:\albion\src\commagic\commag3.c  3739  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                _
+         if(!(behave = Add_COMOB_behaviour(light_COMOB[aktlightcomob],Victim_part->Main_COMOB, connect_handler))){
+g:\albion\src\commagic\commag3.c  3759  Info 720: Boolean test of assignment
+                                                            _
+            Get_3D_part_coordinates(Victim_part,&sx,&sy,&sz);
+g:\albion\src\commagic\commag3.c  3789  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                            _
+            Get_3D_part_coordinates(Victim_part,&dx,&dy,&dz);
+g:\albion\src\commagic\commag3.c  3802  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+                                                                                                                 _
+            if((s=calc_delta_xyz(sx,sy,sz,dx,dy,dz,&delta_x,&delta_y,&delta_z,C3_Spell_14_MOVESPEED))>delta_steps){
+g:\albion\src\commagic\commag3.c  3810  Warning 530: delta_steps (line 3715)
+    not initialized
+                                                                                    _
+            if(!(behave = Add_COMOB_behaviour(energie_COMOB,NULL, lifedead_handler))){
+g:\albion\src\commagic\commag3.c  3844  Info 720: Boolean test of assignment
+                                                 _
+         Delete_COMOB(light_COMOB[aktlightcomob]);
+g:\albion\src\commagic\commag3.c  3877  Warning 644: light_COMOB (line 3705)
+    may not have been initialized
+                                                                                    _
+            if(!(behave = Add_COMOB_behaviour(ball_COMOB[t],NULL, lifedead_handler))){
+g:\albion\src\commagic\commag3.c  3973  Info 720: Boolean test of assignment
+_
+}
+g:\albion\src\commagic\commag3.c  4001  Warning 529: load_COMOB (line 3703) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  4001  Warning 529: COMOB (line 3704) not
+    subsequently referenced
+                                                                           _
+            Convert_tactical_to_3D_coordinates(Tactical_X,Tactical_Y,&x,&z);
+g:\albion\src\commagic\commag3.c  4056  Error 15: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) redeclared (void/nonvoid, Arg. no. 1: promotion, Arg.
+    no. 2: promotion) (line 1673, file g:\albion\src\comshow.c)
+g:\albion\src\commagic\commag3.c  4056  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 1 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+g:\albion\src\commagic\commag3.c  4056  Warning 516: Convert_tactical_to_3D_coordinates(short,
+    short, int *, int *) has arg. type conflict (arg. no. 2 -- int vs. short)
+    with line 1673, file g:\albion\src\comshow.c
+_
+}
+g:\albion\src\commagic\commag3.c  4087  Warning 529: y (line 4034) not
+    subsequently referenced
+g:\albion\src\commagic\commag3.c  4087  Warning 550: COMOB (line 4032) not
+    accessed
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag3.c
+
+Info 750: local macro C3_Spell_4_MIN_FLASHTIME (line 890, file
+    g:\albion\src\commagic\commag3.c) not referenced
+Info 750: local macro C3_Spell_4_MAX_FLASHTIME (line 891, file
+    g:\albion\src\commagic\commag3.c) not referenced
+Info 750: local macro C3_Spell_4_MAX_FLASHTIMELIGHT (line 892, file
+    g:\albion\src\commagic\commag3.c) not referenced
+
+--- Module:   g:\albion\src\commagic\commag5.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+               _
+               Put_item_in_apres_pool(&(Char->Body_items[i]));
+g:\albion\src\commagic\commag5.c  270  Info 718: Put_item_in_apres_pool
+    undeclared, assumed to return int
+g:\albion\src\commagic\commag5.c  270  Info 746: call to Put_item_in_apres_pool()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commag5.c  270  Error 15: Put_item_in_apres_pool(struct
+    Item_packet *) redeclared (void/nonvoid) (line 101, file
+    g:\albion\src\apres.c)
+
+    --- Wrap-up for Module: g:\albion\src\commagic\commag5.c
+
+Info 766: Header file 'g:\watcom\h\math.h' not used in module
+    'g:\albion\src\commagic\commag5.c'
+
+--- Module:   g:\albion\src\commagic\commsub.c 
+                           _
+extern SILONG rndmm(SILONG min,SILONG max);
+g:\albion\lib\commsub.h  63  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  63  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                            _
+extern SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii);
+g:\albion\lib\commsub.h  64  Error 123: Macro (min) defined with arguments at
+    line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\lib\commsub.h  64  Error 123: Macro (max) defined with arguments at
+    line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                                            _
+SILONG calc_strength(SILONG strength,SILONG min,SILONG max)
+g:\albion\src\commagic\commsub.c  279  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  279  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+      _
+   if(max>min){
+g:\albion\src\commagic\commsub.c  283  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  283  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                      _
+      ret=((strength*(max-min))/100)+min;
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  284  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+          _
+      ret=max-((strength*(max-min))/100);
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  287  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                    _
+SILONG rndmm(SILONG min,SILONG max)
+g:\albion\src\commagic\commsub.c  372  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  372  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                  _
+   rnd=rand() % ((max+1)-min);
+g:\albion\src\commagic\commsub.c  376  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  376  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+              _
+   return(rnd+min);
+g:\albion\src\commagic\commsub.c  379  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                     _
+SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii)
+g:\albion\src\commagic\commsub.c  400  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  400  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+                     _
+      rnd=rand() % ((max+1)-min);
+g:\albion\src\commagic\commsub.c  406  Error 123: Macro (max) defined with
+    arguments at line 137, file g:\watcom\h\stdlib.h -- this is just a warning
+g:\albion\src\commagic\commsub.c  406  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                 _
+      return(rnd+min);
+g:\albion\src\commagic\commsub.c  407  Error 123: Macro (min) defined with
+    arguments at line 140, file g:\watcom\h\stdlib.h -- this is just a warning
+                                                                                    _
+         if(!(behave = Add_COMOB_behaviour(Halo_COMOB, base_COMOB, connect_handler))){
+g:\albion\src\commagic\commsub.c  549  Info 720: Boolean test of assignment
+_
+}
+g:\albion\src\commagic\commsub.c  934  Warning 529: ldata (line 871) not
+    subsequently referenced
+   _
+   Get_part_rectangle(victim,&left,&top,&right,&bottom);
+g:\albion\src\commagic\commsub.c  1060  Info 718: Get_part_rectangle
+    undeclared, assumed to return int
+g:\albion\src\commagic\commsub.c  1060  Info 746: call to Get_part_rectangle()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commsub.c  1060  Error 15: Get_part_rectangle(struct
+    Combat_participant *, int *, int *, int *, int *) redeclared (void/nonvoid)
+    (line 1522, file g:\albion\src\comshow.c)
+   _
+   Get_3D_part_coordinates(victim,&x,&y,&z);
+g:\albion\src\commagic\commsub.c  1063  Info 718: Get_3D_part_coordinates
+    undeclared, assumed to return int
+g:\albion\src\commagic\commsub.c  1063  Info 746: call to Get_3D_part_coordinates()
+    not made in the presence of a prototype
+g:\albion\src\commagic\commsub.c  1063  Error 15: Get_3D_part_coordinates(struct
+    Combat_participant *, int *, int *, int *) redeclared (void/nonvoid) (line
+    1577, file g:\albion\src\comshow.c)
+_
+}
+g:\albion\src\commagic\commsub.c  1178  Warning 529: t (line 1030) not
+    subsequently referenced
+g:\albion\src\commagic\commsub.c  1178  Warning 550: gfxsizeh (line 1037) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1406  Warning 550: COMOB (line 1382) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1453  Warning 529: u (line 1430) not
+    subsequently referenced
+g:\albion\src\commagic\commsub.c  1453  Warning 550: COMOB (line 1429) not
+    accessed
+_
+}
+g:\albion\src\commagic\commsub.c  1662  Warning 529: behave_bounce (line 1549)
+    not subsequently referenced
+g:\albion\src\commagic\commsub.c  1662  Warning 529: ldata (line 1551) not
+    subsequently referenced
+                                  _
+    sin((Value * 2 * PI) / Period);
+g:\albion\src\commagic\commsub.c  1725  Warning 524: Loss of precision
+    (assignment) (double to int)
+_
+}
+g:\albion\src\commagic\commsub.c  1885  Warning 529: t (line 1811) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commsub.c  1952  Warning 529: t (line 1914) not
+    subsequently referenced
+_
+}
+g:\albion\src\commagic\commsub.c  2059  Warning 529: y (line 2035) not
+    subsequently referenced
+
+--- Global Wrap-up
+
+Info 765: external Default_dialogue_node (line 253, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Destroy_dialogue_log_list(struct Memory_handle *) (line
+    2818, file g:\albion\src\dialogue.c) could be made static
+Info 759: header declaration for Destroy_cached_text_line(struct
+    Cached_text_line *) (line 835, file g:\albion\src\text\textmng.c) could be
+    moved from header to module
+Info 765: external Destroy_cached_text_line(struct Cached_text_line *) (line
+    835, file g:\albion\src\text\textmng.c) could be made static
+Info 765: external Destroy_modification_list(struct Memory_handle *) (line
+    2240, file g:\albion\src\map.c) could be made static
+Info 759: header declaration for Destroy_text_cache(void) (line 871, file
+    g:\albion\src\text\textmng.c) could be moved from header to module
+Info 765: external Display_2D_party(void) (line 3471, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Display_2D_object(struct Object_2D *) (line 879, file
+    g:\albion\src\2d_displ.c) could be made static
+Info 765: external Display_M2_selection(unsigned short, unsigned short) (line
+    1062, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Display_automap(void) (line 532, file g:\albion\src\automap.c)
+    could be made static
+Info 765: external Display_extra_icons(unsigned short, unsigned short, unsigned
+    short, unsigned short, unsigned short) (line 641, file g:\albion\src\2d_displ.c)
+    could be made static
+Info 765: external Display_event_diagnostics(struct OPM *, unsigned short,
+    unsigned short, unsigned short, unsigned short) (line 1595, file
+    g:\albion\src\2d_displ.c) could be made static
+Info 765: external Display_overlay(unsigned short, unsigned short, unsigned
+    short, unsigned short) (line 811, file g:\albion\src\2d_displ.c) could be
+    made static
+Info 765: external Display_overlay_diagnostics(struct OPM *, unsigned short,
+    unsigned short, unsigned int) (line 1519, file g:\albion\src\2d_displ.c)
+    could be made static
+Info 765: external Display_underlay(unsigned short, unsigned short, unsigned
+    short, unsigned short) (line 740, file g:\albion\src\2d_displ.c) could be
+    made static
+Info 765: external Display_underlay_diagnostics(struct OPM *, unsigned short,
+    unsigned short, unsigned int) (line 1473, file g:\albion\src\2d_displ.c)
+    could be made static
+Info 765: external Do_normal_map_exit(unsigned short, unsigned short, unsigned
+    short, unsigned short) (line 355, file g:\albion\src\events.c) could be
+    made static
+Info 765: external Highlight_Damage_display_object(struct Object *, union
+    Method_parms *) (line 1215, file g:\albion\src\invento.c) could be made
+    static
+Info 714: Highlight_Damage_display_object(struct Object *, union Method_parms
+    *) (line 1215, file g:\albion\src\invento.c) not referenced
+Info 765: external Highlight_Gold_food_object(struct Object *, union
+    Method_parms *) (line 316, file g:\albion\src\goldfood.c) could be made
+    static
+Info 765: external Highlight_MC_entry_object(struct Object *, union
+    Method_parms *) (line 2437, file g:\albion\src\dialogue.c) could be made
+    static
+Info 765: external Highlight_Lock_object(struct Object *, union Method_parms *)
+    (line 664, file g:\albion\src\door.c) could be made static
+Info 714: Highlight_Lock_object(struct Object *, union Method_parms *) (line
+    664, file g:\albion\src\door.c) not referenced
+Info 765: external Highlight_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1423, file g:\albion\src\invento.c) could be made
+    static
+Info 714: Highlight_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1423, file g:\albion\src\invento.c) not referenced
+Info 765: external Highlight_SelMember_object(struct Object *, union
+    Method_parms *) (line 514, file g:\albion\src\ui\membrsel.c) could be made
+    static
+Info 765: external Highlight_SelItem_object(struct Object *, union Method_parms
+    *) (line 582, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Highlight_Weight_display_object(struct Object *, union
+    Method_parms *) (line 1627, file g:\albion\src\invento.c) could be made
+    static
+Info 714: Highlight_Weight_display_object(struct Object *, union Method_parms
+    *) (line 1627, file g:\albion\src\invento.c) not referenced
+Info 765: external Highlight_Word_object(struct Object *, union Method_parms *)
+    (line 1827, file g:\albion\src\gametext.c) could be made static
+Info 765: external Interpret_3D_identification_data(void) (line 1681, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Place_action_event(void) (line 1551, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Closed_chest_ModInit(void) (line 317, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Closed_chest_ModExit(void) (line 374, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Closed_chest_DisExit(void) (line 431, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Closed_chest_DisInit(void) (line 399, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Closed_chest_MainLoop(void) (line 461, file
+    g:\albion\src\chest.c) could be made static
+Info 759: header declaration for Find_cached_text_line(unsigned short) (line
+    904, file g:\albion\src\text\textmng.c) could be moved from header to
+    module
+Info 765: external Find_cached_text_line(unsigned short) (line 904, file
+    g:\albion\src\text\textmng.c) could be made static
+Info 765: external Find_goto_point(short, short) (line 1085, file
+    g:\albion\src\automap.c) could be made static
+Info 759: header declaration for Find_free_text_line_cache(void) (line 974,
+    file g:\albion\src\text\textmng.c) could be moved from header to module
+Info 765: external Find_free_text_line_cache(void) (line 974, file
+    g:\albion\src\text\textmng.c) could be made static
+Info 759: header declaration for Find_wrap_position(unsigned char *) (line 431,
+    file g:\albion\src\text\textproc.c) could be moved from header to module
+Info 765: external Find_wrap_position(unsigned char *) (line 431, file
+    g:\albion\src\text\textproc.c) could be made static
+Info 765: external PUM_Drop_chest_item(unsigned int) (line 1419, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external PUM_Drop_gold_food(unsigned int) (line 1086, file
+    g:\albion\src\goldfood.c) could be made static
+Info 765: external PUM_Examine_chest_item(unsigned int) (line 1480, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external PUM_Map_Build_camp(unsigned int) (line 2109, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Change_transport(unsigned int) (line 2062, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Enter_automapper(unsigned int) (line 2085, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Examine(unsigned int) (line 1795, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Manipulate(unsigned int) (line 1855, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Take_item(unsigned int) (line 2002, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Party_status(unsigned int) (line 2132, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Talk(unsigned int) (line 1644, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Map_Use_item(unsigned int) (line 1915, file
+    g:\albion\src\map.c) could be made static
+Info 765: external PUM_Pick_lock(unsigned int) (line 938, file
+    g:\albion\src\door.c) could be made static
+Info 765: external Signal_event(void) (line 2653, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Single_Item_Chest_event(void) (line 3491, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Do_path_NPC_2D(unsigned short) (line 1181, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_path_NPC_3D(unsigned short) (line 1571, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_put_item_in_chest(struct Event_action *) (line 1790, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Inventory_ModInit(void) (line 460, file g:\albion\src\invento.c)
+    could be made static
+Info 765: external Inventory_DisInit(void) (line 526, file g:\albion\src\invento.c)
+    could be made static
+Info 765: external Inventory_DisExit(void) (line 578, file g:\albion\src\invento.c)
+    could be made static
+Info 765: external M2_DisInit(void) (line 480, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external M2_DisExit(void) (line 516, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Open_chest_ModInit(void) (line 618, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Open_chest_ModExit(void) (line 688, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Open_chest_DisExit(void) (line 761, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Number_bar_page_up(struct Number_bar_object *) (line 820,
+    file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Number_bar_page_down(struct Number_bar_object *) (line 881,
+    file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Number_bar_1_up(struct Button_object *) (line 1095, file
+    g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Number_bar_1_down(struct Button_object *) (line 1171, file
+    g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Open_chest_DisInit(void) (line 729, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Open_chest_MainLoop(void) (line 791, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Calculate_2D_camera_position(unsigned int *, unsigned int *)
+    (line 227, file g:\albion\src\2d_displ.c) could be made static
+Info 765: external Check_2D_NPC_collision(unsigned short, unsigned short,
+    unsigned short) (line 2849, file g:\albion\src\2d_map.c) could be made
+    static
+Info 765: external Check_3D_object_group_collision(short, short, short, short,
+    unsigned short, struct Object_group_3D *, struct Object_3D *) (line 2600,
+    file g:\albion\src\3d_map.c) could be made static
+Info 765: external Check_for_NPC_reaction(unsigned short) (line 1900, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Check_line_to_selected_map_square(void) (line 1877, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Check_line_of_sight(unsigned short) (line 1774, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Chest_data_handle (line 126, file g:\albion\src\chest.c)
+    could be made static
+Info 765: external Chest_event(void) (line 496, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Chest_item_drag_abort_handler(struct Drag_drop_data *) (line
+    1340, file g:\albion\src\chest.c) could be made static
+Info 765: external Chest_item_PUM_evaluator(struct PUM *) (line 1369, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Extra_vertical_movement_check_2D(unsigned short, unsigned
+    short, unsigned short) (line 2708, file g:\albion\src\2d_map.c) could be
+    made static
+Info 765: external M3_DisExit(void) (line 363, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external M3_DisInit(void) (line 333, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Nr_dialogue_log_entries (line 270, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Remove_Member_event(void) (line 3204, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Continue_song(struct Song *) (line 1744, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Do_random_NPC_2D(unsigned short) (line 1287, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_random_NPC_3D(unsigned short) (line 1637, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Door_ModInit(void) (line 236, file g:\albion\src\door.c)
+    could be made static
+Info 765: external Door_ModExit(void) (line 293, file g:\albion\src\door.c)
+    could be made static
+Info 765: external Door_DisExit(void) (line 350, file g:\albion\src\door.c)
+    could be made static
+Info 765: external Door_DisInit(void) (line 318, file g:\albion\src\door.c)
+    could be made static
+Info 765: external Door_MainLoop(void) (line 380, file g:\albion\src\door.c)
+    could be made static
+Info 765: external Door_event(void) (line 421, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Feedback_Gold_food_object(struct Object *, union
+    Method_parms *) (line 276, file g:\albion\src\goldfood.c) could be made
+    static
+Info 765: external Feedback_MC_entry_object(struct Object *, union Method_parms
+    *) (line 2395, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Feedback_Lock_object(struct Object *, union Method_parms *)
+    (line 627, file g:\albion\src\door.c) could be made static
+Info 765: external Feedback_SelMember_object(struct Object *, union
+    Method_parms *) (line 458, file g:\albion\src\ui\membrsel.c) could be made
+    static
+Info 765: external Feedback_SelItem_object(struct Object *, union Method_parms
+    *) (line 529, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Feedback_Word_object(struct Object *, union Method_parms *)
+    (line 1784, file g:\albion\src\gametext.c) could be made static
+Info 765: external First_dialogue_log_list (line 269, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Init_3DM_library(void) (line 548, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Init_Automap_display(void) (line 461, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Init_BooleanReq_object(struct Object *, union Method_parms
+    *) (line 183, file g:\albion\src\ui\boolreq.c) could be made static
+Info 765: external Init_Closed_chest_object(struct Object *, union Method_parms
+    *) (line 542, file g:\albion\src\chest.c) could be made static
+Info 765: external Init_Damage_display_object(struct Object *, union
+    Method_parms *) (line 1091, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Init_Door_object(struct Object *, union Method_parms *)
+    (line 473, file g:\albion\src\door.c) could be made static
+Info 765: external Init_Gold_food_object(struct Object *, union Method_parms *)
+    (line 142, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Init_Input_object(struct Object *, union Method_parms *)
+    (line 368, file g:\albion\src\ui\input.c) could be made static
+Info 765: external Init_InputNr_object(struct Object *, union Method_parms *)
+    (line 300, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Init_InvLeft1_object(struct Object *, union Method_parms *)
+    (line 679, file g:\albion\src\invento.c) could be made static
+Info 765: external Init_InvLeft2_object(struct Object *, union Method_parms *)
+    (line 762, file g:\albion\src\invento.c) could be made static
+Info 765: external Init_InvLeft3_object(struct Object *, union Method_parms *)
+    (line 845, file g:\albion\src\invento.c) could be made static
+Info 765: external Init_InvRight_object(struct Object *, union Method_parms *)
+    (line 928, file g:\albion\src\invento.c) could be made static
+Info 765: external Init_Item_list_object(struct Object *, union Method_parms *)
+    (line 106, file g:\albion\src\ui\itemlist.c) could be made static
+Info 765: external Init_ItemSel_object(struct Object *, union Method_parms *)
+    (line 276, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Init_Lock_object(struct Object *, union Method_parms *)
+    (line 550, file g:\albion\src\door.c) could be made static
+Info 765: external Init_MC_entry_object(struct Object *, union Method_parms *)
+    (line 2319, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Init_MC_window_object(struct Object *, union Method_parms *)
+    (line 2129, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Init_MemberSel_object(struct Object *, union Method_parms *)
+    (line 235, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Init_Open_chest_object(struct Object *, union Method_parms
+    *) (line 849, file g:\albion\src\chest.c) could be made static
+Info 765: external Init_Number_bar_object(struct Object *, union Method_parms
+    *) (line 486, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Init_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1299, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Init_Scroll_bar_object(struct Object *, union Method_parms
+    *) (line 102, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Init_SelMember_object(struct Object *, union Method_parms *)
+    (line 368, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Init_Weight_display_object(struct Object *, union
+    Method_parms *) (line 1507, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Init_Word_window_object(struct Object *, union Method_parms
+    *) (line 1130, file g:\albion\src\gametext.c) could be made static
+Info 765: external Init_Word_object(struct Object *, union Method_parms *)
+    (line 1709, file g:\albion\src\gametext.c) could be made static
+Info 765: external Init_dialogue_data(void) (line 909, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Init_dictionary(void) (line 666, file g:\albion\src\gametext.c)
+    could be made static
+Info 765: external Light_slider(struct Scroll_bar_object *) (line 522, file
+    g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Light_number_slider(struct Number_bar_object *) (line 942,
+    file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Mouse_move_2D(void) (line 884, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Mouse_move_3D(void) (line 1281, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Do_Script_event(void) (line 3755, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Do_chasing_NPC_2D(unsigned short) (line 1398, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_chasing_NPC_3D(unsigned short) (line 1735, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_check_2D(unsigned short, unsigned short, short, short,
+    unsigned short, unsigned short) (line 2751, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Drop_Chest_item_slot_object(struct Object *, union
+    Method_parms *) (line 1095, file g:\albion\src\chest.c) could be made
+    static
+Info 765: external Drop_Gold_food_object(struct Object *, union Method_parms *)
+    (line 566, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Drop_chest_items(unsigned short, unsigned short) (line 1506,
+    file g:\albion\src\chest.c) could be made static
+Info 765: external Drop_Lock_object(struct Object *, union Method_parms *)
+    (line 731, file g:\albion\src\door.c) could be made static
+Info 765: external Drop_on_chest_item(struct Item_slot_object *, struct
+    Drag_drop_data *) (line 1187, file g:\albion\src\chest.c) could be made
+    static
+Info 765: external Drop_on_gold_food(struct Gold_food_object *, struct
+    Drag_drop_data *) (line 730, file g:\albion\src\goldfood.c) could be made
+    static
+Info 765: external Encounter_event(void) (line 1488, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Execute_event(void) (line 3150, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Sound_event(void) (line 2943, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Sound_effects_volume (line 211, file g:\albion\src\music.c)
+    could be made static
+Info 765: external Sound_state (line 209, file g:\albion\src\music.c) could be
+    made static
+Info 765: external Take_item_from_chest(unsigned short, unsigned short, struct
+    Item_packet *) (line 1617, file g:\albion\src\chest.c) could be made static
+Info 759: header declaration for Text_error(unsigned short) (line 43, file
+    g:\albion\src\text\text.c) could be moved from header to module
+Info 765: external Text_error(unsigned short) (line 43, file
+    g:\albion\src\text\text.c) could be made static
+Info 765: external Text_event(void) (line 586, file g:\albion\src\events.c)
+    could be made static
+Info 759: header declaration for Text_print_error(unsigned char *, unsigned
+    char *) (line 71, file g:\albion\src\text\text.c) could be moved from
+    header to module
+Info 765: external Text_print_error(unsigned char *, unsigned char *) (line 71,
+    file g:\albion\src\text\text.c) could be made static
+Info 765: external Wipe_event(void) (line 3252, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Convert_text_file(unsigned char *, unsigned int, unsigned
+    char **, unsigned short) (line 432, file g:\albion\src\gametext.c) could be
+    made static
+Info 765: external Do_datachange(struct Memory_handle *, struct Event_block *)
+    (line 1110, file g:\albion\src\events.c) could be made static
+Info 765: external Do_draw_scroll_bar(struct Scroll_bar_object *) (line 600,
+    file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Do_draw_number_bar(struct Number_bar_object *) (line 1019,
+    file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Do_take_item_from_chest(struct Event_action *) (line 1681,
+    file g:\albion\src\chest.c) could be made static
+Info 765: external Do_trap(unsigned short, struct Event_block *) (line 941,
+    file g:\albion\src\events.c) could be made static
+Info 765: external End_Dialogue_event(void) (line 3227, file
+    g:\albion\src\events.c) could be made static
+Info 765: external End_lengthy_memory_operation(void) (line 353, file
+    g:\albion\src\game.c) could be made static
+Info 765: external End_song(struct Song *) (line 1778, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Gold_food_drag_abort_handler(struct Drag_drop_data *) (line
+    787, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Gold_food_PUM_evaluator(struct PUM *) (line 1059, file
+    g:\albion\src\goldfood.c) could be made static
+Info 765: external HLC_Add_new_word(unsigned char *) (line 2254, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Class(unsigned char *) (line 2236, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Class_insult(unsigned char *) (line 2248, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Damage(unsigned char *) (line 2006, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Name(unsigned char *) (line 2109, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_He(unsigned char *) (line 2118, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Him(unsigned char *) (line 2146, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_His(unsigned char *) (line 2174, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Man(unsigned char *) (line 2202, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Price(unsigned char *) (line 2000, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_inventory(unsigned char *) (line 2049, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_dialogue(unsigned char *) (line 2058, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_combat(unsigned char *) (line 2067, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_PUM_char(unsigned char *) (line 2091, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Race(unsigned char *) (line 2230, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Race_insult(unsigned char *) (line 2242, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_leader(unsigned char *) (line 2031, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_self(unsigned char *) (line 2040, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_victim(unsigned char *) (line 2079, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Select_subject_char(unsigned char *) (line 2100, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Unknown_word(unsigned char *) (line 1994, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external HLC_Weapon(unsigned char *) (line 2015, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external Play_Animation_event(void) (line 3290, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Rotate_3D(short) (line 1085, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Shrink_floor(struct BBPALETTE *, unsigned char *, unsigned
+    char *) (line 2252, file g:\albion\src\automap.c) could be made static
+Info 765: external Stop_all_digital_channels(void) (line 2406, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Stop_digital_channel(unsigned short) (line 2437, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Sucking_chairs_2D(struct Movement_2D *) (line 2914, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Stop_sound_effect(struct Sound_effect *) (line 2317, file
+    g:\albion\src\music.c) could be made static
+Info 759: header declaration for Write_processed_line(unsigned char *, struct
+    Processed_text *) (line 577, file g:\albion\src\text\textproc.c) could be
+    moved from header to module
+Info 765: external Write_processed_line(unsigned char *, struct Processed_text
+    *) (line 577, file g:\albion\src\text\textproc.c) could be made static
+Info 765: external Do_end_dialogue(struct Event_action *) (line 1763, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Fill_map_buffer(void) (line 1328, file g:\albion\src\2d_displ.c)
+    could be made static
+Info 765: external Move_M2_MainLoop(void) (line 842, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Move_M2_ModExit(void) (line 993, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Move_M2_ModInit(void) (line 955, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Move_M3_MainLoop(void) (line 1235, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Move_M3_ModExit(void) (line 1450, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Move_M3_ModInit(void) (line 1411, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Move_automap(short, short) (line 1027, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Move_drag_HDOB_towards_chest_slot(unsigned short) (line
+    2003, file g:\albion\src\chest.c) could be made static
+Info 765: external Prepare_XFile_type(unsigned short) (line 852, file
+    g:\albion\src\xftypes.c) could be made static
+Info 765: external Prepare_automap_floors(void) (line 2146, file
+    g:\albion\src\automap.c) could be made static
+Info 759: header declaration for Prepare_justification(struct Line_info *)
+    (line 743, file g:\albion\src\text\textdisp.c) could be moved from header
+    to module
+Info 765: external Prepare_justification(struct Line_info *) (line 743, file
+    g:\albion\src\text\textdisp.c) could be made static
+Info 765: external Scroll_bar_page_up(struct Scroll_bar_object *) (line 435,
+    file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Scroll_bar_page_down(struct Scroll_bar_object *) (line 479,
+    file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Trap_event(void) (line 863, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Add_3D_vector(int, int) (line 1111, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Add_FAQ_MC_entries(struct MC_entry *, unsigned short) (line
+    1978, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Add_default_MC_entries(struct MC_entry *, unsigned short)
+    (line 2036, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Add_dialogue_log_entry(unsigned short, unsigned short) (line
+    2929, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Add_normal_MC_entries(struct MC_entry *, unsigned short,
+    struct Dialogue_node *) (line 1847, file g:\albion\src\dialogue.c) could be
+    made static
+Info 765: external Add_some_default_MC_entries(struct MC_entry *, unsigned
+    short, struct Dialogue_node *) (line 1919, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Add_word_to_merged_dictionary(unsigned char *, unsigned
+    short) (line 1021, file g:\albion\src\gametext.c) could be made static
+Info 765: external Error_3DM(unsigned short) (line 1014, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Put_item_in_chest(unsigned short, unsigned short, struct
+    Item_packet *) (line 1748, file g:\albion\src\chest.c) could be made static
+Info 765: external Store_2D_movement(short, short) (line 3397, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external This_line_style (line 33, file g:\albion\src\text\textproc.c)
+    could be made static
+Warning 526: toupper() (line 864, file g:\albion\src\gametext.c) not defined
+Warning 628: no argument information provided for function toupper() (line 864,
+    file g:\albion\src\gametext.c)
+Info 765: external Auto_move_packet_to_chest(struct Item_packet *) (line 1866,
+    file g:\albion\src\chest.c) could be made static
+Info 765: external Automap_ModInit(void) (line 296, file g:\albion\src\automap.c)
+    could be made static
+Info 765: external Automap_ModExit(void) (line 428, file g:\albion\src\automap.c)
+    could be made static
+Info 765: external Choose_next_random_NPC_path(unsigned short) (line 2121, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_give_item(struct Event_action *) (line 1524, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Do_waiting_NPC_2D(unsigned short) (line 1363, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Do_waiting_NPC_3D(unsigned short) (line 1712, file
+    g:\albion\src\npcs.c) could be made static
+Info 765: external Help_Damage_display_object(struct Object *, union
+    Method_parms *) (line 1266, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Help_Gold_food_object(struct Object *, union Method_parms *)
+    (line 358, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Help_Lock_object(struct Object *, union Method_parms *)
+    (line 703, file g:\albion\src\door.c) could be made static
+Info 765: external Help_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1474, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Help_SelMember_object(struct Object *, union Method_parms *)
+    (line 572, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Help_Weight_display_object(struct Object *, union
+    Method_parms *) (line 1675, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Modify_amount(unsigned int, unsigned int, unsigned short,
+    unsigned int) (line 2583, file g:\albion\src\events.c) could be made static
+Info 765: external Modify_carried_items(struct Memory_handle *, unsigned short,
+    unsigned short, unsigned short) (line 3784, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Modify_event(void) (line 2394, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Modify_items_carried_by_party(unsigned short, unsigned
+    short, unsigned short) (line 3910, file g:\albion\src\events.c) could be
+    made static
+Info 765: external Pause_event(void) (line 3448, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Pause_song(struct Song *) (line 1709, file
+    g:\albion\src\music.c) could be made static
+Info 759: header declaration for Print_cached_string(struct OPM *, short,
+    short, struct Cached_text_line *) (line 946, file g:\albion\src\text\textmng.c)
+    could be moved from header to module
+Info 765: external Print_cached_string(struct OPM *, short, short, struct
+    Cached_text_line *) (line 946, file g:\albion\src\text\textmng.c) could be
+    made static
+Info 759: header declaration for Print_normal_string(struct OPM *, short,
+    short, unsigned char *) (line 474, file g:\albion\src\text\textdisp.c)
+    could be moved from header to module
+Info 765: external Print_normal_string(struct OPM *, short, short, unsigned
+    char *) (line 474, file g:\albion\src\text\textdisp.c) could be made static
+Info 759: header declaration for Print_justified_string(struct OPM *, short,
+    short, unsigned char *) (line 602, file g:\albion\src\text\textdisp.c)
+    could be moved from header to module
+Info 765: external Print_justified_string(struct OPM *, short, short, unsigned
+    char *) (line 602, file g:\albion\src\text\textdisp.c) could be made static
+Info 765: external Render_3D_map(void) (line 467, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external Select_M2_MainLoop(void) (line 1021, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Select_M2_ModExit(void) (line 1198, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Select_M2_ModInit(void) (line 1100, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Select_M3_MainLoop(void) (line 1478, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Select_M3_ModInit(void) (line 1591, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Select_M3_ModExit(void) (line 1651, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Select_multiple_choice(unsigned short, struct MC_entry *)
+    (line 2086, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Change_Icon_event(void) (line 1387, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Change_Used_Item_event(void) (line 999, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Datachange_event(void) (line 1022, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Dialogue_ModInit(void) (line 382, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Dialogue_ModExit(void) (line 545, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Dialogue_DisExit(void) (line 731, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Delete_sound_effect(struct Sound_effect *) (line 2366, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Dialogue_DisInit(void) (line 614, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Dialogue_MainLoop(void) (line 756, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Dialogue_print_error(unsigned char *, unsigned char *) (line
+    2624, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Dialogue_partner_in_party (line 239, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Double_movement_check_2D(unsigned short, unsigned short,
+    short, short, unsigned short, unsigned short) (line 2643, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Exit_Automap_display(void) (line 495, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Exit_Chest(struct Button_object *) (line 516, file
+    g:\albion\src\chest.c) could be made static
+Info 765: external Exit_InvRight_object(struct Object *, union Method_parms *)
+    (line 1013, file g:\albion\src\invento.c) could be made static
+Info 765: external Exit_Door(struct Button_object *) (line 448, file
+    g:\albion\src\door.c) could be made static
+Info 765: external Exit_Input_object(struct Object *, union Method_parms *)
+    (line 424, file g:\albion\src\ui\input.c) could be made static
+Info 765: external Exit_dialogue_data(void) (line 1079, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Exit_dictionary(void) (line 732, file g:\albion\src\gametext.c)
+    could be made static
+Info 765: external Exit_party_combat_data(void) (line 1642, file
+    g:\albion\src\combat.c) could be made static
+Info 765: external Exit_monster_combat_data(void) (line 1832, file
+    g:\albion\src\combat.c) could be made static
+Info 765: external Gametext_error(unsigned short) (line 2325, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external Right_2D_object(struct Object *, union Method_parms *) (line
+    741, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Right_3D_object(struct Object *, union Method_parms *) (line
+    779, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Right_Automap_object(struct Object *, union Method_parms *)
+    (line 949, file g:\albion\src\automap.c) could be made static
+Info 765: external Right_Input_object(struct Object *, union Method_parms *)
+    (line 640, file g:\albion\src\ui\input.c) could be made static
+Info 765: external Spinner_event(void) (line 840, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Start_Dialogue_event(void) (line 3057, file
+    g:\albion\src\events.c) could be made static
+Warning 552: Start_X (line 36, file g:\albion\src\text\textvar.c) not accessed
+Info 765: external Start_lengthy_memory_operation(void) (line 327, file
+    g:\albion\src\game.c) could be made static
+Info 765: external Update_2D_party_position(short) (line 3271, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Start_sound_effect(struct Sound_effect *) (line 2164, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Update_Damage_display_object(struct Object *, union
+    Method_parms *) (line 1172, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Update_Gold_food_object(struct Object *, union Method_parms
+    *) (line 233, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Update_Input_object(struct Object *, union Method_parms *)
+    (line 459, file g:\albion\src\ui\input.c) could be made static
+Info 765: external Update_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1380, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Update_SelItem_object(struct Object *, union Method_parms *)
+    (line 450, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Update_Weight_display_object(struct Object *, union
+    Method_parms *) (line 1585, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Update_automap_unit(struct Scroll_data *, unsigned short,
+    unsigned short, unsigned short, unsigned short) (line 1195, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Update_located_sound_effects(void) (line 2040, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Update_item_list(struct Scroll_bar_object *) (line 241, file
+    g:\albion\src\ui\itemlist.c) could be made static
+Info 765: external Update_number_slider(struct Number_bar_object *, unsigned
+    short) (line 979, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Update_sound_effects(void) (line 1817, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Update_sound_effect(struct Sound_effect *) (line 2262, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Update_slider(struct Scroll_bar_object *, unsigned short)
+    (line 559, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 759: header declaration for Update_text_cache_priorities(void) (line 1027,
+    file g:\albion\src\text\textmng.c) could be moved from header to module
+Info 765: external Update_text_cache_priorities(void) (line 1027, file
+    g:\albion\src\text\textmng.c) could be made static
+Info 765: external Update_word_list(struct Scroll_bar_object *) (line 1611,
+    file g:\albion\src\gametext.c) could be made static
+Info 765: external Create_Trans_event(void) (line 3096, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Create_automap_parchment_layer(void) (line 1906, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external DLeft_3D_object(struct Object *, union Method_parms *) (line
+    812, file g:\albion\src\3d_map.c) could be made static
+Info 765: external DLeft_Chest_item_slot_object(struct Object *, union
+    Method_parms *) (line 1044, file g:\albion\src\chest.c) could be made
+    static
+Info 765: external DLeft_Gold_food_object(struct Object *, union Method_parms
+    *) (line 522, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Handle_FAQ_MC_entry(unsigned short) (line 1172, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_ask_word_default_MC_entry(void) (line 1291, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_default_MC_entry(unsigned short) (line 1225, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_end_dialogue_default_MC_entry(void) (line 1718, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_give_item_default_MC_entry(void) (line 1436, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_join_party_default_MC_entry(void) (line 1557, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_leave_party_default_MC_entry(void) (line 1637, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Handle_normal_MC_entry(unsigned short, unsigned short) (line
+    1126, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Left_2D_object(struct Object *, union Method_parms *) (line
+    701, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Left_3D_object(struct Object *, union Method_parms *) (line
+    739, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Left_Automap_object(struct Object *, union Method_parms *)
+    (line 898, file g:\albion\src\automap.c) could be made static
+Info 765: external Left_Chest_item_slot_object(struct Object *, union
+    Method_parms *) (line 974, file g:\albion\src\chest.c) could be made static
+Info 765: external Left_Gold_food_object(struct Object *, union Method_parms *)
+    (line 452, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Left_MC_entry_object(struct Object *, union Method_parms *)
+    (line 2479, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Left_Number_bar_object(struct Object *, union Method_parms
+    *) (line 680, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Left_Scroll_bar_object(struct Object *, union Method_parms
+    *) (line 296, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Left_SelMember_object(struct Object *, union Method_parms *)
+    (line 614, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Left_SelItem_object(struct Object *, union Method_parms *)
+    (line 635, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external M2_MainLoop(void) (line 551, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Left_Word_object(struct Object *, union Method_parms *)
+    (line 1870, file g:\albion\src\gametext.c) could be made static
+Info 765: external M2_ModExit(void) (line 443, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external M2_ModInit(void) (line 225, file g:\albion\src\2d_map.c)
+    could be made static
+Info 765: external Merge_dictionary(struct Memory_handle *, unsigned short,
+    unsigned short) (line 965, file g:\albion\src\gametext.c) could be made
+    static
+Info 765: external Set_3D_window_size(unsigned short, unsigned short) (line
+    1179, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Set_Number_bar_object(struct Object *, union Method_parms *)
+    (line 625, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Set_animation_update(void) (line 1001, file
+    g:\albion\src\2d_displ.c) could be made static
+Info 765: external Set_Scroll_bar_object(struct Object *, union Method_parms *)
+    (line 218, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Set_automap_bit(short, short) (line 1862, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Set_erase_rectangles(void) (line 1240, file
+    g:\albion\src\2d_displ.c) could be made static
+Info 765: external Set_gold_food_value(struct Gold_food_object *, unsigned
+    short) (line 968, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Set_update_rectangle(short, short, unsigned short, unsigned
+    short) (line 1102, file g:\albion\src\2d_displ.c) could be made static
+Info 765: external Special_2D_high_check(unsigned short, unsigned short) (line
+    2427, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Special_2D_low_check(unsigned short, unsigned short, short,
+    short) (line 2511, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Swap_2D_objects(unsigned int, unsigned int, unsigned char *)
+    (line 923, file g:\albion\src\2d_displ.c) could be made static
+Info 765: external Swap_words(unsigned int, unsigned int, unsigned char *)
+    (line 1481, file g:\albion\src\gametext.c) could be made static
+Info 765: external Swap_sound_effects(unsigned int, unsigned int, unsigned char
+    *) (line 1964, file g:\albion\src\music.c) could be made static
+Info 765: external Touched_2D_object(struct Object *, union Method_parms *)
+    (line 665, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Touched_3D_object(struct Object *, union Method_parms *)
+    (line 703, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Touched_Automap_object(struct Object *, union Method_parms
+    *) (line 739, file g:\albion\src\automap.c) could be made static
+Info 765: external size_II_handler(struct COMOB_behaviour *) (line 1295, file
+    g:\albion\src\commagic\commsub.c) could be made static
+Info 714: size_II_handler(struct COMOB_behaviour *) (line 1295, file
+    g:\albion\src\commagic\commsub.c) not referenced
+Info 759: header declaration for Analyze_line(unsigned char *, struct
+    Processed_text *) (line 721, file g:\albion\src\text\textproc.c) could be
+    moved from header to module
+Info 765: external Analyze_line(unsigned char *, struct Processed_text *) (line
+    721, file g:\albion\src\text\textproc.c) could be made static
+Info 765: external BooleanReq_Yes(struct Button_object *) (line 316, file
+    g:\albion\src\ui\boolreq.c) could be made static
+Info 765: external BooleanReq_No(struct Button_object *) (line 350, file
+    g:\albion\src\ui\boolreq.c) could be made static
+Info 765: external Build_gold_food_graphics(struct Gold_food_object *, unsigned
+    short) (line 1139, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Build_word_list(void) (line 1404, file g:\albion\src\gametext.c)
+    could be made static
+Info 765: external Clone_Automap_event(void) (line 2732, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Current_dialogue_node (line 252, file g:\albion\src\dialogue.c)
+    could be made static
+Info 765: external Do_join_party(struct Event_action *) (line 1603, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Input_ModInit(void) (line 305, file g:\albion\src\ui\input.c)
+    could be made static
+Info 765: external Input_ModExit(void) (line 336, file g:\albion\src\ui\input.c)
+    could be made static
+Info 765: external InputNr_Exit(struct Button_object *) (line 461, file
+    g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external M3_MainLoop(void) (line 392, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external M3_ModExit(void) (line 299, file g:\albion\src\3d_map.c)
+    could be made static
+Info 765: external M3_ModInit(void) (line 221, file g:\albion\src\3d_map.c)
+    could be made static
+Info 759: header declaration for Read_raw_line(void) (line 944, file
+    g:\albion\src\text\textproc.c) could be moved from header to module
+Info 765: external Read_raw_line(void) (line 944, file g:\albion\src\text\textproc.c)
+    could be made static
+Info 765: external Word_input(struct Button_object *) (line 1654, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external Inquire_drop_Lock_object(struct Object *, union Method_parms
+    *) (line 862, file g:\albion\src\door.c) could be made static
+Info 765: external Inquire_drop_Gold_food_object(struct Object *, union
+    Method_parms *) (line 599, file g:\albion\src\goldfood.c) could be made
+    static
+Info 765: external Map_Exit_event(void) (line 167, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Map_PUM_evaluator(struct PUM *) (line 1352, file
+    g:\albion\src\map.c) could be made static
+Info 765: external Query_event(void) (line 1574, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Query_compare(unsigned short, unsigned short, unsigned
+    short) (line 2333, file g:\albion\src\events.c) could be made static
+Info 765: external Small_picture_handle (line 127, file g:\albion\src\chest.c)
+    could be made static
+Info 714: Small_picture_handle (line 127, file g:\albion\src\chest.c) not
+    referenced
+Info 765: external Ask_Surrender_event(void) (line 3732, file
+    g:\albion\src\events.c) could be made static
+Info 765: external Do_leave_party(struct Event_action *) (line 1685, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Drag_chest_item(struct Item_slot_object *, unsigned short)
+    (line 1138, file g:\albion\src\chest.c) could be made static
+Info 765: external Drag_gold_food(struct Gold_food_object *, unsigned short)
+    (line 664, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Drag_quantity (line 85, file g:\albion\src\goldfood.c) could
+    be made static
+Info 765: external Draw_BooleanReq_object(struct Object *, union Method_parms
+    *) (line 248, file g:\albion\src\ui\boolreq.c) could be made static
+Info 765: external Draw_Closed_chest_object(struct Object *, union Method_parms
+    *) (line 578, file g:\albion\src\chest.c) could be made static
+Info 765: external Draw_Damage_display_object(struct Object *, union
+    Method_parms *) (line 1123, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Draw_Door_object(struct Object *, union Method_parms *)
+    (line 509, file g:\albion\src\door.c) could be made static
+Info 765: external Draw_Gold_food_object(struct Object *, union Method_parms *)
+    (line 193, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Draw_InputNr_object(struct Object *, union Method_parms *)
+    (line 372, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Draw_InvLeft1_object(struct Object *, union Method_parms *)
+    (line 730, file g:\albion\src\invento.c) could be made static
+Info 765: external Draw_InvLeft2_object(struct Object *, union Method_parms *)
+    (line 813, file g:\albion\src\invento.c) could be made static
+Info 765: external Draw_InvLeft3_object(struct Object *, union Method_parms *)
+    (line 896, file g:\albion\src\invento.c) could be made static
+Info 765: external Draw_InvRight_object(struct Object *, union Method_parms *)
+    (line 1038, file g:\albion\src\invento.c) could be made static
+Info 765: external Draw_Item_list_object(struct Object *, union Method_parms *)
+    (line 199, file g:\albion\src\ui\itemlist.c) could be made static
+Info 765: external Draw_ItemSel_object(struct Object *, union Method_parms *)
+    (line 329, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Draw_MC_entry_object(struct Object *, union Method_parms *)
+    (line 2355, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Draw_MC_entry(struct MC_entry_object *) (line 2518, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Draw_Lock_object(struct Object *, union Method_parms *)
+    (line 590, file g:\albion\src\door.c) could be made static
+Info 765: external Draw_MC_window_object(struct Object *, union Method_parms *)
+    (line 2274, file g:\albion\src\dialogue.c) could be made static
+Info 765: external Draw_Open_chest_object(struct Object *, union Method_parms
+    *) (line 929, file g:\albion\src\chest.c) could be made static
+Info 765: external Draw_Number_bar_object(struct Object *, union Method_parms
+    *) (line 558, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Draw_MemberSel_object(struct Object *, union Method_parms *)
+    (line 302, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Draw_Protection_display_object(struct Object *, union
+    Method_parms *) (line 1331, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Draw_Scroll_bar_object(struct Object *, union Method_parms
+    *) (line 179, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Draw_SelMember_object(struct Object *, union Method_parms *)
+    (line 402, file g:\albion\src\ui\membrsel.c) could be made static
+Info 765: external Draw_SelItem_object(struct Object *, union Method_parms *)
+    (line 395, file g:\albion\src\ui\itemsel.c) could be made static
+Info 765: external Draw_Weight_display_object(struct Object *, union
+    Method_parms *) (line 1539, file g:\albion\src\invento.c) could be made
+    static
+Info 765: external Draw_Word_window_object(struct Object *, union Method_parms
+    *) (line 1262, file g:\albion\src\gametext.c) could be made static
+Info 765: external Draw_Word_object(struct Object *, union Method_parms *)
+    (line 1743, file g:\albion\src\gametext.c) could be made static
+Info 765: external Draw_gold_food(struct Gold_food_object *) (line 823, file
+    g:\albion\src\goldfood.c) could be made static
+Info 765: external Draw_word(struct Word_object *) (line 1930, file
+    g:\albion\src\gametext.c) could be made static
+Info 765: external Make_2D_path_entry(unsigned short, unsigned short) (line
+    3430, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Make_3D_party_move(int, int) (line 2050, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Music_error(unsigned short) (line 1645, file
+    g:\albion\src\music.c) could be made static
+Info 765: external Music_print_error(unsigned char *, unsigned char *) (line
+    1673, file g:\albion\src\music.c) could be made static
+Info 765: external Offset_event(void) (line 3383, file g:\albion\src\events.c)
+    could be made static
+Info 765: external Pop_up_Gold_food_object(struct Object *, union Method_parms
+    *) (line 407, file g:\albion\src\goldfood.c) could be made static
+Info 765: external Pop_up_Lock_object(struct Object *, union Method_parms *)
+    (line 907, file g:\albion\src\door.c) could be made static
+Info 765: external Restore_dialogue_background(void) (line 2658, file
+    g:\albion\src\dialogue.c) could be made static
+Info 765: external Try_3D_move(int, int, unsigned short, unsigned short) (line
+    2234, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Compare_2D_objects(unsigned int, unsigned int, unsigned char
+    *) (line 953, file g:\albion\src\2d_displ.c) could be made static
+Info 759: header declaration for Cache_text_line(struct Cached_text_line *,
+    unsigned short, unsigned short, unsigned char *) (line 769, file
+    g:\albion\src\text\textmng.c) could be moved from header to module
+Info 765: external Cache_text_line(struct Cached_text_line *, unsigned short,
+    unsigned short, unsigned char *) (line 769, file g:\albion\src\text\textmng.c)
+    could be made static
+Info 765: external Compare_words(unsigned int, unsigned int, unsigned char *)
+    (line 1520, file g:\albion\src\gametext.c) could be made static
+Info 765: external Compare_sound_effects(unsigned int, unsigned int, unsigned
+    char *) (line 2000, file g:\albion\src\music.c) could be made static
+Info 765: external Customkeys_2D_object(struct Object *, union Method_parms *)
+    (line 772, file g:\albion\src\2d_map.c) could be made static
+Info 765: external Customkeys_3D_object(struct Object *, union Method_parms *)
+    (line 890, file g:\albion\src\3d_map.c) could be made static
+Info 765: external Customkeys_Word_window_object(struct Object *, union
+    Method_parms *) (line 1315, file g:\albion\src\gametext.c) could be made
+    static
+Info 765: external Customkeys_Input_object(struct Object *, union Method_parms
+    *) (line 522, file g:\albion\src\ui\input.c) could be made static
+Info 765: external Get_2D_mouse_state(short, short) (line 1230, file
+    g:\albion\src\2d_map.c) could be made static
+Info 765: external Get_3D_mouse_state(short, short) (line 1989, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Get_Automap_mouse_state(short, short) (line 979, file
+    g:\albion\src\automap.c) could be made static
+Info 759: header declaration for Get_LLC_nr(unsigned char *) (line 122, file
+    g:\albion\src\text\textcomm.c) could be moved from header to module
+Info 765: external Get_LLC_nr(unsigned char *) (line 122, file
+    g:\albion\src\text\textcomm.c) could be made static
+Info 765: external Get_Number_bar_object(struct Object *, union Method_parms *)
+    (line 596, file g:\albion\src\ui\nrbar.c) could be made static
+Info 765: external Get_Scroll_bar_object(struct Object *, union Method_parms *)
+    (line 267, file g:\albion\src\ui\scrolbar.c) could be made static
+Info 765: external Get_automap_bit(short, short) (line 1813, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Get_distance_to_selected_map_square(void) (line 1841, file
+    g:\albion\src\3d_map.c) could be made static
+Info 765: external Get_gold_food_value(struct Gold_food_object *) (line 872,
+    file g:\albion\src\goldfood.c) could be made static
+Info 765: external Insert_automap_walls_and_floors(void) (line 2319, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Insert_automap_NPCs(void) (line 2523, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Insert_automap_events(void) (line 2424, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Insert_automap_goto_points(void) (line 2681, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Insert_automap_wall(short, short) (line 2725, file
+    g:\albion\src\automap.c) could be made static
+Info 765: external Insert_automap_icon(short, short, unsigned short) (line
+    2819, file g:\albion\src\automap.c) could be made static

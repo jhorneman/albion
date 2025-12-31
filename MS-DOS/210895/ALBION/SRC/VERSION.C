@@ -1,0 +1,59 @@
+/************
+ * NAME     : VERSION.C
+ * AUTOR    : Jurie Horneman, BlueByte
+ * START    : 19-8-1995
+ * PROJECT  : Albion
+ * NOTES    :
+ * SEE ALSO :
+ ************/
+
+/* includes */
+
+#include <stdio.h>
+
+#include <BBDEF.H>
+
+#include <VERSION.H>
+
+/* global variables */
+
+#ifdef ALBION_VERSION_NR
+static UNSHORT Albion_version_nr = ALBION_VERSION_NR;
+#else
+static UNSHORT Albion_version_nr = 0;
+#endif
+
+#ifdef ALBION_SUBVERSION_NR
+static UNSHORT Albion_subversion_nr = ALBION_SUBVERSION_NR;
+#else
+static UNSHORT Albion_subversion_nr = 0;
+#endif
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Get_version_string
+ * FUNCTION  : Get Albion version as a string.
+ * FILE      : VERSION.C
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 19.08.95 15:39
+ * LAST      : 19.08.95 15:39
+ * INPUTS    : UNCHAR *String - Pointer to destination string.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * NOTES     : - The destination string should be at least 100 characters
+ *              long.
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+Get_version_string(UNCHAR *String)
+{
+	/* Build version string */
+	sprintf(String, "v%u.%02u (created on %s %s)", Albion_version_nr,
+	 Albion_subversion_nr, __DATE__, __TIME__);
+}
+

@@ -1,0 +1,116 @@
+
+#define HDOBS_MAX		(8)
+
+struct HDOB {
+	UNSHORT X,Y;
+	UNSHORT Width,Height;
+	UNSHORT Old_X,Old_Y;
+	UNBYTE Flags;
+	MEM_HANDLE Graphics_handle;
+	UNLONG Graphics_offset;
+	MEM_HANDLE Background_handle;
+};
+
+#define HDOB_ON		(1<<0)
+#define HDOB_MASK		(1<<1)
+
+/* The main OPM */
+struct OPM Main_OPM;
+/* The screen structure */
+struct SCREENPORT Screen;
+
+/* The current number of virtual OPMs */
+UNSHORT Nr_of_virtual_OPMs;
+/* A pointer to the current list of virtual OPMs */
+struct OPM *Virtual_OPM_list[];
+
+/* The HDOB list */
+struct HDOB HDOBs[HDOBS_MAX];
+
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Switch_screens
+ * FUNCTION  : Display the currently invisible screen.
+ * FILE      :
+ * AUTHOR    : Jurie Horneman
+ * FIRST     : 20.07.94 11:34
+ * LAST      : 20.07.94 11:34
+ * INPUTS    : None.
+ * RESULT    : None.
+ * BUGS      : No known.
+ * SEE ALSO  :
+ * #FUNCTION HEADER END#
+ */
+
+/* #FUNCTION BEGIN# */
+
+void
+Switch_screens(void)
+{
+	UNBYTE *Graphics_ptr, *Background_ptr;
+	UNSHORT i;
+
+	/*** Draw HDOBs ***/
+	for (i=0;i<HDOBS_MAX;i++)
+	{
+		/* Is the current HDOB on ? */
+		if (HDOBs[i].Flags & HDOB_ON)
+		{
+			/* Yes -> Save background */
+			Background_ptr = MEM_Claim_pointer(HDOBs[i].Background_handle);
+			Get_block(HDOBs[i].X, HDOBs[i].Y, HDOBs[i].Width, HDOBs[i].Height, Background_ptr);
+			MEM_Free_pointer(HDOBs[i].Background_handle);
+
+			/* Get graphics address */
+			Graphics_ptr = MEM_Claim_pointer(HDOBs[i].Graphics_handle) + HDOBs[i].Graphics_offset;
+
+			/* Mask ? */
+			if (HDOBs[i].Flags & HDOB_MASK)
+				/* Yes */
+				Put_masked_block(HDOBs[i].X, HDOBs[i].Y, HDOBs[i].Width, HDOBs[i].Height, Graphics_ptr);
+			else
+				/* No */
+				Put_unmasked_block(HDOBs[i].X, HDOBs[i].Y, HDOBs[i].Width, HDOBs[i].Height, Graphics_ptr);
+
+			MEM_Free_pointer(HDOBs[i].Background_handle);
+		}
+	}
+
+	/*** Copy OPMs to screen ***/
+	/* Has the main OPM changed ? */
+	if (Main_OPM.status & OPMSTAT_CHANGED)
+	{
+		/* Yes -> Copy the main OPM to the screen */
+		DSA_CopyMainOPMToScreen(&Screen,DSA_CMOPMTS_ALWAYS);
+
+		/* Clear the changed flags of the virtual OPMs */
+		for (i=0;i<Nr_of_virtual_OPMs;i++)
+			Virtual_OPM_list[i]->status &= ~OPMSTAT_CHANGED;
+	}
+	else
+	{
+		/* No -> Copy all the virtual OPMs to the screen (if changed) */
+		for (i=0;i<Nr_of_virtual_OPMs;i++)
+			DSA_CopyOPMToScreen(&Screen,Virtual_OPM_list[i],0,0,DSA_CMOPMTS_CHANGED);
+	}
+
+	/*** Remove HDOBs ***/
+	for (i=HDOBS_MAX-1;i>=0;i--)
+	{
+		/* Is the current HDOB on ? */
+		if (HDOBs[i].Flags & HDOB_ON)
+		{
+			/* Yes -> Restore background */
+			Background_ptr = MEM_Claim_pointer(HDOBs[i].Background_handle);
+			Put_unmasked_block(HDOBs[i].X, HDOBs[i].Y, HDOBs[i].Width, HDOBs[i].Height, Background_ptr);
+			MEM_Free_pointer(HDOBs[i].Background_handle);
+		}
+	}
+
+	/*** Display new screen ***/
+	DSA_DoubleBuffer();
+};
+
+

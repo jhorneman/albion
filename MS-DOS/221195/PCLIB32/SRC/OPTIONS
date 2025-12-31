@@ -1,0 +1,46 @@
+.ERASE
+
+# *********************************
+# Compiler Optionen fÅr Alle Module
+# *********************************
+
+.BEFORE
+	set INCLUDE=G:\WATCOM.10A\H;G:\PCLIB32\LIB;
+	set LIB=G:\WATCOM.10A\LIB386\DOS;G:\WATCOM.10A\LIB386;G:\PCLIB32\LIB;
+
+# OPTIONFILE
+OPTION = G:\PCLIB32\SRC\OPTIONS
+OPTIONASM = G:\PCLIB32\SRC\OPTIONS G:\PCLIB32\LIB\ASMINC\BBMACRO.INC G:\PCLIB32\LIB\ASMINC\BBHARD.INC
+
+# MASM Assembler Optionen
+
+Assembler          = G:\MASM\BIN\ml
+Assembler_Options  = /Zm /c /Cx
+assemble	   = $(Assembler) $(Assembler_Options)
+
+
+# TASM Assembler Optionen
+
+TasmAssembler          = tasm
+TasmAssembler_Options  = /zi /m100 /ml /t
+
+
+# CompilerOptionen
+
+Compiler         = *wcc386
+
+Compiler_Options = /wx /d2 /od /5r /dBYTEPIXEL
+
+# CompilerOptionen fÅr InterruptRoutinen (keine Inline Optimierung !!!) */
+# Achtung !!! volle Optimierung sollte wegen MausinterruptRoutine eingeschaltet
+# bleiben
+
+Compiler_Options_int = /5r /omlet /wx -s /dBYTEPIXEL
+
+# Compilieren
+.c.obj:
+  	$(compiler) $[* /fo=$^* $(Compiler_Options)
+
+# assemblieren (masm)
+.asm.obj:
+	$(assemble) /VM /Fo$^@ $[@
