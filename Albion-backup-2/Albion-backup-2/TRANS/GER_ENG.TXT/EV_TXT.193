@@ -1,0 +1,48 @@
+193: KapitÑn Brandt
+===================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin der KapitÑn dieses Schiffes, wie Sie wissen sollten.]
+
+Block 1         "Begr. 1x" / OFF
+["Was gibt es denn, Driscoll? Meine Zeit ist knapp bemessen, so kurz vor der
+Landung." {BLOK010}"Sir, ich wollte nur fragen, ob Sie mir etwas Genaueres
+Åber den Zeitpunkt des Shuttlefluges verraten kînnen."]
+
+Block 2         Begr. 2x
+["Tut mir leid, Driscoll, ich bin in Eile. Bitte richten Sie sich wegen Ihres
+Abfluges nach den Laut|sprecher|durch|sagen."]
+                DANN. Gespr. abbruch
+
+Block 3         Antw. 1,10
+["Ich kann Ihnen noch keine genaue Auskunft geben, Driscoll. Es wird aber
+nicht mehr allzulange dauern. Die BrÅcke wird den Abflug|termin rechtzeitig
+durch Laut|sprecher|durch|sagen bekanntgeben.^^Entschul|digen Sie mich nun
+bitte, ich habe noch viel zu tun."]
+
+Block 4
+["Sie sollten doch schon lÑngst starten, Driscoll. Haben Sie die Durchsagen
+nicht gehîrt? Der Startzeitpunkt liegt zwar in Ihrem Ermessen, aber Sie
+sollten unsere Geduld nicht allzulange auf die Probe stellen."]
+
+Block 5
+[{BLOK004}Auf Wiedersehen, Sir. {BLOK005}Was ist Ihre Aufgabe?]
+
+Block 6
+["Wiederseh'n, Driscoll."]

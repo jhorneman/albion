@@ -1,0 +1,158 @@
+
+Map-Clone fÅr Scriptsequenz
+===========================
+
+
+Block 0
+[!]
+
+Block 1
+[!]
+
+Block 2
+[!]
+
+Block 3
+[!]
+
+Block 4
+[!]
+
+Block 5
+["War bislang eine angenehme Reise, Driscoll."]
+
+Block 6
+T
+["Danke,
+ich bin in guter Fluglaune heute.^^Es ist vieles Routine in meinem Job,
+aber einen neuen Planeten anzufliegen, ist und bleibt das Grîûte!"]
+
+Block 7
+R
+["Wem sagen Sie das! Gut, daû es meine Dienstelle nicht weiû, aber ich wÅrde
+sogar auf mein Gehalt verzichten, um diesen Augenblick zu erleben."]
+
+Block 8
+T
+["Wir kommen jetzt in Sichtweite!^^Sehen Sie sich das an, Hofstedt! Macht auf
+mich nicht den Eindruck einer WÅstenwelt."]
+
+Block 9
+R
+["In der Tat! Viele Wolken, und die Farbe wÑre fÅr Staubwolken ungewîhnlich,
+wenn man bedenkt, daû die GelbfÑrbung von der Sonne stammt."]
+
+Block 10
+T
+["Ich werde mit der TORONTO sprechen. Versuchen Sie wÑhrend|dessen, etwas auf
+ihre Instrumente zu bekommen.^^Shuttle an TORONTO! Ned, wie ist der Kontakt?"]
+
+Block 11
+N
+["Die VerstÑndigung ist ausgezeichnet, Mr. Driscoll. Sie haben nun
+Sichtkontakt mit dem Ziel?"]
+
+Block 12
+T
+["Ja. Der Planet ist dem Augenschein nach nicht unbedingt eine WÅste. Mr.
+Hofstedt befragt gerade die Instrumente."]
+
+Block 13
+N
+["Inter....nt. Oh, ich gl..be, die V..bind.g wird schwÑ..r. Aber fahr.n Sie
+fort."]
+
+Block 14
+R
+["Die dichte Wolkendecke macht die Messungen schwierig.^^Die Analyse weist in
+der Tat auf groûe Rohstoffmengen hin...^^Es scheint mehr Wasser zu geben als
+angenomm..."]
+
+Block 15
+N
+["Ein.. Moment, Mr. Hofst..t. Die Verb...n.g wird imm.r schwÑch.r. Haben Sie
+Schwier..keit.n? Mr. Driscoll?"]
+
+Block 16
+T
+["Nein. Alles scheint im grÅnen Bereich zu sein."]
+
+Block 17
+T
+["Wow! Ich hÑtte es nicht beschreien sollen!^^ Ausfall der Servos!
+Ersatzkreise gehen schnell 'runter! Versuche, manuell etwas zu
+machen!^^Hofstedt?"]
+
+Block 18
+R
+["Versuche, 'n Check zu fahren!"]
+
+Block 19
+N
+["Mr. Dr..coll? Ihr Status zeig. kriti...e Werte. Erbitte Bericht!"]
+
+Block 20
+T
+["Ausfall mehrerer Systeme! Manuelle Steuerung O.K.! Versuche umzukehren!"]
+
+Block 21
+R
+["Wir haben Probleme mit der Energieversorgung. Ich... HEY!"]
+
+Block 22
+T
+["Das hat geknallt! Scheiûe, ich verliere die Kontrolle!^^ Hofstedt, halten
+Sie sich fest!^^WIR GEHEN RUNTER!"]
+
+Block 23
+---
+[Das Shuttle ist bereits im Schwerkraftfeld des Planeten und stÅrzt schnell
+auf ihn zu!^^Harte Stîûe erschÅttern das kleine Schiff, als es in die
+AtmosphÑre eindringt.^^ Tom arbeitet fieberhaft und schafft mit den Resten
+manueller Kontrolle eine krachende Bruchlandung...^^^^Langsam kommen die
+MÑnner wieder zu sich.]
+
+Block 24
+R
+["Ohh, mein Kopf!^^Mit Ihnen fliege ich so schnell nicht wieder, Driscoll."]
+
+Block 25
+T
+["Bestimmt nicht mit diesem Shuttle.^^Auûerdem, Sie kînnen mir dankbar sein,
+daû Sie noch leben! Die Automatik hÑtte die Kiste nie heil heruntergebracht!"]
+
+Block 26
+R
+["O.K., O.K. Ist schon klar.^^Und nun?"]
+
+Block 27
+T
+["Nun schnappen wir uns die Masken, und steigen aus. ^^Wenn die Luft zum Atmen
+reicht, gehen wir die VorrÑte durch und fangen an zu basteln, um einen
+Funkkontakt herzustellen.^^Wenn die Luft zu dÅnn ist... Gute Nacht."]
+
+
+Block 28
+R
+[Oh, Mann.^^Was soll's. Hat keinen Zweck, es herauszu|zîgern.^^Gehen wir!"]
+
+
+---DRAUSSEN
+
+Block 29
+R
+["MEIN GOTT! Das ist also die WÅstenwelt! Ich werde verrÅckt! Schauen Sie doch
+nur!"]
+
+Block 30
+T
+["Phantastisch! Riechen Sie nur! Hîren Sie! Hier wimmelt es von Leben!"]
+
+Block 31
+R
+["Wie konnte die Sonde nur solche Daten senden? Das ist eine Sensation!"]
+
+Block 32
+T
+["Lassen Sie uns zuerst vom Shuttle weggehen. In dieser sauerstoff|reichen
+AtmosphÑre kînnte es..."]

@@ -1,0 +1,59 @@
+169: Leitos, Junge
+==================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich gehe noch zur Schule. Mein Vater hat wenig Verwandte, deshalb
+bin ich nicht in die Pflegschaft gegangen."{WORDSchule}{WORDVater}
+{WORDPflegschaft}]
+
+Block 1         Begr. 1x, mit Iskai
+["Togi Din! Ihr seid Besucher aus fernen LÑndern, nicht wahr? Und Ihr wollt
+mit MIR sprechen? Oh, bei den Gîttern, das ist das erste Mal, daû ich einen
+Pelzig..., Ñhm, ich meine, Iskai mit eigenen Augen sehe! Seid ihr groû!"
+{WORDGîtter}{WORDIskai}]
+
+Block 2         Begr. 1x, ohne Iskai
+["Togi Din! Ihr seid Besucher aus fernen LÑndern, nicht wahr? Und Ihr wollt
+mit MIR sprechen?"]
+
+Block 3         Begr. 2x
+["Togi Din! Ihr wollt Euch nochmal mit mir unterhalten?"]
+
+block 4         "Schule"
+["Ja, es kommt ein Druide aus Arjano und gibt den Kindern Unterricht. Manchmal
+ist es langweilig, aber oft erzÑhlt er auch ganz tolle Geschichten."
+{WORDDruiden}{WORDArjano}]
+
+block 5         "Schule" 2x
+["Nun, wie gesagt, es kommt ein Druide aus Arjano und unterrichtet uns."
+{WORDDruiden}{WORDArjano}]
+
+Block 6         "Iskai"
+["Ich habe schon viel von ihnen gehîrt. Manche bei uns sprechen abfÑllig von
+ihnen, aber einige auch mit Respekt und etwas Furcht, denn sie sollen gute
+Krieger sein."{WORDKrieger}]
+
+Block 7         "Vater"
+["Mein Vater ist einer der besten Krieger des Dorfes und dient unserem
+Kînig!"{WORDKînig}]
+
+Block 8         "PFLEGSCHAFT, ATTIO"
+["Na ja, ich wÑre nicht gern von meinen Eltern weggegangen, aber dafÅr hÑtte
+ich auch eine zweite Familie gehabt. Eigentlich ist es mir aber lieber, so wie
+es ist."]

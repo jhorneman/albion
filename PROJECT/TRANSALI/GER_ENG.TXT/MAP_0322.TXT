@@ -1,0 +1,886 @@
+
+Maptextfile
+--------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Eine brennende Fackel.]
+
+Block 2
+[Eine Fackel.]
+
+Block 3
+[Wandbeh„nge.]
+
+Block 4
+[Regale mit Bchern.]
+
+Block 5
+[Ein Fa.]
+
+Block 6
+[Ein groes Fa, in das man einen Zapfhahn schlagen kann.]
+
+Block 7
+[Ein Zapfhahn.]
+
+Block 8
+[Ein Teppich.]
+
+Block 9
+[Ein Sofa.]
+
+Block 10
+[Ein Sessel.]
+
+Block 11
+[Ein groes Sofa.]
+
+Block 12
+[Eine Sitzbank.]
+
+Block 13
+[Ein Beistelltisch.]
+
+Block 14
+[Ein Kchentisch.]
+
+Block 15
+[Eine Kanne.]
+
+Block 16
+[Ein Schreibtisch.]
+
+Block 17
+[Eine Decke.]
+
+Block 18
+[Leere Regale.]
+
+Block 19
+[Wrste und Fleischstcke, die zum Trocknen aufgeh„ngt wurden.]
+
+Block 20
+[In diesen Regalen liegen diverse unwichtige Gegenst„nde.]
+
+Block 21
+[Ein Kamin.]
+
+Block 22
+[Eine Glasflasche.]
+
+Block 23
+[Ein Bett.]
+
+Block 24
+[Ein Schrank.]
+
+Block 25
+[Eine Kommode.]
+
+Block 26
+[Ein Stuhl.]
+
+Block 27
+[Ein leeres Tablett.]
+
+Block 28
+[Ein Beh„lter.]
+
+Block 29
+[Ein Trinkbecher.]
+
+Block 30
+[Ein Teller.]
+
+Block 31
+[Gl„ser, Becher, Besteck.]
+
+Block 32
+[Auf dem Tablett befinden sich kulinarische Leckerbissen.]
+
+Block 33
+[Ein Buch.]
+
+Block 34
+[Kr„uter.]
+
+Block 35
+[Geb„ck.]
+
+Block 36
+[Ein Gewrz.]
+
+Block 37
+[Ein Stck Schinken.]
+
+Block 38
+[Eine aromatische Wurzel.]
+
+Block 39
+[Ein aufgeschlagenes Buch mit dem Titel: "Priorit„t der subgrammatikalischen
+Zeichensetzung im Kontext zur homogenen literaturwissenschaftlichen
+Definition."]
+
+Block 40
+[Verschiedene Bcher.]
+
+Block 41
+[Dieses Buch setzt sich kritisch mit der Existenzberechtigung von Wirbeltieren
+auseinander.]
+
+Block 42
+[Ein groer Tisch, der durch erstklassige Handarbeit angefertigt wurde.]
+
+Block 43
+[Ein scharfes Kchenmesser.]
+
+Block 44
+[Eine Flasche.]
+
+Block 45
+[Eine besch„digte Flasche.]
+
+Block 46
+[Eine Holzdose.]
+
+Block 47
+[Ein Glasbeh„lter.]
+
+Block 48
+[Ein Kissen.]
+
+Block 49
+[Eine Tre.]
+
+Block 50
+[Ein Herd, auf dem man Speisen und Getr„nke erhitzen kann.]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 62
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 63
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 64
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 65
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 66
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 67
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 68
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 69
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 70
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 71
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 72
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 73
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 74
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 75
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 76
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 77
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 78
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 79
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 80
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 81
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 82
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 83
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 84
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 85
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 86
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 87
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 88
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 89
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 90
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 91
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 92
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 93
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 94
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 95
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 96
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 97
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 98
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 115          Bediensteter
+["Gre! Schaut doch bei Althea im sd”stlichen Flgel des Geb„udes vorbei.
+Sie hat fr Besucher unseres Hauses interessante Angebote."]
+
+Block 116          Bedienstete
+["Ich arbeite gern in diesem Haus. So viele Orte der Welt habe ich gesehen,
+aber die gr”te Sch”nheit findet man auf dieser Insel."]
+
+Block 117          Bedienstete
+["Seid gegrt, Besucher! Seid ihr zum Meditieren an diesen Ort gekommen?
+Sprecht mit Nemos darber, er kennt die Orte der Erleuchtung."]
+
+Block 118
+[Diese Pflanzen pumpen Wasser empor.]
+
+Block 119
+[PHASE 2!]
+
+Block 120
+[PHASE 3!]
+
+------------------------Script Beginn Phase 1------------------------------
+
+Block 121
+[Kaum, da sich Tom und seine Gef„hrten an den Anblick der eleganten
+Architektur des Hauses gew”hnen k”nnen, da gelangen sie auch schon in eine Art
+Versammlungs|raum, in dem eine kleine Versammlung von Menschen und Iskai auf
+sie wartet...]
+
+Block 122          Nemos
+["Seid nochmals gegrt, Tom Driscoll. Bevor wir nun beginnen, Euch ber
+diesen Ort zu informieren, lat mich die Leute vorstellen, die unserer
+Versammlung angeh”ren.^^Neben Sebai-Giz Frill, den Ihr ja schon aus Jirinaar
+kennt, sind dies zum Beispiel Drannagh, Kenner der Magie und Beherrscher der
+Kunst, magische Gegenst„nde zu erstellen."]
+
+Block 123          Drannagh
+["Willkommen bei den Erleuchteten."]
+
+Block 124          Nemos
+["Sebai-Dre Birrh, ein Meister der Heilkunst."]
+
+Block 125          Birrh
+["Dsarii-ma, Tom Driscoll."]
+
+Block 126
+[!]
+
+Block 127          Nemos
+["Irkith, Kennerin der Sagen und Geschichten aus alter Zeit."]
+
+Block 128          Irkith
+["Seid gegrt, Besucher."]
+
+Block 129
+["Und, zu guter letzt, Harriet, unser jngstes Mitglied. Sie h”rt die Stimme
+Animebonas."]
+
+Block 130
+["Gre, Tom Driscoll und Rainer Hofstedt."]
+
+Block 131          Nemos
+["Ich will versuchen, in einigen Worten, die in ihrer Knappheit unbescheiden
+klingen werden, darzulegen, wo Ihr Euch hier befindet, Tom, und was wir von
+Euch wollen. ^^Wir sind eine Gesellschaft von Leuten, die sich Dji Cantos oder
+Erleuchtete nennen. Schon der Name, eine Mischung aus einem Iskai- und einem
+menschlichen Ausdruck, deutet an, da unsere Organisation vor langer Zeit von
+Menschen und Iskai gegrndet wurde. Die Mitglieder unseres Kreises zeichnet
+ein tieferes Wissen um den Aufbau dieser Welt aus, als es dem gew”hnlichen
+Gelehrten zuteil wird. Wann immer ein auergew”hnlicher Geist ein bestimmtes
+Ma an Wissen erlangt, sprechen wir ihn an und weihen ihn in die Kenntnisse
+ein, die ihn zum Erleuchteten, zum Dji Cantos, machen.^^Ihren Ursprung hat
+unsere Gemeinschaft in den Zeiten der Einwanderung der Menschen auf Albion.
+Der groe Cantos, Fhrer der Menschen, hat unseren Zirkel mit den beiden
+gr”ten Gelehrten der Iskai vor nun fast 2000 Jahren begrndet. Ihnen
+gemeinsam war das Wissen um die Macht, welche die Reise der Menschen hierher
+erm”glichte und die Kraftquelle der Magie auf dieser Welt darstellt. Sie, und
+wir als ihre Erben, wissen um die Existenz Animebonas, der Entit„t dieser
+Welt."]
+
+Block 132          Rainer
+["So erz„hlt doch bitte weiter! Was hat es mit dieser Kraftquelle der Magie
+auf sich?"]
+
+Block 133          Drannagh
+["Animebona ist die Summe allen Lebens auf dieser Welt und doch mit eigenem
+Bewutsein und Zielen. In mancher Form findet man Spuren ihres Wesens in den
+Religionen Albions, sei es die G”ttin der Iskai oder die Danu der
+Menschen.^^Sie war es, die dereinst mit Cantos sprach und die Menschen durch
+die Lande des Nebels hierher fhrte."]
+
+Block 134          Nemos
+["Verzeiht, aber es wird sp„ter noch genug Zeit sein, um Euren Wissensdurst in
+allen Einzelheiten zu stillen, verehrter Rainer.^^Fr den Augenblick mag es
+euch gengen zu wissen, da wir mit den Kenntnissen um das Wesen dieser Welt
+auch eine gewisse Verantwortung bernommen haben. Seit Frill Eure Ankunft in
+Jirinaar unserem Kreis vermeldete, haben wir Euch deshalb beobachtet und
+Erkundigungen durchgefhrt."]
+
+Block 135          Tom
+["Heit das, Ihr wit, wo sich die Toronto, unser groes Himmelsschiff,
+befindet?"]
+
+Block 136          Nemos
+["Wir wissen in der Tat, wo das riesige Metallgebilde gelandet ist, Tom
+Driscoll, und auch, wenn es in der groen Wste niedergegangen ist, gibt es
+uns Anla zur Sorge.^^Dieses Schiff ist die Verk”rperung all dessen, weswegen
+Cantos vor unz„hligen Jahren sein Volk von Animenkna fortgefhrt hat. Nun
+haben uns die Helromier eingeholt, so hat es zumindest den Anschein."]
+
+Block 137
+["Ich verstehe nicht v”llig, was Ihr meint, Nemos. Ist denn von der Toronto
+noch kein Kontakt mit den Bewohnern Albions aufgenommen worden?"]
+
+Block 138
+["Unseren Kenntnissen nach nicht, aber auch wir sind nicht allwissend, Tom
+Driscoll.^^Eure Handlungen haben Euch bislang als vertrauens|wrdigen Menschen
+gezeigt, deshalb m”chten wir Euch bitten, einen Kontakt zwischen uns und Euren
+Leuten herzustellen. Wir m”chten die Ziele der Helromier auf unserer Welt
+kennenlernen."]
+
+Block 139          Wenn SIN-Bit Argim!
+["Unseren Kenntnissen nach nicht, aber auch wir sind nicht allwissend, Tom
+Driscoll.^^Eure Handlungen haben Euch bislang als vertrauens|wrdigen Menschen
+gezeigt, deshalb m”chten wir Euch bitten, einen Kontakt zwischen uns und Euren
+Leuten herzustellen. Wir m”chten die Ziele der Helromier auf unserer Welt
+kennenlernen."]
+
+Block 140          T
+["Aber gerne. Mittlerweile sollte eine Forschungsstation errichtet worden
+sein. Es werden sicher eine Menge Dokumentationen gedreht und eine Unzahl
+neugieriger Fragen von meinen Leuten gestellt werden. Da ist ein Kreis der
+besten Gelehrten dieser Welt natrlich eine ideale Informa|tionsquelle.^^ Wenn
+Ihr so freundlich sein wrdet, uns die Weiterreise zum Landepunkt der Toronto
+zu erm”glichen?"]
+
+Block 141          Nemos
+["Danke fr Euren guten Willen, Tom Driscoll. Als Zeichen unseres Vertrauens
+m”chte ich Euch diesen kleinen Stein berreichen. Er dient als
+Erkennungszeichen unserer Gemeinschaft und vermag Euch auch vor Unbill zu
+beschtzen."^^{INK 001}Nemos legt Tom einen kleinen Stein auf die Brust. Er
+bleibt fest auf der Haut haften!{INK 002}^^ "Euer Riesenschiff befindet sich
+im heien Lande der Metallbearbeiter, der Umajo-Gilde, weit im Nordosten von
+hier.^^Um die Reise dorthin so schnell wie m”glich zu gestalten, m”chten wir
+Euch, Euer Einverst„ndnis vorausgesetzt, Harriet als Begleiterin
+mitgeben.^^Als Angeh”rige unseres Zirkels hat sie Zugang zu der vielleicht
+m„chtigsten Magie, die uns Animebona zur Verfgung stellt:^Die H”hlen der
+G”ttin erlauben den Transport zwischen zwei Orten, ohne die Wegstrecke
+zwischen ihnen durchschreiten zu mssen, „hnlich wie damals, als Animebona
+Canto und sein Volk hierher brachte."]
+
+Block 142          Rainer
+["Mich wundert langsam gar nichts mehr."]
+
+Block 143          Tom
+["Geduld, Rainer. Nemos, wir nehmen Euer Angebot gerne an.^^ Harriet,
+willkommen in unserer kleinen Gruppe."]
+
+Block 144          Harriet
+["Es wird sicher eine interessante Reise, Tom Driscoll."]
+
+Block 145          
+[Harriet tritt in die Reihe der Gef„hrten ein.]
+
+Block 146          Nemos
+["So schnell wir in Kontakt mit den Helromiern treten wollen, so mu doch Zeit
+sein fr etwas Besinnung und fr Gespr„che."]
+
+Block 147          Rainer
+["Ich bitte sehr darum! Ich wrde gerne noch einiges erfahren!"]
+
+Block 148
+["Wir werden nun an unser Tagewerk zurckkehren, aber jeder hier wird gerne
+Eure Fragen beantworten, Tom und insbesondere Rainer.^^Schaut Euch um in
+diesem Haus, und sch”pft Kraft fr die Reise. Vielleicht durch ein wenig
+Meditation in der Natur dieser Insel, die von der Entit„t besonders gesegnet
+wurde. Hier sind ihre Kr„fte am st„rksten.^^ Wenn niemand etwas dagegen hat,
+wrde ich die Versammlung nun beschlieen."]
+
+Block 149
+[Niemand erhebt die Stimme, und so l”st sich die Gruppe gem„chlich auf.]
+
+Block 150          Harriet
+["Hier geht es in eine H”hle, von der aus wir mit Animebonas Hilfe unsere
+Reise beginnen k”nnen. Seid Ihr sicher, Tom, da Ihr diesen Ort nun verlassen
+wollt, oder m”chtet Ihr noch ein wenig verweilen?"]
+
+Block 151
+[In die H”hle gehen und die Reise fortsetzen?]
+
+Block 152
+[Gerade wenden sich alle in Richtung des H”hleneingangs, da meldet sich Rainer
+zu Wort:]
+
+Block 153          Rainer
+["Tom, auf ein Wort. Dieser Ort des Wissens bt auf mich eine groe
+Anziehungskraft aus, es gibt noch vieles, was ich die Leute hier fragen
+m”chte.^^Um es kurz zu machen, ich habe mich entschlossen, hier zu
+bleiben.^^Ich m”chte tiefer in die Geheimnisse dieser Welt eingewiesen werden,
+und an Bord der Toronto kann ich noch frh genug zurckkehren. Die Mitglieder
+des Kontaktteams haben auerdem dann hier einen kundigen Ansprechpartner.^^Ich
+denke, Du kannst auf meine Begleitung gut verzichten, oder?"]
+
+Block 154          Tom
+["Wir haben einiges zusammen erlebt, Rainer, und ich werde Deine Gesellschaft
+vermissen.^^Ich h„tte mir denken k”nnen, da Du nicht ohne weiteres von diesem
+Ort voller Gelehrter wegzukriegen bist. Zu viele Kollegen hier, hm?^^Ich
+wnsche Dir alles Gute hier. Wir sehen uns bald wieder, ich komme mit dem
+ersten Kontaktteam zurck."]
+
+Block 155          Rainer
+["Ich drck' Dir die Daumen fr die weitere Reise, Tom. Bis bald!^^Ach ja,
+hier, nehmt noch meine Ausrstung, ich werde sie vorerst nicht mehr brauchen."]
+
+Block 156 
+[Rainer verabschiedet sich von allen Gef„hrten und verteilt seine
+Habseligkeiten an sie. Dann wendet er sich zurck ins Haus. Tom und die
+anderen betreten die H”hle...]
+
+Block 157
+["Vielleicht ist es besser, noch ein wenig zu bleiben, Harriet."]
+
+------------------------Script Beginn Phase 2------------------------------
+Block 158
+[Tom und seine Gef„hrten strmen in die Versammlungshalle von Cantos Haus.
+Schnell sind die Erleuchteten zusammengerufen.^^Tom berichtet atemlos ber die
+Pl„ne der Firma, die von der AI und Kapit„n Brandt in die Tat umgesetzt werden
+sollen: Die Ausbeutung des Planeten soll weiter gehen.]
+
+Block 159          Nemos
+["Also sind unsere schlimmsten Befrchtungen wahr geworden. Animenkna hat uns
+schlielich eingeholt. Wer h„tte gedacht, da wir uns einer „hnlichen
+Situation gegenbersehen, wie unsere Vorfahren."]
+
+Block 160          Birrh
+["Und ihr seid sicher, da einige Dutzend Helromier, und sei ihr Metallschiff
+noch so gro, eine Bedrohung fr unsere ganze Welt darstellen?"]
+
+Block 161          Rainer
+["Ihr mt verstehen, Birrh, da dieses Schiff in der Lage ist, zu wachsen.
+Die Anlage baut sich selbst immer weiter aus, es ist ein selbsterhaltender
+Proze. Es dauert eine Weile, aber die Sch„den fr Albion sind unabsehbar."]
+
+Block 162          Nemos
+["Tom, Ihr seid offenbar emp”rt ber das Verhalten Eurer
+Helromier-Genossen.^^Soll das heien, da Ihr auf unserer Seite steht?"]
+
+Block 163          Tom
+["Ich habe viel erlebt auf dieser Welt, Nemos und meine Reisen haben mir
+Albion und seine Bewohner nahegebracht. Ich h„tte auch so gegen die
+Fortsetzung des Projektes protestiert, aber nach der Behandlung, die uns an
+Bord der Toronto zuteil wurde, bin ich zu allem bereit. Die Schiffsfhrung
+geht ber Leichen!"]
+
+Block 164          Rainer
+["Was genau ist nach Deiner Gefangennahme passiert?"]
+
+Block 165          Tom
+["Grob gesagt, hat mich Joe hier erst einmal befreit. Wir haben anschlieend
+versucht, die AI abzuschalten, um die Besatzung ber diese Welt informieren zu
+k”nnen.^^Ihr mt wissen, verehrte Dji Cantos, da beileibe nicht alle an Bord
+der Toronto bereit w„ren, eine blhende Welt bewut zu opfern.^^Jedenfalls
+sind wir gescheitert. Die AI hat uns ins Gesicht gesagt, da die Firmenleitung
+sich ber die Gesetze hinwegsetzen wird. Es geht offenbar um die Existenz des
+gesamten Konzerns. Auf unserer Flucht haben wir dann bemerkt, wieso die AI so
+offen ber die Pl„ne der Firma sprach: Wir sind in eine Falle gelaufen.^^Nur
+dank der Wirkung des kleinen Steines, den Ihr mir geschenkt hattet, Nemos,
+konnten wir lebend entkommen."]
+
+Block 166          Rainer
+["Mit schmutzigen Tricks der Firma hatte ich ja gerechnet, aber da sie einen
+so direkten, plumpen Versuch unternehmen, h„tte ich nicht gedacht."]
+
+Block 167          Joe
+["Denkt 'mal drber nach. Die Sache ist recht wasserdicht eingef„delt: Der
+Unfalltod des Inspektors an einer unersetzlichen Comanlage. Keine M”glichkeit
+der Verbindung nach Hause. Bis es zu einer Untersuchung kommt, ist die Sache
+hier gelaufen. Die Regierung kann es sich nicht leisten, jemanden zur
+Kontrolle hier 'rauszuschicken."]
+
+Block 168          Rainer
+["Wobei wir wieder mal feststellen: Es gibt keine Klischees. Und Fehler werden
+wiederholt.^^Die Frage ist nun: Was tun wir?"]
+
+Block 169          Tom
+["Ihr Dji Cantos habt uns von Animebona, der Entit„t dieser Welt erz„hlt.
+Sagtet ihr nicht, sie habe eine Art Bewutsein? L„t sie die Vernichtung ihrer
+Welt, ihrer selbst, zu?"]
+
+Block 170          Nemos
+["Oh, natrlich versucht sich Animebona zu wehren."]
+
+Block 171          Harriet
+["Ich hatte be„ngstigende Visionen, w„hrend wir auf Euch warteten, Tom.^^Die
+Welt, die Entit„t hat... Schmerzen."]
+
+Block 172          Joe
+["Denk' dran, was in der ersten Zeit des Rohstoffabbaus alles passiert ist,
+Tom. Ich kapiere zwar nur die H„lfte von dem, was hier geredet wird, aber was
+wir anf„nglich an Schwierigkeiten hatten, war nicht normal.^^Es wurde eine
+Materialschlacht gefhrt, dann lief es allerdings besser."]
+
+Block 173          nemos
+["Animebona ist nicht allm„chtig. Sie schreitet hier nicht gegen den Versuch
+einiger schaufelbewehrter Gr„ber ein, die ihren Leib zu sch„nden
+versuchen.^^Sie sieht sich der Verk”rperung Animenknas, ihrer Antithese,
+gegenber. Ihre Magie kann gegen das Prinzip Animenkna, der Weiterentwicklung
+all dessen, vor dem unser Volk einst floh, wenig ausrichten."]
+
+Block 174          Harriet
+["Soll da heien, da wir dem Metallkoloss hilflos ausgeliefert sind?"]
+
+Block 175          Nemos
+["Wir mssen nachdenken. Ich bin froh, da sich drei Helromier, unter ihnen
+ein Gelehrter, auf unsere Seite gestellt haben. Vielleicht finden wir
+gemeinsam einen Ansatzpunkt gegen die Bedrohung."]
+
+Block 176
+[W„hrend Tom und Joe sich ein wenig ausruhen, findet zwischen den Erleuchteten
+und Rainer eine rege Diskussion statt. Am n„chsten Tag treten Tom und den
+Gef„hrten einige bern„chtigte Gestalten gegenber, um ihre Erkenntnisse
+mitzuteilen.]
+
+Block 177          Nemos
+["Wir glauben, einen Weg gefunden zu haben, der ein wenig Hoffnung verspricht.
+Es wird sicher die schwierigste magische Handlung, die wir je zu unternehmen
+hatten, aber es ist eine Chance."]
+
+Block 178          Tom
+["Sagtet ihr nicht, da Magie gegen die Toronto nur wenig ausrichten kann?"]
+
+Block 179          Nemos
+["Genau das war unser Problem. Mit Hilfe des verehrten Rainer Hofstedt sind
+wir jedoch auf einen Ansatz gekommen. Wir mssen das Prinzip der technischen
+Zivilisation der Helromier, Animenkna, nicht bek„mpfen, sondern in den
+magischen Proze mit einbeziehen, so da schlielich die Umwandlung des
+Metallkolosses in etwas anderes erfolgen k”nnte."]
+
+Block 180          Rainer
+["Natrlich hat die Sache einen, besser zwei, Haken."]
+
+Block 181          Nemos
+["Was Rainer Hofstedt damit meint, ist, da wir versuchen werden, ein
+magisches Artefakt zu schaffen. Seine Macht wird gro sein, aber nicht genau
+vorhersehbar. Und es mu an eine groe Energiequelle in dem Metallschiff
+gebracht werden."]
+
+Block 182          Rainer
+["Genauer gesagt, zum Fusionsreaktor der Anlage."]
+
+Block 183          Tom
+["Langsam, langsam. Der erste Haken ist also, da {FAT }wir{NORS} wohl
+diejenigen sein sollen, die zurck an Bord der Toronto kehren sollen.
+Auerdem: {FAT }Was{NORS} mu zum Reaktor gebracht werden?"]
+
+Block 184          Nemos
+["Wir wollen versuchen, etwas zu erschaffen, da wir das SAMENKORN nennen. Es
+ist eine Verquickung verschiedenster magischer Prinzipien. Die meisten
+Kenntnisse, die wir fr die Erschaffung des Samenkorn brauchen, stehen uns zur
+Verfgung.^^Zwei Informationen fehlen jedoch selbst uns. Sie sind im Besitz
+zweier Kulturen, deren Angeh”rige fast nie in unserem Kreis zu finden
+waren.^^Die Gilde der Metallschmiede, die Umajo, sind die erste dieser
+Kulturen. Wir mssen, wie gesagt, das Prinzip Animenkna in unser Werk mit
+einbeziehen, um Wirkung auf das Metallschiff auszuben. Die Umajo haben sich
+zu Grenzg„ngern zwischen Animenkna und Animebona, der Entit„t, entwickelt. Sie
+gehen sowohl mit Technik als auch mit Magie um. Von ihnen brauchen wir das
+Wissen, wie man mit Magie Metall beeinflut.^^Ein Wissen, von dem ich nicht
+wei, ob es die Umajo gerne mit Auenstehenden teilen."]
+
+Block 185          Tom
+["Schon verstanden. Und die zweite Information?"]
+
+Block 186          Nemos
+["Hierbei handelt es sich um das Wissen, wie man groe, sehr groe Mengen an
+Energie b„ndigt. Diese Kenntnis besitzen nur die... Kenget Kamulos."]
+
+Block 187          Harriet
+["Der M”rderkult!"]
+
+Block 188          evtl. Khunag
+[{INK 001}Ein leises L„cheln stiehlt sich auf Khunags Gesicht.^^{INK 002}"Es
+handelt sich um einen Kernbereich der Magie der Kenget Kamulos."]
+
+Block 189          Nemos
+["Auch die Kenget sind auf wirtschaftliches šberleben angewiesen. Wir werden
+versuchen, ihnen ein verlockendes Angebot zu machen. Unsere Gemeinschaft ist
+nicht so mittellos, wie es, mhm, oft den Anschein hat."]
+
+Block 190          evtl. Khunag
+["Mag sein, da meine ehemaligen Brder darauf eingehen. Mag sein."]
+
+Block 191          Tom
+["Um euch zuvorzukommen, Nemos: Wir sollen also zuerst die fehlenden
+Kenntnisse besorgen und uns dann in die H”hle des L”wen, wie man bei uns sagt,
+begeben. Dort wenden wir beim Reaktor der Toronto einen magisch geladenen
+Gegenstand an, von dem, wenn ich das recht verstanden habe, niemand wei, was
+er ganz genau bewirkt.^^ Sehe ich das richtig?"]
+
+Block 192          Nemos
+["Mhm, in Euerer direkten Art, mhm, ja, es trifft den Kern der Sache. Ihr und
+Eure Gef„hrten seid kampferprobt und seid im Besitz der n”tigen Kenntnisse.
+Aber wir wrden es natrlich verstehen, wenn..."]
+
+Block 193          Tom
+["O.K., O.K., sparen wir uns das. Ich kann jetzt wohl schlecht "Nein" sagen.
+^^Wenn die anderen bereit sind, die Risiken auf sich zu nehmen, kann das
+Unternehmen beginnen."]
+
+Block 194
+[Niemand macht einen Rckzieher.]
+
+Block 195          Tom
+["Gut. Lat mich also zusammenfassen:^^Wir sollen zu den Umajo, und versuchen,
+das Wissen ber magische Behandlung von Metall zu erlangen.^^Auerdem
+spazieren wir in das Zentrum eines m”rderischen Kultes namens Kenget Kamulos
+und machen ihnen ein Angebot, das sie hoffentlich nicht ablehnen
+k”nnen.^^Anschlieend wird hier versucht, dieses magische Samenkorn
+zusammenzubauen, das wir dann zum Reaktor der Toronto bringen, um zu sehen,
+was dann damit passiert."]
+
+Block 196
+[Die Runde nickt zustimmend, dann meldet sich Joe zu Wort.]
+
+Block 197          Joe
+["Ein Vorschlag: W„hrend ihr Euren Hals riskiert, wird sich der alte Joe als
+Kameramann bet„tigen. Ich werde mit der Kamera, die ich dabei habe, eine
+Dokumentation speichern. Mit etwas Glck k”nnen wir, wenn wir dann in die
+Toronto eindringen, die Dokumentation in das Bordnetz einspeisen. Wenn es uns
+gelingt, den Zugriff der AI auf die betreffende Konsole fr ein paar Minuten
+zu sperren, k”nnen wir die Leute an Bord ber den Planeten aufkl„ren und ihnen
+raten, das Schiff zu verlassen."]
+
+Block 198          Tom
+["Klingt gut. Mach' es so."]
+
+Block 199          Tom
+["Freunde, es hat keinen Sinn, die Sache weiter aufzuschieben. Lat uns
+aufbrechen, und die beiden Informationen besorgen, die wir brauchen."]
+
+Block 200
+[Die Dji Cantos bergeben 1500 in Gold und danach
+l”st sich die Runde auf.^^Tom und die Gef„hrten sind bereit zum
+Aufbruch und begeben sich in die H”hle der G”ttin.]
+
+Block 201
+[Tom und die Gef„hrten rufen die Erleuchteten zusammen und berreichen ihnen,
+nicht ohne ein wenig Stolz, die beiden Schriftrollen mit den ben”tigten
+Informationen.^^Die ersch”pften Gef„hrten ruhen sich aus, w„hrend die Dji
+Cantos die Schriftrollen studieren. Einige Zeit sp„ter findet eine weitere
+Versammlung statt...]
+
+Block 202          Nemos
+["Habt nochmals Dank fr die Schrift|rollen! Wir haben uns seit vielen Tagen
+auf diesen Moment vorbereitet. Ihr habt mit Bravour Euren Teil zur Erschaffung
+des Samenkorns geleistet.^^Nun ist es an uns, das Werk zu vollenden."]
+
+Block 203
+[Die Dji Cantos, Harriet unter ihnen, bilden einen Kreis im Versammlungsraum
+und versinken in tiefer Konzentration.^^Schon bald wird der ganze Raum von
+blendendem Licht erfllt!]
+
+Block 204
+[Ersch”pft treten einer nach dem anderen aus dem Kreis, bis nach einer Weile
+nur noch Nemos, Drannagh und Harriet brigbleiben. Langsam verl”scht die
+gleiende Helligkeit und l„t erkennen, was in der Vereinigung der gr”ten
+magischen Talente dieses Planeten entstanden ist.]
+
+Block 205          Nemos
+["Es ist geschafft, Animebona sei Dank!"]
+
+Block 206          
+[Mit feierlicher Miene berreicht Nemos den Gef„hrten ein unscheinbares
+Gebilde, das tats„chlich wie ein groes Samenkorn aussieht.]
+
+Block 207          Nemos
+["Dies ist die Essenz Animebonas. Auf da dieses eine Mal die Magie ber die
+Rationalit„t, das Prinzip Animenknas, siegen m”ge. Gebraucht das Samenkorn
+gut."]
+
+Block 208          Tom
+["Habt Dank, Nemos.^^hem, man sieht dem Samenkorn seine Macht nicht unbedingt
+an, findet ihr nicht auch?"]
+
+Block 209          Nemos
+[{INK 001}Wider Erwarten lacht Nemos auf.{INK 002}^^"Wartet nur ab! Der Baum,
+der aus einem normalen Samenkorn entsteht, wirkt auch beeindruckender als das,
+woraus er entstand.^^Nun ist es fr Euch an der Zeit, das Samenkorn seiner
+Bestimmung zuzufhren. Tom, ihr wollt Euch sicher berlegen, welche Eurer
+Gef„hrten, die Ihr auf Euren Reisen kennengelernt habt, Ihr fr dieses
+gef„hrliche Unternehmen mitnehmen wollt. Sucht Euch die passende Truppe
+zusammen, doch dann z”gert nicht l„nger.^^Wir setzen nun all' unsere
+Hoffnungen auf Euch und Eure Gef„hrten."]
+
+Block 210          Tom
+["Wir werden unser Bestes geben. Sobald ich das optimale Team
+zusammen|gestellt habe, werden wir nach Umajo-Kenta reisen, und von dort unter
+den Bergen hindurch in das Landegebiet der Toronto vorstoen.^^Joe und ich
+haben bereits damals, auf unserer Flucht, einen m”glichen Weg zum Eindringen
+in die Anlage gesehen."]
+
+Block 211          Joe
+["Es handelt sich um einen Seiteneinstieg in eine kleine Schleuse, die als
+Ausstieg fr die Sicherheits|kr„fte der Toronto gedacht ist."]
+
+Block 212          Tom
+["Dort werden wir versuchen, einzudringen. Bevor wir den Vorsto zum Reaktor
+unternehmen, werden wir eine Konsole manipulieren und Joe's Dokumentation
+einspeisen, um die Besatzung zu informieren und zu warnen. Die dadurch
+entstehende Unruhe drfte uns auerdem zugute kommen.^^Joe, die Doku ist doch
+fertig, oder?"]
+
+Block 213          Joe
+["Klar. Ich habe das Material so zusammengeschnitten, da das Wichtigste am
+Anfang erscheint. Auch wenn es die AI schafft, die šbertragung recht schnell
+abzubrechen, sollten die Informationen 'rberkommen.^^Hier..."]
+
+Block 214          
+[Joe bergibt ein Speichermedium mit der Dokumentation und einen kleinen Chip
+an die Gef„hrten.]
+
+Block 215          Joe
+["Der Chip sollte die Konsole, in die die Doku eingespeist wird, einige Zeit
+von der Kontrolle der AI isolieren.^^Gut, das war's von meiner Seite aus. Nur
+noch eines: Ich bin sicherlich kein guter K„mpfer oder beherrsche die
+Zaubertricks von den Leuten hier. Wenn Du willst, Tom, bin ich aber trotzdem
+dabei, denn ich kann an Bord der Toronto bestimmt einige gute Dienste leisten.
+šberleg's Dir."]
+
+Block 216          Tom
+["Danke, Joe. Ich denk' ber Dein Angebot nach.^^Und nun: Auf zur Toronto!"]
+
+Block 217
+[Alle Umstehenden wnschen Glck und Erfolg fr die Mission. Der Angriff auf
+die Toronto kann nun jederzeit begonnen werden!]

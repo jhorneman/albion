@@ -1,0 +1,56 @@
+; Nach Edelstein-Deal.
+;
+; Führer geht wieder. 
+; 
+; 
+
+show_map
+npc_lock 1
+npc_jump 1 123 213
+npc_turn 1 1
+update 5
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 0 -1
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8
+
+npc_move 1 1 0
+update 8

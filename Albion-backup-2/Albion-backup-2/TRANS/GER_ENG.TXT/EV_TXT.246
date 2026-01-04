@@ -1,0 +1,51 @@
+Herras (Ratsvorsitzender) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Meine Funktion ist es, den 'Rat der Gerechten' zu leiten und zu
+koordinieren."]
+
+Block 1         (Begrung)
+["Willkommen in Beloveno! Mein Name ist Herras, ich bin der Vorsitzende im
+'Rat der Gerechten'. Ich nehme an, Ihr kommt vorbei, um Euch als Besuch
+anzumelden. Gut, ich nehme das hiermit zur Kenntnis. Ich freue mich, da Ihr
+Beloveno besucht und wnsche Euch einen angenehmen Aufenthalt. Beloveno ist
+eine recht groe Stadt, und wenn Ihr auf der Suche nach Einkaufsm”glichkeiten
+seid, dann werdet Ihr hier eine Menge finden. Es gibt einen Waffen- und einen
+Rstungsh„ndler, einen Lebensmittelladen und einen Gemischtwarenladen, wir
+haben eine Heilerin, sie heit brigens Ramina, und es gibt eine nette Taverne
+mit dem Namen 'Zum offenen Zapfhahn'. Dort findet Ihr auch eine Herberge, wenn
+Ihr hier bernachten m”chtet. Und natrlich solltet Ihr mal den groen Hafen
+im Sden der Stadt besichtigen. Wenn Ihr irgendwelche Fragen oder Probleme
+habt, k”nnt Ihr Euch gerne an mich wenden. Natrlich bin ich manchmal sehr
+besch„ftigt, aber fr einen kleinen Plausch sollte ich eigentlich immer Zeit
+finden. Es gibt auch einige sehr interessante Dinge in der Umgebung. Da gibt
+es zun„chst das groe Gebirge, welches den Kontinent in eine Nord- und eine
+Sdseite teilt. Auf diesem Gebirge gibt es ein kleines D”rfchen mit dem Namen
+Kounos. Auf der Nordseite gibt es auerdem ein kleines Iskai-Dorf namens
+Srimalinar. Dort in der N„he befindet sich eine heilige St„tte, allerdings
+sind in letzter Zeit Gerchte im Umlauf, nach denen an diesem Ort immer mehr
+schreckliche Kreaturen gesichtet worden sind. Nun, dann wnsche ich Euch noch
+alles Gute auf Eurer Reise. Und kommt doch mal wieder
+vorbei!"{WORDBeloveno}{WORDFragen}{WORDGerchte}{WORDRathaus}]
+
+Block 2         (Beloveno)
+["So heit unsere Stadt hier."]
+
+Block 3         (Herras)
+["Das bin ich."]
+
+Block 4         (Fragen, Probleme)
+["Nun, das hat ja nicht lange gedauert. Ich kann Euch empfehlen, zun„chst
+einmal das n„here Umfeld zu erkunden. Bestimmt lernt Ihr dabei viele
+interessante Leute kennen."]
+
+Block 5         (St„tte, Gerchte)
+["Naja, ich bin mir noch nicht sicher, ob da etwas dran ist, aber ich habe
+geh”rt, da dort immer mehr schreckliche Wesen aus der St„tte kommen sollen.
+Geht dort aber besser nicht hin. Es gibt ein Tabu, das es Menschen untersagt,
+diesen Ort zu betreten, und auerdem ist das Heiligtum im Besitz der
+Iskai."{WORDTabu}{WORDIskai}]
+
+Block 6         (Rathaus)
+["Das Rathaus ist das sch”nste Geb„ude in Beloveno. Ihr drft Euch hier ruhig
+umschauen, es wird Euch niemand hindern."]

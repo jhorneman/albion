@@ -1,0 +1,462 @@
+Messer              
+Kurzdolch
+Dolch               
+Groáer Dolch
+Kurzschwert
+Schwert
+Zweih„nder
+Lughs Dolch         
+Danus Licht         
+Stich
+Zweistich
+Schweres Kurzschwert
+Verziertes Schwert  
+Wurfdolch
+Langschwert
+Kleine Axt
+Axt
+Streitaxt
+Kleine Streitaxt
+Groáe Streitaxt
+Doppelstreitaxt
+Streitkolben
+Streithammer
+Iskai-Messer
+Iskai-Dolch         
+Iskai-Stilett
+Iskai-Kurzschwert
+Groáes Iskai-Stilett
+Iskai-Schwert
+Groáer Iskai-S„bel  
+Iskai-Langschwert
+Iskai-Lanze
+Groáer Iskai-Dolch
+Iskai-Kurzstilett
+Bradirs Stilett     
+Groáes Iskai-Schwert
+Kleiner Bogen
+Bogen
+Langbogen
+Pfeil
+Langer Pfeil
+Mini-Bolzenschleuder
+Bolzenschleuder
+Bolzengewehr        
+Bolzen
+Giftbolzen
+Pistole             
+Kleiner Lederschild
+Lederschild
+Rundschild
+Groáer Schild
+Gerahmter Schild
+Metallschild
+Kleiner Iskai-Schild
+Iskai-Schild
+Groáer Iskai-Schild
+Lederkappe
+Beschlagene Kappe
+Metallhalbschale
+Metallhelm
+Iskai-Lederkappe
+Iskai-Metallkappe
+Iskai-Metallhelm
+Lederweste
+Lederrstung
+Beschlagenes Leder
+Leichtes Kettenhemd 
+Schweres Kettenhemd 
+Iskai-Brustschutz
+Iskai-Metallschutz
+Leichte Iskairstung
+Iskai-Rstung
+Schuhe
+Stiefel             
+Leere Flasche
+Grner Heiltrank    
+Trkisener Heiltrank
+Blauer Heiltrank
+Roter Trank
+Violetter Trank
+Blauer Trank
+J„gerclan-Schlssel 
+Trschlssel        
+Schlssel Ger„tem.  
+Trschlssel        
+Zellenschlssel     
+Truhenschlssel     
+Kerkerschlssel     
+Herras Schlssel    
+Trschlssel        
+Schlssel Tiermeist.
+Seil
+Stab der Schlange
+Stab des Kristalls
+Danus Halsreif      
+Eisring             
+Feuerring
+Ring der Wut        
+Ring der G”ttin
+Buch
+Fackel
+Fackel (brennend)
+Beh„lter
+Beh„lter
+Beh„lter
+Teller
+Kr„uter
+Kr„uter
+Backwerk
+Gewrz
+Beh„lter
+Dose
+Beh„lter
+Beh„lter
+Beh„lter
+Kchenmesser
+Beh„lter
+Flasche
+Flasche
+Buch
+Eábesteck
+Trinkbecher
+Buch
+Beh„lter
+Beh„lter
+Beh„lter
+Beh„lter
+Beh„lter
+Flasche
+Aromatische Wurzel
+Flasche
+Besch„digte Flasche
+Beh„lter
+Flasche
+Buch
+Kissen
+Teller
+Kochl”ffel
+Kr„uter
+Frchte
+Kalter Braten
+Flasche
+Flasche
+Eimer
+Tuch
+Handtuch
+Becher
+Fellbrste
+L”ffel
+Becher
+Schale
+Gewrz
+Frucht
+Kleine Beh„lter
+Eábesteck
+Teller
+Gabel
+Beh„lter
+Wurst
+Schinken
+L”ffel
+Zange
+Feile
+kleine Feile
+Durchstich
+Schraubenzieher
+Hammer
+Kleiner Hammer
+Flacher Hammer
+Spezialhammer
+Zange
+Kchenmesser
+Geb„ck
+Frchte
+Kl. Schraubenzieher
+Becher
+Metalls„ge
+Feines Werkzeug
+Schraubenschlssel
+Metallk„stchen
+Metallgebilde
+Drahtgebilde
+Metallschale
+Messingkugeln
+Phiole
+Phiolen
+Rote Phiole
+Hammer
+Schere
+Schale
+Schraubenschlssel
+Feine Schere
+Flasche             
+Fl„schen
+Schale mit Wasser
+Schale
+M”rser
+Vergr”áerungsglas
+Pinzette
+R„ucherwrste
+Tonschale
+Tonschale
+Gabel
+Tischmesser
+Teller
+L”ffel
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Eábesteck
+Krug
+Tonschale
+Trinkhorn
+Teller
+Tonkrug
+Kochl”ffel
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Eimer
+Kissen
+Schweres Kurzschwert
+Schwerer Dolch
+Metallteller
+Buch
+Ledergebundenes Buch
+Notizbl„tter
+Schreibstift        
+Buch
+Buch
+Eimer
+Eimer
+Gemse
+Metallbecher
+Geb„ck
+Kochl”ffel
+Glasbeh„lter
+Glasbeh„lter
+Groáer Glastopf
+Teller
+Teller
+Flasche
+Flasche
+Holzdose
+Groáe Glasdose
+Groáe Glasvase
+Tonbeh„lter
+Tonbeh„lter
+Tonbeh„lter
+Geflochtener Korb
+Iskai-Notizblock
+Zettel
+Iskai-Ringbuch
+Iskai-Ringblock
+Schreibstift
+Kurzer Schreibstift
+Hebel               
+Eimer mit Wasser    
+Monsterauge         
+Kompass             
+Uhr                 
+Spitzhacke          
+Regenbogenstab      
+Blauer Stab         
+Iskai-Zierdolch     
+Spezial-Schraubenz. 
+Blaue Codekarte     
+Rote Codekarte      
+Grne Codekarte     
+Trkisene Codekarte 
+Notizzettel         
+Trkis-Musikkristall
+Blauer Musikkristall
+Roter Musikkristall 
+Grner Musikkristall
+Purpur-Musikkristall
+Violet-Musikkristall
+Ocker-Musikkristall 
+Fleischbrocken      
+Axt                 
+Groáer Pfeil        
+Pfeil               
+Bolzengurt          
+Patrone             
+Dietrich            
+Stimdrink           
+Metallteller        
+Metallteller        
+Glas                
+Becher              
+Becher              
+Beh„lter            
+Beh„lter            
+Flasche             
+Flasche             
+Becher              
+Beh„lter            
+Beh„lter            
+Beh„lter            
+Kanne               
+Becher              
+Becher              
+Dose                
+Gef„á               
+Gef„á               
+Pfeffer und Salz    
+Soyasoáe            
+Topf                
+Kleine Dose         
+Topf                
+Schaufel            
+Spaten              
+Schraubenschlssel  
+Schraubenschlssel  
+Schraubenzieher     
+Handkonsole         
+PDA                 
+Schraubenzieher     
+Zange               
+Silberhalsreif      
+Goldhalsreif        
+Silberring          
+Ring mit Goldeinlage
+Goldring            
+Silberkette         
+Kette mit Goldemblem
+Goldkette           
+Edelsteinkette      
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Edelstein           
+Triifalai-Samenkorn 
+Glckskette         
+Diebesamulett       
+Flinkheits-Amulett  
+Schutz-Amulett      
+Amulett der Kraft   
+St„rkungsamulett    
+Poren”l             
+Duftwasser          
+Kristalldolch       
+Sonnendolch         
+Feuerklinge         
+Kamulos Blick       
+Frostbringer        
+Kristallwurfaxt     
+Helm mit Kristall   
+Helm "Lughs Hand"   
+Dokument            
+Dokumentteil        
+Dokumentteil        
+Traumschild         
+Lughs Schild        
+Warniak-Kugel       
+Krondir-Trii        
+Diamant             
+Tharnos Erlaubnis   
+Feuerball           
+Flammenbiá          
+Schattenschwert     
+Rotes Schwert       
+Kristallgriff-Dolch 
+Blauer Dolch        
+Schwarzstein-Helm   
+Weiáer Ring         
+Overall             
+Kleidung            
+Stein der Visionen  
+Wissen Metallmagie  
+"Das hohe Wissen"   
+Kenget-Zettel       
+DAS SAMENKORN       
+DAS SAMENKORN       
+Codezettel Teil 1   
+Codezettel Teil 2   
+Codezettel Teil 3   
+Kellerkarte         
+Videokamera         
+Speichermedium      
+Joes Chip           
+Leuchtstab          
+Leuchtstab          
+Amulett der G”ttin  
+Kleine Warniakkugel 
+Dji Cantos - Stein  
+Dornenschlinge      
+Hast                
+Lebenssicht         
+Antidot Gift        
+Antidot Verrckheit 
+Antidot Krankheit   
+Frostsplitter       
+Frostkristall       
+Frostlawine         
+Leichte Heilung     
+Blendfunke          
+Blendstrahl         
+Blendsturm          
+Schlafsporen        
+Dornenfalle         
+Falle entfernen     
+Heile L„hmung       
+Heile Rausch        
+Heile Blindheit     
+Heile Vergiftung    
+Verpilzung          
+Licht               
+Regeneration        
+Kartensicht         
+Lebensbringer       
+Teleport            
+Schneller Rckzug   
+Levitation          
+Stein               
+Zorn der G”ttin     
+Irritation          
+Erholung            
+Berserker           
+D„mon vertreiben    
+D„monen vertreiben  
+D„monenexodus       
+Kleiner Feuerball   
+Magischer Schild    
+Heilung             
+Prahlen             
+Schreck             
+Panik               
+Giftstein           
+Blitzschlag         
+Feuerregen          
+Blitzstrahl         
+Feuerhagel          
+Blitzsturm          
+Blitzfalle          
+Groáe Blitzfalle    
+Blitzmine           
+Groáe Blitzmine     
+Leben stehlen       
+Magie stehlen       
+Pers”nlicher Schutz 
+Kamulos Blick       
+Falle entfernen     
+Schockstab          
+Schwere Feuerwaffe  
+Iskai-Schuhwerk     
+Farbkarte           
+Schatzkarte         
+Mellthas Bl„tter    
+Mellthas Stift      
+Laser               

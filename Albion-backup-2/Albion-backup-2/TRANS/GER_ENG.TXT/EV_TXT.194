@@ -1,0 +1,63 @@
+194: Ned, Teil 1
+================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Ned, das AI-System der TORONTO."]
+
+Block 1         Begr. 1x / OFF
+[{INK 001}Dies ist der Androidenk”rper, der von Ned, dem AI-Rechnersystem der
+TORONTO, zur Kommunikation mit Menschen benutzt wird.^^{INK 002} "Guten Tag,
+Mister Driscoll. Kann ich Ihnen behilflich sein?" {BLOK010}"Hallo, „h, Ned.
+Wissen Sie etwas ber den Unfall, dem Inspektor Beegle zum Opfer fiel?"
+{BLOK011}"Ned, haben Sie noch irgendwelche genaueren Angaben, die meinen
+Vorausflug mit Dr. Hofstedt betreffen?" {BLOK012}"Laufen die
+Landevorbereitungen wie geplant?" {BLOK013}"Ich mu nun weiter, Ned."]
+
+
+Block 2         Antw. 1,10
+["Die Entladung, die bedauerlicherweise zu Mister Beegles Ableben gefhrt hat,
+mu w„hrend der over-c - Phase aufgetreten sein.^^ Leider ist mir nicht
+bekannt, warum Mister Beegle ausgerechnet zu diesem Zeitpunkt die Comanlage in
+Betrieb setzen wollte. Seine pers”nliche Beziehung zu den brigen
+Crewmitgliedern war nicht ausgesprochen tiefgehend, so da niemand ber seine
+Motive Auskunft zu geben vermochte.^^Es tut mir leid, nicht mehr Licht in
+diese Angelegenheit bringen zu k”nnen, denn der Tod eines Regierungsbeamten,
+auch wenn es zweifelsfrei ein Unfall war, wirft ein schlechtes Licht auf
+unsere Firma."]
+
+Block 3         Antw. 1,11
+["Der ideale Abflugzeitpunkt wird gerade ermittelt, Mister Driscoll. Sie
+werden durch eine Durchsage rechtzeitig in Kenntnis gesetzt. Die
+Abtastinstrumente best„tigen bislang die Daten der Sonde durchgehend.^^Sie
+k”nnen erwarten, auf eine leblose Wstenwelt ohne gr”ere atmosph„rische
+Turbulenzen zu stoen. Es wird sich bei Ihrem Flug mit groer
+Wahrschein|lichkeit um eine reibungslose Routinean|gelegenheit handeln."]
+
+Block 4         Antw. 1,12
+["Ich bin erfreut, mitteilen zu k”nnen, da alle Systeme mit einer Fehlerquote
+laufen, die alle bisherigen Flge von DDT-Raumfahrzeugen um das Fnffache
+unterschreiten. Anders ausgedrckt: Alles l„uft wie am Schnrchen, Mister
+Driscoll."]
+
+Block 5
+["Wie Sie aus den Durchsagen entnehmen k”nnen, ist alles fr den Start bereit.
+Sie brauchen sich nur zu melden, wenn Sie eine Durchsage h”ren."]
+
+Block 6
+["Auf Wiedersehen, Mr. Driscoll."]

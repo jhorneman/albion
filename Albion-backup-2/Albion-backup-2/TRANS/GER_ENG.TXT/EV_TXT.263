@@ -1,0 +1,48 @@
+Edjirr (Iskai-Kneipenwirt) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin der Kneipenwirt hier. Habt Ihr schon meinen Sugo probiert?
+Der ist wirklich gut, Leute."]
+
+Block 1         (Begrung)
+["Kommt n„her, Skeima Din! Ich h„tte da eine Information fr Euch. Seid Ihr
+daran interessiert?{BLOK012}"Nein, danke."{BLOK013}"Kommt darauf
+an."{BLOK014}"Auf jeden Fall."{WORDInformation}]
+
+Block 2         (Resp. 1)
+["Na dann nicht. M”chtet Ihr Rationen kaufen?"{BLOK010}"Ja,
+gerne."{BLOK011}"Nein, danke."] -> Verkaufen
+
+Block 3         (Resp. 2)
+["Das drfte Euch interessieren. Es geht um den Rat in
+Beloveno."{BLOK015}"Warum sollte uns das interessieren?"{BLOK016}"Wir w„ren
+schon interessiert."]
+
+Block 4         (Resp. 3, Resp. 2 von 3, Information)
+["Fr die Information h„tte ich allerdings gerne eine Gegenleistung... An
+baren Goldmnzen w„re ich durchaus interessiert."]
+
+Block 5         (Resp. 1 von 3)
+["Ihr k”nntet diese Information vielleicht zu Eurem Nutzen verwenden."]
+
+Block 6         (Begrung wenn Informtion gegeben wurde.)
+["Ich gre Euch. Macht es Euch gemtlich. M”chtet Ihr etwas
+trinken?"{BLOK010}"Ja, gerne."{BLOK011}"Nein, danke."] -> Verkaufen
+
+Block 7         (Edjirr)
+["Ich bin Edjirr."]
+
+Block 8         (Information wenn Geld bezahlt)
+["Aus zuverl„ssiger Quelle habe ich erfahren, da im 'Rat der Gerechten' in
+Beloveno ein Komplott geschmiedet wird. Es ist geplant, den Ratsvorsitzenden
+zu ermorden. Es gibt jemanden, der sehr viel Einflu auf den Rat hat. Ich wei
+selbst auch nicht, wer das ist. Jedenfalls l„t sich sein Einflu wohl besser
+ohne Herras verwirklichen.^^Natrlich kann ich Euch keine Garantie geben, da
+dies alles wahr ist.^^Ach ja, redet mit Arrim, der im Haus der Erntearbeiter
+wohnt. Von ihm kann man ebenfalls sehr wichtige Dinge erfahren."]
+
+Block 9            (Requester fr Gold)
+["Seid Ihr bereit, dafr 80 Goldmnzen zu bezahlen?"]
+
+Block 10
+["Bietet nichts an, was Ihr nicht habt!"]

@@ -1,0 +1,101 @@
+; **** Script 47: Versammlung 1 in Cantos Haus
+
+; NPCs plazieren
+npc_lock 0
+npc_jump 0 77 15
+npc_turn 0 2
+
+npc_lock 2 
+npc_jump 2 79 16
+npc_turn 2 2
+
+npc_lock 3
+npc_jump 3 81 18 
+npc_turn 3 3
+
+npc_lock 4
+npc_jump 4 77 22
+npc_turn 4 0
+
+npc_lock 5
+npc_jump 5 79 20
+npc_turn 5 3
+
+npc_lock 9
+npc_jump 9 82 21 
+npc_turn 9 3
+
+camera_lock
+camera_move 64 -64
+update 1
+
+fill_screen 0
+fade_from_black
+text 121
+fade_to_black
+show_map
+update 4
+fade_from_black
+update 10
+
+npc_text 21 122
+update 10
+npc_move 0 0 1
+update 10
+npc_text 14 123
+npc_text 21 124
+update 10
+npc_move 3 -1 0
+update 10
+npc_text 17 125
+npc_text 21 127
+update 10
+npc_move 2 0 1
+update 10
+npc_text 16 128
+npc_text 21 129
+update 10
+npc_move 9 -1 0
+update 10
+npc_text 25 130
+npc_text 21 131
+party_member_text 2 132
+npc_text 14 133
+npc_text 21 134
+party_member_text 1 135
+npc_text 21 136
+party_member_text 1 137
+npc_text 21 138
+party_member_text 1 140
+npc_text 21 141
+party_member_text 2 142
+party_member_text 1 143
+npc_text 25 144
+
+; Harriet tritt Party bei
+npc_move 9 -1 0
+update 4
+npc_move 9 -1 0
+update 4
+npc_move 9 -1 0
+update 4
+fade_to_black
+do_event_chain 6
+fill_screen 0
+fade_from_black
+text 145
+fade_to_black
+show_map
+;camera_lock
+;camera_move 64 -64
+npc_off 9
+update 4
+fade_from_black
+
+npc_text 21 146
+party_member_text 2 147
+npc_text 21 148
+update 40
+text 149
+
+

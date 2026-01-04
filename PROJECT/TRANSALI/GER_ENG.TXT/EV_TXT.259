@@ -1,0 +1,41 @@
+Arrim (Iskai-Brger) / Phase 5
+
+Block 0         (FAQs)
+[{BLOK000}"Ich baue H„user aus Pflanzen, wie Ihr hier bestimmt schon mehrere
+davon gesehen habt."]
+
+Block 1         (Begrung)
+["Menschen??? Ihr traut Euch noch hier her? Pat gut auf Euch auf, wir haben
+in diesen Tagen nicht die beste Meinung von Euch!"{WORDMeinung}]
+
+Block 2         (Meinung)
+["Wir h”ren nur Schlechtes ber die Menschen. Wundert Euch das etwa? Was
+wrdet Ihr denn sagen, wenn man Euch Euer Wertvollstes nimmt. Und dann auch
+noch auf eine schandvolle Art und Weise. Mit Kriegern haben sie den ganzen Ort
+umstellt und, ich wei es nicht, vielleicht sind sie schon in unser Heiligtum
+eingebrochen und haben es entweiht. Dabei kommen diese Wesen woanders her,
+soviel ist sicher. Ihr irrt Euch! Aber wir werden uns wehren. Das nehmen wir
+nicht so einfach hin. Und wenn es einen Krieg bedeutet! Wundert Euch nicht,
+wenn Ihr hier keine Waren mehr erhaltet. Wir untersttzen unsere Feinde
+schlielich nicht auch noch."{WORDMenschen}
+{WORDHeiligtum}{WORDTabu}{WORDWesen}]
+
+Block 3         (Menschen)
+["In Eurer Gruppe sind nun einmal Menschen dabei!"]
+
+Block 4         (Heiligtum)
+["Wir werden es verteidigen, soviel steht fest!"]
+
+Block 5         (Tabu)
+["Dieses Tabu gibt es schon, solange ich zurckdenken kann. Das hat
+historische Grnde, die ich Euch jetzt aber nicht erkl„ren m”chte. Und Kontos
+und seine Anh„nger aus Kounos haben es gebrochen!"]
+
+Block 7         (Arrim)
+["Ja?"]
+
+Block 8         (Wesen)
+["Wir wissen alle nicht, woher diese Wesen kommen. Sie scheinen magischen
+Ursprungs zu sein und die meisten davon trifft man ganz in der N„he unseres
+Heiligtums. Wir haben aber noch nie erlebt, da sie AUS unserem Heiligtum
+kommen."]

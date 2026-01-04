@@ -1,0 +1,152 @@
+Kontos (Druide, fhrt Kounos an, wohnt in seinem Keller) / Phase 4
+
+Block 0         (FAQs)
+[{BLOK000}"Ich m”chte nicht prahlen, aber mittlerweile bin ich der am meisten
+respektierte und f„higste Magier in der Umgebung. Desweiteren habe ich mich
+schon seit vielen Jahren mit religi”sen Theorien besch„ftigt... aber wozu
+erz„hle ich Euch das, sicher seid Ihr absolut nicht auf dem neuesten Stand der
+wissenschaftlichen Erkenntnisse."]
+
+Block 1         (Begrung)
+["Ich habe geh”rt, Ihr wart beim 'Rat der Gerechten'?"{WORDRat}{WORDProbleme}]
+
+Block 2         (Begrung 2)
+["Ihr seid wohl nie zufrieden, was? Naja, in Anbetracht der drohenden Gefahr,
+kann ich es sogar noch nachvollziehen, da Ihr schon v”llig panisch und
+ver„ngstigt seid."{WORDRat}{WORDProbleme}]
+
+Block 3         (Rat)
+["Der 'Rat der Gerechten' von Beloveno ist einfach l„cherlich. Dort wird
+geredet, aber nicht gehandelt. Wir hingegen handeln!"{BLOK010}"Wir glauben,
+da Ihr im Rat Verbndete habt."{BLOK011}"Wir sind da anderer
+Meinung."{BLOK012}"Das ist auch unsere Ansicht."]
+
+Block 4         (Resp. 1)
+["Verbndete? Das ist doch Bl”dsinn! Ich wrde es begren, wenn sich Beloveno
+und sein Rat in vielen Beziehungen kooperativer zeigen wrden, aber leider ist
+das nicht der Fall! Ihr drft nicht alles glauben, was Euch die Leute
+erz„hlen. Ich habe Feinde, sicher. Es gibt viele Eiferschtige, die mich wegen
+meines Erfolges und meines Ansehens beneiden und mir schaden wollen. Aber Ihr
+seid intelligent und werdet ganz sicher unterscheiden k”nnen, was Gerede ist
+und was nicht."]
+
+Block 5         (Resp. 2)
+["Ach, was seid Ihr schon anderes, als ein Haufen sturer Dicksch„del, die
+nicht wissen, wo Ihr Platz in der Welt ist!"{BLOK013}"Denkt von uns, was Ihr
+wollt."{BLOK014}"Wenn Ihr das nochmal wiederholt, dann..."]
+
+Block 6         (Resp. 3)
+["Ich wute, da Ihr schlielich doch verstehen wrdet, um was es geht. Nicht
+jeder vollbringt diesen Schritt in seinem Leben."]
+
+Block 7         (Resp. 1 aus 5)
+["Ihr entt„uscht mich. Aber was kann ich schon erwarten, von einer
+zusammengewrfelten Reisegruppe."]
+
+Block 8         (Resp. 2 aus 5)
+["Dann??? Was bitte ist denn dann?"{BLOK015}"Oooch, wir meinen, da wir dann
+langsam weiter mssen..."{BLOK016}"Dann wird Euch Euer Gehabe leid tun!"]
+
+Block 9         (Resp. 1 aus 8)
+["Dann schert Euch raus hier. Ich habe Euch von Anfang an gesagt, da ich
+besch„ftigt bin und keine Zeit fr Euch habe."]
+
+Block 10        (Resp. 2 aus 8)
+["Ihr wollt mir drohen? Seht Euch vor, ich bin nicht zimperlich, wenn es darum
+geht, die Wachen zu rufen."{BLOK017}"Davon sind wir berzeugt."{BLOK018}"Wir
+haben es nicht n”tig, mit Dir zu streiten!"]
+
+Block 11        (Resp. 1+2 aus 10)
+["Ich habe genug von Euch, schert Euch raus hier!"]
+
+Block 12        (Resp. 3 von 10)
+["Ihr werdet mich kennenlernen.... WAAAACHEN! WAAACHEN!"] -> Kampf!
+
+Block 13        (Probleme)
+["Wenn Ihr schon danach fragt, ja, warum sollte ich Euch eigentlich nicht
+davon erz„hlen? Es gibt wirklich etwas gef„hrliches im Norden des Kontinents,
+ganz in der N„he des Iskai-Dorfes Srimalinar. Dort gibt es einen Keller, den
+die Iskai schon seit Generationen als Ihren Besitz und Heiligtum betrachten.
+Sie halten dort regelm„ig religi”se Zeremonien ab und haben ber den Ort und
+dessen Umgebung ein Tabu verh„ngt. Dieses Tabu wurde auch von allen strikt
+beachtet. Das war nun die offizielle Version und das ist auch das, was die
+meisten Menschen von dem Ort wirklich glauben. Aber es ist nicht die Wahrheit!
+Die Menschen sind leichtgl„ubig und sie glauben gerne an das, was sie m”chten.
+Und so kam berhaupt niemand auf den Gedanken, nachzuforschen, was nun
+wirklich das Geheimnis dieses Ortes ist...^Nun, ich habe es getan! Die
+Wahrheit ist, da hier Iskai unter dem Deckmantel einer 'Heiligen St„tte' seit
+langer Zeit auf der Suche nach m„chtiger, schwarzer Magie sind. Sie
+experimentieren dort mit neuen Kr„ften, an die selbst ich mich nicht
+heranwagen wrde. Ich brauche wohl nicht zu erw„hnen, welche Gefahren so ein
+Unternehmen in sich birgt und wie leicht so etwas auer Kontrolle geraten
+kann, ganz besonders dann, wenn Laien-Magier sich an Kr„fte heranwagen, die
+einige Klassen zu gro fr sie sind!^^Aber sie haben es trotzdem getan, und
+die Folgen sind nur allzu offensichtlich: Die Kr„fte, die sie gerufen haben,
+sind berm„chtig geworden. Es ist eine v”llig unkontrollierte Situation
+entstanden, und die vielen schrecklichen Kreaturen, die man mittlerweile in
+der N„he der St„tte antrifft, sind nur das erste Anzeichen fr die st„ndig
+wachsende Gefahr, die von diesem Ort ausgeht. Langfristig mssen wir etwas
+dagegen unternehmen! Und wenn auch der Rat von Beloveno noch keine
+Notwendigkeit sieht, hier einzugreifen, so werden zumindest wir in Kounos
+nicht tatenlos
+zusehen."{WORDGlaube}{WORDTabu}{WORDMagie}{WORDKounos}{WORDGefahr}]
+
+Block 14        (Glaube(n), Sinn, Religion)
+["Ich denke nicht, da Ihr die Grundzge unserer gesamten Religion in wenigen
+Minuten begreifen werdet und m”chte sie daher nur umreien: Die Fhrung durch
+unseren obersten Herrn und der stetige Aufstieg unserer Kultur sind die
+wichtigsten Merkmale unserer Religion."{WORDReligion}]
+
+Block 15        (Magie)
+["Es ist gef„hrlich, die Geheimnisse der Magie Fremden anzuvertrauen. Ich
+werde Euch diesbezglich auch keine weiteren Ausknfte erteilen, obgleich ich
+mich selbst als einen der kompetentesten Lehrer fr magische F„higkeiten
+halte. Ich h„tte, nebenbei bemerkt, natrlich auch nicht die Zeit, Euch
+Magie-Unterricht zu erteilen. Ich denke, Ihr seid auch nicht deshalb gekommen."]
+
+Block 16        (Kounos)
+["Nun, vielleicht habt Ihr schon bemerkt, da wir hier noch einen recht
+traditionellen Lebensstil haben. Das ist gut so, denn so k”nnen wir uns auf
+unsere Religion und die wichtigen Dinge des Lebens konzentrieren."]
+
+Block 17        (Gefahr)
+["Habe ich Euch nicht schon erz„hlt, was wir fr Probleme
+haben?"{BLOK020}"Doch, habt Ihr."{BLOK021}"Wir meinen nicht."]
+
+!!! Wenn Block 21, dann mu Textblock 13 angezeigt werden. Dann gehts weiter 
+mit Block 18.
+
+Block 18        (Fortsetzung)
+["Nunja, inzwischen ist das Problem so gro, da wir unbedingt dagegen angehen
+mssen. Meine Stammesbrder sind mit mir einer Meinung und stehen voll hinter
+meinem Plan."{WORDPlan}]
+
+Block 19        (Plan)
+["Wir werden tun, was getan werden mu! Wir werden das Heiligtum besetzen und
+so verhindern, da die Iskai durch Ihre Gebetsst„tte noch gr”eren Schaden
+anrichten k”nnen. Vielleicht werden wir die Magie-Werkstatt vernichten mssen,
+das wird sich aber erst vor Ort entscheiden."{BLOK022}"Aber das Tabu?"]
+
+Block 20        (Fortsetzung)
+["Das Tabu werden wir natrlich ignorieren. Beloveno kann froh sein, da wir
+ihnen diese Drecksarbeit abnehmen. Wir werden die St„tte besetzen, und zwar so
+bald wie m”glich. Das mu einfach getan werden!"{BLOK023}"Bedeutet das nicht
+einen Krieg zwischen den Iskai und den Menschen?"]
+
+Block 21        (Fortsetzung)
+["H”rt, ich wiederhole mich nur ungern. Wir mssen das Land retten, bevor die
+schrecklichen Wesen die šbermacht gewinnen! Und das mu so bald wie m”glich
+geschehen, denn mit jeder Stunde wird die feindliche Macht gr”er!"]
+
+Block 22        (Kontos)
+["Was glaubt Ihr, wen Ihr vor Euch habt?"]
+
+Block 23            (Beweisdoku)
+["Damit habe ich nichts zu tun. Was wollt Ihr damit? Werft es fort - es ist
+eine wertlose F„lschung."]
+
+Block 24            (Fetzen)
+["Das ist ein Fetzen eines Dokuments. Was soll ich damit? Was wollt Ihr
+damit? Es ist ohne den anderen Teil sowiso nicht zu gebrauchen."]
+
+

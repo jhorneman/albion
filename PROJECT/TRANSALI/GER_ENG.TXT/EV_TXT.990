@@ -1,0 +1,70 @@
+
+Siobhan - Dialogstamm zum Partymitglied Nr. 10
+==========================================================================
+
+Block 0
+[!]
+
+Block 1            (Anfrage von Tom)
+["Tom, um was geht es?" {BLOK010}"Was hast Du bisher alles so gemacht?"
+{BLOK011}"Kommst Du aus Beloveno?" {BLOK012}"M”chtest Du immer nur
+umherreisen?" {BLOK013}"Es w„re mir lieber, wenn Du wieder Deine eigenen Wege
+gehen wrdest." {BLOK014}"Gef„llt es Dir bei uns?" {BLOK019}"Danke, das reicht
+mir zun„chst einmal."]
+
+Block 2            (Anfrage von Tom)
+["M”chtest Du noch etwas anderes wissen?" {BLOK010}"Was hast Du bisher alles
+so gemacht?" {BLOK011}"Kommst Du aus Beloveno?" {BLOK012}"M”chtest Du immer
+nur umherreisen?" {BLOK013}"Es w„re mir lieber, wenn Du wieder Deine eigenen
+Wege gehen wrdest." {BLOK014}"Gef„llt es Dir bei uns?" {BLOK019}"Danke, das
+reicht mir zun„chst einmal."]
+
+Block 3            (1,10+2,10)
+["Also wenn Du etwas ber meine Ausbildung wissen m”chtest: Ich habe bei
+Garadd eine klassische K„mpfer-Ausbildung mitgemacht. Dort habe ich die jungen
+Jahre meines Lebens verbracht und viel gelernt. Danach bin ich eine ganze Zeit
+lang mit meinem Vater mitgezogen. Wenn Jagdzeit ist, reist er oft eine halbe
+Ewigkeit herum, um Vorr„te anzuschaffen. Und schlielich bin ich ganz alleine
+losgezogen. Ich habe gelernt, selbst fr mich zu sorgen, und viele neue
+Erfahrungen gesammelt. Ich lernte neue Menschen und andere Rassen kennen; neue
+St„dte und D”rfer und fremde Kulturen. Aber ich mu zugeben, da ich Maini, so
+heit unser Kontinent, in dieser ganzen Zeit nicht verlassen habe. Und nun bin
+ich bei Euch."{BLOK010}"Wer ist Garadd?"]
+
+Block 4            (1,11+2,11)
+["Ja, ich bin in Beloveno geboren und aufgewachsen. Mir gef„llt es dort auch
+gut, aber ich m”chte im Leben mehr sehen, als nur meine Heimatstadt."]
+
+Block 5            (1,12+2,12)
+["Darber habe ich noch nicht so genau nachgedacht. Wer wei, wie sich alles
+entwickelt, wenn ich „lter werde. Aber im Moment m”chte ich daran nicht
+denken, und ich bin auch viel zu unternehmungslustig, um einen normalen Beruf
+zu haben. Ich kann mir auch nicht vorstellen, immer an einem Ort zu leben,
+aber wie gesagt, das kann sich alles mit der Zeit „ndern."]
+
+Block 6            (1,13+2,13)
+["Ich kann verstehen, wenn ich Euch nicht hilfreich genug bin. Ich bin darber
+auch nicht b”se. Schlielich habe ich von Anfang an nie behauptet, die beste
+K„mpferin zu sein.^^Ich werde wahrscheinlich erst mal wieder nach Beloveno
+zurckkehren. Vielleicht treffen wir uns ja mal wieder. Auf jeden Fall wnsche
+ich Euch noch alles Gute. Auerdem hat es mir gefallen, mit Euch zu reisen,
+das wollte ich auch einmal betonen.^^Skeima Din!"]
+
+Block 7            (1,14+2,14)
+["Es gef„llt mir bisher gut, ich kann nicht klagen."]
+
+Block 8            (3,10)
+["Mein alter Lehrer? Er ist ausgezeichnet, ich kann ihn nur weiterempfehlen.
+Seine Spezialit„t sind kritische Treffer. Was nur die wenigsten wissen:^^Er
+gibt nach wie vor Unterricht. Wer Interesse hat, kann ihn jeden Morgen
+zwischen 8 und 9 Uhr in Kounos in der Kneipe treffen. Und am besten gleich
+einen ganzen Haufen Goldmnzen mitnehmen. Er verlangt v”llig bertriebene
+Preise und l„t nicht mit sich handeln."]
+
+Block 9            (Entlassen nicht m”glich)
+["Ich glaube, ich bleibe im Moment besser bei Euch. Ich habe n„mlich keine
+Ahnung, wie ich jetzt wieder nach Beloveno zurckkomme."]
+
+Block 10           (Sicherheitsabfrage)
+["M”chtet Ihr wirklich, da ich gehe?"]
+

@@ -1,0 +1,42 @@
+
+Textfile fr den Wstendurchgang
+---------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Diese Steins„ulen sperren einen Teil der H”hle ab. Sie sehen por”s aus.
+Zwischen den S„ulen kann man in einen Gang schauen und sieht, da es dort noch
+weitergeht.]
+
+Block 2
+[Von Futritten und Faustschl„gen lassen sich diese groen S„ulen leider nicht
+beeindrucken. {LEAD}{NAME}s Hand hat sich davon wesentlich mehr beeindrucken
+lassen. Sie tut jetzt n„mlich weh!]
+
+Block 3
+[Diese S„ule ist wohl zu hart. Sie l„t sich mit dem Werkzeug kaum bearbeiten.]
+
+Block 4
+[Mit diesem Gegenstand kann die Steins„ule nicht wirkungs|voll bear|bei|tet
+werden.]
+
+Block 5
+["Was fr ein Schlag!^^Ich glaube, wir k”nnen hier durchkriechen, wenn wir uns
+etwas dnn machen."]
+
+Block 6
+[Die Steins„ule ist eingestrzt. Auf dem Boden ist noch ein groer Stumpf und
+von der Decke h„ngt ein stalaktit„hnliches Objekt. Alles ist mit Sand und
+Steinen bedeckt. Aber der Durchgang ist etwas gr”er geworden. Mit Mhe kann
+man sich dort vielleicht durchzw„ngen.]
+
+Block 7
+[Eine Truhe.]
+
+Block 8
+[Die Truhe ist nicht verschlossen. Wer sie hier wohl abgestellt hat?]
+
+Block 9
+[Diese Tre fhrt zu einem Felsportal.]

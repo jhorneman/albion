@@ -1,0 +1,255 @@
+; ***Script 8: Giria kommt vom Sebai und führt Party zu ihm
+
+show_map
+
+;Wrinn positionieren
+npc_on 0
+npc_lock 0
+npc_jump 0 30 12
+npc_turn 0 2
+
+;Giria läuft zur Party
+npc_lock 3
+npc_on 3
+npc_jump 3 27 27
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+
+;Giria sagt Text, läuft zu Wrinn, Party folgt
+npc_text 103 158
+party_member_text 1 159
+
+npc_move 3 -1 0
+party_move -1 0
+update 4
+
+npc_move 3 -1 0
+party_move -1 0
+update 4
+
+npc_move 3 -1 0
+party_move -1 0
+update 4
+
+npc_move 3 -1 0
+party_move -1 0
+update 4
+
+npc_move 3 0 -1
+update 4
+
+party_move -1 0
+update 4
+
+npc_move 3 0 -1
+party_move -1 0
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+party_member_text 1 160
+party_member_text 2 161
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 1 0
+
+party_move 0 -1
+update 4
+
+npc_move 3 1 0
+party_move 1 0
+update 4
+
+npc_move 3 1 0
+party_move 1 0
+update 4
+
+npc_move 3 0 -1
+
+party_move 1 0
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 0 -1
+party_move 0 -1
+update 4
+
+npc_move 3 1 0
+
+party_move 0 -1
+update 4
+
+
+;Giria spricht und verläßt den Raum
+
+npc_turn 3 3
+update 1
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+pause 30
+npc_text 103 162
+
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_unlock 3
+
+npc_on 1

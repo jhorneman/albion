@@ -1,0 +1,241 @@
+ 
+Map-Textfile 
+------------------------------------------------------------------ 
+ 
+Block 0 
+[-frei-] 
+ 
+Block 1 
+[Gr„ser.] 
+ 
+Block 2 
+[Steine.] 
+ 
+Block 3 
+[Niedrige Bodengew„chse.] 
+ 
+Block 4 
+[Kleine ste und Wurzeln.] 
+ 
+Block 5 
+[Schilfgr„ser.] 
+ 
+Block 6 
+[Ein kleiner Obstbaum.] 
+ 
+Block 7 
+[Ein Kugelbaum.] 
+ 
+Block 8 
+[Ein Laubbaum.] 
+ 
+Block 9 
+[Eine Stromschnelle.] 
+ 
+Block 10 
+[Ein Wasserstrudel.] 
+ 
+Block 11 
+[Eine Wasserpflanze.] 
+ 
+Block 12 
+[Das Wasser ist sehr tief und die Str”mung scheint stark zu sein.] 
+ 
+Block 13 
+[Wasserpflanzentriebe.] 
+ 
+Block 14 
+[Eine blhende Pflanze.] 
+ 
+Block 15 
+[Ein Schirmbaum.] 
+ 
+Block 16 
+[Diese Pflanze leuchtet in faszinierenden Farbt”nen.] 
+ 
+Block 17 
+[Gemse.] 
+ 
+Block 18 
+[Ein Felsblock.] 
+ 
+Block 19 
+[An dieser Stelle ist das Wasser sehr flach und klar, so da man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Str”mung.] 
+ 
+Block 20 
+[Ein Obstbaum.] 
+ 
+Block 21 
+[Ein Zaun.] 
+ 
+Block 22 
+[Eine Stengelpflanze.] 
+ 
+Block 23 
+[Eine Schlinggraspflanze.] 
+ 
+Block 24 
+[Ein Busch.] 
+ 
+Block 25 
+[Eine grobl„ttrige Pflanze.] 
+ 
+Block 26 
+[Ein Wasserfall.] 
+ 
+Block 27 
+[Ein Felsvorsprung.] 
+ 
+Block 28 
+[Eine Pflanze, die auf den Felsen w„chst.] 
+ 
+Block 29 
+[Diese Schlingpflanze hat sich mit Tausenden von Wurzeln in der unregelm„igen
+Felsstruktur verankert. Sie macht einen sehr stabilen Eindruck und durch ihre
+mannigfaltige Ver„stelungen bietet sie zahlreiche M”glichkeiten, an denen man
+sich festhalten kann.] 
+ 
+Block 30 
+[Eine Holzbrcke.] 
+ 
+Block 31 
+[Getreidefelder.] 
+ 
+Block 32 
+[Pilze.] 
+ 
+Block 33 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 34 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 35 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 36 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 37 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 38 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 39 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 40 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 41 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 42 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 43 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 44 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 45 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 46 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 47 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 48 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 49 
+[Der kr„ftig gebaute Mann schaut {LEAD}{NAME} nur mit einem finsteren Blick
+an, ohne etwas zu erwidern.] 
+ 
+Block 50 
+[{INK 001}Der rechte W„chter wirft {LEAD}{NAME} einen scharfen Blick zu, als
+{HE } versucht, das Tor zu untersuchen. Er sagt:^^{INK 002} "Fremde, ihr
+wandelt auf gef„hrlichen Pfaden. Ihr seid sicher nicht des Lebens mde, da
+ihr Euch Zugang zu den Kenget Kamulos verschaffen wollt, ohne uns zu beachten,
+nicht wahr?"] 
+ 
+Block 51 
+[Kaum sichtbar, befinden sich hier feine Spalten im Fels.^^Alle
+™ffnungs|versuche bleiben jedoch vergeblich: Hier ist kein Zugang zu ”ffnen.] 
+ 
+Block 52           Tom 
+["Mein Gott. Wir haben berlebt!"] 
+ 
+Block 53 
+[Ersch”pft lassen sich die Gef„hrten an Ort uns Stelle zur Rast nieder, um
+sich ein wenig zu erholen.] 
+ 
+Block 54 
+["Khunagh, wir mssen ber das, was bei den Kenget Kamulos vorgefallen ist,
+sprechen.^^Du hast uns als Werkzeug fr Deine Rache benutzt und unser aller
+Leben auf Spiel gesetzt."] 
+ 
+Block 55 
+["Ich werde mich nicht fr das Vorgefallene entschuldigen. Arghagh, der Cuain
+vor dem Schwein von Cairnain, war der einzige Mensch, den ich je geliebt habe.
+Der einzigen Zeit in meinem Leben, in der ich glcklich war, hat Cairnain ein
+Ende gesetzt. Sein Tod hat meinem Leben einen Rest von Erfllung gegeben.^^Ihr
+wutet, da ich mich Euch aus meinen eigenen Motivationen heraus angeschlossen
+habe.^^Mein einziges Zugest„ndnis an das Vorgefallene ist es, Dir weiter meine
+Dienste als K„mpfer zur Verfgung zu stellen. Wenn Du meinst, auf meine
+Talente verzichten zu k”nnen, werde ich gehen. La' uns nun Klarheit schaffen.
+Wie lautet Deine Entscheidung?"] 
+ 
+Block 56 
+[Soll Khunag die Gruppe verlassen?] 
+ 
+Block 57 
+["Ich kann nicht zusammen mit jemanden weitermachen, der das Leben seiner
+Gef„hrten fr seine pers”nlichen Zwecke zu opfern bereit ist.^^Ich m”chte, da
+Du uns verl„t, Khunag."] 
+ 
+Block 58 
+["Es f„llt mir schwer, Deine Motivationen zu verstehen, Khunag.^^Sicher ist
+jedoch, da wir Deine F„higkeiten im Kampf noch dringend brauchen werden.^^Du
+kannst bleiben. Hintergehe uns jedoch nicht noch einmal."] 
+ 
+Block 59 
+["Wie Du wnscht. Lebt wohl."] 
+ 
+Block 60 
+["Meine Rache ist erfllt. Ich stelle mich in den Dienst Deiner Aufgabe, bis
+ich einen neuen Inhalt im Leben gefunden habe."] 
+ 
+Block 61 
+[Hier ist ein augenf”rmiges Symbol in den Felsen eingelassen.] 
+ 
+Block 62 
+["Diese Felssymbole existieren schon seit sehr langer Zeit. Man findet sie an
+manchen Orten auf dem ganzen Planeten, aber niemand wei etwas genaues ber
+ihren Ursprung."] 
+ 
+Block 63 
+[{LEAD}{NAME} legt das Amulett mit dem Symbol der G”ttin an den
+Felsen.^^Knirschend ”ffnet sich ein Portal und die Gef„hrten betreten die
+H”hle dahinter.] 
+ 
+Block 64 
+["Um den Eingang der H”hle zu ”ffnen, kann ich das Amulett der G”ttin
+benutzen, das ich bei mir trage."]
+
+Block 65
+["Dies ist also der Eingang zur Heimat der Kenget Kamulos.^^Ich denke, bevor
+wir uns an einen Ort wie diesen begeben, sollten wir jemanden dabei haben, der
+sich dort drin auskennt.^^Gibt es in Beloveno nicht diesen Khunag? Es heit
+ja, da er einstmals ein Mitglied dieses Kultes war.^^Lat ihn uns fragen, ob
+er uns dort hinein begleitet."]
+
+Block 66
+[Ein kleiner Busch mit Samen|k”rnern.]
+

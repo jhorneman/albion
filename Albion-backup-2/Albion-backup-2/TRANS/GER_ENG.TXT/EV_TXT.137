@@ -1,0 +1,48 @@
+NPC 137: Rabir, Passant
+=======================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin HÑndler und im Auftrage Wanias unterwegs."{WORDWania}]
+
+Block 1         BegrÅûung 1.mal
+["Dsarii-ma! Ihr seid also die Menschen, von denen ich gehîrt habe!"
+{WORDMenschen}]
+
+Block 2         Begr. 2.mal
+["Dsarii-ma. So treffen wir uns also einmal wieder."{WORDWaren}]
+
+
+Block 3         "HéNDLER, WANIA"
+["Ich kaufe Waren fÅr ihren Laden ein."{WORDWaren}]
+
+Block 4         "WAREN"
+["Alles, was von Nutzen fÅr jemanden sein kînnte. Ach ja, habt Ihr vielleicht
+etwas anzubieten?" {BLOK010}"Ja, ich glaube, ich habe da etwas fÅr Euch."
+{BLOK011}"Nein, nein. Im Augenblick nicht."]
+                
+Block 5         Antw. auf MC4,10
+["Schade. Ich bin fÅr meine guten Preise bekannt. Ich mîchte, daû die Leute
+wiederkommen, wiût Ihr."]
+
+Block 6         BegrÅûung WENN: Bit von Block 4 gesetzt
+["Dsarii-ma. So treffen wir uns also einmal wieder." {BLOK010}"Wir hÑtten Euch
+etwas anzubieten, Rabir."]
+
+Block 7         "LADEN"
+["Ihr findet Wanias Laden in der Hafengegend, im SÅdosten der Stadt. Ein
+Besuch lohnt sich!"]
+
+Block 8
+["Nun, was habt Ihr mir denn anzubieten, {LEAD}{NAME}?"]

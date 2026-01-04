@@ -1,0 +1,114 @@
+//------------------------------------------------------------------------------
+//Install.scr - Beispiel-install-script fÅr SETUP.EXE
+//------------------------------------------------------------------------------
+
+LOAD_BACKGROUND "install.lbm"
+
+IF_WINDOWS
+  INFO "Setup/Vga lÑuft in einer Windows-Shell!"
+ELSE
+  INFO "Setup/Vga lÑuft nicht in einer Windows-Shell!"
+ENDIF
+
+ERROR "So sieht ein Error-Fenster aus!"
+
+//Installation oder Setup ?
+IF_NOT_EXISTS setup.ini
+   INFO "Willkommen zu Setup/Vga \n ============================= \n Wir werden jetzt zusammen Setup/Vga installieren. Bitte drÅcken Sie die Eingabetaste oder klicken Sie mit der Maus auf <O.K.>!"
+
+   :HauptmenÅ/Install
+   MENU_START
+   MENU_ENTRY "HauptmenÅ (Install)"
+   MENU_ENTRY "Setup/Vga installieren" InstallSetupVga
+   MENU_ENTRY "das Readme-File ansehen" BrowseReadmeFromInstall
+   MENU_ENTRY "Setup/Vga verlassen" ExitSetupVgaFromInstall
+   MENU_END
+
+   //------------------------------------------------------------------------------
+
+   :InstallSetupVga
+   INFO "Sagen wir mal, dies Programm wÅrde von einer CD in~stalliert oder Daten von eine CD brauchen. Dann mÅ·ten Sie jetzt sagen, welchen Buchstaben Ihr CD-Laufwerk hat."
+   SELECT_CD_ROM_DRIVE
+   INFO "Ich brauche ca. 997kb freien Speicher~platz um Setup/Vga zu in~stallieren. Ich werdeg Ihnen gleich die Lauf~werke zeigen, auf denen Sie soviel frei haben und Sie sagen mir wohin ich es in~stallieren soll."
+   SELECT_TARGET_DRIVE 997
+   ASSERT "Sind soweit alle Angaben O.K.?" HauptmenÅ/Install
+   INFO "Ich wÅrde vor~schlagen, wir in~stallieren mich jetzt in das Ver~zeich~nis 'BB-Setup' auf dem ge~wÑhl~ten Lauf~werk. Aber Sie kînnen jetzt gleich auch etwas anderes eingeben."
+   SELECT_TARGET_PATH BB-Setup  //Legt schon Verzeichnis an
+   PRINT "Ich kopiere jetzt die Daten.."
+   CD_TARGET
+   MD c-sources
+   CREATE setup.ini
+   CREATE vesa.ini
+   CD_SOURCE
+   INSTALL *.exe *.exe
+   INSTALL *.scr *.scr
+   INSTALL *.txt *.txt
+   INSTALL *.lbm *.lbm
+   INSTALL src\*.c c-sources\*.c
+   INSTALL src\*.h c-sources\*.h
+   INFO "Setup/Vga wurde er~folg~reich in~stalliert. Bitte lesen Sie noch das ReadMe-File."
+   GOTO HauptmenÅ/Install
+
+   //------------------------------------------------------------------------------
+
+   :BrowseReadmeFromInstall
+   TEXT readme.txt
+   GOTO HauptmenÅ/Install
+
+   //------------------------------------------------------------------------------
+
+   :ExitSetupVgaFromInstall
+   ASSERT "Sind Sie sicher, da· sie Setup/Vga ver~lassen mîchten ?" HauptmenÅ/Install SetupEnde
+ELSE
+   INFO "Willkommen zu Setup/Vga \n ============================= \n Wir werden jetzt zu~sammen Setup/Vga warten. Bitte drÅcken Sie die Ein~gabe~taste oder klicken Sie mit der Maus auf <O.K.>!"
+
+   :HauptmenÅ/Setup
+   MENU_START
+   MENU_ENTRY "HauptmenÅ (Setup) - Sie kînnen.."
+   MENU_ENTRY
+   MENU_ENTRY "..das CD-Rom neu einstellen." SelectCDFromSetup
+   MENU_ENTRY "..das Readme-File ansehen." BrowseReadmeFromSetup
+   MENU_ENTRY "..Setup/Vga lîschen." DeleteSetupVga
+   MENU_ENTRY "..Setup/Vga verlassen." ExitSetupVgaFromSetup
+   MENU_END
+
+   //------------------------------------------------------------------------------
+
+   :SelectCDFromSetup
+   INFO "So, welchen Buchstabe hatte nochmal Ihr CD-Laufwerk.."
+   SELECT_CD_ROM_DRIVE
+   GOTO HauptmenÅ/Setup
+
+   //------------------------------------------------------------------------------
+
+   :DeleteSetupVga
+   ASSERT "Hey, Sie haben gewÑhlt, da· sie Setup/Vga LôSCHEN mîchten. Meinen Sie das ernst?" HauptmenÅ/Setup
+   ASSERT "Moment mal. Dies ist ein gutes Pro~gramm. Meinen Sie das WIRKLICH ernst?" HauptmenÅ/Setup
+   INFO  "Also schîn, dann werde mich halt selber ver~nichten."
+   ASSERT "Jetzt haben Sie aber sicher 'n Schreck be~kommen.. Wollen Sie mich immer noch los~werden?" HauptmenÅ/Setup
+   INFO  "Also gut das war's ich bin weg. Tschau.."
+   DELETE setup.exe
+   DELETE install.scr
+   DELETE install.lbm
+   DELETE readme.txt
+   DELETE setup.ini
+   DELETE vesa.ini
+   DELETE c-sources   //Komplettes Verzeichnis lîschen
+   END
+
+   //------------------------------------------------------------------------------
+
+   :BrowseReadmeFromSetup
+   TEXT readme.txt
+   GOTO HauptmenÅ/Setup
+
+   //------------------------------------------------------------------------------
+
+   :ExitSetupVgaFromSetup
+   ASSERT "Sind Sie sicher, da· sie Setup/Vga ver~lassen mîchten ?" HauptmenÅ/Setup SetupEnde
+ENDIF
+
+:SetupEnde
+TEST_COMPUTER
+END
+//SELECT_CD_ROM_DRIVE

@@ -1,0 +1,142 @@
+;***Script 6: Nach dem Aufwachen***
+
+
+; Tom-NPC(15), Rainer-NPC(16), und Giria(3) positionieren, Party entfernen
+party_off
+npc_on 3
+npc_lock 3
+npc_jump 3 69 31
+npc_turn 3 2
+
+npc_lock 15
+npc_jump 15 71 33
+
+npc_lock 16
+npc_jump 16 69 33
+npc_turn 16 1
+update 4
+fade_from_black
+
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+pause 60
+update 15
+
+
+; Aufwach-Dialog
+party_member_text 1 171
+party_member_text 2 172
+party_member_text 1 173
+party_member_text 2 174
+party_member_text 1 175
+party_member_text 2 176
+party_member_text 1 177
+party_member_text 2 178
+party_member_text 1 179
+party_member_text 2 180
+party_member_text 1 181
+party_member_text 2 182
+party_member_text 1 183
+party_member_text 2 184
+npc_text 103 185
+party_member_text 2 186
+npc_text 103 187
+party_member_text 1 188
+party_member_text 2 189
+party_member_text 1 190
+party_member_text 2 191
+party_member_text 1 192
+party_member_text 2 193
+party_member_text 1 194
+party_member_text 2 195
+party_member_text 1 196
+party_member_text 2 197
+party_member_text 1 198
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 214
+fade_to_black
+
+; Giria an neue Stelle setzen
+npc_jump 3 57 46
+npc_turn 3 0
+
+; Rainer 1 nach oben
+npc_jump 16 69 31
+npc_turn 16 2
+
+show_map
+update 4
+fade_from_black
+
+;Tom steht (langsam!) auf
+npc_move 15 -1 0
+update 1
+pause 5
+update 2
+pause 5
+update 1
+pause 5
+npc_move 15 -1 0
+update 2
+pause 8
+update 2
+
+party_member_text 1 216
+party_member_text 2 217
+
+pause 20
+update 5
+npc_move 15 -1 0
+update 4
+npc_move 15 -1 0
+update 4
+
+party_member_text 1 218
+party_member_text 2 219
+
+
+; Spieler bekommt endlich Steuerung zurück (aber nicht für lange...)
+fade_to_black
+npc_off 15
+npc_off 16
+npc_off 3
+party_jump 69 34
+party_on
+fill_screen 0
+camera_unlock
+show_map
+update 8
+fade_from_black

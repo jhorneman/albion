@@ -1,0 +1,52 @@
+Normalo 2 (Aurino, m„nnl./ist in der Kneipe anzutreffen) / Phase 0+1
+
+Block 0         (FAQs)
+[{BLOK000}"Ich erleche wilde Tiere in den W„ldern, schlachte sie und verkaufe
+das Fleisch. Sochesehen k”nnt Ihr mich als J„cher, Metzcher und Verk„ufer
+bezeichnen, newe."{WORDJ„ger}]
+
+Block 1         (Begrung)
+["Skeima Din, Fremde. Ich bin Aurino und freue mich, Eure Bekanntschaft zu
+machen. Na, wie schmeckt Euch unser Sucho?"{BLOK010}"Skeima Din, danke der
+Nachfrage. Wir wissen ihn zu sch„tzen, ein pr„chtiges
+Getr„nk!"{BLOK011}"Skeima Din Aurino. Die Freude liegt ganz auf unserer Seite.
+Dieser Sugo ist allerdings ein extrem widerliches Ges”ff."]
+
+Block 2         (Begrung 2)
+[-frei-]
+ 
+Block 3         (Resp. 1)
+["Mhm, normalerweise dauert es eine chanze Zeit lang, bis man sich an den
+besonderen Cheschmack chew”hnt hat, newe. Aber ich chlaube Euch mal. Solange
+Ihr damit nicht Euren Kummer runtersplt..."{WORDKummer}]
+
+Block 4         (Resp. 2)
+["Herherher, Ihr chef„llt mir. Seid wenichstens chrundehrlich, newe. Wenn alle
+so ehrlich w„re, ch„b's manchen Kummer wenicher in Beloveno."{WORDKummer}]
+
+ 
+Block 5         (Kummer)
+["Achje, was wrdet Ihr denn sachen, wenn man sich auf die wichtichsten Leute
+in der Stadt nicht verlassen kann?"{BLOK010}"K”nnt Ihr da vielleicht etwas
+konkreter werden?"]
+
+Block 6         (Resp. 1)
+["Naja, der 'Rat der Cherechten' sollte eichentlich fr das Volk da sein. Nun
+habe ich schon zum zweiten Male einen Streit mit meinem Nach|barn chehabt. Es
+ching dabei um ein Chrund|stck und wir haben uns um die Besitz|ansprche
+chestritten, newe. In solchen F„llen sollte unser weiser Rat eichent|lich eine
+cherechte Entschei|dung f„llen. Aber in beiden F„llen ist ein Urteil chef„llt
+worden, das weder zu meinen Chunsten, noch zu Chunsten meines Nach|barns
+ausching. Der Rat hat die Chrund|stcke einfach verpf„ndet, newe. Dabei drfen
+sie auch nicht mehr von der Allche|meinheit benutzt werden. Ich verstehe das
+wirklich nicht, newe. Irchendwie ist da im Rat auch nicht alles in bester
+Ordnung."{WORDGrundstck}]
+
+Block 7         (J„ger, Metzger)
+["Mir macht mein Beruf Spa, danke!"]
+
+Block 8         (Grundstck, Besitzansprche)
+["Das tut nichts zur Sache, ich habe das nur als Beispiel aufchefhrt, newe."]
+
+Block 9         (Aurino)
+["Das bin ich."]

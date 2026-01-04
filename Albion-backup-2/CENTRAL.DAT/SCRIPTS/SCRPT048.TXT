@@ -1,0 +1,11 @@
+; ENTFÄLLT! **** Script 48: Rainer aus Party raus
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 156
+do_event_chain 9
+show_map
+fade_to_black
+update 4
+fade_from_black

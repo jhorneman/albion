@@ -1,0 +1,243 @@
+
+Maptextfile
+--------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Eine Steinburg.]
+
+Block 2
+[Eine Sanddne.]
+
+Block 3
+[Eine Steins„ule.]
+
+Block 4
+[Ein groer Felsen.]
+
+Block 5
+[Eine Tellerblume.]
+
+Block 6
+[Eine Sandmorchel.]
+
+Block 7
+[Diese Pflanze ern„hrt sich von Insekten.]
+
+Block 8
+[Eine fleischfressende Pflanze.]
+
+Block 9
+[Ein blhendes Kakteengew„chs, das sehr langsam w„chst.]
+
+Block 10
+[Pflanzenteile.]
+
+Block 11
+[Bodengew„chse.]
+
+Block 12
+[Steine.]
+
+Block 13
+[Grasbschel.]
+
+Block 14
+[Wurzeln, Holzstcke und ste.]
+
+Block 15
+[Ein Steinschlo, erbaut aus Felsen.]
+
+Block 16
+[Eine Stromschnelle.]
+
+Block 17
+[Das Wasser ist tief und die Str”mung scheint stark zu sein.]
+
+Block 18
+[Wasserpflanzen.]
+
+Block 19
+[Wasserpflanzentriebe.]
+
+Block 20
+[Ein Wasserstrudel.]
+
+Block 21
+[Ein Schirmbaum.]
+
+Block 22
+[Solche Steppenb„ume gedeihen auf sehr trockenem Boden.]
+
+Block 23
+[Eine Steppenblume.]
+
+Block 24
+[Ein Turmfelsen.]
+
+Block 25
+[Kies.]
+
+Block 26
+[Eine groe Felsbrcke.]
+
+Block 27
+[Platzhalter fr weitere Events.]
+
+Block 28
+[Platzhalter fr weitere Events.]
+
+Block 29
+[Platzhalter fr weitere Events.]
+
+Block 30
+[Platzhalter fr weitere Events.]
+
+Block 31
+[Platzhalter fr weitere Events.]
+
+Block 32
+[Platzhalter fr weitere Events.]
+
+Block 33
+[Platzhalter fr weitere Events.]
+
+Block 34
+[Platzhalter fr weitere Events.]
+
+Block 35
+[Platzhalter fr weitere Events.]
+
+Block 36
+[Platzhalter fr weitere Events.]
+
+Block 37
+[Platzhalter fr weitere Events.]
+
+Block 38
+[Platzhalter fr weitere Events.]
+
+Block 39
+[Platzhalter fr weitere Events.]
+
+Block 40
+[Platzhalter fr weitere Events.]
+
+Block 41
+[Platzhalter fr weitere Events.]
+
+Block 42
+[Platzhalter fr weitere Events.]
+
+Block 43
+[Platzhalter fr weitere Events.]
+
+Block 44
+[Platzhalter fr weitere Events.]
+
+Block 45
+[Platzhalter fr weitere Events.]
+
+Block 46
+[Platzhalter fr weitere Events.]
+
+Block 47
+[Platzhalter fr weitere Events.]
+
+Block 48
+[Platzhalter fr weitere Events.]
+
+Block 49
+[Platzhalter fr weitere Events.]
+
+Block 50
+[Platzhalter fr weitere Events.]
+
+Block 51
+[Platzhalter fr weitere Events.]
+
+Block 52
+[Platzhalter fr weitere Events.]
+
+Block 53
+[Platzhalter fr weitere Events.]
+
+Block 54
+[Platzhalter fr weitere Events.]
+
+Block 55
+[Platzhalter fr weitere Events.]
+
+Block 56
+[Platzhalter fr weitere Events.]
+
+Block 57
+[Platzhalter fr weitere Events.]
+
+Block 58
+[Ssssss...]
+
+Block 59
+[Ein versteckter Eingang.]
+
+Block 60
+["Ich denke, es ist zu risikoreich, sich jetzt in die N„he der Toronto zu
+begeben. Lat uns lieber umkehren."]
+
+Block 61
+[Tom berappelt sich mhsam ein wenig.]
+
+Block 62
+["So weit, so gut. Lat uns versuchen, uns im Schutze der Nacht an die Toronto
+anzuschleichen."]
+
+Block 63
+[Den Arbeitsmaschinen und Tagebauanlagen ausweichend, gelangen die Gef„hrten
+tats„chlich unbemerkt an die Toronto heran. Tom gelingt es, einen
+Seiteneinstieg zu ”ffnen, ohne Alarm auszul”sen. Er schliet das Schott,
+sobald alle im Innern sind.]
+
+Block 64
+[Als die Gef„hrten aus der H”hle kommen, st”t Tom einen Schrei aus:]
+
+Block 65
+["Seht doch! Dort hinten fliegt ein Shuttle der Toronto!"]
+
+Block 66
+[Das Shuttle kommt n„her, offenbar sind die Gef„hrten bemerkt worden.^^Es
+setzt zur Landung an!]
+
+Block 67
+[{INK 001}An seine Begleiter gewandt, sagt Tom:^^{INK 002} "Kommt! Nur keine
+Angst! Es wird ein wenig eng dort drinnen, aber es ist ja nur fr eine kurze
+Zeit."]
+
+Block 68
+[Tom steigt ein und bemerkt, da kein Pilot in der Kanzel sitzt. Das Shuttle
+ist ferngesteuert.]
+
+Block 69
+[Pl”tzlich schl„gt die Tr des Shuttles zu! Tom ist eingesperrt und das
+Shuttle startet, ohne die Gef„hrten!^^ Schon w„hrend des Startes flutet ein
+Gas die Kabine des Fahrzeugs. Tom sinkt bet„ubt zu Boden! Er bekommt nichts
+von dem folgenden Flug mit...]
+
+Block 70
+[Tom und Joe gelingt es, sich vor den Suchtrupps der Toronto zu verbergen.
+Tom's Ziel ist die H”hle, die unter den Bergen nach Umajo Kenta fhrt. Im
+Morgengrauen erreichen die beiden die Stelle.]
+
+Block 71
+[Begeistert f„llt man sich in die Arme. Nach der ersten Wiedersehens|freude
+stellt Tom Joe vor und berichtet in groben Zgen, was passiert ist.]
+
+Block 72           Harriet
+["Etwas derartiges hatten wir schon befrchtet, Tom. Ich habe bereits
+Rcksprache mit den anderen Dji Cantos gehalten, bevor ich wieder hierher
+zurckkam.^^Lat uns zur Insel zurckkehren, um zu beraten, was zu tun ist!"]
+
+Block 73
+[Was Tom kaum zu hoffen gewagt hatte, erfllt sich:^^Die Gef„hrten haben auf
+seine Rckkehr gewartet!]

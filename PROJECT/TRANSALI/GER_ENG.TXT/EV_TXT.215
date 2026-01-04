@@ -1,0 +1,38 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 6
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fhre das Lebensmittelgesch„ft hier in der Stadt."]
+
+Block 1         (Begrung)
+["Skeima Din, habt Ihr inzwischen Beweise gegen Kontos
+gefunden?"{BLOK010}"Nein."{BLOK011}"Ja."{BLOK012}"Wir haben die Unschuld von
+Kontos bewiesen!"{WORDKontos}{WORDBeweise}]
+
+Block 2         (Resp. 1)
+["Dann sucht weiter!"]
+
+Block 3         (Resp. 2)
+["Der Konflikt am Heiligtum von Srimalinar eskaliert st„ndig weiter. Ihr k”nnt
+ihn aufhalten, indem Ihr das wahre Gesicht von Kontos zeigt. Ihr habt die
+Beweise dazu. Ihr k”nntet dem Land dadurch enorm helfen und ich bitte Euch
+darum! Geht zum Heiligtum von Srimalinar und setzt dem Ganzen ein
+Ende!"{WORDHeiligtum}]
+
+Block 4         (Resp. 3 / Null-Blick-Flag setzen)
+["Ihr habt was??? Ich glaube, ich sollte hier einigen Leuten in der Stadt von
+Euren Ansichten erz„hlen. Das drfte fr manche interessant sein..."]
+
+Block 5         (Kontos)
+["Er ist in der heiligen St„tte von Srimalinar und es wird nicht mehr lange
+dauern, bis es zu einem Krieg kommt!"]
+
+Block 6         (Heiligtum)
+["Es ist ziemlich schlimm - geht hin und schaut selbst. Vielleicht kann man
+Kontos noch stoppen, aber wenn das nicht gelingt, ist ein Krieg wohl
+unumg„nglich!"]
+
+Block 7         (Beweise)
+["Wenn Ihr Beweise habt, dann benutzt Sie, um Kontos zu entlarven."]
+
+Block 8         (Kryte)
+["Das bin ich."]

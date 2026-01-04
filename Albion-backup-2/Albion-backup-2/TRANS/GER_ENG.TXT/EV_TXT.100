@@ -1,0 +1,354 @@
+Allgemeinwissen fr Iskai (Stufe A, viel Wissen)
+----------------------------------------------------------------------
+
+Block 0                      (frei)
+["leer"]
+
+Block 1                      (Iskai)
+["So nennen wir uns selbst."]
+
+Block 2                      (Sofa, Sitzm”bel, Sitzpflanze)
+["Ein gebter Former l„t eine der groen Sitzpflanzen in weniger als 4 Tagen
+heranwachsen. Man sitzt wundervoll auf ihnen, und die Kinder lieben es, darauf
+herumzutoben.{WORDFormer}"]
+
+Block 3                      (Fleisch, Braten, Wurst, Schinken)
+["Ja, wir haben eine Menge leckerer Sachen. Das meiste stammt von den Tieren
+des Waldes. Die Leute bevorzugen Wild, obwohl die Herdenzchter Ihr Fleisch
+etwas billiger anbieten.{WRNR----}"]
+
+Block 4                      (Abwasser,Abwasserbecken,Teich,Schmutzwasser)
+["In groen H„usern wird das Abwasser durch Rohre in den W„nden in ein Becken
+geleitet. Die Pflanzen darin s„ubern das Wasser, bevor wir es dem Flu
+zurckgeben." {BLOK010}"Ihr seid nicht sehr zahlreich. Der Flu wrde auch das
+ungereinigte Wasser verkraften. Warum der Aufwand?"]
+                             WENN: Tom oder Rainer sprechen DANN: Antwort siehe
+                             Block 45
+
+Block 5                      (Herden, Viehzchter, Herdenzchter, Zchter
+                              Zuchtvieh)
+["Es gibt zwei kleinere Clans, die von der Viehzucht leben. Ihre Herden sind
+meist in der Umgebung der Stadt zu finden."]
+
+Block 6                      (Wasser, Wasserrinnen, Trinkwasser, Bach, B„che)
+["Wer es sich leisten kann, l„t sich sein Wasser offen durchs ganze Haus
+verlegen. Es sieht wundersch”n aus, man mu nur auf die Kinder aufpassen,
+damit sie keinen Unfug mit dem Wasser treiben..."{WORDHaus}]
+
+Block 7                      (Haus, H„user, W„nde, Boden, Mauern, Bauweise,
+                             Baumaterial, H„userbau, Architektur)
+["Wir lieben es, die Sch”nheit der Natur mit dem Komfort eines Hauses zu
+verbinden. Die Former der Dji-Fadh-Gilde k”nnen komplette Bauwerke aus
+Pflanzen wachsen lassen! Allerdings ist dies nicht billig; es gibt H„user, die
+nur aus Stein und Sand gebaut sind, oder nur zum Teil aus den Pflanzen der
+Dji-Fadh bestehen. Vor allem „rmere Leute wohnen in "toten H„usern", wie wir
+sagen." {WORDFormer}{WORDDji-Fadh}{WORDGilde}]
+
+Block 8                      (Former,Formergilde, Dji-Fadh, Baumeister)
+["Die Dji-Fadh oder Former sind eine der „ltesten Gilden Jirinaars. Sie sehen
+sich in erster Linie als Baumeister und k”nnen mit Hilfe ihrer Magie Pflanzen
+ver„ndern und dauerhaft in eine gewnschte Form bringen. Das Gildenhaus der
+Dji-Fahd hat seinen Platz im nordwestlichen Viertel Jirinaars. Es ist immer
+weiter vergr”ert worden, seit vor langer Zeit die Sache mit Argim passiert
+ist."{WORDMagie}{WORDJirinaar}{WORDArgim}{WORDGilde}]
+
+Block 9                      (Dji-Kas, Magier,Magiergilde, Zauberer)
+["Ihr mt wissen, da Dji-Kas der Name der Magiergilde Jirinaars ist. Ihr
+findet sie im sdwestlichen Teil der Stadt. Dort ben die magischen Talente
+unseres Volkes zahlreiche Experimente aus. Die Dji-Kas - Magie ist eine
+vielf„ltige Kunst: sie heilt, erschafft und zerst”rt.
+{WORDMagie}{WORDJirinaar}{WORDGilde}"]
+
+Block 10                     (Clan, Gesellschaft, Gemeinschaft)
+["Die meisten Familien geh”ren einem gr”eren Verbund an, dem Clan. Ein Clan
+entsteht im Laufe vieler Jahre durch Verwandtschaftsbeziehungen, Loyalit„t
+mehrerer Familien oder manchmal auch aus wirtschaftlichen Grnden. Viele Clans
+haben sich auf einen bestimmten Beruf spezialisiert, sei es die Jagd, ein
+Kunsthandwerk oder was auch immer. Die Sebai der einflureichsten Familien
+stellen die Oberh„upter eines Clans dar und von diesen werden wiederum einige
+als Repr„sentanten in den Rat Jirinaars entsandt."{WORDSebai}]
+
+Block 11                     (Rat,Familie, Regierung, Oberhaupt, Ratskreis)
+["Der Rat von Jirinaar gilt als Regierung von ganz Nakiridaani; er residiert
+im Ratsgeb„ude in der Mitte der Stadt. Im Rat sitzen die Sebai der Clans
+Nakiridaanis und w„hlen alle 5 Jahre aus Ihrer Mitte den Sebainah, das
+Oberhaupt des Rates. Der Sebainah regiert unser Volk, bei Entscheidungen von
+groer Tragweite ist er jedoch auf die Zustimmung des Rates angewiesen. Der
+Rat bildet die sogenannten Ratskreise, das sind Gruppen von Leuten, die von
+mindestens einem Ratsmitglied geleitet werden, um sich um bestimmte Aufgaben
+zu kmmern: zum Beispiel die Sebai-Auswahl, Streitigkeiten oder
+Familienangelegenheiten, wie Ehetrennungen."
+{WORDSebai}{WORDSebainah}{WORDNakiridaani}{WORDJirinaar}{WORDClan}]
+
+Block 12                     MC: "Sind alle mit dieser Regierung zufrieden?") 
+["Nun, es gibt natrlich Stimmen der Kritik, vorwiegend von den clanlosen
+Familien oder Clans, wo keinem Angeh”rigen die Ehre des Sebai-Rituals zuteil
+wurde. Sie sind nahezu ohne Einflu auf die Regierung und halten dies fr eine
+groe Ungerechtigkeit."]
+
+Block 13                     (Sebainah)
+["Der oder die Sebainah hat als Ratsoberhaupt natrlich groen Einflu. In
+Krisenzeiten kann sie oder er vom Rat sogar mit besonderen Machtbefugnissen
+ausgestattet werden, und ist fr die Zeit der Krise Herr ber Leben und Tod
+auf Nakiridaani. In normalen Zeiten ist der Sebainah jedoch auf die
+Zusammenarbeit mit dem Rat angewiesen. Er hat allerdings zwei Stimmen im Rat
+und kann bei Pattsituationen die Entscheidung
+treffen."{WORDNakiridaani}{WORDRat}]
+
+Block 14                     (Ehe,Eheleute, Heirat, Heiraten)
+["Nun, wenn sich die Partner entschlossen haben, ihr Leben miteinander zu
+verbringen, richten sie ein groes Fest aus, bei dessen H”hepunkt sie sich fr
+immer verbinden.^ Gel”st werden kann eine Ehe brigens offiziell jedoch nur
+vom entsprechenden Ratskreis. Wie dem auch sei, normalerweise sind die beiden
+dann ein Paar fr den Rest Ihres Lebens und versuchen, einen eigenen Haushalt
+zu grnden. Dabei werden sie oft von Ihren Nebenpartnern untersttzt, die so
+eine Gelegenheit haben, sich vom Elternhaus zu l”sen, wenn sie
+m”chten."{WORDRat}{WORDNebenpartner}]
+
+Block 15                     (Nebenpartner,Tabu, Tabus)
+["Die Schwestern der Ehefrau und die Brder des Mannes gelten als Nebenpartner
+eines Ehepaares und teilen manchmal das Haus und bei Sympathie auch das Bett
+miteinander. Allerdings ist in der Zeit der Fruchtbarkeit in h”chsten Mae
+Tabu, mit dem Nebenpartner zu schlafen."{WORDFruchtbarkeit} {WORDGeschwister}]
+
+Block 16                     (Geschwister, Schwester, Bruder,
+                             Schwestern,Brder)
+["In unseren Familien wird der Geschwisterschaft ein groer Wert beigemessen.
+Erreicht jemand beispielsweise die Vollj„hrigkeit, ist er in der Verantwortung
+und Entscheidungsgewalt ber die jngeren Geschwister sogar h”her eingestuft
+als die Eltern."{WORDVollj„hrigkeit}]
+
+Block 17                     (Vollj„hrig, Vollj„hrigkeit)
+["Mit dem zehnten Lebensjahr ist die Vollj„hrigkeit erreicht und man ist von
+den Entscheidungen seiner „lteren Geschwister oder Eltern unabh„ngig."]
+
+Block 18                     (Fruchtbarkeit, Empf„ngnis, Fadhiim)
+["Es ist so, da die Frauen nur drei Monate im Jahr fruchtbar sind, dies ist
+die Zeit des Fadhiim und ihr Beginn wird mit einem groen Fest gefeiert. In
+dieser Zeit treten fr Eheleute und Ihre Nebenpartner Tabus in Kraft."
+{WORDNebenpartner}{WORDEhe}]
+
+Block 19                     (Sebai, Ritual, Sebai-Ritual)
+["Das Sebai-Ritual stellt die m„chtigste magische Handlung dar, derer wir
+f„hig sind, und sie kann von jedem durchgefhrt werden, sei sein magisches
+Talent auch noch so gering.^ Dazu mt Ihr wissen, da das Trii eines
+Neugeborenen in der ersten Woche ganz besondere Eigenschaften hat. Berhrt ein
+Erwachsener mit seinem Trii das des Neugeborenen, kann er sein gesamtes Selbst
+in den Geist des Kindes bertragen. Er oder sie kann das Leben neu beginnen,
+der K”rper des Erwachsenen stirbt bei der Zeremonie.^ Natrlich ist es
+verboten, das Ritual ohne Genehmigung des Ratskreises durchzufhren. Zusammen
+mit der Entfhrung eines Neugeborenen ist dies das schlimmste Verbrechen, das
+es gibt! Der Verbrecher und seine gesamte Familie werden nach unseren Gesetzen
+mit dem Tode bestraft.^ Nur wenige Personen mit besonderen Verdiensten, die
+Auserw„hlten, drfen das Ritual durchfhren. Ferner darf das Ritual
+selbstverst„ndlich nur mit Zustimmung der Mutter des Neugeborenen durchgefhrt
+werden. Meist ist es die Partnerin des Auserw„hlten oder eine Schwester einer
+Auserw„hlten.^ Ist das Ritual durchgefhrt, bekommt der oder die Auserw„hlte
+den Titel Sebai, gefolgt von einem Zusatz, der darauf hinweist, wie oft der
+Sebai das Ritual schon durchfhren
+durfte."{WORDMagie}{WORDTrii}{WORDRat}{WORDAuserw„hlter}]
+
+
+Block 20                     (Auserw„hlte, Auserw„hlter)
+["In den Status eines Auserw„hlten, also des Berechtigten auf ein
+Sebai-Ritual, zu gelangen ist sehr schwer und h„ngt letztendlich immer von den
+Stimmen im zust„ndigen Ratskreis ab.^ Es gibt verschiedene M”glichkeiten, der
+Ehre des Rituals zuteil zu werden. Beispielsweise, wenn sich jemand durch
+besonderen Mut oder Opferbereitschaft ausgezeichnet hat. Kommt er oder sie
+dabei um, darf ein Bruder oder eine Schwester im Gedenken an diese Person zum
+Sebai werden. ^Oft kommt es auch vor, da jemand, der einen hohen Rang bei den
+Stiriik hat, auserw„hlt wird. Generell kommen Personen mit einzigartigen
+Talenten und Wissen in Frage, wenn sie diese Kenntnisse zum Wohle vieler
+benutzt haben." {WORDSebai}{WORDRat}{WORDStiriik}]
+
+Block 21                     (Stirnstruktur,Stirnorgan, Trii)
+["Das Trii, das jeder von uns auf der Stirn tr„gt, ist ein ganz besonderes
+Organ. Es wird als Sitz des Geistes angesehen, und Verletzungen fhren von
+Pers”nlichkeitsver„nderungen und Ged„chtnisverlust bis zum Tode.^ Legen zwei
+Leute ihre Trii aneinander, k”nnen sie die Emotionen des Anderen spren und
+besonders Begabte erfassen sogar ganze Gedankeng„nge."]
+
+Block 22                     (Exekutive, Polizei, Stiriik)
+["Die Stiriik sorgen fr die Einhaltung der Gesetze. Sie verfolgen Verbrecher
+und versuchen, ein wenig Ordnung in unser Leben zu bringen.^Von einem
+Stiriik-Mitglied wird viel Disziplin verlangt, eine Eigenschaft, die bei uns
+in hohen Ansehen steht. Aber wie das mit Idealen nun mal so ist... Jedenfalls
+halten viele Neulinge bei den Stiriik nicht lange aus."]
+
+Block 23                     (Gesetz, Gesetze, Justiz, Regeln)
+["Die Gesetze werden vom Rat erlassen und von den Stiriik durchgesetzt, falls
+dagegen verstoen wird. Nun ist es aber so, da bei uns die gesamte Familie
+eines Verbrechers fr seine Vergehen haftet, um so vor Verst”en
+abzuschrecken. Werden die Stiriik des Verbrechers nicht sofort habhaft, ist es
+Aufgabe der Familie, ihr abtrnniges Mitglied zu finden oder das Verbrechen
+sonstwie aufzukl„ren. Dabei werden sie allerdings von mindestens einem Stiriik
+untersttzt und kontrolliert."{WORDRat}{WORDStiriik}]
+
+Block 24                     (Gilde, Gilden, Dji, Dji-)
+["Eine Gilde oder Dji ist die Organisation eines bestimmten Berufszweiges, es
+gibt ihrer viele: Die Formergilde Dji-Fadh, die Magier, H„ndler, oder auch die
+J„gergilde etwa."{WORDDji-Fadh}{WORDDji-Kas}{WORDKaufen}]
+
+Block 25                     (Magie, Zauberei)
+["Die Kunst, die niemand mit den H„nden und nur wenige mit dem Kopf zu fassen
+verm”gen. Nur wenige haben das Talent, allein mit der Kraft ihres Geistes und
+dem Segen der G”ttin Dinge aus dem nichts zu erschaffen oder zu ver„ndern. Es
+gibt zwei Gilden, die sich mit Magie befassen, die Former oder Dji-Fadh und
+die Magiergilde der Dji-Kas."{WORDDji-Fadh}{WORDDji-Kas}{WORDG”ttin}]
+
+
+Block 26                     (Religion, G”ttin)
+["Die meisten von uns glauben, da sie nach dem Tode dorthin zurckkehren,
+woher wir alle kommen: das groe Bewutsein, da von allen unseren Ahnen
+gebildet wird und da oft auch als die G”ttin bezeichnet wird. Man sagt, je
+vorbildlicher man sein Leben gestaltet, desto mehr bleibt man sich selbst,
+wenn man in der G”ttin aufgeht."]
+
+
+Block 27                     (Jirinaar)
+["Jirinaar ist die gr”te Stadt unseres Volkes. Sie kann auf eine lange
+Geschichte zurckblicken und ihr Hafen macht sie zum Handelszentrum
+Nakiridaanis."{WORDNakiridaani}{WORDGeschichte}]
+
+Block 28                     (Nakiridaani)
+["Nakiridaani ist der Name der Landes in dem Ihr Euch befindet. Es ist eine
+groe Insel, berhmt fr seine Urw„lder und seine Vielzahl an Pflanzen und
+Tieren."]
+
+Block 29                     (Geschichte)
+["Im Ratsgeb„ude findet Ihr Sebai-Giz Frill, der als groer
+Geschichtsgelehrter gilt. Er kann Euch sicher mehr ber die vergangenen Zeiten
+berichten als ich."]
+
+Block 30                     (Mensch, Menschen)
+["Ich finde, Menschen sind interessante Wesen. Sie wirken wie kr„ftige kleine
+B„ume, und jeder Schritt wirkt, als ob sie kurz im Boden Wurzeln schlagen
+wrden. Ich habe geh”rt, da sie sehr kr„ftig sein sollen und unglaublich alt
+werden k”nnen."]
+ 
+Block 31                     (Ort: Palast, Ratsgeb„ude)
+["Das Ratsgeb„ude ist leicht zu finden: Es ist in der groe Bau in der Mitte
+der Stadt, auf der Insel im Flu."]
+
+Block 32                     (Ort: Stadttor, Ausgang, Eingang)
+["Das Stadttor ist im Sden der Stadt, in der N„he des Ratsgeb„udes."
+{WORDRatsgeb„ude}]
+
+Block 33                     (Ort: Nahrung, Essen, Proviant, Waffe, Waffen,
+                             Rstung, Rstungen, H„ndler, Laden, einkaufen,
+                             Gesch„ft, Gesch„fte, kaufen, Ausrstung)
+["Im nord”stlichen Viertel der Stadt k”nnt Ihr Waffen und Rstungen einkaufen.
+In der Hafengegend im Sdosten gibt es einen groen Laden fr allerlei
+Ntzliches, und auerdem einen Provianth„ndler."]
+
+Block 34                     (Ort: Kneipe, Lokal, Restaurant")
+["In der N„he des Hafens ist ein stadtbekanntes Lokal. Haltet Euch in
+sd”stlicher Richtung."]
+
+Block 35                     (Ort: Hafen)
+["Der Hafen befindet sich im Sdosten Jirinaars."]
+
+Block 36                     (Frage wird von Iskai in Party gestellt)
+["Spavogel. Hast Du Dein Ged„chtnis verloren?"]
+
+Block 37                     ( " )
+["Hat Dir jemand auf's Trii gehauen? Das mtest Du ja wohl selbst wissen."]
+
+Block 38                     ( " )
+["Ich gehe davon aus, da Du diese Frage fr Deine fremden Begleiter stellst."]
+
+Block 39                     "UNTERSCHRIFT", "MARKE", "DOKUMENT","DOKUMENTE"
+["Um ein Dokument mit einer Einwilligung zu versehen, markiert man es neben
+dem Namen des Unter|zeichnenden mit dem individuellen Geruch einer Person.
+Jeder von uns hat kleine Duftdrsen hinter den Ohren, die einen
+unver|wechsel|baren Geruch produzieren."]
+
+Block 40                     "NACKTHEIT", "NACKT", "KLEIDUNG", "BEKLEIDUNG"
+["Oh, Kleidung hat bei uns eine eher schmckende Bedeutung. Es gilt als
+provokant, mit viel Kleidung aufzutreten, denn was k”nnte die Neugier mehr
+erregen, als das Verhllen von K”rperteilen?"]
+
+Block 41                     "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                             "WUNDEN, VERWUNDUNG"
+["Wenn Ihr Hilfe fr Eure Verwundungen sucht, wendet Euch an die Dji-Kas, sie
+haben f„hige Heiler in ihren Reihen."{WORDDji-Kas}]
+
+Block 42                     "SCHMERZEN"
+["Ich habe Gerchte geh”rt, da Ihr Menschen Euren Schmerzen v”llig
+ausgeliefert seid! Nun, wir k”nnen unsere Schmerzen bewut kontrol|lieren,
+zumindest im wachen Zustand. Den Kindern wird diese Technik aber erst sp„t
+beigebracht, damit sie den Ernst von Verletz|ungen erkennen."]
+
+Block 43                     "DRA"
+["Dieses Wort bedeutet "Anf„nger, Lernender" und wird als Namenszusatz
+gebraucht."]
+
+Block 44                     "STRI"
+["Meistens findet man dieses Wort im Zusammenhang mit Namen. Es bedeutet, da
+der Betreffende ein Meister seines Faches ist."]
+
+Block 45                     Antwort auf MC4
+["Seltsame Frage. Wir leben auf dieser Welt, kommen aus ihr hervor und gehen
+ein in die G”ttin und die G”ttin ist die Welt.^ Wrdet Ihr etwa gerne in Eurem
+eigenen Schmutz leben?"]
+
+Block 46                "AKIIR", Phase 0
+["Akiir ist das Oberhaupt der Dji-Fadh."{WORDDji-Fadh}]
+
+Block 47                "AKIIR, MORD", Phase 1
+["Dieser hinterh„ltige Mordanschlag ist emp”rend! Hoffentlich hat Eure Jagd
+nach dem flchtigen Meuchelm”rder Erfolg!"]
+
+Block 48                "AKIIR, MORD", phase 2
+["Eine Trag”die, von der ich glaube, da sie in die Geschichte unseres Volkes
+eingehen wird."]
+
+Block 49                "JANIIS"
+["Sie ist die Sebainah von Nakiridaani. Ihr findet sie meist im Ratsgeb„ude
+inmitten der Stadt."]
+
+Block 50                "FASIIR" Phase 0
+["Er ist der oberste Stri der Dji-Kas, ein beliebter Brger der Stadt."
+{WORDDji-Kas}{WORDStri}]
+
+Block 51                "FASIIR", Phase 1
+["Ich h„tte nie geglaubt, da Fasiir zu einem Mordanschlag auf Akiir f„hig
+sei!"{WORDAkiir}]
+
+Block 52                "FASIIR", Phase 2
+["Ich hatte gleich das Gefhl, da Fasiir nicht der Iskai ist, der zu einem
+Mord f„hig ist."]
+
+Block 53                "REJIRA"
+["Sie ist die begabteste Heilerin der Stadt. Eine wunderbare Frau, sie ist
+immer zu einem Gespr„ch aufgelegt."]
+
+Block 54                "ARGIM"
+["Argim war vor fast 150 Jahren das Oberhaupt der Dji-Fadh und sein Leben ist
+in den Legenden|schatz unseres Volkes einge|gangen. Damals war das Gildenhaus
+der Dji-Fadh auerhalb der Stadt zu finden, ein pr„chtiges Geb„ude. Nun, Argim
+war ein groes Talent auf seinem Gebiet, aber von wankelmtigem Charakter.
+Dies war der Grund fr die Ablehnung seines gr”ten Zieles: ein Auserw„hlter
+zu werden. Als er von der Abweisung erfuhr, verlor er v”llig die Kontrolle
+ber sich. Er schwor, trotzdem die Unsterblichkeit erlangen zu wollen. In
+einem wahnwitzigem Ausbruch seiner Macht zerst”rte er das ganze Geb„ude und
+verwandelte es in einen seltsamen Ort, der heute von allen gemieden wird. Man
+sagt, er h„tte seinen Geist diesem Ort aufgepr„gt."
+{WORDDji-Fadh}{WORDAuserw„hlter}]
+
+Block 55                "LEGENDE, LEGENDEN"
+["Derer gibt es viele, aber dies ist wohl kaum die Zeit zum
+Geschichten|erz„hlen, verzeiht."]
+
+Block 56                "SKORREK"
+["Ihr wollt mich beleidigen? Ach, die Bedeutung des Wortes? Ach so, hir, hir!
+Nun, es handelt sich um den Namen eines Tieres, das nicht gerade in hohem
+Ansehen steht, weil es sich vorwiegend von Exkrementen ern„hrt!"] 
+
+Block 57
+["Darber wei ich nichts."]
+
+Block 58           Frill ist da
+["Sebai-Giz Frill ist ein berhmter Geschichts|gelehrter. Er ist allerdings oft
+auf Reisen. Wenn er in Jirinaar ist, findet ihr ihn in seinem Arbeitzimmer im
+Ostflgel des Ratsgeb„udes."{WORDRat}{WORTRatsgeb„ude}]

@@ -1,0 +1,50 @@
+; ***Script 9: Stiriik hat Party bei Sebainah abgeliefert.
+
+show_map
+
+;Stiriik & Party positionieren
+npc_lock 0
+npc_jump 0 57 36
+npc_turn 0 0
+party_turn 2
+party_jump 57 33
+update 1
+pause 30
+
+;Stiriik spricht, geht nach rechts raus
+npc_text 197 206
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_jump 0 105 18
+npc_turn 0 2
+npc_unlock 0
+
+active_member_text 223

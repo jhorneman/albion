@@ -1,0 +1,281 @@
+                           *** ALBION ***
+
+This document accompanies a preview version of Albion, the role-playing game
+currently being developed by Blue Byte for PC CD-ROM. This document explains
+how to install and use this early version. More about the game can be found
+in the product info.
+
+Please keep in mind at all times that this is only a very early version of
+Albion. Many features are already present, but others are incomplete or are
+missing altogether. This version is only intended to give you an idea of what
+the final version of Albion will look like. However, unfortunately you will
+not be able to experience what playing the final game will be like. In other
+words it will not be possible to play any scenario or sub-plot in any
+coherent manner. It is like visiting a film-set: the sets have been built but
+nothing much is happening. There are some actors standing around but they
+aren't doing much. And of course they all speak German.
+
+
+--- HOW TO INSTALL ALBION ---
+
+Albion will run fine directly from CD. However, if you want to install the
+game on your hard drive, copy all the files from the CD by typing:
+
+XCOPY (source) (target) /e /y
+
+For example, when your CD-ROM drive is E: and you want to install the game
+in C:\ALBION, you would type:
+
+XCOPY E:\ALBION C:\ALBION /e /y
+
+Then change to your hard drive directory (in this case C:\ALBION) and type
+the following:
+
+ATTRIB -r /s
+
+
+--- HOW TO START ALBION ---
+
+Just type ALBION. When you leave Albion, the program may show some warnings
+because the game is still under development. You can safely ignore these.
+
+!IMPORTANT! Albion will run on a 4 Mb machine. However, the current version
+requires more than 4 megabytes of RAM.
+
+
+--- IMPORTANT FEATURES OF ALBION ---
+
+- A lot of attention has been put into making sure there is a good, mature
+story with interesting and complex characters, and a fascinating and
+realistic game world.
+
+- There are many different cultures in Albion, each with their own distinct
+look and "feel".
+
+- The game has been designed to offer months of playing fun not because the
+puzzles are so hard, but because there is just so much to do.
+
+- The user interface is intuitive and easy to learn.
+
+- The graphics are hand-drawn rather than rendered or scanned, creating a
+more intense atmosphere.
+
+- The game features three different display systems : 2D for better
+orientation and exploration, 3D for more intense immersion (the "you are
+actually there" feeling), and a separate 3D system for the tactical combat
+screen.
+
+
+--- THE AIM OF THE GAME ---
+
+The aim of the game in Albion is to save the world. To do this, the player
+must travel and explore, talk to people, solve quests, fight, and improve the
+capabilities and equipment of the people in his or her party.
+
+
+--- WHO WILL WANT TO PLAY ALBION? ---
+
+- Role-playing game afficionados.
+
+There haven't been a lot of good role-playing games lately, and this
+situation is unlikely to change in the future. Therefore we can count on the
+attention of people who have enjoyed computer role-playing games in the past,
+even if they have concentrated on a specific series of games until now.
+
+- People who enjoyed the previous games developed by this team such as
+Dragonflight, Amberstar and Ambermoon.
+
+The game has enough similarities with its "predecessors", so that old fans
+will accept the game instantly. We have already received proof of this at
+various shows.
+
+- The rest of the world.
+
+Because of the state-of-the-art graphics, the easy user interface, and the
+fact that we didn't design this game with hard-core gamers in mind, this
+game should also be accessible to people who haven't played role-playing
+games before.
+
+
+--- WHAT IS IN ALBION ---
+
+- Maps.
+
+This is the most important part of the game. There are four types of maps :
+
+1. 2D surface maps. This is where the player gets to explore the planet's
+ surface. The scale of these maps is larger than in the indoor maps, making
+ everything seem smaller. There are three different climates, each with its
+ own set of graphics : jungle, normal, and desert. From the surface maps, the
+ player enters either dungeons or...
+
+2. ...3D city maps. Cities are displayed using the 3D texture-mapping system.
+ The player can explore the city and talk to its inhabitants. By entering
+ houses, the player enters...
+
+3. ...2D indoor maps. Here the player explores houses and buildings and talks
+ to their occupants. These maps and the 3D city maps are where the
+ differences between cultures are most obvious.
+
+4. 3D dungeon maps. Many quests involve dark and gloomy dungeons, presented
+ in glorious 3D-texturemappovision. Here the player uncovers ancient secrets
+ and battles terrible foes.
+
+- The automapper.
+
+This screen allows the player to orientate him- or herself within 3D maps.
+In cities, the player can travel to places already visited using only one
+mouse-click. Normally the automapper only shows those parts which have
+already been visited by the player, but in cheat-mode the entire map can be
+seen.
+
+- The tactical combat screen.
+
+This is where conflicts between the party and groups of monsters are settled.
+Combat in Albion is a tactical rather than a real-time affair. The player
+enters actions such as move, attack, or cast a spell for each of the party
+members, and then starts the next combat round, which is then carried out.
+Each combat spell will have it's own special effect. Two
+demonstration effects are available in the current version (see special key
+table below).
+
+- The inventory screen.
+
+This is where the player can determine what each party member will wear and
+what items they will carry in their backpack. The player can also examine the
+statistics of all the different party members, although this is not in the
+current version yet.
+
+- The dialogue screen.
+
+Though not 100% complete, you can get an impression of what dialogues will
+be like by talking to some of the party members. Dialogues are an essential
+part of Albion, as they help to advance the story and deepen the feeling that
+the player is in a living, breathing world.
+
+
+--- WHAT IS NOT IN ALBION, BUT WILL BE ---
+
+- Lots and lots of exciting scenarios.
+- More graphics!
+- Lots of different monsters and other opponents in combat.
+- Lots of combat spells, each with different effects.
+- Various different combat backgrounds.
+- Three different status panels in the inventory screen, allowing you to
+ access as detailed statistics as you desire.
+- Lots of music (both MIDI and digital) and sound effects.
+- Improved 2D & 3D controls. All steering is provisional at the moment.
+- Beautiful still pictures and animations to illustrate crucial moments in
+ the storyline.
+- SGI-rendered, original intro.
+
+
+--- HOW TO USE ALBION ---
+
+(LMB means left mouse-button and RMB means right mouse-button.)
+
+The basic user-interface concept is this :
+- Anything that can be clicked on will be highlighted, and an explanation
+ will appear at the bottom-right of the screen.
+- Use the LMB to steer your party and to take action.
+- If the mouse-pointer turns gold, click the RMB to access a pop-up menu.
+
+In 2D maps, the mouse pointer changes shape depending on its position
+in relation to the party. Press and hold the LMB to make the party move in
+the appropriate direction. To perform actions, press and hold (!) the RMB.
+Move the mouse to select the square on which you want to perform the action.
+Release the RMB. A pop-up menu appears with all the relevant actions. Some of
+the options haven't been implemented yet. Use "Examine" to look at stuff and
+read signs. Use "Manipulate" to open doors and flip switches, and "Use item"
+to solve certain puzzles.
+
+In 3D maps, the mouse pointer changes shape depending on its position
+in relation to the middle of the screen. The 3D map window is divided into
+nine areas.
+
+Clicking (and holding) with the LBM performs the following functions:
+
+
+Move forward and    |ÿÿÿMove forward	  |ÿÿÿÿÿMove forward and
+rotate left	    |ÿÿÿ		  |ÿÿÿÿÿrotate right
+--------------------+---------------------+--------------------------
+Move left	    |ÿÿÿ      - 	  |ÿÿÿÿÿMove right
+--------------------+---------------------+--------------------------
+Move backward and   |ÿÿÿMove backward	  |ÿÿÿÿÿMove backward
+turn left	    |ÿÿÿ		  |ÿÿÿÿÿand turn right
+
+The further you move away from the center, the faster you'll go. Sounds hard,
+is easy. Try it.
+
+
+Double-clicking with the LBM performs the following functions:
+
+Turn 90 degrees	    |ÿÿÿ      - 	  |ÿÿÿÿÿTurn 90 degrees
+to the left	    |ÿÿÿ		  |ÿÿÿÿÿto the right
+--------------------+---------------------+--------------------------
+      - 	    |ÿÿÿ      - 	  |ÿÿÿÿÿ      -
+--------------------+---------------------+--------------------------
+Turn 180 degrees    |ÿÿÿ      - 	  |ÿÿÿÿÿTurn 180 degrees
+to the left	    |ÿÿÿ		  |ÿÿÿÿÿto the right
+
+
+You can access a pop-up menu by pressing the RMB in the middle of the screen.
+However, because this is only an early version, you may have trouble
+performing any actions in 3D. This will of course be changed in the final
+version of the game. The automapper works fine.
+
+In the inventory screen, move items from backpack to body and vice versa by
+dragging and dropping (note that you need not keep the LMB down while you're
+dragging).
+
+In the combat screen, which you enter by pressing F8 or F9, you can access a
+pop-up menu by pressing the RMB on a party member (in the tactical window).
+The monsters do not attack or move yet. Some of the functions, such as
+attacking, moving, and using magic already work. Enter moves for each party
+member, then select "Start round" to see it all happen.
+
+One of the party members, Khunag, can cast powerful magic in combat. Select
+the spell "Long-range single 1" (the name will be changed of course), to see
+what the spells will look like.
+
+In the automapper you can exit by clicking with the RMB. Normally you will
+only see those parts of the automap that you have already visited. If you
+activate cheat mode before entering the automapper, you will see everything.
+
+In the status area at the bottom of the screen, you can access a pop-up menu
+by pressing the RMB on a party member's portrait. You can talk to party
+members. You can also make someone the leader by pressing the LMB on their
+portrait, or access someone's inventory by double-clicking.
+
+The game begins in a specially created short-cut map. From this map you can
+access some of the maps currently in the game by running through the doors.
+To find out where a door leads to, examine the sign next to the door. To
+return to the short-cut map, press F7.
+
+
+--- SPECIAL KEYS IN ALBION ---
+
+F3	Leave the program.
+F7	Return to the special short-cut map.
+F8	Go to the combat screen (background 1).
+F9	Go to the combat screen (background 2).
+F12	Activate the cheat mode. You can walk through walls and see the
+	entire automap.
+
+
+--- FREQUENTLY ASKED QUESTIONS ABOUT ALBION ---
+
+- How many characters can you have in the party?
+
+Up to 6 characters.
+
+- Can the player determine the main character's face, name, sex or
+statistics?
+
+No. We have a good reason for it too.
+
+- Can the player switch between 2D and 3D as desired?
+
+No. Some maps are 2D, others are 3D. This is determined by the people who
+create the maps.
+

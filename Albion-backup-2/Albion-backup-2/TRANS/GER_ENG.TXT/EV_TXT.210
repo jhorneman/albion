@@ -1,0 +1,64 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 0+1
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fhre das Lebensmittelgesch„ft hier in der Stadt."]
+
+Block 1         (Begrung)
+["Skeima Din, ich kenne Euch nicht. Seid Ihr zu Besuch hier?"{BLOK010}"Ja, wir
+sind auf einer langen Reise."{BLOK011}"Warum wollt Ihr das wissen?"]
+
+Block 2         (Begrung 2)
+["Skeima Din, ah, wir haben neulich schon miteinander
+geplaudert."{WORDReiserouten}] 
+
+Block 3         (Resp. 1)
+["Dann wnsche ich Euch auf jeden Fall mal alles Gute und viel Glck auf Eurer
+Reise. Kennt Ihr eigentlich die wichtigsten Reiserouten von
+Beloveno?"{WORDReiserouten}]
+
+Block 4         (Resp. 2)
+["Es kommt nicht oft vor, da fremde Reisende in unserer Stadt sind. Kennt Ihr
+die wichtigsten Reiserouten von Beloveno?"{WORDReiserouten}]
+
+
+Block 5         (Reiserouten)
+["Mhm, Ihr seid noch nicht allzulange hier, richtig? Nach Kounos wrde ich auf
+jeden Fall mal reisen. Zum einen wohnen dort einige interessante Leute, zum
+anderen liegt es auf dem Weg nach Srimalinar und ich gehe stark davon aus, da
+Ihr dort Leute findet, die Euch wichtige Hinweise und materielle Untersttzung
+geben werden. Kounos ist ein kleines D”rfchen auf den Plateaus des Gebirges.
+Die Reise dorthin ist nicht ganz einfach, aber Ihr seht nicht so aus, als ob
+Ihr schnell aufgeben wrdet."{WORDKounos}]
+
+Block 6         (Reiserouten 2)
+["Es kr„nkt mich ziemlich, wenn meine Gespr„chspartner nicht richtig zuh”ren.
+Aber sch”n, ich erz„hle es Euch nochmal. Also, nach Kounos wrde ich auf jeden
+Fall mal reisen. Zum einen wohnen dort einige interessante Leute, zum anderen
+liegt es auf dem Weg nach Srimalinar und ich gehe stark davon aus, da Ihr
+dort Leute findet, die Euch wichtige Hinweise und materielle Untersttzung
+geben werden. Kounos ist ein kleines D”rfchen auf den Plateaus des Gebirges.
+Die Reise dorthin ist nicht ganz einfach, aber Ihr seht nicht so aus, als ob
+Ihr schnell aufgeben wrdet."{WORDKounos}]
+
+Block 7         (Pa)
+["Alle Leute reden immer von einer Pastrae, die nach Kounos fhrt, aber das
+ist eigentlich schon mehr eine Legende. Es gab wirklich einmal eine Pastrae,
+aber es kommt nicht oft vor, da wir nach Kounos oder Srimalinar reisen, und
+auerdem gab es diesen st„ndigen Streit, wer denn nun fr die Instandhaltung
+der Strae verantwortlich w„re. Es gab nie eine Einigung und so hat sich auch
+niemand um den Pa gekmmert. Inzwischen ist er so verwildert und zugewachsen,
+da man ihn nicht mehr erkennt. Wenn Ihr ein bichen Klettergeschick habt,
+werdet Ihr den Weg trotzdem finden. Sucht nach Schlingpflanzen, die die
+Felsw„nde berwuchern und besteigt die Plateaus immer weiter in Richtung
+Norden."{WORDGebirgspa}]
+
+Block 8         (Kounos)
+["Sucht den alten Pa, obgleich die Pastrae eigentlich gar nicht mehr
+existiert."{WORDPa}]
+
+Block 9         (Kounos 2)
+["Wie gesagt, sucht den alten Pa, bzw. die nicht mehr existierende
+Pastrae."{WORDPa}]
+
+Block 10        (Kryte)
+["Das bin ich."]

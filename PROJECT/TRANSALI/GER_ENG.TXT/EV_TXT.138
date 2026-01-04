@@ -1,0 +1,65 @@
+NPC 138: Vrik, Passant
+=======================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin freier J„ger und Abenteurer und mache, was mir gerade in
+den Sinn kommt."]
+
+Block 1         Begrung 1.mal
+["Dsarii-ma! Welch fremde Gesichter in der Stadt! Kaum ist man eine Weile auf
+Reisen, sind interessante, „h, Leute in der Stadt!" {BLOK010}"Ich hoffe, Eure
+Reise war erfolgreich?"]
+
+block 2         Antw. MC1,10
+["Oh, ich bin froh, mit dem Leben davon gekommen zu sein. Ich war zu Beginn
+der Reise in der N„he des verwunschenen Ortes unterwegs, wo der alte Argim
+sein Unwesen trieb.^^ Sehr seltsame Raubtiere gibt es
+dort."{WORDArgim}{WORDRaubtiere}]
+
+Block 3         "RAUBTIERE"
+["Ja, die meisten davon recht aggressiv. Am schlimmsten war eine Kreatur, von
+der man nur das Maul im Boden sah, mit ein paar leuchtenden Fangarmen daran.
+Uners„ttlich, sage ich Euch! Zum Glck habe ich eine Fruchtsorte entdeckt, die
+diese Reim„uler in eine L„hmung versetzt."{WORDFruchtsorte}]
+
+Block 4         "FRšCHTE, FRUCHTSORTE"
+["Sie sind eigentlich ungeniebar, aber in einer Begegnung mit den Reim„ulern
+sehr ntzlich. Fr einen anst„ndigen Preis trete ich Euch gerne welche ab."
+{BLOK010}"Ja, die Frchte k”nnten von Nutzen fr uns sein." {BLOK011}"Nein,
+danke. Ich wte nicht, was wir damit sollten."]
+
+Block 5         Antwort auf MC4,11
+["Wie ihr meint. Ich mu zugeben, da es diese Tiere nicht allzu h„ufig gibt."]
+
+Block 6         Begr. 2x
+["Dsarii-ma!"]
+
+Block 7
+["Dsarii-ma! Nun, habt Ihr noch Bedarf an den Frchten zur Bet„ubung der
+Reim„uler?" {BLOK010}"Ja, die Frchte k”nnten von Nutzen fr uns sein."
+{BLOK011}"Nein, danke. Ich wte nicht, was wir damit sollten."]
+
+Block 8
+["Fr 40 Goldstcke berlasse ich Euch 5 Frchte. Einverstanden?"]
+
+Block 9
+["Tut mir leid, aber Ihr habt nicht genug Gold dabei."]
+
+Block 10
+[{INK 001}Vrik holt einige Frchte hervor.^^{INK 002} "Hier, bitte."]
+
+Block 11
+["He, Ihr habt nicht mehr genug Platz, um die Frchte unterzubringen. Kommt
+doch wieder, wenn Ihr etwas weniger beladen seid."]

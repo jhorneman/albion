@@ -1,0 +1,61 @@
+;ллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+;лл                                                                         лл
+;лл                                                                         лл
+;лл Example file list for software wave triggers                            лл
+;лл                                                                         лл
+;лл This file describes a set of digital audio samples to be played by the  лл
+;лл SoundStream digital audio system in response to MIDI Note On/Off events.лл
+;лл                                                                         лл
+;лл                              ФФФФФ                                      лл
+;лл                                                                         лл
+;лл At the beginning of the list file, use:                                 лл
+;лл                                                                         лл
+;лл    F=??? to declare the name of the wave library file to create         лл
+;лл                                                                         лл
+;лл          ??? represents a DOS filename in quotes; e.g. "demo.wvl"       лл
+;лл                                                                         лл
+;лл                              ФФФФФ                                      лл
+;лл                                                                         лл
+;лл For each digital audio sample to be played as a MIDI instrument, use:   лл
+;лл                                                                         лл
+;лл    B=nnn to set XMIDI Patch Bank Select (controller 114) value          лл
+;лл                                                                         лл
+;лл          Set this value to 0 if your sequences do not contain Patch     лл
+;лл          Bank Select controllers                                        лл
+;лл                                                                         лл
+;лл    P=nnn to set MIDI patch # for sound (B=0-126) or MIDI trigger key #  лл
+;лл          for rhythm sound (B=127 only)                                  лл
+;лл                                                                         лл
+;лл    R=nnn to set root MIDI note # for sound (B=0-126)                    лл
+;лл                                                                         лл
+;лл          For example, middle C (C5) is note number 60; if R= parameter  лл
+;лл          is not used, a value of 60 is assumed                          лл
+;лл                                                                         лл
+;лл          The R= parameter is not needed for bank 127 (rhythm) sounds    лл
+;лл                                                                         лл
+;лл                              ФФФФФ                                      лл
+;лл                                                                         лл
+;лл The following parameters are used with raw data files ONLY:             лл
+;лл                                                                         лл
+;лл    S=nnn to set sample playback rate (11025, 22050, etc.)               лл
+;лл                                                                         лл
+;лл    C=nnn to set # of digital channels (1=mono, 2=stereo)                лл
+;лл                                                                         лл
+;лл    W=nnn to set sample word size (8 or 16 bits)                         лл
+;лл                                                                         лл
+;лл                              ФФФФФ                                      лл
+;лл                                                                         лл
+;лл All .VOC/.WAV/raw source filenames must be enclosed in quotes ("")      лл
+;лл                                                                         лл
+;лл Up to 512 samples may appear in one list file.  Lines which begin with  лл
+;лл semicolons are treated as comments.  Blank lines are permitted.         лл
+;лл                                                                         лл
+;ллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллллл
+
+F="test.wvl"
+
+B=0 , P=121 , S=11025 , R=69 , C=1 , W=8 , "..\digital\toront02.raw"
+B=0 , P=122 , S=11025 , R=60 , C=1 , W=8 , "..\digital\toront11.raw"
+B=0 , P=123 , S=11025 , R=60 , C=1 , W=8 , "..\digital\toront10.raw"
+B=0 , P=124 , S=11025 , R=60 , C=1 , W=8 , "..\digital\toront05.raw"
+B=0 , P=125 , S=11025 , R=60 , C=1 , W=8 , "..\digital\toront13.raw"

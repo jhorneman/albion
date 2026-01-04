@@ -1,0 +1,47 @@
+161: Aretha, Kînigin von Aballon
+================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin die Kînigin von Aballon."{WORDAballon}]
+
+Block 1         "Begr. 1x"
+["Togi Din, Besucher Aballons. Willkommen im Obstgarten Gratogels."
+{BLOK010}"Wir sind auf der Suche nach einem groûen Metallkîrper, der vom
+Himmel kam. Habt Ihr von etwas von einem solchen Ereignis gehîrt?"
+{WORDAballon}{WORDGratogel}]
+
+Block 2         Antw. MC1
+["Ihr sprecht im Ernst? Nein, niemand hat mir von solch einem Wunder
+berichtet."]
+
+Block 3         Begr. 2x
+["Togi Din. Was wÅnscht Ihr von mir?"]
+
+Block 4         "obstgarten, aballon, obst"
+["Hier wachsen die schînsten FrÅchte Gratogels. Danu und Lugh lieben unser
+Land wohl genauso sehr wie ich, und so haben wir Jahr um Jahr gute Ernten."
+{WORDDanu}{WORDLugh}]
+
+Block 5         "obstgarten, aballon, obst" 2x
+["Wie ich schon sagte, wir sind stolz darauf, daû hier die schînsten FrÅchte
+Gratogels wachsen. Danu und Lugh lieben unser Land wohl genauso sehr wie ich,
+und so haben wir Jahr um Jahr gute Ernten."{WORDDanu}{WORDLugh}]
+
+Block 6         "Kînigin, Kînig, Stammeskînig"
+["Ihr steht vor der rechtmÑûigen Kînigin von Aballon.{WORDAballon}"]

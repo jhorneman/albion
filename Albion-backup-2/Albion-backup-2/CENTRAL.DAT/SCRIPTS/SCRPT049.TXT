@@ -1,0 +1,180 @@
+; **** Script 49: Beginn Phase 2
+
+;Joe
+npc_on 6
+npc_lock 6
+npc_jump 6 81 7 
+npc_turn 6 2
+
+show_map 
+update 4
+fade_from_black
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+party_move 0 1
+npc_move 6 0 1
+update 4
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 158
+fade_to_black
+show_map
+
+;Drannagh
+npc_lock 0
+npc_jump 0 84 20
+npc_turn 0 0
+
+;Irkith
+npc_lock 2 
+npc_jump 2 77 17
+npc_turn 2 1
+
+;Birrh
+npc_lock 3
+npc_jump 3 86 16 
+npc_turn 3 3
+
+;Frill
+npc_lock 4
+npc_jump 4 18 19
+npc_turn 4 0
+
+;Nemos
+npc_lock 5
+npc_jump 5 82 18 
+npc_turn 5 0
+
+;Rainer
+npc_on 7
+npc_lock 7
+npc_jump 7 84 18 0 
+npc_turn 7 0
+
+update 4
+
+fade_from_black
+
+pause 0
+
+npc_text 21 159
+npc_text 17 160
+npc_text 22 161
+npc_text 21 162
+party_member_text 1 163
+npc_text 22 164
+party_member_text 1 165
+npc_text 22 166
+npc_text 23 167
+npc_text 22 168
+party_member_text 1 169
+npc_text 21 170
+party_member_text 6 171
+npc_text 23 172
+npc_text 21 173
+party_member_text 6 174
+npc_text 21 175
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 176
+fade_to_black
+show_map
+
+party_jump 87 18
+party_turn 3
+
+;Joe
+npc_lock 6
+npc_jump 6 86 16 
+npc_turn 6 2
+
+;Drannagh
+npc_lock 0
+npc_jump 0 83 16
+npc_turn 0 1
+
+;Irkith
+npc_lock 2 
+npc_jump 2 83 19
+npc_turn 2 1
+
+;Birrh
+npc_lock 3
+npc_jump 3 82 21
+npc_turn 3 1
+
+;Frill
+npc_lock 4
+npc_jump 4 84 22
+npc_turn 4 0
+
+;Nemos
+npc_lock 5
+npc_jump 5 85 18 
+npc_turn 5 1
+
+;Rainer
+npc_lock 7
+npc_jump 7 86 20 
+npc_turn 7 0
+
+update 4
+
+fade_from_black
+update 20
+
+npc_text 21 177
+party_member_text 1 178
+npc_text 21 179
+npc_text 22 180
+npc_text 21 181
+npc_text 22 182
+party_member_text 1 183
+npc_text 21 184
+party_member_text 1 185
+npc_text 21 186
+party_member_text 6 187
+party_member_text 9 188
+npc_text 21 189
+party_member_text 9 190
+party_member_text 1 191
+npc_text 21 192
+party_member_text 1 193
+update 20
+text 194
+party_member_text 1 195
+text 196
+npc_text 23 197
+party_member_text 1 198
+party_member_text 1 199
+update 20
+text 200
+
+

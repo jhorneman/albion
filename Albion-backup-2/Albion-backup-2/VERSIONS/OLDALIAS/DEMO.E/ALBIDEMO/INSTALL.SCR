@@ -1,0 +1,128 @@
+// Install script for Albion English DEMO
+// 10th of February 1996
+// (c) 1995 Blue Byte Software GmbH
+
+
+// Set language
+SET_LANGUAGE 2
+
+// Load background image
+LOAD_BACKGROUND "install.lbm"
+
+// Go to setup if already installed, else go to install
+IF_EXISTS setup.ini
+	GOTO SetupMainMenu
+ELSE
+	GOTO InstallMainMenu
+ENDIF
+
+
+// Install main menu
+:InstallMainMenu
+
+MENU_START
+MENU_ENTRY "Albion demo: Installation"
+MENU_ENTRY "Install Albion demo" InstallGame
+MENU_ENTRY "Exit program" ExitInstallFromInstall
+MENU_END
+
+
+// Install the game
+:InstallGame
+
+// Select a target drive
+SELECT_TARGET_DRIVE 3000 InstallMainMenu
+
+// Select target path
+SELECT_TARGET_PATH ALBION
+
+// Confirm installation
+ASSERT "Continue installation?" InstallMainMenu
+
+// Change to target directory
+CD_TARGET
+
+// Delete everything that may already be here
+DELETE *.*
+DELETE DRIVERS
+DELETE XLDLIBS
+
+// Create directories
+MD SAVES
+MD DRIVERS
+MD XLDLIBS
+MD XLDLIBS\INITIAL
+MD XLDLIBS\CURRENT
+
+// Change to source directory
+CD_SOURCE
+
+// Inform the user that installation has started
+PRINT "Installing Albion."
+
+// Copy AIL drivers
+INSTALL DRIVERS\*.* DRIVERS\*.*
+
+// Copy initial position
+INSTALL XLDLIBS\INITIAL\*.* XLDLIBS\INITIAL\*.*
+
+// Copy palettes
+INSTALL XLDLIBS\PALETTE.000 XLDLIBS\PALETTE.000
+INSTALL XLDLIBS\PALETTE0.XLD XLDLIBS\PALETTE0.XLD
+
+// Copy stuff
+INSTALL ROOT\ALBION.EXE ALBION.EXE
+INSTALL ROOT\MAIN.EXE MAIN.EXE
+INSTALL ROOT\ALBION.PIF ALBION.PIF
+INSTALL ROOT\ALBILOW.BAT ALBILOW.BAT
+INSTALL ROOT\ALBION.VMC ALBION.VMC
+INSTALL SETUP.EXE SETUP.EXE
+INSTALL INSTALL.SCR INSTALL.SCR
+INSTALL INSTALL.LBM INSTALL.LBM
+INSTALL DOS4GW.EXE DOS4GW.EXE
+INSTALL README.TXT README.TXT
+
+INSTALL SAVES\SAVE.001 SAVES\SAVE.001
+
+CD_TARGET
+
+// Create and update setup file
+CREATE SETUP.INI
+UPDATE_INI
+
+// Inform the user that installation has been completed successfully
+INFO "The Albion demo has been installed."
+
+GOTO SetupMainMenu
+
+
+// Setup main menu
+:SetupMainMenu
+
+MENU_START
+MENU_ENTRY "Albion demo: Setup"
+MENU_ENTRY "Configure sound hardware" SetupSound
+MENU_ENTRY "Additional information" ReadDoc
+MENU_ENTRY "Exit program" ExitInstallFromSetup
+MENU_END
+
+
+:SetupSound
+CD DRIVERS
+EXECUTE_OWN_SCREEN SETSOUND.EXE
+CD ..
+GOTO SetupMainMenu
+
+
+:ReadDoc
+TEXT README.TXT
+GOTO SetupMainMenu
+
+
+:ExitInstallFromSetup
+INFO "Please start Albion from the drive you installed it on. Have fun!"
+END
+
+:ExitInstallFromInstall
+END
+

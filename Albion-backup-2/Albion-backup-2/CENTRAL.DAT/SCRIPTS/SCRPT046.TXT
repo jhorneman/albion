@@ -1,0 +1,758 @@
+; **** Script 46: Frill führt die
+;      Gefährten zu Canto's Haus
+
+; Erstmal Bild anzeigen
+song 42
+show_pic 6 0 0
+fade_from_black 
+pause 0
+text 46
+pause 0
+
+; vorbereiten
+fade_to_white
+fill_screen 194
+npc_lock 0
+npc_jump 0 159 240
+npc_turn 0 2
+party_turn 0
+update 4
+load_pal 45
+;fade_to_white
+show_map
+update 6
+fade_from_white
+
+update 40
+npc_text 111 47
+update 10
+text 48
+update 10
+
+; Los gehts. Kommentare beziehen sich auf 
+; Bewegungs Frill's. Party zieht mit 2
+; Abstand nach
+
+; 2 ro
+npc_move 0 1 -1
+party_move 0 -1
+update 4
+npc_move 0 1 -1
+party_move 0 -1
+update 4
+; 2 r
+npc_move 0 1 0
+party_move 1 -1
+update 4
+npc_move 0 1 0
+party_move 1 -1
+update 4
+; 4 ro
+npc_move 0 1 -1
+party_move 1 0
+update 4
+npc_move 0 1 -1
+party_move 1 0
+update 4
+npc_move 0 1 -1
+party_move 1 -1
+update 4
+npc_move 0 1 -1
+party_move 1 -1
+update 4
+; 4 r
+npc_move 0 1 0
+party_move 1 -1
+update 4
+npc_move 0 1 0
+party_move 1 -1
+update 4
+npc_move 0 1 0
+party_move 1 0
+update 4
+npc_move 0 1 0
+party_move 1 0
+update 4
+; 5 h
+npc_move 0 0 -1
+party_move 1 0
+update 4
+npc_move 0 0 -1
+party_move 1 0
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 4 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 5 h
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 5 r
+npc_move 0 1 0
+party_move 0 -1
+update 4
+npc_move 0 1 0
+party_move 0 -1
+update 4
+npc_move 0 1 0
+party_move 1 0
+update 4
+npc_move 0 1 0
+party_move 1 0
+update 4
+npc_move 0 1 0
+party_move 1 0
+update 4
+; 75 h
+npc_move 0 0 -1
+party_move 1 0
+update 4
+npc_move 0 0 -1
+party_move 1 0
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 4 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 5 l
+npc_move 0 -1 0
+party_move -1 -1
+update 4
+npc_move 0 -1 0
+party_move -1 -1
+update 4
+npc_move 0 -1 0
+party_move -1 0
+update 4
+npc_move 0 -1 0
+party_move -1 0
+update 4
+npc_move 0 -1 0
+party_move -1 0
+update 4
+; 14h
+npc_move 0 0 -1
+party_move -1 0
+update 4
+npc_move 0 0 -1
+party_move -1 0
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 3 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 7 h
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 6 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 3 l
+npc_move 0 -1 0
+party_move -1 -1
+update 4
+npc_move 0 -1 0
+party_move -1 -1
+update 4
+npc_move 0 -1 0
+party_move -1 0
+update 4
+; 4 lo
+npc_move 0 -1 -1
+party_move -1 0
+update 4
+npc_move 0 -1 -1
+party_move -1 0
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 18 h
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 11 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 5 h
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+; 4 lo
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move 0 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+npc_move 0 -1 -1
+party_move -1 -1
+update 4
+; 12 h
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move -1 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 4
+npc_move 0 0 -1
+party_move 0 -1
+update 10
+
+camera_lock
+npc_move 0 1 0
+party_move 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 1 0
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_turn 0 2
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 20
+
+text 49
+update 15
+npc_text 170 50
+party_member_text 1 51
+update 5
+npc_text 111 52
+update 5
+npc_text 170 53
+update 20
+
+npc_turn 1 0
+update 4
+npc_turn 0 0
+fade_to_black

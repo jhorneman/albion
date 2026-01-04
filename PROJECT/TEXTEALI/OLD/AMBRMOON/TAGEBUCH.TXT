@@ -1,0 +1,185 @@
+AMBERMOON - Tagebuch einer Entwicklung von Karsten Köper
+
+--------------------------------------------------------------------------------------------
+TAG 1: Am Anfang ward das Licht
+
+Nun ja wenn man über Ambermoon schreiben soll, dann kann man Amberstar nicht aussparen. Den
+alles was in Ambermoon vorkommt, hat seine anfänge in Amberstar. Genaugenommen waren da
+sogar zuerst die RPG-Editoren.
+
+Was sind die RPG-Editoren?
+Nun ja, als mir Jahre 1988 die Idee zu Amberstar kam, habe ich zuerst damit angefangen mir
+ein Editor Paket zu schreiben. Der Sinn dieser Editoren war und ist die riesigen 
+Datenmengen jedes Amber-Programms möglichst einfach zu erstellen und verändern zu können.
+Dazu muss auch gesagt werden das wir seit erscheinen von Amberstar theoretisch schon seine
+beiden Nachfolger veröffentlichen hätten können. Diese hätten dann zwar neue Grafiken und 
+eine neue Geschichte gehabt, aber sie hätten Amberstar ansonsten wie ein Ei dem anderen
+geglichen. Doch es kommt meist anders als man denkt: Siehe TAG 2  
+
+Das Editor Paket besteht aus drei verschidenen Editoren:
+
+1.RPG-Edit
+In diesem Editor werden die Daten der Gruppenmitglieder, NPC(Nicht Spieler Charakter) und
+Monster entwickelt. Desweiteren werden Gegenstände erschaffen und diese können dann in die
+Rucksäcke der verschiedenen Charaktere und Monster gepackt werden. Oder man kann 
+Schatztruhen und Händlerlisten mit ihnen auffüllen. Zusätzlich gibt es noch eine Funktion
+um Monstergruppen zusammen zustellen und diverse andere kleine daten Editoren.
+
+2.MAP-Edit 
+Die Hauptfunktion dieses Editors ist es die 2D-Karten von Amberstar zu editieren.
+Zusätzlich kann man mit seiner hilfe Ereignisse, Charktere und Monstergruppen auf den
+Karten verteilen.
+
+3.LAB-Edit
+Hiermit kann man Daten für 3D-Labyrinthe erstellen. Alle anderen Fuktionen diese Editors 
+gleichen zum grösten teil dem des Map-editors.
+--------------------------------------------------------------------------------------------
+TAG 2: Newsrooms
+
+Kurz nach dem Amberstar veröffentlicht wurde und die Englische Übersetzung fertig war.
+Habe ich mich mit allen Leuten die an Ambermoon beteiligt sind zusammen gesetzt und wir 
+haben darüber gesprochen was wir alles in Ambermoon machen könnten. Im Laufe der folgenden
+Meetings, haben sich dann immer mehr neue Ideen ergeben und ich konnte nicht mehr umhin die
+Editoren komplett umzuschreiben. Und das hat sehr viel Zeit gekostet, aber dafür wird man
+von Ambermoon nicht behaupten können es wäre nur ein neuer Aufguss von Amberstar. So wie
+es eine bestimmte andere Firma mit ihren immer wieder gleich aussehenden Rollenspielen 
+macht. In die Entwicklung von Amberstar sind auch viele Ideen und Anregungen von Amberstar
+Spielern die uns einen Brief schrieben oder uns angerufen haben eingeflossen.
+
+Einige der Änderungen und Neuheiten in Ambermoon:
+1.Es gibt jetzt 10 Speicherplatze für Savegames
+2.In Kisten und Truhen können jetzt auch Gegestände, Gold und Rationen gelegt werden
+3.Die Steuerrung im ganzen und im besonderen im Inventory wurde wesentlich verbessert
+4.Der Maßstab der 2D Karten wurde erheblich vergrößert
+5.Die 3D-Dungeons wurden vom Blockverfahren auf Bitmap Polygone umgestellt
+  (Vergleichbar mit Ultima Underworld oder Legends of Valor)
+6.Auf dem Amiga wird der 5-Plane Modus(32Farben) benutzt
+7.Der Automapper wurde übersichtlicher und schöner z.B. Gotopoints - Das heißt wenn man
+  in einer Stadt einmal den Waffenhändler besucht hat kann man von jedem punkt der Stadt
+  automatisch zu ihm gelangen.
+8.Das gesammte Spiel wird ca. 3-4 mal größer sein als Amberstar 
+9.Der Kampfscreen wurde überarbeitet - Monster können jetzt auch in die erste Reihe gelangen
+--------------------------------------------------------------------------------------------
+  
+TAG 3: Work in Progress!
+
+Wie entsteht ein Teil der Amber Trilogy?
+
+Nun so wie in den alten Tagen der Computerspiele, wo eine Person allein das Design,Grafik,
+Musik und Programm gestaltet hat geht es schon lange nicht mehr. Das ganze wird mehr auf
+ein ganzes Team von leuten verteilt als da wären:
+
+Hier eine Liste von einigen Leuten die an der Entwicklung von Ambermoon beteiligt sind
+und was sie bereits getan oder in nächster zeit tun werden:
+
+Design: Karsten Köper
+Ich habe mit der Überarbeitung der Editoren angefangen und danach mit dem Editieren der 
+Landkarte von Lyramion. Allein diese Landkarte ist 256 Abschitte a 50*50 Grafikblöcke groß.
+Zum vergleich dazu ist die Landkarte in Amberstar nur 64 Abschitte groß. Insgesamt hatte
+Amberstar 154 verschiedene 2D UND 3D Karten. Ambermoon wird fast 1000 verschiedene Karten 
+haben. Danach werde ich mit dem Editieren der Aufgaben und Dungeons beginnen.
+
+Programm:Jurie Horneman
+Jurie hat zu ersteinmal die alten Sourcen von Amberstar von dem Atari ST auf den Amiga
+konvertiert. (Amberstar ist auf dem Atari St entwickelt worden und Ambermoon wird auf
+dem Amiga entwickelt.) Danach hat er sich daran gemacht das System zu verbessern und die
+neuen Ideen zu Programmieren. Vor allen Dingen hat er sich im Bereich der Spielsteuerung
+sehr viel Mühe gegeben. Alle die bereits Amberstar gespielt haben, werden wenn sie Ambermoon
+spielen erkennen wieviel arbeit und neue Ideen er in die Entwicklung der neuen 
+Spielsteuerung gesteckt hat. Danach hat er sich an die Programmierung der 2D-Features
+und der Implementierung der
+Bitmap-Polygon-Dungeons gemacht, deren 3D-Technik von Michael Bittner stammt. 
+Zur Zeit arbeitet er am neuen Kampfscreen.
+
+Grafik: Thorsten Mutschall
+Thorsten hat am Anfang der Entwicklung von Ambermoon die Grafiken für die Rahmen und
+Fenster der Bildschirme gemalt. Danach hat er einige grafiken für die neuen 3D-Dungeons 
+gezeichnet und dann die Bilder für Händler und zwischen Sequenzen überarbeitet. Dann hat
+er angefangen die Monster für den Kampfscreen zu erstellen.
+
+Musik: Matthias Steinwachs
+Allen die bereits NSP oder Lionheart gespielt haben wird Matthias kein Unbekannter mehr
+sein. Bereits seit mitte letzten Jahres ist Matthias damit beschäftigt Musiken für Ambermoon
+zu komponieren und das was er bis jetzt schon für Ambermoon erschaffen hat wird auch den
+zukünftigen Spieler von Ambermoon verzaubern.
+--------------------------------------------------------------------------------------------
+
+TAG X: Das war erst der Anfang
+
+Selbst während wir Ambermoon Entwickeln, kommen uns neue Ideen von denen viele zwar erst
+im 3.Teil der Amber Trilogy verwirklicht werden können. Aber einige dieser neuen Ideen
+sind mit relativ geringfügigem Aufwand zu verwirklichen so das wir auch diese noch in 
+Ambermoon aufnehmen werden. 
+Im ganzen kann ich nur sagen, das für den jenigen dem Amberstar Spaß gemacht hat. Ein 
+Erlebniß sondergleichen mit Ambermoon ins Haus steht.
+Ich möchte hier auch noch einen persöhnlichen Aufruf folgen lassen:
+All denen die Amberstar gekauft haben, möchte ich hiermit danken und ich hoffe das Ihnen
+das Spielen von Amberstar genau soviel Freude bereitet hat wir mir das Entwickeln. Alle die
+Kritiken, Ideen oder Änderungs Vorschläge haben, bitte ich hiermit mir zu schreiben. Wir 
+werden eure Wünsche zwar nicht mehr in Ambermoon unterbringen können. Aber schließlich 
+wird es ja den nächsten Teil geben und in diesen können wir dann die Änderungen 
+unterbringen. Eurer Briefe richtet Ihr bitte an die folgende Adresse:
+
+			Thalion Software GmbH
+			Z.Hd. Karsten Köper
+			Königstr.16
+			W-4830 Gütersloh 
+--------------------------------------------------------------------------------------------
+
+Randnotizen:
+Ich wurde auch aufgefordert meine Meinung zu den Rollenspielen der letzten Zeit abzugeben.
+Zuvor möchte ich aber klarstellen das ich das folgende nicht als Vergleich mit meiner 
+Arbeit bei Thalion sehe. Sondern aus meiner fast 12 Jährigen Erfahrung und persöhnlichen
+Meinung als Käufer und Spieler von Computer Rollen Spielen:
+
+MIGHT & MAGIC IV
+Hm, hier könnte man beinahe sage außen hui und innen Pfui. Da hat mir MM3 noch wesentlich
+besser gefallen. Doch schon im 3.Teil war mir zu wenig Story drin. Zwar hat MM4 wirklich
+tolle Grafiken und einen fantastischen Sound (zumindest auf einer Roland SCC1 in Verbindung
+mit einem Soundblaster Pro) aber was das Spiel selber anbelangt ist es doch sehr öde. Man 
+klappert einfach die Weltkarte ab und rauscht duch die Städte und Dungeons. Ich habe nur
+knapp 5 Tage für MM4 gebraucht und war danach sehr enttäuscht fast 90 DM dafür bezahlt zu
+haben.
+
+WIZARDRY VII
+Wau, was für ein Unterschied zu MM4. Nicht nur das die Grafik und der Sound fantastisch	
+sind, nein auch die Story ist riesig. Ich habe fast 4 Monate an W7 gesessen und bis auf 
+ein paar Kleinigkeiten war es ein Spielvergnügen von vorne bis hinten. Nur die mickrige 
+Endsequenz und einige Dinge an dem Spielsystem haben mich gestört.
+
+ULTIMA VII
+Zu Ultima muß ich sagen das ich der Ultima Fan überhaupt bin. Ich kann eigentlich sagen
+das mit Ultima meine Leidenschaft für Rollenspiele überhaupt anfingen. 
+Über U7 bin ich allerdings ein bischen verärgert. Zum einem war mein vorheriger PC386/25Mhz
+gar nicht in der lage eine vernüftige Spielgeschwindigkeit herzustellen. Erst als ich mir
+einen 486/50Mhz PC gekauft habe war ich wieder glücklich. Das Zweite waren die grässlichen
+Bugs in der ersten Version. Die Bugs sind dafür verantwortlich das ich U7 noch nicht zu
+ende gespielt habe. Nach etwa 2 Monaten bakam ich ein Update welches sich aber weigerte
+meine alten Spielstände zu benutzten. Also wirklich Leute ich kann ja verstehen (Aus 
+eigener schmerzlicher erfahrung) das man nie alle Bugs findet. Aber das das Update die
+alten Spielstände nich mag, ist eine unverschähmtheit. Ansonsten ist U7 eine hervorragende
+weiterführung der Ultima Legende und allen Ultima fans zu empfehlen.
+
+ULTIMA UNDERWORLD I + II
+Einfach perfekt, das wird die Zufunft der Computer Rollen Spiele. Zumindest was die 
+Darstellung der Dungeons angeht. Die einzigen Dinge die mich gestört haben, sind das es
+keine richtige Welt gab und die Echtzeitkämpfe(Ich hasse sie in CRS).
+
+LEGENDS OF VALOR (Wird von einigen Leuten als direkte Konkurenz von Ambermoon auf 16Bit 
+		  Angesehen.)
+Ich habe bisher nur ein paarmal kurz hineingeschaut, und kann nur sagen,das eine neue
+Technik allein(Bitmap Polygon Dungeons) noch kein gutes Spiel ausmacht. Wenn man nur Wert
+auf Technik legt und auf den WOW effect hofft wird das auf kurz oder lang immer schiefgehen.
+--------------------------------------------------------------------------------------------
+
+
+Hallo Hans
+Wenn ich mir so den Text anschaue den ich gerade geschrieben habe,dann glaube ich das es
+nich 100% das ist was du haben wolltest. Aber ich hoffe du kannst Trozdem etwas damit 
+anfangen. Falls du noch Fragen hast (Du sprachst von einem Kleinem Interview) dann ruf
+mich doch einfach an. Tel. 05241-26133 oder Sa-So 0231.717122
+
+ 		
+			Bis dann 
+				
+				Karsten

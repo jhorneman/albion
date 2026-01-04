@@ -1,0 +1,104 @@
+
+Maptextfile fÅr Zeichensatz 10
+=============================================================================
+
+Block 0
+[-frei-]
+
+Block 1
+[Ein Laubbaum.]
+
+Block 2
+[Eine Schlinggraspflanze.]
+
+Block 3
+[Blattpflanzen.]
+
+Block 4
+[Ein Kaktus.]
+
+Block 5
+[Kleine BodengewÑchse.]
+
+Block 6
+[Felsen.]
+
+Block 7
+[Ein Dach aus Ziegeln.]
+
+Block 8
+[BrÅckengelÑnder.]
+
+Block 9
+[Eine Treppe.]
+
+Block 10
+[Ein alter umgestÅrzter Baumstamm.]
+
+Block 11
+[Laub, daû von den BÑumen herabgefallen ist.]
+
+Block 12
+[Diese Pflanze pumpt mit ihren pulsierenden Bewegungen Wasser aus dem Boden an
+die Ober|flÑche.]
+
+Block 13
+[Ein Wasserfall.]
+
+Block 14
+[Felsbrocken.]
+
+Block 15
+[Eine TÅre.]
+
+Block 16
+[Eine SÑule.]
+
+Block 17
+[Eine abgebrochene SÑule.]
+
+Block 18
+[Hier flieût Wasser aus.]
+
+Block 19
+[Eine ôlfackel.]
+
+Block 20
+[Ein Schild.]
+
+Block 21
+[Eine wehende Fahne.]
+
+Block 22
+[Ein Hocker.]
+
+Block 23
+[Stromschnellen.]
+
+Block 24
+[Ein Tisch.]
+
+Block 25
+[Ein aufgeschlagenes Buch.]
+
+Block 26
+[Ein Buch.]
+
+Block 27
+[Wasser.]
+
+Block 28
+[Groûe PilzgewÑchse.]
+
+Block 29
+[Eine Wasserpflanze.]
+
+Block 30
+[Eine blÅhende Wasserpflanze.]
+
+Block 31
+[Eine Metallstange.]
+
+Block 32
+[Eine Steinplatte.]
+

@@ -1,0 +1,60 @@
+191: Robert Ashley, technischer Leiter
+=======================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin der technische Leiter fÅr alle Segmente."{WORDSegmente}
+{WORDLeiter}]
+
+Block 1         "Begr. 1x"
+["Hallo, Driscoll."]
+
+Block 2         "Leiter"
+["Wann immer es irgendwo klemmt, kommen die Techniker zu mir und erwarten
+wundertÑtige Lîsungen. Na, ich will mich nicht beschweren, dieser Flug ist
+bisher vîllig reibungslos verlaufen. Die TORONTO ist wirklich ihr Geld
+wert."{WORDTORONTO}]
+
+Block 3         "Leiter" 2x
+["Nun, wie ich schon sagte: Wann immer es irgendwo klemmt, kommen die
+Techniker zu mir und erwarten wundertÑtige Lîsungen. Na, ich will mich nicht
+beschweren, dieser Flug ist bisher vîllig reibungslos verlaufen. Die TORONTO
+ist wirklich ihr Geld wert."{WORDTORONTO}]
+
+Block 4         "Segmente"
+["Die TORONTO hat von ihren acht Segmenten ja nur zwei, in denen
+Lebenserhalt|ungsysteme installiert sind: Dieses hier und das Segment, in dem
+die Secus, die Krankenstation und der Kraftwerkskern untergebracht wurden. Die
+Åbrigen Segmente beinhalten Maschinen und Material zum Rohstoffabbau und
+mÅssen wÑhrend des Fluges nicht gewartet werden, machen mir also auch keinen
+Trouble."{WORDSecus}]
+
+Block 5         "Segmente" 2x
+["Nicht verstanden? Also nochmal: Die TORONTO hat von ihren acht Segmenten
+zwei, in denen Lebenserhalt|ungsysteme installiert sind: Dieses hier und das
+Segment, in dem die Secus, die Krankenstation und der Kraftwerkskern
+untergebracht wurden. Die Åbrigen Segmente enthalten Maschinen und Material
+zum Rohstoffabbau und mÅssen wÑhrend des Fluges nicht gewartet
+werden."{WORDSecus}]
+
+Block 6
+[{BLOK000}Was kannst Du sagen Åber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demnÑchst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 7
+["Bis irgendwann mal!"]

@@ -1,0 +1,51 @@
+
+NPC 105: Fradh, ein JÑger. Immer im unteren Stock.
+==================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+
+
+Block 0
+[{BLOK000}"Ich bin einer der JÑger dieses Clans.{WORDJÑger}{WORDClan}"]
+
+
+Block 1         BegrÅûung 1. mal
+["Dsarii-ma, GÑste des Hauses. Wie ich sehe, hat Giria Euch wieder in die
+Senkrechte bekommen.{WORDGiria}" {BLOK010}"Dsarii-ma. Sagt bitte, was ist der
+Zweck dieses Teil des Hauses?"]
+
+Block 2         Antwort MC1,1
+["Dies hier ist der Ruhebereich des Hauses. Ich werde hier wohl noch einige
+Zeit zubringen, denn ich bin bei einer Jagd verletzt worden.{WORDJagd}"]
+
+
+Block 3         BegrÅûung normal
+["Dsarii-ma. Was kann ich noch fÅr Euch tun?"]
+
+
+Block 4         "GIRIA"
+["Giria versorgt die Verwundeten unseres Clans, so wie sie Euch geholfen hat.
+Sie ist eine wunderbare Frau, aber recht leicht zu beleidigen, nehmt Euch in
+acht.{WORDClan}"]
+
+
+Block 5         "JAGD"
+["Ja, wir waren unserer Beute dicht auf den Fersen, es war im nordwestlichen
+Teil Nakiridaanis, als ich auf eine Gruppe Krondir stieû. Bis mir die anderen
+zur Hilfe eilten, hatten mich die Krondir schon ganz nett
+angeknabbert.{WORDNakiridaani}{WORDKrondir}"]
+
+Block 6         "Krondir"
+["Die Krondir sind gefÑhrliche Raubtiere von riesiger Gestalt. Sie sind als
+Gegner gefÅrchtet, die Weibchen gelten als besonders wild. Sie tragen eine
+Trii-Ñhnliche Struktur in ihrem Stirnhorn, das als SchmuckstÅck sehr beliebt
+ist.^^Aber wenn Ihr Euch fÅr die Jagd interessiert, solltet Ihr ein Wort mit
+Krinn, dem Stri der Jagd wechseln. Ihr erkennt ihn an seinem graubraunen
+Fell."{WORDTrii}{WORDStri}]

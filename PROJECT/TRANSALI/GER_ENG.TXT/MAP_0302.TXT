@@ -1,0 +1,331 @@
+
+Cutmaptextfile
+---------------------------------------------------------------------
+
+Block 0            (frei)
+[ ]
+
+Block 1
+[Ein Sicherungskasten.]
+
+Block 2
+[Ein Sessel.]
+
+Block 3
+[Eine Liege.]
+
+Block 4
+[Das Steuerpult fÅr den Atomreaktor.]
+
+Block 5
+[Ein Servicepanel.]
+
+Block 6
+[Eine Steuerungskonsole.]
+
+Block 7
+[Eine Flugsteuerungskonsole.]
+
+Block 8
+[Ein Kontrollpult.]
+
+Block 9
+[Eine chemische Toilette.]
+
+Block 10
+[Ein Schrank.]
+
+Block 11
+[Eine SpÅle.]
+
+Block 12
+[HandtÅcher.]
+
+Block 13
+[Zahnputzzeug.]
+
+Block 14
+[Eine Anzeige fÅr die Korridor-öberwachung.]
+
+Block 15
+[Kontroll-Anzeigen.]
+
+Block 16
+[Ein Teil des Reaktors.]
+
+Block 17
+[FÑsser mit MÅll, Wasser, Gift- und Rohstoffen.]
+
+Block 18
+[Eine ausgeschaltete Konsole.]
+
+Block 19
+[Eine Lampe.]
+
+Block 20
+[Ein Teller.]
+
+Block 21
+[Ein Glas.]
+
+Block 22
+[Ein Becher.]
+
+Block 23
+[Ein BehÑlter.]
+
+Block 24
+[Eine Flasche.]
+
+Block 25
+[Eine Kanne.]
+
+Block 26
+[Eine Dose.]
+
+Block 27
+[Ein GefÑû.]
+
+Block 28
+[Ein Pfeffer- und ein Salzstreuer.]
+
+Block 29
+[Sojasoûe.]
+
+Block 30
+[Ein Topf.]
+
+Block 31
+[Eine kleine Dose.]
+
+Block 32
+[Eine Schaufel.]
+
+Block 33
+[Ein Spaten.]
+
+Block 34
+[Ein SchraubenschlÅssel.]
+
+Block 35
+[Ein Schraubenzieher.]
+
+Block 36
+[Eine Handkonsole.]
+
+Block 37
+[Ein PDA. (Personal Digital Assistent)]
+
+Block 38
+[Eine Zange.]
+
+Block 39
+[Besteck und ein Becher.]
+
+Block 40
+[Geschirr.]
+
+Block 41
+[Eine Automatik-TÅre.]
+
+Block 42
+[Ein Shuttle.]
+
+Block 43
+[Container.]
+
+Block 44
+[Eine Dusche.]
+
+Block 45
+[Ein Fahrzeug.]
+
+Block 46
+[Bodenmarkierungen.]
+
+Block 47
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 49
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 50
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 51
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 62
+["Auf der Konsole dort ist ein Grundriû dieses Bereiches zu sehen!"]
+
+Block 63
+[Eine Konsole mit groûer BildflÑche.]
+
+Block 64
+["Am Ende des L-fîrmigen Abschnitts im Westen sollte ein Zugang zur
+Service-Ebene sein. Das ist unser Ziel."]
+
+Block 65
+[Die TÅr ist verschlossen.]
+
+Block 66
+["Die TÅr fÅhrt sowieso nicht zu unserem Ziel. Gehen wir weiter."]
+
+Block 67
+["Alles ist ruhig. Wir scheinen keinen Alarm ausgelîst zu haben."]
+
+Block 68
+["Wir sind noch immer nicht entdeckt worden. Hoffentlich lÑuft alles weiter so
+glatt."]
+
+Block 69
+["Noch immer kein Alarm. Fast zu schîn, um wahr zu sein."]
+
+Block 70
+["Mist. Dahinter mÅûte sich das Servicepanel befinden, das wir suchen."]
+
+Block 71
+["Ah, in der Nische dort steht eine Konsole mit Zugriff auf das
+Kommu|nikations|netz."]
+
+Block 72
+[Eine Codeeingabetastatur.]
+
+Block 73
+[Hier liegt ein Spezial-Schraubenzieher.]
+
+Block 74
+[Deaktivierte Lasersperren.]
+
+Block 75
+[Aktivierte Lasersperren.]
+
+Block 76
+["Wir mÅssen hîllisch vorsichtig mit diesen Lasersperren sein! Die kleinste
+BerÅhrung ist tîdlich!"]
+
+Block 77
+[Eine deaktivierte Kommunikations|konsole.]
+
+Block 78           Tom
+["O.K. Ich versuche jetzt, Joe's Dokumentation Åber Albion in das Bordnetz
+einzuspeisen.^^Danach haben wir natÅrlich die AI und die SicherheitskrÑfte am
+Hals. Bereitet Euch auf einen harten Kampf vor."]
+
+Block 79
+[Tom legt das Speichermedium mit den Videodaten Åber das Leben auf dieser Welt
+in die Konsole ein und setzt den von Joe mitgegebenen Chip ein, um die
+öbertragung mîglichst lange vor dem Zugriff der AI zu schÅtzen.]
+
+Block 80           Joe
+["Laût mich mal an das Ding. Ich werde versuchen, die Konsole so zu
+manipulieren, daû die öbertragung mîglichst lange vor dem Zugriff der AI
+gesperrt bleibt."]
+
+Block 81           Tom daraufhin
+["Danach haben wir natÅrlich die AI und die SicherheitskrÑfte am Hals.
+Bereitet Euch auf einen harten Kampf vor."]
+
+Block 82
+[Joe legt das Speichermedium mit den Videodaten Åber das Leben auf dieser Welt
+in die Konsole ein und manipuliert eine Weile daran herum.]
+
+Block 83
+["Das wÑr's! Die öbertragung unserer Dokumentation auf alle Videoschirme und
+Lautsprecher der TORONTO beginnt... jetzt!"]
+
+Block 84
+[{INK 001}Die Wiedergabe der Aufzeichnung beginnt und Joe's Stimme hallt
+plîtzlich aus allen Lautsprechersystemen:^^{INK 002} "An die Besatzung der
+gesamten TORONTO-Anlage. Dies sind Aufzeichnungen, die gegen den Willen der
+SchiffsfÅhrung in die Bordsysteme eingespeist werden. Sie dokumentieren, daû
+auf es diesem Planeten hochentwickeltes Leben und sogar Zivilisationen
+intelligenter Bewohner gibt.^^Wir, Tom Driscoll, Joe Bernard und eine Gruppe
+hier Beheimateter, sind in diesem Augenblick in die TORONTO eingedrungen. Alle
+sind dringend aufgefordert, das Schiff zu verlassen. Wir sind entschlossen,
+alle notwendigen Maûnahmen zu ergreifen, um der Zerstîrung dieser Welt durch
+die TORONTO zuvorzukommen. Es wird von der Schiffs|fÅhrung versucht werden,
+diese öbertragung vorzeitig zu unterbrechen. Hîrt und seht nun, wie es auf
+dieser Welt wirklich aussieht..."^^ {INK 001}Die Dokumentation lÑuft, bislang
+unbehelligt, und zeigt Szenen der Natur und der Bewohner Albions.]
+
+Block 85
+[Eine Alarmsirene mischt sich unter Joe's Lautsprecherstimme!]
+
+Block 86
+[Sicherheitsleute erscheinen!]
+
+Block 87
+[{INK 002}"Dort sind die Terroristen!"{INK 001}^^Die Secus greifen an!]
+
+Block 88
+[Die Secus greifen sofort wieder an!]
+
+Block 89
+[Eine Leiter nach unten.]
+
+Block 90
+[Eine Tastatur zur Eingabe von Zahlencodes.]
+
+Block 91
+[{TECF}{CNTR}ôFFNUNGSCODE EINGEBEN:]
+
+BLOCK 92
+[{TECF}{CNTR}FALSCHER CODE. ôFFNUNG VERWEIGERT.]
+
+BLOCK 93
+[{TECF}{CNTR}CODE KORREKT. ôFFNE SERVICEPANEL.]
+
+Block 94
+["Ah, das Servicepanel. Der Code fÅr diesen Zugang lautet 1712."]
+
+Block 95
+["Der ôffnungscode fÅr dieses Segment war... Ach ja, 1712!"]
+
+BLOCK 96
+[{TECF}{CNTR}CODE KORREKT. ôFFNE TöR.]
+
+Block 97
+[Das Schott nach drauûen.]
+
+Block 98
+["Nur dieser Abschnitt des Servicedecks liegt noch zwischen uns und dem
+Fusionskraftwerk.^^Laût uns gehen."]
+
+Block 99
+["Geschafft! Laût uns zuerst eine Konsole suchen, bei der wir unsere
+Dokumentation Åber Albion einspeisen kînnen; das wird erstmal fÅr einigen
+Trubel an Bord sorgen."]

@@ -1,0 +1,32 @@
+NPC 114: Vris, "Hausmeister"
+============================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+
+
+Block 0
+[{BLOK000}"Ich kmmere mich um das Wohlergehen des Ratsgeb„udes und seiner
+Bewohner. Ich sorge beispielsweise fr ausreichende Vorr„te von allem und
+achte auf den guten Zustand des Geb„udes."]
+
+Block 1         Begrung
+["Dsarii-ma und Willkommen im Ratsgeb„ude."]
+
+Block 2         Begrung 1x WENN: Phase 1
+["Dsarii-ma! Was fr eine schreckliche Tat Eure Artge|nossen in diesem
+ehrwrdigen Haus begangen haben! Und ich hatte den fliehenden Menschen fast
+schon gepackt!" {BLOK010}"Habt Ihr bei dem Mord irgend etwas gesehen, was uns
+weiter|helfen k”nnte, Vris?"]
+
+Block 3         Antwort auf MC2,10
+["Nein, auer vielleicht, da der M”rder in sdwestlicher Richtung geflohen
+ist.^^ Und er hatte diesen seltsamen Geruch an sich, samenkornartig. Ich bin
+durch alle Gewrze meiner Kche gegangen, ohne etwas „hnliches zu finden."]

@@ -1,0 +1,125 @@
+156: Garris, der Fischer
+========================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Fischer und Seefahrer."{WORDSeefahrer}]
+
+Block 1         "Begr. 1x"
+["Togi Din, Fremde. Was kann ein einfacher Seefahrer fr Euch tun?"
+{BLOK010}"Togi Din, Garris! Wir suchen eine Passage nach Maini, dem Land im
+Osten."{WORDSeefahrer}{WORDSchiffsreise}]
+
+Block 2         Antw. MC1
+["Aber natrlich. Der Preis fr eine šberfahrt betr„gt 200 Goldstcke.
+Allerdings ben”tigt jeder Reisende eine Genehmigung von Tharnos, unserem
+K”nig. Sprecht ihn auf Eure Schiffsreise an, Ihr findet ihn in seinem Haus in
+der Mitte des Dorfes."{WORDTharnos}{WORDSchiffsreise}]
+                DANN: +SCHIFFSREISE+
+
+Block 3         "Schiffsreise"
+["Habt Ihr eine Erlaubnis von Tharnos fr Eure Reise?"]
+
+Block 4         "Schiffsreise" wenn Erlaubnis schon gegeben
+["Es ist alles fr Eure Reise bereit, es kann losgehen, sobald ich die 200
+Goldstcke von Euch bekommen habe."]
+
+Block 5         WENN: Erlaubnis gegeben
+["Ah, Tharnos' Erlaubnis, vorzglich. Sowie Ihr jetzt noch 200 Goldstcke bei
+Euch habt, wird die Reise beginnen!"]
+
+Block 6         "Fischer, Seefahrer"
+["Ich kann mit Stolz sagen, da ich noch nie einen Passagier verloren habe und
+auerdem der beste Fischer des Dorfes bin!"]
+
+Block 7         Begr. 2x
+["Togi Din, Fremde. Seid Ihr bereit fr die Schiffsreise?^^Ihr wit, fr 200
+Goldstcke und mit Tharnos' Erlaubnisdokument kann es losgehen!"]
+
+Block 8         Begr. nach Reise
+["Togi Din! Da ich Euch noch mal wieder sehe! Wenn Ihr noch eine Schiffsreise
+ben”tigt, stehe ich Euch gerne zur Verfgung!"]
+
+Block 9
+["Bevor ich das Geld fr die Reise akzeptiere, mu ich erst um Tharnos'
+Erlaubnis bitten."]
+
+Block 10
+["Sehr gut. Lat uns sofort aufbrechen!"]
+
+Block 11
+["Togi Din, Fremde. Seid Ihr bereit fr die Schiffsreise?^^Ihr wit: Fr 200
+Goldstcke und mit Tharnos' Erlaubnisdokument kann es losgehen!" {BLOK010}"Ja,
+wir haben Gold und Erlaubnis. Die Reise kann beginnen." {BLOK011}"Wir haben
+alles, aber wir m”chten noch ein wenig warten."]
+
+Block 12
+["Togi Din, Fremde. Seid Ihr bereit fr die Schiffsreise?^^Ihr wit: Fr 200
+Goldstcke und mit Tharnos' Erlaubnisdokument kann es losgehen!" {BLOK010}"Wir
+haben leider noch keine Erlaubnis von Tharnos. Lebt wohl."]
+
+Block 13
+["Togi Din, Fremde. Seid Ihr bereit fr die Schiffsreise?^^Ihr wit: Fr 200
+Goldstcke und mit Tharnos' Erlaubnisdokument kann es losgehen!" {BLOK010}"Uns
+fehlt nur noch das Gold. Wir kommen wieder, sobald wir genug Gold haben. Lebt
+wohl.."]
+
+Block 14
+["Wie Ihr meint. Bis bald."]
+
+Block 15
+["Sprecht mit Tharnos. Fr einen kleinen Gefallen gibt er Euch bestimmt eine
+Erlaubnis."]
+
+Block 16
+["Viel Glck beim Verdienen des Goldes."]
+
+Block 17           Begr. nach Reise
+["Togi Din! Da ich Euch noch mal wieder sehe! Wenn Ihr noch eine Schiffsreise
+ben”tigt, stehe ich Euch gerne zur Verfgung!" {BLOK010}"Ja, warum nicht. Hier
+habt Ihr die 200 Goldstcke." {BLOK011}"Nein, danke. Vielleicht sp„ter."]
+
+Block 18           Begr. nach Reise
+["Togi Din! Da ich Euch noch mal wieder sehe! Wenn Ihr noch eine Schiffsreise
+ben”tigt, stehe ich Euch gerne zur Verfgung!" {BLOK010}"Nein, danke. Wir
+haben im Augenblick das Gold nicht."]
+
+Block 19           Scripttext
+[Die Reise mit Garris verl„uft ein weiteres Mal ruhig und problemlos.^^Bald
+sind {LEAD}{NAME} und die Gef„hrten sicher in Beloveno angekommen.]
+
+Block 20         Wenn schon alles dabei
+["Aber natrlich. Der Preis fr eine šberfahrt betr„gt 200 Goldstcke.
+Allerdings ben”tigt jeder Reisende eine Genehmigung von Tharnos, unserem
+K”nig. Sprecht ihn auf Eure Schiffsreise an, Ihr findet ihn in seinem Haus in
+der Mitte des Dorfes." {BLOK010}"Wir haben das Gold und die Erlaubnis bereits!
+Die Reise kann beginnen." {BLOK011}"Wir haben alles, aber wir m”chten noch ein
+wenig warten."]
+
+Block 21         Erlaubnis fehlt
+["Aber natrlich. Der Preis fr eine šberfahrt betr„gt 200 Goldstcke.
+Allerdings ben”tigt jeder Reisende eine Genehmigung von Tharnos, unserem
+K”nig. Sprecht ihn auf Eure Schiffsreise an, Ihr findet ihn in seinem Haus in
+der Mitte des Dorfes." {BLOK010}"Wir haben Tharnos Erlaubnis noch nicht!"]
+
+Block 22         Gold fehlt
+["Aber natrlich. Der Preis fr eine šberfahrt betr„gt 200 Goldstcke.
+Allerdings ben”tigt jeder Reisende eine Genehmigung von Tharnos, unserem
+K”nig. Sprecht ihn auf Eure Schiffsreise an, Ihr findet ihn in seinem Haus in
+der Mitte des Dorfes." {BLOK010}"Wir haben das Gold noch nicht, wir kommen
+sp„ter noch einmal wieder."]

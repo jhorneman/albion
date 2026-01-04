@@ -1,0 +1,269 @@
+
+MAP 151, TORONTO, TEIL 1
+========================
+
+Block 0
+[!]
+
+Block 1
+[Die Serviceroboter, normalerweise mit ihren r„tselhaften Aufgaben
+besch„ftigt, bewegen sich zielstrebig auf {LEAD}{NAME} und die Gef„hrten zu.]
+
+Block 2
+[Bodenplatte leuchtet auf.]
+
+Block 3
+[Hier befindet sich eine Bodenplatte mit einer transparenten Leuchtfl„che.]
+
+Block 4
+[Dicht vor {LEAD}{NAME} befindet sich eine Lasersperre. Der Geruch von heiem
+Metall h„ngt in der Luft. Die Lichtstrahlen sind so kr„ftig, da sie den
+wenigen Staub in der Luft hell aufglhen lassen.]
+
+Block 5
+[Ein Schalter.]
+
+Block 6
+[Die Stellung des Schalters „ndert sich nicht.]
+ 
+Block 7
+[{LEAD}{NAME} und die Gef„hrten treten in die Lasersperre. Es ist ein
+schnelles, gn„diges Ende: Die Strahlen durchschneiden die K”rper so schnell,
+da die Schmerzen das Gehirn nicht mehr erreichen. Alle sind tot, bevor die
+šberreste der K”rper auf dem Boden aufkommen.]
+
+Block 8
+[Der Roboter ist von der Lasersperre v”llig zerst”rt worden.]
+
+Block 9
+[Der Wandschrank ist leer, bereit zur Aufnahme von Gegenst„nden.]
+
+Block 10
+[Ein Wandschrank.]
+
+Block 11
+[Hier befindet sich eine Wandverkleidung, die mit speziellen Schrauben
+befestigt ist.]
+
+Block 12
+[{LEAD}{NAME} l”st die Schrauben. Die Verkleidungsplatte f„llt zu Boden und
+gibt den Blick auf komplizierte Steuer|elektronik frei.]
+
+Block 13
+[Ein Serviceroboter.]
+
+Block 14
+[Eine Tr. Es ist kein ™ffnungsmechanismus zu erkennen.]
+
+Block 15
+[Eine Leuchtstoffr”hre. Sie strahlt kaltes, weies Licht ab.]
+
+Block 16
+[Ein Stahltr„ger.]
+
+Block 17
+[Die halbtransparenten W„nde markieren einen Servicezugang. Die Leiter in der
+Mitte fhrt nach oben.]
+
+Block 18
+[Eine Zehnertastatur zum eingeben von Zahlencodes.]
+
+Block 19
+[Eine Tr mit roten Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.]
+
+Block 20
+[Eine Tr mit grnen Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.]
+
+Block 21
+[Eine Tr mit blauen Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.]
+
+Block 22
+[{LEAD}{NAME} reit einige der elektronischen Bauelemente heraus. Funken
+schlagen aus der sabotierten Stelle.]
+
+Block 23
+[Ein Serviceroboter. Er scheint deaktiviert zu sein.]
+
+Block 24
+[{LEAD}{NAME} reit einige der Bauelemente aus der Wand. Dabei f„hrt {HIM }
+ein elektrischer Schlag durch die Glieder!]
+
+Block 25
+[Die Elektronik hier ist grndlich besch„digt.]
+
+Block 26
+[Ein Schalter, der auf eine mit Stahlstreben versehenen Plexiglaswand montiert
+wurde.]
+
+Block 27
+[Der Schalter leuchtet kurz auf, aber sonst passiert nichts.]
+
+Block 28
+[Sobald {LEAD}{NAME} den Schalter bet„tigt, verschwindet die Wand blitzschnell
+in der Decke!]
+
+Block 29
+[Eine groe Kontrollampe.]
+
+Block 30
+[Eine blinkende Bodenplatte.]
+
+Block 31
+[Hinter einer ™ffnung in der Wand sind komplizierte elektronische Bauelemente
+zu erkennen.]
+
+Block 32
+[Beim Bet„tigen des Schalters gehen hinten die Kontrollampen und
+Deckenleuchten an.]
+
+Block 33
+[Schlagartig erl”schen alle roten Leuchtk”rper.]
+
+Block 34
+["Wir haben es hier offenbar mit einer zeitabh„ngigen Steuerung zu tun!"]
+
+Block 35
+[Ein Schalter mit einer Kontrolleuchte daneben.]
+
+Block 36
+["Ha! Das Ger„usch ist Musik in meinen Ohren! Wenn jetzt nicht die Tr
+aufgegangen ist, werde ich sauer. Ich m”chte mal wissen, welche Spinner die
+Systeme hier unten programmiert haben!"]
+
+Block 37
+["Shit. Jede Wette, da wir es wieder mit einer verdammten Zeitschaltung zu
+tun haben."]
+
+Block 38
+[Die Leuchtplatten erl”schen.]
+
+Block 39
+["Zum Henker! Ich nehme an, da wir die 4 Schalter in den Korridoren
+aktivieren mssen, um weiter|zukommen. Das schaffen wir nie in der kurzen
+Zeit, die Wegstrecke ist zu gro. Dem Typ, der das hier installiert hat,
+geh”ren die Finger abgehackt!"]
+
+Block 40
+["Ja! Das war's! Dort hinten sind die Plexiglasw„nde hochgegangen! Jetzt
+mten wir die Zeitschaltung schaffen!"]
+
+Block 41
+["Ich sch„tze, hier geht es in die Halle, die dem Reaktorkern vorgelagert ist.
+Mit dieser Codeeingabe haben wir allerdings ein fettes Problem. Schlag' mich
+tot, aber ICH wei den Code nicht!"]
+
+Block 42
+["Ich sch„tze, hier geht es in die Halle, die dem Reaktorkern vorgelagert ist.
+Mit dieser Codeeingabe haben wir allerdings ein Problemchen. Aber warte mal,
+wir haben doch diese Zettel gefunden! Wenn DIE nicht auf diesen Code
+hinweisen, soll mich der Blitz beim Scheien treffen!"]
+
+Block 43
+["Ein Zettel mit 'ner Nummer drauf, so, so. Du weit, es ist strengstens
+verboten, irgendwelche Zugangscodes zu notieren, von wegen
+Sicherheits|vorschriften und so. Allerdings kenne ich 'n paar
+Alzheimer-Kandidaten, die sich beim Anlagenbau ihre Codes trotzdem notiert und
+in der Anlage deponiert haben. Sie kamen sich zu d„mlich dabei vor, zum
+fnften Mal zur Aufsicht zu rennen und zuzugeben, da sie ihre Codes schon
+wieder vergessen haben. Ich sch„tze, dies hier ist so ein Fall. Der Code
+scheint allerdings nicht ganz vollst„ndig zu sein, der Zettel wurde zerteilt."]
+
+Block 44
+["Sag mal, mein Alter, was soll das denn werden? Wir sind kurz vor dem Ziel!
+Warum um alles in der Welt willst Du jetzt wieder umkehren?"]
+
+Block 45
+[Es h„ngen einige Dr„hte und Bauteile aus diesem Teil der Wand. Anscheinend
+sind hier Reparatur|arbeiten nicht zu Ende gefhrt worden.]
+
+Block 46
+[Soll Joe einen Reparaturversuch unternehmen? {BLOK000}"Ja, mach nur."
+{BLOK001}"Nein, lieber nicht."]
+
+Block 47
+["O.K. Das dauert nicht lange..."]
+
+Block 48
+["So. Das war's. He, das war wohl die Energieversorgung fr die Tr daneben.
+Das Ding ist aufgegangen!"]
+
+Block 49
+["Na ja, wie Du meinst."]
+
+Block 50
+[Dies ist die Stelle, die Joe repariert hat.]
+
+Block 51 
+[Die Steuerung der Lasersperren ist offenbar durcheinander|geraten. Teile der
+Sperren schalten sich in regelm„igen Abst„nden ein und aus.]
+
+Block 52
+[In diesem Raum steht Ned, der humanoide K”rper, welcher der AI der TORONTO
+als Kommunikations|interface zu den Menschen an Bord dient.]
+
+Block 53
+[Dies ist ein Kartenleser. Er dient hier offenbar als Trschlo, ist aber
+bereits im ge”ffneten Zustand.]
+
+Block 54
+[Ein Kartenleser.]
+
+Block 55
+[Eine Codeeingabetastatur. Sie ist bereits offen geschaltet worden.]
+
+Block 56
+[An dieser Wand ist eine Reihe verschieden|farbiger Kontrol|leuchten
+angebracht.]
+
+Block 57
+[Aus den Nischen dieses Raumes kommen einige exakt gleich aussehende Gestalten
+und bewegen sich auf {LEAD}{NAME} und {HIS } Gef„hrten zu.]
+
+Block 58
+["Die AI-K”rper! Ned verfgt also tats„chlich ber ein ganzes Arsenal dieser
+Androiden!"]
+
+Block 59
+["Scharfsinnig beobachtet, Driscoll. Ich bin erstaunt, mit welcher
+Hartn„ckigkeit Sie gegen die Interessen der Firma und des Gemeinwohls
+vorgehen. Wie Sie sich denken k”nnen, bin ich gezwungen, diesen Akt des
+Terrorismus mit aller H„rte zu vereiteln."^^ {INK 001}Die knstlichen K”rper
+greifen an!]
+
+Block 60
+[{INK 001}Joe wirft einen interessierten Blick auf die Stelle und meint:^^
+{INK 002} "Hmm, la mich mal sehen. Ich k”nnte das mit ein paar Handgriffen
+reparieren."]
+
+Block 61
+["Ach du Scheie! Schaut Euch diese Menge an Roboter an. Jede Wette, da jeder
+einzelne davon auf Angriff programmiert ist!"]
+
+Block 62
+["Tom Driscoll, ich fordere Sie ein letztes Mal auf, alle gegen die Firma
+gerichteten Aktivit„ten einzustellen und sich unverzglich in die Obhut der
+Schiffsleitung zu begeben."]
+
+Block 63
+["Glauben Sie wirklich, wir sind so weit gegangen, um jetzt auf den ebenso
+wohlformulierten wie l„cherlichen Appell einer AI einzugehen?"]
+
+Block 64
+["Ich habe bereits befrchtet, da Sie vernnftigen Argumenten nicht
+zug„nglich sind. Lassen Sie sich versichern, da Sie diesen K”rper nicht mehr
+so leicht aus dem Gefecht setzen k”nnen, wie bei unserer letzten Begegnung."^^
+{INK 001}Der AI-K”rper greift an!]
+
+Block 65
+["Da! Die Wand mit den farbigen Kontrolleuchten ist verschwunden!"]
+
+Block 66
+["Eine Lasersperre! Die Dinger sind absolut t”dlich!^^Lat uns nach einer
+M”glichkeit schauen, die Laser zu deaktivieren. Es k”nnte hier Panels geben,
+die man mit einem speziellen Werkzeug ”ffnen kann. Vielleicht k”nnen wir dann
+die Sperren sabotieren."]
+
+

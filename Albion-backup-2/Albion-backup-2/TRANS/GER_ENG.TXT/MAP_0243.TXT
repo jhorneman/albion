@@ -1,0 +1,591 @@
+
+Maptext-File
+------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[éste und Wurzeln.]
+
+Block 2
+[Ein geflochtener Korb.]
+
+Block 3
+[Ein GlasgefÑû fÅr Wasser und andere GetrÑnke.]
+
+Block 4
+[Ein Faû.]
+
+Block 5
+[Ein prÑchtiges Tierfell.]
+
+Block 6
+[Ein Eimer.]
+
+Block 7
+[Eine Tonschale.]
+
+Block 8
+[Ein Trinkhorn.]
+
+Block 9
+[Ein Teller.]
+
+Block 10
+[Ein Tonkrug.]
+
+Block 11
+[Ein Krug.]
+
+Block 12
+[Ein Tischmesser.]
+
+Block 13
+[Eine Gabel.]
+
+Block 14
+[Ein Lîffel.]
+
+Block 15
+[Ein TonbehÑlter.]
+
+Block 16
+[Steine.]
+
+Block 17
+[Eine Schale.]
+
+Block 18
+[Ein AckergerÑt.]
+
+Block 19
+[Eine Axt.]
+
+Block 20
+[Ein Kistendeckel.]
+
+Block 21
+[Eine Holzkiste.]
+
+Block 22
+[Eine kunstvoll beschlagene Holzkiste.]
+
+Block 23
+[Das stille ôrtchen.]
+
+Block 24
+[Ein Deckel.]
+
+Block 25
+[Ein groûer Holzbottich.]
+
+Block 26
+[Ein groûer Metallkessel.]
+
+Block 27
+[Ein Regal.]
+
+Block 28
+[In diesem Regal ist allerhand unwichtiges Zeug zu sehen.]
+
+Block 29
+[Eine Kommode.]
+
+Block 30
+[Ein Besen.]
+
+Block 31
+[Ein Bratrost.]
+
+Block 32
+[Darauf kann man Fleisch braten.]
+
+Block 33
+[Eine Feuerstelle.]
+
+Block 34
+[Eine umgefallene Karaffe.]
+
+Block 35
+[Ein Kochlîffel.]
+
+Block 36
+[Ein dekoratives Wandschwert.]
+
+Block 37
+[Ein Holztisch.]
+
+Block 38
+[Ein Hocker.]
+
+Block 39
+[Ein zusammengeklappter Hocker.]
+
+Block 40
+[Ein massiver Eûtisch.]
+
+Block 41
+[Ein Baumstumpf.]
+
+Block 42
+[Zwei gekreuzte Speere.]
+
+Block 43
+[Ein groûes Faû mit fremdartigen GetrÑnken.]
+
+Block 44
+[Ein Zapfhahn.]
+
+Block 45
+[Eine Bettdecke.]
+
+Block 46
+[Ein komfortables und hÅbsch verziertes Bett.]
+
+Block 47
+[Dieses Bett ist schlicht aber zweck|mÑûig.]
+
+Block 48
+[Eine Anrichte.]
+
+Block 49
+[Ein Kamin.]
+
+Block 50
+[Das Kaminfeuer strahlt eine angenehme WÑrme ab.]
+
+Block 51
+[Ein kunstvoll angefertigter Topf.]
+
+Block 52
+[Getrocknete KrÑuter.]
+
+Block 53
+[Ein menschlicher SchÑdel.]
+
+Block 54
+[Ein Schmuckschild.]
+
+Block 55
+[Ein Metalltopf.]
+
+Block 56
+[Ein Zierschwert.]
+
+Block 57
+[Eine TÅre.]
+
+Block 58
+[Ein Kessel.]
+
+Block 59
+[Ein Messer.]
+
+Block 60
+[Ein Kurzdolch.]
+
+Block 61
+[Ein Dolch.]
+
+Block 62
+[Ein groûer Dolch.]
+
+Block 63
+[Ein Kurzschwert.]
+
+Block 64
+[Ein Schwert.]
+
+Block 65
+[Ein Stich.]
+
+Block 66
+[Ein Wurfdolch.]
+
+Block 67
+[Eine kleine Axt.]
+
+Block 68
+[Eine Axt.]
+
+Block 69
+[Ein kleiner Bogen.]
+
+Block 70
+[Ein Bogen.]
+
+Block 71
+[Ein Pfeil.]
+
+Block 72
+[Ein kleiner Lederschild.]
+
+Block 73
+[Ein Lederschild.]
+
+Block 74
+[Ein Rundschild.]
+
+Block 75
+[Ein groûer Schild.]
+
+Block 76
+[Eine Lederkappe.]
+
+Block 77
+[Eine beschlagene Kappe.]
+
+Block 78
+[Eine Metallhalbschale.]
+
+Block 79
+[Eine Lederweste.]
+
+Block 80
+[Eine LederrÅstung.]
+
+Block 81
+[Ein beschlagenes Leder.]
+
+Block 82
+[Ein Paar Schuhe.]
+
+Block 83
+[Ein Paar Stiefel.]
+
+Block 84
+[Eine leere Flasche.]
+
+Block 85
+[Ein grÅner Heiltrank.]
+
+Block 86
+[Ein tÅrkisener Heiltrank.]
+
+Block 87
+[Ein blauer Heiltrank.]
+
+Block 88
+[Ein SchlÅssel.]
+
+Block 89
+[Ein Seil.]
+
+Block 90
+[Ein Ring.]
+
+Block 91
+[Eine Fackel.]
+
+Block 92
+[Ein flacher Hammer.]
+
+Block 93
+[Eine Treppe. Sie fÅhrt nach oben.]
+
+Block 94
+[Eine Treppe. Sie fÅhrt nach unten.]
+
+Block 95
+[Eine Theke.]
+
+Block 96
+[Eine teppichartige Matte.]
+
+Block 97
+[Eine Zimmerpflanze.]
+
+Block 98
+[Ein Blumentopf.]
+
+Block 99
+[Ein kunstvoll gefertigtes, in den Boden eingelassenes Ornament.]
+
+Block 100
+[Ein kunstvoll gefertigtes, in den Boden eingelassenes Ornament, auf dem ein
+groûer Kristall steht.]
+
+Block 101
+[Ein Metalltisch.]
+
+Block 102
+[Ein Amboû.]
+
+Block 103
+[Ein Metallschild.]
+
+Block 104
+[Eine verzierte Metalltruhe.]
+
+Block 105
+[Eine Esse zum Schmieden.]
+
+Block 106
+[Ein Wandbehang.]
+
+Block 107
+[Ein leeres Kissen. Es ist ein sehr schînes Exemplar, das man normalerweise
+fÅr Auslagen verwendet.]
+
+Block 108
+[Einige wertvolle SchmuckstÅcke.]
+
+Block 109
+[Ausstelltafeln mit Waffen und Schilder.]
+
+Block 110
+[Eine leere Ausstelltafel.]
+
+Block 111
+[Eine Feuerschale.]
+
+Block 112
+[Eine erloschene Feuerschale.]
+
+Block 113
+[Ein loser Hebel.]
+
+Block 114
+[Ein Hebel.]
+
+Block 115
+[Eine Wasserstelle.]
+
+Block 116
+[Ein Hammer.]
+
+Block 117
+[Ein kleiner Hammer.]
+
+Block 118
+[Ein flacher Hammer.]
+
+Block 119
+[Ein Spezialhammer.]
+
+Block 120
+[Eine Zange.]
+
+Block 121
+[Eine Feile.]
+
+Block 122
+[Eine kleine Feile.]
+
+Block 123
+[Ein Durchstich.]
+
+Block 124
+[Ein Schraubenzieher.]
+
+Block 125
+[Ein kleiner Schraubenzieher.]
+
+Block 126
+[Eine MetallsÑge.]
+
+Block 127
+[Ein feines Werkzeug.]
+
+Block 128
+[Ein Becher.]
+
+Block 129
+[Ein SchraubenschlÅssel.]
+
+Block 130
+[Eine Schere.]
+
+Block 131
+[Eine Schale.]
+
+Block 132
+[Eine feine Schere.]
+
+Block 133
+[Eine Flasche.]
+
+Block 134
+[Mehrere Flaschen.]
+
+Block 135
+[Eine Phiole.]
+
+Block 136
+[Eine rote Phiole.]
+
+Block 137
+[Ein MetallkÑstchen.]
+
+Block 138
+[Ein Metallgebilde.]
+
+Block 139
+[Ein Drahtgebilde.]
+
+Block 140
+[Eine Metallschale.]
+
+Block 141
+[Messingkugeln.]
+
+Block 142
+[Eine Schale mit Wasser.]
+
+Block 143
+[Eine Schale.]
+
+Block 144
+[Ein Mîrser.]
+
+Block 145
+[Ein Vergrîûerungsglas.]
+
+Block 146
+[Eine Pinzette.]
+
+Block 147
+[Ein schweres Kurzschwert.]
+
+Block 148
+[Ein verziertes Schwert.]
+
+Block 149
+[Ein Zweistich.]
+
+Block 150
+[Ein Langschwert.]
+
+Block 151
+[Ein Ausstellungsschrank.]
+
+Block 152
+[Regale mit wertvollen Metall|schmiede|arbeiten, Schmuck und Edel|steinen.]
+
+Block 153
+[Eine Lore.]
+
+Block 154
+[Schienen.]
+
+Block 155
+[Ein Prellbock.]
+
+Block 156
+[Ein Stuhl.]
+
+Block 157
+[Eine alte Diamantenschleifmaschine.]
+
+Block 158
+[Eine ôlfackel.]
+
+Block 159
+[Ein Hebel.]
+
+Block 160
+[Der Hebel lÑût sich nicht bewegen. {LEAD}{NAME} zieht mit seiner ganzen
+Kraft, aber er kann nichts ausr|ich|ten. Es scheint, als wÑre der Hebel
+irgend|wie blockiert.]
+
+Block 161
+[Der Hebel wurde schon umgeschaltet. Er sitzt jetzt wieder fest.]
+
+Block 162
+[Das ist eine Art von Kabelkanal. Vermutlich befinden sich dahinter
+irgend|welche Ver|bin|dungen zwischen dem Hebel und den Messern im Boden.]
+
+Block 163
+[Das sind sehr scharfe Messer, die aus dem Boden kommen. Sie scheinen alle
+mit|einan|der ver|bun|den zu sein, denn sie fÅhren ketten|artig durch die
+GÑnge.]
+
+Block 164
+[Die Messer geben beim Einschlagen mit dem Hammer zwar nach, aber irgend etwas
+unter dem Boden scheint sie noch zu blockieren.]
+
+Block 165
+[Die Messer sind in den ôffnungen versenkt.]
+
+Block 166
+[Mit dem Hammer kann man die Messer bequem zurÅck|schla|gen und so den Weg
+frei|machen.]
+
+Block 167
+[Ein Raum voller Klingen und Messer. Manche wur|den be|reits ein|geschla|gen.]
+
+Block 168
+[Das sind sehr scharfe Messer, die aus dem Boden kommen. Sie sind rein
+zu|fÑllig ange|ord|net und schei|nen irgend|welchen Ver|suchen gedient zu
+haben.]
+
+Block 169
+[{CNTR}Auf dem Schild steht:^{INK 006}{FAT }Achtung Lebensgefahr!^Mechanismus
+wird Åberlastet, wenn alle drei Hebel gleich|zeitig schal|ten!^Aktuellen
+Schaltplan beachten!]
+
+Block 170
+[Messerheber fÅr Verbindungsraum im SÅdwesten.]
+
+Blok 171
+[Messerheber fÅr Zentralhalle im Osten.]
+
+Block 172
+[Messerheber fÅr Bergwerk im Nordwesten.]
+
+Block 173
+[Der Mechanismus wurde Åberlastet.]
+
+Block 174
+[Diese Messer sehen besonders stabil aus. Zweifellos sind sie einfahrbar, aber
+man kann nicht er|kennen, wo|durch und auf wel|che Art und Wei|se.]
+
+Block 175
+[Ahh, die Messer laufen hier links hinter der Mauer weiter! Scheint eine
+gan|ze Kette zu sein.]
+
+Block 176
+[Das Schloû ist schon ziemlich rostig. Es ist quali|tativ eher min|der|wer|tig.]
+
+Block 177
+[Irgend etwas im Schloû ist zerbrochen. Es ist offen.]
+
+Block 178
+[Eine Kontaktplatte.]
+
+Block 179
+[Zentralhalle.]
+
+Block 180
+[Es scheint sich nichts getan zu haben.]
+
+Block 181
+[Vermutlich ist die Zauberkraft erschîpft, denn die GegenstÑnde ver|Ñn|dern
+sich nicht mehr.]
+
+Block 182
+[Der Gegenstand hat sich tatsÑchlich verÑndert.]
+
+Block 183
+[Ein Amboû.]
+
+Block 184
+[Meine Erfindung kann Klingen wandeln,^Ihr mÅût nur richtig Handeln!^^Akka.]
+
+Block 185
+[8:00-11:00]
+
+Block 186
+[Die TÅr ist verschlossen und das SchlÅsselloch ist durch einen Metall|bol|zen
+ver|sperrt. Wenn es eine Mîglich|keit gibt, diese TÅre zu îff|nen, dann ist
+dazu sicher kein SchlÅssel not|wen|dig.]
+
+Block 187
+[Ein Eingang in eine Mine.]
+
+Block 188
+[Ein Schaltplan.]
+
+Block 189
+[Ein Metalltrittschalter.]

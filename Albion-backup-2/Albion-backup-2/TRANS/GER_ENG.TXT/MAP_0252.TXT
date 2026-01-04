@@ -1,0 +1,47 @@
+
+Maptextfile
+------------------------------------------------------------------------
+
+Block 0
+[ ]
+
+Block 1
+[Ein Loch in die Tiefe...]
+
+Block 2
+[Hier kann man hochklettern.]
+
+Block 3
+[Hier scheint es noch tiefer zu gehen, allerdings ist der Stollen mit Wasser
+gefllt.]
+
+Block 4
+[Unz„hlige Kristalle blinken in dieser riesigen H”hle und geben dem Licht
+einen merkwrdigen Charakter. Irgendwie herrscht hier eine anmutige
+Atmosph„re. Die Edelsteine sind natrlich alle ungeschliffen, aber vielleicht
+besitzen sie aufgrund ihrer auergew”hnlichen Gr”e trotzdem einen hohen Wert.]
+
+Block 5
+[Eine Truhe.]
+
+Block 6
+[Der Ausgang.]
+
+Block 7
+["Achtung!^^Vor uns befindet sich ein groes Loch im Boden. Ich glaube wir
+sollten nur mit einem Seil da runter gehen. Wer wei, ob wir da sonst wieder
+rauskommen! Hat jemand von Euch ein Seil dabei?"]
+
+Block 8
+[Alle durchsuchen Ihr Gep„ck und schlielich findet sich ein Seil.]
+
+Block 9
+[Alle durchsuchen Ihr Gep„ck aber niemand hat ein Seil dabei.]
+
+Block 10
+["Ich glaube, ohne Seil ist es wirklich zu gef„hrlich! Ich m”chte besser
+nicht da runter gehen."]
+
+Block 11
+["Gut, mit Seil sollte das Risiko eigentlich kalkulierbar sein."]
+

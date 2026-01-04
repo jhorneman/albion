@@ -1,0 +1,147 @@
+NPC 120: Sira, phase 0
+======================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Im Augenblick bin ich noch Dra Dji-Kas, aber ich stehe an der
+Schwelle zur Stri."{WORDDra}{WORDStri}{WORDDji-Kas}]
+
+Block 1 [ ]
+
+*******Unter-Allgemeinwissensblock fÅr Dji-Kas*******************************
+Block 2         "Dji-Kas, Magier, Magiergilde, Zauberer, Magie, Zauber"
+["Unsere Magie ist tief mit dieser Welt verwurzelt. Ihr kînnt das zum Beispiel
+daran erkennen, daû wir fÅr fast alle unsere SprÅche eine bestimmte Sorte von
+Samenkîrnern benutzen, um unsere geistigen KrÑfte darin zu konzentrieren. Wir
+sind ferner Stolz auf die Vielseitigkeit unserer Kunst. Wir kennen Magie zum
+Erschaffen und Zerstîren, zum Verletzen und zum Heilen.^ Als Kennzeichen
+unserer Gilde tragen wir eingefÑrbte Muster im Fell. Der AnfÅhrer der Dji-Kas
+ist Sebai-fre Fasiir. Er verbringt seine gesamte Zeit im
+Gildenhaus."{WORDSamenkorn}{WORDHeilung}{WORDFasiir}{WORDGildenhaus}]
+                
+
+Block 3         "FASIIR"
+["Sebai-fre Fasiir leitet unsere Gilde schon seit Åber 120 Jahren. Er ist eine
+lebende Legende unter den Dji-Kas und ein hervorragender Lehrmeister, der
+seinen SchÅlern schnell neue Kenntnisse beibringt, sowie sie dafÅr bereit
+sind."]
+
+Block 4         "SAMENKORN, SAMENKôRNER, KORN, KôRNER"
+["Nicht das Samenkorn selbst entfaltet die magische Wirkung, aber der Geist
+des Dji-Kas verwendet sie, um darin seinen Fokus zu finden. Die Kîrner stammen
+von einer seltenen Pflanze namens Triifalai, das bedeutet "Trii der Gîttin".
+Die Samen werden Åbrigens auch im Gildenhaus verkauft."{WORDTrii} {WORDGîttin}] 
+
+Block 5         "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                "WUNDEN, VERWUNDUNG"
+["Gleich neben dem Eingang zum Gildenhaus findet Ihr Stri Rejira, eine
+Meisterin der Heilkunst. Sie wird Eure Verletzungen heilen."]
+
+Block 6         "Triifalai"
+["Dies ist der Name einer Pflanze, deren Samenkîrner von uns sehr begehrt
+sind.{WORDSamenkorn}"]
+
+Block 7
+[]
+
+Block 8         "Former,Formergilde, Dji-Fadh, Baumeister"
+["Oh, die Baumeister. Das VerhÑltnis unserer Gilden ist nicht immer ungetrÅbt.
+Manche ihrer besten Talente fÅhlen sich von unserer vielseitigen Kunst
+angezogen und wechseln Åber zu unserer Gilde. Aber wer soll es Ihnen
+Åbelnehmen? Wer hat schon Lust, all seine KrÑfte in den Bau von Behausungen zu
+stecken, und seinen sie noch so schîn? Vielleicht sind die Dji-Fadh auch
+erzÅrnt, daû wir so in der Lage waren, unser Gildenhaus ohne ihre Hilfe zu
+erschaffen."{WORDGilde}]
+
+Block 9         "GILDENHAUS"
+["Das Gildenhaus hat schon seit langer Zeit seinen Platz im sÅdwestlichen
+Viertel Jirinaars. Es ist von den Dji-Kas selbst erbaut worden und beherbergt
+viele Gildenmitglieder und alle Dra."{WORDDra}]
+
+Block 10        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 1
+["Akiir ist mein Vater. Leider ist unser VerhÑltnis im Moment ein wenig
+gespannt. Er war, um es vorsichtig auszudrÅcken, nicht begeistert davon, daû
+ich zu dieser Gilde hier, den Dji-Kas, gegangen bin. Die Gilde meines Vaters,
+die Dji-Fadh, steht seit Alters her in einer Art Konkurrenz|verhÑltnis mit der
+Gilde der Dji-Kas.^^Nun, ich hoffe, er gewîhnt sich im Laufe der Zeit an meine
+Entscheidung."]
+
+Block 11        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 2
+["Laût mich Euch noch einmal persînlich dafÅr danken, daû Ihr uns von dem
+Mordverdacht an Akiir befreit habt!"]
+
+Block 12        "AKIIR", normal
+["Akiir ist das Oberhaupt der Former, einer Gilde, die meist ein etwas
+gespanntes VerhÑltnis zu der unseren hat. Besonders Akiir geht keinem Konflikt
+aus dem Wege."{WORDFormer}]
+
+Block 13        "Fasiir", Phase 1
+["Ihr kennt Fasiir nicht so gut wie wir, die wir tÑglich mit ihm umgehen. Er
+wÅrde niemals ein solches Verbrechen in Auftrag geben! Aber ich schÑtze, Ihr
+werdet den Worten eines Mitglieds seiner Gilde wenig Glauben schenken."]
+
+Block 14        "Fasiir", Phase 2
+["Ich bin Euch aufrichtig dankbar, daû Ihr seinen Namen reingewaschen habt."]
+
+Block 15
+["öber einen Mord weiû ich nichts."]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18
+[dummy]
+
+Block 19
+[dummy]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21        BegrÅûung 1. mal
+["Dsarii-ma! Wie schîn, Euch zu sehen. Ich habe schon von Eurer Anwesenheit in
+der Stadt gehîrt." {BLOK010}"Eure Frîhlichkeit ist ansteckend, Sira. Gibt es
+einen besonderen Grund dafÅr?" {BLOK011}"Ich hoffe, Ihr habt nur Gutes Åber
+uns gehîrt!"]
+                DANN: Flag setzen! Zeichen, das man Sira schon mal gesprochen
+                hat. Zweck: Wenn man spÑter ins Haus der Dji-Kas kommt, um
+                der Spur nachzugehen, wird man von Sira angesprochen (hunting,
+                ZS, o.Ñ.). Auûerdem stellt Drirr stellt sie dann vor:
+                evtl. Einwurf "wir kennen uns schon" oder so.
+
+Block 22        Antwort auf MC21,10
+["Oh, man sagt mir nach, daû ich eine Frohnatur bin. Auûerdem habe ich vor
+kurzem von Sebai Fasiir erfahren, daû ich die PrÅfung zur untersten Stufe
+eines Stri-Dji-Kas machen darf.^ Ich bin deswegen so glÅcklich darÅber, weil
+ich noch gar nicht allzulange bei den Dji-Kas bin. Ich habe lange nach etwas
+gesucht, zu dem ich wirklich Talent habe. Nun hat sich heraus|gestellt, daû es
+die Magie ist, und darÅber bin ich sehr
+froh."{WORDFasiir}{WORDStri}{WORDDji-Kas} {WORDSebai}]
+
+Block 23        Antwort auf MC21,11 WENN: Rausschmiû bei JÑgern
+["Um ehrlich zu sein, ich hatte mir Euch grimmiger vorgestellt, seit ich
+gehîrt habe, daû Ihr aus irgendeinem Grund beim SÅdwind-Clan nicht mehr
+willkommen seid."]
+
+Block 24        Antwort auf MC21,11
+["Ihr mîgt fremd auf meine Augen wirken, aber ich finde Euch trotzdem
+irgendwie sympathisch."]
+
+Block 25        Begr. 2.mal
+["Dsarii-ma! Mîchtet Ihr gerne noch etwas mit mir plaudern?"]

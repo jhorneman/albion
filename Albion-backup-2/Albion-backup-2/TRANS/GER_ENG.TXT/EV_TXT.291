@@ -1,0 +1,21 @@
+
+Zeibe, Gemischtwarenh„ndlerin
+======================================================================
+
+Block 0
+[{BLOK000}"Ich bin H„ndlerin. Bei mir k”nnt Ihr alles m”gliche kaufen und
+ver|kaufen. Dabei habe ich immer nur Waren von aller|bester Qualit„t."]
+
+Block 1            (Begrung)
+["Willkommen in meinem wunderbaren Laden. Bestimmt werdet Ihr hier etwas
+Passendes finden. Oder wollt Ihr mir etwas Interessantes verkaufen? Ich kann
+Euch noch weitere Dienste anbieten. Dank meiner magischen Schulung kann ich
+verfluchte Gegenst„nde entfernen und Euch ausfhrliche Informationen ber
+Gegenst„nde geben. Das alles ist natrlich nicht ganz kostenlos..."
+{BLOK010}"K”nnen wir das Angebot einmal betrachten?"{BLOK011}"Wir m”chten
+gerne einen Gegenstand untersuchen lassen."{BLOK012}"Bitte helft uns. Wir
+haben einen verfluchten Gegenstand, den wir nicht mehr
+losbekommen."{BLOK013}"Danke fr das Gespr„ch."]
+
+Block 2            (Dialogende)
+["Lebt wohl."]

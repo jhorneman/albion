@@ -1,0 +1,56 @@
+; *** Script 23: Abreise von Gratogel
+
+npc_off 35
+npc_lock 42
+npc_jump 42 10 197
+npc_turn 42 3
+;show_map
+party_off
+update 10
+fade_from_black
+
+update 30
+text 82
+update 30
+
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+npc_move 42 -1 0
+update 8
+
+update 30
+
+fade_to_black
+party_jump 20 20
+npc_jump 42 17 23
+show_map
+update 4
+fade_from_black
+update 30
+text 83
+update 20
+fade_to_black
+show_picture 2 0 0
+fade_from_black
+pause 0
+text 84
+pause 30
+active_member_text 85
+show_picture 2 0 0
+npc_on 35

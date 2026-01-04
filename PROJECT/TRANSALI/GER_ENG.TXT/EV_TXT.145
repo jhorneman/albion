@@ -1,0 +1,45 @@
+NPC 144: Zirr, Kneipenwirt.
+===========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Mir und meinem Mann gehîrt das îffentliche Haus, in dem Ihr Euch
+befindet."]
+
+Block 1         Begr.
+["Dsarii-ma! Willkommen im Haus der Winde! Was kann ich fÅr Euch tun?"
+{BLOK010}"Dsarii-ma. Wir suchen eine öbernachtungsmîglichkeit."
+{BLOK011}"Dsarii-ma! Etwas Gutes zu Essen, bitte."]
+
+Block 2         "HAUS, HAUS DER WINDE"
+["Das Haus der Winde ist durchgehend geîffnet. Ihr kînnt hier immer eine
+Unterkunft bekommen. Wir sind bekannt fÅr unser gutes Essen und unsere
+GetrÑnke."]
+                ANMERKUNG: WENN: "ESSEN", dann ebenfalls HÑndlerscreen
+                
+Block 3         "GETRéNKE" WENN: Bit noch nicht gesetzt
+["Ja, wir haben viele Sorten, gebraut aus vielerlei Frucht|sorten, stark und
+weniger stark. Unser Zoomi ist besonders berÅhmt. Hier, probiert einen auf
+Kosten des Hauses!"{INK 001}^^ {INK 001}Viria reicht {LEAD}{NAME} ein kleines
+Glas mit grÅnlich schillerndem Inhalt.{INK 002} {BLOK010}"Ihr macht mich
+neugierig, Viria. Auf Euer Wohl!" {BLOK011}"Vielen Dank, Viria, aber ich
+brauche heute einen klaren Kopf."]
+
+Block 4
+[{INK 001} {LEAD}{NAME} stÅrzt den Zoomi herunter. Sofort raubt eine
+Geschmacks|explosion {HIM } den Atem! {HE  } stîût hervor:^^ {INK
+002}"WHOA!"{INK001}^^ Dann verschwimmt alles vor {LEAD}{NAME}s Augen...]
+
+Block 5
+["Ihr wiût nicht, was Ihr versÑumt, {LEAD}{NAME}!"]

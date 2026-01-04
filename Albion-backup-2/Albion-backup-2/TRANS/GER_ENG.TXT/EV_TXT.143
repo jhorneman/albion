@@ -1,0 +1,53 @@
+NPC 143: Wania, Besitzerin des Gemischtwarenhandels
+===================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin die Besitzerin dieses Gesch„ftes."{WORDGesch„ft}]
+
+Block 1         Begr.
+["Dsarii-ma und Willkommen im Haus der ntzlichen Vielfalt!"
+{BLOK010}"Dsarii-ma, Wania. Wir wrden gerne Euer Angebot sehen."]
+
+Block 2         "HAUS, GESCHFT"
+["Meine Familie fhrt dieses Haus schon seit vier Generationen." {WORDFamilie}]
+
+Block 3         "FAMILIE"
+["Mein Mann f„hrt zur See und ist leider recht selten hier. Zum Glck verstehe
+ich mich mit seinem Bruder sehr gut, er wohnt bei uns und ist mein
+Nebenpartner. Und die Kinder bringen genug Leben ins Haus!" {WORDNebenpartner}]
+
+Block 4         "FAMILIE"2x
+["Wie ich schon sagte:^ Mein Mann f„hrt zur See und ist leider recht selten
+hier. Zum Glck verstehe ich mich mit seinem Bruder sehr gern, er wohnt bei
+uns und ist mein Nebenpartner. Und die Kinder bringen genug Leben ins Haus!"
+{WORDNebenpartner}]
+
+Block 5         "RABIR"
+["Oh, Rabir arbeitet fr mich. Ein netter Kerl, sehr gut im Aufst”bern guter
+Ware. Er macht nur manchmal etwas zu gute Preise."]
+
+Block 6         "RABIR"2x
+["Sagte ich das nicht? Rabir arbeitet fr mich. Ein netter Kerl."]
+
+Block 7         H„ndler: Text am Anfang
+["Hier seht Ihr mein Angebot. Schaut Euch die Sachen ruhig n„her an! Beachtet
+das Duftwasser, es h„lt l„stige Insekten ab."]
+
+Block 8         H„ndler: Buy-Text
+["Das w„ren dann {PRIC} Goldstcke. Seid Ihr damit einverstanden,
+{INVE}{NAME}?"]
+
+Block 9         H„ndler: Aktions-Text
+[Wania bergibt {INVE}{NAME} den Gegenstand.]

@@ -1,0 +1,323 @@
+
+Map-Textfile
+------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Gr„ser.]
+
+Block 2
+[Steine.]
+
+Block 3
+[Niedrige Bodengew„chse.]
+
+Block 4
+[Kleine ste und Wurzeln.]
+
+Block 5
+[Schilfgr„ser.]
+
+Block 6
+[Ein kleiner Obstbaum.]
+
+Block 7
+[Ein Kugelbaum.]
+
+Block 8
+[Ein Laubbaum.]
+
+Block 9
+[Eine Stromschnelle.]
+
+Block 10
+[Ein Wasserstrudel.]
+
+Block 11
+[Eine Wasserpflanze.]
+
+Block 12
+[Das Wasser ist sehr tief und die Str”mung scheint stark zu sein.]
+
+Block 13
+[Wasserpflanzentriebe.]
+
+Block 14
+[Eine blhende Pflanze.]
+
+Block 15
+[Ein Schirmbaum.]
+
+Block 16
+[Diese Pflanze leuchtet in faszinierenden Farbt”nen.]
+
+Block 17
+[Gemse.]
+
+Block 18
+[Ein Felsblock.]
+
+Block 19
+[An dieser Stelle ist das Wasser sehr flach und klar, so da man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Str”mung.]
+
+Block 20
+[Ein Obstbaum.]
+
+Block 21
+[Ein Zaun.]
+
+Block 22
+[Eine Stengelpflanze.]
+
+Block 23
+[Eine Schlinggraspflanze.]
+
+Block 24
+[Ein Busch.]
+
+Block 25
+[Eine grobl„ttrige Pflanze.]
+
+Block 26
+[Ein Wasserfall.]
+
+Block 27
+[Ein Felsvorsprung.]
+
+Block 28
+[Eine Pflanze, die auf den Felsen w„chst.]
+
+Block 29
+[Diese Schlingpflanze hat sich mit Tausenden von Wurzeln in der unregelm„igen
+Felsstruktur verankert. Sie macht einen sehr stabilen Eindruck und durch ihre
+mannigfaltige Ver„stelungen bietet sie zahlreiche M”glichkeiten, an denen man
+sich festhalten kann.]
+
+Block 30
+[Eine Holzbrcke.]
+
+Block 31
+[Getreidefelder.]
+
+Block 32
+[Pilze.]
+
+Block 33
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 34
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 35
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 36
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 37
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 38
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 39
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 40
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 41
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 42
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 43
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 44
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 45
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 46
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 49
+[ ]
+
+Block 50           Schwein
+[{CNTR}"Oink?"]
+
+Block 51           
+[{CNTR}"Rrriick?"]
+
+Block 52           Langdialog
+[------ An extended dialog screen will appear here ------]
+
+Block 53           Frau
+["Togi Din, Reisende. Besucht meinen Onkel, den Waffenschmied. Er ist der
+beste Schmied Gratogels. Sein Haus ist das groe, im Sdosten des Dorfes."]
+
+Block 54           Mann
+["Lat mich zufrieden, Fremde. Ich habe Arbeit zu tun."]
+
+Block 55           Kind (Junge)
+["Togi Din! He, ihr langen Pelztr„ger seht aber lustig aus!"]
+
+Block 56           Kind (M„dchen)
+["La, laa-la! Zicke, Zacke, Hhnerkacke!"]
+
+Block 57
+["Togi Din! Willkommen in Vanello!"]
+
+Block 58           Schild
+[{CNTR}Auf dem Schild steht:^^ {INK 006}Haus von Oibelos, Stammesk”nig von
+Vanello]
+
+Block 59           Schild
+[{CNTR}Auf dem Schild ist zu lesen:^^ {INK 006}Tamno, Waffenschmied der
+Umajo-Gilde]
+
+Block 60           Schild
+[{CNTR}Hier steht:^^ {INK 006}Gradia, Werkzeuge und Gebrauchsgegenst„nde]
+
+Block 61           Schild
+[{CNTR}In groen Buchstaben ist hier zu lesen:^^ {INK 006}Tharnos, K”nig von
+Klouta]
+
+Block 62           Schild
+[{CNTR}Das Schild verkndet:^^ {INK 006}Bragona, Speisen und Proviant]
+
+Block 63           Schild
+[{CNTR}Auf dem Schild ist zu lesen:^^ {INK 006}Haus von Aretha, K”nigin von
+Aballon]
+
+Block 64           Schild
+[{CNTR}Hier steht:^^ {INK 006}Die Frchte Aballons]
+
+Block 65           Schild
+[{CNTR}Auf dem verwitterten Schild ist gerade noch zu erkennen:^^ {INK
+006}Kaufe und verkaufe viele Dinge]
+
+Block 66           Schild
+[{CNTR}In geschwungenen Buchstaben ist hier zu lesen:^^ {INK 006}Arjano,
+W„chterin des Wissens^ Schule und Zentrum der Druiden Albions]
+
+Block 67           Rainer
+["Diese Htte soll ein so bedeutendes Wissenszentrum beherbergen? Das kann
+doch nicht m”glich sein!"]
+
+Block 68           Htte zu
+[Im Eingangsbereich der Htte versperrt eine verschlossenen Tr den Zugang.]
+
+Block 69           M„dchen
+["Togi Din! Endlich einmal wieder Besuch aus fernen L„ndern, wie aufregend!"]
+
+Block 70           Mann
+["Togi Din, Reisende. Ist das nicht ein herrlicher Tag?"]
+
+Block 71           Frau
+["Togi Din. Verzeiht, ich m”chte nicht mit Euch sprechen. Mein Mann ist vor
+kurzem ertrunken und ich..."^ {INK 001}Tr„nen laufen der jungen Frau ber das
+Gesicht."]
+
+Block 72           Junge
+[{INK 001}Ein kleines M„dchen rennt hier ausgelassen umher. Sie ruft:^^ {INK
+002}"Togi Din! Macht Platz fr die groe Kriegerin! Hejaaa!"]
+
+Block 73           Kind
+["Togi Din! Wollt ihr mit meinem Vater ber's Meer fahren? Ach, ich wnschte,
+er wrde mich einmal mitnehmen."]
+
+Block 74
+[Endlich spren Tom und seine Gef„hrten wieder festen Boden unter den Fen.^^
+Sie verabschieden sich von der Besatzung und schauen sich um...]
+
+Block 75           Rainer 
+["Schau Dir das an, Tom! Ich bin nicht sehr bewandert in Geschichte, aber
+diese Htten sehen aus wie keltische Rundhtten!^^Wie um alles in der Welt
+kann es sein, da auf diesem Planeten nicht nur Menschen leben, sondern
+anscheinend auch noch Nachfahren der Kelten? Das ist doch v”llig unm”glich!"]
+
+Block 76           Tom
+["So unm”glich wie die seltsamen Ph„nomene, die wir bei den Iskai beobachtet
+haben? Die Magie?^^Schau mich nicht so an, einmal mu es doch ausgesprochen
+werden! Dieser Planet richtet sich offenbar nicht ganz nach unserem Weltbild,
+wie ausgesprochen unversch„mt von ihm, was?^^Komm schon, la' uns ein wenig
+pragmatisch an die Sache herangehen. Wenn wir die TORONTO gefunden haben,
+haben wir genug Zeit und Mittel, allen R„tseln dieser Welt auf den Grund zu
+gehen."]
+
+Block 77
+["Vielleicht hast Du recht. Es ist wohl an der Zeit, mein
+naturwissen|schaftliches Weltbild ein wenig zu erweitern. Ich sollte mich
+nicht dagegen str„uben, etwas Neues dazuzulernen.^^Apropos Pragmatismus: Ich
+denke, wir sollten am besten mit dem Oberhaupt dieses Dorfes sprechen, er wei
+wohl am ehesten, ob etwas Riesiges wie die TORONTO irgendwo im Land gesehen
+wurde. Wenn die Leute hier wirklich etwas mit den Kelten zu tun haben, mte
+es einen Stammesk”nig oder etwas in der Art geben."]
+
+Block 78
+["Falls man hier nichts von Euerem riesigen Luftschiff geh”rt hat, k”nnten wir
+versuchen, gleich eine Passage nach Maini, der groen Landmasse ”stlich von
+hier, zu bekommen."]
+
+Block 79
+["Das ist ein ganz normales, irdisches Schwein!"]
+
+Block 80
+["Nun, wenn es Menschen irgendwie geschafft haben, hierher zu kommen, werden
+sie sicher auch Ihre Nutztiere mitgebracht haben."]
+
+Block 81
+[Vor {LEAD}{NAME} und den Gef„hrten ”ffnet sich ein Canyon durch die hohen
+Plateauberge. Der Wind pfeift durch den schmalen, unbersichtlichen Durchgang.]
+
+Block 82
+[Tom und die Gef„hrten besteigen das Schiff und wenig sp„ter beginnt auch
+schon die Reise nach Beloveno, der groen Hafenstadt.]
+
+Block 83
+[Wieder wird die Zeit der šberfahrt dazu genutzt, von Drirr die Sprache der
+Menschen von Maini, der n„chsten Landmasse, zu lernen.^^So vergeht die Zeit
+wie im Flug, bis schlielich Maini am Horizont auftaucht.^^Bald bietet sich
+ein groartiger Ausblick auf das neue Land und auf Beloveno, die Hafenstadt.]
+
+Block 84
+[Garris man”vriert das Schiff geschickt in den Hafen und verabschiedet sich
+von seinen Passagieren.]
+
+Block 85
+["Das w„re also geschafft. Lat uns einen Blick auf die Stadt werfen!"]
+
+Block 86
+[Pl”tzlich kommen aus einem Hinterhalt einige verwegene Gestalten gesprungen!
+^^Sie greifen an!]
+
+Block 87
+[Ein gut gepanzertes, kleines Tier. Es ignoriert seine Umwelt.]
+
+Block 88
+[Ein groes, insekten„hnliches Flugtier. Es ignoriert {LEAD}{NAME} und die
+anderen.]
+
+Block 89
+[Ein Busch, dessen reife Samenk”rner leicht zu funkeln scheinen.]
+
+Block 90
+[Ein abgeernteter Busch.]
+
+Block 91
+[Dieser Baum ist eine irdische Eiche!]

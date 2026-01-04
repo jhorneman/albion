@@ -1,0 +1,1177 @@
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 1
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+      1					 ; ************
+      2					 ; * NAME     :	ZOOM.asm
+      3					 ; * AUTOR    :	R.Reber, BlueByte
+      4					 ; * START    :	25.05.94 14:00
+      5					 ; * PROJECT  :	ALBION
+      6					 ; * NOTES    :
+      7					 ; * SEE ALSO :
+      8					 ; * VERSION  :	1.0
+      9					 ; ************/
+     10
+     11						 .386p
+     12
+     13						 ASSUME	DS:ZOOM_DATA
+     14
+     15	00000000				 .MODEL	FLAT
+     16	00000000				 .CODE
+     17
+     18					 ; Public Functions
+     19						 PUBLIC	 C ZOOM_BLOCK_						 ; horizontale Linie
+     20
+     21					 ; Public Variablen
+     22						 PUBLIC	 _ZOOMFUNC_DESTCLIPX0 ;	Clipping Variablen fÅr ZoomBob
+     23						 PUBLIC	 _ZOOMFUNC_DESTCLIPY0
+     24						 PUBLIC	 _ZOOMFUNC_DESTCLIPX1
+     25						 PUBLIC	 _ZOOMFUNC_DESTCLIPY1
+     26
+     27					 ; Include Files
+     28						 INCLUDE d:\PCLIB32\LIB\ASMINC\BBMACRO.INC
+1    29					 ; ************
+1    30					 ; * NAME     :	BBMACRO.INC
+1    31					 ; * AUTOR    :	Viper, BlueByte
+1    32					 ; * START    :	25.05.94 14:00
+1    33					 ; * PROJECT  :	Poject32/Macintosh
+1    34					 ; * NOTES    :	MacroDefinitionen fÅr MASM
+1    35					 ; * SEE ALSO :
+1    36					 ; * VERSION  :	1.0
+1    37					 ; ************/
+1    38
+1    39					 ;--------------------------------------
+1    40					 ;SAFEWAIT Wait	for three Jumps
+1    41
+1    42					 SAFEWAIT	 MACRO	 ;
+1    43						 jmp	 @F		 ;
+1    44					 @@:			 ;
+1    45						 jmp	 @F		 ;
+1    46					 @@:			 ;
+1    47						 jmp	 @F		 ;
+1    48					 @@:			 ;
+1    49								 ENDM	 ;
+1    50
+1    51
+1    52
+1    53					 ; Copy	mem to mem over	ax
+1    54					 movm	 MACRO adra,adrb
+1    55						 mov	 ax,adrb
+1    56						 mov	 adra,ax
+1    57					 ENDM
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 2
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1    58
+1    59					 ; Copy	mem to mem over	eax
+1    60					 movme	 MACRO adra,adrb
+1    61						 mov	 eax,adrb
+1    62						 mov	 adra,eax
+1    63					 ENDM
+1    64
+1    65					 ; add mem to mem over ax
+1    66					 addm	 MACRO adra,adrb
+1    67						 mov	 ax,adrb
+1    68						 add	 adra,ax
+1    69					 ENDM
+1    70
+1    71					 ; add mem to mem over eax
+1    72					 addme	 MACRO adra,adrb
+1    73						 mov	 eax,adrb
+1    74						 add	 adra,eax
+1    75					 ENDM
+1    76
+1    77					 ; sub mem to mem over ax
+1    78					 subm	 MACRO adra,adrb
+1    79						 mov	 ax,adrb
+1    80						 sub	 adra,ax
+1    81					 ENDM
+1    82
+1    83					 ; sub mem to mem over eax
+1    84					 subme	 MACRO adra,adrb
+1    85						 mov	 eax,adrb
+1    86						 sub	 adra,eax
+1    87					 ENDM
+1    88
+1    89					 ; compare mem to mem over eax
+1    90					 cmpme	 MACRO adra,adrb
+1    91						 mov	 eax,adrb
+1    92						 cmp	 adra,eax
+1    93					 ENDM
+1    94
+1    95					 ; lea Adr
+1    96					 leame MACRO A,B
+1    97						 lea	 EAX,B
+1    98						 mov	 A,EAX
+1    99					 ENDM
+1   100
+1   101					 xchgm MACRO A,B
+1   102						 mov	 AX,B
+1   103						 xchg	 A,AX
+1   104						 mov	 B,AX
+1   105					 ENDM
+1   106
+1   107					 xchgme	MACRO A,B
+1   108						 mov	 EAX,B
+1   109						 xchg	 A,EAX
+1   110						 mov	 B,EAX
+1   111					 ENDM
+1   112
+1   113					 clr MACRO A
+1   114						 sub	 A,A
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 3
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1   115					 ENDM
+1   116
+1   117					 tst MACRO A
+1   118						 or		 A,A
+1   119					 ENDM
+1   120
+1   121					 ; OUT Byte to port
+1   122					 out_b		 MACRO VAL1,VAL2	 ;
+1   123						 ifidni	<VAL1>,<DX>	 ;
+1   124						 else			 ;
+1   125						 mov	 DX,VAL1	 ;
+1   126						 endif		 ;
+1   127						 IFIDNI	<VAL2>,<AL>	 ;
+1   128						 out	 DX,AL	 ;
+1   129						 else			 ;
+1   130						 mov	 AL,VAL2	 ;
+1   131						 out	 DX,AL	 ;
+1   132						 endif		 ;
+1   133					 ENDM
+1   134
+1   135					 ; OUT word to port
+1   136					 out_w	 MACRO VAL1,VAL2
+1   137						 ifidni	<VAL1>,<DX>	 ;
+1   138						 else			 ;
+1   139						 mov	 DX,VAL1	 ;
+1   140						 endif		 ;
+1   141						 IFIDNI	<VAL2>,<AX>	 ;
+1   142						 out	 DX,AX	 ;
+1   143						 else			 ;
+1   144						 mov	 AX,VAL2	 ;
+1   145						 out	 DX,AX	 ;
+1   146						 endif		 ;
+1   147					 ENDM
+1   148
+1   149					 ; IN Byte to port
+1   150					 IN_B MACRO VAL1	 ;
+1   151						 ifidni	<VAL1>,<DX>	 ;
+1   152						 else			 ;
+1   153						 mov	 DX,VAL1	 ;
+1   154						 endif		 ;
+1   155						 in	 AL,DX	 ;
+1   156					 ENDM	 ;
+1   157
+1   158					 ; alle	Register Retten
+1   159					 PUSHALL MACRO
+1   160						 push	 eax
+1   161						 push	 ebx
+1   162						 push	 ecx
+1   163						 push	 edx
+1   164						 push	 esi
+1   165						 push	 edi
+1   166						 push	 ebp
+1   167					 ENDM
+1   168
+1   169					 ; alle	Register zurÅckholen
+1   170					 POPALL	MACRO
+1   171						 pop	 ebp
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 4
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1   172						 pop	 edi
+1   173						 pop	 esi
+1   174						 pop	 edx
+1   175						 pop	 ecx
+1   176						 pop	 ebx
+1   177						 pop	 eax
+1   178					 ENDM
+1   179
+1   180					 ; Ersatz fÅr Call Routine wird	verwendet wenn eine interne Assemblerfunktion
+1   181					 ; von einer anderen aufgerufen	wird
+1   182					 ACALL MACRO VAL	 ;
+1   183						 push	 EBP
+1   184						 lea	 EBP,VAL
+1   185						 push	 @F
+1   186						 jmp	 EBP	 ;
+1   187					 @@:
+1   188						 pop	 EBP
+1   189					 ENDM	 ;
+1   190
+1   191					 ; Hintergrundfarbe aufblitzen lassen
+1   192					 FLASH MACRO a,b,c
+1   193						 push	 ax
+1   194						 push	 dx
+1   195
+1   196						 cli			  ;
+1   197						 sub	 AX,AX	; clear	AX
+1   198						 mov	 DX,03C8H  ; DX	with ColorPort
+1   199						 safewait	  ; like BIOS, Flush Cache, wait a little
+1   200						 out	 DX,AL	; Start	with ColorRegister 0
+1   201
+1   202						 mov		 al,a
+1   203						 safewait	  ; like BIOS, Flush Cache, wait a little
+1   204						 mov	 DX,03C9H  ; DX	with ColorPort
+1   205						 out	 DX,AL	; Set Color -> RED
+1   206
+1   207						 mov		 al,b
+1   208						 safewait	  ; like BIOS, Flush Cache, wait a little
+1   209						 mov	 DX,03C9H  ; DX	with ColorPort
+1   210						 out	 DX,AL	; Set Color -> RED
+1   211
+1   212						 mov		 al,c
+1   213						 safewait	  ; like BIOS, Flush Cache, wait a little
+1   214						 mov	 DX,03C9H  ; DX	with ColorPort
+1   215						 out	 DX,AL	; Set Color -> RED
+1   216
+1   217						 sti
+1   218						 pop	 dx
+1   219						 pop	 ax
+1   220					 ENDM
+1   221
+1   222
+    223						 INCLUDE d:\PCLIB32\LIB\ASMINC\BBHARD.INC
+1   224					 ; ************
+1   225					 ; * NAME     :	BBHARD.INC
+1   226					 ; * AUTOR    :	Viper, BlueByte
+1   227					 ; * START    :	25.05.94 14:00
+1   228					 ; * PROJECT  :	Poject32/Macintosh
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 5
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1   229					 ; * NOTES    :	MacroDefinitionen fÅr MASM
+1   230					 ; * SEE ALSO :
+1   231					 ; * VERSION  :	1.0
+1   232					 ; ************/
+1   233
+1   234					 ; Defines fÅr MaximaleWerte Bildschirm
+1   235
+1   236		  =0322			 MAXSCREENWIDTH_PCLIB EQU 802
+1   237		  =025A			 MAXSCREENHEIGHT_PCLIB EQU 602
+1   238
+1   239					 ; CRTC: Cathode-Ray-Tube-Controller
+1   240									 ;
+1   241		  =0000			 CRTC_HT	 EQU 00H	 ; HorizontalTotal.
+1   242		  =0001			 CRTC_HDE	 EQU 01H	 ; HorizontalDisplayEnd.
+1   243		  =0002			 CRTC_HSHB	 EQU 02H	 ; StartHorizontalBlank
+1   244		  =0003			 CRTC_HEHB	 EQU 03H	 ; EndHorizontalBlank
+1   245		  =0004			 CRTC_HSHR	 EQU 04H	 ; StartHorizontalRetrace
+1   246		  =0005			 CRTC_HEHR	 EQU 05H	 ; EndHorizontalRetrace
+1   247		  =0006			 CRTC_VT	 EQU 06H	 ; VerticalTotal
+1   248					 ;CRTC_O	 EQU 07H	 ; Overflow
+1   249		  =0008			 CRTC_PRS	 EQU 08H	 ; PresetRowScan
+1   250		  =0009			 CRTC_MSL	 EQU 09H	 ; MaxScanLine
+1   251		  =000A			 CRTC_CS	 EQU 0AH	 ; CursorStart
+1   252		  =000B			 CRTC_CE	 EQU 0BH	 ; CursorEnd
+1   253		  =000C			 CRTC_SAH	 EQU 0CH	 ; StartAddressHigh.
+1   254		  =000D			 CRTC_SAL	 EQU 0DH	 ; StartAddressLow.
+1   255		  =000E			 CRTC_CLH	 EQU 0EH	 ; CursorLocationHigh
+1   256		  =000F			 CRTC_CLL	 EQU 0FH	 ; CursorLocationLow
+1   257		  =0010			 CRTC_VRS	 EQU 10H	 ; VerticalRetraceStart.
+1   258		  =0011			 CRTC_VRL	 EQU 11H	 ; VerticalRetraceLow
+1   259		  =0012			 CRTC_VDE	 EQU 12H	 ; VerticalDisplayEnd.
+1   260		  =0013			 CRTC_O		 EQU 13H	 ; Offset
+1   261		  =0014			 CRTC_UL	 EQU 14H	 ; UnderlineLocation
+1   262		  =0015			 CRTC_SVB	 EQU 15H	 ; StartVerticalBlank
+1   263		  =0016			 CRTC_EVB	 EQU 16H	 ; EndVerticalBlank
+1   264		  =0017			 CRTC_MODE	 EQU 17H	 ; Mode
+1   265		  =0018			 CRTC_LC	 EQU 18H	 ; LineCompare
+1   266
+1   267					 ; TS: Timing Sequencer
+1   268
+1   269		  =03C4			 TS_IND		 EQU 3C4H	 ; TS-Index.
+1   270		  =03C5			 TS_DAT		 EQU 3C5H	 ; TS-Data.
+1   271
+1   272		  =0000			 TS_R		 EQU 00H	 ; Reset.
+1   273		  =0001			 TS_CM		 EQU 01H	 ; Clocking Mode.
+1   274		  =0002			 TS_MM		 EQU 02H	 ; MapMask.
+1   275		  =0003			 TS_CMS		 EQU 03H	 ; CharacterMapSelect
+1   276		  =0004			 TS_MMO		 EQU 04H	 ; MemoryMOde.
+1   277		  =0006			 TS_SCR		 EQU 06H	 ; StateControl.
+1   278		  =0007			 TS_AMR		 EQU 07H	 ; AuxiliaryMode.
+1   279
+1   280					 ; GDC:	Graphics-Controller Registers
+1   281									 ;
+1   282		  =03CD			 GCR_SS		 EQU 3CDH	 ; GDC SegmentSelect.
+1   283									 ;
+1   284		  =03CE			 GCR_IND	 EQU 3CEH	 ; GDC-Index.
+1   285		  =03CF			 GCR_DAT	 EQU 3CFH	 ; GDC-Data.
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 6
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1   286									 ;
+1   287		  =0000			 GCR_SR		 EQU 00H	 ; Set/Reset.
+1   288		  =0001			 GCR_ESR	 EQU 01H	 ; EnableSet/Reset.
+1   289		  =0002			 GCR_CC		 EQU 02H	 ; ColorCompare.
+1   290		  =0003			 GCR_DR		 EQU 03H	 ; DataRotate
+1   291		  =0004			 GCR_RMS	 EQU 04H	 ; ReadMapSelect.
+1   292		  =0005			 GCR_M		 EQU 05H	 ; Mode.
+1   293		  =0006			 GCR_MISC	 EQU 06H	 ; Miscellaneous.
+1   294		  =0007			 GCR_CDC	 EQU 07H	 ; ColorDontCare.
+1   295		  =0008			 GCR_BM		 EQU 08H	 ; BitMask.
+1   296
+1   297					 ; MISC: Miscellaneous Output Register
+1   298
+1   299		  =03C2			 MISC_IND	 EQU 03C2H	 ; Write Misc
+1   300		  =03CC			 MISC_DAT	 EQU 03CCH	 ; Read	Misc
+1   301
+1   302
+    303
+    304					 ; Zoommodes
+    305		  =0000			 ZOOMMODE_NORMAL=0
+    306		  =0001			 ZOOMMODE_SILHOUETTE=1
+    307		  =0002			 ZOOMMODE_RECOLOUR_BACK=2
+    308		  =0003			 ZOOMMODE_RECOLOUR=3
+    309		  =0004			 ZOOMMODE_TRANSPARENT=4
+    310
+    311	00000000			 ZOOM_CODE SEGMENT PARA	USE32 'CODE'	 ;
+    312
+    313					 ;ZOOMBOB
+    314					 ;******************************************************************************
+    315					 ;* #FUNCTION HEADER BEGIN#
+    316					 ;* NAME      :	ZOOM_BLOCK
+    317					 ;* FUNCTION  :	Stellt OPM mit wahlweiser Breite und Hîhe dar (interne Funktion)
+    318					 ;*					 Farbe 0 wird durchsichtig dargestellt
+    319					 ;*
+    320					 ;* INPUTS    :	OPM(EDI)= Zeiger auf OPM
+    321					 ;*					 Xpos(EAX) = X Position	Bildschirm
+    322					 ;*					 Ypos(EBX) = Y Position	Bildschirm
+    323					 ;*					 sizex(ECX) = neue Grîsse in X
+    324					 ;*					 sizey(EDX) = neue Grîsse in Y
+    325					 ;* INPUTS    :	sourceptr = Zeiger auf QUELLOPM
+    326					 ;*					 destptr = Zeiger auf Zielopm
+    327					 ;*					 sourcenextypos	= Breite QuellHauptopm
+    328					 ;*					 sourcewidth = Breite QuellBereich
+    329					 ;*					 sourceheight =	Hîhe QuellBereich
+    330					 ;*					 destnextypos =	Breite ZielHauptopm
+    331					 ;*					 destwidth = neue Breite ZielBereich
+    332					 ;*					 destheight = neue Hîhe	ZielBereich
+    333					 ;*					 destx = xpos ZielBereich
+    334					 ;*					 desty = ypos ZielBereich
+    335					 ;*					 color/colortable/transparenttable = Zeichenfarbe   +
+    336					 (nur wenn shilouetteMode),UmfÑrbTabelle,TransparentTabelle
+    337					 ;*					 zoommode = ZOOMMODE_NORMAL = Graphik mit Farbe	0   +
+    338					 transparent zeichnen
+    339					 ;*			   ZOOMMODE_SILHOUETTE = GraphikUmriss mit color zeichnen
+    340					 ;*			   ZOOMMODE_RECOLOUR = Graphik mittels Umrechnungstabelle zeichnen
+    341					 ;*			   ZOOMMODE_TRANSPARENT	= Graphik mittels Urechnungstabelle	    +
+    342					 transparent zeichnen
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 7
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    343					 ;*
+    344					 ;* zusÑtzlich mÅssen folgende Globale Variablen initialisiert sein !
+    345					 ;*					 destcx0 = Clipx0 Zielbereich
+    346					 ;*					 destcy0 = Clipy0 Zielbereich
+    347					 ;*					 destcx1 = Clipx1 Zielbereich
+    348					 ;*					 destcy1 = Clipy1 Zielbereich
+    349					 ;* RESULT    :
+    350					 ;*
+    351					 ;* FILE      :	SCREEN.ASM
+    352					 ;* AUTHOR    :	VIPER
+    353					 ;* FIRST     :	30.08.94 13:35:58
+    354					 ;* LAST      :	20.03.95 16:49:06
+    355					 ;* BUGS      :
+    356					 ;* NOTES     :	Das QuellOPM darf kein virtuelles OPM sein !!!
+    357					 ;* SEE	ALSO  :
+    358					 ;* VERSION   :	0.1
+    359					 ;* #FUNCTION HEADER END#
+    360
+    361	00000000			 ZOOM_BLOCK_ PROC C USES EBP sourceptr:DWORD,destptr:DWORD,sourcenextypos:DWORD,	    +
+    362					 sourcewidth:DWORD,sourceheight:DWORD,destnextypos:DWORD,destwidth:DWORD,destheight:DWORD,  +
+    363					 destxpos:DWORD,destypos:DWORD,color:DWORD,zoommode:DWORD
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(85) Extra characters on line
+    364
+1   365	00000000  55				 PUSH	 EBP
+1   366	00000001  FF 35	00000000		 PUSH	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(87) PROCBEG(2) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(87) PROCBEG(2) Argument needs	type override
+1   367	00000007  06				 push	 es
+    368	00000008  1E				 push	 ds
+    369	00000009  07				 pop	 es
+    370
+    371					 ; ZielBob zentrieren
+    372						 movme	 ZOOM_DWIDTH,DESTWIDTH
+1   373	0000000A  A1 00000000			 mov	 eax,DESTWIDTH
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(92) MOVME(1) Undefined symbol: DESTWIDTH
+1   374	0000000F  A3 00000000r			 mov	 ZOOM_DWIDTH,eax
+    375						 movme	 ZOOM_DHEIGHT,DESTHEIGHT
+1   376	00000014  A1 00000000			 mov	 eax,DESTHEIGHT
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(93) MOVME(1) Undefined symbol: DESTHEIGHT
+1   377	00000019  A3 00000004r			 mov	 ZOOM_DHEIGHT,eax
+    378
+    379					 ;	 Breite	/ Hîhe des OPMS
+    380	0000001E  A1 00000000			 mov	 EAX,SOURCEWIDTH  ; Breite
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(96) Undefined	symbol:	SOURCEWIDTH
+    381	00000023  C1 E0	10			 sal	 EAX,16
+    382	00000026  A3 0000000Cr			 mov	 ZOOM_SWIDTH,EAX
+    383	0000002B  A3 00000014r			 mov	 ZOOM_SBAKWIDTH,EAX
+    384
+    385	00000030  A1 00000000			 mov	 EAX,SOURCEHEIGHT  ; Hîhe des OPM
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(101) Undefined symbol: SOURCEHEIGHT
+    386	00000035  C1 E0	10			 sal	 EAX,16
+    387	00000038  A3 00000010r			 mov	 ZOOM_SHEIGHT,EAX
+    388	0000003D  A3 00000018r			 mov	 ZOOM_SBAKHEIGHT,EAX
+    389
+    390					 ; Clipping
+    391						 movme	 ZOOM_SXOFFSET,ZOOM_SBAKWIDTH ;	Offset auf QuellBitmap
+1   392	00000042  A1 00000014r			 mov	 eax,ZOOM_SBAKWIDTH
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 8
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+1   393	00000047  A3 0000001Cr			 mov	 ZOOM_SXOFFSET,eax
+    394	0000004C  C7 05	00000020r     +		 mov	 ZOOM_SYOFFSET,0
+    395		  00000000
+    396
+    397					 ; links
+    398	00000056  A1 00000000			 mov	 EAX,DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(111) Undefined symbol: DESTXPOS
+    399	0000005B  2B 05	00000038r		 sub	 EAX,_ZOOMFUNC_DESTCLIPX0
+    400	00000061  79 40	90 90 90 90		 jns	 CLIPZOMLEFT_BLOCK
+    401	00000067  F7 D8				 neg	 EAX
+    402	00000069  29 05	00000000r		 sub	 ZOOM_DWIDTH,EAX ; Ziel	Breite - X offset
+    403	0000006F  F7 05	00000000r     +		 test	 ZOOM_DWIDTH,-1	; Breite <=0 dann Object ausserhalb des	Screens
+    404		  FFFFFFFF
+    405	00000079  0F 8E	000001FF		 jle	 WRONGZOOMSIZE_BLOCK
+    406	0000007F  F7 2D	00000014r		 imul	 ZOOM_SBAKWIDTH	; * Breite Quell
+    407	00000085  F7 3D	00000000		 idiv	 DESTWIDTH ; / Breite Ziel
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(119) Undefined symbol: DESTWIDTH
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(119) Argument	needs type override
+    408	0000008B  29 05	0000000Cr		 sub	 ZOOM_SWIDTH,EAX ; Quell Breite	- skalierter Offset
+    409	00000091  C1 C0	10			 rol	 EAX,16
+    410	00000094  A3 0000001Cr			 mov	 ZOOM_SXOFFSET,EAX ; X Offset der auf QuellBitmap aufaddiert wird
+    411						 movme	 DESTXPOS,_ZOOMFUNC_DESTCLIPX0
+1   412	00000099  A1 00000038r			 mov	 eax,_ZOOMFUNC_DESTCLIPX0
+1   413	0000009E  A3 00000000			 mov	 DESTXPOS,eax
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(123) MOVME(2)	Undefined symbol: DESTXPOS
+    414	000000A3			 CLIPZOMLEFT_BLOCK:
+    415
+    416					 ; rechts
+    417	000000A3  A1 00000000			 mov	 EAX,DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(127) Undefined symbol: DESTXPOS
+    418	000000A8  03 05	00000000r		 add	 EAX,ZOOM_DWIDTH
+    419	000000AE  48				 dec	 EAX
+    420	000000AF  2B 05	00000040r		 sub	 EAX,_ZOOMFUNC_DESTCLIPX1
+    421	000000B5  7E 2C	90 90 90 90		 jle	 CLIPZOMRIGHT_BLOCK
+    422	000000BB  29 05	00000000r		 sub	 ZOOM_DWIDTH,EAX ; Ziel	Breite - X offset
+    423	000000C1  F7 05	00000000r     +		 test	 ZOOM_DWIDTH,-1	; Breite <=0 dann Object ausserhalb des	Screens
+    424		  FFFFFFFF
+    425	000000CB  0F 8E	000001AD		 jle	 WRONGZOOMSIZE_BLOCK
+    426	000000D1  F7 2D	00000014r		 imul	 ZOOM_SBAKWIDTH	; * Breite Quell
+    427	000000D7  F7 3D	00000000		 idiv	 DESTWIDTH ; / Breite Ziel
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(136) Undefined symbol: DESTWIDTH
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(136) Argument	needs type override
+    428	000000DD  29 05	0000000Cr		 sub	 ZOOM_SWIDTH,EAX ; Quell Breite	- skalierter Offset
+    429	000000E3			 CLIPZOMRIGHT_BLOCK:
+    430
+    431					 ; oben
+    432	000000E3  A1 00000000			 mov	 EAX,DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(141) Undefined symbol: DESTYPOS
+    433	000000E8  2B 05	0000003Cr		 sub	 EAX,_ZOOMFUNC_DESTCLIPY0
+    434	000000EE  79 40	90 90 90 90		 jns	 CLIPZOMTOP_BLOCK
+    435	000000F4  F7 D8				 neg	 EAX
+    436	000000F6  29 05	00000004r		 sub	 ZOOM_DHEIGHT,EAX ; Ziel Breite	- X offset
+    437	000000FC  F7 05	00000004r     +		 test	 ZOOM_DHEIGHT,-1 ; Breite <=0 dann Object ausserhalb des Screens
+    438		  FFFFFFFF
+    439	00000106  0F 8E	00000172		 jle	 WRONGZOOMSIZE_BLOCK
+    440	0000010C  F7 2D	00000018r		 imul	 ZOOM_SBAKHEIGHT ; * Breite Quell
+    441	00000112  F7 3D	00000000		 idiv	 DESTHEIGHT ; /	Breite Ziel
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 9
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(149) Undefined symbol: DESTHEIGHT
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(149) Argument	needs type override
+    442	00000118  29 05	00000010r		 sub	 ZOOM_SHEIGHT,EAX ; Quell Breite - skalierter Offset
+    443	0000011E  C1 C0	10			 rol	 EAX,16	; Hi mit LoWort	vertauschen
+    444	00000121  A3 00000020r			 mov	 ZOOM_SYOFFSET,EAX ; X Offset der auf QuellBitmap aufaddiert wird
+    445						 movme	 DESTYPOS,_ZOOMFUNC_DESTCLIPY0
+1   446	00000126  A1 0000003Cr			 mov	 eax,_ZOOMFUNC_DESTCLIPY0
+1   447	0000012B  A3 00000000			 mov	 DESTYPOS,eax
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(153) MOVME(2)	Undefined symbol: DESTYPOS
+    448	00000130			 CLIPZOMTOP_BLOCK:
+    449
+    450					 ; unten
+    451	00000130  A1 00000000			 mov	 EAX,DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(157) Undefined symbol: DESTYPOS
+    452	00000135  03 05	00000004r		 add	 EAX,ZOOM_DHEIGHT
+    453	0000013B  48				 dec	 EAX
+    454	0000013C  2B 05	00000044r		 sub	 EAX,_ZOOMFUNC_DESTCLIPY1
+    455	00000142  7E 2C	90 90 90 90		 jle	 CLIPZOMBOTTOM_BLOCK
+    456	00000148  29 05	00000004r		 sub	 ZOOM_DHEIGHT,EAX ; Ziel Breite	- X offset
+    457	0000014E  F7 05	00000004r     +		 test	 ZOOM_DHEIGHT,-1 ; Breite <=0 dann Object ausserhalb des Screens
+    458		  FFFFFFFF
+    459	00000158  0F 8E	00000120		 jle	 WRONGZOOMSIZE_BLOCK
+    460	0000015E  F7 2D	00000018r		 imul	 ZOOM_SBAKHEIGHT ; * Breite Quell
+    461	00000164  F7 3D	00000000		 idiv	 DESTHEIGHT ; /	Breite Ziel
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(166) Undefined symbol: DESTHEIGHT
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(166) Argument	needs type override
+    462	0000016A  29 05	00000010r		 sub	 ZOOM_SHEIGHT,EAX ; Quell Breite - skalierter Offset
+    463	00000170			 CLIPZOMBOTTOM_BLOCK:
+    464
+    465					 ; an rechte Grenze setzen
+    466	00000170  A1 00000000			 mov	 EAX,SOURCEPTR	; Bitmap des OPMs
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(171) Undefined symbol: SOURCEPTR
+    467	00000175  A3 00000008r			 mov	 ZOOM_SBITMAP,EAX ; an rechte Grenze setzen
+    468	0000017A  8B 3D	00000000		 mov	 EDI,DESTPTR ; AusgabeBildschirm
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(173) Undefined symbol: DESTPTR
+    469
+    470	00000180  A1 00000000			 mov	 EAX,DESTYPOS ;	Position am Bildschirm
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(175) Undefined symbol: DESTYPOS
+    471	00000185  0F AF	05 00000000		 imul	 EAX,DESTNEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(176) Undefined symbol: DESTNEXTYPOS
+    472	0000018C  03 05	00000000		 add	 EAX,DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(177) Undefined symbol: DESTXPOS
+    473	00000192  03 F8				 add	 EDI,EAX
+    474
+    475	00000194  A1 0000000Cr			 mov	 EAX,ZOOM_SWIDTH
+    476	00000199  8B 1D	00000000r		 mov	 EBX,ZOOM_DWIDTH ; neue	Breite
+    477	0000019F  99				 cdq
+    478	000001A0  F7 FB				 idiv EBX
+    479	000001A2  C1 C0	10			 rol	 EAX,16	 ; Hi mit LoWort vertauschen
+    480	000001A5  A3 00000024r			 mov	 ZOOM_MX,EAX ; Steigung	fÅr X
+    481
+    482	000001AA  A1 00000010r			 mov	 EAX,ZOOM_SHEIGHT
+    483	000001AF  8B 1D	00000004r		 mov	 EBX,ZOOM_DHEIGHT ; neue Hîhe
+    484	000001B5  99				 cdq
+    485	000001B6  F7 FB				 idiv EBX
+    486	000001B8  C1 C0	10			 rol	 EAX,16	 ; Hi mit LoWort vertauschen
+    487	000001BB  A3 00000028r			 mov	 ZOOM_MY,EAX ; Steigung	fÅr Y
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 10
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    488
+    489						 movme	 SOURCEWIDTHII,SOURCENEXTYPOS
+1   490	000001C0  A1 00000000			 mov	 eax,SOURCENEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(194) MOVME(1)	Undefined symbol: SOURCENEXTYPOS
+1   491	000001C5  A3 00000030r			 mov	 SOURCEWIDTHII,eax
+    492	000001CA  A1 00000000			 mov	 EAX,DESTNEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(195) Undefined symbol: DESTNEXTYPOS
+    493	000001CF  2B 05	00000000r		 sub	 EAX,ZOOM_DWIDTH
+    494	000001D5  A3 00000034r			 mov	 DESTWIDTHII,EAX
+    495
+    496	000001DA  55				 push	 EBP
+    497
+    498	000001DB  FC				 CLD ; Richtung	stosb vorwÑrts
+    499
+    500	000001DC  83 3D	00000000 01		 cmp	 zoommode,ZOOMMODE_SILHOUETTE
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(203) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(203) Argument	needs type override
+    501	000001E3  0F 84	0000009E		 je		 shilouettenmode
+    502
+    503	000001E9  83 3D	00000000 02		 cmp	 zoommode,ZOOMMODE_RECOLOUR_BACK
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(206) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(206) Argument	needs type override
+    504	000001F0  0F 84	00000115		 je		 recolorbackmode
+    505
+    506	000001F6  83 3D	00000000 03		 cmp	 zoommode,ZOOMMODE_RECOLOUR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(209) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(209) Argument	needs type override
+    507	000001FD  0F 84	00000194		 je		 recolormode
+    508
+    509	00000203  83 3D	00000000 04		 cmp	 zoommode,ZOOMMODE_TRANSPARENT
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(212) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(212) Argument	needs type override
+    510	0000020A  0F 84	00000212		 je		 transparentmode
+    511
+    512					 ;**************************************
+    513					 ; normaler Zoommode
+    514					 ;**************************************
+    515
+    516					 ; gezoomtes OPM darstellen
+    517	00000210  8B 1D	00000024r		 mov	 EBX,ZOOM_MX
+    518	00000216  8B 2D	00000020r		 mov	 EBP,ZOOM_SYOFFSET ; Clip Y Offset
+    519						 movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+1   520	0000021C  A1 00000004r			 mov	 eax,ZOOM_DHEIGHT
+1   521	00000221  A3 00000048r			 mov	 ZOOM_LOPVAR,eax
+    522	00000226			 YZOMDRAW_NORMAL:
+    523	00000226  8B 35	00000008r		 mov	 ESI,ZOOM_SBITMAP ; StartAddresse Screen
+    524	0000022C  0F B7	D5			 movzx	 EDX,BP	; LoWort = Ganzzahl
+    525	0000022F  0F AF	15 00000030r		 imul	 EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+    526	00000236  03 F2				 add	 ESI,EDX ; nÑchste Zeile Quellopm
+    527
+    528	00000238  8B 15	0000001Cr		 mov	 EDX,ZOOM_SXOFFSET ; Clip X Offset
+    529	0000023E  8B 0D	00000000r		 mov	 ECX,ZOOM_DWIDTH
+    530	00000244  33 C0				 xor	 EAX,EAX
+    531	00000246			 ZOOMLOOP_NORMAL:
+    532
+    533	00000246  03 D3				 add	 EDX,EBX ; X addieren
+    534	00000248  83 D2	00			 adc	 EDX,0
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 11
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    535	0000024B  66| 8B C2			 mov	 AX,DX ; LoWort	= Ganzzahl
+    536
+    537	0000024E  8A 04	06			 mov	 al,[ESI+EAX] ;	Pixel lesem
+    538	00000251  0A C0				 or		 al,al
+    539	00000253  0F 84	FFFFFDA7		 je	 @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(240) Undefined symbol: @F
+    540	00000259  AA				 stosb
+    541	0000025A  49				 dec	 ECX
+    542	0000025B  7F E9				 jg		 ZOOMLOOP_NORMAL
+    543	0000025D  EB 07	90 90 90		 jmp	 ENDZOOMLOP_NORMAL
+    544	00000262			 @@:
+    545	00000262  47				 inc	 edi
+    546	00000263  49				 dec	 ECX
+    547	00000264  7F E0				 jg		 ZOOMLOOP_NORMAL
+    548	00000266			 ENDZOOMLOP_NORMAL:
+    549
+    550	00000266  03 2D	00000028r		 add	 EBP,ZOOM_MY ; Y addieren
+    551	0000026C  83 D5	00			 adc	 EBP,0
+    552	0000026F  03 3D	00000034r		 add	 EDI,DESTWIDTHII ; Modulo nÑchste Zeile	Bildschirm
+    553	00000275  FF 0D	00000048r		 dec	 ZOOM_LOPVAR
+    554	0000027B  7F A9				 jg	 YZOMDRAW_NORMAL
+    555
+    556	0000027D  5D				 pop	 EBP
+    557	0000027E			 WRONGZOOMSIZE_BLOCK:
+    558	0000027E  07				 pop	 es
+    559
+1   560	0000027F  8F 05	00000000		 POP	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(261) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(261) PROCEND(1) Argument needs type override
+1   561	00000285  5D				 POP	 EBP
+1   562	00000286  C3				 RET	 00000h
+    563					 ;**************************************
+    564					 ; Shilhouetten	Zoommode
+    565					 ;**************************************
+    566	00000287			 shilouettenmode:
+    567
+    568	00000287  8B 1D	00000024r		 mov	 EBX,ZOOM_MX
+    569						 movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+1   570	0000028D  A1 00000004r			 mov	 eax,ZOOM_DHEIGHT
+1   571	00000292  A3 00000048r			 mov	 ZOOM_LOPVAR,eax
+    572	00000297  A1 00000000			 mov	 EAX,color
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(269) Undefined symbol: COLOR
+    573	0000029C			 YZOMDRAW_SHILHOUETTE:
+    574	0000029C  8B 35	00000008r		 mov	 ESI,ZOOM_SBITMAP ; StartAddresse Screen
+    575	000002A2  0F B7	15 00000020r		 movzx	 EDX,WORD PTR ZOOM_SYOFFSET ; LoWort = Ganzzahl
+    576	000002A9  0F AF	15 00000030r		 imul	 EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+    577	000002B0  03 F2				 add	 ESI,EDX ; nÑchste Zeile Quellopm
+    578
+    579	000002B2  8B 15	0000001Cr		 mov	 EDX,ZOOM_SXOFFSET ; Clip X Offset
+    580	000002B8  8B 0D	00000000r		 mov	 ECX,ZOOM_DWIDTH
+    581	000002BE  33 ED				 xor	 EBP,EBP
+    582	000002C0			 ZOOMLOOP_SHILHOUETTE:
+    583
+    584	000002C0  03 D3				 add	 EDX,EBX ; X addieren
+    585	000002C2  83 D2	00			 adc	 EDX,0
+    586	000002C5  66| 8B EA			 mov	 BP,DX ; LoWort	= Ganzzahl
+    587
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 12
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    588	000002C8  F6 44	35 00 FF		 test	 BYTE PTR [EBP+ESI],-1 ; Pixel lesem
+    589	000002CD  0F 84	FFFFFD2D		 je	 @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(286) Undefined symbol: @F
+    590	000002D3  AA				 stosb
+    591	000002D4  49				 dec	 ECX
+    592	000002D5  7F E9				 jg		 ZOOMLOOP_SHILHOUETTE
+    593	000002D7  EB 07	90 90 90		 jmp	 ENDZOOMLOP_SHILHOUETTE
+    594	000002DC			 @@:
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(291) Symbol already defined elsewhere: @@
+    595	000002DC  47				 inc	 edi
+    596	000002DD  49				 dec	 ECX
+    597	000002DE  7F E0				 jg		 ZOOMLOOP_SHILHOUETTE
+    598	000002E0			 ENDZOOMLOP_SHILHOUETTE:
+    599
+    600	000002E0  8B 0D	00000028r		 mov	 ECX,ZOOM_MY
+    601	000002E6  01 0D	00000020r		 add	 ZOOM_SYOFFSET,ECX ; Y addieren
+    602	000002EC  83 15	00000020r 00		 adc	 ZOOM_SYOFFSET,0
+    603	000002F3  03 3D	00000034r		 add	 EDI,DESTWIDTHII ; Modulo nÑchste Zeile	Bildschirm
+    604	000002F9  FF 0D	00000048r		 dec	 ZOOM_LOPVAR
+    605	000002FF  7F 9B				 jg	 YZOMDRAW_SHILHOUETTE
+    606
+    607	00000301  5D				 pop	 EBP
+    608	00000302  07				 pop	 es
+    609
+1   610	00000303  8F 05	00000000		 POP	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(307) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(307) PROCEND(1) Argument needs type override
+1   611	00000309  5D				 POP	 EBP
+1   612	0000030A  C3				 RET	 00000h
+    613
+    614					 ;**************************************
+    615					 ; RecolorBackground Zoommode
+    616					 ;**************************************
+    617	0000030B			 recolorbackmode:
+    618	0000030B  8B 1D	00000024r		 mov	 EBX,ZOOM_MX
+    619						 movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+1   620	00000311  A1 00000004r			 mov	 eax,ZOOM_DHEIGHT
+1   621	00000316  A3 00000048r			 mov	 ZOOM_LOPVAR,eax
+    622	0000031B  8B 2D	00000000		 mov	 EBP,color
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(315) Undefined symbol: COLOR
+    623	00000321			 YZOMDRAW_RECOLOR_BACK:
+    624	00000321  8B 35	00000008r		 mov	 ESI,ZOOM_SBITMAP ; StartAddresse Screen
+    625	00000327  0F B7	15 00000020r		 movzx	 EDX,WORD PTR ZOOM_SYOFFSET ; LoWort = Ganzzahl
+    626	0000032E  0F AF	15 00000030r		 imul	 EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+    627	00000335  03 F2				 add	 ESI,EDX ; nÑchste Zeile Quellopm
+    628
+    629	00000337  8B 15	0000001Cr		 mov	 EDX,ZOOM_SXOFFSET ; Clip X Offset
+    630	0000033D  8B 0D	00000000r		 mov	 ECX,ZOOM_DWIDTH
+    631	00000343  33 C0				 xor	 EAX,EAX
+    632	00000345			 ZOOMLOOP_RECOLOR_BACK:
+    633
+    634	00000345  03 D3				 add	 EDX,EBX ; X addieren
+    635	00000347  83 D2	00			 adc	 EDX,0
+    636	0000034A  66| 8B C2			 mov	 AX,DX ; LoWort	= Ganzzahl
+    637
+    638	0000034D  F6 04	06 FF			 test	 BYTE PTR [ESI+EAX],-1 ; Pixel testen
+    639	00000351  0F 84	FFFFFCA9		 je	 @F
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 13
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(332) Undefined symbol: @F
+    640	00000357  66| 0F B6 07			 movzx	 AX,BYTE PTR [EDI] ; Pixel aus Hintergrund lesen
+    641	0000035B  8A 44	05 00			 mov	 AL,[EBP+EAX] ;	Pixel aus UmrechenTabelle
+    642	0000035F  AA				 stosb
+    643	00000360  49				 dec	 ECX
+    644	00000361  7F E2				 jg		 ZOOMLOOP_RECOLOR_BACK
+    645	00000363  EB 07	90 90 90		 jmp	 ENDZOOMLOP_RECOLOR_BACK
+    646	00000368			 @@:
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(339) Symbol already defined elsewhere: @@
+    647	00000368  47				 inc	 edi
+    648	00000369  49				 dec	 ECX
+    649	0000036A  7F D9				 jg		 ZOOMLOOP_RECOLOR_BACK
+    650	0000036C			 ENDZOOMLOP_RECOLOR_BACK:
+    651
+    652	0000036C  8B 0D	00000028r		 mov	 ECX,ZOOM_MY
+    653	00000372  01 0D	00000020r		 add	 ZOOM_SYOFFSET,ECX ; Y addieren
+    654	00000378  83 15	00000020r 00		 adc	 ZOOM_SYOFFSET,0
+    655	0000037F  03 3D	00000034r		 add	 EDI,DESTWIDTHII ; Modulo nÑchste Zeile	Bildschirm
+    656	00000385  FF 0D	00000048r		 dec	 ZOOM_LOPVAR
+    657	0000038B  7F 94				 jg	 YZOMDRAW_RECOLOR_BACK
+    658
+    659	0000038D  5D				 pop	 EBP
+    660	0000038E  07				 pop	 es
+    661
+1   662	0000038F  8F 05	00000000		 POP	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(355) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(355) PROCEND(1) Argument needs type override
+1   663	00000395  5D				 POP	 EBP
+1   664	00000396  C3				 RET	 00000h
+    665					 ;**************************************
+    666					 ; Recolor Zoommode
+    667					 ;**************************************
+    668	00000397			 recolormode:
+    669	00000397  8B 1D	00000024r		 mov	 EBX,ZOOM_MX
+    670						 movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+1   671	0000039D  A1 00000004r			 mov	 eax,ZOOM_DHEIGHT
+1   672	000003A2  A3 00000048r			 mov	 ZOOM_LOPVAR,eax
+    673	000003A7  8B 2D	00000000		 mov	 EBP,color
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(362) Undefined symbol: COLOR
+    674	000003AD			 YZOMDRAW_RECOLOR:
+    675	000003AD  8B 35	00000008r		 mov	 ESI,ZOOM_SBITMAP ; StartAddresse Screen
+    676	000003B3  0F B7	15 00000020r		 movzx	 EDX,WORD PTR ZOOM_SYOFFSET ; LoWort = Ganzzahl
+    677	000003BA  0F AF	15 00000030r		 imul	 EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+    678	000003C1  03 F2				 add	 ESI,EDX ; nÑchste Zeile Quellopm
+    679
+    680	000003C3  8B 15	0000001Cr		 mov	 EDX,ZOOM_SXOFFSET ; Clip X Offset
+    681	000003C9  8B 0D	00000000r		 mov	 ECX,ZOOM_DWIDTH
+    682	000003CF  33 C0				 xor	 EAX,EAX
+    683	000003D1			 ZOOMLOOP_RECOLOR:
+    684
+    685	000003D1  03 D3				 add	 EDX,EBX ; X addieren
+    686	000003D3  83 D2	00			 adc	 EDX,0
+    687	000003D6  66| 8B C2			 mov	 AX,DX ; LoWort	= Ganzzahl
+    688
+    689	000003D9  66| 0F B6 04 06		 movzx	 AX,BYTE PTR [ESI+EAX] ; Pixel lesem
+    690	000003DE  0A C0				 or		 AL,AL
+    691	000003E0  0F 84	FFFFFC1A		 je	 @F
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 14
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(380) Undefined symbol: @F
+    692	000003E6  8A 44	05 00			 mov	 AL,[EBP+EAX] ;	Pixel aus UmrechenTabelle
+    693	000003EA  AA				 stosb
+    694	000003EB  49				 dec	 ECX
+    695	000003EC  7F E3				 jg		 ZOOMLOOP_RECOLOR
+    696	000003EE  EB 07	90 90 90		 jmp	 ENDZOOMLOP_RECOLOR
+    697	000003F3			 @@:
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(386) Symbol already defined elsewhere: @@
+    698	000003F3  47				 inc	 edi
+    699	000003F4  49				 dec	 ECX
+    700	000003F5  7F DA				 jg		 ZOOMLOOP_RECOLOR
+    701	000003F7			 ENDZOOMLOP_RECOLOR:
+    702
+    703	000003F7  8B 0D	00000028r		 mov	 ECX,ZOOM_MY
+    704	000003FD  01 0D	00000020r		 add	 ZOOM_SYOFFSET,ECX ; Y addieren
+    705	00000403  83 15	00000020r 00		 adc	 ZOOM_SYOFFSET,0
+    706	0000040A  03 3D	00000034r		 add	 EDI,DESTWIDTHII ; Modulo nÑchste Zeile	Bildschirm
+    707	00000410  FF 0D	00000048r		 dec	 ZOOM_LOPVAR
+    708	00000416  7F 95				 jg	 YZOMDRAW_RECOLOR
+    709
+    710	00000418  5D				 pop	 EBP
+    711	00000419  07				 pop	 es
+    712
+1   713	0000041A  8F 05	00000000		 POP	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(402) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(402) PROCEND(1) Argument needs type override
+1   714	00000420  5D				 POP	 EBP
+1   715	00000421  C3				 RET	 00000h
+    716					 ;**************************************
+    717					 ; Transparent Zoommode
+    718					 ;**************************************
+    719	00000422			 transparentmode:
+    720	00000422  8B 1D	00000024r		 mov	 EBX,ZOOM_MX
+    721						 movme ZOOM_LOPVAR,ZOOM_DHEIGHT
+1   722	00000428  A1 00000004r			 mov	 eax,ZOOM_DHEIGHT
+1   723	0000042D  A3 00000048r			 mov	 ZOOM_LOPVAR,eax
+    724	00000432  A1 00000000			 mov	 EAX,color
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(409) Undefined symbol: COLOR
+    725	00000437			 YZOMDRAW_TRANSPARENT:
+    726	00000437  8B 35	00000008r		 mov	 ESI,ZOOM_SBITMAP ; StartAddresse Screen
+    727	0000043D  0F B7	15 00000020r		 movzx	 EDX,WORD PTR ZOOM_SYOFFSET ; LoWort = Ganzzahl
+    728	00000444  0F AF	15 00000030r		 imul	 EDX,SOURCEWIDTHII ; mit PixelBreite multiplizieren
+    729	0000044B  03 F2				 add	 ESI,EDX ; nÑchste Zeile Quellopm
+    730
+    731	0000044D  8B 15	0000001Cr		 mov	 EDX,ZOOM_SXOFFSET ; Clip X Offset
+    732	00000453  8B 0D	00000000r		 mov	 ECX,ZOOM_DWIDTH
+    733	00000459  33 ED				 xor	 EBP,EBP
+    734	0000045B			 ZOOMLOOP_TRANSPARENT:
+    735
+    736	0000045B  03 D3				 add	 EDX,EBX ; X addieren
+    737	0000045D  83 D2	00			 adc	 EDX,0
+    738	00000460  66| 8B EA			 mov	 BP,DX ; LoWort	= Ganzzahl
+    739
+    740	00000463  66| 0F B6 2C 2E		 movzx	 BP,BYTE PTR [ESI+EBP] ; Pixel lesem
+    741	00000468  66| 0B ED			 or		 BP,BP
+    742	0000046B  0F 84	FFFFFB8F		 je	 @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(427) Undefined symbol: @F
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 15
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    743
+    744	00000471  8A 04	08			 mov	 AL,[EBP+EAX+ECX] ; Pixel aus UmrechenTabelle
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(429) Too many	registers in expression
+    745
+    746	00000474  AA				 stosb
+    747	00000475  49				 dec	 ECX
+    748	00000476  7F E3				 jg		 ZOOMLOOP_TRANSPARENT
+    749	00000478  EB 07	90 90 90		 jmp	 ENDZOOMLOP_TRANSPARENT
+    750	0000047D			 @@:
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(435) Symbol already defined elsewhere: @@
+    751	0000047D  47				 inc	 edi
+    752	0000047E  49				 dec	 ECX
+    753	0000047F  7F DA				 jg		 ZOOMLOOP_TRANSPARENT
+    754	00000481			 ENDZOOMLOP_TRANSPARENT:
+    755
+    756	00000481  8B 0D	00000028r		 mov	 ECX,ZOOM_MY
+    757	00000487  01 0D	00000020r		 add	 ZOOM_SYOFFSET,ECX ; Y addieren
+    758	0000048D  83 15	00000020r 00		 adc	 ZOOM_SYOFFSET,0
+    759	00000494  03 3D	00000034r		 add	 EDI,DESTWIDTHII ; Modulo nÑchste Zeile	Bildschirm
+    760	0000049A  FF 0D	00000048r		 dec	 ZOOM_LOPVAR
+    761	000004A0  7F 95				 jg	 YZOMDRAW_TRANSPARENT
+    762
+    763	000004A2  5D				 pop	 EBP
+    764	000004A3  07				 pop	 es
+    765
+1   766	000004A4  8F 05	00000000		 POP	 SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(451) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(451) PROCEND(1) Argument needs type override
+1   767	000004AA  5D				 POP	 EBP
+1   768	000004AB  C3				 RET	 00000h
+    769
+    770
+    771
+    772	000004AC			 ZOOM_BLOCK_ ENDP
+    773
+    774	000004AC			 ZOOM_CODE	 ENDS				 ;
+    775
+    776	00000000			 ZOOM_DATA	 SEGMENT PARA USE32 'DATA'	 ;
+    777
+    778					 ; Lokale Variablen ZoomBobFunktion
+    779	00000000  ????????		 ZOOM_DWIDTH DD	?
+    780	00000004  ????????		 ZOOM_DHEIGHT DD ?
+    781	00000008  ????????		 ZOOM_SBITMAP DD ?
+    782	0000000C  ????????		 ZOOM_SWIDTH DD	?
+    783	00000010  ????????		 ZOOM_SHEIGHT DD ?
+    784	00000014  ????????		 ZOOM_SBAKWIDTH	DD ?
+    785	00000018  ????????		 ZOOM_SBAKHEIGHT DD ?
+    786	0000001C  ????????		 ZOOM_SXOFFSET DD ?
+    787	00000020  ????????		 ZOOM_SYOFFSET DD ?
+    788	00000024  ????????		 ZOOM_MX DD ?
+    789	00000028  ????????		 ZOOM_MY DD ?
+    790	0000002C  ????????		 ZOOM_DWIDTHMODULO DD ?
+    791	00000030  ????????		 SOURCEWIDTHII DD ?
+    792	00000034  ????????		 DESTWIDTHII DD	?
+    793	00000038  ????????		 _ZOOMFUNC_DESTCLIPX0 DD ?
+    794	0000003C  ????????		 _ZOOMFUNC_DESTCLIPY0 DD ?
+    795	00000040  ????????		 _ZOOMFUNC_DESTCLIPX1 DD ?
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 16
+D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM
+
+
+
+    796	00000044  ????????		 _ZOOMFUNC_DESTCLIPY1 DD ?
+    797	00000048  ????????		 ZOOM_LOPVAR DD	?
+    798
+    799	0000004C			 ZOOM_DATA	 ENDS
+    800
+    801					 END
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 17
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "21/03/95"
+??FILENAME			  Text	 "ZOOM	  "
+??TIME				  Text	 "10:54:29"
+??VERSION			  Number 030A
+@32BIT				  Text	 1
+@@				  Near	 FLAT:0262
+@CODE				  Text	 FLAT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0F8FH
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 FLAT
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 ZOOM
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 1
+@STACK				  Text	 FLAT
+@WORDSIZE			  Text	 4
+CLIPZOMBOTTOM_BLOCK		  Near	 FLAT:0170
+CLIPZOMLEFT_BLOCK		  Near	 FLAT:00A3
+CLIPZOMRIGHT_BLOCK		  Near	 FLAT:00E3
+CLIPZOMTOP_BLOCK		  Near	 FLAT:0130
+CRTC_CE				  Number 000B
+CRTC_CLH			  Number 000E
+CRTC_CLL			  Number 000F
+CRTC_CS				  Number 000A
+CRTC_EVB			  Number 0016
+CRTC_HDE			  Number 0001
+CRTC_HEHB			  Number 0003
+CRTC_HEHR			  Number 0005
+CRTC_HSHB			  Number 0002
+CRTC_HSHR			  Number 0004
+CRTC_HT				  Number 0000
+CRTC_LC				  Number 0018
+CRTC_MODE			  Number 0017
+CRTC_MSL			  Number 0009
+CRTC_O				  Number 0013
+CRTC_PRS			  Number 0008
+CRTC_SAH			  Number 000C
+CRTC_SAL			  Number 000D
+CRTC_SVB			  Number 0015
+CRTC_UL				  Number 0014
+CRTC_VDE			  Number 0012
+CRTC_VRL			  Number 0011
+CRTC_VRS			  Number 0010
+CRTC_VT				  Number 0006
+DESTWIDTHII			  Dword	 FLAT:0034
+ENDZOOMLOP_NORMAL		  Near	 FLAT:0266
+ENDZOOMLOP_RECOLOR		  Near	 FLAT:03F7
+ENDZOOMLOP_RECOLOR_BACK		  Near	 FLAT:036C
+ENDZOOMLOP_SHILHOUETTE		  Near	 FLAT:02E0
+ENDZOOMLOP_TRANSPARENT		  Near	 FLAT:0481
+GCR_BM				  Number 0008
+GCR_CC				  Number 0002
+GCR_CDC				  Number 0007
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 18
+Symbol Table
+
+
+
+GCR_DAT				  Number 03CF
+GCR_DR				  Number 0003
+GCR_ESR				  Number 0001
+GCR_IND				  Number 03CE
+GCR_M				  Number 0005
+GCR_MISC			  Number 0006
+GCR_RMS				  Number 0004
+GCR_SR				  Number 0000
+GCR_SS				  Number 03CD
+MAXSCREENHEIGHT_PCLIB		  Number 025A
+MAXSCREENWIDTH_PCLIB		  Number 0322
+MISC_DAT			  Number 03CC
+MISC_IND			  Number 03C2
+RECOLORBACKMODE			  Near	 FLAT:030B
+RECOLORMODE			  Near	 FLAT:0397
+SHILOUETTENMODE			  Near	 FLAT:0287
+SOURCEWIDTHII			  Dword	 FLAT:0030
+TRANSPARENTMODE			  Near	 FLAT:0422
+TS_AMR				  Number 0007
+TS_CM				  Number 0001
+TS_CMS				  Number 0003
+TS_DAT				  Number 03C5
+TS_IND				  Number 03C4
+TS_MM				  Number 0002
+TS_MMO				  Number 0004
+TS_R				  Number 0000
+TS_SCR				  Number 0006
+WRONGZOOMSIZE_BLOCK		  Near	 FLAT:027E
+YZOMDRAW_NORMAL			  Near	 FLAT:0226
+YZOMDRAW_RECOLOR		  Near	 FLAT:03AD
+YZOMDRAW_RECOLOR_BACK		  Near	 FLAT:0321
+YZOMDRAW_SHILHOUETTE		  Near	 FLAT:029C
+YZOMDRAW_TRANSPARENT		  Near	 FLAT:0437
+ZOOMLOOP_NORMAL			  Near	 FLAT:0246
+ZOOMLOOP_RECOLOR		  Near	 FLAT:03D1
+ZOOMLOOP_RECOLOR_BACK		  Near	 FLAT:0345
+ZOOMLOOP_SHILHOUETTE		  Near	 FLAT:02C0
+ZOOMLOOP_TRANSPARENT		  Near	 FLAT:045B
+ZOOMMODE_NORMAL			  Number 0000
+ZOOMMODE_RECOLOUR		  Number 0003
+ZOOMMODE_RECOLOUR_BACK		  Number 0002
+ZOOMMODE_SILHOUETTE		  Number 0001
+ZOOMMODE_TRANSPARENT		  Number 0004
+ZOOM_BLOCK_ (_ZOOM_BLOCK_)	  Near	 FLAT:0000
+ZOOM_DHEIGHT			  Dword	 FLAT:0004
+ZOOM_DWIDTH			  Dword	 FLAT:0000
+ZOOM_DWIDTHMODULO		  Dword	 FLAT:002C
+ZOOM_LOPVAR			  Dword	 FLAT:0048
+ZOOM_MX				  Dword	 FLAT:0024
+ZOOM_MY				  Dword	 FLAT:0028
+ZOOM_SBAKHEIGHT			  Dword	 FLAT:0018
+ZOOM_SBAKWIDTH			  Dword	 FLAT:0014
+ZOOM_SBITMAP			  Dword	 FLAT:0008
+ZOOM_SHEIGHT			  Dword	 FLAT:0010
+ZOOM_SWIDTH			  Dword	 FLAT:000C
+ZOOM_SXOFFSET			  Dword	 FLAT:001C
+ZOOM_SYOFFSET			  Dword	 FLAT:0020
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 19
+Symbol Table
+
+
+
+_ZOOMFUNC_DESTCLIPX0		  Dword	 FLAT:0038
+_ZOOMFUNC_DESTCLIPX1		  Dword	 FLAT:0040
+_ZOOMFUNC_DESTCLIPY0		  Dword	 FLAT:003C
+_ZOOMFUNC_DESTCLIPY1		  Dword	 FLAT:0044
+
+Macro Name
+
+ACALL
+ADDM
+ADDME
+CLR
+CMPME
+FLASH
+IN_B
+LEAME
+MOVM
+MOVME
+OUT_B
+OUT_W
+POPALL
+PUSHALL
+SAFEWAIT
+SUBM
+SUBME
+TST
+XCHGM
+XCHGME
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  32  0000 Dword  Public  DATA
+FLAT				  Group
+ZOOM_CODE			  32  04AC Para	  none	  CODE
+ZOOM_DATA			  32  004C Para	  none	  DATA
+_TEXT				  32  0000 Dword  Public  CODE
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 20
+Error Summary
+
+
+
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(85) Extra characters on line
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(87) PROCBEG(2) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(87) PROCBEG(2) Argument needs	type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(92) MOVME(1) Undefined symbol: DESTWIDTH
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(93) MOVME(1) Undefined symbol: DESTHEIGHT
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(96) Undefined	symbol:	SOURCEWIDTH
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(101) Undefined symbol: SOURCEHEIGHT
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(111) Undefined symbol: DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(119) Undefined symbol: DESTWIDTH
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(119) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(123) MOVME(2)	Undefined symbol: DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(127) Undefined symbol: DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(136) Undefined symbol: DESTWIDTH
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(136) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(141) Undefined symbol: DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(149) Undefined symbol: DESTHEIGHT
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(149) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(153) MOVME(2)	Undefined symbol: DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(157) Undefined symbol: DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(166) Undefined symbol: DESTHEIGHT
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(166) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(171) Undefined symbol: SOURCEPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(173) Undefined symbol: DESTPTR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(175) Undefined symbol: DESTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(176) Undefined symbol: DESTNEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(177) Undefined symbol: DESTXPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(194) MOVME(1)	Undefined symbol: SOURCENEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(195) Undefined symbol: DESTNEXTYPOS
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(203) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(203) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(206) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(206) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(209) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(209) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(212) Undefined symbol: ZOOMMODE
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(212) Argument	needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(240) Undefined symbol: @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(261) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(261) PROCEND(1) Argument needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(269) Undefined symbol: COLOR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(286) Undefined symbol: @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(291) Symbol already defined elsewhere: @@
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(307) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(307) PROCEND(1) Argument needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(315) Undefined symbol: COLOR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(332) Undefined symbol: @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(339) Symbol already defined elsewhere: @@
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(355) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(355) PROCEND(1) Argument needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(362) Undefined symbol: COLOR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(380) Undefined symbol: @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(386) Symbol already defined elsewhere: @@
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(402) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(402) PROCEND(1) Argument needs type override
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(409) Undefined symbol: COLOR
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(427) Undefined symbol: @F
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(429) Too many	registers in expression
+Turbo Assembler	 Version 3.1	    21/03/95 10:54:30	    Page 21
+Error Summary
+
+
+
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(435) Symbol already defined elsewhere: @@
+**Error** D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(451) PROCEND(1) Undefined symbol: SOURCEPTR
+*Warning* D:\ALBION\SRC\ZOOMFUNC\ZOOM.ASM(451) PROCEND(1) Argument needs type override
+

@@ -1,0 +1,271 @@
+
+Maptextfile
+--------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Eine Steinburg.]
+
+Block 2
+[Eine Sanddne.]
+
+Block 3
+[Eine Steins„ule.]
+
+Block 4
+[Ein groer Felsen.]
+
+Block 5
+[Eine Tellerblume.]
+
+Block 6
+[Eine Sandmorchel.]
+
+Block 7
+[Diese Pflanze ern„hrt sich von Insekten.]
+
+Block 8
+[Eine fleischfressende Pflanze.]
+
+Block 9
+[Ein blhendes Kakteengew„chs, das sehr langsam w„chst.]
+
+Block 10
+[Pflanzenteile.]
+
+Block 11
+[Bodengew„chse.]
+
+Block 12
+[Steine.]
+
+Block 13
+[Grasbschel.]
+
+Block 14
+[Wurzeln, Holzstcke und ste.]
+
+Block 15
+[Ein Steinschlo, erbaut aus Felsen.]
+
+Block 16
+[Eine Stromschnelle.]
+
+Block 17
+[Das Wasser ist tief und die Str”mung scheint stark zu sein.]
+
+Block 18
+[Wasserpflanzen.]
+
+Block 19
+[Wasserpflanzentriebe.]
+
+Block 20
+[Ein Wasserstrudel.]
+
+Block 21
+[Ein Schirmbaum.]
+
+Block 22
+[Solche Steppenb„ume gedeihen auf sehr trockenem Boden.]
+
+Block 23
+[Eine Steppenblume.]
+
+Block 24
+[Ein Turmfelsen.]
+
+Block 25
+[Kies.]
+
+Block 26
+[Eine groe Felsbrcke.]
+
+Block 27
+[Platzhalter fr weitere Events.]
+
+Block 28
+[Platzhalter fr weitere Events.]
+
+Block 29
+[Platzhalter fr weitere Events.]
+
+Block 30
+[Platzhalter fr weitere Events.]
+
+Block 31
+[Platzhalter fr weitere Events.]
+
+Block 32
+[Platzhalter fr weitere Events.]
+
+Block 33
+[Platzhalter fr weitere Events.]
+
+Block 34
+[Platzhalter fr weitere Events.]
+
+Block 35
+[Platzhalter fr weitere Events.]
+
+Block 36
+[Platzhalter fr weitere Events.]
+
+Block 37
+[Platzhalter fr weitere Events.]
+
+Block 38
+[Platzhalter fr weitere Events.]
+
+Block 39
+[Platzhalter fr weitere Events.]
+
+Block 40
+[Platzhalter fr weitere Events.]
+
+Block 41
+[Platzhalter fr weitere Events.]
+
+Block 42
+[Platzhalter fr weitere Events.]
+
+Block 43
+[Platzhalter fr weitere Events.]
+
+Block 44
+[Platzhalter fr weitere Events.]
+
+Block 45
+[Platzhalter fr weitere Events.]
+
+Block 46
+[Platzhalter fr weitere Events.]
+
+Block 47
+[Platzhalter fr weitere Events.]
+
+Block 48
+[Platzhalter fr weitere Events.]
+
+Block 49
+[Platzhalter fr weitere Events.]
+
+Block 50
+[Platzhalter fr weitere Events.]
+
+Block 51
+[Platzhalter fr weitere Events.]
+
+Block 52
+[Platzhalter fr weitere Events.]
+
+Block 53
+[Platzhalter fr weitere Events.]
+
+Block 54
+[Platzhalter fr weitere Events.]
+
+Block 55
+[Platzhalter fr weitere Events.]
+
+Block 56
+[Platzhalter fr weitere Events.]
+
+Block 57
+[Platzhalter fr weitere Events.]
+
+Block 58
+[Eine Stadtmauer.]
+
+Block 59
+[Das Stadttor.]
+
+Block 60
+[{LEAD}{NAME} sagt pl”tzlich:^"Irgendwie ist mir schon wieder so komisch
+zumute. Vielleicht sollten wir jetzt das Zeug nehmen, das wir in Umajo-Kenta
+gekauft haben."]
+
+Block 61
+[{LEAD}{NAME} sagt pl”tzlich:^"Irgendwie ist mir schon wieder so komisch
+zumute. H„tten wir doch nur das Zeug in Umajo-Kenta gekauft. Vielleicht
+wrde es jetzt helfen."]
+
+Block 62
+[Die Gruppe ist durch das viele Wandern in der Wste sehr ersch”pft. Die
+F„higkeiten der einzelnen Mitglieder sinken drastisch...]
+
+Block 63
+[Die Gruppe erh„lt durch das viele Wandern in der Wste Schaden.]
+
+Block 64
+[Ich wandere zwischen dem Gef„ngnis und Umajo-Kenta hin und her, um
+Nahrungsmittel zu holen.]
+
+Block 65
+[Ein versteckter Eingang.]
+
+Block 66
+[Ssssssss...]
+
+Block 67
+["So, mal schauen ob Ohl wirklich kommt..."]
+
+Block 68
+["Sch”n, da Ihr gekommen seid. Dann h„tte ich gerne einen Edelstein
+dafr, da ich Euch den Gefallen tu."]
+
+Block 69
+["Darf ich mir einen Edelstein in Eurem Gep„ck aussuchen?"]
+
+Block 70
+["In dem Fall bin ich nicht bereit, Euch zum Eingang zu fhren!"]
+
+Block 71
+["Leider habt Ihr keinen Edelstein dabei. Ohne Edelstein zeige ich Euch den
+Ein|gang nicht! Aber wir k”nnen uns gerne noch einmal hier treffen, wenn Ihr
+mir einen Stein anbie|ten k”nnt."]
+
+Block 72
+["Vielen Dank, da ist ein sehr sch”ner Stein. Auerdem be|sitze ich
+erst 27 von dieser Gattung, w„h|rend ich bei|spiels|wei|se schon 235 Ru|bi|ne
+habe. Ihr k”nnt Euch ja gar nicht vor|stellen, wie ich mich freue! Den wer|de
+ich nachher gleich in meine Sammlung ein|f|gen.^^Sch”n, dann folgt
+mir. Ich werde Euch nun den Eingang zeigen! Bleibt immer hinter mir, man kann
+sich in den Felsen leicht ver|lau|fen."]
+
+Block 73
+["Hier w„ren wir. Links in diesem groen Felsen k”nnt Ihr die T|re sehen. Sie
+ist di|rekt hin|ter der Bl|te der insek|ten|fressen|den Pflanze.^^Nochmal
+vielen Dank fr den Edel|stein und alles Gute auf Eurer Rei|se! Ich mu jetzt
+lei|der dringend wie|der zu|rck. Ihr ver|steht sicher,
+man be|kommt schlie|lich nicht je|den Tag ei|nen neu|en Edel|stein. Das ist
+alles sehr viel Ar|beit. Ich mu ihn po|lieren, be|trach|ten, be|stau|nen,
+mei|nen Freun|den zei|gen, beleuch|ten, aus|stellen u.s.w. Be|stimmt bin ich
+bis ber|mor|gen be|sch„ftigt!^^Macht es gut, Skeima Din!"]
+
+Block 74
+[Hier ist ein augenf”rmiges Symbol in den Felsen eingelassen.]
+
+Block 75
+["Diese Felssymbole existieren schon seit sehr langer Zeit. Man findet sie an
+manchen Orten auf dem ganzen Planeten, aber niemand wei etwas Genaues ber
+ihren Ursprung."]
+
+Block 76
+[{LEAD}{NAME} legt das Amulett mit dem Symbol der G”ttin an den
+Felsen.^^Knirschend ”ffnet sich das Portal und die Gef„hrten betreten die H”hle
+dahinter.]
+
+Block 77
+["Um den Eingang der H”hle zu ”ffnen, kann ich das Amulett der G”ttin benutzen,
+das ich bei mir trage."]
+
+Block 78           Harriet
+["Welch eine Hitze!^^Dies ist also das Land der Umajo, der Metallschmiede.
+Unseren Informationen zufolge ist das groe Metallschiff irgendwo sdlich von
+der Gebirgskette, in der wir uns gerade befinden, niedergegangen.^^Die Mauer,
+die man im Westen sieht, geh”rt zu Umajo Kenta, der Stadt des Metalls und der
+Edelsteine."]
+

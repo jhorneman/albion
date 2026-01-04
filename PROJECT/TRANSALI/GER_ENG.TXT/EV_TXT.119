@@ -1,0 +1,49 @@
+NPC 119: Srelan, Tri-Nadh und Schreiber
+=======================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Neben meiner Arbeit als Schreiber verfge ich auch ber passable
+Talente als Tri-Nadh."{WORDTri-Nadh}{WORDSchreiber}]
+                
+
+Block 1         Begrung
+["Dsarii-ma. Kann ich Euch helfen?"]
+
+Block 2         "TRI-NADH" WENN: Iskai fragt, SONST Block 3
+["Ich darf annehmen, da Du diese Frage fr Deine menschlichen Gef„hrten
+stellst, {LEAD}{NAME}."]
+                
+Block 3         
+["Tri-Nadh werden Personen genannt, die bei der Berhrung mit dem Trii eines
+Anderen nicht nur dessen Gefhle erspren k”nnen, sondern auch ganze Gedanken.
+Meist stellen sich diese besonders Begabten dem Ratskreis der Gesetze zur
+Verfgung. Sie berprfen zum Beispiel bei wichtigen Vereinbarungen die
+Redlichkeit der Vertragspartnern."{WORDTrii}]
+
+Block 4         WENN: Phase 1 + Gepr„ch beendet wird
+["Ich wnsche Euch Glck fr die Jagd nach Akiirs M”rdern."]
+
+Block 5         "SCHREIBER"
+["Hier in den Ratskreisen werden t„glich viele groe und kleine
+Entschei|dungen getrof|fen. Um die šbersicht zu behalten, mu viel schriftlich
+fest|gehalten werden. Ich mag diese Arbeit recht gerne, auch wenn die meisten
+das sehr befremdlich finden."]
+
+Block 6         "SCHREIBER" 2x
+["Wie ich Euch bereits erkl„rte: Ich fhre Schriften aus, um die Arbeit der
+Ratskreise zu erleichtern."]
+
+Block 7
+["Lebt wohl."]

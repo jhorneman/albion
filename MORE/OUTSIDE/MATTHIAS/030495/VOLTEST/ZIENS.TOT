@@ -1,0 +1,24 @@
+Hallo Jurie (oder heiát es:Juri? Jury? Judy? Daktari?)
+
+mit dem File Voltest kannst Du mal h”ren, welche Auswirkungen Dynamik„nderungen 
+auf die Klangqualit„t haben. Der Sound kommt insgesamt 15 mal, mit folgenden
+Werten:
+
+1. Durchgang: Trackvolume = 75 (= Standardwert im Midi-Editor)
+              Sample 1 = fff
+                     2 = f
+                     3 = mp
+                     4 = p
+                     5 = ppp
+2. Durchgang: Trackvolume = 50
+              Sample wie oben
+3. Durchgang: Trackvolume = 25
+              Sample wie oben 
+
+Zwischen den drei Durchg„ngen ist jeweils eine kurze Pause.
+Im ersten Durchgang ist bei ppp das Sample arg gest”rt, im 2. schon bei p und
+im dritten bei mp.
+Du kannst auch andere Samples einbauen, das xmi file bleibt ja gleich.
+Das Sample hier rauscht allerdings auch so ein wenig.
+
+                        gruá     -     .\\atthias 

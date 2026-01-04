@@ -1,0 +1,204 @@
+
+Maptextfile
+-------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Ein Kamin.]
+
+Block 2
+[Ein Kerzenleuchter.]
+
+Block 3
+[Ein geflochtener Korb.]
+
+Block 4
+[Ein Holztisch.]
+
+Block 5
+[Ein Hocker.]
+
+Block 6
+[Ein Himmelbett. Mit den TotenschÑdeln kînnte man es gar als "Hîllenbett"
+bezeichnen.]
+
+Block 7
+[Ein Schreibtisch.]
+
+Block 8
+[Ein Stuhl.]
+
+Block 9
+[Ein loderndes Feuer brennt in dieser SÑule, welches die Fratze in einem
+schummerigen Licht erscheinen lÑût und beim Betrachter einen
+beklemmenden Zustand erweckt.]
+
+Block 10
+[Eine SÑule mit einer grÑûlichen Fratze.]
+
+Block 11
+[Ein KÑmpferbett. Wie die meisten Mîbel hier, wirkt es etwas abschreckend.]
+
+Block 12
+[Ein Faû.]
+
+Block 13
+[Eine Art von Teppich, der aus getrockneten Pflanzenhalmen geknÅpft ist.]
+
+Block 14
+[Eine Glaskrug.]
+
+Block 15
+[VorhÑnge.]
+
+Block 16
+[Ein Kiste.]
+
+Block 17
+[Ein Schrank.]
+
+Block 18
+[Eine Fackel.]
+
+Block 19
+[Eine Menge unwichtiger Kleinkram liegt in den Regalen.]
+
+Block 20
+[Ein groûer hîlzerner Zuber.]
+
+Block 21
+[Groûe Holzregale.]
+
+Block 22
+[Dieses Bett wird derzeit wohl nicht benutzt.]
+
+Block 23
+[Verschiedene Hieb-, Stich- und Schuûwaffen, die alle Ñuûerst gefÑhrlich
+aussehen.]
+
+Block 24
+[Ein Waffenregal.]
+
+Block 25
+[Ein Schild.]
+
+Block 26
+[Ein aufgespieûter SchÑdel. Ein unangenehmer Verwesungsgeruch deutet darauf
+hin, daû die Greueltat noch nicht allzu lange zurÅck liegt.]
+
+Block 27
+[An diesen Strohpuppen werden kriegerische FÑhigkeiten trainiert und erprobt.]
+
+Block 28
+[Ein mit Stroh umwickelter Holzpfahl. Dient zur öbung von Schlagtechniken.]
+
+Block 29
+[Eine Zielplatte fÅr Pfeil und Bogen.]
+
+Block 30
+[Ein Tablett mit Nahrungsmitteln.]
+
+Block 31
+[KrÑuter.]
+
+Block 32
+[Eine Truhe.]
+
+Block 33
+[Eine Karaffe.]
+
+Block 34
+[Ein Kochlîffel.]
+
+Block 35
+[Ein Eimer.]
+
+Block 36
+[Ein Lîffel.]
+
+Block 37
+[Ein Lîffel und eine Gabel.]
+
+Block 38
+[Ein Trinkbecher.]
+
+Block 39
+[Zwei Trinkbecher.]
+
+Block 40
+[Eûbesteck.]
+
+Block 41
+[Ein Teller.]
+
+Block 42
+[Ein BehÑlter.]
+
+Block 43
+[GemÅse.]
+
+Block 44
+[GebÑck.]
+
+Block 45
+[Ein GewÅrz.]
+
+Block 46
+[Ein Metallteller.]
+
+Block 47
+[Ein TonbehÑlter.]
+
+Block 48
+[Ein groûer Glastopf.]
+
+Block 49
+[Ein GlasbehÑlter.]
+
+Block 50
+[Eine Holzdose.]
+
+Block 51
+[Eine groûe Glasdose.]
+
+Block 52
+[Eine Flasche.]
+
+Block 53
+[NotizblÑtter.]
+
+Block 54
+[Ein Buch.]
+
+Block 55
+[Mehrere BÅcher.]
+
+Block 56
+[Ein in Leder gebundenes Buch. Es sieht wertvoll aus.]
+
+Block 57
+[Schreibutensilien.]
+
+Block 58
+[Ein aufgeschlagenes Buch. Auf der linken Seite ist eine technische Skizze zu
+sehen, die rechte Seite enthÑlt Beschreibungen dazu.]
+
+Block 59
+[Eine Schreibfeder.]
+
+Block 60
+[Ein schweres Kurzschwert.]
+
+Block 61
+[Ein schwerer Dolch.]
+
+Block 62
+[Eine TÅre.]
+
+Block 63
+[Dieser mÑchtige KÅchenherd dient zum Erhitzen von Speisen und GetrÑnken.]
+
+Block 64
+[Ein Wandbehang.]

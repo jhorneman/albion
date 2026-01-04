@@ -1,0 +1,82 @@
+Normalo 2 (Aurino, mÑnnl./ist in der Kneipe anzutreffen) / Phase 3-5
+
+Block 0         (FAQs)
+[{BLOK000}"Ich erleche wilde Tiere in den WÑldern, schlachte sie und verkaufe
+das Fleisch. Sochesehen kînnt Ihr mich als JÑcher, Metzcher und VerkÑufer
+bezeichnen, newe."]
+
+Block 1         (BegrÅûung, wenn Karte noch nicht verkauft)
+["Skeima Din, habt Ihr Interesse an einer Karte?"{WORDKarte}{WORDKontos}]
+
+Block 2         (BegrÅûung, wenn Karte schon verkauft)
+["Und nochmal einen schînen Tach. Wir haben uns ja schon kennenchelernt."
+{WORDKarte}{WORDKontos}] 
+
+Block 3         (Kontos)
+["Ich kenne den Kontos schon sehr lange. FrÅher war das ein netter Kerl und
+man konnte sich richtich chut mit ihm unterhalten. Aber das ist schon lange
+nicht mehr mîchlich. Vor vielen Jahren hat er damit bechonnen, sich mit
+schwarzer Machie und mit Relichion zu beschÑftichen, und inzwischen hÑlt er
+sich wohl fÅr den allertollsten Druiden Åberhaupt. UrsprÅnglich hat er
+Åbrichens mal hier in Beloveno chelebt. Dann hat er sich mit Riko
+anchefreundet und seitdem hat er sich immer weiter von mir entfernt, newe.
+Inzwischen hat er in Kounos viele AnhÑnger fÅr seine Theorien chefunden. Naja,
+soll er nur machen. Ich denke, die meisten werden mit der Zeit schon dahinter
+kommen, daû er nicht mehr chanz normal
+ist."{WORDKounos}{WORDKontinent}{WORDMagie}{WORDTheorien}]
+
+Block 4         (Kontinent)
+["Nun, ich meine das chanze Chebiet hier, newe. Beloveno, Srimalinar, Kounos,
+alles. Die chanze Nord- und SÅdseite von Maini."{WORDMaini}]
+
+Block 5         (Kounos)
+["Ihr wart doch sicher schon da, oder? Das ist das Dîrfchen auf den Plateaus,
+in dem noch ein recht traditioneller Lebensstil besteht, newe. Auûerdem treibt
+Kontos dort sein Unwesen. Ihr merkt schon - ich halte nichts von ihm."]
+
+Block 6         (Magie)
+["Ich verstehe nicht viel von Machie. Ich habe auch noch nie welche
+chebraucht, newe."]
+
+Block 7         (Theorien)
+["Ach, da mîchte ich char nicht weiter drauf einchehen. Aber so ein
+intellichenter Kerl wie Kontos ist schon im Stande, einiches auszuhecken,
+newe."]
+
+Block 8         (Karte, wenn schon verkauft)
+["ChefÑllt sie Euch nicht? Ich kann dazu nicht viel sachen, bin kein
+Spezialist fÅr sowas, newe. Jedenfalls hatte ich die schon viele Jahre auf dem
+Speicher."]
+
+Block 9         (Karte, wenn schon verkauft 2)
+["Beim besten Willen. Ich kann Euch keine nÑheren Hinweise dazu cheben..."]
+
+Block 10        (Karte, wenn noch nicht verkauft)
+["Nun, ich habe da seit vielen Jahren eine Landkarte auf dem Speicher
+rumliechen. Mein Chroûvater hat fest behauptet, daû es sich dabei um eine
+Schatzkarte handelt. Ancheblich haben seine Vorfahren an der markierten Stelle
+ihre Habselichkeiten verchraben, herher...Naja, zuchecheben, ich chlaub nicht
+dran, aber ich weiû auch, daû Leute wie Ihr auf sowas chanz scharf sind! Zum
+absoluten Spottpreis von 200 CholdmÅnzen wÅrde ich Euch die Karte Åberlassen.
+Habt Ihr Interesse?"{BLOK010}"Ja, wir nehmen sie."{BLOK011}"Interesse haben
+wir schon, aber nicht bei dem Preis!"{BLOK012}"Wir zahlen Euch 175
+GoldmÅnzen!"{BLOK013}"Nein danke, kein Interesse."]
+
+Block 11        (Resp. 1, Kauf fÅr 200/175 GM, Bit setzen: Karte gekauft)
+["Na wunderbar, sicher werdet Ihr den Kauf nicht bereuen."]
+
+Block 12        (Resp. 2)
+["Chut, sachen wir 175 fÅr Euch. Einverstanden?"{BLOK014}"Na
+chut!"{BLOK015}"Nein, das ist zu viel!"]
+
+Block 13        (Resp. 3 und Resp. 2 (oben))
+["Also eichentlich wollte ich sie verkaufen, nicht verschenken!"]
+
+Block 14        (Resp. 4)
+["Ihr kînnt es Euch ja noch einmal Åberlechen. Das Angebot chilt noch, newe."]
+
+Block 15        (Aurino)
+["Das bin ich."]
+
+Block 16        (Geld?)
+["Ich glaube, Ihr habt nicht genÅgend GoldmÅnzen?!"]

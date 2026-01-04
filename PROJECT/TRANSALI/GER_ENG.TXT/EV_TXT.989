@@ -1,0 +1,90 @@
+Khunag, Partymitglied Nr. 9  
+Khunag, Partymitglied 9
+=======================  
+ 
+  
+Block 0  
+[!]
+
+Block 1
+["Was wnscht Du, Tom?" {BLOK010}"Erz„hle mir doch bitte etwas ber Deine
+Vergangenheit, Khunag."]
+
+Block 2
+["Meiner F„higkeiten als Magier wegen ist es schwer zu leugnen, da ich einst
+Mitglied der Kenget Kamulos war. Meine Wege trennten sich von denen meiner
+ehemaligen Brder, mehr brauchst Du darber nicht zu wissen.^^ Ich ziehe es
+vor, mein Leben fr mich zu behalten."{WORDKenget Kamulos}{WORDMagie}]
+
+Block 3
+["Es ist sinnlos, mehr ber meine Vergangenheit erfahren zu wollen, als ich
+preiszugeben bereit bin, Tom.^^ Ich war einst Mitglied der Kenget Kamulos und
+verfge daher ber Kenntnisse ihrer Magie. Meine Wege trennten sich von denen
+meiner ehemaligen Brder, mehr brauchst Du darber nicht zu wissen.^^ Ich
+ziehe es wie gesagt vor, mein Leben fr mich zu behalten." {WORDKenget
+Kamulos}{WORDMagie}]
+
+Block 4            "Kenget Kamulos"
+["Kenget Kamulos bedeutet Krieger des Gottes Kamulos. Es handelt sich um einen
+Orden, der sich vor vielen hundert Jahren von den Druiden Arjanos abgespalten
+hat. Sie sind wahre Krieger und leben nach den Prinzipien von Heldenmut und
+Kriegerehre. Dort war lange Jahre meine Heimat, bis... mein Leben ein andere
+Richtung nahm."]
+
+Block 5            "Magie"
+["Ich bin zum K„mpfen geboren, aber gefangen in einem schwachen K”rper. Meine
+Magie dient ausschlie|lich dem Ziel, Ehre im Kampf zu gewinnen. Str”me von
+Energie durch meinen Geist flieen zu spren, ist ein herrliches
+Gefhl.^^Leider bin ich nicht mehr in der Lage, mit den Meistern der Oqulo an
+der Vervoll|kommnung meiner F„higkeiten zu arbeiten. Ich bin auf Spruchrollen
+zur Weiterbildung angewiesen."{WORDOqulo}{WORDSpruchrollen}]
+
+Block 6            "Spruchrollen"
+["Spruchrollen sind besondere magische Schriftstcke. Sie l”sen sich nach
+ihrem Gebrauch zu Staub auf.^^Dem Unbegabten erlauben sie das Zaubern eines
+Spruches.^^Ist jedoch jemand mit der Art der Magie vertraut, die eine solche
+Spruchrolle beinhaltet, kann derjenige unter Umst„nden den darauf
+nieder|geschrie|benen Zauber dauerhaft lernen."]
+
+Block 7            Begr. nach K.K.
+["Was wnscht Du, Tom?" {BLOK010}"Ich denke noch immer manchmal daran, da Du
+unser aller Leben auf's Spiel gesetzt hast, Khunag."]
+
+Block 8            MC 7,10 1x
+["Wir haben bereits darber gesprochen.^^Ihr wart das Werkzeug meiner Rache,
+das stimmt. Die Behauptung, da Cairnain uns das hohe Wissen freiwillig
+gegeben h„tte, halte ich jedoch fr eine Lge.^^Ich habe Euch in vielen
+K„mpfen zur Seite gestanden, und betrachte die Erfllung meiner Vergeltung als
+Gegenleistung dafr. Auerdem wnsche ich nicht mehr, ber dieses Thema zu
+diskutieren."]
+
+Block 9            MC 7,11 2x
+["Ich halte, wie gesagt, eine weitere Diskussion ber dieses Thema fr
+berflssig.^^Wenn Du es wnscht, werde ich gehen."]
+
+Block 10           "Hau ab"
+["Wenn Du es wnscht, werde ich mich von Euch trennen. Wir werden uns nicht
+mehr wiedersehen. Bist Du sicher, auf mich verzichten zu k”nnen?"]
+
+Block 11           Und Tsch
+["Wie Du meinst. Ich wnsche euch allen viel Glck bei Eurem
+Unternehmen.^^Lebt wohl."]
+
+Block 12           Doch  nicht
+["Das dachte ich mir."]
+
+Block 13
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch.] 
+
+Block 14
+[{BLOK000}Was kannst Du sagen ber... {BLOK003}Ich m”chte, da Du uns verl„t.
+{BLOK004}Danke fr das Gespr„ch.] 
+
+Block 15           "Oqulo"
+["Es gibt zwei Arten der Krieger bei den Kenget Kamulos. Die Kledo Kamulos,
+sie k„mpfen mit Waffen und ihrem K”rper. Und die Oqulo Kamulos, die K„mpfer
+des Geistes, sie beherrschen die Magie."]
+
+Block 16           Begr. w„hrend "Khunag nervt"
+["Was wnscht Du, Tom?" {BLOK010}"Ich glaube, Du hast recht, Khunag, wir
+mssen die Initiative ergreifen. Fhre uns zu dem Geheimgang."]

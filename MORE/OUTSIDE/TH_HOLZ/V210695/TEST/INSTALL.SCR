@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------------
+//Install.scr - Beispiel-install-script fÅr SETUP.EXE
+//------------------------------------------------------------------------------
+//EXECUTE_SILENT pause >NUL
+LOAD_BACKGROUND "install.lbm"
+LOAD_BACKGROUND "install2.lbm"
+
+//1=Deutsch, 2=Englisch
+IF_LANGUAGE 1
+  ERROR "Willkommen bei BlueByte's Setup/Vga"
+ELSE
+  ERROR "Welcome to BlueByte's Setup/Vga"
+ENDIF
+
+//------------------------------------------------------------------------------
+
+:ØHauptmenÅ
+MENU_RESET
+MENU_ADD_ENTRY "Auswahlbox - Sie kînnen.."
+MENU_ADD_ENTRY "..ein File anzeigen." ØBrowser
+MENU_ADD_ENTRY "..eine Errorbox testen." ØErrorbox
+MENU_ADD_ENTRY "..eine Assertbox testen." ØAssertbox
+MENU_ADD_ENTRY "..ein Zielaufwerk aussuchen." ØTarget
+MENU_ADD_ENTRY "..das CD-Laufwerk aussuchen." ØSelectCD
+MENU_ADD_ENTRY "..eine DOS-Shell ausfÅhren." ØShell
+MENU_ADD_ENTRY
+MENU_ADD_ENTRY "..Setup/Vga verlassen." ØEnde
+
+MENU_DO_SELECT
+//------------------------------------------------------------------------------
+:ØErrorbox
+ERROR "Dies ist eine Error~box. Sie kann nahezu be~liebig gro· wer~den, da sich von ganz alleine in der Grî·e an~passt."
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØBrowser
+BROWSE_FILE readme.txt
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØAssertbox
+ASSERT "WÑhlen Sie ja oder nein!" ØNein ØJa
+//------------------------------------------------------------------------------
+:ØJa
+ERROR "Sie haben ja gewÑhlt."
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØNein
+ERROR "Sie haben nein gewÑhlt."
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØTarget
+MENU_RESET
+MENU_ADD_ENTRY "Wieviel MB sind Vorraussetzung ?"
+MENU_ADD_ENTRY
+MENU_ADD_ENTRY "1meg" ØTarget1MB
+MENU_ADD_ENTRY "10meg" ØTarget10MB
+MENU_ADD_ENTRY "100meg" ØTarget100MB
+MENU_ADD_ENTRY "1000meg" ØTarget1000MB
+
+MENU_DO_SELECT
+//------------------------------------------------------------------------------
+:ØTarget1MB
+SELECT_TARGET_DRIVE 1
+SELECT_TARGET_PATH BB\ALBION
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØTarget10MB
+SELECT_TARGET_DRIVE 10
+SELECT_TARGET_PATH BB\ALBION
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØTarget100MB
+SELECT_TARGET_DRIVE 100
+SELECT_TARGET_PATH BB\ALBION
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØTarget1000MB
+SELECT_TARGET_DRIVE 1000
+SELECT_TARGET_PATH BB\ALBION
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØSelectCD
+SELECT_CD_ROM_DRIVE
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØShell
+EXECUTE_OWN_SCREEN command.com
+GOTO ØHauptmenÅ
+//------------------------------------------------------------------------------
+:ØEnde
+END_SETUP

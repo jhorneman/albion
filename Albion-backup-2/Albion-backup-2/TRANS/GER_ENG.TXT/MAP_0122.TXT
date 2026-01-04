@@ -1,0 +1,288 @@
+
+MAP 122
+=======
+
+
+Block 0
+[!]
+
+Block 1
+["Es ist stockfinster hier drin. Wir brauchen Licht."]
+
+Block 2
+[Die dunklen, von allerlei Pflanzen berwucherten Kavernen haben kaum noch
+hnlichkeit mit einem Geb„ude. Vielf„ltige Dfte durchziehen die G„nge,
+Ger„usche und subtile Bewegungen zeigen an, da hier allerlei Lebensformen
+eine Heimat gefunden haben.]
+
+Block 3
+[Ein seltsam geformter Busch.]
+
+Block 4
+[Sobald {LEAD}{NAME} die Pflanze berhrt, beginnt sie in allen
+Regenbogenfarben zu schillern!]
+
+Block 5
+[{LEAD}{NAME} berhrt einen Regenbogenbusch.]
+
+Block 6
+[Hier h„ngt ein strenger Geruch in der Luft.]
+
+Block 7
+["Das ist die Witterung von Raubtieren. Wir sollten vorsichtig sein!"]
+
+Block 8
+[Ein wurzelartiges Gebilde. Es ist zwar beweglich, macht aber keinen
+aggressiven Eindruck.]
+
+Block 9
+[Leuchtende, bewegliche Fangarme ragen hier aus dem Boden und versuchen,
+etwaige Beute in Richtung des Schlundes am unteren Ende zu bef”rdern.]
+
+Block 10
+["Eine interessante Kreatur. Beachten Sie den starken Selbstleuchteffekt der
+Fangarme. Es l„t sich nicht ohne weiteres sagen, ob wir hier ein Exemplar der
+Flora oder der Fauna dieser Welt vor uns sehen. Auf jeden Fall erscheint mir
+die Lebensform den Carnivoren zugeh”rig zu sein."]
+
+Block 11
+["Was Ihr, verehrter Rainiir, in wohlklingende Worte gehllt habt, ist wohl
+die Empfehlung, uns vor diesen Krallenarmen zu hten? Eine scharfsinniger Rat,
+dem ich mich anschlieen m”chte!"]
+
+Block 12
+[Sowie {LEAD}{NAME} den Fangarmen zu nahe kommt, wird {HE  } von ihnen gepackt
+und in Richtung des Mauls gezogen!]
+
+Block 13
+["Das Leuchten der Fangarme scheint mir kein Zufall zu sein. Ich denke, da
+die Kreatur damit vielleicht ihre Beute anlockt. Licht scheint in der Tierwelt
+hier unten eine groe Rolle zu spielen."]
+
+Block 14
+["Mir kommt da eine Idee. Vielleicht k”nnen wir einer weiteren schmerzhaften
+Begegnung mit diesem Raubwesen aus dem Weg gehen, indem wir unsere Lichtquelle
+wegwerfen. Es kann sein, da die Kreatur deswegen auf uns reagiert, weil wir
+etwas Leuchtendes bei uns haben."]
+
+Block 15
+[Jetzt, da niemand eine Lichtquelle mit sich fhrt, sind die Greifarme der
+Kreatur bewegungslos.]
+
+Block 16
+[Ein kr„ftiges, pilz„hnliches Gew„chs.]
+
+Block 17
+[Es ist eine ™ffnung in der Wand entstanden!]
+
+Block 18
+[Dies ist ein Regenbogenbusch. Seltsamerweise leuchtet er, obwohl er nicht
+berhrt worden ist.]
+
+Block 19
+["Seht Euch mal um! Dort, wo wir entlang gelaufen sind, f„ngt der Boden an zu
+leuchten! Faszinierend."]
+
+Block 20
+[Im Boden klafft ein riesiges, zahnbewehrtes Maul, von dem ein starker
+Verwesungs|gestank ausgeht.]
+
+Block 21
+["Was fr ein entsetzliches Ding! Da sollten wir einen groen Bogen drum
+machen."]
+
+Block 22
+["Jede Lebensform hat ihre Daseins|berechtigung, Driscoll. Das heit jedoch
+nicht, da wir uns aus Liebe zur Kreatur als Futter bereitstellen sollten, da
+stimme ich Ihnen zu."]
+
+Block 23
+["So etwas habe ich selbst noch nie gesehen. Sieht t”dlich aus, in der Tat."]
+
+Block 24
+[{LEAD}{NAME} kommt dem Maul zu nahe und ger„t in den riesigen Schlund! Die
+Kraft, mit der die Kiefer zubeien, ist entsetzlich!]
+
+Block 25
+[{LEAD}{NAME} wirft ein Stck Fleisch in den hungrigen Rachen. Sofort zeigt
+sich eine Wirkung: Offenbar ges„ttigt, schliet sich das riesige Maul!]
+
+Block 26
+[Der Schlund ist fest verschlossen.]
+
+Block 27
+[Ein sehr fremdartiger Anblick bietet sich hier den Augen von {LEAD}{NAME} und
+{HIS }en Gef„hrten:^ Die pulsierenden W„nde scheinen zu leben, mehr noch als
+die schon gewohnten, grnen, pflanzlichen Mauern. Ein intensiver heu- und
+kr„uterartiger Duft macht sich bemerkbar.]
+
+Block 28
+[Alle spren, da diese Stelle etwas Besonderes ist. Ein schwer
+beschreib|bares Gefhl bem„chtigt sich {LEAD}{NAME} und seiner Gef„hrten. Alle
+Sinne scheinen sich zu sch„rfen und jeder Herzschlag erschttert den ganzen
+K”rper. Es ist einer der seltenen Momente, in denen bewut und intensiv zu
+spren ist, da man {FAT }lebt{NORS}.^^ Der Raum wird von seltsamen
+Leuchterscheinungen durchwandert und am anderen Ende ist eine groe
+transparente Struktur sichtbar.^^ Hinter dem rotierenden Gebilde sind die
+šberreste eines menschlichen K”rpers zu erkennen.]
+
+Block 29
+[{LEAD}{NAME} und die anderen geraten in den Einflubereich der
+Leuchterscheinung!^ Alle werden von einem lustvollen Gefhl durchstr”mt, da
+sich bis zu einer fast schmerzhaften Intensit„t steigert. Eine Mischung aus
+Wohlbefinden und Beunruhigung entsteht. Bei den Menschen hinterl„t der
+Kontakt Kopfschmerzen und eine starke Verwirrung.]
+
+Block 30
+[Die groe Struktur hat eine entfernte hnlichkeit mit dem Stirnorgan der
+Iskai. Es strahlt f”rmlich ein Gefhl der Vitalit„t und der Lebenskraft aus,
+ein Gefhl des Schwindels macht sich im Kopf {LEAD}{NAME}s und {HIS }
+Begleiter breit.]
+
+Block 31
+[Hinter dem rotierenden Gebilde sind die šberreste eines menschlichen K”rpers
+zu erkennen.]
+
+Block 32
+[Eine Leuchterscheinung. Ihre N„he l”st leichte Schwindelgefhle aus.]
+ 
+Block 33
+[{LEAD}{NAME} berhrt vorsichtig die Oberfl„che der Struktur...]
+
+Block 34
+[{INK 001}{LEAD}{NAME} berhrt vorsichtig die Oberfl„che der Struktur... {INK
+002}^^ "AIIEE!"^^ "Oh, Scheie! Mann, das war ein Gefhl, als ob mir jemand
+die Wirbels„ule angezndet h„tte. Oh, Gott, mein Kopf! Verdammt, das tut WEH!"]
+
+Block 35
+[{INK 001}{LEAD}{NAME} berhrt vorsichtig die Oberfl„che der Struktur...^^
+{INK 002} "Oh, ich spre etwas! ^Es ist, als ob ich das Trirr eines anderen
+berhren wrde, nur viel st„rker!^ Ich... ich bekomme einen verst„ndlichen
+Kontakt..."]
+
+Block 36
+["Das also hat Argim, oder was aus ihm geworden ist, gemeint!"]
+
+Block 37
+[An dieser Stelle beeintr„chtigen tiefe Risse die Struktur der Wand.]
+
+Block 38
+[{LEAD}{NAME} fhrt einige kr„ftige Hiebe gegen die schwache Stelle aus. Die
+Wand zerbr”ckelt und gibt einen Durchgang frei!]
+
+Block 39
+[Eine Leuchterscheinung. Ihre N„he erzeugt ein angenehmes Kribbeln auf der
+Haut.]
+
+Block 40
+[{LEAD}{NAME} berhrt vorsichtig das Lichtgebilde. Es breitet sich pl”tzlich
+aus und umhllt alle Gef„hrten, bevor es erlischt! Ein wohliges Gefhl geht
+wie eine Welle durch die K”rper von {LEAD}{NAME} und den anderen.]
+
+Block 41
+["Welch ein wunderbares Gefhl! Aber was um alles in der Welt war das?"]
+
+Block 42
+["Es gibt Geschichten ber die "Lichter der G”ttin", die an besonders
+gesegneten Stellen der Welt existieren. Sie erh”hen den Entdecker und bringen
+ihm Glck. Es ist das erste Mal, da ich ein solches Licht gesehen habe, welch
+ein Erlebnis!"]
+
+Block 43
+["Eine nette Erz„hlung, verehrter Drirr. Ich wnschte jedoch, eine Reihe von
+Meger„ten zu meiner Verfgung zu haben, um die Erscheinung zu untersuchen..."]
+
+Block 44
+[Hier schweben seltsam aussehende Flugtiere in der Luft. Sobald sie ihren
+Besuch erblicken, kommen sie n„her...]
+
+Block 45
+[Das schwebende Tier erreicht {LEAD}{NAME}. Seine Neugier ist damit offenbar
+befriedigt, es st”t einen seltsamen Ton aus, und fliegt anschlieend weiter.]
+
+Block 46
+["Diese Tiere sind harmlos, es sind Pflanzenfresser. Sie erzeugen ein
+Leuchtgas, mit dessen Hilfe sie schweben."]
+
+Block 47
+[{CNTR}Die Struktur angreifen?]
+
+Block 48
+["Welch ein Erlebnis! Stellt Euch vor: ..."^^ {INK 001}{LEAD}{NAME} berichtet
+den anderen ber den Kontakt mit Argims Bewutsein.]
+
+Block 49
+[{LEAD}{NAME} untersucht den Haufen alten Germpels, kann aber nichts von Wert
+entdecken.]
+
+Block 50
+[Dies k”nnten die šberreste eines Unglcklichen sein, der in der H”hle den
+Raubtieren zum Opfer fiel.^^ {LEAD}{NAME} ersp„ht etwas Interessantes!]
+
+Block 51
+[Eine Nadel schiet vor und dringt in {LEAD}{NAME}s tastende Finger! Ein
+starker Schmerz ist die Folge!]
+
+Block 52
+[Eine alte Kiste, die wohl noch aus der Zeit stammt, als dieses Geb„ude
+bewohnt war. Sie hat ein filigranes Schlo.]
+
+Block 53
+[{LEAD}{NAME} und die anderen sehen vor sich die Leiche des zweiten
+Meuchelm”rders. Die Raubtiere haben ganze Arbeit geleistet.^^ Zwischen den
+šberresten funkelt {LEAD}{NAME} jedoch etwas entgegen!]
+
+Block 54
+[{INK 001}Drirr:{INK 002}^^ "Der Kenget Kamulos hat einen antiken Zierdolch
+unseres Volkes bei sich gehabt, ein einzigartiges Stck! ^Endlich eine Spur.
+Vielleicht wei der alte Gelehrte Frill etwas damit anzufangen. Wir sollten
+ihn im Ratsgeb„ude aufsuchen."]
+
+Block 55
+[{INK 001}Rainer:{INK 002}^^ "Der Kerl war im Besitz eines verzierten
+Iskai-Dolches. Sieht aus wie ein besonderes Stck.^ Endlich eine Spur!
+Vielleicht wei der alte Gelehrte Frill etwas damit anzufangen. Wir sollten
+ihn im Ratsgeb„ude aufsuchen."]
+
+Block 56
+[{INK 001}Tom:{INK 002}^^ "Der Kerl war im Besitz eines verzierten
+Iskai-Dolches. Sieht aus wie ein besonderes Stck.^ Endlich eine Spur!
+Vielleicht wei der alte Gelehrte Frill etwas damit anzufangen. Wir sollten
+ihn im Ratsgeb„ude aufsuchen."]
+
+Block 57
+[Eine massive Pflanze. Sie f„ngt mit ihrer Oberfl„che Wasser auf, das von der
+Decke tropft.]
+
+Block 58
+[Als {LEAD}{NAME} die Pflanze berhrt, geraten die Wurzeln unter ihr in
+Bewegung. Die Pflanze l„uft weg!]
+
+Block 59
+[Pflanze berhrt.]
+
+Block 60
+[Dies scheinen weitere šberreste des Meuchelm”rders zu sein.]
+
+Block 61
+[Offenbar geh”rte dies zur Ausrstung des M”rders von Akiir.]
+
+Block 62
+[Ein seltsames Flugtier.]
+
+Block 63
+[{LEAD}{NAME} wirft eine der seltsamen Frchte in den Schlund. Sofort erlahmen
+die Tentakel und das Maul verschwindet im Boden!]
+
+Block 64
+[Alle fhlen sich etwas kr„ftiger!]
+
+Block 65
+[Alle k”nnen ihren K”rper etwas schneller bewegen!]
+
+Block 66
+[Alle spren, da ihre Ausdauer gestiegen ist!]
+
+Block 67
+[Als die brennende Fackel n„her kommt, werden die Bewegungen der Tentakel kurz
+intensiver. Die Fangarme reagieren offenbar auf die Helligkeit der Fackel!]

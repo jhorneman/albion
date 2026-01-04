@@ -1,0 +1,280 @@
+; Script 38: Doku abgespielt, Secus greifen an
+
+npc_lock 0
+npc_jump 0 82 51
+npc_lock 1 
+npc_jump 1 83 50
+npc_lock 2
+npc_jump 2 82 49
+npc_lock 3
+npc_jump 3 83 48
+npc_lock 4
+npc_jump 4 82 47
+npc_lock 5 
+npc_jump 5 83 46
+npc_lock 6
+npc_jump 6 82 45 
+npc_lock 7
+npc_jump 7 83 44 
+;npc_lock 8
+;npc_jump 8 82 43
+;npc_lock 9
+;npc_jump 9 83 42
+
+
+
+show_map
+camera_lock
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+camera_move -4 4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+update 12
+
+; open door
+do_event_chain 13
+update 1
+pause 30
+text 87
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+update 4
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+update 4
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+camera_move 4 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+npc_move 2 0 -1
+npc_move 3 0 -1
+npc_move 4 0 -1
+npc_move 5 0 -1
+npc_move 6 0 -1
+npc_move 7 0 -1
+

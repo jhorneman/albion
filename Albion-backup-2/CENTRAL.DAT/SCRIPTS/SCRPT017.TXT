@@ -1,0 +1,246 @@
+; **** Script 17: Fortsetzung Schiffsreise zur Insel der Urkelten
+
+show_map
+npc_lock 43
+npc_jump 43 1 205
+npc_turn 43 1
+party_off
+update 1
+fade_from_black
+
+; FAKE: Da sich an der Oberfl. die
+; Party langsamer bewegt, führe
+; ich die Kamera statt der Party
+; mit dem Schiff
+
+camera_lock
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 43 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+pause 30
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 74
+fade_to_black
+show_map
+party_on
+party_jump 17 203
+party_move 1 0
+update 8
+party_move 1 0
+update 8
+party_move 1 0
+update 12
+camera_unlock
+fade_from_black
+
+npc_move 43 -1 0
+update 8
+npc_move 43 -1 0
+update 8
+npc_move 43 -1 0
+update 8
+npc_move 43 -1 0
+update 8
+npc_move 43 -1 0
+update 8
+npc_move 43 -1 0
+update 8
+npc_off 43

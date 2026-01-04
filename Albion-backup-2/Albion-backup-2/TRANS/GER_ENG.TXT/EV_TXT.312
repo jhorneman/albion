@@ -1,0 +1,130 @@
+
+Colonel Priver beim Showdown
+============================
+
+
+Block 0
+[!]
+
+Block 1
+["Hier gibt es nichts zu erklÑren, Driscoll. Waffen 'runter, flach auf den
+Boden legen!" {BLOK010}"Lassen Sie uns fÅr einen Moment die Ruhe bewahren,
+Priver." {BLOK011}"Glauben Sie etwa, wir wÅrden uns durch {FAT }Sie{NORS} noch
+aufhalten lassen?" ]
+
+Block 2
+["O.K., also die harte Tour.^^{FAT }Angriff, MÑnner!{NORS}"]
+
+
+Block 3            Antw. 1, 10
+["Aber ja. Bleiben Sie ruhig, Driscoll, und es wird Ihnen nichts passieren."
+{BLOK010}"Halten lieber {FAT }Sie{NORS} die FÅûe still, Priver."
+{BLOK011}"Haben Sie die Dokumentation Åber diese Welt auf den Videoschirmen
+gesehen?" {BLOK012}"Wir haben viel durchgemacht, um bis hierher zu gelangen."]
+
+Block 4            Antw. 3,11
+["Glauben Sie, wir lassen uns durch Ihr lÑcherliches Propaganda|filmchen
+beeindrucken, Driscoll?" {BLOK010}"Sie ignorieren die RealitÑt, Priver. Sie
+kÑmpfen auf der Seite von potentiellen Massenmîrdern!" 
+{BLOK011}"HÑtten Sie die GÅte, einen Blick auf meine GefÑhrten zu werfen?
+Sehen sie etwa aus, als wÑren sie alle von Bord dieses Schiffes?
+Welche Beweise wollen Sie noch? Die Aufnahmen sind {FAT }echt{NORS}.
+So sieht die Welt aus, die wir zerstîren!"]
+
+Block 5            Antw. 3,12
+["Sie rÅhren mich zu TrÑnen, Driscoll. Geben Sie jetzt endlich auf! Waffen
+weg!" {BLOK010}"Was ich damit sagen will, ist: Bedenken Sie, wie weit wir
+gekommen sind, und warum." {BLOK011}"Ersparen Sie uns bitte Ihr
+Imponiergehabe. Es geht hier um Menschenleben!"]
+
+Block 6            Antw. 5,11
+["Richtig. Und zwar um {FAT }Ihres{NORS} und das Ihrer Komplizen. Genug jetzt!
+MÑnner, schnappen wir Sie uns!"]
+                   DANN: ANGRIFF!!!
+
+Block 7            Antw. 5,10
+["Sie wollen uns doch nicht etwa drohen? Machen Sie sich nicht lÑcherlich!"
+{BLOK010}"Sind Sie darÅber informiert, wie leicht wir mit ihren Leuten im
+oberen Deck fertig geworden sind? Wir werden uns nicht kampflos ergeben.
+Bedenken Sie die Folgen." {BLOK011}"Ich, und meine GefÑhrten hier, wir haben
+auf dieser Welt einiges gelernt, Priver, auch das KÑmpfen. Glauben Sie, wir
+sind nur durch GlÅck soweit gelangt? Wir kînnen hier nicht einfach aufgeben.
+Wollen Sie das Leben ihrer Leute fÅr eine Sache opfern, die sowieso verloren
+ist?"]
+
+Block 8            Antw. 7,10
+["Sie haben meine Leute also {FAT }getîtet{NORS}?"^^{INK 001}Wutentbrannt
+greifen alle Secus an!]
+                   DANN: ANGRIFF!!!
+
+Block 9            Antw. 7,11
+["Sparen Sie sich Ihr Imponiergehabe. Sie kînnen nicht ernsthaft glauben, daû
+Sie mit einer Handvoll Leute gegen eine Firma wie DDT vorgehen kînnen."
+{BLOK010}"Die Dokumentation, die wir eingespeist haben, ist Åberall an Bord
+gesehen worden. Einige glauben ihr vielleicht nicht, einigen mag es egal sein.
+Aber Sie kennen doch die Persînlichkeits|profile der Besatzung. Die meisten
+sind nicht bereit, eine blÅhende Welt zu vernichten. Mal abgesehen davon, daû
+die Besatzung von der Firma hintergangen wurde, genau wie Sie und Ihre
+MÑnner." {BLOK011}"Die Firma ist weit weg, sehr weit. Sie kînnen es sich nicht
+leisten, ein zweites Schiff zu schicken, wie Sie wissen, einmal abgesehen von
+der defekten Comanlage. Die Dokumentation bringt die Besatzung sowieso auf
+unsere Seite. Sehen Sie's ein. Geben Sie schon auf, Priver, Sie haben keine
+Chance."]
+
+Block 10           Antw. 9,11 + 18,11
+["{FAT }Ich{NORS} soll aufgeben? Sie verkennen die Lage, Driscoll. Genug
+geschwÑtzt.^^MÑnner, schnappt Sie Euch!"]
+                   DANN: Angriff
+
+Block 11           Vor Antw. 9,10 + 18,10
+[{INK 001}Einer von Colonel Privers MÑnnern wirft ein:{INK 002}^^ "Da hat er
+nicht unrecht, Sir, mit allem Respekt."]
+
+Block 12           Antw. 9,10 + 18,10
+["Unsinn. Laût Euch doch nicht von diesem GeschwÑtz beeindrucken, MÑnner."
+{BLOK010}"Stellen Sie sich nicht dÅmmer, als Sie sind, Priver. Sie sind doch
+auch nur Schachfiguren der Firma!" {BLOK011}"Denken Sie an all die Kreaturen,
+die Sie beim Erzabbau bekÑmpfen muûten. Solche Wesen auf einem Planeten, der
+angeblich Åber keine hîheren Lebensformen verfÅgt? Die Firma verheizt Sie und
+Ihre Leute doch!"]
+
+Block 13           Antw. 12,10
+["Dumm ist wohl derjenige, der in einer solchen Situation starke SprÅche
+klopft. MÑnner, zum Angriff!"]
+
+Block 14           vor Antw. 12,11
+[{INK 001}Unruhe macht sich unter Priver's Leuten breit. Es erheben sich
+Stimmen, die Toms Argumenten recht geben.]
+
+Block 15           Antw. 12,11
+["Ich habe mich noch nie weichquatschen lassen, Driscoll." {BLOK010}"Bitte,
+Priver, vergessen Sie fÅr eine Moment, daû wir beide uns persînlich nicht
+ausstehen kînnen und bedenken Sie die Situation. Die Wahrheit Åber diese Welt
+lÑût sich auf Dauer nicht unterdrÅcken. Es handelt sich um die
+Verzweiflungstat einer Firma, die mit diesem Schiff ihren Bankrott riskiert
+hat. Wir haben die Motivation, diese Welt vor der Zerstîrung zu retten. Welche
+Motivation haben Sie nun noch?"]
+
+Block 16          vor Antw. 15,10
+[{INK 001}Priver's Leute brechen nun offen in Rufe der Zustimmung aus. Die
+meisten haben sich von Tom Åberzeugen lassen.]
+
+Block 17           ANTW. 15,10         
+["Sieht so aus, als hÑtten Sie gewonnen, Driscoll. Scheiû-Situation. Bin
+gespannt, was nun wird.^^Also, MÑnner, Ihr meint also, dieser Unruhestifter
+ist im Recht? Denkt daran, daû wir alle gemeinsam die Konsequenzen tragen
+mÅssen, was immer diese sein mîgen.^^{FAT }AbrÅcken{NORS}!"]
+                   DANN: GESCHAFFT!
+
+Block 18           Antw. 4,11
+["Was weiû denn ich, was Sie da fÅr ein Filmchen mitgebracht haben. Deshalb
+werden wir nicht von unseren Ordern abweichen." {BLOK010}"Die Dokumentation,
+die wir eingespeist haben, ist Åberall an Bord gesehen worden. Einige glauben
+ihr vielleicht nicht, einigen mag es egal sein. Aber Sie kennen doch die
+Persînlichkeits|profile der Besatzung. Die meisten sind nicht bereit, eine
+blÅhende Welt zu vernichten. Mal abgesehen davon, daû die Besatzung von der
+Firma hintergangen wurden, genau wie Sie und ihre MÑnner." {BLOK011}"Die Firma
+ist weit weg, sehr weit. Sie kînnen es sich nicht leisten, ein zweites Schiff
+zu schicken, wie Sie wissen, einmal abgesehen von der defekten Comanlage. Die
+Dokumentation bringt die Besatzung sowieso auf unsere Seite. Sehen Sie's ein.
+Geben Sie schon auf, Priver, Sie haben keine Chance."]

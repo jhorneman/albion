@@ -1,0 +1,62 @@
+
+Frill, in Beloveno
+==================
+
+
+
+Block 0
+[!]
+
+Block 1            Begr., wenn Quest NICHT gelîst
+["Dsarii-ma, Freunde. Wie ist die Situation zwischen Mahinos und Iskai?"
+{BLOK010}"Leider noch sehr gespannt, Frill."]
+
+Block 2            Antw. 1,10
+["Dann will ich hoffen, daû Ihr etwas gegen eine Zuspitzung unternehmen kînnt.
+Laût uns mit der Abreise noch etwas warten. Viel GlÅck!"]
+
+Block 3            Begr., wenn Quest erledigt
+["Dsarii-ma, Freunde. Wie ist die Situation zwischen Mahinos und Iskai?"
+{BLOK010}"Gute Nachricht, die Bewohner von Kounos haben mittlerweile
+eingesehen, daû sie von Kontos miûbraucht wurden. Es ist ihnen nicht leicht
+gefallen, als sie sich eingestehen muûten, daû sie sich wie kleine Kinder an
+der Nase haben herumfÅhren lassen. Aber schlieûlich hatten sie gar keine
+andere Wahl. Jedenfalls glauben wir, daû sich nun wieder ein gesundes
+VerhÑltnis zwischen den StÑmmen aufbauen wird."]
+
+Block 4            Ab gehts
+["Das ist fÅrwahr eine gute Nachricht! Dann steht einer kleinen Schiffsreise
+ja nichts mehr im Weg. Wollen wir sofort aufbrechen?" {BLOK010}"Ja, warum
+nicht!" {BLOK011}"Nein, wir mîchten noch ein wenig warten."]
+
+Block 5            Antw. 4,10 & 7,10
+["Gut. Dann folgt mir bitte."]
+                   DANN: Block 8
+
+Block 6            Antw. 4,11 & 7,11
+["In Ordnung. Ich werde hier auf Euch warten. Bis bald."]
+
+Block 7            Begr. 2.mal wenn Quest gelîst
+["Dsarii-ma! Nun, seid Ihr bereit fÅr eine kleine Seereise?" {BLOK010}"Ja,
+warum nicht!" {BLOK011}"Nein, wir mîchten noch ein wenig warten."]
+
+Block 8            NPC-TEXT SIRA! ACHTUNG: SIE UND TOM FIT MACHEN!
+["Tom, gestatte mir ein Wort, bevor Du weiterreist.^^Nach all den Aufregungen
+mîchten Mellthas und ich ein wenig Zeit fÅr uns haben. Ich mîchte Dich und die
+anderen bitten, die Reise vorerst ohne uns fortzusetzen.^^Wenn wir ein wenig
+ausgespannt haben, sind wir aber gerne fÅr weitere Abenteuer bereit!^^Du
+kannst uns im Gasthaus von Srimalinar finden, wenn Du uns suchst."]
+
+Block 9            Tom
+["Ich verstehe. Nun, ich wÅnsche Dir und Mellthas eine schîne Zeit in
+Srimalinar. Wir sehen uns sicher bald wieder.^^Alles Gute!"]
+
+Block 10           Sira
+[{INK 001}Sira und Mellthas verabschieden
+sich, die anderen folgen Frill zu einem kleinen Schiff, das sofort in See
+sticht...]
+
+Block 11
+["Alles Gute und bis bald, Tom!^^Ach ja, wenn Du noch etwas von unserer
+AusrÅstung benîtigen solltest, hier, bitte..."^^{INK 001}Sira und Mellthas
+bieten ihre AusrÅstungs|gegenstÑnde an.]

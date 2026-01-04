@@ -1,0 +1,55 @@
+Perron (Ratsmitglied Nummer 1) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Skeima Din, wie geht es Euch? Mir geht's nicht so gut, aber das liegt daran,
+da die Stimmung im Rat immer schlechter wird."{WORDRat}{WORDBeloveno}
+{WORDRathaus}{WORDPerron}]
+
+Block 2         (Stimmung, Rat)
+["Wie Ihr vielleicht wit, bin ich von Gards und Rikos Mitarbeit im Rat nicht
+berzeugt. Also habe ich die beiden krzlich konkret darauf angesprochen. Aber
+das hat die ganze Sache nur noch verschlimmert. Sie halten nichts davon, wie
+ich Probleme angehe und sie haben mir ganz unverblmt gesagt, da sie mich als
+Ratsmitglied nicht respektieren und akzeptieren werden. Allerdings nennen sie
+mir keine Grnde dafr. Ich kann das unm”glich akzeptieren - und Herras
+akzeptiert es auch nicht.^Inzwischen reden wir nur noch das Allerwichtigste
+miteinander. Die Stimmung wird immer schlechter, ich denke, wir k”nnen so
+nicht weiter zusammenarbeiten. Tja, es ist nicht immer
+einfach..."{BLOK010}"Lat den Kopf nicht h„ngen, das wird schon wieder
+besser."{BLOK011}"Wir werden mal mit Gard und Riko
+sprechen."{BLOK012}"Ignoriert sie doch einfach."]
+
+Block 3         (Resp. 3)
+["Ignorieren? Wir mssen ber wichtige Entscheidungen debattieren, und da
+k”nnen wir uns nicht gegenseitig ignorieren. Wenn das alles so einfach w„re..."]
+
+Block 4         (Resp. 1)
+["Warum soll das besser werden? Gard und Riko unternehmen nichts, damit sich
+etwas verbessert, und ich bin mit meinem Wissen auch am Ende."]
+
+Block 5         (Resp. 2)
+["Das ist sehr nett von Euch, obwohl ich mir nicht vorstellen kann, da Ihr
+etwas bewirken k”nnt. Jedenfalls danke fr Eure Mhe."]
+
+Block 6         (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 7         (Perron)
+["Das bin ich."]
+
+Block 8         (Beloveno)
+["Ich hoffe, da Euch unsere Stadt gef„llt. Besucht doch mal den Hafen im
+Sden oder macht mal einen Ausflug nach Kounos oder Srimalinar."]

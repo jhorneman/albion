@@ -1,0 +1,12 @@
+; Script 56: Text vor Endszenario, danach
+;	     ab zur Toronto, Teil 3
+
+
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 63
+
+
+

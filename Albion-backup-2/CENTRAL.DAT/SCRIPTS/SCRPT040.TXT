@@ -1,0 +1,169 @@
+; Script 40; Showdown, Kampf vermieden
+
+npc_lock 0
+npc_lock 1
+npc_lock 2
+npc_lock 3
+npc_lock 4
+npc_lock 5
+npc_lock 6
+npc_lock 7
+npc_lock 11
+npc_lock 12
+npc_lock 13
+npc_lock 14
+npc_lock 15
+npc_lock 16
+
+show_map
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 1 0
+npc_move 6 0 1
+npc_move 7 -1 0
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+update 4
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 1 0
+npc_move 6 0 1
+npc_move 7 -1 0
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+update 4
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 0 1
+npc_move 6 0 1
+npc_move 7 0 1
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 0 1
+npc_move 6 0 1
+npc_move 7 0 1
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 0 1
+npc_move 6 0 1
+npc_move 7 0 1
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+npc_move 0 0 1
+npc_move 1 0 1
+npc_move 2 0 1
+npc_move 3 0 1
+npc_move 4 0 1
+npc_move 5 0 1
+npc_move 6 0 1
+npc_move 7 0 1
+npc_move 11 0 1
+npc_move 12 0 1
+npc_move 13 0 1
+npc_move 14 0 1
+npc_move 15 0 1
+npc_move 16 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 97
+fade_to_black
+npc_off 0
+npc_off 1
+npc_off 2
+npc_off 3
+npc_off 4
+npc_off 5
+npc_off 6
+npc_off 7
+npc_off 11
+npc_off 12
+npc_off 13
+npc_off 14
+npc_off 15
+npc_off 16
+show_map
+update 2
+fade_from_black
+
+update 50
+party_member_text 1 96
+

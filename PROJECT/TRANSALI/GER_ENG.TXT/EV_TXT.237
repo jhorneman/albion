@@ -1,0 +1,31 @@
+Garp (Ratsmitglied Nummer 2) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten'. Ich sorge dafr, da alles
+reibungslos abl„uft."]
+
+Block 1         (Begrung)
+["Mhm, ich habe Euch doch schon hier gesehen? Habt Ihr eigentlich nichts
+anderes zu tun, auer hier herumzuschnffeln?"{BLOK010}"Es ist wichtig fr
+uns, mit Leuten zu reden."{BLOK011}"Wir dachten nicht, da Euch das
+st”rt."{WORDRat}{WORDRathaus}{WORDRiko}{WORDPerron} {WORDGard}]
+
+Block 2         (Resp. 1)
+["Steckt Eure Nasen nicht berall hinein, das ist ungesund."]
+
+Block 3         (Resp. 2)
+["Was mich st”rt ist, da Ihr berall Unwahrheiten erfahrt und Euch ein
+falsches Bild macht."]
+
+Block 4         (Rat, Ratssitzung)
+["Ich bin besch„ftigt und kann Euch leider nicht st„ndig Ausknfte geben.
+Auerdem sollten Fremde nicht gleich berall mitmischen."]
+
+Block 5         (Riko, Perron)
+["Riko und Perron sind die beiden anderen Ratsmitglieder im Rat."]
+
+Block 6         (Garp)
+["Das bin ich."]
+
+Block 7         (Rathaus)
+["Ich glaube, Ihr seid lange genug hier gewesen."]

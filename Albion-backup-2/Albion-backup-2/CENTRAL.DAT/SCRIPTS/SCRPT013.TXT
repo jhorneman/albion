@@ -1,0 +1,79 @@
+; **** Script 13: Fasiir's Magie-Demo
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 33
+fade_to_black
+party_jump 88 43
+npc_lock 2
+npc_jump 2 86 40
+npc_turn 2 0
+;trottel ausm Weg schaffen
+npc_jump 9 77 19
+show_map
+update 16
+fade_from_black
+
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 10
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_turn 2 1
+update 4
+npc_text 122 34
+pause 30
+npc_turn 2 0
+update 4
+
+sound_effect 38 80 0 0 0
+play_anim 1 0 0 1 1
+; icon change: Baum
+do_event_chain 30
+show_map
+update 1
+
+npc_turn 2 1
+update 4
+pause 30
+party_member_text 2 35
+party_member_text 1 36
+party_member_text 2 37
+npc_text 122 38
+party_member_text 1 39

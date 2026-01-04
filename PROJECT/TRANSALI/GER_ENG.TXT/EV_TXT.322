@@ -1,0 +1,130 @@
+ 
+Rainer, nach Partyaustritt auf Insel der Erleuchteten 
+===================================================== 
+ 
+Block 0 
+[!] 
+ 
+Block 1	Begr., wenn sofort nach Austritt umgekehrt und Rainer 	 
+		angesprochen 
+["Hallo! Ihr seid aber schnell wieder hier. Wolltest Du nicht zur Toronto
+gelangen, Tom?" {BLOK010}"Schon wahr. Wir machen uns besser auf den Weg."] 
+ 
+Block 2	Begr. Phase 1 
+["Hallo. Sch”n, Euch wieder so bald zu sehen. Ihr wart also noch nicht auf der
+Toronto." {BLOK010}"Nein, aber wir machen uns bald auf den Weg. Bis bald."
+{BLOK011}"Hast Du Dich hier schon eingelebt?" {BLOK012}"Hast Du schon neue
+Erkenntnisse gewonnen?"] 
+ 
+Block 3	Antw. 2,10 
+["Bin gespannt, was unsere Leute zu dieser Welt sagen. Viel Glck auf dem Weg."] 
+ 
+Block 4	Antw. 2,11 
+["Nun, allzulange bin ich ja noch nicht hier. Aber ich fhle mich sehr wohl,
+die Atmosph„re hier ist sehr harmonisch."] 
+ 
+Block 5 	Antw. 3,11 
+["Ich habe erste Gespr„che gefhrt, mu mich aber erst in einige Grundbegriffe
+einarbeiten. Es verspricht jedoch das faszinierendste Wissen zu werden, das
+ich mir je angeeignet habe.^^La' mir noch etwas Zeit, und ich kann Dir
+vielleicht mehr erz„hlen."] 
+ 
+Block 6	Verabschiedung allg. 
+["Macht's gut, Freunde."] 
+ 
+Block 7	Begr. Phase 2 
+["Hallo, Freunde. Ich drcke Euch die Daumen bei der Suche nach dem Wissen fr
+das Samenkorn." {BLOK010}"Hallo, Rainer. Hast Du irgendwelche neuen
+Erkenntnisse?" {BLOK011}"Gr' Dich, Rainer. Wie gef„llt Dir das Leben hier?"
+{BLOK012}"Wir werden uns mal wieder auf den Weg machen."] 
+ 
+Block 8	Antw. 7,10 
+["Ich lerne jeden Tag hinzu. Was m”chtet Ihr wissen?" {BLOK010}"Wie siehst Du
+die Einwanderung der Kelten auf diese Welt?" {BLOK011}"Was hast Du ber die
+Funktionsweise der Magie herausbekommen?" {BLOK012}"Meinst Du, dieses magische
+Samenkorn wird etwas gegen die Toronto ausrichten k”nnen?" {BLOK013}"Wir
+werden uns mal wieder auf den Weg machen."] 
+ 
+Block 9	Antw. 7,11 
+["Oh, es ist die aufregendste Zeit meines Lebens! So viel neues Wissen! Wenn
+man erst einmal einige Dinge akzeptiert hat, macht es direkt Spa, sein
+Weltbild zu ver„ndern.^^Es ergeben sich zum Glck einige Schnittpunkte durch
+den Einflu des antiken griechischen Wissens. Dieser Cantos, der damals seinen
+Volksstamm hierher fhrte, war ein fr seine Zeit hochgebildeter Mann, der
+viele Kenntnisse aus dem r”mischen und griechische Kulturkreis besa. Obwohl
+er vor dieser Kultur flchtete, verachtete er anscheinend nicht Teile ihres
+Wissenschatzes.^^So kommt es, da hier viele griechische Sagengestalten und
+Philosophen zitiert werden."]
+
+Block 10	Antw. 8,10 
+["Vielleicht ist Einwanderung der falsche Begriff. Eigentlich haben die Kelten
+n„mlich ihre Welt nie verlassen. Zumindest diese Kelten hier nicht. Wer seine
+Welt verlassen mute, das waren die Kelten, die sich der r”mischen Eroberung
+und der Christianisierung durch den heiligen Patrick, den Bathrig der hiesigen
+Sage, unterwerfen muten. Diese Kelten hier wanderten nur weiter in der Welt
+Animebonas. Und auf dieser Wanderung trafen sie irgendwann hier ein. Wie das
+physikalisch funktioniert haben soll, ist mir noch nicht klar. Sicher ist
+aber, da die physikalische Frage fr die Wesen Animebonas berhaupt keine
+Schwierigkeiten aufwirft. Sie denken nicht - physikalisch. Im Gegensatz zu uns
+Helromiern. Wobei "Hel" da wohl fr Helenen steht. Die Christianisierung
+erfolgte mit der griechischen Bibel. Und der Einflu der antiken griechischen
+Philosophen auf die christliche Lehre ist auch nicht zu untersch„tzen. Es
+birgt eine gewisse Ironie, da eine Religion, also etwas fr uns v”llig
+Irrationales, fr diese Menschen hier eine Bedrohung ist, weil es ZU rational
+ist..."] 
+ 
+Block 11	Antw. 8,11 
+["Du stellst Fragen! Das wei ich doch selbst noch nicht so genau. Wie soll
+man denn etwas mit den Begriffen des Rationalen erkl„ren, das von diesen
+Begriffen gar nicht vorgesehen ist? Aber ich will trotzdem probieren, Dir
+zumindest die Wirkungsweise zu erkl„ren.^^Kurz gefat geht das so: Was in
+dieser Welt gedacht wird und als Gedanke stark genug wird, das erh„lt Materie.
+Vielleicht hat das was mit dem Energieerhaltungssatz zu tun. Vielleicht haben
+die Bewohner Albions wirklich einen Weg entdeckt, aus der Energie ihrer
+Gedanken Materie zu erschaffen.^^ Jedenfalls ist die Wirkungsweise
+erstaunlich. Und weil den Wesen hier jenes kategorische Denken fehlt, das ein
+Merkmal des irdischen Animenkna ist, kann auch alles entstehen. Nicht nur
+Dinge, die es bisher schon gab. Das hat aber auch seine Schattenseiten, denn
+auch starke Angst wird hier zu Materie. Als D„mon beispielsweise.
+{BLOK010}"Hast du vielleicht fr einen alten Rationalisten wie mich eine
+Erkl„rung von Animenkna und Animebona? "] 
+ 
+Block 12	Antw. 8,12 
+["Um ehrlich zu sein, ich kenne seine Wirkung nicht genau. Ich habe meine
+naturwissenschaftlichen Kenntnisse der Diskussion ber die Erschaffung einer
+Abwehr gegen die Toronto beigesteuert, aber so tief sind meine Kenntnisse der
+Magie noch nicht, als da ich alles verstanden h„tte.^^Fest steht, da dieses
+Samenkorn das m„chtigste magische Artefakt werden soll, das Albion je gesehen
+hat."] 
+ 
+Block 13	Begr. Phase 3 
+["Hallo, Freunde! Ich drcke Euch wirklich die Daumen fr die Mission gegen
+die Toronto. Hoffentlich habt Ihr die Vorbereitungen bald abgeschlossen."
+{BLOK010}"Hast Du noch irgendwelche Tips fr uns?" {BLOK011}"Nun, es ist an
+der Zeit, uns auf den Weg zu machen."] 
+ 
+Block 14	Antw. 13,10 
+["Leider nichts Konkretes. Wenn nur jemand wte, wie das Samenkorn genau
+wirkt, aber die Prinzipien, mit denen das Samenkorn erschaffen wurden, sind so
+vielf„ltig! Fest steht, da es in der N„he einer groen Energiequelle seine
+Kraft entfalten wird, und der Fusionsreaktor an Bord der Toronto ist die
+gewaltigste Energiequelle auf dieser Welt. Zu Eurer Beruhigung: Ich glaube
+nicht, da es zu einer destruktiven Reaktion kommen wird."] 
+ 
+Block 15	Antw. 11,10 
+["Das ist witzig. Ich glaube n„mlich, erkannt zu haben, da zumindest einige
+Dji Cantos diese Mythologie zwar als Philosophie ernst nehmen, nicht aber als
+Religion. Blo verrate meinen Verdacht hier niemanden. Keiner spricht
+drber.^^ Animebona jedenfalls entspricht dem Denken ohne Kategorien, das wir
+Animenknisten uns gar nicht vorstellen k”nnen. Wenn du von einem Baum redest,
+dann meinst du meist irgendeinen Baum. Du abstrahierst. Und dieses
+Abstrahieren, das k”nnen, nein, besser: wollen die Dji gar nicht. Fr sie ist
+es undenkbar, alle B„ume in einen Topf zu werfen. ^^Da f„llt mir ein, da
+meine Geschichts|lehrerin uns beigebracht hat, da bei den Naturv”lkern jeder
+Baum, jeder Strauch und jedes Tier ein Gott sein konnte. Das hat bestimmt was
+damit zu tun.^^ Naja. Irgendwie wird hier jedes Wesen als INDIVIDUUM gesehen,
+obwohl dieser Begriff nicht richtig ist, da er ja von uns Helromiern stammt.
+Jedes Wesen entstammt einem bestimmten Gedanken Animebonas. Und die Magie hier
+schafft es, einen Gedanken Aimebonas zu erzeugen. Das, was die Dji Cantos
+denken, wenn sie magisch wirken, IST ein Gedanke Animebonas.^^Reicht das
+erstmal? Tut mir leid, wenn ich Dir noch keine genauere Auskunft geben kann."]

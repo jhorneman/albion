@@ -1,0 +1,161 @@
+
+Diamantenschleifer Coskon, kann Trainingsm”glichkeit besorgen.
+====================================================================
+
+Block 0
+[{BLOK000}"Ich bin Diamantschleifer."]
+
+Block 1            (Begrung 1)
+["Willkommen in der Gilde der Diamantschleifer."{WORDDiamantschleifer}]
+
+Block 2            (Begrung 2)
+["Willkommen Fremde, sch”n, da Ihr mal wieder vorbei schaut. Besuch ist bei
+den Diamantschleifern immer willkommen."{WORDDiamantschleifer}]
+
+Block 3            (Diamantschleifer)
+["Unsere Gilde hat Tradition. All unser Wissen und die Erfahrung von vielen
+Jahren spiegelt sich in unseren Meis|ter|stcken wieder, die Ihr in der groen
+Aus|stellung be|sich|tigen k”nnt.^^Auch wenn Ihr einen Edel|stein|fach|mann
+sucht, werdet Ihr ihn hier finden. Ihr k”nnt Euch auch gerne mal um|schauen.
+Es gibt hier Aus|stellungs|r„ume, Werk|st„tten und Wohn|berei|che. Was das
+Thema Edel|steine angeht, so stehe ich Euch gerne mit Rat und Tat zur
+Seite."{WORDEdelsteine}{WORDErfahrung}]
+
+Block 4            (Edelsteine)
+["Was interessiert Euch denn am meisten? Wie wir die Steine schleifen und
+ver|arbei|ten, oder seid Ihr mehr an den Per|sonen in unserer Gil|de
+in|te|res|siert? M”ch|tet Ihr etwas ber Sammler wissen oder ber
+Prei|se?"{WORDSchleifen}{WORDPreise}{WORDPersonen}{WORDSammler}]
+
+Block 5            (Schleifen)
+["Zun„chst bekommen wir von den Bergleuten die Rohlinge, die sie beim Abbauen
+von Me|tall|erzen als Neben|pro|dukte zu Tage f”rdern. Diese Stei|ne werden
+dann zuerst nach Gr”e, Art und Ver|wen|dungs|zweck sor|tiert und dann
+wei|ter|ver|arbei|tet. Manche Stei|ne werden in klei|nere Steine ge|stckelt,
+wenn sie bei|spiels|weise Einschlsse haben. Solche Stcke setzen wir dann in
+Ketten, Ringe und an|dere Schmuck|stcke ein. Andere Stei|ne wer|den gleich
+ge|schliffen und in ihrer ur|sprng|lichen Form, natr|lich durch den Schliff
+ver|edelt, weiter|ver|kauft.^^In un|serer Aus|stellung fin|det Ihr fr all'
+die|se Anfer|ti|gungen vie|le Bei|spiele, die Ihr be|trach|ten k”nnt. Wenn Ihr
+Stei|ne oder an|dere Erzeug|nisse kau|fen m”ch|tet, dann wen|det Euch bitte an
+Mykonou, den Ihr meis|tens in der Aus|stellung fin|den werdet. Er ist ein
+erfah|rener Schlei|fer und schon lange dabei. Ihr werdet ihn
+er|kennen."{WORDAusstellung}{WORDMykonou}]
+
+Block 6            (Ausstellung)
+["Die Ausstellung ist rechts und links neben der Ein|gangs|tre zu fin|den.
+Ihr drft gerne alles an|schauen. Wenn Ihr et|was kau|fen m”ch|tet, wen|det
+Euch an Mykonou."{WORDMykonou}]
+
+Block 7            (Mykonou)
+["Mykonou ist der „l|teste Diamant|schlei|fer in un|serer Gilde. Er schleift
+zwar nicht mehr, aber er kann Euch ex|zellent be|ra|ten und kennt sich mit
+allen Edel|stei|nen her|vor|ragend aus. Meis|tens fin|det Ihr ihn in der
+Aus|stellung, wenn er Stei|ne und Schmuck|stcke pflegt. Bei ihm seid Ihr auch
+richtig, wenn Ihr etwas kaufen m”chtet.^^Achja, er hat eine etwas spr”de Art.
+Lat Euch davon nicht abschrecken. Manche Leute haben das Gefhl, er hat
+nichts an|deres auer Geld ver|dienen im Kopf. Das stimmt nicht ganz."]
+
+Block 8            (Preise)
+["Da wir Dinge herstellen, die man nicht un|bedingt zum Le|ben braucht, k”nnen
+wir dafr auch etwas mehr Gold ver|langen. So kommt es, da bei uns
+eigent|lich auch nur rei|che Leute ein|kau|fen. Aber dennoch le|ben wir nicht
+im šber|flu. Es dauert lange, bis ein Stein ge|schliffen ist, und die Prei|se
+fr die Roh|linge, die wir an die Berg|leute zahlen mssen, sind gar nicht so
+gering. Zudem kaufen die Leute Schmuck und Edel|steine nicht wie
+Lebens|mittel."{WORDBergleute}]
+
+Block 9            (Bergleute)
+["Vielleicht habt Ihr das auch schon von anderer Seite geh”rt. Da die
+Berg|leute die ein|zigen bei uns sind, die Erze und Roh|linge aus der Erde
+holen k”nnen, sind wir von ihnen abh„ngig. Und leider nutzen sie diesen
+Vor|teil immer mehr aus. Wir wissen alle nicht so recht, was wir dage|gen tun
+sollen. Merdger, ein Ger„temacher, versucht an|geblich bereits selbst, Erz
+abzu|bauen. Diese Infor|mation bleibt aber bitte unter uns. Ich glaube auch
+nicht, da er damit Er|folg haben wird, denn sicher wit Ihr, da die
+Berg|leute die ein|zigen sind, die das Ritual aus|fhren k”nnen, mit dem man
+die Mutter der Erde be|s„nf|tigt. Wer das nicht tut, wird seines Lebens nicht
+mehr froh, sagen alle alten Sprich|worte und Br„u|che. Und auch wenn sich in
+unserer Welt vieles ver|„ndert und beson|ders die Ge|r„te|macher dem
+Fort|schritt ge|gen|ber sehr offen sind, so sollte man doch die alten
+Tradi|tionen nicht gleich alle ver|gessen. Das jeden|falls ist mei|ne
+Mei|nung."{WORDRitual}]
+
+Block 10           (Personen)
+["Redet doch einfach mit den Leuten. Auer Mykonou sind eigent|lich alle sehr
+ge|spr„chig. Wir haben auch nichts dage|gen, wenn Ihr in un|sere Zimmer geht.
+Aber bitte st”rt uns nicht beim Schla|fen.^^Es sind natr|lich nicht immer
+alle Leu|te an|we|send. Aber Ihr k”nnt ja ”f|ters mal herein|schauen."]
+
+Block 11           (Sammler)
+["Das ist ein Thema fr sich. Ich kenne alleine 3 Sammler, die hier in der
+Stadt wohnen. Sie sind alle|samt ziem|lich fa|natisch, ab|ge|dreht und
+rich|tige Tr„u|mer. Sie leben fast aus|schlie|lich fr ihre Samm|lungen. Ihr
+seht also, Edel|steine ha|ben auch dann ma|gische Wir|kungen, wenn sie nicht
+magisch sind.^^Wenn ich mir ber|lege, wie wert|voll ein Edel|stein ist, dann
+wun|dere ich mich auch nicht wei|ter, was fr Opfer die Sammler bringen
+mssen, um sich so etwas leis|ten zu k”nnen. Die gr”te Sammlung findet Ihr
+natr|lich immer noch hier in un|serer Aus|stellung. Vielleicht kennt Ihr Ohl.
+Er ist ein ty|pisches Bei|spiel fr Leute, die nur noch in Edel|steinen denken
+k”nnen."{WORDMagische Edelsteine}{WORDAusstellung}]
+
+Block 12           (Magische Edelsteine)
+["Magische Edelsteine sind eine absolute Rarit„t. Eigentlich kenne ich nur
+ganz, ganz wenige, die wirk|lich eine bedeu|tende Wir|kung haben. Der wohl
+berhm|tes|te magi|sche Edel|stein ist der 'Stein der Tau|send Visio|nen'.
+Mykonou be|haup|tet steif und fest, da es diesen Stein wirk|lich gibt. Ich
+selbst halte ihn eher fr eine sch”ne Legen|de.^^Wie auch immer, schenkt man
+der Legen|de Glau|ben, dann kann der|jenige, der die|sen Stein be|sitzt und
+wei, wie man sei|ne Kr„f|te frei|setzt, in die K”pfe der Leute se|hen und
+Ge|danken lesen, hehe. An|geblich ver|gr”ert sich der Kris|tall enorm und
+dann dreht er sich auch noch und ich wei nicht was sonst noch alles. Na ja,
+die bli|chen Ge|schich|ten eben. Ob|wohl ich trotz|dem zu|geben mu, da es
+schon ein sehr reiz|voller Ge|danke w„re, wenn man in die K”pfe von man|chen
+Men|schen schauen k”nnte. Fragt Ihr Euch nicht auch manchmal, wie
+un|durch|sich|tig das Leben eigent|lich ist?^^Ich schweife schon wieder ab,
+bitte entschuldigt meine philo|so|phische Nei|gungen. Wie ge|sagt, Mykonou
+er|z„hlt mir immer noch, da der Stein einst im Besitz un|serer Gil|de war.
+Und dann ist er vor langer Zeit ei|nes Nachts von ei|nem Ger„te|macher
+ge|klaut wor|den. Die ex|peri|men|tie|ren nun mit die|sem Stein in ihren
+dunk|len Kellern und ver|su|chen, sei|ne Wir|kung zu er|grn|den und zu
+nutzen. Aber es gibt weder Be|wei|se fr die Exis|tenz des Stei|nes noch fr
+den Dieb|stahl.^^Aber wenn Ihr den Stein fin|det und zurck|bringt, dann
+trifft mich der Schlag, soviel ist sicher."]
+
+Block 13           (Erfahrung)
+["Fr diese Arbeit ist eine Menge Erfahrung n”tig. Ihr k”nnt das gerne mal
+testen und ver|suchen, selbst einen Edel|stein zu schlei|fen. Ich wnsche Euch
+viel Spa dabei, hihi. Aber das ist ja berall so, da man nur mit viel šbung
+gute Ergeb|nisse er|zielen kann. Doch glck|licher|weise kann man ja bei
+Lehrern und Trai|nern lernen."{WORDTrainer}]
+
+Block 14           (Trainer)
+["Ich glaube nicht, da Ihr Diamantschleifer werden m”chtet, denn dazu mtet
+Ihr Euch hier zu|n„chst ein|mal h„us|lich nieder|lassen. Wenn Ihr von
+je|man|den etwas er|ler|nen k”nnt, dann vielleicht von den Ger„te|machern. Sie
+sind Spe|zialis|ten fr Schl”sser und fr Fein|mecha|nik. Das Problem ist
+aller|dings, da sie Ihr Wissen nicht immer frei|zgig ver|mitteln.^^Dabei
+f„llt mir ein, da Kemilo ur|prng|lich auch einmal Ger„te|macher war. Ihr
+k”nnt ihn in un|serer Gilde fin|den, wenn er zu|f„llig da ist. Ich glaube,
+wenn ich ihn bitte, wrde er sich be|stimmt be|reit er|kl„ren, Euch ein paar
+Dinge zeigen. Mit Fein|mechanik kennt er sich her|vor|ragend aus. Schlie|lich
+macht er die gan|zen Ver|schlu|mechanis|men fr un|sere wert|vollen
+Hals|ketten und Ringe."{WORDBitte}]
+
+Block 15           (Bitte)
+["Ja gut, ich werde Kemilo Bescheid geben, wenn ich ihn sehe. Er wird Euch
+be|stimmt ei|nige Dinge bei|bringen k”nnen."]
+
+Block 16           (Stein der 1000 Visionen)
+["Was ist das? Das ist doch nicht etwa...?^^Wo habt Ihr denn den her? Ganz
+bestimmt handelt es sich dabei um eine F„lschung. Das kann nicht {FAT
+}der{NORS} Stein der Tausend Visionen sein. Wo habt Ihr ihn
+gefunden?"{BLOK010}"Wir haben ihn aus den alten Versuchskellern der
+Ger„temacher. Er war in einer verstaubten Truhe."]
+
+Block 17           (16,10)
+["Das ist ja nicht m”glich. Demnach h„tte Mykonou ja recht mit seinen alten
+Geschichten. Ich kann's noch nicht glauben. Aber wenn das wirklich der Stein
+ist, der er zu sein scheint, dann setzt ihn in das groe Ornament in der
+Empfangshalle ein. Mykonou hat erz„hlt, da er nur dadurch seine Wirkung
+entfaltet. Am besten, Ihr probiert es einmal aus..."]

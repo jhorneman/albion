@@ -1,0 +1,264 @@
+; **** Script 25: Erwischt! (bei den K.K.)
+
+npc_lock 32
+npc_turn 32 2
+npc_lock 33
+npc_turn 33 3
+npc_lock 34
+npc_turn 34 3
+npc_lock 35
+npc_turn 35 3
+npc_lock 36
+npc_turn 36 3
+
+show_map
+
+camera_lock
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+camera_move 0 -8
+update 1
+camera_move 0 -8
+update 1
+
+pause 20
+text 188
+
+camera_move 8 8
+update 1
+camera_move 8 8
+update 1
+
+camera_move 8 8
+update 1
+camera_move 8 8
+update 1
+
+camera_move 8 8
+update 1
+camera_move 8 8
+update 1
+
+camera_move 8 8
+update 1
+camera_move 8 8
+update 1
+
+camera_move 8 8
+update 1
+camera_move 8 8
+update 1
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move 8 8
+update 2
+camera_move 8 8
+update 2
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move 8 8
+update 2
+camera_move 8 8
+update 2
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move 8 8
+update 2
+camera_move 8 8
+update 2
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move 8 8
+update 2
+camera_move 8 8
+update 2
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move 8 8
+update 2
+camera_move 8 8
+update 2
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+camera_move -4 0
+update 1
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 32 0 1
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 32 0 1
+update 4
+
+npc_move 32 0 1
+update 4
+
+npc_move 32 0 1
+update 4
+
+npc_move 32 0 1
+update 4
+
+text 189

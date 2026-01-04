@@ -1,0 +1,212 @@
+Sira, Partymitglied Nr.4  
+=========================  
+  
+Legende:  
++WORT+  = Neues Wort wird in die Wortliste eingetragen  
+"WORT"  = Antwort bei Auswahl dieses Wortes  
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y  
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert  
+(N)     = Normales Textfenster, beschreibender Text  
+WENN:   = Bedingung, Erl„uterungen  
+DANN:   = Resultat, Erl„uterungen  
+SONST:  = Wenn nicht, dann...  
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht  
+  
+ANMERKUNG: Habe vor, sofort nach Siras dazustoen das Du einzufhren. -Es-  
+  
+  
+Block 0  
+[{BLOK000}"Ich bin Gildenmitglied der Dji-Kas."]  
+  
+Block 1         Begr.  
+["Ja, Tom? Was hast Du auf dem Herzen?"{WORDDji-Kas}{WORDDji-Fadh}
+{BLOK010}"Ich wrde gern etwas von Deiner Vergangenheit h”ren, Sira."]  
+  
+Block 2         Antw. MC1,10 1x  
+["Aber gerne, Tom. Ich bin als einziges Kind meines Vaters aufgewachsen. Was
+immer Du fr einen Eindruck von meinem Vater erhalten hast, la' Dir gesagt
+sein, da er eigentlich ein sehr guter Iskai war. Ich h„tte mir keinen
+besseren Vater wnschen k”nnen, er hat mich sehr geliebt. Meine Mutter habe
+ich nie kennengelernt, wegen des unglckseligen Jagdausflugs meines Vaters mit
+meiner Mutter und der Schwester Fasiirs. Ihr habt ja darber geh”rt.^ Trotzdem
+hatte ich eine wunderbare Kindheit. Vater war sehr wohlhabend und ich bekam
+eine erstklassige Ausbildung, in deren Verlauf auch meine magischen Talente
+zum Vorschein kamen.^Das fhrte dann auch zum ersten gr”eren Konflikt in
+meinem Leben und mit meinem Vater. Er sah es als selbstver|st„ndlich an, da
+ich meine Talente in den Dienst seiner Gilde stelle, ich fhlte mich jedoch
+viel mehr zu den Dji-Kas hingezogen. Vor anderthalb Jahren, kaum da ich
+vollj„hrig war, zog ich in das Gildenhaus der Dji-Kas, um meine
+Selbst„n|digkeit zu beweisen. H„tte ich blo gewut, da daraus diese Trag”die
+wird...^ Jedenfalls ist es gut, nun auf Reisen zu sein, um zu all dem Abstand
+zu gewinnen."] 
+ 
+Block 3         Antw. MC1,10 1x  
+["Du m”chtet meine Geschichte ein weiteres mal h”ren, Tom? Dein Interesse ist
+lieb gemeint. Also: Ich bin als einziges Kind meines Vaters aufgewachsen. Was
+immer Du fr einen Eindruck von meinem Vater erhalten hast, la' Dir gesagt
+sein, da er eigentlich ein sehr guter Iskai war. Ich h„tte mir keinen
+besseren Vater wnschen k”nnen, er hat mich sehr geliebt. Meine Mutter habe
+ich nie kennengelernt, wegen des unglckseligen Jagdausflugs meines Vaters mit
+meiner Mutter und der Schwester Fasiirs, Ihr habt ja darber geh”rt.^^
+Trotzdem hatte ich eine wunderbare Kindheit. Vater war sehr wohlhabend und ich
+bekam eine erstklassige Ausbildung, in deren Verlauf auch meine magischen
+Talente zum Vorschein kamen.^Das fhrte dann auch zum ersten gr”eren Konflikt
+in meinem Leben und mit meinem Vater. Er sah es als selbstver|st„ndlich an,
+da ich meine Talente in den Dienst seiner Gilde stelle, ich fhlte mich
+jedoch viel mehr zu den Dji-Kas hingezogen. Vor anderthalb Jahren, kaum da
+ich vollj„hrig war, zog ich in das Gildenhaus der Dji-Kas, um meine
+Selbst„n|digkeit zu beweisen. H„tte ich blo gewut, da daraus diese Trag”die
+wird...^^ Jedenfalls ist es gut, nun auf Reisen zu sein, um zu all dem Abstand
+zu gewinnen."]  
+  
+Block 4         "DJI-FADH, FORMER"1x  
+["Die Gilde meines Vaters hat groe Knstler in Ihren Reihen, aber die
+strenge, zielgerichtete Art ihrer Magie liegt mir leider nicht."]  
+  
+Block 5         "DJI-FADH, FORMER"2x  
+["Wie gesagt: Die Gilde meines Vaters hat groe Knstler in Ihren Reihen, aber
+die strenge, zielgerichtete Art ihrer Magie liegt mir leider nicht."]  
+  
+Block 6         "DJI-KAS, MAGIE"  
+["Ich empfinde fr wenige Dinge in meinem Leben so viel Leidenschaft wie fr
+die Dji-Kas - Magie."]  
+ 
+Block 7  
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch!]  
+
+EVTL. SPTER (Ha. Ha.): {BLOK001}Schau Dir mal dies hier an...   
+ 
+Block 8         Begr. nach Verliebe-Sequenz 
+["Ja, Tom? Was hast Du auf dem Herzen?"{WORDDji-Kas}{WORDDji-Fadh}
+{BLOK010}"Ich wrde gern etwas von Deiner Vergangenheit h”ren, Sira."
+{BLOK011}"Ein tolles Ding, da Du und Mellthas sich verliebt haben!"] 
+ 
+Block 9 
+["Ja, finde ich auch! Ich hatte schon frher Kontakt mit einem anderen
+Verstand, aber normalerweise funktioniert das nur, wenn ich mein Trii gegen
+das eines anderen Iskai lege. Mellthas mu wohl ber eine besondere Begabung
+verfgen.^^Jedenfalls war ich vollkommen berrascht von dem Kontakt, so wie er
+auch. In ein paar Sekunden wuten wir mehr voneinander, als man normalerweise
+in vielen Jahren des Zusammenlebens ber einen anderen erf„hrt. Sein Geist ist
+klar und ehrlich, und ich... mag ihn einfach sehr."] 
+ 
+Block 10 
+["Triifalai-K”rner brauche ich zur Ausbung meiner Magie, Tom. Wir sollten
+immer einen ausreichenden Vorrat davon mitfhren."]
+
+Block 11
+[{BLOK000}Was kannst Du sagen ber... {BLOK003}Ich m”chte gern, da Du uns
+vorerst verl„t, Sira. {BLOK004}Danke fr das Gespr„ch!] 
+
+Block 12            Hau ab
+["Oh. Schade. Doch bedenke: Wenn ich gehe, geht Mellthas natrlich mit mir.
+M”chtest Du wirklich, da wir gehen?" {BLOK000}"Ja, bitte." {BLOK001}"Nein,
+entschuldige."]
+
+Block 13
+["Nun, ich bin sicher, da es fr das Gelingen unserer Mission wichtig ist,
+und keine pers”nlichen Grnde uns entzweien.^^Wenn Du uns suchst, findest Du
+uns wieder im Gasthaus Srimalinars.^^Alles Gute, lebt wohl, ihr alle!"]
+
+Block 14
+["Gut! Ich hatte schon befrchtet, Dich irgendwie ver„rgert zu haben."]
+
+Block 15           Komm wieder her
+["Wie sch”n, Euch wiederzusehen. Mellthas und ich haben eine sch”ne Zeit hier
+gehabt.^^M”chtest Du, da wir uns Dir wieder anschlieen, Tom?"]
+
+Block 16
+["Ah. Sollen wir nun doch mitkommen, hm?"]
+
+Block 17
+[Sollen Sira und Mellthas sich den Gef„hrten anschlieen?]
+
+Block 18
+["Oh, ich glaube, Ihr seid zu viele Personen, um Mellthas und mich noch
+aufzunehmen. Bis sp„ter einmal."]
+
+Block 19
+["Ein bichen Aufregung wird Mellthas und mir nach unserer Ruhepause guttun."
+{INK 001}Sira und Mellthas reihen sich in die Gruppe ein.]
+
+Block 20
+["Wie Du meinst. Bis sp„ter einmal."]
+
+Block 21
+["Oh, G”ttin! Ich habe keine Triifalai-Samenk”rner mehr! Ohne sie kann ich
+keine Magie ausben!"]
+
+Block 22           Tom
+["Du brauchst diese Samenk”rner wirklich unbedingt?"]
+
+Block 23
+["Ja, es ist eine der Eigenheiten der Dji-Kas-Magie. Wir konzentrieren unsere
+geistige Kraft in diese K”rner hinein."]
+
+Block 24           Tom
+["Wo bekommen wir diese K”rner her, Sira?"]
+
+Block 25
+["Sie werden in meiner Gilde in Jirinaar verkauft. Manchmal findet man aber
+auch einen der seltenen Triifalai-Bsche in freier Natur."]
+
+Block 26
+[Die Gef„hrten lassen sich zu einer Ruhepause nieder. Man macht es sich
+gemtlich und kommt ins Gespr„ch. Auch Mellthas beteiligt sich daran, er liest
+von den Lippen ab und schreibt kurze Notizen.^^Besonders interessiert zeigt er
+sich an den Iskai, er bemht sich, von ihrer anders gebauten Mundpartie
+abzulesen und l„t sich von ihrer Kultur und ihren Eigenheiten berichten.^^Als
+die Sprache auf das Stirnorgan der Iskai kommt, berhrt Mellthas neugierig
+Sira's Trii.^^Beide erstarren pl”tzlich wie vom Blitz getroffen!]
+
+Block 27 MELTTHAS:		
+["Da ist... ich kann H™REN. Ihre Lippen sind stumm, aber ich verstehe..."]
+
+Block 28 SIRA:			
+["Unm”glich. Kein Mensch kann das Trii lesen. Aber...ich kann ihn.... Sag mir,
+was Du h”rst!"]
+
+Block 29 MELTTHAS:		
+["H”rt sich gut an, wie Sympathie, nein, mehr: Zuneigung. Etwas, das ich noch
+von keinem Menschen h”rte. Auch mein Ziehvater Bero liebt mich. Aber das hier
+ist anders... beunruhigend...ich verstehe es noch nicht."]
+
+Block 30 SIRA:			
+[{INK 001}Sira berhrt fast automatisch Mellthas' Stirn. {INK 002}"Seltsam. Es
+macht keinen Unterschied, ob ich Dich berhre oder nicht. Du besitzt kein
+Trii. Und doch ist es, als h„ttest Du eins. Wer bist Du, Mellthas?"]
+
+Block 31 MELTTHAS:
+["Wer ich bin? Was wei ich? Taubstumm. ngstlich...Wie soll ich's
+beschreiben? Alle meine Worte, selbst die feinsten, sind nur der Versuch,
+einen bestimmten Tropfen Wasser im Meer zu finden. Sei vorsichtig, Sira, da
+ich uns nicht in Worten ertr„nke!"]
+
+Block 32 SIRA:
+["Ach, Mellthas! "]
+
+Block 33 MELTTHAS:
+["Schlechtes Bild?"]
+
+Block 34 SIRA:
+["Nicht schlecht, wenn Du ein Gedicht schreibst. Aber das hier ist kein
+Gedicht.^^Gedanken.^Unsere.^La' sie einfach zusammenflieen!"]
+
+Block 35 MELTTHAS:
+["Dann sind wir ein Flu?"]
+
+Block 36 SIRA:
+["Hirhirhir, ja, und wir sollten demn„chst ein Flubett finden..."]
+
+Block 37
+[Sira und Mellthas teilen den verblfften Gef„hrten mit, da es zu einem
+geistigen Kontakt zwischen den beiden gekommen ist, etwas, da zwischen Mensch
+und Iskai nicht fr m”glich gehalten wurde.^^Innerhalb weniger Sekunden sind
+sich Sira und Mellthas sehr nahe gekommen...^^Noch lange sorgt die Begebenheit
+fr Gespr„chsstoff zwischen den Gef„hrten, bis endlich alle die Mdigkeit
+bermannt, und man sich zur Ruhe begibt.]
+
+Block 38
+["Ach, der Gedanke an meinen Vater schmerzt mich noch immer und wird es wohl
+noch lange. Er war kein schlechter Iskai, hoffentlich hat er seinen Frieden in
+der G”ttin gefunden."{WORDG”ttin}]

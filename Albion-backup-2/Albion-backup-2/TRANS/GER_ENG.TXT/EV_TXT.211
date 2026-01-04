@@ -1,0 +1,57 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fÅhre das LebensmittelgeschÑft hier in der Stadt."]
+
+Block 1         (BegrÅûung)
+["Skeima Din, wiût Ihr zufÑllig etwas Neues Åber das bîse Heiligtum der
+Iskais?"{BLOK010}"Nein, wir wissen auch nur das, was man sich Åberall
+erzÑhlt!"{BLOK011}"Was ist denn mit dem Heiligtum?"{WORDHeiligtum}]
+
+Block 2         (Resp. 1)
+["Bei der momentanen Situation ist es ja schon fast positiv, wenn man keine
+Neuigkeiten mehr Åber das Heiligtum erfÑhrt. Denn die letzten Neuigkeiten
+waren allesamt Hiobsbotschaften."{WORDHiobsbotschaften}]
+
+Block 3         (Resp. 2 oder Hiobsbotschaften)
+["Ihr habt noch nichts davon gehîrt? Haltet Euch von dem Ort fern! Mir haben
+jetzt schon ganz verschiedene Personen Åber die schrecklichen Wesen berichtet,
+die sich dort herumtreiben. Es werden immer mehr. Und sie entstehen dort, in
+diesem komischen Keller, den auûer diesen komischen Iskai sowieso
+niemandbetreten darf. Irgendwie waren die mir schon immer unheimlich. Macht
+doch einmal einen Besuch in Srimalinar und redet mit den wichtigen Leuten wie
+Edjirr, dem Kneipenwirt und Arrim, der im Erntehaus wohnt. Redet mit ihnen, je
+eher, desto besser."{WORDTabu}]
+
+Block 4         (Wenn Drirr in der Party, dann Einwurf:)
+["Waaas? Was heiût hier 'komische Iskai'??? Iskai sind definitiv nicht
+komischer oder unheimlicher als die Menschen! Wenn ich etwas hasse, dann sind
+es Vorurteile! Und jetzt lassen wir dieses Thema besser..."]
+
+Block 5         (Fortsetzung von 3)
+["Das gilt natÅrlich nicht fÅr alle Iskai - aber was rede ich. Reist nach
+Srimalinar und Åberzeugt Euch selbst. Am besten, Ihr wagt Euch nicht in die
+NÑhe Ihres Heiligtums, denn zum einen gibt es da dieses Tabu, das Ihr nicht
+verletzen solltet, und zum anderen immer mehr dieser furchtbaren
+Monster."{WORDTabu}] 
+
+Block 6         (Tabu)
+["Damit ist nicht zu spaûen! Sie nehmen es sehr ernst, wenn Ihr Euch nicht
+daran haltet. Es existiert schon, seit ich mich erinnern kann."]
+
+Block 7         (Tabu 2)
+["Was habt Ihr denn mit dem Tabu? Ich kann Euch dazu nicht mehr sagen."]
+
+Block 8         (Heiligtum)
+["Ja, die Bewohner von Srimalinar sind sehr religiîs orientiert und suchen ihr
+Heiligtum regelmÑûig auf. Ich weiû nicht, was sie dort tun, ich weiû auch
+nicht, ob sie Åberhaupt noch dorthin gehen, nachdem es dort nur noch so von
+Monstern wimmelt. Kontos behauptet ja felsenfest, daû die Menschen eingreifen
+mÅssen, bevor es zu spÑt ist und eine ganze Invasion von Monstern das Land
+Åberflutet."{WORDKontos}]
+
+Block 9         (Kontos)
+["Fragt ihn am besten selbst. Er ist der FÅhrer im Dorf Kounos."]
+
+Block 10        (Kryte)
+["Das bin ich."]

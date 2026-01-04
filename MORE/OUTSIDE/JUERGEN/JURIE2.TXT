@@ -1,0 +1,41 @@
+
+
+Jrgen Friedrich				Solingen, den 31.8.95
+Vogelpothsweg 84
+44227 Dortmund
+
+
+
+
+
+
+Hallo Jurie,
+
+Bearbeitung der Fehlerliste:
+
+1 - "Karte 244..."
+    Der Fehler lag bei den Boden/Decken-Polygonen. Die Routinen rechneten
+    mit zu hoher Pr„zision -> Overflow...Habe die Pr„zision niedriger ge-
+    w„lt. Dadurch k”nnten die Bodenpolygone etwas "ausfransen", habe aber
+    bisher noch nicht davon gemerkt.
+    Du kannst die neuen Bodenpolygone ja mal mit den alten vergleichen.
+    Solltet ihr die Wandh”he noch weiter vergr”áern wollen, und sollten
+    dann wieder Overflows auftreten, kann man die Pr„zision noch weiter
+    verringern.
+
+2 - "In Karte 122, auf Position 17, 30..."
+    Meineserachtens OK. Fr jedes NPC wird in der Request-Struktur in
+    der id_nr-Komponente die NPC-Nr. zurckgegeben...
+
+3 - "In Karte 122 x20 y15 vd east..."
+    Mein Fehler, hatte vergessen, die NPCs gegen die ViewDepth zu clippen.
+    Habe immer alle NPCs angezeigt. Peinlich, peinlich...
+
+4 - "In Karte 110 im SVGA-Modus wird der Hintergrund..."
+    Ist jetzt gefixed, kleiner Tippfehler in einer Assembler-Routine.
+
+5 - "Weiter liefert die Identifizierungsfunktion..."
+    Ist jetzt gefixed.
+
+
+Gruá Jrgen

@@ -1,0 +1,181 @@
+
+NPC 104: Sebai-Li Wrinn, der Chef des J„gerclans
+================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.9 deaktiviert)
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+1:[{BLOK000}"Wie Ihr eigentlich wissen solltet, bin ich das Oberhaupt des Clans
+der J„ger des Sdwinds."{WORDClan}]
+
+Block 1         Begrung 1.mal
+["Dsarii-ma, Tom und Rainiir! Es stimmt mich froh, da auch Ihr, Tom, Euch von
+Euren schweren Wunden erholt habt." {BLOK010}"Dsarii-ma, „hm, Sebai-li Wrinn.
+Ihr und Euer Clan habt uns das Leben gerettet, und wir m”chten Euch dafr
+danken."]
+
+Block 2         Tom hat sich bedankt
+["Der Sdwind-Clan ist fr seine Gastfreundschaft berhmt. Wir freuen uns,
+Euch geholfen zu haben.{WORDClan}" {BLOK010}"K”nnen wir uns irgendwie
+erkenntlich zeigen fr Eure Grozgigkeit?" {BLOK011}"Hattet Ihr neben Eurem
+Gromut einen besonderen Grund fr unsere Rettung?"]
+
+Block 3         Antwort auf MC2,1
+["Ich bin erfreut ber Eure Dankbarkeit, Tom und Rainiir. In der Tat m”chte
+ich eine Bitte an Euch richten.^ Ich wei nicht, mit welcher Magie ihr Euer
+Metallboot durch die Luft bewegt habt, aber es scheint mir nun v”llig zerst”rt
+zu sein. Das restliche Metall wurde geborgen, weil es fr uns von nicht
+unerheb|lichem Wert ist.^Nun ist man sich uneins, wem die šber|reste geh”ren.
+Da ich den Eindruck habe, da Euer Fahrzeug nicht mehr von Nutzen fr Euch
+ist, w„re es fr den Clan sehr hilfreich, wenn Ihr Euch ent|schlieen k”nntet,
+uns das Metall zu ber|schreiben. Eine solche Erkl„rung wrde sicherlich von
+den anderen Interes|senten akzeptiert. Tom, Ihr scheint mir der Anfhrer zu
+sein: Wie steht Ihr dazu?" {BLOK010}"Selbstverst„ndlich sind wir
+einverstanden, Sebai-li Wrinn. Es ist das Mindeste, was wir fr Eure Hilfe tun
+k”nnen." {BLOK011}"Ich befrchte, wir mssen Euer Ansinnen ablehnen. Wir
+brauchen Geld fr unsere Weiterreise."]
+
+Block 4         Antwort auf MC2,2
+["Ihr seid offenbar Leute, die sehr direkt reden. Nun, ich hoffe, da Euer
+Ehrgefhl ausgepr„gter ist als Eure H”flichkeit, denn ich m”chte in der Tat
+eine Bitte an Euch richten. ^Ich wei nicht, mit welcher Magie ihr Euer
+Metallboot durch die Luft bewegt habt, aber es scheint mir nun v”llig zerst”rt
+und daher nutzlos fr Euch zu sein. Das restliche Metall wurde geborgen, weil
+es fr uns von nicht unerheb|lichem Wert ist. ^Nun ist man sich uneins, wem
+die šber|reste geh”ren. Da ich den Eindruck habe, da Euer Fahrzeug nicht mehr
+von Nutzen fr Euch ist, w„re es fr den Clan sehr hilfreich, wenn Ihr Euch
+ent|schlieen wrdet, uns das Metall zu ber|schreiben. Eine solche Erkl„rung
+wrde sicherlich von den anderen Interes|senten akzeptiert. Tom, Ihr scheint
+mir der Anfhrer zu sein: Wie steht Ihr dazu?" {BLOK010}"Selbstverst„ndlich
+sind wir einverstanden, Sebai-li Wrinn. Es ist das mindeste, was wir fr Eure
+Hilfe tun k”nnen." {BLOK011}"Ich befrchte, wir mssen Euer Ansinnen ablehnen.
+Wir brauchen Geld fr unsere Weiterreise."]
+
+Block 5         Antwort auf MC3,1 oder MC4,1
+["Nun bin ich derjenige, der zu danken hat. Ihr helft dem Sdwind-Clan damit
+in einer Zeit knapper Geldmittel. Bitte setzt Euren Namen und Eure Marke unter
+dieses Schriftstck, Tom." {BLOK010}"Was meint Ihr mit Marke?"]
+
+Block 6         Fortsetzung
+["Oh, verzeiht, wie dumm von mir. Dabei hatte mir Giria bereits berichtet, da
+Menschen keine Duft|drsen besitzen. Es ist bei uns blich, Vertr„ge mit den
+individuellen Gerchen der Unter|zeichnenden zu versehen. In diesem Falle mu
+wohl der Name gengen. Hier, bitte, Tom. {INK 001}^^Tom setzt seinen Namen
+unter ein Schriftstck aus dickem, papier„hnlichem Material.^^{INK 002} Vielen
+Dank noch|mals fr diese Unter|schrift, sie befreit mich von einigen Sorgen.^^
+So, nachdem diese Sache erledigt ist, stehe ich Euch gerne noch fr ein
+Gespr„ch zur Verfgung. Gibt es etwas, da Ihr wissen wollt?" {BLOK010}"hm,
+verzeiht mir, Sebai-li Winn, ich hoffe, Euch mit der Frage nicht zu
+beleidigen, aber Giria erz„hlte etwas ber Euer hohes Alter, und Ihr seid
+offenbar noch recht jung..."]
+
+Block 7         Antwort auf MC6,1
+["Kann es sei, da Euch niemand ber das heiligste Ritual unseres Volkes
+aufgekl„rt hat?^^ Nun gut. Ich bin tats„chlich ber 50 Jahre alt, ein Alter,
+das kein Iskai erreichen kann. Ich habe meinen Geist mit Hilfe des
+Sebai-Rituals in den K”rper eines Neugeborenen, in diesem Fall meines eigenen
+Sohnes, bertragen. Das Sebai-Ritual stellt die m„chtigste magische Handlung
+dar, derer wir f„hig sind, und sie kann von jedem durchgefhrt werden, sei
+sein magisches Talent auch noch so gering.^^Dazu mt Ihr wissen, da das Trii
+eines Neugeborenen in der ersten Woche ganz besondere Eigenschaften hat.
+Berhrt ein Erwachsener mit seinem Trii das des Neugeborenen, kann er sein
+gesamtes Selbst in den Geist des Kindes bertragen. Er oder sie kann das Leben
+neu beginnen, der K”rper des Erwachsenen stirbt bei der Zeremonie.^^ Natrlich
+ist es verboten, das Ritual ohne Genehmigung des Ratskreises durchzufhren.
+Zusammen mit der Entfhrung eines Neugeborenen ist dies das schlimmste
+Verbrechen, das es gibt! Der Verbrecher und seine gesamte Familie werden nach
+unseren Gesetzen mit dem Tode bestraft.^^ Nur wenige Personen mit besonderen
+Verdiensten, die Auserw„hlten, drfen das Ritual durchfhren. Ferner darf das
+Ritual selbstverst„ndlich nur mit Zustimmung der Mutter des Neugeborenen
+durchgefhrt werden. Meist ist es die Partnerin des Auserw„hlten oder eine
+Schwester einer Auserw„hlten. Ist das Ritual durchgefhrt, bekommt der oder
+die Auserw„hlte den Titel Sebai, gefolgt von einem Zusatz, der darauf
+hinweist, wie oft der Sebai das Ritual schon durchfhren durfte. Mein Titel
+Sebai-li besagt also, da ich das Ritual zum ersten Mal erlebt habe."
+{WORDTrii}{WORDGeschwister}{WORDEhe}{WORDRat}{WORDAuserw„hlter}]
+                DANN: +TRII+,+GESCHWISTER+,+EHE+,+RAT+, Einwurf von Rainer
+
+Block 8         Rainer ist von den Socken
+["Halten Sie mich fest, Driscoll! Das ist ja absolut unglaublich, phantastisch
+und..."]
+
+Block 9         Tom beruhigt ihn
+["Ich wei! Versuchen Sie trotzdem, h”flich zu bleiben und sprechen Sie Iskai!"]
+
+Block 10        Antwort auf MC3,2 oder MC4,2
+["Ich wei nicht, ob mangelnde Dankbarkeit ein Merkmal Eurer Rasse ist;
+jedenfalls werde ich mich so schnell nicht wieder um das Leben eines Menschen
+bemhen. Ich wnsche, da Ihr mein Haus sofort verlat. Ihr seid nicht mehr
+willkommen beim Clan des Sdwinds."]
+                DANN: Questbit setzen, Rausschmi auf die Strae vor dem Haus
+                Kein Zutritt mehr zum Haus. Sarkastischer kommentar Rainers. 
+
+Block 11        "CLAN"
+["Der Clan der J„ger des Sdwinds ist einer der „ltesten in Jirinaar. Seit
+unz„hligen Jahren kommen aus unseren Reihen die besten J„ger der Stadt. Ihr
+mt wissen, da in unserem Volke Wild den Herdentieren der Zchter vorgezogen
+wird."{WORDHerden}]
+
+
+Block 12        WENN: ...man das Gespr„ch beendet
+["Bevor ich es vergesse, meine Freunde: Hier ist ein Schlssel. Er ”ffnet die
+Tren des J„gerclans und fhrt unter anderem zu unserem Vorratskeller; was
+immer Ihr ben”tigt, geh”rt Euch. Dort lagert brigens auch viel von den
+šberresten Eures Luft|schiffes.^ Selbst|verst„nd|lich seid Ihr jederzeit gern
+gesehene G„ste in unserem Haus. Schaut Euch hier in Ruhe um, und kommt wieder,
+wann immer Ihr wollt. Und scheut Euch nicht, die Stadt kennen|zulernen, die
+meisten haben schon von Eurer spekta|kul„ren Ankunft geh”rt.^^ Und nun noch
+das Wichtigste: Die Sebainah m”chte mit Euch sprechen. Sucht sie bitte im
+Ratsgeb„ude auf. Ihr findet es inmitten der Stadt, der Eingang ist sdlich
+gelegen."]
+
+Block 13        Begrung 2.Mal
+["Dsarii-ma, meine G„ste! Ihr m”chtet mich sprechen?"]
+
+Block 14        Begrung Phase 1
+["Dsarii-ma, meine Freunde. Ich habe von dem schrecklichen Vorfall bei der
+Feier geh”rt. Hoffentlich k”nnt Ihr die Verbrecher bald stellen!"]
+
+Block 15
+["Lebt wohl, Freunde des Sdwind-Clans."]
+
+Block 16        Begr. wenn Ambush im Vorr.k.
+["Was ist passiert, meine Freunde? Ich habe L„rm im Keller geh”rt, als ich
+hier vorbeikam!" {BLOK10}"Ihr habt ein ernstzunehmendes Ungeziefer-Problem in
+Eurem Vorratskeller, Wrinn!"]
+
+Block 17           nach 16
+[{INK 001}{LEAD}{NAME} berichtet ausfhrlich, was im Keller vorgefallen ist.
+Wrinn scheint peinlich berhrt zu sein:{INK 002}^^ "Das ausgerechnet Euch das
+passieren mute! Dieses Haus ist sehr alt und der Keller ist vor kurzem
+umgebaut worden. Anscheinend grenzen wir nun an alte Bereiche an, die
+mittlerweile von Tieren bewohnt sind.^^ Ist jemand von Euch verletzt worden?"
+{BLOK010}"Ich befrchte ja, Wrinn." {BLOK011}"Halb so schlimm!"]
+
+Block 18           MC 17,10
+["Das tut mir aufrichtig leid! Hier, nehmt diese Medizin, {LEAD}{NAME}, sie
+wird Euch helfen!"^^ {INK 001}Wrinn bergibt {LEAD}{NAME} einige Fl„schchen.]
+
+Block 19           MC 17,11
+["Dann bin ich sehr erleichtert."]
+
+Block 20           Schlusatz
+["Ich bin froh, da Ihr dieses Abenteuer halbwegs berstanden habt, Freunde.
+Wir haben Euch doch nicht aufgep„ppelt, um Euch dann in unserem eigenen Haus
+von Tieren auffressen zu lassen! Lat Euch nun nicht weiter in Euren Pl„nen
+st”ren, aber seid vorsichtig im Keller. Wer wei, wie lange es dauert, bis wir
+alle ungebetenen Besucher dort ausfindig gemacht haben."]
+
+Block 21           "Keller, Vorratskeller"
+["Oh, eine peinliche Sache. Ich hoffe, Ihr seid nicht gekr„nkt deswegen."]
+
+Block 22
+["Ihr k”nnt Euch in unserem Vorratskeller frei bedienen, Freunde."]

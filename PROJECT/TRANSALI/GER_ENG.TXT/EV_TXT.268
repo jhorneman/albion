@@ -1,0 +1,88 @@
+
+WÑchter zum Keller von Kontos
+----------------------------------------------------------------------
+
+Block 0
+[{BLOK000}"Ich bin Soldat und LeibwÑchter unseres FÅhrers."]
+
+Block 1  (BegrÅûung)
+["Halt!^^Ab hier beginnen die Wohn- und Laborbereiche des groûen Kontos,
+unserem gnÑdigen und heiligen FÅhrer. Niemand darf hier hinein, es sei denn,
+Ihr habt eine Einladung fÅr eine Audienz."{BLOK010}"Haben wir."{BLOK011}"Wir
+brauchen keine Einladung."{BLOK012}"Zur Seite, Dumpfbacke!"{BLOK013}"Wir haben
+keine Einladung, aber es ist trotzdem sehr wichtig."{BLOK014}"Entschuldigt,
+wir wollen nicht stîren."]
+
+Block 2  (1,10)
+["Kînnte ich die bitte sehen?"{BLOK010}"Nein, die ist streng
+vertraulich."{BLOK011}"Die haben wir leider gerade nicht dabei."{BLOK012}"Das
+geht schon in Ordnung."{BLOK013}"Tut uns leid, das war ein
+Irrtum."{BLOK014}"Verschwinde, alter Fettkloû, sonst ist Dein letztes
+StÅndlein gekommen!"]
+
+Block 3  (2,10+2,11+2,12)
+["Tut mir leid, ich kann keine Ausnahmen machen!"] (Dialogende)
+
+Block 4  (1,14+2,13+6,10+6,12+7,12)
+["Ja gut, dann geht jetzt wieder."] (Dialogende)
+
+Block 5  (1,12+2,14+7,11)
+["Das wird Euch leid tun!"] (Kampf)
+
+Block 6  (1,11)
+["Oh doch, die braucht Ihr. Was glaubt Ihr denn, wer Ihr seid? Also schwÑtzt
+nicht lÑnger herum und macht, daû Ihr weiter kommt."{BLOK010}"Wir
+gehen."{BLOK011}"In diesem Ton redet niemand mit uns,
+verstanden?"{BLOK012}"Entschuldigt die Stîrung!"]
+
+Block 7  (6,11)
+["Moment, Ihr habt meine Ehre zuerst beleidigt!"{BLOK010}"Nein nein, Ihr wart
+das!"{BLOK011}"Welche Ehre, Du stinkender
+Schleimbeutel?"{BLOK012}"Entschuldigt bitte."{BLOK013}"Das tut nichts zur
+Sache. Auf jeden Fall mÅssen wir hier durch!"]
+
+Block 8  (7,10)
+["Nein, Ihr wart das. Und jetzt verschwindet!"] (Dialogende)
+
+Block 9  (7,13)
+["DarÅber haben wir schon gesprochen. Ihr kennt die Bedingungen."{BLOK010}"Es
+ist wirklich wichtig. Bitte, laû' uns durch!"{BLOK011}"Du siehst den Ernst der
+Lage nicht!"]
+
+Block 10 (9,10)
+["Keine Chance."] (Dialogende)
+
+Block 11 (9,11)
+["Den sehe ich tatsÑchlich nicht."{BLOK010}"Es geht um politische
+Angelegenheiten."{BLOK011}"Es geht um das Schicksal der Welt."{BLOK012}"Es
+geht um Kounos."{BLOK013}"Es geht um Dich."]
+
+Block 12 (11,13)
+["Sehr witzig! Ich habe noch zu tun."] (Dialogende)
+
+Block 13 (11,12)
+["Um Kounos? Kounos ist zwar wichtig fÅr uns, aber ich kann mir nicht denken,
+daû Ihr wichtig fÅr Kounos seid. Lebt wohl!"] (Dialogende)
+
+Block 14 (11,11)
+["NatÅrlich. Der Himmel wird uns bald auf den Kopf fallen. Geht jetzt weiter.
+Ich habe genug gehîrt."] (Dialogende)
+
+Block 15 (11,10)
+["Ihr scheint es ja wirklich enorm wichtig zu haben. Schîn, ich werde Euch
+durchlassen. Wenn Ihr mein Vertrauen aber miûbraucht, werde ich Euch tîten!"]
+
+(Umstellen auf Random)
+
+Block 16 (1,13)
+["Tut mir sehr leid, aber ich kann da keine Ausnahmen machen.^^Ich wÅnsche
+Euch noch einen schînen Tag."] (Dialogende)
+
+Block 17 (Kontos ist nicht da.)
+["Zur Zeit ist Kontos sowieso nicht da. Also versucht es ein andermal."]
+
+Block 18 (7,12)
+["Schîn, dann geht jetzt."]
+
+Block 19
+["Geht mir aus den Augen. Was wollt Ihr denn noch?"]

@@ -1,0 +1,93 @@
+; **** Script 34: Joe kommt!
+
+show_map
+camera_lock
+camera_jump 384 96
+update 2
+text 70
+
+fade_to_black
+camera_unlock
+
+npc_lock 0
+npc_jump 0 19 7
+npc_turn 0 2
+party_jump 19 9
+party_turn 0
+update 4
+camera_lock
+camera_move 0 -64
+update 2
+fade_from_black
+
+active_member_text 71
+npc_text 184 72
+active_member_text 73
+npc_text 184 74
+active_member_text 75
+npc_text 184 76
+active_member_text 77
+text 78
+pause 30
+npc_move 0 0 1
+update 4
+npc_move 0 -1 0
+update 4
+npc_move 0 -1 0
+update 4
+npc_move 0 0 -1
+update 4
+pause 60
+npc_text 184 79
+active_member_text 80
+npc_text 184 81
+active_member_text 82
+npc_text 184 83
+active_member_text 84
+npc_text 184 85
+active_member_text 86
+npc_text 184 87
+active_member_text 88
+npc_text 184 89
+active_member_text 90
+npc_text 184 91
+active_member_text 92
+npc_text 184 93
+active_member_text 94
+npc_text 184 95
+active_member_text 96
+npc_text 184 97
+active_member_text 98
+npc_text 184 99
+active_member_text 100
+pause 30
+text 101
+pause 60
+npc_move 0 0 1
+update 4
+npc_move 0 1 0
+update 4
+npc_move 0 1 0
+update 4
+npc_turn 0 2
+update 2
+pause 30
+npc_text 184 102
+active_member_text 103
+npc_text 184 104
+active_member_text 105
+npc_text 184 106
+active_member_text 107
+npc_text 184 108
+active_member_text 109
+npc_text 184 110
+active_member_text 111
+npc_text 184 112
+active_member_text 113
+
+fade_to_black
+
+npc_off 0
+update 1
+
+

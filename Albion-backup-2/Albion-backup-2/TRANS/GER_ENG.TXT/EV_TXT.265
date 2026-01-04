@@ -1,0 +1,18 @@
+Edjirr (Iskai-Kneipenwirt) / Phase 5
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin der Kneipenwirt hier."]
+
+Block 1         (Begrung)
+["Ihr glaubt doch nicht im Ernst, da ich Euch auch noch bewirten werde? Ich
+wrde mich an Eurer Stelle hier nicht mehr blicken lassen. Inzwischen habe ich
+sogar handfeste Beweise gegen Kontos."]
+
+Block 2         (Kontos, Beweise / wenn Party das Beweisstck fehlt)
+["Beweisstck geben"]
+
+Block 3         (Kontos, Beweise / wenn Party den Beweis schon hat)
+["Ich habe Euch das Dokument doch schon gegeben."]
+
+Block 4         (Edjirr)
+["Ich bin Edjirr."]

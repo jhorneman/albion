@@ -1,0 +1,34 @@
+Perron (Ratsmitglied Nummer 1) / Phase 8
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Willkommen, sch”n Euch wieder zu sehen."{WORDHeiligtum}{WORDRathaus}]
+
+Block 2         (St„tte, Heiligtum, Srimalinar, Konflikt, Pl„ne)
+["Wit Ihr eigentlich, da alle Leute zu Euch aufschauen? Vielleicht spricht
+es nicht gerade fr uns, aber ohne Eure Anwesenheit w„ren manche Dinge in
+diesem Konflikt ganz anders und bestimmt nicht besser abgelaufen. Eure
+diplomatischen F„higkeiten waren fr uns in diesem Moment sehr wertvoll und
+ich m”chte mich im Namen des Rates und von Beloveno bei Euch fr die Mithilfe
+herzlich bedanken."{WORDKontos}]
+
+Block 3         (Kontos)
+["Es ist wirklich gut, da Ihr Kounos und uns von ihm befreit habt."]
+
+Block 4         (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 5         (Perron)
+["Das bin ich."]

@@ -1,0 +1,36 @@
+
+Transporterhîhle
+=========================================================================
+
+Block 0
+[-frei-]
+
+Block 1
+[Der Ausgang.]
+
+Block 2
+[Eine gleiûende Leuchterscheinung.]
+
+Block 3
+[Die GefÑhrten treten in einer anderen Hîhle wieder aus dem Licht heraus.]
+
+Block 4
+["Ich... ich bin sprachlos.^^ Welch ein Erlebnis!"]
+
+Block 5
+[!]
+
+Block 6
+[!]
+
+Block 7
+[!]
+
+Block 8
+["Sollten wir nicht versuchen, so schnell wie mîglich Euer Metallschiff zu
+erreichen, Tom Driscoll? Dann ist dies nicht die richtige Hîhle.^^Wir mÅssen
+die Hîhle des heiûen Landes wÑhlen."]
+
+Block 9
+["Wir brechen so schnell wie mîglich dorthin auf, Harriet. Habt noch ein wenig
+Geduld, bitte."]

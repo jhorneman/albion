@@ -1,0 +1,33 @@
+.ERASE
+
+# PCLIB32
+PCLIB	= d:\PCLIB32\LIB\PCLIB32.lib
+
+# Compiler + Optionen
+Compiler         = wcc386
+Compiler_Options = /D2 /ox /w3
+compile          = $(Compiler) $(Compiler_Options)
+
+Linker_Options   = debug all
+System	        = dos4g
+
+# AusgabeDatei + zu linkende Objectfiles
+Exe_file         = test.exe
+Object_files 	 = test.obj findcol.obj sort.obj main.obj ..\..\lib\ZOOMFUNC.OBJ $(PCLIB)
+
+$(Exe_file): $(Object_files)
+	*wlink system $(System) $(Linker_Options) name $(Exe_file) file {$(Object_files)}
+
+test.obj: test.c
+	$(compile) test.c
+
+findcol.obj: findcol.c findcol.h
+	$(compile) findcol.c
+
+sort.obj: sort.c sort.h
+	$(compile) sort.c
+
+main.obj: main.c
+	$(compile) main.c
+
+

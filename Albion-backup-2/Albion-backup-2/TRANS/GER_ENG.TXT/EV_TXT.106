@@ -1,0 +1,41 @@
+
+NPC 106: Klirna, die Frau eines J„gers
+======================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+[{BLOK000}"Ich bin, wie viele unseres Clans, J„gerin. Aber da die letzte
+Fadhiim sehr glcklich verlief und ich ein Kind erwarte, bleibe ich vorerst im
+Hause. Ich koche sehr gerne, und deshalb helfe ich in der Kche
+aus."{WORDFadhiim}{WORDKind}{WORDKche}]
+
+Block 1         Begrung 1. mal
+["Dsarii-ma, verehrte G„ste."]
+
+Block 2         Begrung normal
+["Dsarii-ma. Ihr m”chtet Euch unterhalten?"]
+
+Block 3         Begrung Phase 1
+["Dsarii-ma. Wie ich h”re, seid Ihr den M”rdern von Akiir auf der Spur. Ich
+wnsche Euch viel Glck bei der Jagd!"]
+
+Block 4         "KšCHE", "KOCHEN"
+["Ja, ich arbeite mit Gridri zusammen. Er ist ein meisterhafter Koch, und ich
+kann bei ihm eine Menge lernen."{WORDGridri}]
+
+Block 5         "Gridri"
+["Nun, wie gesagt, Gridri ist der Koch unseres Clans und ein Meister
+wohl|schmeckender Gerichte."]
+
+Block 6         "Kind"
+["Ja, ich liebe Kinder! Sie halten einen tchtig auf Trab, aber das nehme ich
+gerne in Kauf."]

@@ -1,0 +1,164 @@
+180: Allgemeinwissen der TORONTO - Besatzungsmitglieder 
+oo======================================================= 
+ 
+Legende: 
+ 
++WORT+  = Neues Wort wird in die Wortliste eingetragen 
+"WORT"  = Antwort bei Auswahl dieses Wortes 
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y 
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert 
+(N)     = Normales Textfenster, beschreibender Text 
+WENN:   = Bedingung, Erl„uterungen 
+DANN:   = Resultat, Erl„uterungen 
+SONST:  = Wenn nicht, dann... 
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht 
+ 
+ 
+ 
+ 
+ 
+Block 0 
+[ ] 
+ 
+Block 1         "TORONTO" 
+["Die TORONTO ist der gr”te Kasten, auf dem ich bisher geflogen bin, wie wir
+alle wohl. Alles ist noch neu, wie aus der Schachtel! DDT hat ihren Gewinn von
+3 Jahren in dieses Schiff investiert, habe ich geh”rt. šber 120 Milliarden
+Credits, da wird einem schwindlig!"{WORDDDT}] 
+ 
+Block 2         "DDT, Firma" 
+["Warte mal. Ist schon seltsam. Man arbeitet fr diesen Multi, aber es f„llt
+mir schwer, mich auf Anhieb zu erinnern, was die Abkrzung bedeutet. Wird ja
+nichts anderes benutzt. Es war irgendwas mit Doimlr-Daithasu-Thompson oder so.
+Ist, glaube ich, aus zwei alten europ„ischen und 'nem japanischen Konzern
+entstanden."] 
+ 
+Block 3         "AI, Ned" 
+["Ein phantastisches Ding. Soll fast ein Viertel der Entwicklungs|kosten des
+ganzen Schiffes verschlungen haben. Wenn man bedenkt, das es erst 20 Jahre her
+ist, seit die erste Kiste schnell genug war, um mit Bewutseins|algorithmen
+umgehen zu k”nnen. Das Ding hat geantwortet wie ein schwach|sinniges Kind, und
+wenn Du heute mit sowas wie Ned sprichst, kommst DU Dir wie der Idiot vor.
+^^Immerhin eine gute Idee, Ned durch diesen Androiden|k”rper mit uns
+kommu|nizieren zu lassen. Man kommt sich dabei nicht ganz so merkwrdig vor,
+als wenn man mit einer Konsole oder einer Wand|instal|lation
+diskutiert.^^Auerdem steuert Ned das ganze Schiff und sp„ter die Anlage. Ist
+schon irgendwie unheimlich, das gerade mal 80 Leute Besatzung n”tig sind, um
+das hier am Laufen zu halten."{WORDTORONTO}{WORDAnlage}] 
+ 
+Block 4         "Nugget" 
+["Wenn sich auch nur die H„lfte der Daten best„tigt, die die Sonde ber unser
+Ziel durchgegeben hat, kann sich jeder von seiner Pr„mie die Zulassung fr'n
+Indi leisten. Die Rohstoffmenge mu fast so hoch wie auf Joshi sein. Was die
+genauen Daten angeht, wei Hofstedt wohl am besten darber
+Bescheid."{WORDHofstedt}{WORDIndi}{WORDJoshi}{WORDDaten}] 
+ 
+Block 5         "Indi" 
+["Ja, stell Dir vor, mit 'nem Individualflitzer 'rumsausen, wie so'n reicher
+Sack!"] 
+ 
+Block 6         "Joshi" 
+["Der grne Planet. Na, jedenfalls frher mal. Zum Glck weisen die Daten ber
+Nugget eine Wstenwelt aus. Wir mssen uns zumindest nicht das Gejammer
+anh”ren, wie bei diesen Schlappohren von Joshi. Auerdem, ich bin zwar
+wirklich kein Envi, aber einen blhenden Planeten wie Joshi umzugraben, w„re
+dann doch nicht mein Ding."{WORDEnvi}{WORDSchlappohren}] 
+ 
+Block 7         "Schlappohren" 
+["Ja, Du hast schon irgendwie recht. Sie waren immerhin neben den Hoika die
+einzigen intelligenten Wesen, die entdeckt wurden. Aber sogar die Eierk”pfe
+von der Regierung meinten, da die Schlappohren schon am Ende ihrer
+Entwicklung angelangt waren. Irgendwie dekadent. Ja, trotzdem schade, da sie
+sich diese Krankheit gefangen haben. Sie waren ja eh' nur noch ein paar
+tausend, aber wenn man bedenkt, da eine ganze Rasse stirbt und nichts mehr
+bleibt...^ Na ja, zumindest die Hoika leben ja noch."{WORDHoika}{WORDRegierung}] 
+ 
+Block 8         "Hoika, Gaia" 
+["Die Siedler sind vielleicht ein wenig ruppig mit den Ureinwohnern Gaia's
+umgesprungen. Na ja, es ist schlielich die einzige bisher entdeckte Welt, auf
+der Menschen dauerhaft leben k”nnen. Die Hoika haben ja ihre Reservate
+zugewiesen bekommen."] 
+ 
+Block 9         "over-c" 
+["Was meinst Du, die Comanlage oder den Antrieb?" {BLOK010}"Das Com."
+{BLOK011}"Den Antrieb."] 
+ 
+Block 10        Antw. 9, 10 
+["Ich habe geh”rt, das es da ziemlich geknallt haben soll. Mu 'ne ganz sch”ne
+Sauerei gegeben haben. Was mu Snoopy auch w„hrend des Sprunges an der
+Comanlage herumfummeln. Beunruhigend ist nur, da wir erstmal keinen Kontakt
+mehr zum HQ haben."{WORDSnoopy}{WORDHQ}]  
+ 
+Block 11        Antw. 9, 11 
+["Hat wieder gut funktioniert, der over-c. Wenn man bedenkt, da immer noch
+gerade mal 'ne handvoll Leute wirklich verstehen, wie das Ding funktioniert..."] 
+ 
+Block 12        "Anlage" 
+["Wenn sich das Schiff auf dem Planeten zu der Anlage umgebaut hat, geht die
+Arbeit richtig los. Bin mal gespannt, ob alles funktioniert. Das Ding hier
+soll sich ja seine gesamte Infrastruktur selbst bauen. Man kann sich gar nicht
+vorstellen, wie gro das Ganze anw„chst, wenn es erst mal den halben Planeten
+abgebaut hat. Die Strukturen werden riesig sein! Na ja, am Ende wird ja auch
+die Anlage eingeschmolzen und nach Hause geknallt."] 
+ 
+Block 13        "Snoopy" 
+["Der Regierungsinspektor? Er hat seinen Kontrolljob ziemlich ernst genommen,
+er ist ja dem K„pt'n ein paar Mal ziemlich auf die Pelle gerckt, h”rt man.
+Der Typ, der ihn entdeckt hat, sagte, er hat ihn unter der explodierten
+Com-Konsole gefunden. Und auf dem Sitz. Und ein bichen im
+Nachbarraum."{WORDKapit„n}{WORDRegierung}] 
+ 
+Block 14        "Envi" 
+["Hast Du das Neueste von den Environmentalists geh”rt? Der radikale Flgel
+hat die letzte Galapagosinsel mit einem Minengrtel umgeben. Sind drei
+peruanische Milit„rboote bei 'draufgegangen. Die gem„igten Envis sind am
+toben. Jetzt drften sie's erstmal schwer haben, uns noch mehr Auflagen
+reinzudrcken."]  
+ 
+block 15        "K„pt'n, Kapit„n, Brandt" 
+["Skipper Brandt macht einen guten Job, denke ich, auch wenn er ein bichen,
+na ja, kontaktscheu ist. Man sieht ihn selten auerhalb der Dienstzeiten. Er
+spricht ja mehr mit der AI als mit der Besatzung."{WORDAI}]  
+ 
+ 
+Block 16        "Regierung" 
+["Ich denke, die Regierungen schauen uns deshalb so genau auf die Finger, weil
+sie immer noch nicht die Tatsache verkraftet haben, da die Konzerne die
+Raumfahrt beherrschen. Bei DDT gibt's ja schon genug Schreibkram, aber diese
+Regierungs|brokraten w„ren doch nie in der Lage, ein Schiff wie die TORONTO
+zu bauen, selbst wenn sie das Geld dazu h„tten."{WORDTORONTO}] 
+ 
+Block 17        "Daten" 
+["Die Daten versprechen einen Planeten, der Rohstoffe in gengend hoher
+Konzentration enth„lt, so da sich der Einsatz von diesem Riesenkasten hier
+lohnt. Im HQ drften die Korken geknallt haben, als die Ergebnisse der Sonde
+herein|gekommen sind. Bin mal gespannt, wie es auf Nugget aussieht. ^^Allzu
+aufregend wird's wohl nicht. Es soll sich um eine furz|trockene Wsten|welt
+handeln, mit nicht mal gengend Sauerstoff zum freien Atmen. Keine Gift|stoffe
+in der Atmosph„re, allerdings. Kein Leben, auer vielleicht ein paar einfachen
+Pflanzen. Ist 'ne ganze Ecke kleiner als die Erde, aber durch die schweren
+Elemente k”nnen wir trotzdem um die 0,8 G Schwerkraft erwarten. Ist 'n guter
+Wert, schont das Material."{WORDHQ}] 
+ 
+Block 18        "HQ" 
+["Die Jungs im HQ Osaka wird es berhaupt nicht freuen, da wir keinen Kontakt
+mehr aufrecht erhalten k”nnen. Wenn diese ganze over-c - Technik nur nicht so
+schweine|teuer w„re, h„tten die bestimmt eine zweite Comanlage eingebaut.
+Sch„tze, wir mssen Nachrichten bermitteln, wenn die ersten Erzcontainer nach
+Hause gehen. Vielleicht schicken die uns dann die ben”tigten
+Ersatzteile."{WORDover-c}] 
+ 
+Block 19        "Hofstedt" 
+["Tja, nun ist er der einzige "Offizielle" an Bord. Eigentlich ist der Typ fr
+einen Eierkopf ganz in Ordnung. Kritisiert allerdings gern an der Firma herum,
+wenn man l„nger mit ihm spricht. Was soll's, sind ja auch keine Engel, die
+Sesselfurzer in den oberen Etagen."{WORDRegierung}] 
+ 
+Block 20        WENN: Waffe gezeigt 
+["Eine Kanone! Du weit, da Du in Teufels Kche kommst, wenn die Secus Dich
+damit erwischen. Behalt' lieber fr Dich, da Du das Ding hast."{WORDSecus}] 
+ 
+Block 21        "Secus" 
+["Die Security-Leute sind wohl auf keinem Schiff besonders beliebt. Seit dem
+Vorfall vor 10 Jahren auf der GATES, wo die Streikenden zusammengeschossen
+wurden, ist der ganze Berufstand in Verruf geraten."]

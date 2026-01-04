@@ -1,0 +1,33 @@
+Edjirr (Iskai-Kneipenwirt) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin der Kneipenwirt hier. Habt Ihr schon meinen Sugo probiert?
+Der ist wirklich gut, Leute."{WORDSugo}]
+
+Block 1         (Begrung)
+["Willkommen im 'groen Fa'. Ihr seid fremd hier in der Stadt. Naja,
+vielleicht werdet Ihr trotzdem ein paar nette Gespr„chspartner finden. Kommt
+Ihr aus Beloveno?"{WORDBeloveno}]
+
+Block 2         (Begrung 2)
+["Ich gre Euch. Leider ist meine Stimmung schlecht! Das liegt daran, da ich
+Gerchte ber Kontos geh”rt habe, die mich frustriert haben. Ich wei aber
+nicht, ob ich den Informationen glauben darf. Also redet lieber selbst mit
+Kontos, wenn Ihr etwas darber erfahren m”chtet. Er ist der druidische
+Anfhrer der Mahinos in Kounos.^^Ich m”chte Euch aber nicht die Stimmung
+verderben. Macht es Euch gemtlich. M”chtet Ihr Rationen kaufen?"{BLOK010}"Ja,
+gerne."{BLOK011}"Nein, danke."] -> Verkaufen
+
+Block 3         (Beloveno, Ja)
+["Ich habe mir fast gedacht, da Ihr von dort kommt. Dann wart Ihr sicher
+schon in Kounos. Das ist ein kleines D”rfchen auf den Plateaus des Gebirges."]
+
+Block 4         (Nein)
+["Nicht? Da mt Ihr unbedingt mal hingehen. Bestimmt trefft Ihr dort viele
+interessante Leute."]
+
+Block 5         (Edjirr)
+["Ich bin Edjirr."]
+
+Block 6         (Rationen)
+[{BLOK010}"Wir wrden gerne Rationen kaufen."]

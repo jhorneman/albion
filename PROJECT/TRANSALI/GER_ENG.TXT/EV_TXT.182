@@ -1,0 +1,173 @@
+182: Allgemeinwissen Rainer 1, auf Albion, bis zu den Erleuchteten
+=================================================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[!]
+
+Block 1         "TORONTO"
+["Die TORONTO erfllt mich mit einer Mischung aus Ehrfurcht und Skepsis, um
+ehrlich zu sein. Der Physiker in mir bewundert diese phantastische technische
+Leistung. Schade nur, das all dies lediglich dazu dient, sich in eine Anlage
+zu verwandeln, um Rohstoffe von anderen Welten zu beschaffen und diese dabei
+zu verschandeln, auch wenn es sich um eine Wstenwelt wie unser Ziel handelt,
+die von DDT so sinnig "Nugget" getauft wurde."]
+
+
+Block 2         "DDT"
+["Doimlr-Daithasu-Thompson. Ich kenne Ihre Firma besser, als Sie vielleicht
+glauben, Driscoll. Meine Mutter hat dort gearbeitet und ich habe einen Teil
+meiner Kindheit und Jugend innerhalb der Firmenkultur verbracht. Der
+zweitgr”te Multi der Erde. Mehr Umsatz als das Brutto|sozial|produkt der
+meisten Staaten. DDT ist aus einem Zusammenschlu zweier europ„ischer und
+eines japanischen Konzerns entstanden. Der Konzern gilt als einer der
+gesndesten unter den Gromultis. Der Verlust, den DDT durch die falschen
+Daten ber diesen Planeten einstecken mu, wird allerdings hart sein."]
+
+Block 3         "AI, Ned"
+["Die neueste Generation bewuter Rechner. DDT h„tte sich dieses AI-System nie
+leisten k”nnen, wenn sie nicht selbst fhrend in der Technik w„ren, und auch
+so hat Ned fast 25% der Entwicklungskosten der ganzen TORONTO verschlungen.
+Das System enth„lt Prozessoren, die speziell auf die Bewutseins|algorithmen
+zugeschnitten sind. Ich habe mich schon mehrere Male mit Ned unterhalten und
+jedesmal hat es mir einen Schauer ber den Rcken gejagt. Ned ist wirklich ein
+intelligentes Bewutsein. Der Grad an Urteilsf„higkeit des Systems ist
+bahnbrechend."]
+
+Block 4         "Nugget"
+["Nun, der Name ist wohl nicht l„nger haltbar - der Planet hat sich ja als
+šberraschung ersten Grades herausgestellt. M”chte wissen, was mit der Sonde
+los war. Nun, einige Daten haben immerhin gestimmt. Die Tagesdauer betr„gt
+tats„chlich 24 Stunden, die warme Farbe des Sonnenlichtes stimmt, und auch die
+Abwesenheit von Jahreszeiten aufgrund der nicht vorhandenen Achsenneigung des
+Planeten sind zutreffend."]
+
+
+Block 5         "Indi"
+["Hier scheint sich der Individualverkehr haupts„chlich auf die eigenen Fe
+zu beschr„nken."]
+
+Block 6         "Joshi"
+["Erinnern Sie mich blo nicht daran! Zusammen mit dem rcksichtslosen
+Vorgehen auf Gaia ist der Fall Joshi meiner Meinung nach der gr”te Skandal
+der interstellaren Raumfahrt. Sie wissen ja, da damals ein blhender Planet
+von einem Konkurrenz|unternehmen DDT's fast vollst„ndig zugrunde gerichtet
+wurde. Und wissen Sie noch etwas? Wenn sich nicht herausgestellt h„tte, da
+dabei nicht nur ein lebendiger Planet ruiniert, sondern auch intelligente
+Wesen dabei ausgerottet wurden, wrde es wohl heute noch keine Kontrollen
+geben. Wenn ich an die Kommentare des Multis denke! "Der Planet hatte
+Giftstoffe in seiner Atmosph„re, die menschliches Leben nicht erlauben". Als
+ob die einheimische Flora und Fauna dadurch weniger wertvolles Leben
+darstellte! Unglaublich auch der Kommentar zum Ende der Grik'tra. Schlappohren
+haben sie sie genannt und gemeint, da sie dem irdischen Virus erlegen w„ren,
+weil sie dekadent und am Ende ihrer Entwicklungs|geschichte angelangt waren!
+Es ist...^ verzeihen Sie, bei diesem Thema rede ich mich gern in Rage. Wie dem
+auch sei, dieser Vorfall ist letztendlich der Grund fr meine Anwesenheit auf
+dem Schiff. Kein privates Raumfahrzeug darf seit Joshi unerforschte Systeme
+ohne Begleitung eines Regierungs|beauftragten ansteuern."]
+
+Block 7         "Schlappohren"
+["Ein rassistische Bezeichnung, Driscoll. Die Grik'tra waren ein Kulturvolk
+mit einer Entwicklungs|geschichte, die zweihundertausend Jahre l„nger als die
+unsere ist. Ihre Zahl betrug nur noch einige tausend, als der von der Erde
+eingeschleppte Virus sie ausrottete."]
+
+Block 8         "Hoika, Gaia"
+["Gaia ist ein Beispiel, da wir offenbar nicht in der Lage sind, aus den
+Fehlern unserer Geschichte zu lernen. In der Euphorie nach der Erfindung, oder
+besser Entdeckung, des over-c hatte Gaia einfach nur das Pech, da unter den
+ersten angesteuerten Sonnensystemen ein Planet existierte, der menschliches
+Leben erlaubte. Die Entdeckung einheimischer intelligenter Einwohner, der
+Hoika, war eine Sensation, die noch gr”ere Aufregung als die erfolgreichen
+Tests des over-c ausl”ste; was die Siedler allerdings nicht daran hinderte,
+die Hoika „hnlich zu behandeln, wie es mit zahlreichen V”lkern auf der Erde zu
+Zeiten des Kolonialismus passierte. Was fr eine Ausnahme Gaia darstellt, ist
+erst heute klar, denn es ist bislang die einzige Welt geblieben, auf der
+menschliches Leben dauerhaft m”glich ist."]
+
+
+Block 9         "over-c"
+["Meinen Sie die Comanlage oder den Antrieb?" {BLOK010}"Das Com."
+{BLOK011}"Den Antrieb."]
+
+Block 10        Antw. 9, 10
+["Die Comanlage soll v”llig zerst”rt worden sein. Mein pers”nliches Verh„ltnis
+zu Inspektor Beegle war leider nicht das Beste. Ich wte zu gern, was er
+w„hrend des Sprunges an der Anlage zu suchen hatte.^ Die Hochenergietechnik
+der over-c Kommunikation ist leider so sndhaft teuer, da wir offenbar nicht
+gengend Ersatzteile mitfhren, um die Anlage wieder in Betrieb zu setzen."]
+
+Block 11        Antw. 9, 11
+["Der over-c - Antrieb ist fr uns, was das Feuer fr den Frhmenschen war.
+Wir wissen nicht bis in alle Einzelheiten, was er genau bewirkt, aber wir
+verwenden ihn und er schleudert uns in eine neue Phase unserer
+Entwicklungs|geschichte, welche Konsequenzen es auch immer haben mag..."]
+
+Block 12        "Anlage"
+["Der Umbau zur Fabrikanlage wird nun wohl nicht stattfinden k”nnen. Ich bin
+gar nicht mal sicher, ob die TORONTO, ohne zus„tzliche Manahmen zu ergreifen,
+wieder starten kann."]
+
+Block 13        "Snoopy, Beegle"
+["Der Regierungsinspektor war ein wandelndes Klischee von einem Briten. Ich
+hielt ihn fr ziemlich arrogant, wir sind nicht besonders gut miteinander
+ausgekommen, um ehrlich zu sein. Aber er hat seinen Job ernst genommen, das
+mu ich ihm lassen."]
+
+
+Block 14        "Envi"
+["Wissen Sie, ich war frher selbst bei den Environmentalists aktiv, bis der
+radikale Flgel immer mehr in Richtung Terrorismus abgedriftet ist. Immerhin
+hat der offizielle Teil der Organisation groartige Erfolge erzielt. Die
+gentech-gesttzte Rckzchtung des Tigers letztes Jahr hat der Organisation
+glcklicherweise wieder Auftrieb im ”ffentlichen Meinungsbarometer verliehen.
+Seit die gr”ten Schweinereien auerhalb der Erde passieren, bessert sich der
+Zustand der letzten Naturreservate zusehends."]
+
+block 15        "K„pt'n, Kapit„n, Brandt"
+["Brandt ist in Ordnung, sch„tze ich. Er ist v”llig fasziniert von Ned,
+unserer AI. Liegt vielleicht daran, da er seine Karriere als
+Softwareingenieur begonnen hat."]
+
+Block 16        "Regierung"
+["Seit die letzten Eigenm„chtigkeiten der Multis bekannt geworden sind, hat
+der ”ffentliche Druck auf die Konzerne erfreulich groe Ausmae angenommen. Es
+ist fast soweit, das die Regierung ihre Bezeichnung wieder verdient."]
+
+Block 17        "Daten"
+["Die Daten ber diesen Planeten mssen wohl leicht revidiert werden!"]
+
+
+Block 18        "HQ"
+["In der DDT-Zentrale von Osaka wird man rotieren, seit der Kontakt
+abgebrochen ist, sch„tze ich."]
+
+
+
+Anmerkungen:
+
+DDT = Daimler-Daihatsu-Thompson !
+
+In Anleitung:
+Grundinformationen ber das Schiff (Segmente, Schwerkraft durch Rotation, 
+gleiche Schwerkraftrichtung nach Umbau, Funktionsweise nach Landung).
+
+Im gespr„ch mit Rainer bei Job:
+["Ich bin Physiker und Xenobiologe im Regierungsdienst. Wie Sie wohl wissen,
+reise ich mit, um zu verhindern, da sich Katastrophen wie die auf Joshi
+wiederholen k”nnen."]

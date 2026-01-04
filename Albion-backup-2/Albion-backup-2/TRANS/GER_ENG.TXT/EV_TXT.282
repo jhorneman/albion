@@ -1,0 +1,72 @@
+
+Merdger
+---------------------------------------------------------------------------
+
+Block 0
+[{BLOK000}"Ich bin eigentlich Ger„temacher, aber ich habe mich darauf
+spezialisiert, magische Lotionen und Tr„nke zu entwickeln."{WORDTr„nke}]
+
+Block 1
+["Ich gre Euch, ich bin Merdger und Mitglied in der
+Ger„temachergilde."{WORDGer„temacher}]
+
+Block 2            (Tr„nke)
+["Die sind eigentlich nur fr Eingeweihte..."]
+
+Block 3            (Poren”l)
+["Euch ist mein Poren”l empfohlen worden?^^Mhm, na sch”n, ich verkaufe Euch
+ein Fl„schchen fr 15 Mnzen. Ein Fl„schchen reicht brigens fr bis zu sechs
+Leute pro Anwendung."{BLOK010}"Nein danke, kein Interesse."{BLOK011}"Ja, wir
+nehmen eins."{BLOK012}"Wir h„tten gerne 5 Stck fr 75 Mnzen."]
+
+Block 4            (Antwort 1)
+["Na, dann nicht."]
+
+Block 5            (Antwort 2+3)
+["Ich danke Euch. Es wird garantiert helfen. Trinkt es alle 8 Stunden, wenn
+Ihr in der Wste wandert."]
+
+Block 6            (Nicht genug Gold)
+["Leider habt Ihr nicht genug Goldmnzen dabei."]
+
+Block 7            (Ihr habt keinen Platz dafr)
+["Ihr habt leider keinen Platz, um das mitzunehmen!"]
+
+Block 8            (Ger„tmacher)
+["Schaut Euch ruhig um in unserem Gildenhaus. Unsere wichtigsten und neuesten
+Errungenschaften werden allerdings in unserer unterirdischen Werkstatt
+entwickelt. Natrlich habt Ihr dorthin keinen Zutritt."{WORDWerkstatt}]
+
+Block 9            (Werkstatt)
+["Wie ich schon sagte, diese Werkstatt ist nicht fr die ™ffentlichkeit
+zug„nglich. Weder ich noch Zebenno werden Euch den Schlssel
+geben!"{WORDSchlssel}{WORDZebenno}]
+
+Block 10           (Zebenno)
+["Zebenno ist ebenfalls Ger„temacher. Er verfgt ber den Zweitschlssel.
+Sprecht ihn lieber erst gar nicht auf den Schlssel an, er ist nicht immer
+ganz standfest.^^Mhm, ich sehe schon, Ihr werdet ihn darauf ansprechen. Aber
+ich habe Euch gewarnt. Wenn er Euch den Schlssel gibt und wenn Euch dort
+unten irgend etwas passiert...Ihr seid selbst fr Euch
+verantwortlich."{BLOK010}"Lieber Merdger, das sind wir sowieso."{BLOK011}"Ihr
+habt uns gewarnt, wir danken dafr und werden vorsichtig sein."{BLOK012}"Wir
+gehen da nicht runter."]
+
+Block 11           (10,10+10,11)
+["Na gut, wie Ihr meint."]
+
+Block 12           (10,12)
+["Besser so. Geht Euch sowieso nichts an."]
+
+Block 13           (Schlssel)
+["Ich bin nicht verrckt und gebe Euch meinen Schlssel!? Zebenno wird das
+hoffentlich auch nicht tun. Er ist n„mlich ein netter Kerl. Besucht ihn doch
+mal und sagt ihm einen Gru von mir. Ihr werdet ihn meistens bei den
+Bergleuten finden, dort schimpft er st„ndig ber die Erzpreise, wenn er nichts
+besseres zu tun hat."{WORDErzpreise}]
+
+Block 14           (Erzpreise)
+["Ja, es wird auch wirklich immer teurer. Der Waffenschmied ist davon
+natrlich noch st„rker betroffen. Denn er ben”tigt mehr Metall als wir. Was
+sollen wir nur tun? Das Erz selbst abbauen k”nnen wir wegen dem Ritual nicht.
+Die Bergleute nutzen ihr Wissen gegen uns aus."{WORDRitual}{WORDBergleute}]

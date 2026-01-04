@@ -1,0 +1,462 @@
+
+Cutmaptextfile
+---------------------------------------------------------------------
+
+Block 0            (frei)
+[ ]
+
+Block 1
+[Ein Sicherungskasten.]
+
+Block 2
+[Ein Sessel.]
+
+Block 3
+[Eine Liege.]
+
+Block 4
+[Das Steuerpult fr den Atomreaktor.]
+
+Block 5
+[Ein Servicepanel.]
+
+Block 6
+[Eine Steuerungskonsole.]
+
+Block 7
+[Eine Flugsteuerungskonsole.]
+
+Block 8
+[Ein Kontrollpult.]
+
+Block 9
+[Eine chemische Toilette.]
+
+Block 10
+[Ein Schrank.]
+
+Block 11
+[Eine Sple.]
+
+Block 12
+[Handtcher.]
+
+Block 13
+[Zahnputzzeug.]
+
+Block 14
+[Eine Anzeige fr die Korridor-šberwachung.]
+
+Block 15
+[Kontroll-Anzeigen.]
+
+Block 16
+[Ein Teil des Reaktors.]
+
+Block 17
+[F„sser mit Mll, Wasser, Gift- und Rohstoffen.]
+
+Block 18
+[Eine ausgeschaltete Konsole.]
+
+Block 19
+[Eine Lampe.]
+
+Block 20
+[Ein Teller.]
+
+Block 21
+[Ein Glas.]
+
+Block 22
+[Ein Becher.]
+
+Block 23
+[Ein Beh„lter.]
+
+Block 24
+[Eine Flasche.]
+
+Block 25
+[Eine Kanne.]
+
+Block 26
+[Eine Dose.]
+
+Block 27
+[Ein Gef„.]
+
+Block 28
+[Ein Pfeffer- und ein Salzstreuer.]
+
+Block 29
+[Sojasoe.]
+
+Block 30
+[Ein Topf.]
+
+Block 31
+[Eine kleine Dose.]
+
+Block 32
+[Eine Schaufel.]
+
+Block 33
+[Ein Spaten.]
+
+Block 34
+[Ein Schraubenschlssel.]
+
+Block 35
+[Ein Schraubenzieher.]
+
+Block 36
+[Eine Handkonsole.]
+
+Block 37
+[Ein PDA. (Personal Digital Assistent)]
+
+Block 38
+[Eine Zange.]
+
+Block 39
+[Besteck und ein Becher.]
+
+Block 40
+[Geschirr.]
+
+Block 41
+[Eine Automatik-Tre.]
+
+Block 42
+[Ein Shuttle.]
+
+Block 43
+[Container.]
+
+Block 44
+[Eine Dusche.]
+
+Block 45
+[Ein Fahrzeug.]
+
+Block 46
+[Bodenmarkierungen.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 50
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 62
+[Eine riesige Schleuse.]
+
+Block 63
+[Dieses Sichtfenster mit starkem Filter erlaubt einen direkten Blick in das
+Herz der TORONTO: den Fusionsreaktor. Die gez„hmten Kr„fte einer Sonne
+versorgen den ungeheuren Energiebedarf der Anlage.]
+
+Block 64
+[Das Steuerpult des Reaktors.]
+
+Block 65           J
+["Diese Konsole habe ich gemeint, Tom. Wenn Du mir kr„ftig die Daumen drckst,
+k”nnte ich einen Versuch starten, Ned, die AI, von der Energieversorgung
+abzuklemmen. Soll ich's gleich probieren?"]
+
+Block 66           Req.
+[Soll Joe jetzt versuchen, die Konsole zu manipulieren? {BLOK000}Ja, probieren
+wir's! {BLOK001}Nein, Moment noch.]
+
+Block 67           J
+["La' uns nicht zu lange warten. Hab' keine Lust, erwischt zu werden."]
+
+Block 68           J
+["Bis hierhin h„tten wir es geschafft. Lat uns nun versuchen, das Samenkorn
+zum Reaktor zu bringen. Bin wirklich gespannt, was dann passiert..."]
+
+Block 69
+["Soll ich jetzt loslegen?"]
+
+Block 70          Joe, vorm Reaktor
+["Das ist der Reaktor! Schau' Dir dieses Licht an! Sie haben eine Art
+Sichtscheibe eingebaut, die nur ungef„hr ein Tausendstel des Lichtes
+durchl„t, das bei der Fusion entsteht. Ein phantastischer Anblick!"]
+
+Block 71
+[Joe macht sich an die Arbeit.]
+
+Block 72
+["Mal schau'n. Ich bin kein Spezialist fr diese Konsolen, aber das hier
+mte..."]
+
+Block 73
+[Pl”tzlich wird Joe von einer Lautsprecherstimme unterbrochen!]
+
+Block 74           AI
+["Tom Driscoll, Joe Bernard, ich mu Sie auffordern, sofort ihre Aktivit„ten
+an der Steuerkonsole einzustellen.^^Einige Sicherheits|beauftragte befinden
+sich bereits auf dem Weg. Ich mu Sie beide in Gewahrsam nehmen lassen.
+Leisten Sie keinen Widerstand, die Sicherheits|beauftragten sind bewaffnet."]
+
+Block 75           J
+["Scheii-e! Die AI!"]
+
+Block 76           T
+["Ned! Bilden Sie und Brandt sich wirklich ein, die Wahrheit ber diesen
+Planeten verschleiern zu k”nnen?"]
+
+Block 77
+[!]
+
+Block 78           AI
+["Vereinfacht gesagt: Ja.^^Die Voraussetzungen sind gnstig, die Chancen
+stehen gut. Die Existenz der Firma rechtfertigt einen gewissen Einsatz."]
+
+Block 79           Tom
+["{FAT }WAS?{NORS} Sie sagen uns ins Gesicht, da Sie diese Welt bewut
+zerst”ren wollen?^^Ich..."]
+
+Block 80           J
+["Was ist mit K„pt'n Brandt? Wenn er nicht belegen kann, was auf dem Flug
+genau passiert ist, ist er seine Lizenz auf Lebenszeit los!"]
+
+Block 81           AI
+["Das ist zutreffend. Kapit„n Brandt wird sich anschlieend einer Untersuchung
+stellen. DDT ist dann natrlich gezwungen, ihn zu entlassen.^^Er wird sein
+Leben als der reichste Arbeitslose der jngeren Zeitrechnung beschlieen
+mssen.^^Sie beide mu ich leider unter Verschlu halten, bis die Mission
+beendet ist. Keine Sorge, es wird fr alle Bequemlichkeiten gesorgt sein."]
+
+Block 82           Tom
+["Aber sicher. Und der Mond besteht aus Emmentaler.^^Joe?"]
+
+Block 83           Joe
+["Ja?"]
+
+Block 84           Tom
+["Abgang. Hurtig."]
+
+Block 85
+[Tom und Joe strmen aus dem Kraftwerksraum! Das Ziel ihrer Flucht ist eine
+Schleuse im Krankenbereich, die nach drauen fhrt.]
+
+Block 86
+[Eine automatische Tre.]
+
+Block 87
+["He, wir haben hier etwas zu erledigen, weit du noch? Du willst doch nicht
+etwa schon wieder hier raus?"]
+
+Block 88
+[Teile des Reaktor|systems.]
+
+Block 89
+[Tom berappelt sich ein wenig, als die Gef„hrten den Reaktorraum betreten.]
+
+Block 90          
+["Bis hierhin h„tten wir es geschafft. Lat uns nun versuchen, das Samenkorn
+zum Reaktor zu bringen. Bin wirklich gespannt, was dann passiert..."]
+
+Block 91
+["Daraus wird wohl nichts. Der Zwergenaufstand ist zu Ende, Driscoll. Legen
+Sie die Waffen nieder!"]
+
+Block 92
+["Colonel Priver! Lassen Sie mich erkl„ren..."]
+
+Block 93
+[Die Secus greifen sofort wieder an.]
+
+Block 94
+["Verdammt.^^Mit einigen dieser M„nner habe ich n„chtelang Karten gespielt.^^
+Verdammt."]
+
+Block 95
+["Gehen wir in den Reaktorraum."]
+
+Block 96
+["Mann, bin ich froh, da es wenigstens diesmal zu keinem Kampf gekommen ist.
+Einige von den M„nnern kannte ich pers”nlich.^^O.K., lat uns in den
+Reaktorraum gehen."]
+
+Block 97
+[Colonel Priver und seine M„nner verlassen den Raum.]
+
+Block 98
+[Die Gef„hrten w„hnen sich schon am Ziel, da sehen sie einen tiefschwarzen
+Zylinder vor dem Reaktorkern stehen. Nur eine rote Kontrolleuchte und ein
+offenbar provisorisch angebrachtes Ger„t an seiner Seite unterbrechen die
+polierte Oberfl„che.]
+
+Block 99           Joe oder Tom
+["Das ist das eigentliche Geh„use der AI!"]
+
+Block 100          AI, wenn gek„mpft
+["Sehr richtig. Nachdem Sie durch den Angriff auf Colonel Priver und seine
+M„nner Ihre Gewalt|bereitschaft und terroristische Gesinnung unter Beweis
+gestellt haben, sehe ich mich gezwungen, selbst die weitere mutwillige
+Zerst”rung von Privateigentum zu verhindern."]
+
+Block 101          AI, wenn Striver berredet
+["Sehr richtig. Nachdem Colonel Priver und seine M„nner in gesetzes|widriger
+Weise gegen ihre Arbeits|vertr„ge verstoen haben, sehe ich mich gezwungen,
+selbst die weitere mutwillige Zerst”rung von Privat|eigentum zu verhindern."]
+
+Block 102          Nicht tom oder Joe: Kicher.
+["Dieses... Fa soll uns gef„hrlich werden? Das kann ich nicht glauben!"]
+
+Block 103          Tom
+["Ich wei nicht, das Ding an der Seite des Zylinders scheint mir ein
+Hochleistungslaser..."]
+
+Block 104
+[{CNTR}{FAHI}Die AI greift an!]
+
+Block 105
+[Nun folgt ein Kampf der Party mit der laserbewehrten AI in ihrem
+unzerst”rbaren Geh„use. Wenn 2 Partymitglieder bewutlos sind, und bereits
+Verzweiflung in der Party aufkommt, beginnt das SAMENKORN zu leuchten. Wendet
+man es nun an, kommt die folgende Endsequenz.^^Die Endsequenz wird noch
+vertont und debugt!]
+
+Block 106
+[Die AI greift sofort wieder an!]
+
+------------------------------Texte Endsequenz------------------------------
+
+Block 107
+[Verzweifelt wirft Tom das glhende Samenkorn in Richtung des Reaktorkerns!]
+
+-----Fade to white
+
+Block 108
+[{INK 001}Das Samenkorn wird zum Zentrum eines gleienden Leuchtens!]
+
+-----Fade to black
+
+Block 109
+[Ein Zittern geht durch die riesige Struktur der TORONTO. Erst unh”rbar, dann
+immer lauter, beginnt das Metall der Anlage zu schwingen und fahle
+Leucht|erscheinungen laufen ber das Schiff.^^Pl”tzlich brechen berall aus
+dem Metall Ranken und Blten in unz„hligen Farben hervor!^^Der Stahl
+protestiert kreischend, als er von der Kraft der Pflanzen zerrissen und
+verformt wird!]
+
+-----Animationen
+-----Fade to black
+Block 110
+[Entsetzt flchten auch diejenigen Besatzungsmitglieder aus dem Schiff, die
+sich nicht von der Dokumentation berzeugen lieen.^^Als sie ins Freie treten,
+bietet die TORONTO einen unglaublichen Anblick...]
+-----Fade in
+-----Bild 1
+
+Block 111
+[Die Wirkung des Samenkorns ist einfacher, als von seinen Erschaffern
+geglaubt, und doch st„rker, als es jemand fr m”glich gehalten
+hatte:^^Innerhalb von Minuten ist die gigantische Anlage der TORONTO zerst”rt
+worden.^^Zerst”rt? Oder neu erschaffen? Dort, wo vorher die gigantische
+Manifestation irdischer Technik war, befindet sich jetzt eine Oase inmitten
+der Wste.^^Dieses eine Mal hat sich das Irrationale und Magische gegen die
+Macht der berechnenden Vernunft durchgesetzt.]
+
+-----Fade to black
+Tom
+Block 112
+["Wir..."^^"Wir leben noch!"^^"{FAT }Wir leben noch!{NORS}"]
+
+Block 113
+[Die verwundeten Gef„hrten wachen bei Toms Schrei auf...]
+
+Irgendwer
+Block 114
+["Schaut Euch das an! Alles ist von Pflanzen berwuchert!"]
+
+Irgendwer anders
+Block 115
+["Ja! Der Metallkoloss ist tot!"]
+
+Harriet
+Block 116
+["Nein. Er lebt nun."]
+
+Tom
+Block 117
+["Die Energie ist weg, die AI ist hinber!^^Ich kann immer noch nicht fassen,
+da wir berlebt haben.^^Lat uns versuchen, hier hinaus|zukommen. Wie mag die
+TORONTO erst von auen aussehen?"]
+
+-----Bild mit Silhouetten
+Tom
+Block 118
+["{FAT }Wow!{NORS}"^^Das Samenkorn hat seinen Job ziemlich w”rtlich aufgefat!
+Welch' ein Anblick!"]
+
+Drirr
+Block 119
+["Ha! Das nenne ich Magie! Phantastisch! Da ich davon erz„hlen kann, war
+allein schon die Gefahren wert!"]
+
+Harriet
+Block 120
+["Es ist wundersch”n! Welch' eine Ironie: Ohne die unermeliche Energie, die
+dem Metallschiff innewohnte, w„re eine solche Wirkung nie m”glich
+gewesen.^^Die Wunde in Animebonas Seite hat sich geschlossen, der Schmerz ist
+vorber."]
+
+Tom
+Block 121
+["Das groe Abenteuer ist vorber, Freunde. Ich sch„tze, wir mssen uns nun
+mit dem Alltag besch„ftigen. Dort drben stehen eine Menge M„nner und Frauen,
+unter ihnen eine, an der mir viel liegt, denen ich klarmachen mu, da diese
+Welt nun ihr neues Zuhause und ihre einzige Zukunft ist.^^Lat uns gehen..."]
+
+-----fade to black
+-----Bild ohne Silhouette
+-----fade in
+Block 122
+[{FAHI}{INK 003}{CNTR}T H E E N D]
+
+Block 123
+["Das Korn bringt den Reaktor zur Detonation! Wir sind {FAT }TOT{NORS}!"]

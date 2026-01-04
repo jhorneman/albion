@@ -1,0 +1,55 @@
+
+NPC 107: Gridri, der Koch
+=========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+[{BLOK000}"Ach, hatte ich noch gar nicht erw„hnt, da ich der Chefkoch des
+Clans bin?"{WORDClan}]
+
+Block 1         Begrung
+["Ah, die fremden G„ste. Dsarii-ma! Mein Name ist Gridri, ich bin der
+Beherrscher der Kche in unserem Hause.{WORDKche}"]
+
+Block 2         "KšCHE"
+["Schon bevor ich vollj„hrig war, kochte ich fr mein Leben gern, eine
+ungew”hnliche Besch„ftigung fr ein Kind. Heute kann ich behaupten, einer der
+besten K”che Jirinaars zu sein.{WORDJirinaar}" {BLOK010}"Ihr macht mich
+neugierig, Gridri. W„re es unversch„mt, Euch um eine kleine Probe Eurer Kunst
+zu bitten?" {BLOK011}"Oh, wit Ihr, die Kche Eures Volkes ist fr Menschen
+ein wenig zu scharf gewrzt."]
+
+Block 3         WENN: Z„hler fr Gridri ber 5
+["Es tut mir leid, {LEAD}{NAME}, aber meine Vorr„te werden langsam knapp."]
+
+Block 4         WENN: Z„hler fr Gridri unter 5, DANN Antwort MC2,1
+["Aber mit gr”tem Vergngen. Hier ist eine Spezialit„t aus getrocknetem
+Fleisch in einem Kr„utermantel. Es h„lt sich lange und ist ideal fr den
+Reisenden."^^{INK 001}Gridri bergibt {LEAD}{NAME} 6 Rationen.]
+                DANN: 6 Rationen an LEAD, Z„hler wird hochgez„hlt
+
+Block 5         Antwort MC2,2 und MC6,2
+["Aber ich bitte Euch! Eine Vielfalt von Gewrzen ist das Wichtigste bei einem
+guten Gericht! Ihr werdet Euch sicher bald auch an die pikanteren Variationen
+gew”hnen."]
+
+Block 6         "KšCHE" 2.mal
+["Nun, wie gesagt, ich bin stolz darauf, als einer der besten K”che Jirinaars
+zu gelten." {BLOK010}"Ihr macht mich neugierig, Gridri. W„re es unversch„mt,
+Euch um eine kleine Probe Eurer Kunst zu bitten?" {BLOK011}"Oh, wit Ihr, die
+Kche Eures Volkes ist fr Menschen ein wenig zu scharf gewrzt."]
+
+Block 7         Begrung 2.mal
+["Dsarii-ma! Sch”n Euch wieder zu sehen. Was kann ich fr Euch tun?"{WORDKche}]
+
+Block 8            "Klirna"
+["Oh, sie ist eine gelehrige Schlerin."]

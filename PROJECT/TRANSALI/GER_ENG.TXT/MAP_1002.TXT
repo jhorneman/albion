@@ -1,0 +1,155 @@
+
+Map-Textfile
+------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Gr„ser.]
+
+Block 2
+[Steine.]
+
+Block 3
+[Niedrige Bodengew„chse.]
+
+Block 4
+[Kleine ste und Wurzeln.]
+
+Block 5
+[Schilfgr„ser.]
+
+Block 6
+[Ein kleiner Obstbaum.]
+
+Block 7
+[Ein Kugelbaum.]
+
+Block 8
+[Ein Laubbaum.]
+
+Block 9
+[Eine Stromschnelle.]
+
+Block 10
+[Ein Wasserstrudel.]
+
+Block 11
+[Eine Wasserpflanze.]
+
+Block 12
+[Das Wasser ist sehr tief und die Str”mung scheint stark zu sein.]
+
+Block 13
+[Wasserpflanzentriebe.]
+
+Block 14
+[Eine blhende Pflanze.]
+
+Block 15
+[Ein Schirmbaum.]
+
+Block 16
+[Diese Pflanze leuchtet in faszinierenden Farbt”nen.]
+
+Block 17
+[Gemse.]
+
+Block 18
+[Ein Felsblock.]
+
+Block 19
+[An dieser Stelle ist das Wasser sehr flach und klar, so da man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Str”mung.]
+
+Block 20
+[Ein Obstbaum.]
+
+Block 21
+[Ein Zaun.]
+
+Block 22
+[Eine Stengelpflanze.]
+
+Block 23
+[Eine Schlinggraspflanze.]
+
+Block 24
+[Ein Busch.]
+
+Block 25
+[Eine grobl„ttrige Pflanze.]
+
+Block 26
+[Ein Wasserfall.]
+
+Block 27
+[Ein Felsvorsprung.]
+
+Block 28
+[Eine Pflanze, die auf den Felsen w„chst.]
+
+Block 29
+[Diese Schlingpflanze hat sich mit Tausen|den von Wur|zeln in der
+unregel|m„igen Fels|struk|tur ver|ankert. Sie macht einen sehr sta|bilen
+Ein|druck und durch ihre mannig|fal|tige Ver|„ste|lungen bie|tet sie
+zahl|reiche M”glich|kei|ten, an denen man sich fest|hal|ten kann.]
+
+Block 30
+[Eine Holzbrcke.]
+
+Block 31
+[Getreidefelder.]
+
+Block 32
+[Pilze.]
+
+Block 33
+[Eine Urkeltenhtte.]
+
+Block 34
+[Ein Eingang in eine Urkeltenhtte.]
+
+Block 35
+[Ein Zaun, der das Tiergehege abgrenzt.]
+
+Block 36
+[Ein Tor im Gatter.]
+
+Block 37
+[Eine Stadtmauer.]
+
+Block 38
+[Ein Tor in der Stadtmauer.]
+
+Block 39
+[Ein verschlossener H”hleneingang.]
+
+Block 40
+[Ein offener H”hleneingang.]
+
+Block 41
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 42
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 43
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 44
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 45
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 46
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]

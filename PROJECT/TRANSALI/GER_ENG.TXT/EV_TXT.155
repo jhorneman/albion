@@ -1,0 +1,98 @@
+155: Tharnos, Kînig von Klouta
+==============================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin, wie ich Euch schon sagte, der Kînig von Klouta."]
+
+Block 1         "Begr. 1x"
+["Togi Din, Reisende. Ich bin der Stammeskînig von Klouta." {BLOK010}"Togi
+Din, Tharnos. Wir sind auf der Suche nach einem riesigen Metallschiff, das vom
+Himmel gekommen ist. Habt Ihr vielleicht von einem solchen Vorfall
+gehîrt?"{WORDKlouta}{WORDStammeskînig}]
+
+Block 2         Antw. MC1
+["Ha, ha, ha, seid Ihr noch ganz bei Sinnen? Verzeiht, aber solch einen Unfug
+habe ich schon lange nicht mehr gehîrt. Ihr solltet Euch in die Behandlung der
+Druiden von Arjano begeben, haha, ha!"{WORDDruiden}{WORDArjano}]
+
+Block 3         Begr. 2x
+["Togi Din. Ah, die SpÑûe machenden Reisenden wieder!"{WORDSchiffsreise}]
+
+Block 4         "Kînig,Stammeskînig" 1x
+["Ich bin das Oberhaupt des Tuath von Klouta und der wichtigste Mann hier. Was
+ich entscheide, geschieht!"{WORDTuath}]
+
+Block 5         "Kînig, Stammesk." 2x
+["Seid Ihr schwer von Begriff? Ich bin der AnfÅhrer der Leute hier!"]
+
+Block 6         "Schiffsreise" 1x
+["So, Ihr mîchtet Klouta also schon wieder verlassen? Garris, der Fischer, ist
+ein erfahrener Seemann, der Euch sicher nach Maini bringen wÅrde. Doch er, und
+somit auch Ihr, braucht dazu meine Erlaubnis. Nun, ich kînnte Euch natÅrlich
+eine solche Genehmigung erteilen. Es gibt da allerdings einen kleinen
+Gefallen, den Ihr mir erweisen kînntet. Ihr als Fremde seid dazu besser
+geeignet als jemand aus dieser Gegend, denn es handelt sich um eine
+Angelegenheit, die groûe Diskretion erfordert. Ihr mÅût mir versprechen, Åber
+dieses GesprÑch Stillschweigen zu bewahren!^^ Also, es geht um folgendes: Von
+einem Kînig wird bei uns erwartet, daû er im Vollbesitz seiner geistigen und
+vor allem seiner kîrperlichen KrÑfte ist, da er sonst dem Tuath UnglÅck
+bringt. Nun ist es so, daû meine Frau und ich schon seit geraumer Zeit auf
+Nachwuchs warten. Wir, und auch die Versammlung waffen|tragender MÑnner,
+werden langsam ungeduldig.^^Ich mîchte daher ein Amulett von den Druiden in
+Arjano erwerben, das meine Manneskraft zu unterstÅtzen vermag. Ihr versteht,
+daû ich diesen Auftrag nur ungern einem meiner MÑnner Åbertrage oder selbst
+nach Arjano reise. Geht zu Bero, dem Druiden und fragt ihn nach einem
+StÑrkungs|amulett. Bringt es mir, und ich werde Euch die Weiterreise
+gestatten."{WORDDruiden}{WORDArjano}{WORDTuath}]
+
+Block 7         "Schiffsreise" 2x
+["Nein, nein, Fremde! Wir haben eine Abmachung! Bringt mir erst das Amulett
+von Bero, dem Druiden, dann sehen wir weiter!"{WORDDruiden}]
+
+Block 8         "Schiffsreise" nach Ablieferung
+["Ha, ha, wollt Ihr schon wieder SpÑûe mit mir treiben? Ich habe Euch meine
+Erlaubnis doch lÑngst erteilt! Geht damit zum Beispiel zu Garris, dem Fischer,
+und Eurer Reise steht nichts mehr im Wege!"]
+
+Block 9         WENN: Amulett gegeben
+["Ah, wie erfreulich! Ihr habt das Amulett bekommen! Auch ich werde Wort
+halten und Euch eine Erlaubnis ausschreiben. Seht ihr, ein gutes GeschÑft habt
+Ihr gemacht, fÅr diesen kleinen Botengang!"]
+
+Block 10        "StÑrkungsamulett" vor Abgabe
+["Richtig, ein solches Amulett sollt Ihr mir besorgen."]
+
+Block 11        "St.amulett" nach Abgabe
+["Ein vorzÅgliches Amulett! Ich spÅre bereits, wie mich neue Kraft
+durchstrîmt!"]
+
+Block 12
+["So lautet mein Name."]
+
+Block 13
+["Nun, wenn das so ist, sollten wir schnellst|mîglichst nach Maini, der groûen
+Insel im Osten von hier, weiter|reisen. Kînnt Ihr uns sagen, ob wir von hier
+aus eine solche Schiffsreise unternehmen kînnen, o Tharnos?"]
+
+Block 14           "Garris"
+["Er ist der beste Seefahrer des Dorfes. Ihr findet ihn in seiner HÅtte am
+nordwestlichen Rand von Klouta."]
+
+Block 15
+["So ist der Name des groûen Landes îstlich von uns."]

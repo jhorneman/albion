@@ -1,0 +1,272 @@
+___________________________________________________________________________
+
+Thalion Software GmbH       Entwicklungsabteilung        Königstraße 16      D-33330 Gütersloh     Germany
+Fax: + 49 - 5241 - 24939
+
+
+
+FAX MESSAGE TO: Simon Byron
+                        FROM: Jurie, Karsten, Erik 
+
+Pages (including this one): 6
+
+___________________________________________________________________________
+
+Hi Simon,
+
+here we go again! Enough babble for half the issue! Don´t take the parts about nagging journos 
+personally, please, we just went out of decent jokes. After all, we should be glad to get a 2nd 
+preview in the first place. As always, we´re very keen to see what becomes out of this (i.e. 
+shell out an issue or three). 
+
+Erik & the team
+
+
+Another The One question list
+
+- Ambermoon was originally planned for Easter 1993. Just why has it taken so long ?
+
+K: Time shows us that Ambermoon is just to big for only 5 people working on it. Just the 
+editing of the Lyramion world map took me over 2 months. 
+
+J: Well... after Amberstar was finished, the entire team sat down together and we planned what 
+we would do in Amberstar 2 (which wasn't called Ambermoon at that time yet). We made a 
+long list of new features and changes, among which were an improved 3D system (this was 
+before we had a working 3D texture-mapping  dungeon), an improved 2D system (with 
+unlimited layering of graphics, higher walls which disappear when you walk behind them, etc.) 
+and an isometric combat screen. This was in February or March of 1992.
+
+So after having practically re-designed the entire game, we said to our manager : "We'll have 
+it ready by Easter!"
+And he said : "Oh, don't hurry. Take till August."
+"Wow!", we said, "we got one and a half years! Brilliant!" and happily started working on the 
+most amazing RPG ever.
+
+Then the word from above came : "Er, August 1992, guys! It's got to be in the shops by 
+Christmas!"
+
+Uh-oh.
+
+In this cruel manner do the greatest products perish before they see the light of day... We sat 
+down again and just thought of small changes (like, a real-time texture-mapping dungeon) 
+which we could make to the original Amberstar system so it would ready by Christmas 1992 , 
+and then we started work on what was then called Amberstar One-and-a-half. (We still have 
+some graphics from the original Amberstar 2. Maybe we'll show it one day.)
+
+Then the conversion of the original Amberstar program from the Atari ST to the Amiga slowly 
+turned into a re-write, the texture-mapping dungeon took longer than expected, the combat 
+screen took longer than expected, changing the editors took longer than expected... and we 
+discovered these neat things we could do if we just changed a little bit here and there...
+
+Suddenly it was March 1993, and the end wasn't in sight yet. We sat down again and tried to 
+estimate how long it was going to take, and this time we said : "Okay, August 1993. Really. 
+Honestly." And we will probably actually make that! Give or take a month.
+
+E: It seems to me, that we didn´t fully realize what a bloody huge project we are creating 
+before a few weeks ago when we counted our data. It was a weird feeling that obviously we 
+did manage to do an RPG of a size which usually you only see on the Pee Cee, done by U.S. 
+teams 5 times as large as we are.
+Despite this, there are these journos nagging around about AMBERMOON all the time and 
+why it has taken so long... 
+Hey, Simon, come right back here! No offense meant, old fruit. Wipe those tears away! Calm 
+down!
+
+- Was the game harder to program than you anticipated ?
+
+K: Ask Jurie about that. I've only programmed the editors for Ambermoon. And I took over the 
+editors from Amberstar and have changed about 30% of the code.
+
+J: Not harder. It just took longer. Mastering the Amiga with it's complex operating system and 
+custom hardware took a lot less time and effort than I expected (some of my colleagues, who 
+remember my graceful reaction to inexplainable bugs caused by wrong use of the blitter, and 
+what I did to the office doors and walls, may have a different opinion on this, but what do they 
+know anyway ?) Looking back, few routines were really hard. However, in the phase where we 
+are now the program contains more code than the Atari ST operating system... and that's all 
+hand-typed. The separate parts of an RPG are usually quite easy to program. It's making it all 
+stick together which is hard.
+
+E: Now that I´m fully involved in editing a part of the game´s quests I can say that it is a hell 
+of a lot work. But that´s alright, because most of the work comes from the fact that we can do 
+much more complex actions and reactions than in AMBERSTAR. The whole system is much 
+more flexible, and if that means more game design work, it´s okay with me.
+
+- How has the game changed over the months ?
+
+K: It has changed in many different ways. All through the development we had new ideas. And 
+when I was lucky Jurie told me: "OK, it's no work to change this part of the program, I will do 
+it."
+
+J: Well, I've already told the story of how Ambermoon came to be. However, every part of the 
+game has been re-designed as we went along, because it is usually during the actual 
+programming that you can best judge what is possible and what isn't.
+
+E: Yes, it´s bizarre. We wanted to do a modestly improved follow up, and came out with a 
+monster of an RPG. Don´t send our managing director a copy of this issue!
+
+- Have you had to leave anything out and if so why ?
+
+K: Well, no major things. Always when Jurie told me that it cost to much time to change that 
+part of the program.
+
+J: No, not really.  Off the top of my head, I cannot think of any major feature which we didn't 
+manage to cram in somehow. This is an amazing method which I can recommend to all our 
+colleagues : you make a very modest design of your game and then just go wild expanding it 
+as you go along. This way, the end result always exceeds your original expectations. Of course, 
+developing the game will also take slightly longer than you may have planned originally.
+
+E: Yes, and you´ll probably will starve before you see the end of the project! At least if you´re 
+a free-lancer.
+
+- Has the game turned out the way you expected when you originally began work ?
+
+K: It's now much better. Jurie has done great work on the Inventory System and the 
+Battlescreen. They are now much better than I thought about them at the start of Ambermoon.
+
+J : No. It became much, much better. We originally planned to do a sort of upgraded version of 
+Amberstar. Now even the game's own mother wouldn't recognize it.
+
+E: Well, actually, I wanted to have this real-time raytracing thingy which was supposed to run 
+in full-screen HAM-mode at 25 frames per second and...  ow! Stop that! Bugger off, Jurie! 
+Your not supposed to beat up your bleedin´ boss! Ouch!
+
+- How do you rate Ambermoon compared to the other RPG's ? How do you justify this 
+claim ?
+
+K:On the the Amiga it will be the best RPG at this time. The reason is that no other company 
+put so much work into the program than we. For my person I lost my holidays this year. 
+
+J : I have never played any other RPG's long enough to be able to answer this properly, but I 
+think Ambermoon will compare favourably to anything else out there, including all those 
+flashy PC titles.
+
+E: Karsten´s certainly right. If there shouldn´t creep an ever bigger and badder monster of an 
+RPG out of some dark cave of mutated developers, we should be able to beat all current 
+Amiga-RPG´s in size (see number of disks below), technique (dungeons & fighting screen), 
+graphics (e.g. over 170 different walls, over 350 dungeon objects, 25 or more fully animated 
+monsters etc.), sound (over 30 tunes) complexity and playing time. And due to Juries effort to 
+brush up the user interface it´s no crappy marketing blah-blah when I say that RPG 
+newcomers won´t have problems to get into the game.
+
+- Has it been worth all the effort ?
+
+J : Definitely.
+
+E: Do you know what I´m saying to you if you ask me that after a weekend in front of the 
+RPG-editor system? Why, of COURSE it has!
+
+- How many disks do you envisage the game coming on ? What's the reason for this ?
+
+J : We think we probably won't exceed nine disks, excluding the save-game disk. What do you 
+think the graphic artists and our musician, Matthias Steinwachs, did during the last one-and-
+a-half years ?
+
+E: May I repeat my statement when I heard this the first time: Aaarrgh!
+
+- How is the 3D section looking now ? Could we have some technical specs, please ?
+
+K: It's looking great. On a normal Amiga 500, it's not as smooth as Ultima Underworld on a 50 
+MHz PC of  course,  but you really will get into it. And then it's a great fun to play. Technical 
+xpecs - ask Jurie.
+
+J: The 3D texture-mapping system has been refined time and time again (as has everything 
+else in the game). We have tried to exploit every possible feature to the full. The camera height 
+changes depending on what race the current leader of your party belongs to, or whether you're 
+climbing down stairs or up through a hole in the ceiling. On 68020+ machines (like the Amiga 
+1200), you can activate textures on the floors and ceilings. We have transparent walls. We 
+have objects which are distorted realistically (i.e. true to perspective) depending on the camera 
+height. The horizon is higher up in dungeons than in cities to increase the claustrophobic 
+atmosphere (because you feel closer to the ceiling). The graphics in 3D dungeons smoothly 
+fade to black depending on the strength of your light-spell. In 3D cities, we have a beautiful 
+colour range in the sky, and various different background graphics on the horizon.
+Also, in cities the graphics and the sky colours do not fade to black, but to a different palette! 
+There's one set of colours for day, one for dawn and dusk, and one for night, and these three 
+sets are different for each planet you can visit. At night, stars slowly appear in the sky, and 
+these are different for each planet as well!
+
+On a bog-standard Amiga 500, the dungeon currently runs at about 5 frames per second. This 
+is slower than a certain other texture-mapping dungeon system we all know, but our display 
+window is three times as big and our system is simply used better because we had more time. 
+On an Amiga 1200, you can activate floor- and ceiling-textures and the dungeon runs at over 
+10 frames per second. On an Amiga 2000 with a 25Mhz 68030 board, the special routines
+kick in and the dungeon runs at 17 to 25 frames per second. All movements in the game are 
+independent of the frame rate at which the dungeon runs, so you don't get any unfair 
+advantages if you have a faster Amiga.
+
+We could have made the dungeon faster simply by removing all the objects lying around, but 
+we chose to make the game more atmospheric, to increase the player's enjoyment, by including 
+lots of details in the cities and dungeons.
+Of course we always make sure that the game remains playable. Even though the game is 
+programmed on a 68030 machine, new quests and sub-adventures are tested on a normal 
+Amiga 500, so we don't run the risk of overdoing it and making a game which can only be 
+enjoyed by rich bastards with a 68030 or better. And always remember that the 3D texture-
+mapping dungeon is only a small part of the actual game!
+
+E: Jurie, does the term 'slow and horrible death' have a meaning to you? I don´t want to hear 
+about the different star constellations on the moon cities again! Not a living soul in the known 
+universe will ever notice that!
+Ok, now that I got rid of that, let me add that we spent a long time on optimizing the steering. 
+You have a lot of different steering possibilities that enable you to move quickly even in 
+situations when dozens of objects slow things down on a standard Amiga. And if some 
+arrogant 66 MHz PC owner complains about Ambermoon on your A 500, tell him to show you 
+Legends of Valour or Underworld on a 8 MHz 8088 XT without a VGA - card !
+
+- What has been the hardest part for you ?
+
+K: The editing of the worldmap. The lyramion Worldmap has 256 parts and it was a hell of a 
+lot of work to edit all these maps.
+
+J: What took the most time, effort and thought were :
+ 1 - Incorporating Michael Bittner's dungeon routines into the Ambermoon game system.
+ 2 - Writing the combat screen. Although I programmed the game, the combat screen in 
+Amberstar was written by Michael Bittner. This time, I had to do it all by myself without any 
+previous experience.
+
+The parts which are the most complex and of which I'm the proudest are :
+ 1 - The memory manager, which is quite intelligent and can dramatically reduce loading 
+times.
+ 2 - The combat screen display system. This took some work, but I think it's quite impressive 
+to shift around several shapes of up to 96 by 96 pixels using real-time zooming, in 32 colours, 
+at an acceptable speed, on a normal Amiga. Also, in my slightly biased opinion, it looks 
+brilliant. Internally, it is the same system used in Amberstar, but it looks a lot better!
+ 3 - The routines which allow you to move items around in the Inventory-screen. This is a 
+good example of the rule that good code should be invisible. It gave me quite a headache, 
+because there was a lot of logic involved, and I wanted to make this part as instinctive as 
+possible.
+
+E: I had quite a hard time to draw the graphic parts for the new worldmap system. It was my 
+goal to have realistic proportions (not that party = tree = house = mountain - appeal) and to 
+remove the blocky appearance that you often see in 2D-RPGs. That left me sitting before my 
+DPaint-screen more thinking than drawing. It was a valuable experience. Especially all these 
+nice new swear-words that I learned from Jurie when he realized that the surface gfx are 
+taking 250 kB of his valuable chipmem! For ONE of the worlds, that is.
+
+- When will the game be released ?
+
+K: The German Amiga version will hopefully be released in September (of 1993), and the 
+English version will follow shortly after.
+
+J: The Atari ST version will follow one or two months later. We don't know when the PC 
+version will be finished yet.
+
+E: Dear Jurie and Karsten. You know that funny thing that happens to me when someone 
+delays his deadline more than 3 times? Read the brilliant and utterly inspiring book 'American 
+Psycho' !
+
+J: Shut up and edit sub-quests.
+
+E: Wack!
+
+J: Ouch!
+
+
+- Are you glad that it's almost over ?
+
+K:Yeeeeeesssssssssssss.
+
+J : The deadline stress on Ambermoon isn't as tough as it was on Amberstar, so I'm not 
+yearning for the day when I'm finally through with this #&%!! project. But I'm glad we'll soon 
+be able to say that it's ready, and that it's a project which really turned out well.
+
+E: Agreed.
+
+K/J/E : And now go away so we can get some work done !!!

@@ -1,0 +1,180 @@
+
+Maptextfile
+--------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Eine Steinburg.]
+
+Block 2
+[Eine Sanddne.]
+
+Block 3
+[Eine Steins„ule.]
+
+Block 4
+[Ein groer Felsen.]
+
+Block 5
+[Eine Tellerblume.]
+
+Block 6
+[Eine Sandmorchel.]
+
+Block 7
+[Diese Pflanze ern„hrt sich von Insekten.]
+
+Block 8
+[Eine fleischfressende Pflanze.]
+
+Block 9
+[Ein blhendes Kakteengew„chs, das sehr langsam w„chst.]
+
+Block 10
+[Pflanzenteile.]
+
+Block 11
+[Bodengew„chse.]
+
+Block 12
+[Steine.]
+
+Block 13
+[Grasbschel.]
+
+Block 14
+[Wurzeln, Holzstcke und ste.]
+
+Block 15
+[Ein Steinschlo, erbaut aus Felsen.]
+
+Block 16
+[Eine Stromschnelle.]
+
+Block 17
+[Das Wasser ist tief und die Str”mung scheint stark zu sein.]
+
+Block 18
+[Wasserpflanzen.]
+
+Block 19
+[Wasserpflanzentriebe.]
+
+Block 20
+[Ein Wasserstrudel.]
+
+Block 21
+[Ein Schirmbaum.]
+
+Block 22
+[Solche Steppenb„ume gedeihen auf sehr trockenem Boden.]
+
+Block 23
+[Eine Steppenblume.]
+
+Block 24
+[Ein Turmfelsen.]
+
+Block 25
+[Kies.]
+
+Block 26
+[Eine groe Felsbrcke.]
+
+Block 27
+[Platzhalter fr weitere Events.]
+
+Block 28
+[Platzhalter fr weitere Events.]
+
+Block 29
+[Platzhalter fr weitere Events.]
+
+Block 30
+[Platzhalter fr weitere Events.]
+
+Block 31
+[Platzhalter fr weitere Events.]
+
+Block 32
+[Platzhalter fr weitere Events.]
+
+Block 33
+[Platzhalter fr weitere Events.]
+
+Block 34
+[Platzhalter fr weitere Events.]
+
+Block 35
+[Platzhalter fr weitere Events.]
+
+Block 36
+[Platzhalter fr weitere Events.]
+
+Block 37
+[Platzhalter fr weitere Events.]
+
+Block 38
+[Platzhalter fr weitere Events.]
+
+Block 39
+[Platzhalter fr weitere Events.]
+
+Block 40
+[Platzhalter fr weitere Events.]
+
+Block 41
+[Platzhalter fr weitere Events.]
+
+Block 42
+[Platzhalter fr weitere Events.]
+
+Block 43
+[Platzhalter fr weitere Events.]
+
+Block 44
+[Platzhalter fr weitere Events.]
+
+Block 45
+[Platzhalter fr weitere Events.]
+
+Block 46
+[Platzhalter fr weitere Events.]
+
+Block 47
+[Platzhalter fr weitere Events.]
+
+Block 48
+[Platzhalter fr weitere Events.]
+
+Block 49
+[Platzhalter fr weitere Events.]
+
+Block 50
+[Platzhalter fr weitere Events.]
+
+Block 51
+[Platzhalter fr weitere Events.]
+
+Block 52
+[Platzhalter fr weitere Events.]
+
+Block 53
+[Platzhalter fr weitere Events.]
+
+Block 54
+[Platzhalter fr weitere Events.]
+
+Block 55
+[Platzhalter fr weitere Events.]
+
+Block 56
+[Platzhalter fr weitere Events.]
+
+Block 57
+[Platzhalter fr weitere Events.]
+
+Block 58
+[Ssssss...]

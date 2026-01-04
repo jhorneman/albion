@@ -1,0 +1,51 @@
+
+Textfile Barkeeper
+----------------------------------------------------------------------------
+
+Block 0
+[{BLOK000}"Ich schenke Getr„nke aus und serviere Speisen."]
+
+Block 1
+["Skeima Din und willkommen im fr”hlichen Wirtshaus
+Erzmine."{WORDErzmine}{WORDUmajo-Kenta}{WORDGetr„nke}{WORDšbernachtung}]
+
+Block 2            (Give Item)
+["Danke, ich brauche keinen Gegenstand von Euch, {FAT }aber{NORS} wenn Ihr
+schon etwas hergeben m”chtet, darf ich Euch vielleicht darauf hinweisen, da
+es hier so blich ist, da Fremde eine Runde ausgeben. Was haltet Ihr
+davon?"{BLOK010}"Wir m”chten eine Runde spendieren."]
+
+Block 3            (Erzmine)
+["So heit unser Gasthaus hier, und es gibt auch noch eine richtige Erzmine.
+Besucht doch mal die Gilde der Bergleute ganz im Nordwesten der
+Stadt."{WORDBergleute}]
+
+Block 4            (Runde)
+["Das wrdet Ihr tun? Das kostet allerdings 5 Goldstcke. Bleibt Ihr dabei?"]
+
+Block 5            (Nein, keine Runde)
+["Schade."]
+
+Block 6            (Nicht genug Gold)
+["Das mache ich bei Euch nur gegen Vorkasse."]
+
+Block 7            (Danke)
+["Das ist eine grozgige Geste - sch”nen Dank auch. Sprecht mich doch nach
+dem Servieren der Runde noch einmal an."]
+
+Block 8            (Begrung nach Runde)
+["Skeima Din Freunde,^^soll ich Euch ein kleines Geheimnis
+verraten?"{WORDGeheimnis}]
+
+Block 9            (Geheimnis)
+["Unsere Taschenspielerin ist frchterlich eitel, hehe. Sprecht sie mal mit
+'Sch”n|heits|k”nigin' an. Ihr werdet sehen, da sich Tore ”ffnen."]
+
+Block 10           (Getr„nke, Essen)
+["M”chtet Ihr etwas zu trinken oder zu essen?"{BLOK010}"Ja,
+gerne."{BLOK011}"Nein, danke."]
+
+Block 11           (šbernachtung)
+["Hier k”nnt Ihr leider nicht bernachten, aber geht doch ins Haus der
+Bergleute. Sie sind sehr gastfreundlich und nehmen fremde Besucher der Stadt
+gerne fr eine Nacht auf."]

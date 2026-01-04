@@ -1,0 +1,165 @@
+
+ITEM USE - TEXTS
+================
+
+Block 0
+[{SUBJ}{NAME} leert ein Fl„schchen mit grner Medizin und fhlt sich danach
+etwas besser!]
+
+Block 1
+[Dieser Text ist nicht interessant.]
+
+Block 2
+[{SUBJ}{NAME} leert ein Fl„schchen mit trkis|farbener Medizin und {HE  } fhlt
+sich sehr viel besser!]
+
+Block 3
+[{SUBJ}{NAME} leert ein Fl„schchen mit blauer Medizin und {HE  } fhlt sich
+sofort fast v”llig gesund!]
+
+Block 4
+[{SUBJ}{NAME} trinkt die rote Flssigkeit.^^{HIS } Kopf kl„rt sich, und ein
+wenig geistige Energie kehrt zurck.]
+
+Block 5
+[{SUBJ}{NAME} trinkt die violette Flssigkeit.^^Eine betr„chtliche Menge an
+Konzentrations|f„higkeit kehrt zurck!]
+
+Block 6
+[{SUBJ}{NAME} trinkt die blaue Flssigkeit.^^ Sofort kehrt ein Groteil 
+{HIS }er geistigen Energie zurck!]
+
+Block 7
+[{SUBJ}{NAME} trinkt die silberhelle Flssigkeit und sprt, wie das Gift in
+{HIS }em K”rper neutralisiert wird!]
+
+Block 8
+[Als {SUBJ}{NAME} den bronzenen Trank zu sich nimmt, kl„rt sich {HIS }
+verwirrter Geist und {HE  } ist endlich wieder bei sich!]
+
+Block 9
+[Eine Welle der Wohltat geht durch {SUBJ}{NAME}'s K”rper, als {HE  } die
+goldene Flssigkeit schluckt. Die Krankheit weicht aus {HIS }em K”rper!]
+
+Block 10
+[Die Wirkstoffe des Stimdrinks lassen {SUBJ}{NAME} sich besser fhlen!]
+
+Block 11
+[Als {INVE}{NAME} den weien Ring auf den Finger steckt, bemerkt {HE  }, da er
+nicht mehr zu l”sen ist! {INVE}{NAME} fhlt sich schw„cher!]
+
+Block 12
+[{CNTR}Auf dem Fetzen eines Schaltplanes hat jemand zwei Ziffern notiert:^^
+{INK 006}12]
+
+Block 13
+[{CNTR}Auf dem Fetzen eines Schaltplanes hat jemand eine Ziffer notiert:^^
+{INK 006}3]
+
+Block 14
+[{CNTR}Auf dem Fetzen eines Schaltplanes hat jemand eine Ziffer notiert:^^
+{INK 006}4]
+
+Block 15
+[{CNTR}Auf dem Zettel hat jemand hastig eine Ziffernfolge notiert:^^ {INK
+006}1001]
+
+Block 16           Fr Dokumentteile 262 & 263
+[{CNTR}Es fehlt der andere Teil des Dokuments!]
+
+Block 17
+[Die beiden Dokumententeile passen genau aneinander. Das ursprngliche
+Schriftstck ist wiederhergestellt!]
+
+Block 18           Schattenschwert
+[{INVE}{NAME} nimmt das Schwert aus schwarzen Obsidian in die Hand. Es l„t
+sich nicht mehr aus der Hand legen und {INVE}{NAME} sprt, wie die Waffe an
+{HIS }er Lebenskraft und Ausdauer zehrt!]
+
+Block 19           rotes Schwert
+[Das rote Schwert ist verflucht! {INVE}{NAME} kann es nicht mehr loswerden und
+sprt, wie es die St„rke und Angriffskraft aus {HIS }em K”rper saugt!]
+
+Block 20           Kristallgriff-Dolch
+[Der Kristallgriff des Dolches verbindet sich untrennbar mit {INVE}{NAME}'s
+Hand und {HE  } sprt, wie die Kraft aus {HIS }em K”rper weicht!]
+
+Block 21           Blauer Dolch
+[{INVE}{NAME} merkt, da ein Fluch auf der blauen Klinge liegt: Der Dolch
+erschwert {INVE}{NAME}'s Zugang zur Magie!]
+
+Block 22           HElm mit schw. Stein
+[Der schwarze Stein des Helmes raubt die Kraft aus {INVE}{NAME}'s K”rper, er
+ist verflucht!]
+
+Block 23           Amulett der G”ttin
+["Dieses Amulett ist Zeichen meiner Zugeh”rigkeit zu den Dji Cantos. Ich
+m”chte es nicht aus der Hand geben."]
+
+Block 24           A.d.G., Harriet selbst
+["Ich sollte das Amulett lieber an seinem Platz lassen, es ist zu wertvoll, um
+es abzulegen."]
+
+Block 25           A.d.G. Harriet bewutlos
+[{INK 001}Harriet erwacht zu schwacher Gegenwehr, als das Amulett berhrt wird
+und sagt:{INK 002}^^"Bitte nicht! Dieses Amulett ist mein pers”nliches
+Eigentum!"]
+
+Block 26           kleiner Stein auf Toms Brust
+[Der kleine rote Stein ist fest mit Toms Haut verbunden. Er l„t sich nicht
+l”sen.]
+
+Block 27           Joes Equipment
+["Sorry, aber ich behalte das Ding lieber. Brauche ich noch!"]
+
+Block 28           Mellthas Schreibzueg
+[{INK 001}Mellthas schttelt den Kopf, er m”chte das Schreibzeug nicht
+herausgeben. Es ist sein Kommunikationsmittel.]
+
+Block 29
+["Das Ding ist ungeheuer wichtig. Lassen wir es lieber, wo es ist, bevor etwas
+damit passiert."]
+
+Block 30
+[{INVE}{NAME} erwacht aus der Bewutlosigkeit und sagt:]
+
+Block 31
+[Aus dem Dokument gehen interessante Informationen hervor. Es weist auf einen
+Vertrag zwischen Kontos, Gard und Riko hin. Die Gef„hrten verstehen nicht
+alles, was hier vermerkt ist, denn manches ist in einer Art Codesprache
+notiert. Vermutlich geht es um eine Art von Aufteilungsvertrag von wertvollen
+Materialien. Genaueres l„t sich im Moment allerdings nicht sagen.^^Man k”nnte
+dieses Beweisstck vielleicht dazu benutzen, den Konflikt zwischen Iskai und
+Mahinos zu schlichten!]
+
+Block 32
+[Es widerstrebt Tom, das Samenkorn, das Ergebnis aller Mhen und Gefahren, aus
+der Hand zu geben.]
+
+Block 33
+[Die Aufzeichnungen ber das hohe Wissen sind wohl nur fr wahre Meister der
+Magie verst„ndlich. Kompilzierte Beschreibungen und Reime in komplexen
+Versmaen bedecken das Pergament.]
+
+Block 34
+[Eine seltsame Mischung aus magisch klingendem Kauderwelsch und technischen
+Beschreibungen sind hier zu lesen. Die Dji Cantos k”nnen sicher mehr damit
+anfangen.]
+
+Block 35
+[{INK 001}Auf dem Pergamentstck steht geschrieben:^^{INK 003}Nicht immer wird
+Mut belohnt. Fahre trotzdem fort, mutig zu sein.]
+
+Block 36
+[{LEAD}{NAME} it die Kr„uter und sprt, wie sie eine reinigende Wirkung auf
+K”rper und Geist ausben!]
+
+Block 37
+[{INK 001}{LEAD}{NAME}:{INK 002}^^
+"Lassen wir den Schlssel lieber, wo er ist. Ich m”chte ihn hier nicht
+verlieren."]
+
+Block 38
+[{INK 001}{LEAD}{NAME}:{INK 002}^^
+"Lassen wir das Dokument lieber, wo es ist. Ich m”chte es hier nicht
+verlieren."]

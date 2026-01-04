@@ -1,0 +1,65 @@
+
+
+Harriet, Erleuchtete, Partymitglied 6
+=====================================
+
+
+Block 0
+[!]
+
+Block 1            Begr.
+["Was kann ich fr Dich tun, Tom?" {BLOK010}Wrde es Dir etwas ausmachen, mir
+ein wenig aus Deinem Leben zu erz„hlen?"]
+
+Block 2
+["Nun, mein Leben stand und steht ganz im Zeichen Animebonas, der Entit„t,
+auch wenn mich das nicht immer glcklich gemacht hat.^^Ich habe manchmal
+Visionen und empfange unklare Botschaften der Entit„t. In dem kleinen Dorf, in
+dem ich aufwuchs, bin ich deshalb schon als Kind auerhalb der Gemeinschaft
+gestanden, die Leute hatten Angst vor meinen Trancezust„nden.^^Als ich
+vierzehn war, bin ich von zu Hause fortgelaufen, und habe in Beloveno Frill
+getroffen, der dort auf der Durchreise war. Er hat mein besonderes Talent
+erkannt und mich in die Gemeinschaft der Dji Cantos
+aufgenommen."{WORDAnimebona}{WORDEntit„t}{WORDTransporth”hlen}]
+
+Block 3
+["Du m”chtest meine Geschichte wirklich ein weiteres Mal h”ren? Wie Du
+meinst.^^Mein Leben stand und steht ganz im Zeichen Animebonas, der Entit„t,
+auch wenn mich das nicht immer glcklich gemacht hat.^^Ich habe manchmal
+Visionen und empfange unklare Botschaften der Entit„t. In dem kleinen Dorf, in
+dem ich aufwuchs, bin ich deshalb schon als Kind auerhalb der Gemeinschaft
+gestanden, die Leute hatten Angst vor meinen Trancezust„nden.^^Als ich
+vierzehn war, bin ich von zu Hause fortgelaufen, und habe in Beloveno Frill
+getroffen, der dort auf der Durchreise war. Er hat mein besonderes Talent
+erkannt und mich in die Gemeinschaft der Dji Cantos aufgenommen.^^Seit diesem
+Tag habe ich zum ersten Mal so etwas wie Glck und Geborgenheit kennengelernt,
+und ich bin froh, durch unsere Mission der Gemeinschaft und unserer Welt etwas
+von dem zurckzugeben, was ich ihr
+schulde."{WORDAnimebona}{WORDEntit„t}{WORDTransporth”hlen}]
+
+Block 4            Transporth”hlen
+["Die H”hlen sind Kraftzentren, von der Entit„t gesegnet. Dort gestattet sie
+es dem Reisenden, sein Ziel zu erreichen, ohne den Weg dazwischen zurcklegen
+zu mssen. Solange ich und das Amulett der G”ttin bei Euch sind, k”nnt Ihr in
+kurzer Zeit in weit entfernte Winkel dieser Welt reisen." {WORDAmulett der
+G”ttin}]
+
+Block 5            Amulett der G”ttin
+["Das Amulett tragen nur Mitglieder der Dji Cantos, der Erleuchteten. Ich darf
+und werde es nicht aus der Hand geben.^^Mit dem Amulett k”nnen die Felstore,
+die mit dem Auge der G”ttin gekenn|zeichnet sind, ge”ffnet werden. Es ist der
+einzige Weg, die Transporth”hlen zu ”ffnen."]
+
+Block 6
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch.]
+
+Block 7            Tried to remove Amulett der G”ttin
+["Entschuldige bitte, {LEAD}{NAME}, aber das Amulett ist mein pers”nlicher
+Besitz. Ich m”chte es nicht aus der Hand geben."]
+
+Block 8            CONS?
+[Als {LEAD}{NAME} versucht, Harriet den Gegenstand wegzunehmen, wacht diese
+aus ihrer Bewutlosigkeit auf und sagt schwach:]
+
+Block 9            Tried to remove Amulett der G”ttin HERSELF
+["Ich lasse das Amulett besser, wo es hingeh”rt."]

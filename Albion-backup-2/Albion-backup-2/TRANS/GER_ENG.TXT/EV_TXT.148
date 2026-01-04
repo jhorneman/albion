@@ -1,0 +1,122 @@
+NPC 148: Krai, Samenkornverk„ufer
+=================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich verwalte die Lagerbest„nde der Dji-Kas."{WORDLagerbest„nde}]
+
+Block 1         Begr.
+["Dsarii-ma! Ben”tigt Ihr Material zur Ausbung der Kunst der Dji-Kas?"
+{BLOK010}"Dsarii-ma. Ja, bitte zeigt uns Euer Angebot."]
+
+
+*******Unter-Allgemeinwissensblock fr Dji-Kas*******************************
+Block 2         "Dji-Kas, Magier, Magiergilde, Zauberer, Magie, Zauber"
+["Unsere Magie ist tief mit dieser Welt verwurzelt. Ihr k”nnt das zum Beispiel
+daran erkennen, da wir fr fast alle unsere Sprche eine bestimmte Sorte von
+Samenk”rnern benutzen, um unsere geistigen Kr„fte darin zu konzentrieren. Wir
+sind ferner Stolz auf die Vielseitigkeit unserer Kunst. Wir kennen Magie zum
+Erschaffen und Zerst”ren, zum Verletzen und zum Heilen.^ Als Kennzeichen
+unserer Gilde tragen wir eingef„rbte Muster im Fell. Der Anfhrer der Dji-Kas
+ist Sebai-fre Fasiir. Er verbringt seine gesamte Zeit im
+Gildenhaus."{WORDSamenkorn}{WORDHeilung}{WORDFasiir}{WORDGildenhaus}]
+                
+
+Block 3         "FASIIR"
+["Sebai-fre Fasiir leitet unsere Gilde schon seit ber 120 Jahren. Er ist eine
+lebende Legende unter den Dji-Kas und ein hervorragender Lehrmeister, der
+seinen Schlern schnell neue Kenntnisse beibringt, sowie sie dafr bereit
+sind."]
+
+Block 4         "SAMENKORN, SAMENK™RNER, KORN, K™RNER"
+["Nicht das Samenkorn selbst entfaltet die magische Wirkung, aber der Geist
+des Dji-Kas verwendet Sie, um darin seinen Fokus zu finden. Die K”rner stammen
+von einer seltenen Pflanze namens Triifalai, das bedeutet "Trii der G”ttin".
+Die Samen kann ich Euch im šbrigen verkaufen, wenn Ihr wollt." {WORDTrii}
+{WORDG”ttin}] 
+
+Block 5         "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                "WUNDEN, VERWUNDUNG"
+["Gleich neben dem Eingang zum Gildenhaus findet Ihr Stri Rejira, eine
+Meisterin der Heilkunst. Sie wird Euch besser helfen k”nnen als ich. Mein
+Wissen ist auf Verletzungen des Trii spezialisiert.{WORDTrii}"]
+
+Block 6         "Triifalai"
+["Dies ist der Name einer Pflanze, deren Samenk”rner von uns sehr begehrt
+sind.{WORDSamenkorn}"]
+
+Block 7
+[]
+
+Block 8         "Former,Formergilde, Dji-Fadh, Baumeister"
+["Oh, die Baumeister. Das Verh„ltnis unserer Gilden ist nicht immer ungetrbt.
+Manche ihrer besten Talente fhlen sich von unserer vielseitigen Kunst
+angezogen und wechseln ber zu unserer Gilde. Aber wer soll es Ihnen
+belnehmen? Wer hat schon Lust, all seine Kr„fte in den Bau von Behausungen zu
+stecken, und seinen sie noch so sch”n? Vielleicht sind die Dji-Fadh auch
+erzrnt, da wir so in der Lage waren, unser Gildenhaus ohne ihre Hilfe zu
+erschaffen."{WORDGilde}]
+
+Block 9         "GILDENHAUS"
+["Das Gildenhaus hat schon seit langer Zeit seinen Platz im sdwestlichen
+Viertel Jirinaars. Es ist von den Dji-Kas selbst erbaut worden und beherbergt
+viele Gildenmitglieder und alle Dra."{WORDDra}]
+
+Block 10        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 1
+["Der Mord an Akiir ist niemals von uns in Auftrag gegeben worden! Kriis hat
+gelogen, wei die G”ttin, warum er das getan hat! Wir haben keinen Grund, um
+so etwas Sch„ndliches zu tun!"{WORDG”ttin}]
+
+Block 11        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 2
+["Lat mich Euch noch einmal pers”nlich dafr danken, da Ihr uns von dem
+Mordverdacht an Akiir befreit habt!"]
+
+Block 12        "AKIIR", normal
+["Akiir ist das Oberhaupt der Former, einer Gilde, die meist ein etwas
+gespanntes Verh„ltnis zu der unseren hat. Besonders Akiir geht keinem Konflikt
+aus dem Wege."{WORDFormer}]
+
+Block 13        "Fasiir", Phase 1
+["Ihr kennt Fasiir nicht so gut wie wir, die wir t„glich mit ihm umgehen. Er
+wrde niemals ein solches Verbrechen in Auftrag geben! Aber ich sch„tze, Ihr
+werdet den Worten eines Mitglieds seiner Gilde wenig Glauben schenken."]
+
+Block 14        "Fasiir", Phase 2
+["Ich bin Euch aufrichtig dankbar, da Ihr seinen Namen reingewaschen habt."]
+
+Block 15
+["šber einen Mord wei ich nichts."]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18
+[dummy]
+
+Block 19
+[dummy]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21         "LAGER, LAGERBESTNDE"
+["Nun, obwohl die Kraft des Geistes der wichtigste Faktor unserer Magie ist,
+gibt es doch Verwendung fr allerlei Kr„uter und andere Hilfsmittel. Am
+wichtigsten sind jedoch zweifellos die Samenk”rner der Triifalai-Pflanze."
+{WORDSamenkorn}]

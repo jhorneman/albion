@@ -1,0 +1,29 @@
+NPC 147: Frinja, Lebensmittel
+=============================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich verkaufe Nahrung und GewÅrze aller
+Art."{WORDNahrung}{WORDGewÅrze}]
+
+Block 1         Begr.
+["Dsarii-ma! Mit welchen Kîstlichkeiten kann ich Euch dienen?"
+{BLOK010}"Dsarii-ma. Wir sind an haltbarem Reiseproviant interessiert."]
+
+Block 2         "NAHRUNG"
+["Nun, haltbar gemachtes Fleisch und vielerlei FrÅchte des Waldes."]
+
+Block 3         "GEWöRZE"
+["Die Krînung jeder Speise! FÅr Euch als Reisende sind sie jedoch wohl weniger
+interessant."]

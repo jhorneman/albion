@@ -1,0 +1,62 @@
+
+Dummy-Map fÅr Eingangssequenz TORONTO 2.Teil
+============================================
+
+
+
+Block 0
+[!]
+
+Block 1
+[Vom BetÑubungsgas benebelt, kommt Tom langsam wieder zu sich. Er wird von
+zwei Sicherheitsleuten in die Mitte genommen und in die TORONTO gefÅhrt.]
+
+Block 2
+[Das Gas Åbt noch seine Wirkung auf Tom aus.^^Mit verschwommenem Blick und
+benebeltem Kopf sieht er sein Empfangs|kommando: KapitÑn Brandt, Christine,
+Joe, einige Besatzungs|mitglieder sowie den kÅnstlichen Kîrper von Ned, des
+AI-Bordrechners.]
+
+Block 3            Brandt
+["Driscoll! Wir haben Sie tatsÑchlich noch lebend gefunden! Was mÅssen Sie
+durchgemacht haben!"]
+
+Block 4            Joe
+["Tom, Du bist doch nicht draufgegangen! Mann, bin ich froh, Dich zu sehen!"]
+
+Block 5            Christine
+["{FAT }Tom!{NORS} Mein Gott, daû ich Dich noch mal wiedersehe! Wie geht es
+Dir? Was ist passiert? Und wo..."]
+
+Block 6            Ned
+["Verzeihen Sie, Mrs. Mocci, aber wie Sie sehen, ist Mr. Driscolls
+Allgemeinzustand sehr schlecht. Er muû dringend in medizinische Behandlung."]
+
+Block 7            Tom
+["Gas... Kpn' Brandt, warum... Der Planet ist..."]
+
+Block 8            Brandt
+["Ich denke auch, daû wir Mr. Driscoll sofort in die medizinische Abteilung
+bringen sollten. Es ist ein Wunder, daû er so lange auf dieser
+lebens|feindlichen OberflÑche Åberleben konnte."]
+
+Block 9            Tom
+["Aber, Sir, der Planet ist doch... Sie mÅssen doch wissen das...^^{FAT }Der
+Planet ist voller Leben!{NORS}"]
+
+Block 10           Ned
+["Wie ich befÅrchtet hatte! Mr. Driscoll halluziniert. Er muû sofort auf die
+Krankenstation."]
+
+Block 11           
+[Die beiden Secus nehmen Tom wieder in die Mitte und schleifen ihn fort.]
+
+Block 12           Christine
+["Tom!"]
+
+Block 13           Ned
+["Gedulden sie sich einige Tage, Mrs. Mocci. Sie werden Mr. Driscoll besuchen
+kînnen, sobald er sich ein wenig erholt hat."]
+
+Block 14           Tom
+["Aber..."]

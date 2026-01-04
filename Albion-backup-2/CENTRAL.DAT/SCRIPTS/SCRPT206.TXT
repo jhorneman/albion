@@ -1,0 +1,15 @@
+;
+; Anzeigen Kellerkarte
+
+
+fade_to_black
+show_pic 5 0 0
+fade_from_black
+
+pause 0
+
+fade_to_black
+fill_screen 0
+load_pal 19
+fade_from_black
+

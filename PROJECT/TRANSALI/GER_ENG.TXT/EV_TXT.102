@@ -1,0 +1,194 @@
+Allgemeinwissen fÅr Iskai (Stufe C, Kinder)
+----------------------------------------------------------------------
+
+Block 0                      (frei)
+[leer]
+
+Block 1                      (Iskai)
+["So heiûen wir. Ich meine alle, Ñh, na Iskai eben."]
+
+Block 2                      (Sofa, Sitzmîbel, Sitzpflanze)
+["Die groûen Sofas? Tolle Sache! Man kann ganz toll |drauf herumspringen! Die
+Former bauen sie."{WORDFormer}]
+
+Block 3                      (Fleisch, Braten, Wurst, Schinken)
+["Mmh, lecker!"]
+
+Block 4                      (Abwasser,Abwasserbecken,Teich,Schmutzwasser)
+["Da stinkt's immer so, da kommt das gebrauchte Wasser 'rein."]
+
+Block 5                      (Herden, ViehzÅchter, HerdenzÅchter, ZÅchter
+                             Zuchtvieh)
+["Nî, keine Ahnung."]
+
+Block 6                      (Wasser, Wasserrinnen, Trinkwasser, Bach, BÑche)
+["Find ich toll, die BÑche im Haus. Kann man alles mîgliche 'reinschmeiûen,
+wenn keiner guckt und dann schwimmt es durch's ganze Haus!"]
+
+Block 7                      (Haus, HÑuser, WÑnde, Boden, Mauern, Bauweise,
+                             Baumaterial, HÑuserbau, Architektur)
+["Die werden von den Formern gebaut, glaube ich."{WORDFormer}]
+
+Block 8                      (Former,Formergilde, Dji-Fadh, Baumeister)
+["Die Former kînnen mit Pflanzen reden und dann machen die, was die Former von
+ihnen wollen."]
+
+Block 9                      (Dji-Kas, Magier,Magiergilde, Zauberer)
+["Dji-Kas, das sind die Zauberer! Das wÅrde ich auch gerne kînnen!"]
+
+Block 10                     (Clan, Gesellschaft, Gemeinschaft)
+["Das ist so 'ne Art Familie der Familien."]
+
+Block 11                     (Rat,Familie, Regierung, Oberhaupt, Ratskreis)
+["öber sowas weiû ich nicht viel, die Erwachsenen reden viel vom Rat und was
+die so machen."]
+
+Block 12                     (MC: "Sind alle mit dieser Regierung zufrieden?") 
+["Weiû ich doch nicht."]
+
+Block 13                     (Sebainah)
+["Der Sebainah sagt allen, was sie tun sollen."]
+
+Block 14                     (Ehe,Eheleute, Heirat, Heiraten)
+["Na ja, wenn sich zwei liebhaben, dann heiraten sie halt."]
+
+Block 15                     (Nebenpartner)
+["Das hat was mit Heiraten und so zu tun."]
+
+Block 16                     (Geschwister, Schwester, Bruder,
+                             Schwestern,BrÅder)
+["Na ja, man soll auf seine Ñlteren Geschwister genauso hîren, wie auf seine
+Eltern oder sogar noch mehr."]
+
+Block 17                     (VolljÑhrig, VolljÑhrigkeit)
+["Hoffentlich bin ich bald zehn, dann darf mir niemand mehr was verbieten."]
+
+Block 18                     (Fruchtbarkeit, EmpfÑngnis, Fadhiim)
+["Die MÑdchen kînnen nur ein paar Monate lang Kinder kriegen, und wenn's
+soweit ist, gibt's ein Riesen-Fest!"]
+
+Block 19                     (Sebai, Ritual, Sebai-Ritual)
+["Sebai wird man, wenn man ganz viel gute Sachen macht. Man braucht dann nicht
+zu sterben."]
+
+Block 20                     (AuserwÑhlte, AuserwÑhlter)
+["Weiû ich nicht so genau. Man muû halt irgendwas ganz Tolles machen."]
+
+Block 21                     (Stirnstruktur,Stirnorgan, Trii)
+["Das Trii? Ja, damit kann man ganz lustige Sachen im Kopf spÅren oder hîren,
+wenn man das Trii von jemand anderem berÅhrt!"]
+
+Block 22                     (Exekutive, Polizei, Stiriik)
+["Die passen auf, daû man nicht soviel Unfug macht. Sind Spielverderber."]
+
+Block 23                     (Gesetz, Gesetze, Justiz, Regeln)
+["Das machen die Groûen, damit sie sich besser 'rumstreiten kînnen."]
+
+Block 24                     (Gilde, Gilden, Dji, Dji-)
+["Da geht man hin, wenn man irgendeinen Beruf lernen will."]
+
+Block 25                     (Magie, Zauberei)
+["Magie und Zaubern. Mann, wenn ich das kînnte, dann wÅrde ich zu den Dji-Kas
+gehen!"]
+
+Block 26                     (Religion, Gîttin)
+["Die Gîttin paût auf uns auf und wir gehen zu ihr, wenn wir mal sterben
+mÅssen, und wenn man nicht gut war, bestraft sie einen mit dem ewigen
+Vergessen."]
+
+Block 27                     (Jirinaar)
+["Jirinaar ist die grîûte Stadt der Welt! Na, zumindest von Nakiridaani."
+{WORDNakiridaani}]
+
+Block 28                     (Nakiridaani)
+["Nakiridaani ist der Name unseres Landes."]
+
+Block 29                     (Geschichte)
+["Och, keine Ahnung davon! Im Rat gibt es schlaue Leute, die wissen bestimmt
+was davon."{WORDRat}{WORDRatsgebÑude}]
+
+Block 30                     (Mensch, Menschen)
+["Menschen sehen lustig aus, so breit und ganz ohne Fell!"]
+
+Block 31                     (Ort: Palast, RatsgebÑude)
+["Weiû ich nicht so genau. In der Mitte der Stadt, glaube ich." ]
+
+Block 32                     (Ort: Stadttor, Ausgang, Eingang)
+["Das Stadttor ist irgendwo im SÅden."]
+
+Block 33                     (Ort: Nahrung, Essen, Proviant, Waffe, Waffen,
+                             RÅstung, RÅstungen, HÑndler, Laden, einkaufen,
+                             GeschÑft, GeschÑfte, kaufen, AusrÅstung)
+["In der Stadt kînnt Ihr das, glaube ich, irgendwo einkaufen."]
+
+Block 34                     (Ort: Kneipe, Lokal, Restaurant)
+["Keine Ahnung."]
+
+Block 35                     (Ort: Hafen)
+["Weiû nicht so genau."]
+
+Block 36                     (Frage wird von Iskai in Party gestellt)
+["Das muût Du doch selbst wissen!"]
+
+Block 37                     ( " )
+["Wieso weiût Du das denn nicht?"]
+
+Block 38                     ( " )
+["Das wollen doch bestimmt Deine komischen Freunde wissen."]
+
+Block 39                     "UNTERSCHRIFT", "MARKE", "DOKUMENT","DOKUMENTE"
+["Weiû ich nix drÅber."]
+
+Block 40                     "NACKTHEIT", "NACKT", "KLEIDUNG", "BEKLEIDUNG"
+["Ich mag keine Kleider."]
+
+Block 41                     "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                             "WUNDEN, VERWUNDUNG"
+["Die Dji-Kas machen Euch wieder gesund."]
+
+Block 42                     "SCHMERZEN"
+["Oh ja, Schmerzen sind schlimm! Hoffentlich kriege ich bald beigebracht, wie
+man sie wegdenkt."]
+
+Block 43                     "DRA"
+["Das sagt man, wenn einer was noch nicht so gut kann."]
+
+Block 44                     "STRI"
+["Wenn Du richtig gut in etwas bist, nennt man Dich so."]
+
+Block 45                     Antwort auf MC4
+["Keine Ahnung. Aber ich bade ja gern im Fluû, und da soll er doch sauber
+sein."]
+
+Block 46                "AKIIR", Phase 0
+["Akiir ist Chef bei den Formern."]
+
+Block 47                "AKIIR, MORD", Phase 1
+["Der ist tot, glaube ich."]
+
+Block 48                "AKIIR, MORD", phase 2
+["Der ist tot."]
+
+Block 49                "JANIIS"
+["Sie ist die Sebainah! Alle mÅssen machen, was sie sagt!"]
+
+Block 50                "FASIIR" Phase 0
+["Irgend so'n wichtiger Groûer."]
+
+Block 51                "FASIIR", Phase 1
+["Hat der nicht was Schlimmes gemacht?"]
+
+Block 52                "FASIIR", Phase 2
+["Er hat wohl doch nichts angestellt."]
+
+Block 53                "REJIRA"
+["Sie ist eine ganz tolle Heilerin!"]
+
+Block 54                "ARGIM"
+["Oh, das war so ein verrÅckter Former!"]
+
+Block 55                "LEGENDE, LEGENDEN"
+["Ich mag es, wenn ich Geschichten erzÑhlt bekomme."]
+
+Block 56                "SKORREK"
+["Krsss! Selber Skorrek!"]

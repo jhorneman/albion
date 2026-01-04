@@ -1,0 +1,66 @@
+174: Bero, Mellthas Attio (nach seiner Rettung)
+===============================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin, wie Ihr wissen solltet, Druide und besonders bewandert im
+Wissen ber Amulette."{WORDAmulette}]
+
+Block 1         Begr., wenn Mellthas dabei
+["Togi Din, meine Retter! Sch”n, Euch wieder zu sehen und besonders Dich,
+Mellthas und auch Dich, Sira!"{WORDMellthas}{WORDSira}]
+
+Block 2         Begr., wenn Mellthas dabei
+["Togi Din, meine Retter! Sch”n, Euch wieder zu sehen!"]
+
+Block 3         "Amulett, Amulette"
+["Meine groe Leidenschaft, wie Ihr wit. H„tte ich wenigstens Cantos Amulett
+gefunden, w„re mir die Schmach des v”lligen Fehlschlags meiner Expedition
+erspart geblieben." {BLOK010}"W„re denn Cantos Amulett wirklich das Risiko
+dieser Suche Wert gewesen?"]
+
+Block 4         "Iskai"
+["Ein interessantes Volk, allein, wenn ich an die faszinierenden Aspekte ihres
+Stirnorgans bedenke. Ich wrde mich gerne einmal mit einem ihrer Gelehrten
+unterhalten. Vielleicht unternehme ich einmal eine Reise nach Jirinaar."]
+
+Block 5         "Sira"
+["Eine liebenswerte, „hm, Person, {LEAD}{NAME}. Kein Wunder, da man sich auch
+als Mensch in sie verlieben kann..."]
+
+Block 6         "Sira" (wenn S. spricht)
+["Ich bin froh und dankbar fr das, was Du fr Mellthas getan hast, Sira."
+{WORDIskai}]
+ 
+Block 7         "Mellthas"
+["{LEAD}{NAME}, ich k”nnte einen leiblichen Sohn nicht mehr lieben als
+Mellthas. Ich bin stolz auf seine Kenntnisse und froh, da er eine gefunden
+hat, Mensch oder nicht, die er liebt und die ihm seine Behinderung zu
+berwinden hilft."]
+
+Block 8         "mellthas" (wenn M. spricht)
+["Mellthas, Du weit, das ich Dich wie einen Sohn liebe. Gib auf Dich acht,
+wenn Du Dich nun auf Reisen mit Deinen Gef„hrten begibst."{WORDIskai}]
+ 
+Block 9         Antwort 3, 10 + "Canto"
+["Canto ist der geistige Urahn aller Druiden und eine legend„re Gestalt. Es
+heit, da er derjenige war, der die Menschen in dieses Land gefhrt hat, vor
+Hunderten oder Tausenden von Jahren. Seine Weisheit und seine Kenntnisse waren
+gro, so gro, da er von manchen schon fast wie ein Gott verehrt wird. In
+alten Bchern wird ein Amulett erw„hnt, das er getragen hat. Es soll ihm von
+Danu selbst bergeben worden sein. Man sagt Cantos Amulett viele wundervolle
+Dinge nach, so soll es den Tr„ger vor allen Waffen und Zaubern schtzen. Es
+ist natrlich nur eine Legende, aber es war mir das Risiko wert, danach zu
+suchen."]

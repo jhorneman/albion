@@ -1,0 +1,44 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 3
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fhre das Lebensmittelgesch„ft hier in der Stadt."]
+
+Block 1         (Begrung)
+["Wit Ihr schon, da ganz Kounos das Heiligtum von Srimalinar besetzen
+wird?"{BLOK010}"Woher wit Ihr das?"{BLOK011}"Seid Ihr sicher?"{BLOK012}"Wir
+werden das verhindern!"{WORDHeiligtum}]
+
+Block 2         (Begrung 2)
+["Tja - die Sache wird ernst. Kontos hat seine Anh„nger davon berzeugt, die
+heilige St„tte in Srimalinar zu besetzen und das B”se dort zu vernichten!
+Sprecht mit ihm, er kann Euch sein Handeln erkl„ren."
+{WORDB”ses}{WORDHeiligtum}]
+
+Block 3         (Resp. 1)
+["Das ist mittlerweile in ganz Beloveno bekannt. Ein Kurier von Kounos hat es
+uns mitgeteilt. Geht hin und fragt Kontos."]
+
+Block 4         (Resp. 1,2)
+["Jeder wei das. So etwas spricht sich herum?!?"]
+
+Block 5         (Resp. 2)
+["Ganz sicher, ein Kurier hat uns das mitgeteilt."]
+
+Block 6         (Resp. 3)
+["Warum denn das? Wenn das Heiligtum wirklich gef„hrlich ist, ist es doch gut,
+da dagegen etwas unternommen wird!"]
+
+Block 7         (B”se)
+["Ich glaube schon, da man unbedingt dagegen vorgehen mu!"]
+
+Block 8         (Heiligtum)
+["Es wird immer schlimmer mit den b”sen Kreaturen, die dort herauskommen!
+Jeder spricht davon! Aber glcklicherweise unternimmt Kontos etwas dagegen!
+Fragt ihn doch einfach, er erkl„rt Euch das Problem besser wie ich."
+{WORDKontos}{WORDB”ses}]
+
+Block 9         (Kontos)
+["Gut, da es Leute wie ihn gibt!"]
+
+Block 10        (Kryte)
+["Das bin ich."]

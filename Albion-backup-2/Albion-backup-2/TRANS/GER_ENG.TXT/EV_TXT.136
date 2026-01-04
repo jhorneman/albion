@@ -1,0 +1,145 @@
+NPC 136: Akiir
+==============
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin Stri Dji-Fadh und das Oberhaupt meiner Gilde."
+{WORDStri}{WORDDji-Fadh}]
+
+Block 1 [ ]
+
+******************Unter-Allgemeinwissen fr Dji-Fadh*************************
+
+Block 2         "Dji-Fadh, Former, Errungenschaften, Kunst"
+["Was wir tun, sehen wir als Mischung von Magie, Kunst und Handwerk an. Wir
+sind eine der „ltesten Gilden Jirinaars und wie Ihr sicher wit, k”nnen wir
+mit Hilfe unserer Magie Pflanzen erschaffen, ver„ndern und dauerhaft in eine
+gewnschte Form bringen. So sind wir in der Lage, komplette H„user aus
+lebendem Pflanzen|material erstehen zu lassen, die nicht nur sch”n anzusehen
+sind, sondern auch alle Funktionen erfllen, die fr das Wohlbefinden ihrer
+Bewohner notwendig sind."{WORDMagie}{WORDJirinaar}]
+
+Block 3         "AKIIR" WENN: PHASE 0
+["Stri Akiir ist das Oberhaupt unserer Gilde. Er ist ein hervor|ragender
+Knstler und Magier, der sich sehr fr die Belange unserer Gilde einsetzt. Wir
+alle hoffen, da er eines Tages ein Ausgew„hlter wird." {WORDAuserw„hlter}]
+
+Block 4         "AKIIR, MORD" WENN: PHASE 1
+["Wir alle sind v”llig geschockt. Akiirs Tod ist ein wirklich groes Unglck
+fr unsere Gilde. Ich h„tte den Dji-Kas ja so manches zugetraut, aber das?
+Unvorstellbar! Hoffentlich greift die Sebainah hart durch!" {WORDDji-Kas}]
+
+Block 5         "AKIIR, MORD" WENN: PHASE 2
+["Welch eine Trag”die! Akiir's Verhalten ist besch„mend, aber wir vermuten,
+da das Wissen um seinen bevor|stehenden Tod seinen sonst so klaren Verstand
+getrbt hat."]
+
+Block 6         "SIRA"
+["Sira ist die einzige Tochter Akiirs. Sie ist zu den Dji-Kas gegangen, was
+Akiir sehr getroffen hat."{WORDDji-Kas}]
+
+Block 7
+[]
+
+Block 8         "DJI-KAS, MAGIER, ZAUBERER" WENN: Phase 0
+["Ach ja, die K”rnerwerfer! Ihr bemerkt sicher, da die meisten von uns den
+Dji-Kas nicht unbedingt freund|schaftliche Gefhle entgegen|bringen. Sie
+werben mit Ver|sprechungen oftmals unsere gr”ten Talente ab. Ihrer Kunst
+fehlt die Zielrichtung, die Hingabe und, abgesehen von ihren Heilern, der
+Nutzen fr die Gemeinschaft."]
+
+Block 9         "GILDENHAUS"
+["Unser Gildenhaus konkurriert mit dem Ratsgeb„ude um den Titel des sch”nsten
+Bauwerks Jirinaars. Es wird von uns st„ndig gepflegt und ver„ndert und auch
+zur Vorfhrung unseres K”nnens benutzt, wie Ihr im ”stlichen Flgel sehen
+k”nnt."{WORDRatsgeb„ude}{WORDJirinaar}]
+
+Block 10        "FASIIR", WENN: Phase 0
+["Nun, er ist der Anfhrer der Dji-Kas."{WORDDji-Kas}]
+
+Block 11        "FASIIR", WENN: Phase 1
+["Dieser M”rder! Er verdient nichts Geringeres als den Tod!"]
+
+Block 12        "FASIIR", WENN: Phase 2
+["Seit Ihr ihn gerechterweise von den Anschuldi|gungen gegen ihn befreit habt,
+ist er wieder Oberhaupt der Dji-Kas."]
+
+Block 13        "BRADIR", WENN: Phase 0
+["Er ist Akiirs Stellvertreter, ein freundlicher und bescheidener Iskai."
+{WORDIskai}]
+
+Block 14        "BRADIR", WENN: Phase 1
+["Er leidet wirklich stark unter Akiirs Tod. Vielleicht lenken ihn seine
+zahlreichen Aufgaben ab, nun, da er das Oberhaupt unserer Gilde ist."]
+
+Block 15        "BRADIR", WENN: Phase 2
+["Man merkt, da eine groe Last von Bradir abgefallen ist, seit Ihr die ganze
+komplizierte Sache mit Akiirs Tod aufgekl„rt habt."]
+
+Block 16        "DJI-KAS, MAGIER, ZAUBERER" WENN: Phase 1
+["Die K”rnerwerfer haben den Mordanschlag gewi gemeinsam ausgeheckt! Wer
+h„tte geglaubt, da Ihre geistige Verwahr|losung so weit geht!"]
+
+Block 17        "DJI-KAS, MAGIER, ZAUBERER" WENN: Phase 2
+["Nun ja, ich mu zugeben, da die Vorf„lle gezeigt haben, wie schnell man zu
+vorschnellen Schlssen gegenber den Dji-Kas gelangen kann."]
+
+Block 18        "ARGIM"
+["Ihr habt davon geh”rt? Nun, um ehrlich zu sein, Argims Geschichte ist ein
+wunder Punkt in der Geschichte unserer Gilde.^^ Er war vor fast 150 Jahren das
+Oberhaupt der Dji-Fadh. Damals war das Gildenhaus der Dji-Fadh auerhalb der
+Stadt zu finden, ein pr„chtiges Geb„ude mitten im Wald nahe eines Han. Nun,
+Argim war ein groartiges Talent, aber von wankelmtigem Charakter. Dies war
+der Grund fr die Ablehnung seines gr”ten Zieles: ein Auserw„hlter zu
+werden.^^ Als er von der Abweisung erfuhr, verlor er v”llig die Kontrolle ber
+sich. Er schwor, trotzdem die Unsterblichkeit erlangen zu wollen. In einem
+wahnwitzigem Ausbruch seiner Macht zerst”rte er das ganze Geb„ude und
+verwandelte es in einen seltsamen Ort, der heute von allen gemieden wird. Man
+sagt sogar, er h„tte seinen Geist diesem Ort aufgepr„gt."{WORDHan}]
+
+Block 19        "HAN"
+["Es gibt Orte, wo die Kraft der G”ttin besonders zu spren ist und magische
+Handlungen verst„rkt werden, aber oft auch schwieriger sind. Ein solches
+Energiezentrum nennt sich Han."{WORDG”ttin}]
+
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21        Begrung 1.mal
+["Dsarii-ma und Willkommen in meiner Gilde, Besucher. Ich habe schon von Eurer
+Anwesenheit in der Stadt geh”rt. Nun, wie gef„llt Euch unser Gildenhaus?"
+{BLOK010}"Ganz nett. Vielleicht ein wenig chaotisch." {BLOK011}"Ein wirklich
+beeindruckendes Geb„ude. Wir sind von der Kunst Eurer Gilde fasziniert."]
+
+Block 22        Antw. auf MC21,10
+["Ich wei nicht, welche Behausungen Ihr gewohnt seid. Aber vielleicht will
+ich es auch gar nicht wissen! Euch fehlt offenbar jeder Sinn fr sthetik. Ich
+habe zu tun."^^ {INK 001}Beleidigt wendet sich Akiir ab.]
+                DANN: Bel. Bit setzen, Gespr. abbrechen, ist dann nicht mehr
+                ansprechbar
+
+Block 23        Antw. auf Block 22
+["Eure Antwort ehrt Euer Formempfinden. Meiner pers”nlichen Meinung nach
+geh”ren Bauwerke zum wichtigsten, was eine Kultur hervor|bringen kann, und sie
+zu erschaffen ist die edelste m”gliche Kunst."]
+
+Block 24
+["Dsarii-ma, Besucher. Ihr habt noch etwas mit mir zu besprechen?"]
+
+Block 25
+[{INK 001}Akiir l„t deutlich erkennen, da er an einer Unterhaltung nicht
+mehr interessiert ist.]

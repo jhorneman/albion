@@ -1,0 +1,37 @@
+
+Text Partymitglied 5: MELLTHAS
+==============================
+
+Block 0
+[ ]
+
+Block 1            Begr.: Direkt nach Partybeitritt
+[{INK 001}Mellthas blickt auf, als er angesprochen wird.{INK 002}
+{BLOK010}"Mellthas, ich glaube, wir sollten jetzt in den verbotenen Teil
+Arjanos aufbrechen, um Bero zu retten." {BLOK011}"Danke fr die Unterhaltung,
+Mellthas."]
+
+
+Block 2            Begr.: In Sira verliebt
+[{INK 001}Mellthas blickt auf, als er angesprochen wird.{INK 002}
+{BLOK010}"Mellthas, darf ich eine pers”nliche Frage stellen? Du hast Dich
+wirklich in Sira verliebt?" {BLOK011}"Danke fr die Unterhaltung, Mellthas."]
+
+Block 3            MC 2,10
+[{INK 001}Mellthas schreibt l„ngere Zeit auf einen Zettel, den er dann
+{LEAD}{NAME}
+unter die Nase h„lt:^^{INK 002} "Ja. Der erste geistige Kontakt mit Ihr war
+der sch”nste Augenblick meines Lebens. Ihr ganzes Wesen ist bezaubernd, und
+ich finde Ihren fremden K”rper nicht un„sthetisch.^^Ich liebe sie."]
+
+Block 4            MC 1,10
+[{INK 001}Mellthas nickt eifrig und fhrt die Gef„hrten hinter eine
+verriegelte Tr in der Bibliothek Arjanos...]
+
+Block 5            Wenn nix is
+[{INK 001}Der taubstumme Mellthas blickt auf, als er merkt, da er
+ange|spro|chen wird.{INK 002} {BLOK010}"Verzeihung, mir f„llt im Moment kein
+Gespr„chsthema ein, Mellthas."]
+
+Block 6            Tsch
+[{INK 001}Mellthas nickt {LEAD}{NAME} zu.]

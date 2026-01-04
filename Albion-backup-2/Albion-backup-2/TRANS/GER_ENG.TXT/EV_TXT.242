@@ -1,0 +1,56 @@
+Riko (Ratsmitglied Nummer 3) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin ein Mitglied im 'Rat der Gerechten'. Mehr kann ich Euch
+dazu nicht sagen und mehr mt Ihr auch nicht wissen."]
+
+Block 1         (Begrung)
+["Skeima Din, ich habe leider keine freie Minute fr Euch."]
+
+Block 2         (Begrung 2)
+["Ich habe WIRKLICH keine Zeit!"]
+
+Block 3         (Fortsetzung, egal was Party antwortet)
+["Sagt mal, ich habe Euch jetzt schon sehr oft hier gesehen. Leider mu ich
+jetzt mal in aller Deutlichkeit sagen, da Ihr den Ablauf der Amtsgesch„fte
+st”rt, wenn Ihr uns hier st„ndig von der Arbeit abhaltet. Ihr k”nnt mit den
+Leuten in der ganzen Stadt reden!"{BLOK010}"Das ist sehr nett, da Ihr uns das
+genehmigt."{BLOK011}"Das ist ein ganz hervorragender Tip. Recht sch”nen Dank
+auch."{BLOK012}"Vielleicht k”nnt Ihr unsere Anwesenheit noch ein wenig
+erdulden. Wir werden Euch auch nicht mehr bel„stigen."]
+
+Block 4         (Resp. 3)
+["Na, lat mal gut sein, ich bin ja schlielich kein Unmensch."]
+
+Block 5         (Resp. 2)
+["Ja, bitte, gern geschehen. So, jetzt mu ich unbedingt weiterarbeiten. h,
+wie habt Ihr das mit dem Tip gemeint?"{BLOK013}"Mit welchem Tip?"{BLOK014}"Wir
+wollten uns einfach bedanken."]
+
+Block 6         (Resp. 1)
+["Aber bitte doch, was tut man nicht alles fr andere."{BLOK015}"Vielleicht
+sollten wir das nicht weiter vertiefen."{BLOK016}"Nun, da w„re schon etwas..."]
+
+Block 7         (Resp. 1 aus 5)
+["Wollt Ihr mich fr dumm verkaufen? Verschwindet jetzt!"]
+
+Block 8         (Resp. 2 aus 5)
+["So? Wolltet Ihr? Ich habe genug von Euch. Da setzt man sich auch noch fr
+Fremde ein, und was ist der Dank? Sie machen sich ber einen lustig. Ist das
+nicht frustrierend?"{BLOK017}"Ja, man hat es nicht einfach!"]
+
+Block 9         (Fortsetzung von 8)
+["Wie? Ihr stehlt mir meine Zeit. Ich mu weiter."]
+
+Block 10        (Resp. 1 aus 6)
+["Langsam aber sicher werdet Ihr aufdringlich. Ihr stehlt mir meine Zeit, ich
+mu weiter."]
+
+Block 11        (Resp. 2 aus 6)
+["Ich habe Euch doch von Anfang an gesagt, da ich dafr keine Zeit habe!"]
+
+Block 12        (Riko)
+["Das ist mein Name."]
+
+Block 13        (Alles andere)
+["Bitte fragt nicht mich, ich bin zu besch„ftigt."]

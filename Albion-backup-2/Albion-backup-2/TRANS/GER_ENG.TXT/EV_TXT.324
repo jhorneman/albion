@@ -1,0 +1,33 @@
+ 
+Althea, "Lagerverwalterin" und Spruchrollenverk„uferin 
+====================================================== 
+ 
+Block 0 
+[{BLOK000}"Ich arbeite hier im Haus und verwalte die Best„nde der
+Erleuchteten."{WORDBest„nde}{WORDErleuchteten}] 
+ 
+Block 1	Begr. 1x 
+["Ah, Besucher! Seid gegrt. Willkommen im Haus der Erleuchteten."] 
+ 
+Block 2	(Best„nde) 
+["Hier im Haus werden zwar keine groen Sch„tze aufbewahrt, aber ein groer
+Wissenschatz existiert schon. Es gibt zum Beispiel viele interessante
+Spruchrollen. Einige davon darf ich verkaufen. Ich bemhe mich, ein wenig Geld
+in den Haushalt zu bringen, denn um solch' profanen Dinge kmmern sich die
+Leute hier nur ungern."{WORDSpruchrollen}] 
+ 
+Block 3 	(Spruchrollen) 
+["Nun, soviel ich davon verstehe, erlauben sie auch dem Ungebten die Ausbung
+von Magie. Allerdings l”sen sich die Spruchrollen nach Gebrauch auf. Jemand,
+der etwas von der Magie auf den Spruchrollen versteht, kann den Zauber darauf
+jedoch dauerhaft lernen." {BLOK010}"Zeigt uns doch bitte Euer Angebot an
+Spruchrollen."] 
+ 
+Block 4	(Erleuchteten) 
+["Wie alle hier, arbeite ich gerne fr diese Leute. Sie sind nur oftmals ein
+wenig weltfremd, und so versuche ich durch den Verkauf von Spruchrollen unsere
+Haushaltskasse ein wenig aufzubessern." {WORDSpruchrollen}] 
+ 
+Block 5	Begr., wenn schon mal bis (Spruchrollen) gekommen 
+["Gre, Besucher! M”chtet ihr einen Blick auf unser Angebot an Spruchrollen
+werfen?" {BLOK010}"Ja, gerne. Zeigt uns Euer Angebot."]

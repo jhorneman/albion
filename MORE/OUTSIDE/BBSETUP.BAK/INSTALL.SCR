@@ -1,0 +1,81 @@
+// Install script for Albion preview
+// 14th of August 1995
+// (c) 1995 Blue Byte Software GmbH
+
+// Exit if already installed (which is unlikely)
+IF_EXISTS setup.ini
+INFO "Albion has already been installed."
+END
+ENDIF
+
+// Load main background image
+LOAD_BACKGROUND "install.lbm"
+
+// Tell user what is going on
+ASSERT "Welcome!\n\nThis program will install a preview version of Albion on your hard drive. It will require about 2 megabytes of free disk space.\n\nContinue?" ExitInstall
+
+// Select a target drive
+SELECT_TARGET_DRIVE 2000 ExitInstall
+
+// Select target path
+SELECT_TARGET_PATH ALBION
+
+// Change to target directory
+CD_TARGET
+
+// Delete everything that may already be here
+DELETE *.*
+DELETE DRIVERS
+DELETE XLDLIBS
+
+// Create directories
+MD SAVES
+MD DRIVERS
+MD XLDLIBS
+MD XLDLIBS\INITIAL
+MD XLDLIBS\CURRENT
+
+// Change to source directory
+CD_SOURCE
+
+// Inform the user that installation is commencing
+PRINT "Now installing Albion..."
+
+// Copy AIL drivers
+INSTALL DRIVERS\*.* DRIVERS\*.*
+
+// Copy initial position
+INSTALL XLDLIBS\INITIAL\*.* XLDLIBS\INITIAL\*.*
+
+// Copy batches, main program, DOS extender, and text file
+INSTALL ALBION2.BA_ ALBION2.BA_
+INSTALL SETSOUND.BA_ SETSOUND.BA_
+INSTALL ALBION.EX_ ALBION.EX_
+INSTALL DOS4GW.EXE DOS4GW.EXE
+INSTALL README.TXT README.TXT
+
+CD_TARGET
+
+// Rename (@$#!!)
+RENAME ALBION2.BA_ ALBION2.BAT
+RENAME SETSOUND.BA_ SETSOUND.BAT
+RENAME ALBION.EX_ ALBION.EXE
+
+// Create setup file
+CREATE SETUP.INI
+WRITE_SOURCE_PATH
+
+//SELECT_CD_ROM_DRIVE
+
+// Inform the user that installation has been completed successfully
+INFO "Albion has been installed successfully."
+
+// Tell the user what to do
+INFO "Type SETSOUND to configure your sound hardware."
+
+INFO "Type ALBION to play the game."
+
+INFO "Remember to read README.TXT to find out more about Albion, it's parameters, and how to see the intro animation."
+
+:ExitInstall
+END

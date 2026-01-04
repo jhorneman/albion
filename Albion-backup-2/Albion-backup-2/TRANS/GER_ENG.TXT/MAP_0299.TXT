@@ -1,0 +1,180 @@
+
+Maptext-File
+------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[éste und Wurzeln.]
+
+Block 2
+[Ein geflochtener Korb.]
+
+Block 3
+[Ein GlasgefÑû fÅr Wasser und andere GetrÑnke.]
+
+Block 4
+[Ein Faû.]
+
+Block 5
+[Ein prÑchtiges Tierfell.]
+
+Block 6
+[Ein Eimer.]
+
+Block 7
+[Eine Tonschale.]
+
+Block 8
+[Ein Trinkhorn.]
+
+Block 9
+[Ein Teller.]
+
+Block 10
+[Ein Tonkrug.]
+
+Block 11
+[Ein Krug.]
+
+Block 12
+[Ein Tischmesser.]
+
+Block 13
+[Eine Gabel.]
+
+Block 14
+[Ein Lîffel.]
+
+Block 15
+[Ein TonbehÑlter.]
+
+Block 16
+[Steine.]
+
+Block 17
+[Eine Schale.]
+
+Block 18
+[Ein AckergerÑt.]
+
+Block 19
+[Eine Axt.]
+
+Block 20
+[Ein Kistendeckel.]
+
+Block 21
+[Eine Holzkiste.]
+
+Block 22
+[Eine kunstvoll beschlagene Holzkiste.]
+
+Block 23
+[Das stille ôrtchen.]
+
+Block 24
+[Ein Deckel.]
+
+Block 25
+[Ein groûer Holzbottich.]
+
+Block 26
+[Ein groûer Metallkessel.]
+
+Block 27
+[Ein Regal.]
+
+Block 28
+[In diesem Regal ist allerhand unwichtiges Zeug zu sehen.]
+
+Block 29
+[Eine Kommode.]
+
+Block 30
+[Ein Besen.]
+
+Block 31
+[Ein Bratrost.]
+
+Block 32
+[Darauf kann man Fleisch braten.]
+
+Block 33
+[Eine Feuerstelle.]
+
+Block 34
+[Eine umgefallene Karaffe.]
+
+Block 35
+[Ein Kochlîffel.]
+
+Block 36
+[Ein dekoratives Wandschwert.]
+
+Block 37
+[Ein Holztisch.]
+
+Block 38
+[Ein Hocker.]
+
+Block 39
+[Ein zusammengeklappter Hocker.]
+
+Block 40
+[Ein massiver Eûtisch.]
+
+Block 41
+[Ein Baumstumpf.]
+
+Block 42
+[Zwei gekreuzte Speere.]
+
+Block 43
+[Ein groûes Faû mit fremdartigen GetrÑnken.]
+
+Block 44
+[Ein Zapfhahn.]
+
+Block 45
+[Eine Bettdecke.]
+
+Block 46
+[Ein komfortables und hÅbsch verziertes Bett.]
+
+Block 47
+[Dieses Bett ist schlicht aber zweckmÑûig.]
+
+Block 48
+[Eine Anrichte.]
+
+Block 49
+[Ein Kamin.]
+
+Block 50
+[Das Kaminfeuer strahlt eine angenehme WÑrme ab.]
+
+Block 51
+[Ein kunstvoll angefertigter Topf.]
+
+Block 52
+[Getrocknete KrÑuter.]
+
+Block 53
+[Ein menschlicher SchÑdel.]
+
+Block 54
+[Ein Schmuckschild.]
+
+Block 55
+[Ein Metalltopf.]
+
+Block 56
+[Ein Zierschwert.]
+
+Block 57
+[Eine TÅre.]
+
+Block 58
+[Noch leer.]

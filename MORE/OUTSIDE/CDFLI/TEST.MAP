@@ -1,0 +1,556 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 01E8BH 01E8CH _TEXT              CODE
+ 01E8CH 0277EH 008F3H BBDATA_TEXT        CODE
+ 0277FH 0291CH 0019EH TEST_TEXT          CODE
+ 0291EH 0293CH 0001FH CALCADDR_TEXT      CODE
+ 0293EH 02955H 00018H MAKECXDA_TEXT      CODE
+ 02956H 02A22H 000CDH _BOBLITE_TEXT      CODE
+ 02A24H 02A4FH 0002CH _FILLBOX_TEXT      CODE
+ 02A50H 02AFDH 000AEH _HORLINE_TEXT      CODE
+ 02AFEH 02B54H 00057H _ONEBACK_TEXT      CODE
+ 02B56H 02C43H 000EEH _SAVEBAC_TEXT      CODE
+ 02C44H 02D4DH 0010AH _STRING6_TEXT      CODE
+ 02D4EH 02D68H 0001BH _WAITBOF_TEXT      CODE
+ 02D6AH 02D92H 00029H _FREEMS_TEXT       CODE
+ 02D94H 02DBCH 00029H _GETEMS_TEXT       CODE
+ 02DBEH 02DFEH 00041H _MEMBACK_TEXT      CODE
+ 02E00H 02E31H 00032H _SETEMS_TEXT       CODE
+ 02E32H 02EA0H 0006FH _INITEMS_TEXT      CODE
+ 02EA2H 02ECBH 0002AH _CLOSEFI_TEXT      CODE
+ 02ECCH 03041H 00176H _DOMAUS_TEXT       CODE
+ 03042H 030C0H 0007FH _GETFILE_TEXT      CODE
+ 030C2H 0317EH 000BDH _GETLENG_TEXT      CODE
+ 03180H 0329BH 0011CH _JOYINIT_TEXT      CODE
+ 0329CH 0335EH 000C3H _JOYTEST_TEXT      CODE
+ 03360H 033D9H 0007AH _OPENFIL_TEXT      CODE
+ 033DAH 03777H 0039EH _DEBINIT_TEXT      CODE
+ 03778H 0379BH 00024H _MCLEARS_TEXT      CODE
+ 0379CH 037CBH 00030H _MCOPYCL_TEXT      CODE
+ 037CCH 03822H 00057H _MSTRING_TEXT      CODE
+ 03824H 03849H 00026H _NORMPTR_TEXT      CODE
+ 0384AH 0392DH 000E4H _PRTDEC_TEXT       CODE
+ 0392EH 039F9H 000CCH _PRTHEX_TEXT       CODE
+ 039FAH 03F84H 0058BH CDFLI_TEXT         CODE
+ 03F85H 0468CH 00708H FLC_TEXT           CODE
+ 0468DH 048A5H 00219H FLI_FAST_TEXT      CODE
+ 048A6H 04989H 000E4H FLI_ASM_TEXT       CODE
+ 04990H 04990H 00000H _FARDATA           FAR_DATA
+ 04990H 04A96H 00107H TEST_DATA          FAR_DATA
+ 04A98H 04A9FH 00008H CDFLI_DATA         FAR_DATA
+ 04AA0H 04AA0H 00000H FLC_DATA           FAR_DATA
+ 04AA0H 04AA1H 00002H FLI_FAST_DATA      FAR_DATA
+ 04AB0H 04AB0H 00000H _FARBSS            FAR_BSS
+ 04AB0H 04AB0H 00000H _OVERLAY_          OVRINFO
+ 04AB0H 04AB0H 00000H _1STUB_            STUBSEG
+ 04AB0H 05C31H 01182H _DATA              DATA
+ 05C32H 05C33H 00002H _CVTSEG            DATA
+ 05C34H 05C39H 00006H _SCNSEG            DATA
+ 05C3AH 05C3AH 00000H _CONST             CONST
+ 05C3AH 05C45H 0000CH _INIT_             INITDATA
+ 05C46H 05C46H 00000H _INITEND_          INITDATA
+ 05C46H 05C46H 00000H _EXIT_             EXITDATA
+ 05C46H 05C46H 00000H _EXITEND_          EXITDATA
+ 05C50H 05CCFH 00080H _STACK             STACK
+
+  Address         Publics by Name
+
+ 04AB:0531       ACTCOLTABLE
+ 0291:000E       CALCADDRESS
+ 04AB:04FF       CDINFO
+ 04AB:0511       CDR
+ 04AB:050A       CDTINFO
+ 01E8:0888       CHANGEINTFREQ
+ 04AB:0B49       CRTC_DAT
+ 04AB:0B47       CRTC_IND
+ 04AB:0000       DATASEG@
+ 04AB:04CB       DEB
+ 0000:0294       DGROUP@
+ 04AB:0831       DIMCOLTABLE
+ 04AB:04F5       EMS
+ 04AB:0B65       FATALERROR
+ 04AB:0B31       FXTAB
+ 0000:039F       F_LXLSH@
+ 0000:03C0       F_LXURSH@
+ 0000:03E1       F_PADD@
+ 0000:0410       F_PSUB@
+ 04AB:00E6       GFX
+ 04AB:0B55       HL1MASK
+ 04AB:0B5D       HL2MASK
+ 04AB:0B4B       INPUT_STATS1
+ 04AB:0CA5       INSERT_S
+ 01E8:0789       INSTALLINT
+ 01E8:060C       INSTALLMULTIINT
+ 04AB:0382       IO
+ 04AB:0390       JOY
+ 01E8:0326       JOYSTICK
+ 01E8:017B       JOYSTICKA
+ 01E8:0214       JOYSTICKB
+ 01E8:02A4       JOYSTICKC
+ 04AB:03C8       JP1
+ 04AB:03DE       JP1C
+ 04AB:03CE       JP1O
+ 04AB:03D4       JP1V
+ 04AB:03F4       JP2
+ 04AB:040A       JP2C
+ 04AB:03FA       JP2O
+ 04AB:0400       JP2V
+ 04AB:0B69       KEYMAT
+ 04AB:0B82       KEYTAB1
+ 04AB:0BE5       KEYTAB2
+ 04AB:0C17       KEYTAB3
+ 04AB:0C73       KEYTAB4
+ 04AB:0B7A       KEYTABAPTR
+ 04AB:0B7C       KEYTABBPTR
+ 04AB:046E       KP
+ 04AB:0B79       LASTKEYCODE
+ 0000:039F       LXLSH@
+ 0000:03C0       LXURSH@
+ 0293:000E       MAKECXDAT
+ 04AB:0420       MAUS
+ 04AB:0479       MT
+ 04AB:0E27       MULTIINTFLAG
+ 01E8:0018       NEWKEYFLAG
+ 01E8:0092       NEW_INT_08H
+ 01E8:04FA       NEW_INT_09H
+ 01E8:0562       NEW_INT_24H
+ 0000:039C       N_LXLSH@
+ 0000:03BD       N_LXURSH@
+ 0000:03DE       N_PADD@
+ 0000:059B       N_PCMP@
+ 0000:040D       N_PSUB@
+ 01E8:000C       OLD_INT_08H
+ 01E8:0010       OLD_INT_09H
+ 01E8:0014       OLD_INT_24H
+ 0000:03E1       PADD@
+ 0000:0410       PSUB@
+ 04AB:0B3F       RANDLAST
+ 04AB:0B4D       SETMASK
+ 04AB:0B67       TICK_COUNTER
+ 01E8:07EE       UNINSTALLINT
+ 01E8:069F       UNINSTALLMULTIINT
+ 0000:027D       _abort
+ 04AB:00D2       _ACTCOLTABLEP
+ 0000:0298       _atexit
+ 0295:0006       _BOBLITE
+ 04A9:000A       _CDFLI_EMS_FRAMEADDR
+ 04A9:0008       _CDFLI_EMS_HANDLE
+ 04A9:000E       _CDFLI_EMS_OFFSET
+ 039F:0120       _CDFLI_PlayFli
+ 04AB:00DE       _CDINFOP
+ 04AB:00E2       _CDTINFOP
+ 01E8:08ED       _CHANGEINTFREQC
+ 048A:00C3       _CLEARVGA
+ 02EA:0002       _CLOSEFILE
+ 033D:01DD       _DEBBCK
+ 033D:0069       _DEBINIT
+ 033D:012E       _DEBMEM
+ 033D:0273       _DEBOPF
+ 033D:02D1       _DEBSTA
+ 04AB:00CE       _DEBUGPORTP
+ 033D:0306       _DEBVAR
+ 04AB:00D6       _DIMCOLTABLEP
+ 048A:0006       _DOCHUNK12
+ 02EC:000C       _DOMAUS
+ 0499:0002       _emsframeaddr
+ 0499:0000       _emshandle
+ 04AB:00CA       _EMS_PORTP
+ 0277:000F       _ende
+ 04AB:007F       _errno
+ 01E8:0066       _EXIT
+ 0000:0345       _exit
+ 039F:0057       _EXITVMODE13
+ 0000:0D19       _farfree
+ 0000:0E2D       _farmalloc
+ 0000:0F91       _farrealloc
+ 0000:13FA       _fflush
+ 02A2:0004       _FILLBOX
+ 03F8:0029       _flc_init_anim
+ 03F8:00A8       _flc_next_frame
+ 03F8:0005       _flc_setpixel
+ 0468:000D       _fli_fast_next_frame
+ 0000:14CE       _flushall
+ 0000:178B       _fputc
+ 0000:192D       _fputchar
+ 0000:0D19       _free
+ 02D6:000A       _FREEMS
+ 0000:15A8       _fseek
+ 0000:162F       _ftell
+ 04AB:00DA       _FXTABP
+ 02D9:0004       _GETEMS
+ 0304:0002       _GETFILE
+ 030C:0002       _GETLENGTH
+ 0384:0083       _HEX2DEC
+ 0392:0084       _HEX2STR
+ 02A5:0000       _HORLINE
+ 01E8:0019       _INIT
+ 0499:0006       _inited
+ 02E3:0002       _INITEMS
+ 039F:000A       _INITVMODE13
+ 01E8:08CC       _INSTALLINTC
+ 0000:11CA       _int86
+ 0000:1202       _int86x
+ 04AB:00C2       _IOMAUSP
+ 04AB:0096       _IOPORTP
+ 0000:049D       _isatty
+ 0318:0000       _JOYINIT
+ 04AB:009A       _JOYP
+ 0329:000C       _JOYTEST
+ 04AB:00AA       _JP_CPORT1P
+ 04AB:00BA       _JP_CPORT2P
+ 04AB:00A2       _JP_OPORT1P
+ 04AB:00B2       _JP_OPORT2P
+ 04AB:009E       _JP_PORT1P
+ 04AB:00AE       _JP_PORT2P
+ 04AB:00A6       _JP_VPORT1P
+ 04AB:00B6       _JP_VPORT2P
+ 04AB:00BE       _KP_PORTP
+ 0000:0565       _lseek
+ 0277:0067       _main
+ 0000:0E23       _malloc
+ 02DB:000E       _MEMBACK
+ 0000:171C       _memcpy
+ 04AB:00C6       _MEMPORTP
+ 0377:0008       _M_CLEARSCREEN
+ 0379:000C       _M_COPYCLIP
+ 037C:000C       _M_STRING6
+ 01E8:0572       _NEWKEY
+ 0382:0004       _NORMPTR
+ 01E8:05B1       _OLDKEY
+ 02AF:000E       _ONEBACK
+ 0336:0000       _OPENFILE
+ 0000:1743       _printf
+ 0384:000A       _PRTDEC
+ 0392:000E       _PRTHEX
+ 0000:0F8A       _realloc
+ 02B5:0006       _SAVEBACK
+ 04AB:0092       _SCRPORTP
+ 0000:05BC       _segread
+ 0000:13D7       _setblock
+ 02E0:0000       _SETEMS
+ 0000:1B61       _setvbuf
+ 039F:00A4       _SETVMODE13COL
+ 039F:00CC       _SETVMODE13PAL
+ 0468:017E       _SKIP3EMSPAGES
+ 0277:01A1       _SoundManager
+ 0499:0008       _Stopplay
+ 02C4:0004       _STRING6
+ 01E8:08E1       _UNINSTALLINTC
+ 02D4:000E       _WAITBOF
+ 04AA:0000       _WORKEMSOS
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 04AB:116C       __argc
+ 04AB:116E       __argv
+ 04AB:0E2A       __atexitcnt
+ 04AB:0E2C       __atexittbl
+ 0000:10BA       __brk
+ 04AB:0089       __brklvl
+ 04AB:006B       __C0argc
+ 04AB:006D       __C0argv
+ 04AB:0071       __C0environ
+ 0000:0374       __cexit
+ 0000:0168       __checknull
+ 0000:0155       __cleanup
+ 0000:0000  Abs  __cvtfak
+ 0000:0389       __c_exit
+ 04AB:1072       __doserrno
+ 0000:0484       __DOSERROR
+ 04AB:1074       __dosErrorToSV
+ 04AB:0075       __envLng
+ 04AB:0077       __envseg
+ 04AB:0079       __envSize
+ 0000:035B       __exit
+ 04AB:0EAC       __exitbuf
+ 04AB:0EB0       __exitfopen
+ 04AB:0EB4       __exitopen
+ 0000:1768       __fputc
+ 0000:194B       __FPUTN
+ 04AB:0085       __heapbase
+ 04AB:008D       __heaptop
+ 04AB:005B       __Int0Vector
+ 04AB:005F       __Int4Vector
+ 04AB:0063       __Int5Vector
+ 04AB:0067       __Int6Vector
+ 0000:043E       __IOERROR
+ 0000:04B5       __LONGTOA
+ 0000:0296       __MMODEL
+ 04AB:1048       __nfile
+ 04AB:104A       __openfd
+ 04AB:007D       __osmajor
+ 04AB:007E       __osminor
+ 04AB:007D       __osversion
+ 04AB:007B       __psp
+ 0000:12A2       __REALCVT
+ 04AB:1182       __RealCvtVector
+ 0000:01BE       __restorezero
+ 0000:110C       __sbrk
+ 04AB:1184       __ScanTodVector
+ 0000:0000  Abs  __setargv__
+ 0000:05E6       __setupio
+ 04AB:0081       __StartTime
+ 04AB:10CE       __stklen
+ 04AB:0EB8       __streams
+ 0000:0169       __terminate
+ 0000:053E       __UTOA
+ 04AB:007D       __version
+ 0000:06FD       __VPRINTER
+ 0000:1DFC       __write
+ 0000:1E4B       __xfflush
+ 0000:0BD9       ___first
+ 0000:0BDB       ___last
+ 0000:0BDD       ___rover
+ 0000:1C8C       ___write
+
+  Address         Publics by Value
+
+ 0000:0000  Abs  __setargv__
+ 0000:0000  Abs  __cvtfak
+ 0000:000C  Abs  __AHSHIFT
+ 0000:0155       __cleanup
+ 0000:0168       __checknull
+ 0000:0169       __terminate
+ 0000:01BE       __restorezero
+ 0000:027D       _abort
+ 0000:0294       DGROUP@
+ 0000:0296       __MMODEL
+ 0000:0298       _atexit
+ 0000:0345       _exit
+ 0000:035B       __exit
+ 0000:0374       __cexit
+ 0000:0389       __c_exit
+ 0000:039C       N_LXLSH@
+ 0000:039F       LXLSH@
+ 0000:039F       F_LXLSH@
+ 0000:03BD       N_LXURSH@
+ 0000:03C0       LXURSH@
+ 0000:03C0       F_LXURSH@
+ 0000:03DE       N_PADD@
+ 0000:03E1       F_PADD@
+ 0000:03E1       PADD@
+ 0000:040D       N_PSUB@
+ 0000:0410       F_PSUB@
+ 0000:0410       PSUB@
+ 0000:043E       __IOERROR
+ 0000:0484       __DOSERROR
+ 0000:049D       _isatty
+ 0000:04B5       __LONGTOA
+ 0000:053E       __UTOA
+ 0000:0565       _lseek
+ 0000:059B       N_PCMP@
+ 0000:05BC       _segread
+ 0000:05E6       __setupio
+ 0000:06FD       __VPRINTER
+ 0000:0BD9       ___first
+ 0000:0BDB       ___last
+ 0000:0BDD       ___rover
+ 0000:0D19       _free
+ 0000:0D19       _farfree
+ 0000:0E23       _malloc
+ 0000:0E2D       _farmalloc
+ 0000:0F8A       _realloc
+ 0000:0F91       _farrealloc
+ 0000:1000  Abs  __AHINCR
+ 0000:10BA       __brk
+ 0000:110C       __sbrk
+ 0000:11CA       _int86
+ 0000:1202       _int86x
+ 0000:12A2       __REALCVT
+ 0000:13D7       _setblock
+ 0000:13FA       _fflush
+ 0000:14CE       _flushall
+ 0000:15A8       _fseek
+ 0000:162F       _ftell
+ 0000:171C       _memcpy
+ 0000:1743       _printf
+ 0000:1768       __fputc
+ 0000:178B       _fputc
+ 0000:192D       _fputchar
+ 0000:194B       __FPUTN
+ 0000:1B61       _setvbuf
+ 0000:1C8C       ___write
+ 0000:1DFC       __write
+ 0000:1E4B       __xfflush
+ 01E8:000C       OLD_INT_08H
+ 01E8:0010       OLD_INT_09H
+ 01E8:0014       OLD_INT_24H
+ 01E8:0018       NEWKEYFLAG
+ 01E8:0019       _INIT
+ 01E8:0066       _EXIT
+ 01E8:0092       NEW_INT_08H
+ 01E8:017B       JOYSTICKA
+ 01E8:0214       JOYSTICKB
+ 01E8:02A4       JOYSTICKC
+ 01E8:0326       JOYSTICK
+ 01E8:04FA       NEW_INT_09H
+ 01E8:0562       NEW_INT_24H
+ 01E8:0572       _NEWKEY
+ 01E8:05B1       _OLDKEY
+ 01E8:060C       INSTALLMULTIINT
+ 01E8:069F       UNINSTALLMULTIINT
+ 01E8:0789       INSTALLINT
+ 01E8:07EE       UNINSTALLINT
+ 01E8:0888       CHANGEINTFREQ
+ 01E8:08CC       _INSTALLINTC
+ 01E8:08E1       _UNINSTALLINTC
+ 01E8:08ED       _CHANGEINTFREQC
+ 0277:000F       _ende
+ 0277:0067       _main
+ 0277:01A1       _SoundManager
+ 0291:000E       CALCADDRESS
+ 0293:000E       MAKECXDAT
+ 0295:0006       _BOBLITE
+ 02A2:0004       _FILLBOX
+ 02A5:0000       _HORLINE
+ 02AF:000E       _ONEBACK
+ 02B5:0006       _SAVEBACK
+ 02C4:0004       _STRING6
+ 02D4:000E       _WAITBOF
+ 02D6:000A       _FREEMS
+ 02D9:0004       _GETEMS
+ 02DB:000E       _MEMBACK
+ 02E0:0000       _SETEMS
+ 02E3:0002       _INITEMS
+ 02EA:0002       _CLOSEFILE
+ 02EC:000C       _DOMAUS
+ 0304:0002       _GETFILE
+ 030C:0002       _GETLENGTH
+ 0318:0000       _JOYINIT
+ 0329:000C       _JOYTEST
+ 0336:0000       _OPENFILE
+ 033D:0069       _DEBINIT
+ 033D:012E       _DEBMEM
+ 033D:01DD       _DEBBCK
+ 033D:0273       _DEBOPF
+ 033D:02D1       _DEBSTA
+ 033D:0306       _DEBVAR
+ 0377:0008       _M_CLEARSCREEN
+ 0379:000C       _M_COPYCLIP
+ 037C:000C       _M_STRING6
+ 0382:0004       _NORMPTR
+ 0384:000A       _PRTDEC
+ 0384:0083       _HEX2DEC
+ 0392:000E       _PRTHEX
+ 0392:0084       _HEX2STR
+ 039F:000A       _INITVMODE13
+ 039F:0057       _EXITVMODE13
+ 039F:00A4       _SETVMODE13COL
+ 039F:00CC       _SETVMODE13PAL
+ 039F:0120       _CDFLI_PlayFli
+ 03F8:0005       _flc_setpixel
+ 03F8:0029       _flc_init_anim
+ 03F8:00A8       _flc_next_frame
+ 0468:000D       _fli_fast_next_frame
+ 0468:017E       _SKIP3EMSPAGES
+ 048A:0006       _DOCHUNK12
+ 048A:00C3       _CLEARVGA
+ 0499:0000       _emshandle
+ 0499:0002       _emsframeaddr
+ 0499:0006       _inited
+ 0499:0008       _Stopplay
+ 04A9:0008       _CDFLI_EMS_HANDLE
+ 04A9:000A       _CDFLI_EMS_FRAMEADDR
+ 04A9:000E       _CDFLI_EMS_OFFSET
+ 04AA:0000       _WORKEMSOS
+ 04AB:0000       DATASEG@
+ 04AB:005B       __Int0Vector
+ 04AB:005F       __Int4Vector
+ 04AB:0063       __Int5Vector
+ 04AB:0067       __Int6Vector
+ 04AB:006B       __C0argc
+ 04AB:006D       __C0argv
+ 04AB:0071       __C0environ
+ 04AB:0075       __envLng
+ 04AB:0077       __envseg
+ 04AB:0079       __envSize
+ 04AB:007B       __psp
+ 04AB:007D       __osversion
+ 04AB:007D       __osmajor
+ 04AB:007D       __version
+ 04AB:007E       __osminor
+ 04AB:007F       _errno
+ 04AB:0081       __StartTime
+ 04AB:0085       __heapbase
+ 04AB:0089       __brklvl
+ 04AB:008D       __heaptop
+ 04AB:0092       _SCRPORTP
+ 04AB:0096       _IOPORTP
+ 04AB:009A       _JOYP
+ 04AB:009E       _JP_PORT1P
+ 04AB:00A2       _JP_OPORT1P
+ 04AB:00A6       _JP_VPORT1P
+ 04AB:00AA       _JP_CPORT1P
+ 04AB:00AE       _JP_PORT2P
+ 04AB:00B2       _JP_OPORT2P
+ 04AB:00B6       _JP_VPORT2P
+ 04AB:00BA       _JP_CPORT2P
+ 04AB:00BE       _KP_PORTP
+ 04AB:00C2       _IOMAUSP
+ 04AB:00C6       _MEMPORTP
+ 04AB:00CA       _EMS_PORTP
+ 04AB:00CE       _DEBUGPORTP
+ 04AB:00D2       _ACTCOLTABLEP
+ 04AB:00D6       _DIMCOLTABLEP
+ 04AB:00DA       _FXTABP
+ 04AB:00DE       _CDINFOP
+ 04AB:00E2       _CDTINFOP
+ 04AB:00E6       GFX
+ 04AB:0382       IO
+ 04AB:0390       JOY
+ 04AB:03C8       JP1
+ 04AB:03CE       JP1O
+ 04AB:03D4       JP1V
+ 04AB:03DE       JP1C
+ 04AB:03F4       JP2
+ 04AB:03FA       JP2O
+ 04AB:0400       JP2V
+ 04AB:040A       JP2C
+ 04AB:0420       MAUS
+ 04AB:046E       KP
+ 04AB:0479       MT
+ 04AB:04CB       DEB
+ 04AB:04F5       EMS
+ 04AB:04FF       CDINFO
+ 04AB:050A       CDTINFO
+ 04AB:0511       CDR
+ 04AB:0531       ACTCOLTABLE
+ 04AB:0831       DIMCOLTABLE
+ 04AB:0B31       FXTAB
+ 04AB:0B3F       RANDLAST
+ 04AB:0B47       CRTC_IND
+ 04AB:0B49       CRTC_DAT
+ 04AB:0B4B       INPUT_STATS1
+ 04AB:0B4D       SETMASK
+ 04AB:0B55       HL1MASK
+ 04AB:0B5D       HL2MASK
+ 04AB:0B65       FATALERROR
+ 04AB:0B67       TICK_COUNTER
+ 04AB:0B69       KEYMAT
+ 04AB:0B79       LASTKEYCODE
+ 04AB:0B7A       KEYTABAPTR
+ 04AB:0B7C       KEYTABBPTR
+ 04AB:0B82       KEYTAB1
+ 04AB:0BE5       KEYTAB2
+ 04AB:0C17       KEYTAB3
+ 04AB:0C73       KEYTAB4
+ 04AB:0CA5       INSERT_S
+ 04AB:0E27       MULTIINTFLAG
+ 04AB:0E2A       __atexitcnt
+ 04AB:0E2C       __atexittbl
+ 04AB:0EAC       __exitbuf
+ 04AB:0EB0       __exitfopen
+ 04AB:0EB4       __exitopen
+ 04AB:0EB8       __streams
+ 04AB:1048       __nfile
+ 04AB:104A       __openfd
+ 04AB:1072       __doserrno
+ 04AB:1074       __dosErrorToSV
+ 04AB:10CE       __stklen
+ 04AB:116C       __argc
+ 04AB:116E       __argv
+ 04AB:1182       __RealCvtVector
+ 04AB:1184       __ScanTodVector
+
+Program entry point at 0000:0010
+

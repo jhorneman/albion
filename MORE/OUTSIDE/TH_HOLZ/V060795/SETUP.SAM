@@ -1,0 +1,1479 @@
+[ver]
+	4
+[sty]
+	
+[files]
+[charset]
+	82
+	ANSI (Windows, IBM CP 1252)
+[revisions]
+	0
+[prn]
+	HP DeskJet 500
+[port]
+	LPT1:
+[lang]
+	7
+[desc]
+	Beschreibung von Blue Byte's Setup-Programm
+	
+	
+	
+	
+	805033939
+	39
+	802388585
+	152
+	10
+	2111
+	16677
+	33
+	33
+	
+	
+	
+	
+	
+	
+	1
+[fopts]
+	0
+	1
+	0
+	0
+[lnopts]
+	2
+	Text Abstand
+	1
+[docopts]
+	5
+	2
+[GramStyle]
+	
+[ParaNum]
+	1
+[tag]
+	Kapitel ?
+	2
+	[fnt]
+		Times New Roman
+		480
+		0
+		49152
+	[algn]
+		1
+		2
+		0
+		0
+		0
+	[spc]
+		33
+		567
+		2
+		113
+		0
+		2
+		100
+	[brk]
+		16
+	[line]
+		10
+		0
+		2
+		0
+		1
+		1
+		8
+		10
+		60
+		1
+	[spec]
+		0
+		1
+		
+		0
+		2
+		1
+		0
+		10
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Kapitel ?
+	0
+	0
+[tag]
+	Kapitel ?.?
+	3
+	[fnt]
+		Times New Roman
+		400
+		0
+		49152
+	[algn]
+		1
+		2
+		0
+		0
+		0
+	[spc]
+		33
+		470
+		2
+		113
+		0
+		2
+		100
+	[brk]
+		16
+	[line]
+		10
+		0
+		2
+		0
+		1
+		1
+		2
+		10
+		20
+		1
+	[spec]
+		0
+		2
+		<*:>.<*:>.. 
+		0
+		2
+		1
+		0
+		10
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Kapitel ?.?
+	0
+	0
+[tag]
+	Kapitel ?.?.?
+	4
+	[fnt]
+		Times New Roman
+		320
+		0
+		49152
+	[algn]
+		1
+		2
+		0
+		0
+		0
+	[spc]
+		33
+		273
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		16
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		3
+		<*:>.<*:>.<*:>.. 
+		0
+		2
+		1
+		0
+		10
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Kapitel ?.?.?
+	0
+	0
+[tag]
+	Text
+	5
+	[fnt]
+		Times New Roman
+		280
+		0
+		49152
+	[algn]
+		257
+		2
+		283
+		0
+		0
+	[spc]
+		33
+		334
+		2
+		0
+		56
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Text
+	0
+	0
+[tag]
+	Right-Text
+	6
+	[fnt]
+		Times New Roman
+		240
+		0
+		49152
+	[algn]
+		1
+		2
+		170
+		170
+		0
+	[spc]
+		33
+		273
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Right-Text
+	0
+	0
+[tag]
+	Bullet-Text
+	7
+	[fnt]
+		Times New Roman
+		280
+		0
+		49152
+	[algn]
+		1
+		2
+		0
+		170
+		170
+	[spc]
+		33
+		273
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		<*5>
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Bullet-Text
+	0
+	0
+[tag]
+	Front-Text
+	8
+	[fnt]
+		Times New Roman
+		280
+		0
+		49152
+	[algn]
+		1
+		2
+		0
+		0
+		170
+	[spc]
+		33
+		273
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Front-Text
+	0
+	0
+[tag]
+	Abschnitt
+	9
+	[fnt]
+		Times New Roman
+		240
+		0
+		49153
+	[algn]
+		1
+		2
+		0
+		0
+		0
+	[spc]
+		33
+		273
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Abschnitt
+	0
+	0
+[tag]
+	Fu<\_>note
+	11
+	[fnt]
+		Times New Roman
+		280
+		0
+		49152
+	[algn]
+		257
+		2
+		283
+		0
+		0
+	[spc]
+		33
+		334
+		2
+		0
+		56
+		2
+		100
+	[brk]
+		4
+	[line]
+		9
+		0
+		2
+		0
+		1
+		2
+		1
+		20
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Fu<\_>note
+	0
+	0
+[tag]
+	Kopfnote
+	12
+	[fnt]
+		Times New Roman
+		280
+		0
+		49152
+	[algn]
+		257
+		2
+		283
+		0
+		0
+	[spc]
+		33
+		334
+		2
+		0
+		56
+		2
+		100
+	[brk]
+		4
+	[line]
+		10
+		0
+		2
+		0
+		1
+		1
+		2
+		10
+		20
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Kopfnote
+	0
+	0
+[tag]
+	Tabellen Text
+	0
+	[fnt]
+		Times New Roman
+		160
+		0
+		49152
+	[algn]
+		257
+		2
+		0
+		0
+		0
+	[spc]
+		33
+		334
+		2
+		0
+		0
+		2
+		100
+	[brk]
+		4
+	[line]
+		8
+		0
+		2
+		0
+		1
+		1
+		1
+		10
+		10
+		1
+	[spec]
+		0
+		0
+		
+		0
+		2
+		1
+		0
+		0
+		0
+		0
+	[nfmt]
+		280
+		1
+		2
+		,
+		.
+		DM
+	Tabellen Text
+	0
+	0
+[frm]
+	1
+	82432
+	0
+	8380
+	504
+	9820
+	8
+	1
+	1
+	1 0 0 0 0 0 0
+	0
+	16777215
+	3
+	[frmlay]
+		9820
+		504
+		1
+		0
+		0
+		1
+		8380
+		0
+		0
+		2
+		0
+		4
+		1
+		26124
+		1
+		0
+		504
+		0
+	[txt]
+>
+[frm]
+	7
+	1573060
+	1270
+	1270
+	6013
+	2385
+	0
+	1
+	1
+	1 0 0 0 0 0 0
+	0
+	16777215
+	4
+	0
+	0
+	0 0
+	[frmlay]
+		8438
+		4743
+		1
+		0
+		0
+		1
+		1270
+		0
+		0
+		2
+		0
+		116
+		0
+		0
+		1
+		1594
+		10673
+		0
+	[tbl]
+		 4 2 183 85 4570 85 1 43 43
+		[h]
+			 0 183 86 2 0 2 0
+			 1 183 86 2 0 2 0
+			 2 183 86 2 0 2 0
+			 3 183 86 2 0 2 0
+		[e]
+		[w]
+			 0 3225 86 2 0
+			 1 1305 86 2 0
+		[e]
+		[data]
+			 0 0 0 0 0 0 4369 1 0 0 0 0
+386er, 16Mhz, AT-BUS
+
+>
+			 0 1 16 0 0 0 4369 1 0 0 0 0
+<+A>?
+
+>
+			 1 0 0 0 0 0 4369 1 0 0 0 0
+486er, 33Mhz, AT-BUS
+
+>
+			 1 1 16 0 0 0 4369 1 0 0 0 0
+<+A>?
+
+>
+			 2 0 0 0 0 0 4369 1 0 0 0 0
+486er, 66Mhz, VLB
+
+>
+			 2 1 16 0 0 0 4369 1 0 0 0 0
+<+A>18.000.000
+
+>
+			 3 0 0 0 0 0 4369 1 0 0 0 0
+586er, 100Mhz, PCI-Bus
+
+>
+			 3 1 16 0 0 0 4369 1 0 0 0 0
+<+A>40000000,00
+
+>
+		[e]
+	[tble]
+[lay]
+	Standard
+	516
+	[rght]
+		16839
+		11907
+		2
+		1270
+		1270
+		2
+		1270
+		1270
+		0
+		1
+		0
+		1
+		0
+		2
+		1
+		1270
+		10637
+		12
+		1
+		720
+		1
+		1440
+		1
+		2160
+		1
+		2880
+		1
+		3600
+		1
+		4320
+		1
+		5040
+		1
+		5760
+		1
+		6480
+		1
+		7200
+		1
+		7920
+		1
+		8640
+	[hrght]
+	[lyfrm]
+		1
+		11200
+		0
+		0
+		11907
+		1270
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		1
+	[frmlay]
+		1270
+		11907
+		1
+		1440
+		73
+		2
+		623
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		1
+		3
+		9360
+	[txt]
+@Kopfnote@<+B><:I0,0,0,0><:f,"LowerEastSide,>Blue Byte Setup-VGA<:f><:f>
+
+>
+	[frght]
+	[lyfrm]
+		1
+		13248
+		0
+		15569
+		11907
+		16839
+		0
+		1
+		3
+		1 0 0 0 0 0 0
+		0
+		0
+		2
+	[frmlay]
+		16839
+		11907
+		1
+		1440
+		623
+		2
+		15642
+		1440
+		0
+		1
+		0
+		1
+		1
+		0
+		1
+		1440
+		10465
+		2
+		2
+		4680
+		3
+		9360
+	[txt]
+@Fu<\_>note@<+B>Seite <:P11,1,> von <:X3,16384;NumPages>10<:X~3,16384;NumPages>
+
+<+B><:s>
+
+<+B><:s><:P10,0,Seite ><:P11,1,Seite >
+
+<+B><:P11,1,Seite >
+
+>
+[elay]
+[l1]
+	0
+[pg]
+	10
+	20 0 33 512 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	33 141 41 32 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	56 76 14 32 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	80 156 60 0 0 16 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	99 79 76 32 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	120 156 24 0 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	139 296 10 32 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	170 0 8 0 0 0 0 65535 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	218 0 25 0 0 0 0 65535 2 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+	255 0 32 1025 0 0 0 65535 65535 Standard	65535 0 0	0 0 0 0 0 0 0 65535 0 0 65535 0 0 0 0 0
+[edoc]
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+B><:I0,0,0,0><:#826,9367><:f720,"LowerEastSide,0,0,0><+#>   Blue Byte Setup-Vga    <-#><:f>
+
+<+B><:I0,0,0,0><:#332,9367><[>SETUP.SAM]
+
+<+B><:s><:I0,0,0,0><:#332,9367>Thomas Holz
+
+<+B><:s><:I0,0,0,0><:#332,9367>Copyright 1995 Blue Byte Software GmbH
+
+<+B><:s><:#332,9367>
+
+<+B><:s><:#332,9367>
+
+<+@><:s><:I2835,0,0,0><:#470,9367><:f400,,>1. Was ist Setup-VGA ?
+
+<+@><:s><:I2835,0,0,0><:#470,9367><:f400,,>2. Wie wende ich es an ?
+
+<+@><:s><:I2835,0,0,0><:#470,9367><:f400,,>3. Wie erweitere ich es ?
+
+<+@><:s><:I2835,0,0,0><:#470,9367><:f400,,>
+
+<+@><:s><:I2835,0,0,0><:#470,9367><:f400,,>4. Befehle und Syntax<:f>
+
+<+@><:I2835,0,0,0><:#470,9367><:f400,,>5. Die INI-Datei
+
+<+@><:I2835,0,0,0><:R1,12,1,720,1,1440,1,2160,1,2870,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640,><:f400,,>6. Beispielscript<:f><:p<* >>
+
+@Kapitel ?@<:s><:R1,12,1,720,1,1440,1,2160,1,2870,1,3600,1,4320,1,5040,1,5760,1,6480,1,7200,1,7920,1,8640,><:#626,9367>Kapitel 1 - Was ist Setup-VGA ?
+
+<+@><:R><:#1006,9367>Setup-VGA ist ein universelles <+!>Installations<-!>- und <+!>Konfigurationsprogramm<-!> f<\|>r MS-DOS. Es wurde in C geschrieben, arbeitet 
+<+!>scriptgesteuert<-!> und wurde mit/f<\|>r den WATCOM 32-Bit Compiler entwickelt.
+
+<+@><:#664,9367>Setup-VGA greift per Default auf die Datei "Install.scr" zur<\|>ck. Ein alternativer Scriptname kann als Parameter angegeben werden.
+
+<+@>Ebenfalls als Paramter kann <+!>"/vga"<-!> benutzt werden um den SVGA-Modus zu verbieten.
+
+@Kapitel ?@<+@><:#626,9367>Kapitel 2 - Wie wende ich es an ?
+
+<+@><:#1328,9367>Um es an ein Programm anzupassen, ist es nur notwendig die Scriptdatei "Install.scr" zu 
+<\d>ndern. Dazu geht man am besten von einer vorhandenen Datei aus. Die Men<\|>struktur ist meistens schon korrekt, lediglich Pfade und zu kopierende Dateien sind anzupassen.
+
+@Kapitel ?@<+@><:s><:#626,9367>Kapitel 3 - Wie erweitere ich es ?
+
+@Kapitel ?.?@<+@><:s><:#490,9367>Einf<\|>hrung einer neuen Sprache:
+
+<+@><:#1328,9367>Zu erst mu<\_> in "defines.h" das MAX_LANGUAGES define um eins erh<\v>ht werden. Jetzt kann in "Messages.c" die gesamte Text-Struktur kopiert werden und die Texte k<\v>nnen 
+<\|>bersetzt werden. Ein kompletter Re-Compile ist notwendig. Danach mu<\_> die Scriptdatei nat<\|>rlich noch an die neue Sprache angepa<\_>t werden.
+
+@Kapitel ?.?@<+@><:#490,9367>Implementation neuer Tokens:
+
+<+@><:#1660,9367>Zu erst mu<\_> in "Token.h" der neue Token per #define mit einer Identifikationsnummer versehen werden. Der Wert ist beliebig, darf aber noch von keinem anderen Token verwendet werden. In "Token.c" wird diese Definition mit einem Text verkn<\|>pft, der den 
+eigentlichen Namen repr<\d>sentiert. Die Schreibweise ist "case-sensitive".
+
+<+@><:#1660,9367>Jetzt kann in "Script.c" in "SCRIPT_ProcessScriptLine" ein neues "case" in "switch"-Leiste eingef<\|>gt werden. Das #define dient hier als Schl<\|>sselwert. Der Befehl wird einfach mit einem "break" abgeschlossen. Falls ein Sprung zu einer anderen Zeile err
+eicht werden soll, mu<\_> die Nummer dieser Zeile zur<\|>ckgegeben werden.
+
+<+@><:#996,9367>F<\|>r IF's gilt noch: Es mu<\_> zus<\d>tzlich in "SCRIPT_ScanForIfComplement" (gleiches File) in die "case"-Leiste eingef<\|>gt werden, damit es in der IF/THEN/ELSE-Strukur erkannt werden kann.
+
+@Kapitel ?.?@<+@><:s><:#490,9367><\D>nderung des Videomodus:
+
+<+@><:#1328,9367>Setup-VGA greift <\|>ber die Blue Byte OPM und DSA Bibliotheken auf die Grafikkarte zu. Die globale Aufl<\v>sung ist in Form von #defines in "defines.h" zu finden. Anschlie<\_>end m<\|>ssen wahrscheinlich noch Font-Gr<\v><\_>en und Fensterdimensionen ver<\d>
+ndert werden. (==<;>+<<==)
+
+@Kapitel ?.?@<+@><:s><:#490,9367><\D>nderung der Farben:
+
+<+@><:#996,9367>Alle Farben von Men<\|>s sind im Files "defines.h" zu <\d>ndern. Ihre Bedeutungen sind dort ausreichend dokumentiert (hoffe ich). Anschlie<\_>end mu<\_> der gesamte Code neu compiliert werden.
+
+<+@><:#1328,9367>Wenn die Palette ge<\d>ndert werden soll, so mu<\_> die Paletten-Tabelle in "global.c" ge<\d>ndert werden. Der Wertebereich ist 0 bis 100 (aufgrund DPaint). Enfernt man die Multiplikation in "RefreshedFixedPalette" in "grafix.c", so wird der Wertebereich da
+mit auf 0 bis 255 ge<\d>ndert.
+
+@Kapitel ?@<+@><:s><:#626,9367>Kapitel 4 - Befehle und Syntax:
+
+<+@><:I0,0,0,0><:#996,9367>Die Sprache, die von Setup-VGA verwendet wird ist eine primitive Makrosprache. Variablendeklarationen sind ebensowenig erlaubt wie eigene Funktionen. Im Telegrammstil:
+
+@Bullet-Text@<+@><:s><:#332,9367>Pro Zeile ist maximal ein Befehl zul<\d>ssig.
+
+@Bullet-Text@<+@><:s><:#332,9367>Leerzeilen sind m<\v>glich.
+
+@Bullet-Text@<+@><:s><:#332,9367>Kommentare werden wir in C++ mit einem doppelten Schr<\d>gstrich ("//") markiert.
+
+@Bullet-Text@<+@><:#332,9367>Labels beginnen mit einem Doppelpunkt, gefolgt vom Namen des Labels.
+
+@Bullet-Text@<+@><:#332,9367>Labels bestehen aus beliebig vielen Zeichnen (Alphanumerisch, keine Spaces).
+
+@Bullet-Text@<+@><:#332,9367>Strings m<\|>ssen in Hochkomma eingeschlossen werden ("").
+
+@Bullet-Text@<+@><:#664,9367>F<\|>r Error und Assert bestimmte Strings k<\v>nnen Tilden (~) enthalten um m<\v>gliche Trennstellen anzuzeigen. (z.B. Firmen~politiks~bro~sch<\|>ren~druckerei)
+
+<+@><:s><:#332,9367>
+
+@Front-Text@<+@><:s><:#332,9367>Folgende Befehle sind m<\v>glich:
+
+@Kapitel ?.?@<:s><:#490,9367>Vermischtes:
+
+@Kapitel ?.?.?@<:#379,9367>GOTO <+">Labelname<-">
+
+<:#332,9367>Springt zum angegebenen Label.
+
+@Kapitel ?.?.?@<:#379,9367>END
+
+<:#332,9367>Beendet das Installationsprogramm.
+
+@Kapitel ?.?.?@<:#379,9367>TEST_COMPUTER
+
+<:#664,9367>Testet Rechnereigenschaften wie VESA-Support, Geschwindigkeit, Co-Prozessor und so weiter.
+
+@Kapitel ?.?@<:#490,9367>If-Befehle:
+
+@Kapitel ?.?.?@<:#379,9367>IF_EXISTS <+">File/Dir<-">
+
+<:s><:#332,9367>Fragt ab, ob die angegebene Datei oder das Verzeichnis existiert.
+
+@Kapitel ?.?.?@<:#379,9367>IF_NOT_EXISTS <+">File/Dir<-">
+
+<:s><:#332,9367>Fragt ab, ob die angegebene Datei oder das Verzeichnis existiert.
+
+@Kapitel ?.?.?@<:#379,9367>IF_LANGUAGE <+">LanguageWert<-">
+
+<:#664,9367>Vergleich die vorher gesetzten Sprachnummer mit dem Parameter. Siehe SET_LANGUGE.
+
+@Kapitel ?.?.?@<:#379,9367>IF_WINDOWS
+
+<:#664,9367>Testet, ob das Programm in einer Windows-Shell l<\d>uft. Die Dos-Shell von OS/2-Warp wird f<\|>r echtes DOS gehalten.
+
+@Kapitel ?.?.?@<:#379,9367>ELSE
+
+<:#332,9367>Selbsterkl<\d>rend.
+
+@Kapitel ?.?.?@<:#379,9367>ENDIF
+
+<:s><:#332,9367>Selbsterkl<\d>rend.
+
+@Kapitel ?.?@<:#490,9367>Disk-Befehle:
+
+@Kapitel ?.?.?@<:#379,9367>COPY <+">Quelle Ziel<-"> <[>/s]
+
+<:#996,9367>Kopiert Quelle nach Ziel und bildet somit das <\D>quivalent zu dem DOS-Befehl. Ein Beispiele w<\d>re "COPY config.bsp c:\". Benutzt man den Paramter "/s" dann werden auch Unterverzeichnisse mit kopiert.
+
+<:#332,9367>Hinweise:
+
+@Bullet-Text@<:I283,170,170,0><:#1328,9367>Verzeichnisse werden nur angelegt wenn sie durch den "/s" Paramter abgedeckt werden. Befiehlt man "COPY C:\DOS\*.* C:\BACKUP\*.* /s", dann mu<\_> das Verzeichnis "BACKUP" bereits existieren. Alle Unterverzeichnisse von "DOS" werden aber n<\v>tigenfalls auto
+matisch angelegt.
+
+@Bullet-Text@<:I283,170,170,0><:#332,9367>Zyklische Kopien (z.B. "COPY C:\*.* C:\TMP\*.*") werden nicht abgefangen. 
+
+@Bullet-Text@<:I283,170,170,0><:#664,9367>Ein gleichzeitiges Umbenennen ("COPY C:*.XXX D:*.YYY") ist nicht m<\v>glich.
+
+@Bullet-Text@<:I283,170,170,0><:#996,9367>Die Quell-angabe darf nicht auf einem Verzeichnis enden ("COPY C:\TMP ..."), sondern mu<\_> mit Wildcards oder einer konkreten Datei enden (also: "COPY C:\TMP\*.* ...").
+
+@Bullet-Text@<:I283,170,170,0><:#1328,9367>Bei jedem Copy/Install-Befehl wird die Fortschrittsanzeige automatisch angezeigt. Falls noch kein Ziellaufwerk ausgew<\d>hlt wurde (und somit nicht bekannt ist, wieviel insgesamt kopiert werden mu<\_>), wird nur ein solider Balken angezeigt.
+
+@Kapitel ?.?.?@<:#379,9367>INSTALL <+">Quelle Ziel<-"> <[>/s]
+
+<:#1992,9367>Identisch mit COPY, au<\_>er da<\_> das vorher angegebene Quell- bzw. Zielverzeichnis vor Quelle bzw Ziel gesetzt wird. Daher ist es wichtig, da<\_> der Benutzer vorher mit den Befehlen SELECT_TARGET_DRIVE und SELECT_TARGET_ PATH Gelegenheit hatte diese Ang
+aben zur Verf<\|>gung zu stellen. Ein Beispiel "INSTALL *.* *.* /s" w<\d>re identisch mit "COPY G:\DATA\*.* D:\GAMES\ALBION\*.* /s"
+
+@Kapitel ?.?.?@<:#379,9367>MAKEDIR/MD <+">Verzeichnis<-">
+
+<:#996,9367>Legt das angegebene Verzeichnis an. Dabei k<\v>nnen direkt komplexe Verzeichnisstrukturen mit einem Mal angelegt werden. Zul<\d>ssig sind zum Beispiel "MAKEDIR c:\bb\siedler\bilder" oder "MD test" oder "MD g:rallye".
+
+@Kapitel ?.?.?@<:#379,9367>CREATE <+">Datei<-">
+
+<:#996,9367>Legt eine leere Datei mit angegebenem Namen an. Falls die Datei bereits existiert geschieht nichts. F<\|>r eine Beispielanwendung siehe Kapitel 5 (INI-Datei) und Beispielskript.
+
+@Kapitel ?.?.?@<:#379,9367>DELETE <+">Datei/Verzeichnis<-">
+
+<:#1328,9367>Dieser Befehl ist gef<\d>hrlich. Gef<\d>hrlich als sein DOS-Bruder, da er R<\|>ckfrage "DELETE C:" akzeptieren w<\|>rde und somit das gesammte Laufwerk C, inklusive aller Unterverzeichnisse l<\v>schen w<\|>rde. Also mit gro<\_>er Sorgfallt einsetzen. Einige
+ Beispiele: "DELETE ALBION", "DELETE PICS\*.*", "DELETE *.bak".
+
+@Kapitel ?.?.?@<:#379,9367>RENAME <+">alter_Name neuer_Name<-">
+
+<:#332,9367>Benennt eine Datei/Verzeichnis um. Akzeptiert keine Wildcards.
+
+@Kapitel ?.?.?@<:#379,9367>EXECUTE_SILENT <+">Programmname<-">
+
+<:#996,9367>F<\|>hrt ein MS-DOS Programm aus ohne den Bildschirm zu wechseln. Das Programm darf nichts auf den Bildschirm schreiben. Eine praktische Anwendung w<\d>re z.B. "EXECUTE_SILENT PAUSE <;>NUL".
+
+@Kapitel ?.?.?@<:#379,9367>EXECUTE_OWN_SCREEN <+">Programmname<-">
+
+<:#664,9367>Wechselt in den Textmodus, f<\|>hrt das Programm aus und restauriert den Bildschirm.
+
+<:I283,0,1077,0><:#1001,9367><+!>Wichtig:<-!> Keiner der beiden EXECUTE-Befehle kann in seiner Shell ein DOS4GW-Programm ausf<\|>hren, da eine Shell von DOS4GW nach DOS4GW prinzipiell nicht m<\v>glich scheint.
+
+@Kapitel ?.?.?@<:#379,9367>CD
+
+<:#996,9367>Wechselt in das angegebene Verzeichnis UND auf das angegebene Laufwerk. Zul<\d>ssig sind z.B. "CD C:" oder "CD G:\TEST\HALLO" oder "CD E:\" oder "CD test\hallo" oder "CD .."
+
+@Kapitel ?.?.?@<:#379,9367>SELECT_TARGET_DRIVE <+">AnzKB<-">
+
+<:#996,9367><\V>ffnet ein Fenster und pr<\d>sentiert dem Benutzer alle Laufwerke die mindestens 
+<+">AnzKB<-"> frei haben. Gibt es keine solches Laufwerk wird das Programm mit einer ErrorBox beendet. Der Text ist in Messages.c definiert.
+
+@Kapitel ?.?.?@<:#379,9367>SELECT_TARGET_PATH <+">DefaultPfad<-">
+
+<:#1328,9367>Der Benutzer darf einen Pfad zur Installation eingeben. Eine Vorgabe erh<\d>lt er durch den Parameter 
+<+">DefaultPfad<-">, der z.B. "BB\ALBION" seien k<\v>nnte. Das Programm setzt "<+">Laufwerk<-">:\" davor, was der Benutzer nicht mehr 
+<\d>ndern kann. Au<\_>erdem legt dieser Befehl das Verzeichnis automatisch an.
+
+@Kapitel ?.?.?@<:#379,9367>CD_SOURCE
+
+<:#332,9367>Wechselt auf das Laufwerk und Verzeichnis, das beim Programmstart aktiv war.
+
+@Kapitel ?.?.?@<:#379,9367>CD_TARGET
+
+<:#664,9367>Wechselt auf das Laufwerk und Verzeichnis, das der Benutzer zuvor mit SELECT_TARGET_DRIVE und SELECT_TARGET_PATH angegeben hat.
+
+@Kapitel ?.?.?@<:#379,9367>CHECK_CD
+
+<:s><:#332,9367>==<;>+<<== Noch nicht implementiert. 
+
+@Kapitel ?.?.?@<:#379,9367>SELECT_CD_ROM_DRIVE
+
+<:#332,9367>L<\d><\_>t den Benutzer aus einer Liste mit Laufwerken eines ausw<\d>hlen.
+
+@Kapitel ?.?@<:#490,9367>Men<\|>-Befehle:
+
+@Kapitel ?.?.?@<:#379,9367>MENU_START
+
+<:#664,9367>Setzt alle Daten die ein Auswahlmen<\|> betreffen zur<\|>ck. Sollte jedesmal benutzt werden bevor man ein Men<\|> definiert.
+
+@Kapitel ?.?.?@<:#379,9367>MENU_ENTRY <+">Text Label<-">
+
+<:#1328,9367>F<\|>gt einen Men<\|>eintrag zu einem Men<\|> hinzu. Gibt man keinen Label an, so wird diese Zeile als 
+<\\>berschrift angesehen und kann nicht angew<\d>hlt werden. Pro Men<\|> ist nur eine 
+<\\>berschrift zul<\d>ssig. Gibt man weder Text noch Label an, dann wird das als Leerzeile interpretiert. Dieser Befehl zeigt das Men<\|> noch nicht an!
+
+@Kapitel ?.?.?@<:#379,9367>MENU_END
+
+<:#332,9367>Zeigt ein zuvor definiertes Men<\|> an und springt zum entsprechenden Label.
+
+@Kapitel ?.?.?@<:#379,9367>PRINT <+">Text<-">
+
+<:#1660,9367>Dieser Befehl <\v>ffnet ein Fenster mit <+">Text<-"> und f<\d>hrt mit der Ausf<\|>hrung  des Skriptes fort. Das Fenster wird geschlossen, sobald ein anderes Fenster er<\v>ffnet wird (einzige Ausnahme: die Fortschrittsanzeige) oder wenn PRINT ohne Parameter 
+aufgerufen wird. Ruft man PRINT mit einem Text auf, obwohl noch ein PRINT-Fenster offen ist, wird der Text akutualisiert.
+
+@Kapitel ?.?.?@<:#379,9367>TEXT <+">Filename<-">
+
+<:#1992,9367>Zeigt ein Textfile namens <+">Filename<-"> an. Wegen des MCGA Modus sollte das File nirgendwo breiter als 38 Zeichen sein. Es werden immer 20 Zeilen auf einmal angezeigt und auch immer in 19er Schritten gebl<\d>ttert. Dies kann man gut f<\|>r einen Seitenau
+fbau des Scriptes nutzen. Da die Texte <\|>ber die normalen Umbruchroutinen laufen, werden doppelte Spaces ignoriert. M<\v>chten man sie trotzdem zum formatieren verwenden, so kann man Downslashes (_) verwenden.
+
+@Kapitel ?.?.?@<:#379,9367>ASSERT <+">Text<-"> <+">Nein-Label <[>Ja-Label]<-">
+
+<:#996,9367><\V>ffnet ein Fenster mit <+">Text<-"> und Kn<\v>pfen f<\|>r Ja und Nein. W<\d>hlt der Benutzer Nein, so verzweigt Setup zum Nein-Label. Optional kann ein Label f<\|>r die Ja-Option angegeben werden.
+
+@Kapitel ?.?.?@<:#379,9367>INFO <+">Text<-">
+
+<:#332,9367><\V>ffnet ein normales Fenster mit <+">Text<-"> und einem O.K. Button.
+
+@Kapitel ?.?.?@<:#379,9367>ERROR <+">Text<-">
+
+<:#332,9367><\V>ffnet ein rotes Fenster mit <+">Text<-"> und einem O.K. Button.
+
+@Kapitel ?.?.?@<:#379,9367>LOAD_BACKGROUND <+">Filename<-">
+
+L<\d>dt und zeigt das angegebene LBM-Bild als Hintergrundbild an. Das Suffix mu<\_> mit angegeben werden. Das Bild wird immer (unabh<\d>ngig von der eigenen Aufl<\v>sung und der des Bildschirmes) auf volle Bildschirmgr<\v><\_>e skaliert.
+
+<:#669,9367><+!>Wichtig:<-!> Das DP-Bild darf keinen 'Stencil' verwenden, da sonst Blue Byte's LBM_DisplayLBM() scheitert.
+
+@Kapitel ?.?.?@<:#379,9367>SET_LANGUAGE <+">Sprachnummer<-">
+
+<:#664,9367>Setzt die Sprache entsprechend dem angegebenen Parameter. Dabei gilt bis jetzt 1=Deutsch und 2=Englisch.
+
+@Kapitel ?@<+@><:#626,9367>Kapitel 5 - Die INI-Datei:
+
+<+@><:#4316,9367>Beim Benutzen des TEST_COMPUTER-Befehls im vom Benutzer angegebenen TargetPath eine INI-Datei aktualisiert. Hat der Benutzer keinen TargetPath angegeben (weil nur die Konfiguration ge<\d>ndert werden soll und SELECT_TARGET_DRIVE und SELECT_TARGET_PATH nicht
+ verwendet wurden), so wird die INI-Datei im Start-Verzeichnis angenommen. Sie wird niemals automatisch angelegt und bietet damit die ideale Information um zwischen Install- und Setupmodus zu unterscheiden. Nach einer erfolgreichen Installation sollte man s
+ie mit "CREATE setup.ini" im Zielverzeichnis ("CD_TARGET") anlegen. Ruft man jetzt "TEST_COMPUTER" auf, dann werden die Daten aktualisiert. Das n<\d>chste Mal kann man mit "IF_EXISTS setup.ini" rausbekommen, ob das Programm bereits installiert wurde.<**>Die
+ INI-Datei tr<\d>gt den gleichen Namen wie das Script. und hat z.B. folgende Inhalte:
+
+<+@><:I510,0,0,0><:#240,9367><:f200,,><+(>FPU=Y				(gibt an ob Coprozessor installiert ist)<-(>
+
+<+@><:I510,0,0,0><:#240,9367><+(><:f200,,>CD_ROM_DRIVE=G		(Der Benutzer hat sein CD-Laufwerk bei G:\)<-(>
+
+<+@><:I510,0,0,0><:#240,9367><+(><:f200,,>LANGUAGE=0			(Die gew<\|>nscht Sprache; Zahlbedeutung steht unten)<-(>
+
+<+@><:I510,0,0,0><:#240,9367><+(><:f200,,>INSTALLED=Y			(Eigendlich immer Y)<-(><:f>
+
+<+@><:I510,0,0,0><:#240,9367><+(><:f200,,>PIXEL_PRO_SEC=###		(s.u.)<-(><:f>
+
+<+@><:I510,0,0,0><:#240,9367><+(><:f200,,>VESA=Y				(zeigt, ob Treiber installiert oder nicht. Details unten)
+
+@Kapitel ?.?@<+@><:#490,9367>Pixel Pro Sekunde:
+
+<+@><:#1660,9367>Die Pixel pro Sekunde machen eine Aussage <\|>ber die Rechenpower des Ger<\d>tes, alle Hardwarekomponenten einbeziehend. Konkret bedeutet der Wert wieviele Pixel man in einer Sekunde mit DSA_CopyMainOPMToScr in den Bildschirm kopieren kann. Damit kann man g
+ut die Default-Detail-Level berechen. Einige Messwerte:
+
+<+A>	<:t0>
+
+@Kapitel ?.?@<+@><:#490,9367>VESA-Support:
+
+<+@><:#996,9367>Man sollte neben der normalen INI-Datei auch eine Datei namens VESA.INI mit dem CREATE-Befehl anlegen. Falls ein VESA-Treiber installiert ist, wird diese INI-Datei dann mit zahlreichen Informationen gef<\|>llt. Zum Beispiel:
+
+<:#240,9367><-(><+(><:f200,2Times New Roman,0,0,0>OEM=S3 Incorporated. Trio64			(Name des Herstellers)<-(>
+
+<:#240,9367><:f200,2Times New Roman,0,0,0><+(>VESA_VERSION_NUMBER=1<-(>		(Stand des Treibers)
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>VESA_VERSION_SUBNUMBER=2<-(>		(Hier: Version 1.2)
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MEMORY=2097152<-(>				(Speicher auf der Karte in Bytes. Hier 2MB)
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_640x400x256=Y<-(>			(siehe Hinweis unten)
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_640x480<:f200,2Times New Roman,0,0,0>x256=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_800x600x256=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_1024x768x256=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_640x480x32k=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_800x600x32k=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_1024x768x32k=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_640x480x64k=Y<-(><:f>
+
+<:#240,9367><:f200,2Times New Roman,0,0,0><+(>MODE_800x600x64k=Y<-(>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_1024x768x64k=Y<-(><:f>
+
+<:#240,9367><:f200,2Times New Roman,0,0,0><+(>MODE_640x480x16.2M=Y<-(><:f>
+
+<:#240,9367><:f200,2Times New Roman,0,0,0><+(>MODE_800x600x16.2M=Y				(Kann mein Monitor bestimmt nicht.)<-(><:f>
+
+<:#240,9367><+(><:f200,2Times New Roman,0,0,0>MODE_1024x768x16.2M=N<-(>				(Ist wahrscheinlich mangels RAM nicht m<\v>glich.)<:f>
+
+<+@><:#1001,9367><+!>Wichtig:<-!> Diese Werte sind mit Vorsicht zu geniessen. Dort wo ein 'N' steht, ist ziemlich sicher, da<\_> die Karte diese Funktion nicht hat. Aber folgendes kann schiefgehen:
+
+<+@><:I283,0,340,0><:#1328,9367>1) Der VESA-Treiber ist vor der Version 1.2. Dann wird die GetModeInfo Funktion nicht unterst<\|>tzt. Ein 'N' ist immer noch eine ziemlich sichere Information, aber es wird z.B. nicht ber<\|>cksichtig, ob die Karte 
+<\|>berhaupt genug Speicherplatz hat.
+
+<+@><:I283,0,340,0><:#664,9367>2) Der Monitor kann <\|>berfordert sein. Bei mir wurden Modi mit 'J' markiert die mein Monitor mit Sicherheit NICHT schafft.
+
+<+@><:I283,0,340,0><:#332,9367>Deshalb probiert Setup/Vga die Modi auch nicht aus, sondern fragt nur an.
+
+@Kapitel ?@<+@><:#626,9367>Kapitel 6 - Beispielscript:
+
+<+@><:#664,9367>Dieses Beispielscript installiert, verwaltet und l<\v>scht das Setup-Programm nach Wunscht des Benutzers:
+
+<:I0,0,0,0><:#216,9367><:f180,,>//------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>//Install.scr - Beispiel-install-script f<\|>r SETUP.EXE
+
+<:I0,0,0,0><:#216,9367><:f180,,>//------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>LOAD_BACKGROUND "install.lbm"
+
+<:I0,0,0,0><:#216,9367><:f180,,>
+
+<:I0,0,0,0><:#216,9367><:f180,,>//Installation oder Setup ?
+
+<:I0,0,0,0><:#216,9367><:f180,,>IF_NOT_EXISTS setup.ini
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ERROR "Willkommen zu Setup/Vga \n ============================= \n Wir werden jetzt zusammen Setup/Vga installieren. Bitte dr<\|>cken Sie die Eingabetaste oder klicken Sie mit der Maus auf <<O.K.<;>!"
+
+<:I0,0,0,0><:#216,9367><:f180,,>
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>Hauptmen<\|>/Install
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_RESET
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "Hauptmen<\|> (Install) - Sie k<\v>nnen.."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..Setup/Vga installieren." </{>InstallSetupVga
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..das Readme-File ansehen." </{>BrowseReadmeFromInstall
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..Setup/Vga verlassen." </{>ExitSetupVgaFromInstall
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_DO_SELECT
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>InstallSetupVga
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ERROR "Sagen wir mal, dies Programm w<\|>rde von einer CD in~stalliert oder Daten von eine CD brauchen. Dann m<\|><\_>ten Sie jetzt sagen, welchen Buchstaben Ihr CD-Laufwerk hat."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   SELECT_CD_ROM_DRIVE
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ERROR "Ich brauche ca. 470kb freien Speicher~platz um Setup/Vga zu in~stallieren. Ich werdeg Ihnen gleich die Lauf~werke zeigen, auf denen Sie soviel frei haben und Sie sagen mir wohin ich es in~stallieren soll."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   SELECT_TARGET_DRIVE 470
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ERROR "Ich w<\|>rde vor~schlagen, wir in~stallieren mich jetzt in das Ver~zeich~nis 'BB-Setup' auf dem ge~w<\d>hl~ten Lauf~werk. Aber Sie k<\v>nnen jetzt gleich auch etwas anderes eingeben."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   SELECT_TARGET_PATH BB-Setup  //Legt schon Verzeichnis an
+
+<:I0,0,0,0><:#216,9367><:f180,,>   PRINT "Ich kopiere jetzt die Daten.."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   CD_TARGET
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MD c-sources
+
+<:I0,0,0,0><:#216,9367><:f180,,>   CREATE setup.ini
+
+<:I0,0,0,0><:#216,9367><:f180,,>   CREATE vesa.ini
+
+<:I0,0,0,0><:#216,9367><:f180,,>   CD_SOURCE
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL *.exe *.exe
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL *.scr *.scr
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL *.txt *.txt
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL *.lbm *.lbm
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL src\*.c c-sources\*.c
+
+<:I0,0,0,0><:#216,9367><:f180,,>   INSTALL src\*.h c-sources\*.h
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ERROR "Setup/Vga wurde er~folg~reich in~stalliert. Bitte lesen Sie noch das ReadMe-File."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   GOTO </{>Hauptmen<\|>/Install
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>BrowseReadmeFromInstall
+
+<:I0,0,0,0><:#216,9367><:f180,,>   BROWSE_FILE readme.txt
+
+<:I0,0,0,0><:#216,9367><:f180,,>   GOTO </{>Hauptmen<\|>/Install
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>ExitSetupVgaFromInstall
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ASSERT "Sind Sie sicher, da<\_> sie Setup/Vga ver~lassen m<\v>chten ?" 
+</{>Hauptmen<\|>/Install </{>SetupEnde
+
+<:I0,0,0,0><:#216,9367><:f180,,>ELSE
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ERROR "Willkommen zu Setup/Vga \n ============================= \n Wir werden jetzt zu~sammen Setup/Vga warten. Bitte dr<\|>cken Sie die Ein~gabe~taste oder klicken Sie mit der Maus auf <<O.K.<;>!"
+
+<:I0,0,0,0><:#216,9367><:f180,,>
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_RESET
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "Hauptmen<\|> (Setup) - Sie k<\v>nnen.."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..das CD-Rom neu einstellen." </{>SelectCDFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..das Readme-File ansehen." </{>BrowseReadmeFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..Setup/Vga l<\v>schen." </{>DeleteSetupVga
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_ADD_ENTRY "..Setup/Vga verlassen." </{>ExitSetupVgaFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   MENU_DO_SELECT
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>SelectCDFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ERROR "So, welchen Buchstabe hatte nochmal Ihr CD-Laufwerk.."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   SELECT_CD_ROM_DRIVE
+
+<:I0,0,0,0><:#216,9367><:f180,,>   GOTO </{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>DeleteSetupVga
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ASSERT "Hey, Sie haben gew<\d>hlt, da<\_> sie Setup/Vga L<\V>SCHEN m<\v>chten. Meinen Sie das ernst?" 
+</{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ASSERT "Moment mal. Dies ist ein gutes Pro~gramm. Meinen Sie das WIRKLICH ernst?" 
+</{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ERROR  "Also sch<\v>n, dann werde mich halt selber ver~nichten."
+
+<:I0,0,0,0><:#432,9367><:f180,,>   ASSERT "Jetzt haben Sie aber sicher 'n Schreck be~kommen.. Wollen Sie mich immer noch los~werden?" 
+</{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ERROR  "Also gut das war's ich bin weg. Tschau.."
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE setup.exe
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE install.scr
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE install.lbm
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE readme.txt
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE setup.ini
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE vesa.ini
+
+<:I0,0,0,0><:#216,9367><:f180,,>   DELETE c-sources   //Komplettes Verzeichnis l<\v>schen
+
+<:I0,0,0,0><:#216,9367><:f180,,>   END_SETUP
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>BrowseReadmeFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   BROWSE_FILE readme.txt
+
+<:I0,0,0,0><:#216,9367><:f180,,>   GOTO </{>Hauptmen<\|>/Setup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   //------------------------------------------------------------------------------
+
+<:I0,0,0,0><:#216,9367><:f180,,>   :</{>ExitSetupVgaFromSetup
+
+<:I0,0,0,0><:#216,9367><:f180,,>   ASSERT "Sind Sie sicher, da<\_> sie Setup/Vga ver~lassen m<\v>chten ?" 
+</{>Hauptmen<\|>/Setup </{>SetupEnde
+
+<:I0,0,0,0><:#216,9367><:f180,,>ENDIF
+
+<:I0,0,0,0><:#216,9367><:f180,,>
+
+<:I0,0,0,0><:#216,9367><:f180,,>:</{>SetupEnde
+
+<:I0,0,0,0><:#216,9367><:f180,,>END_SETUP
+
+<:I0,0,0,0><:#216,9367><:f180,,>//SELECT_CD_ROM_DRIVE<:f>
+
+>
+
+[Embedded]
+00034665

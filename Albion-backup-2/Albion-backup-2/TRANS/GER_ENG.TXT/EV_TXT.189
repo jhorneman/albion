@@ -1,0 +1,55 @@
+189: Anne Dorbeck, Versorgung
+=============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+Block 0
+[{BLOK000}"Ich bin fÅr die Versorgung der Besatzung mit Nahrung und Anderem
+verantwortlich."{WORDNahrung}{WORDAnderem}]
+
+Block 1         Begr. 1x
+["Hallo. Womit kann ich dienen? 'ne kleine Zwischenmahlzeit? Ich hab' 'n paar
+gute Schokoriegel zu bieten. Ist nicht so sÅû, das Zeug." {BLOK010}"Ja, gerne.
+Immer her damit."]
+
+Block 2         Begr. 2-6x
+["Hallo, Driscoll. Noch'n biûchen Nachschub gefÑllig? Die Firma wird's
+verkraften." {BLOK010}"Ja, gerne. Kînnte noch was davon vertragen."]
+
+block 3         Begr. mehr als 6x
+["Hallo. Sorry, keine Schokoriegel mehr. Ich muû langsam darauf achten, daû
+die anderen auch etwas abbekommen. Du wirst noch fett werden, Driscoll."]
+
+Block 4         Antw. 1,10 und 2,10
+["Hier hast Du 'ne Packung."^^ {INK 001}Sie Åberreicht Tom einige Rationen.]
+
+Block 5         "Nahrung"
+["Es nicht gerade Feinschmeckerkost, was uns die Firma eingelagert hat. Aber
+mit ein biûchen Intuition beim Programmieren der KÅche mache ich daraus ein
+genieûbares Essen."]
+
+Block 6         "anderes"
+["Wenn Du neue Videos oder was zu lesen brauchst, wende Dich an mich, wenn ich
+in meinem BÅro bin."{WORDVideos}]
+
+block 7         "Videos"
+["Die Auswahl ist groû, schau bei Gelegenheit meine Datenbank durch."]
+
+Block 8
+[{BLOK000}Was kannst Du sagen Åber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demnÑchst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 9
+["Bis demnÑchst."]

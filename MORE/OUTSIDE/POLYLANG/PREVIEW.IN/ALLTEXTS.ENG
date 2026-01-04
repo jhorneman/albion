@@ -1,0 +1,1251 @@
+Block 0:
+[!]
+
+Block 1:
+[The floor panel in front of the door lights up when trodden on, and at the same time the door opens.]
+
+Block 2:
+[Floor panel lights up.]
+
+Block 3:
+[Here there is a floor panel with a transparent illuminated surface.]
+
+Block 4:
+[When this floor panel lights up, the door in the "west" of the room opens.]
+
+Block 5:
+[A switch.]
+
+Block 6:
+[The position of the switch will not change when it is pressed again.]
+
+Block 7:
+[The door tries to close, but remains open. A sensor must have registered that someone else is in the doorway.]
+
+Block 8:
+[There is a wall cupboard on the "north" wall.]
+
+Block 9:
+[The wall cupboard is empty, ready to put objects in.]
+
+Block 10:
+[A wall cupboard.]
+
+Block 11:
+[The noise came from the right, quite a distance away.]
+
+Block 12:
+[As soon as the door with the red lights opens, the one at the back with the green markings shuts. The way back is blocked!]
+
+Block 13:
+[This must be a service robot. It is carrying out some unknown task.]
+
+Block 14:
+[A door. You can't see how to open it.]
+
+Block 15:
+[A fluorescent tube. It sheds a cold white light.]
+
+Block 16:
+[A steel girder.]
+
+Block 17:
+[The translucent walls indicate a service entrance. The ladder in the centre leads upwards.]
+
+Block 18:
+[A numeric keypad for entering number codes.]
+
+Block 19:
+[A door with red lights at the side. There is no opening mechanism to be seen.]
+
+Block 20:
+[A door with green lights at the side. There is no opening mechanism to be seen.]
+
+Block 21:
+[A door with blue lights at the side.There is no opening mechanism to be seen.]
+
+Block 22:
+[The number combination must have been correct: the door next to the keypad has opened.]
+
+Block 23:
+[Nothing's happening.]
+
+Block 24:
+[Yeah! Made it!]
+
+Block 25:
+[A ladder. It leads upwards.]
+
+Block 26:
+[The floor panel is flashing rhythmically: it must have some special function.]
+
+Block 27:
+[A broken fluorescent tube.]
+
+Block 28:
+[{INK 001}Tom puts the gun in the wall cupboard.{INK 002}^^ "Right. Now, if I can get to the cupboard from the other side of this drain, I'll have fooled the Secus, and the gun will be mine!"]
+
+Block 29:
+[{CNTR}{FAHI}THAT'S ALL, FOLKS !]
+
+Block 30:
+[Load Picture:]
+
+Block 31:
+[Start FLC:]
+
+Block 32:
+[Play part of FLC:]
+
+Block 33:
+[Leave Script.]
+
+Block 34:
+["Nice start, Driscoll."]
+
+Block 35:
+["Thanks, I'm in the mood for flying today.^^There's a lot of routine stuff in my job, but flying to a new planet still gives me a buzz!"]
+
+Block 36:
+["You're telling me! Don't tell my boss, but I'd go without my pay to experience that feeling again!"]
+
+Block 37:
+["We're coming into range!^^Take a look at that, Hofstedt! Doesn't look like a barren planet to me."]
+
+Block 38:
+["You're right! There are plenty of clouds, and they're the wrong colour for dust clouds."]
+
+Block 39:
+["I'll talk to the TORONTO. Meanwhile, you try to pick up something on the instruments.^^Shuttle to TORONTO! Ned, how do you read me?"]
+
+Block 40:
+["Reading you loud and clear, Mr. Driscoll. Can you see your objective?"]
+
+Block 41:
+["Yes. The planet doesn't look much like a desert, though. Mr.
+Hofstedt is checking the instruments."]
+
+Block 42:
+["Interes..ng. Oh, I th..k the conn..tion is gett... weaker. Please cont..ue."]
+
+Block 43:
+["It's difficult to take measurements because of the thick cloud layer.^^Analysis indicates large quantities of raw materials...^^Seems to be more water than we..."]
+
+Block 44:
+["Just... moment, Mr. Hofst..t. The connec... is gett... weaker. Are y.. havi.. troub..? Mr. Driscoll?"]
+
+Block 45:
+["No. Everything seems to be A-OK."]
+
+Block 46:
+["Wow! Looks like I spoke too soon!^^ Servos out of action!
+Emergency circuits going down fast! Trying to do something manually!^^Hofstedt?"]
+
+Block 47:
+["Trying to carry out a check!"]
+Block 48:
+["Mr. Dr..coll? Your status indic...s crit.cal values. Please report!"]
+
+Block 49:
+["Several systems out of action! Manual control O.K.! Trying to turn round!"]
+
+Block 50:
+["We're having problems with the power supply. I... HEY!"]
+
+Block 51:
+["That was some bang! Damn, I'm losing control!^^ Hold tight, Hofstedt!^^WE'RE GOING DOWN!"]
+
+Block 52:
+[The Shuttle is now within the planet's gravitational pull and is hurtling down towards it!^^The small craft is rocked by violent shocks as it enters the planet's atmosphere.^^ Tom works feverishly and manages to make a bumpy crash landing...^^^^Slowly the men regain consciousness.]
+
+Block 53:
+["Ohh, my head!^^Remind me not to fly with you again, Driscoll."]
+
+Block 54:
+["At least, not in this old Shuttle.^^Anyway, you should thank me for saving your life! The automatic pilot would never have brought this old crate down safely!"]
+
+Block 55:
+["O.K., O.K. I get the picture.^^Now what?"]
+
+Block 56:
+["Now we grab our masks and get out of here. ^^If the air's breathable, we'll go through the spares and try to build a makeshift transmitter.^^If the air's not breathable... Good night, sweet Prince."]
+
+Block 57:
+[Oh, man.^^Well, I guess there's no sense putting it off.^^Let's go!"]
+
+Block 58:
+["WOW! So that's the so-called barren planet! I don't believe what I'm seeing! Take a look!"]
+
+Block 59:
+["Fantastic! Take a deep breath! Just listen! This place is teeming with life!"]
+
+Block 60:
+["The data the probe sent were way off! This is sensational!"]
+
+Block 61:
+["Let's get out of the Shuttle. In this oxygen-rich atmosphere it might..."]
+Block 62:
+[Everything around Tom is immersed first in light, then in darkness which lasts a long time. Then Tom begins to dream his dream again...]
+
+Block 63:
+[{CNTR}{FAHI} FEDDICH !]
+
+Block 64:
+[That dream again.]
+
+Block 65:
+[Must talk to Chris about it some time. Time to wake up. Got to prepare for the flight.]
+
+Block 66:
+[The flight.^^The Shuttle. ^^Been there already. ^^Already happened.
+^^^^Pain. ^^^^^Something's wrong, something's not right. More
+pain! ^^^^^^^What's happened?]
+
+Block 67:
+[Oh God, the crash!^^Then what happened? Oh, shit, the pain, why can't I wake up? ^^Hofstedt and I leave the Shuttle... ^^^^Plants and animals everywhere, the planet's alive! The colours, green everywhere, everything's green...]
+
+Block 68:
+[Srrniak? Rriiba nes anrji. Frinaard dra besiir wreniid?]
+
+Block 69:
+["What in the world... {FAT}^^WHERE AM I? ^^Who, WHAT'S that?{NORS}
+^^I thought I was AWAKE! ^^^Gotta get up and...^ "Aaahh! Oh, shit!"]
+
+Block 70:
+["Looks to me like you're on the mend. Welcome to the land of the living!"]
+
+Block 71:
+[ ]
+
+Block 72:
+[A fuse box.]
+
+Block 73:
+[An armchair.]
+
+Block 74:
+[A couch.]
+
+Block 75:
+[The control desk of the nuclear reactor.]
+
+Block 76:
+[A service panel. In der centre is a keypad for entering a code.]
+Block 77:
+[A control console.]
+
+Block 78:
+[A flight control console.]
+
+Block 79:
+[A control desk.]
+
+Block 80:
+[A chemical toilet.]
+
+Block 81:
+[A cupboard.]
+
+Block 82:
+[A wash basin.]
+
+Block 83:
+[Hand towels.]
+
+Block 84:
+[Tooth brushes and toothpaste.]
+
+Block 85:
+[An indicator for corridor security.]
+
+Block 86:
+[Security indicators.]
+
+Block 87:
+[Part of the reactor.]
+
+Block 88:
+[Containers for garbage, water, toxic material and raw materials.]
+
+Block 89:
+[A console, turned off.]
+
+Block 90:
+[A lamp.]
+
+Block 91:
+[A plate.]
+
+Block 92:
+[A glass.]
+
+Block 93:
+[A tumbler.]
+
+Block 94:
+[A receptacle.]
+
+Block 95:
+[A bottle.]
+
+Block 96:
+[A pot.]
+
+Block 97:
+[A can.]
+
+Block 98:
+[A receptacle for fluids.]
+
+Block 99:
+[A salt and pepper shaker.]
+
+Block 100:
+[Soy sauce.]
+
+Block 101:
+[A saucepan.]
+
+Block 102:
+[A small can.]
+
+Block 103:
+[A shovel.]
+
+Block 104:
+[A spade.]
+
+Block 105:
+[A spanner.]
+
+Block 106:
+[A screwdriver.]
+
+Block 107:
+[A hand console.]
+
+Block 108:
+[A PDA. (Personal Digital Assistant)]
+
+Block 109:
+[A pair of pliers.]
+
+Block 110:
+[Cutlery and a mug.]
+
+Block 111:
+[Crockery.]
+
+Block 112:
+[An automatic door.]
+
+Block 113:
+[A Shuttle.]
+
+Block 114:
+[Containers.]
+
+Block 115:
+[A shower.]
+
+Block 116:
+[A vehicle.]
+
+Block 117:
+[Place marker for other Cutmap Events.]
+
+Block 118:
+["That dream again. Must be the tenth time; what does it mean?^^ Can't ever remember dreaming in colour before...^^ Well, I guess I'll stretch my legs for a while. I hope the order comes through soon to take off for the Shuttle's reconnaissance flight."]
+
+Block 119:
+["Hi there, big guy! Had a good sleep?"]
+
+Block 120:
+["Christine! Good to see you, honey!^ I'm absolutely whacked. You were right; I should have stayed with you last night.
+I had that crazy dream again. Every time it gets... clearer."]
+
+Block 121:
+["It sure is crazy. You're not usually such a sensitive soul. It must be something to do with the overc  leap. Stay with me tonight, and I'll make you forget these silly nightmares!"]
+
+Block 122:
+["The dream began before that, and it isn't really a nightmare. It's just so intense!^^ Ah, what the hell. I'm going for a walk.
+Maybe I'll meet Captain Brandt and find out when I'm supposed to take off with Snoopy."]
+
+Block 123:
+["Snoopy? Didn't you...? Wow, you must really be a deep sleeper. You could hear the explosion all over the segment!"]
+
+Block 124:
+["Explosion? What explosion do you mean? What are you talking about, Chris? What's happened to Snoopy?"]
+
+Block 125:
+["The Inspector was sitting at the over-c comcontrols during the leap.
+The equipment overloaded and just blew up. They say they found Snoopy's remains all over the place."]
+
+Block 126:
+["That's terrible! I just can't believe it! That means now Hofstedt is the only government official on board."]
+
+Block 127:
+["Yes, I've heard he'll be coming with you on the reconnaissance flight instead of Snoopy."]
+
+Block 128:
+["What a great start to the day. Oh well, Hofstedt's not so bad, and the accident probably won't make any difference to my flight plan. I'll have a talk with Joe about it."]
+
+Block 129:
+["Your pal's been assigned to the "north-east" of the segment today, near the entrance to the Comroom.^^ O.K., it's time I was going. I've got a lot of work to do. See you later, honey."]
+
+Block 130:
+["So long, Christine."]
+
+Block 131:
+[This door is locked.]
+
+Block 132:
+["Ahem, Driscoll: Nothing personal, but I'd rather be on my own right now. Stay outside please."]
+
+Block 133:
+["There's nothing to see here. Go on."]
+
+Block 134:
+[{INK 001}This is Rainer Hofstedt, physicist and xenobiologist and a government supervisory official. He begins to speak excitedly.]
+
+Block 135:
+["Driscoll! I'm glad I've met you! Have you heard about Inspector Beegle's death?"]
+
+Block 136:
+["Hello, Hofstedt. Yes, my partner just told me about it. It must have been a horrific sight."]
+
+Block 137:
+["That obstinate British idiot! I know he wasn't a technician, but he must have known how difficult it is to control the Comsystem during the over-c leap. We still don't fully understand this super-light technology yet. Poor devil!"]
+
+Block 138:
+["That makes you the only government official on board, doesn't it?"]
+
+Block 139:
+["The only nosey parker, yes. Don't remind me!^^ Anyway, I just talked to Captain Brandt. He wants to go ahead with the flight, with yours truly instead of Beegle.^^
+Looks like you've got a new passenger, Driscoll."]
+
+Block 140:
+["I don't want to sound hard-hearted, but it makes no difference to the Shuttle which two people are on board. I don't see why the flight shouldn't go ahead as planned."]
+
+Block 141:
+["I must admit, I'm really looking forward to the flight. We should be taking off in the next few days. We'll have to wait for a message from the Captain."]
+
+Block 142:
+["That's right.^ I'll see you before then. See you later, Hofstedt!"]
+
+Block 143:
+["See you, Driscoll."]
+
+Block 144:
+["Hi, Driscoll. Good luck with your flight."]
+
+Block 145:
+[{INK 001}The security man glances at Tom sullenly. He does not answer.]
+
+Block 146:
+["Hello, Driscoll! I hear you've got a new passenger, since they scraped the Inspector off the walls.^I'll keep my fingers crossed for you."]
+
+Block 147:
+["Hi, Tom. Sorry, I'm in a bit of a hurry. Heavy duty rota! See you later."]
+
+Block 148:
+["Hello, Tom. I'd like to see what the Comroom looks like since Snoopy got killed. Pity the Secus are guarding it."]
+
+Block 149:
+[{INK 001}Tom tries to access the latest news from the console. The following messages appear before the news reports:{TECF}^^ {CNTR}{INK 002}***Video data not available***^ ***Comconection not active***^^ Text mode activated.]
+
+Block 150:
+["Hello, Driscoll. Having a look at the Shuttle? Don't worry, everything's fine."]
+
+Block 151:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 1 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 152:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 2 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 153:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 3 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 154:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 3 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 155:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 4 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 156:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 5 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 157:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 6 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 158:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 7 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 159:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 8 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 160:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 9 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 161:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 10 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 162:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 11 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 163:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 12 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 164:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 13 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 165:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 14 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 166:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 15 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 167:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 16 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 168:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 17 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 169:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 18 European Union: The 14th attempt to introduce an official common currency has failed as a result of Germany's opposition to the plan.]
+
+Block 170:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 19 McCartney heirs appeal to International Court of Justice. Will Brazil's attempt to dispossess the McCartney heirs threaten the last remaining expanse of rain forest?
+Some states have demanded that the heirs be protected by armed troops.]
+
+Block 171:
+[{TECF}NEWS FLASH (Text mode):^^{LEFT} 20 Random generators revealed as source of all evil! Blamed for poverty, disease and wars!]
+
+Block 172:
+[A console for accessing news reports.]
+
+Block 173:
+[An enormous bulkhead.]
+
+Block 174:
+["Good evening, Tom! Come in and make yourself comfortable."]
+
+Block 175:
+[Tonight Tom is not troubled by his dream...^^ Some time later, Tom leaves Christine's cabin.]
+
+Block 176:
+[This is the door to Christine's cabin. She is not there at the moment.]
+
+Block 177:
+[This is the door to Christine's cabin.^ Chris seems to be in.]
+
+Block 178:
+[{CNTR}Knock on the door?]
+
+Block 179:
+["Hello, Tom! Good to see you. Come in and make yourself comfortable."]
+
+Block 180:
+[A keypad for entering number codes.]
+
+Block 181:
+[{TECF}{CNTR}INCORRECT CODE. ENTRY REFUSED.]
+
+Block 182:
+[{TECF}{CNTR}ENTER ENTRY CODE:]
+
+Block 183:
+[Tom climbs down to the service level.]
+
+Block 184:
+[{TECF}{CNTR}CODE CORRECT. OPENING SERVICE PANEL.]
+
+Block 185:
+[The ladder leads down to the service level.]
+
+Block 186:
+[This is the Comroom! Tom looks round cautiously, but there is nobody here. The smell of burned-out electronic circuits hangs in the air.]
+
+Block 187:
+[So these are the remains of the Comsystem. It really must have been a terrific explosion.]
+
+Block 188:
+[Tom is just about to turn away when he catches sight of an object lying under the wrecked console. It is a gun!]
+
+Block 189:
+["How on earth did this gun get here? Except for the Secus, weapons are strictly forbidden on board^^ An interesting find anyhow..."]
+
+Block 190:
+[The destroyed Comsystem. There is nothing else of any interest to be found.]
+
+Block 191:
+[The destroyed Comsystem. There is something under it!]
+
+Block 192:
+[Pieces of the destroyed Comsystem.]
+
+Block 193:
+[The faces of the security officers register surprise, then anger, as they see somebody wandering around the area they are guarding!]
+
+Block 194:
+["Hold it right there, Driscoll! How did you get into the cordoned-off area?^^
+Don't move, we're gonna have to frisk you!"]
+
+Block 195:
+[Colonel Priver frisks Tom...]
+
+Block 196:
+["OK, you can go. But this will go on your personal record, I can promise you that!"]
+
+Block 197:
+["A gun! Are you crazy, Driscoll? This is going to look very good on your personal record, isn't it?^^ Get out of here -you'll be hearing from us!"^^{INK 001} Colonel Striver has confiscated the gun!]
+
+Block 198:
+["You again? Are you looking for trouble?"]
+
+Block 199:
+["Keep still!"^^{INK 001} Colonel Priver searches Tom thoroughly.]
+
+Block 200:
+[This is where Tom keeps his private possessions.]
+
+Block 201:
+[This was Inspector Beegle's room.]
+
+Block 202:
+[There are a lot of bullets in this cupboard!]
+
+Block 203:
+[Medipacs. A measured mixture of highly effective medicines.]
+
+Block 204:
+[It's not what they were intended for, but specialist tools like this are ideal for breaking open mechanical locks!]
+
+Block 205:
+[There are some concentrated nutrition bars here.]
+
+Block 206:
+[This is the TORONTO's Shuttle hangar. This is where all the small ship's flights start from.]
+
+Block 207:
+[{INK 001}An announcement booms through the ship's corridors:^^
+{INK 002}"Message for Pilot Driscoll: Shuttle ready for take-off.
+Take-off call will follow shortly."]
+
+Block 208:
+[{INK 001}An announcement over the loud speakers:^^{INK 002} "Message for Pilot
+Driscoll: Please report for take-off of reconnaissance flight."]
+
+Block 209:
+[{INK 001}An announcement over the loud speakers:^^{INK 002} Last call for Pilot
+Driscoll. Report to Shuttle hangar for take-off immediately!]
+
+Block 210:
+["Ok, guess I'll have to be going."]
+
+Block 211:
+[Tom hurries to the Shuttle hangar. They are waiting for him there.]
+
+Block 212:
+[{FAHI}{CNTR}A long script sequence follows: Tom & Rainer fly away and crash!]
+
+Block 213:
+[They are waiting for Tom in the Shuttle hangar. He hurries to the Shuttle, which is ready for take-off.]
+
+Block 214:
+[This bulkhead leads to cabins of the captain and the senior crew members.
+No other members of the crew are permitted to enter this area.]
+
+Block 215:
+[This leads to the section of the TORONTO where the sick bay and the security officers' accommodation are located. Other crew members are not permitted to enter this area.]
+
+Block 216:
+["Aha, we're ready at last. I must remember to take everything I might need during the flight."]
+
+Block 217:
+[Yep.]
+
+Block 218:
+[This is the Shuttle hangar. The reconnaissance flight to the planet will take off from here.]
+
+Block 219:
+[The bulkhead to the bridge. Only a small number of crew members are authorised to enter this area. Tom is not one of them.]
+
+Block 220:
+[This is the ship's mess, where the crew get together and have their meals.]
+
+Block 221:
+[Two security officers are standing guard at the entrance to the Comroom, where the ship's communication equipment is located.]
+
+Block 222:
+[Behind the lower door is the room where Tom's old friend, Joe, is working.]
+
+Block 223:
+[Announce take-off of Shuttle? {BLOK000}Yes, take off {BLOK001}No, wait]
+
+Block 224:
+[Tom goes to one of the consoles and announces everything is ready for take-off.^^ Shortly afterwards, in the Shuttle hangar...]
+
+Block 225:
+[Tom decides to ignore the call for the moment.]
+
+Block 226:
+[{CNTR}{INK 002}Please remember this is a Preview Version. Please forgive us if you find any bugs, missing parts or lack of "fine-tuning".^^^^
+{JUST}{INK 001} SHORT INFO FOR PREVIEW VERSION:^^ You are TOM DRISCOLL, a
+Shuttle pilot on board the TORONTO. The TORONTO is a factory space ship belonging to a company on Earth, whose mission is to extract large quantities of raw materials. The TORONTO is heading for a planet called NUGGET, a barren world with large deposits of raw materials.^^ You will soon be setting out on a reconnaissance flight in a small Shuttle with a government inspector, Mr. BEEGLE, nick-named SNOOPY, to investigate the planet.^^{LEFT} Your close associates:^ CHRISTINE  A Technician
+and your present partner.^ RAINER HOFSTEDT  Scientist and the second government representative on board.^ JOE  Technician and an old friend of yours.^^{JUST} This scenario is designed as an introduction to the action, and does not contain any battles. You have to talk to the characters to find out more about your situation. There is also a puzzle to be solved; if you solve it, you can keep an object which will help you later.^^
+The action begins straight after the Intro (see CD). TOM wakes up from a strange dream and begins his day's work.^^^ {CNTR}HERE GOES!]
+
+Block 227:
+[As Tom steps out into the corridor, he sees his partner, Christine, walking towards him from the right.^^Pleased, he goes up to her to speak to her.]
+
+Block 228:
+[{FAHI} S C R I P T  S E Q U E N C E  {NORS}^^ A script sequence begins here, describing the flight to Albion, the crash, the characters' first steps on the planet, the Shuttle explosion, and how the characters regain consciousness at the Iskai's settlement.]
+
+Block 229:
+["Driscoll, everything is ready for your flight."]
+
+Block 230:
+["All data necessary for plotting the course are available in the Shuttle's systems, Mister Driscoll.^^I will communicate with you directly during the flight so I can analyze the data for you immediately."]
+
+Block 231:
+["You know your mission: to carry out a series of measurements in orbit and on the planet itself to verify the data provided by the probe. Get Mister Hofstedt down safely.^ Good luck."]
+
+Block 232:
+["Thanks, Sir. I'll do my best.^^Are you ready, Hofstedt?"]
+
+Block 233:
+["Sure! Step on it, Driscoll!"]
+
+Block 234:
+[At the Shuttle Tom meets Captain Brandt, Ned's android body,
+the ship's AI System, and his passenger, Rainer Hofstedt.]
+
+Block 235:
+[Tom guides the Shuttle safely out of the huge mother ship.^^The little craft has a powerful drive, and in a couple of hours the two men are within range of their destination...]
+
+Block 236:
+["My old pal Joe is working at the end of this corridor.^^I think I'll go and look in on him."]
+
+Block 237:
+["The TORONTO is the biggest crate any of us have ever flown in. Everything's brand new, straight out of the box! I hear DDT have invested 3 years' profits in this ship. More than 120 billion
+Credits, it makes your head spin!"{WRNR0183}]
+
+Block 238:
+["Wait a minute. That's funny. I work for the company, but I can't just remember what the abbreviation stands for. We never use the full name. I think it's something like DaimlerDaihatsuThomson.
+I think it was formed when two old European companies and a Japanese one combined."]
+
+Block 239:
+["A fantastic thing. They say it swallowed up nearly a quarter of the development costs for the whole ship. When you think it's only 20 years since the first ship was fast enough to use consciousness algorithms. The thing used to answer like a feeble-minded kid, but today, when you talk to something like Ned, it's YOU that feels like an idiot.
+^^Still, it's a good idea to let Ned communicate with us through this android body. That way you don't feel so dumb as you do discussing things with a console or a wall panel.^^Anyway, Ned controls the whole ship, and later he'll do the same with the plant. It's funny to think it takes 80 crew to keep this running."{WRNR0182}{WRNR0192}]
+
+Block 240:
+["If only half of the data that the probe sent us about our destination are right, we'll all be able to afford the licence for an Indi from our bonus. There must be nearly as many raw materials as on Joshi. Hofstedt probably knows more about the exact data."{WRNR0200}{WRNR0187}{WRNR0188}{WRNR0198}]
+
+Block 241:
+["Yeah, just imagine having your own crate to shoot around in, just like some rich bastard!"]
+
+Block 242:
+["The green planet. Used to be, anyway. Fortunately, the data shows that Nugget is a barren planet, so there won't be anybody to belly-ache to us like those flop-ears on Joshi. I'm not an Envi, but even I don't like the idea of digging up a beautiful, lush planet like that."{WRNR0194}{WRNR0189}]
+
+Block 243:
+["Yeah, you're right. They were the only intelligent beings we've discovered apart from the Hoika. But even those lame-brains in the government figured the flop-ears had reached the limit of their evolution. Kind of decadent. Still, it's kind of a shame they caught that disease. There were only a couple of thousand of them left, but when you think a whole race is dying out, and there'll be nothing left...^ Oh well, at least the Hoika are still alive."{WRNR0190}{WRNR0202}]
+
+Block 244:
+["The settlers treated the natives of Gaia a bit rough; after all, it's the only planet we've found where humans can live for long periods. The Hoika were given their reservations."]
+Block 245:
+["What do you mean, the Comsystem or the drive?" {BLOK010}"The Com."
+{BLOK011}"The drive."]
+
+Block 246:
+["I've heard it was a pretty big bang. Must've made a hell of a mess. What was Snoopy doing fiddling with the Comsystem during the leap, anyhow?. The only good thing is at least we don't have any contact with HQ."{WRNR0193}{WRNR0199}]
+
+Block 247:
+["Worked well again, the overc. When you think there's still only a handful of people who really understand how the thing works..."]
+
+Block 248:
+["Once the ship has been converted to a processing plant on the planet, the work'll really get under way. I just hope everything's gonna work OK. This thing here has to build its entire infrastructure itself. You can't imagine how big the whole thing will get when it's excavated half the planet. The structures will be gigantic! And then at the finish the whole plant will be melted down and sent back home."]
+
+Block 249:
+["The government inspector? He took his job seriously, I hear he'd been breathing down the Captain's neck a couple of times.
+The guy who found him said he found bits of him under the Comconsole. And on the seat. And some of him was in the next room."{WRNR0196}{WRNR0202}]
+
+Block 250:
+["Heard the latest about the Environmentalists? Their radical wing has laid a ring of mines around the Galapagos Islands. Three Peruvian navy boats have been sunk already. The moderate Envis are going crazy. Now they'll have a tough job trying to impose any more restrictions on us."]
+
+Block 251:
+["I think Skipper Brandt's doing a good job, even if he does keep himself to himself a bit too much. You almost never see him outside duty hours. He spends more time talking to the AI than the crew."{WRNR0184}]
+
+Block 252:
+["I think the reason the governments breathe down our necks so much is they can't accept it's the big companies that control space flight. There's enough red tape at DDT already, but these government bureaucrats would never be able to build a ship like the TORONTO, even if they had the money."{WRNR0182}]
+
+Block 253:
+["According to the data, there are enough raw materials on the planet to justify landing this gigantic crate. I bet the champagne corks were popping at HQ when the data came in. I wonder what Nugget looks like. ^^Not too exciting, I guess. It's supposed to be a barren, bone-dry place with not even enough oxygen to breathe. At least there aren't any poisonous gases in the atmosphere. No life apart from maybe a few primitive plants. It's quite a bit smaller than the Earth, but because of the heavy elements its gravity is 0.8 G's. That's a good value, it protects the materials."{WRNR0199}]
+
+Block 254:
+["The guys at Osaka HQ won't be too pleased that we can't maintain proper contact with them. If this overc  technology wasn't so damned expensive, they'd probably have installed a second Comsystem.
+I figure we'll have to send a message when we send the first ore containers to Earth. Maybe then they'll send us the spare parts we need."{WRNR0191}]
+
+Block 255:
+["Well, now he's the only "official" on the ship. For an egg-head, the guy's OK. When you get him talking, he really lays into the company. I guess those poor ass-holes on the top floors are no angels either."{WRNR0202}]
+
+Block 256:
+["A gun! You know there'll be hell to pay if the Secus catch you with that. Better keep quiet about it."{WRNR0201}]
+
+Block 257:
+["The security people aren't particularly well-liked on any ship. Since the attack on the GATES 10 years ago, when they shot those strikers, the whole profession has had a bad reputation."]
+
+Block 258:
+["To tell you the truth, the TORONTO fills me with a mixture of awe and scepticism. The physicist in me admires the fantastic technical achievement; but it's a pity the whole thing is just designed as a plant to obtain raw materials from other worlds and devastate them in the process - even a barren world like the one we're going to, which DDT so tactfully named "Nugget"."{WRNR0183}{WRNR0186}{WRNR0192}]
+
+Block 259:
+["DaimlerDaihatsuThomson. I know your company better than you might think, Driscoll. My mother used to work for them, and I spent part of my early life inside the firm's culture. They're the second biggest conglomerate on Earth. Their turnover is bigger than the gross domestic product of most countries. DDT was formed by the amalgamation of two European companies and a Japanese one. It's one of the healthiest of the big multi-nationals, so it looks like your job's safe, Driscoll."{WRNR0199}]
+
+Block 260:
+["The new generation of conscious computers. DDT would never have been able to afford this AI System if they hadn't been leaders in the technology - and even so, Ned used up nearly 25% of the TORONTO's total development costs.
+The system contains processors that are specially adapted to consciousness algorithms. I've talked to Ned several times, and every time I get a shiver down my back. Ned is a very intelligent consciousness. This system has an unprecedented capability for making judgements.^ You can tell no expense was spared when you see the superb android body the AI has. The realistic human body helps to get rid of people's inhibitions about talking to an artificial intelligence."{WRNR0182}]
+
+Block 261:
+["The name of the planet we're headed for sums up how DDT sees it:
+nothing more than a warehouse of profitable raw materials. Didn't you get the data the probe sent us? Let me think a minute.^^Well, the data indicates a small barren planet, which because of its heavy core has a gravity of 0.8 G. Its atmosphere contains oxygen, but it probably won't be possible to breathe it unaided. The sun of the planet's solar system is a similar size to our own sun, but its light is further into the red end of the spectrum. The planet doesn't tilt on its axis, so there are unlikely to be any large geographical variations in temperature. I think we can expect daytime temperatures around 50 degrees centigrade and night-time temperatures below zero.^ Funnily enough, one solar orbit takes almost exactly the same time as an Earth year. Right, I think that's about all we know about our destination. We'll know more after our flight together."{WRNR0183}{WRNR0205}]
+
+Block 262:
+["The age of individual travel ended more than 100 years ago. Only the top earners can afford the licence for an individual vehicle. If you ask me, it's irresponsible madness to waste money maintaining the public highways just for a handful of people, but we have to keep up the illusion of free mobility."]
+
+Block 263:
+["Don't remind me! I think the Joshi affair and the disgraceful events on Gaia are the biggest scandals since interstellar space flight began. As you know, a flourishing planet was almost totally destroyed by one of DDT's competitors. And you know something else? If it hadn't turned out that they were wiping out intelligent beings as well as ruining a living planet, there probably still wouldn't be any restrictions on companies. ^^When I think what the multis had to say about it! "The planet's atmosphere contained toxic gases which were incompatible with human life". As if that made the indigenous
+flora and fauna any less valuable! It's incredible what they said about the wiping out of the Grik'tra too. They called them flop-ears and said they'd succumbed to the virus from Earth because they were decadent and had reached the end of their evolutionary potential!
+It's...^^ I'm sorry, I get really mad when I talk about it. Anyhow, all that is the reason why I'm on this ship. Since Joshi, no private space ship has been allowed to travel to unexplored solar systems without a government official on board."{WRNR0202}{WRNR0189}{WRNR0190}]
+
+Block 264:
+["That's a racist term, Driscoll. The Grik'tra were a cultured race with a history two hundred thousand years longer than our own. There were only a few thousand of them when the Earth virus wiped them out."]
+
+Block 265:
+["Gaia shows that we seem to be incapable of learning from the mistakes of our own history. In our euphoria after the invention, or rather discovery, of over-c, Gaia had the misfortune to be the first planet we found which could sustain human life.^^The discovery of intelligent inhabitants, the Hoika, caused more of a sensation than the successful over-c tests; but that didn't stop the settlers treating the Hoika the same way many races were treated on Earth in the colonial period. Today we can see just how exceptional Gaia was, because it's still the only world we've found where human beings can live for long periods."]
+
+Block 266:
+["Do you mean the Comsystem or the drive?" {BLOK010}"The Com."
+{BLOK011}"The drive."]
+
+Block 267:
+["The Comsystem is supposed to have been totally destroyed. Personally, I didn't get on particularly well with Snoop..., erm, Inspector Beegle. I wish I knew what he was doing fooling with the system during the leap.^ The high-energy over-c communication is so fantastically expensive, we evidently don't carry enough spares to repair the system."{WRNR0193}]
+
+Block 268:
+["The overc  drive is as important to us as fire was to early man.
+We don't completely understand how it works, but we use it and it's catapulted us into a totally new phase of our development - whatever the consequences may be..."]
+
+Block 269:
+["It'll be fascinating to observe how the ship transforms itself into a factory by creating its own infrastructure. The amount of automation involved is unimaginable. A metallic organism will be created that will grow bigger and bigger and send the surplus raw materials back to Earth. ^^The TORONTO is turning me into a split personality! Hofstedt the xenobiologist mourns the ruin of a virgin planet, but Hofstedt the physicist is captivated by the fantastic technical achievement which this ship represents."]
+
+Block 270:
+["The government inspector was the living cliche of an Englishman. To tell you the truth, I thought he was pretty arrogant, and we didn't get on too well. But he took his job seriously, I have to admit that."]
+
+Block 271:
+["You know, I used to be an active Environmentalist myself, until the radical wing got more and more involved in terrorism. But the official part of the organisation did achieve some great successes. Fortunately, since the tiger was genetically re-created last year, the public has been more positively disposed towards the Environmentalists. Since these scandals have been taking place on other planets, the condition of the last nature reserves on Earth has improved noticeably."]
+
+Block 272:
+["I think Brandt's OK. He's fascinated by Ned, our
+AI. Could be because he started off as a software engineer."{WRNR0184}]
+
+Block 273:
+["Happily, since the Multis' latest high-handed actions have been exposed, public pressure on the conglomerates has become much greater. Pretty soon, the government will deserve to be called a government again."]
+
+Block 274:
+["Didn't you get the data the probe sent us? Let me think a minute.^^Well, the data indicates a small barren planet, which because of its heavy core has a gravity of 0.8 G. Its atmosphere contains oxygen, but it probably won't be possible to breathe it unaided. The sun of the planet's solar system is a similar size to our own sun, but its light is further into the red end of the spectrum. The planet doesn't tilt on its axis, so there are unlikely to be any large geographical variations in temperature. I think we can expect daytime temperatures around 50 degrees centigrade and night-time temperatures below zero.^^ Funnily enough, one solar orbit takes almost exactly the same time as an Earth year. Right, I think that's about all we know about our destination. We'll know more after our joint flight."{WRNR0205}]
+
+Block 275:
+["I bet they're tearing their hair at DDT Head Office in Osaka since we lost contact."]
+
+Block 276:
+["That's my name; quite right, Driscoll."]
+
+Block 277:
+["You have a weapon in your possession! Don't you know the Secus are the only crew members permitted to carry weapons? You'd better not show it to anybody, Driscoll."]
+
+Block 278:
+["I am a physicist and xenobiologist working for the government. As you know, I'm traveling with you to prevent a catastrophe like the one on Joshi happening again."]
+
+Block 279:
+["To tell you the truth, the TORONTO fills me with a mixture of awe and scepticism. The physicist in me admires the fantastic technical achievement; but it's a pity the whole thing is just designed as a plant to obtain raw materials from other worlds and devastate them in the process - even a barren world like the one we're going to, which DDT so tactfully named "Nugget"."]
+
+Block 280:
+["DaimlerDaihatsuThomson. I know your company better than you might think, Driscoll. My mother used to work for them, and I spent part of my early life inside the firm's culture. They're the second biggest conglomerate on Earth. Their turnover is bigger than the gross domestic product of most countries. DDT was formed by the amalgamation of two European companies and a Japanese one. It's one of the healthiest of the big multi-nationals. But DDT is going to make an enormous loss because of the incorrect data on this planet."]
+
+Block 281:
+["The new generation of conscious computers. DDT would never have been able to afford this AI System if they hadn't been leaders in the technology - and even so, Ned used up nearly 25% of the TORONTO's total development costs.
+The system contains processors that are specially adapted to consciousness algorithms. I've talked to Ned several times, and every time I get a shiver down my back. Ned is a very intelligent consciousness. This system has an unprecedented capability for making judgements."]
+
+Block 282:
+["Well, I guess the name doesn't apply any more - this planet's turned out to be a surprise of the first order. Wonder what was wrong with the probe. Still, some of the data was correct. The day does last 18 hours, the sunlight is at the warm end of the spectrum, and there aren't any seasons because the planet doesn't tilt on its axis."]
+
+Block 283:
+["Looks like individual transport is confined to our own two feet."]
+
+Block 284:
+["Don't remind me! I think the Joshi affair and the disgraceful events on Gaia are the biggest scandals since interstellar space flight began. As you know, a flourishing planet was almost totally destroyed by one of DDT's competitors. And you know something else? If it hadn't turned out that they were wiping out intelligent beings as well as ruining a living planet, there probably still wouldn't be any restrictions on companies. When I think what the multis had to say about it! "The planet's atmosphere contained toxic gases which were incompatible with human life". As if that made the indigenous
+flora and fauna any less valuable! It's incredible what they said about the wiping out of the Grik'tra too. They called them flop-ears and said they'd succumbed to the virus from Earth because they were decadent and had reached the end of their evolutionary potential!
+It's...^ I'm sorry, I get really mad when I talk about it. Anyhow, all that is the reason why I'm on this ship. Since Joshi, no private space ship has been allowed to travel to unexplored systems without a government official on board."]
+
+Block 285:
+["That's a racist term, Driscoll. The Grik'tra were a cultured race with a history two hundred thousand years longer than our own. There were only a few thousand of them when the Earth virus wiped them out."]
+
+Block 286:
+["Gaia shows that we seem to be incapable of learning from the mistakes of our own history. In our euphoria after the invention, or rather discovery, of over-c, Gaia had the misfortune to be the first planet we found which could sustain human life. The discovery of intelligent inhabitants, the Hoika, caused more of a sensation than the successful over-c tests; but that didn't stop the settlers treating the Hoika the same way many races were treated on Earth in the colonial period. Today we can see just how exceptional Gaia was, because it's still the only world we've found where human beings can live for long periods."]
+
+Block 287:
+["The Comsystem is supposed to have been totally destroyed. Personally, I didn't get on particularly well with Inspector Beegle. I wish I knew what he was doing fooling with the system during the leap.^ The high-energy over-c communication is so fantastically expensive, we evidently don't carry enough spares to repair the system."]
+
+Block 288:
+["I guess the conversion to a factory plant won't be possible now. I'm not even sure the TORONTO will be able to take off again unless we do something else."]
+
+Block 289:
+["You know, I used to be an active Environmentalist myself, until the radical wing got more and more involved in terrorism. But the official part of the organisation did achieve some great successes. Fortunately, since the tiger was genetically re-created last year, the public has been more positively disposed towards the Environmentalists. Since these scandals have been taking place on other planets, the condition of the last nature reserves on Earth has improved noticeably."]
+
+Block 290:
+["I think Brandt's OK. He's fascinated by Ned, our
+AI. Could be because he started off as a software engineer."]
+
+Block 291:
+["Looks like the data on this planet will have to be revised slightly!"]
+
+Block 292:
+[{BLOK000}"This is the fourth time I've checked the systems for landing today."
+{WRNR0206}]
+
+Block 293:
+["Hello, honey. Stretching your legs a bit before the Shuttle takes off? I'm checking the systems for landing this huge crate."
+{WRNR0205}{WRNR0206}{WRNR0207}]
+
+Block 294:
+["Bongiorno, honey. What's new?"]
+
+Block 295:
+["If everything goes OK, and I think it will, we'll have to strap ourselves in for about 45 minutes. By then, the landing will be completed and the segments of the ship will have opened out horizontally. The segments will have the correct gravitational pull in them. Don't forget to stow the stuff in your cabin securely."]
+
+Block 296:
+["Don't worry, honey. The systems and all the back-up circuits are working fine. It'll all go like clockwork."]
+
+Block 297:
+["I envy you and Hofstedt. You'll be the first people ever to set eyes on Nugget. I'll keep my fingers crossed for you, Tom. Take care of yourself, you hear?"{WRNR0200}{WRNR0186}]
+
+Block 298:
+["Well, if you're half as good a pilot as you're always telling me, I've got nothing to worry about. Seriously though, honey, don't do anything silly, OK? I really like you."]
+
+Block 299:
+["You can't get that dream out of your head, can you? It's weird the way it keeps coming back. But it's not really a nightmare. It's bound to go away sooner or later."]
+
+Block 300:
+[{BLOK000}What can you say about... {BLOK001}Take a look at this...
+{BLOK004}See you soon! {BLOK005}What's your job at the moment?]
+
+Block 301:
+[{BLOK000}"I'm simulating a couple of faults so I can check out the reserve systems."{WRNR0209}]
+
+Block 302:
+["Hello there, fella! Trying to interrupt my work, huh? Good idea!"
+{BLOK010}"Hi, Joe! Have you seen the Secus in the next room?"
+{BLOK011}"Joe! Last time you looked so whacked was after our tour round Osaka, just before take-off!"]
+
+Block 303:
+["Yes, they've blocked the entrance to the Comroom. Arrogant bastards." {BLOK010}"You're right. You know, I've always been the inquisitive kind. I'd like to take a look at the wreckage in the Comroom!"]
+
+Block 304:
+["Mmm, I know how to out-wit these cloak-and-dagger merchants. I could show you an entrance to the service deck. From there you should be able to give them the slip and get into the Comroom. How about it?"{WRNR0208} {BLOK010}"Great idea. Let's go!" {BLOK011}"Oh, it's not worth the bother. Forget it."]
+
+Block 305:
+["O.K., listen; the wall panels with the green lights conceal entrances to the service deck. You'll find one of these entrances at the top right of the room to the north of this one. You'll need to enter the code for this deck, which is "1042". Behind the entrance you'll find a ladder leading downwards, and then you can look for the service stairs up to the Com area."{WRNR0208}]
+
+Block 306:
+["Hey, that's not like you! Anyway, let me know if you change your mind."]
+
+Block 307:
+["The service deck is underneath the main deck, where we are right now.
+It leads to the ship's equipment and is used mainly by service robots and us technicians, when those tin cans can't fix something. ^^Don't forget, down there was designed with the robots in mind, so there are a lot of control panels and stuff on the floor that control the sewers.
+Have a good look round for switches if you get stuck. Keep your wits about you."]
+
+Block 308:
+["Give me a break. I'm up to my ears in work now we're so close to our objective! Anyhow, our marathon sake session in Osaka was worth it, wasn't it? Hah hah!"]
+
+Block 309:
+["Hi, Tom. Want a tip how you can get past the Secus?"
+{BLOK010}"O.K., O.K.! I give in. What do you have in mind?"]
+
+Block 310:
+["Well, see anything interesting?"{WRNR0208} {BLOK010}"I couldn't get through. I'll try again later." {BLOK011}"What was the code number for the service entrances?"]
+
+Block 311:
+["Don't forget to experiment with the switches and keep with the servicerobs, then you'll be OK."]
+
+Block 312:
+["Wow! Don't show that to anybody, or it'll be confiscated! A gun, that's hot stuff!"]
+
+Block 313:
+["Shit. Couldn't you have hidden the thing in the service deck and picked it up later from the other side? Oh well, it's too late now."]
+
+Block 314:
+["Oh, routine stuff, but plenty of it. I'm simulating all kinds of unlikely failures, but the ship's systems are coping with them with no trouble at all."]
+
+Block 315:
+["Well, see anything interesting?" {BLOK010}"Well, the overc  Com
+is a real mess. But the best thing is, I found a gun there!"]
+
+Block 316:
+[""Well, see anything interesting?" {BLOK010}"Well, the overc  Com
+is a real mess. But the best thing is, I found a gun there! But those Secu bastards took it off me, because the way back through the service deck was blocked."]
+
+Block 317:
+["Ah, early signs of Alzheimer's, huh? The code's "1042". Good luck!"]
+
+Block 318:
+["Well, see anything interesting?" {BLOK010}"The overc  Com is
+totally wrecked. They've got rid of Snoopy's remains, though."]
+
+Block 319:
+["Didn't you find anything else exciting? How disappointing."]
+
+Block 320:
+[{BLOK000}"I am a Security Officer, rank of Colonel."]
+
+Block 321:
+["Move along, there's nothing to see here." {BLOK010}"What's happened? You can't be standing here for the good of your health."]
+
+Block 322:
+["You must have heard about the accident involving the Inspector and the overc  Comsystem. The Comroom is off limits until further notice."{WRNR0210}]
+
+Block 323:
+["The room will be off limits to the crew until we're certain there's no danger from the damaged equipment. Now stop asking questions."]
+
+Block 324:
+["Don't get fresh, Driscoll. I'm still Colonel to you."]
+
+Block 325:
+["{HIGH}Are you crazy?^ {NORS}Hand over that gun at once! This will go on your personal record, Driscoll, I can promise you that!"^^ {INK 001}Priver takes the gun from Tom.]
+
+Block 326:
+["What are you waiting for? We're not paid to stand around talking."{WRNR0210}]
+
+Block 327:
+["Get lost, Driscoll. I don't feel like arguing with trouble-makers like you."]
+
+Block 328:
+[{BLOK000}What can you tell me about... {BLOK001}Take a look at this... {BLOK004}So long. {BLOK005}What is your task?]
+
+Block 329:
+[{BLOK000}"I am a mathematician and navigator."{WRNR0203}]
+
+Block 330:
+["Hello, Driscoll. All set for the flight?"{WRNR0205}]
+
+Block 331:
+["Ah, Driscoll. What else can I do for you?"{WRNR0205}]
+
+Block 332:
+["I've been checking through the calculations for your flight. Everything's A-OK, no critical points in the journey. Should be a piece of cake."]
+
+Block 333:
+["As I said, the calculations for the flight are ready and checked."]
+
+Block 334:
+["Pretty hard job this time. Even though we've got Ned, the wonder AI, on board - or maybe because we do. All through the flight I was trying to prove the AI had made an error, but I couldn't find a thing. I'm gonna rationalise myself out of a job before long with these checks. People don't trust the AI systems a hundred per cent yet, but I think that's about to change."{WRNR0184}]
+
+Block 335:
+[{BLOK000}"I'm a machine operator. I'm carrying out some tests to check that the mining equipment is ready for use."{WRNR0212}]
+
+Block 336:
+["Hello, Driscoll. How's things? We'll soon have reached Nugget, then I can stop loafing about and start work."{WRNR0186}]
+
+Block 337:
+["Hello, Driscoll. How's things?"]
+
+Block 338:
+["Well, first the systems we've brought with us will quarry enough ore to start production of more robot systems. Then the process will continue under its own steam, and more and more superfluous ore will be produced which will be sent back to Earth in the cheap containers."{WRNR0213}{WRNR0214}]
+
+Block 339:
+["The new models are huge, with integrated self-repair circuits. Those things are indestructible."]
+Block 340:
+["They say there are all kinds on Nugget."]
+
+Block 341:
+[{BLOK000}"I'm responsible for the life-support systems on board the ship."
+{WRNR0215}]
+
+Block 342:
+["Hello Driscoll, you crazy stunt pilot. Heard what happened to Snoopy?"
+{WRNR0193}]
+
+Block 343:
+["Hello, Driscoll. What's new?"]
+
+Block 344:
+["Everything's A-OK, I don't anticipate any problems. If a bit of shit finds its way into the drinking water system during landing,  you'll soon know about it!"]
+
+Block 345:
+[{BLOK000}"I'm responsible for providing the crew with food and other things."{WRNR0061}{WRNR0216}]
+
+Block 346:
+["Hello. What can I do for you? Want a little snack? I can let you have a couple of good chocolate bars, not too sweet." {BLOK010}"O.K>, hand them over."]
+
+Block 347:
+["Hello, Driscoll. Want some more supplies? The company can afford it." {BLOK010}"Yes, O.K., I could use some."]
+
+Block 348:
+["Hello. Sorry, I'm fresh out of chocolate bars. I've got to make sure the others get some too. You'll be putting on weight, Driscoll."]
+
+Block 349:
+["Here's a pack."^^ {INK 001}She gives Tom some rations.]
+
+Block 350:
+["The company hasn't exactly provided us with gourmet provisions, but with a bit of imagination when I program the kitchen, I'll make something edible out of them."]
+
+Block 351:
+["If you need some new videos or something to read, come and see me when I'm in my office."{WRNR0217}]
+
+Block 352:
+["There's plenty of choice; have a look through my data bank sometime."]
+
+Block 353:
+[{BLOK000}"I'm a machine operator in charge of the excavation robots. But right now I'm making the storeroom secure."{WRNR0218}]
+
+Block 354:
+["Hi, Tom! I'm a bit short of time; the Captain has landed me with the job of getting the storeroom ready for when we land."{WRNR0206}{WRNR0196}]
+
+Block 355:
+["Well, you know how it is. I don't usually start work till after we land, when we start digging."]
+
+Block 356:
+["We have to tie everything down in here - the gravity goes haywire when we're landing."]
+
+Block 357:
+["Well, is that it, Tom?"]
+
+Block 358:
+[{BLOK000}"I'm the Technical Supervisor for all segments."{WRNR0220}
+{WRNR0219}]
+
+Block 359:
+["Hello, Driscoll."]
+
+Block 360:
+["Whenever something gets stuck someplace, they all come to me and expect me to perform miracles. Still, I shouldn't complain, this flight's gone without a hitch so far. The TORONTO's worth every cent she cost."{WRNR0182}]
+
+Block 361:
+["Well, like I said: whenever something gets stuck someplace, they all come to me and expect me to perform miracles. Still, I shouldn't complain, this flight's gone without a hitch so far. The TORONTO's worth every cent she cost."{WRNR0182}]
+
+Block 362:
+["Out of the eight segments on the TORONTO, only two have life support systems installed: this one here, and the segment where the Secus, the sick bay and the reactor core are. The other segments contain machinery and materials for excavation. They don't need to be serviced during flight, so they don't bother me."{WRNR0201}]
+
+Block 363:
+["Didn't you understand what I said? Listen: out of the eight segments on the TORONTO, only two have life support systems installed: this one here, and the segment where the Secus, the sick bay and the reactor core are. The other segments contain machinery and materials for excavation. They don't need to be serviced during flight."{WRNR0201}]
+
+Block 364:
+[{BLOK000}"I am a physicist and xenobiologist working for the government" {WRNR0221}]
+
+Block 365:
+["Ah, hello, Driscoll! All set for our flight together?"
+{WRNR0205}]
+
+Block 366:
+["Hello there, Driscoll. Well, what's on your mind?"{WRNR0205}]
+
+Block 367:
+["Well, I work for the government because it's one of the only ways for me to do some practical work out here without being in the pay of a big company like DDT."{WRNR0183}]
+
+Block 368:
+["Yes, I'm looking forward to admiring your flying skills at first hand. It's always a great thrill for me to see a new world with my own eyes. Even if it's a rather barren world like this one, which your company has so poetically named "Nugget". Naturally, it would have been more interesting to visit a beautiful planet like Joshi used to be.^^But then this ship would have had a wasted journey, which, as an old Envi, I wouldn't have been too sorry about."
+{WRNR0186}{WRNR0188}{WRNR0194}{WRNR0192}]
+
+Block 369:
+["As I say, I'm looking forward to admiring your flying skills at first hand. It's always a great thrill for me to see a new world with my own eyes. Even if it's a rather barren world like this one, which your company has so poetically named "Nugget". Naturally, it would have been more interesting to visit a beautiful planet like Joshi used to be.^But then this ship would have had a wasted journey, which, as an old Envi, I wouldn't have been too sorry about.."
+{WRNR0186}{WRNR0188}{WRNR0194}{WRNR0192}]
+
+Block 370:
+[{BLOK000}What can you tell me about... {BLOK001}Take a look at this... {BLOK004}See you later. {BLOK005}What's your job?]
+
+Block 371:
+[{BLOK000}"I'm the Captain of this ship, as I'm sure you're aware."]
+
+Block 372:
+["What do, you want, Driscoll? I'm very busy, so close to landing." {BLOK010}"Sir, I was just wondering if you knew for definite when the Shuttle will be taking off."]
+
+Block 373:
+["I'm sorry, Driscoll, I don't have the time right now. You'll be notified of your flight time over the loudspeakers."]
+
+Block 374:
+["I can't tell you for definite yet, Driscoll. It won't be long, though. The bridge will tell you in plenty of time over the loudspeakers.^^Now please excuse me, I've got a lot to do."]
+
+Block 375:
+["You should have taken off ages ago, Driscoll. Didn't you hear the announcements? I know it's up to you to decide when you take off, but you really shouldn't test our patience too much."]
+
+Block 376:
+[{BLOK000}What can you tell me about... {BLOK001}Would you take a look at this, please?... {BLOK004}Goodbye, Sir. {BLOK005}What is your job?]
+
+Block 377:
+[{BLOK000}"I am Ned, the TORONTO's AI System."]
+
+Block 378:
+[{INK 001}This is the android body of Ned, the TORONTO's AI Computer System, which is used for communicating with humans.^^{INK 002} "Hello,
+Mister Driscoll. How can I help you?" {BLOK010}"Hello, er, Ned.
+Do you know anything about the accident that killed Inspector Beegle?"
+{BLOK011}"Ned, do you have any more detailed data about my reconnaissance flight with Dr. Hofstedt?" {BLOK012}"Are the preparations for landing going ahead as planned?" {BLOK013}"I have to go, Ned."]
+
+Block 379:
+["The explosion which tragically claimed Mr. Beegle's life must have occurred during the overc  phase.^^ I am afraid I do not know why Mr. Beegle was attempting to activate the Comsystem at the time. He was not on particularly close terms with the rest of the crew, so no-one was able to give any clue as to his motives.^^I am sorry I can not shed any more light on the matter, as the death of a government official, even when it was a pure accident, cast a shadow over our company."]
+
+Block 380:
+["The optimal take-off time is just being computed, Mister Driscoll. You will be notified over the loudspeaker in good time. The feeler instruments have so far confirmed the data sent back by the probe in all respects.^^You may expect to land on a dead, barren planet without any great atmospheric turbulence. Your flight is expected to be a completely routine one."]
+
+Block 381:
+["I am happy to report that the failure rate of all the systems is five times lower than on any previous DDT ship. In other words, everything is running like clockwork, Mister
+Driscoll."]
+
+Block 382:
+["As you will have gathered from the announcements, everything is ready for take-off.
+You just need to report when you are called."]
+
+Block 383:
+["Goodbye, Mr. Driscoll."]
+
+u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+J
+f
+j
+¶
+»
+
+
+ 
+0
+
+

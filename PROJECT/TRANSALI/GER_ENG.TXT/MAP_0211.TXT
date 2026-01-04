@@ -1,0 +1,40 @@
+
+Textfile fÅr Phasendebugging.
+======================================================================
+
+Block 0
+[ ]
+
+Block 1
+[Phase 0]
+
+Block 2
+[Phase 1]
+
+Block 3
+[Phase 2]
+
+Block 4
+[Phase 3]
+
+Block 5
+[Phase 4]
+
+Block 6
+[Phase 5]
+
+Block 7
+[Phase 6]
+
+Block 8
+[Phase 7]
+
+Block 9
+[Phase 8]
+
+Block 10
+[Herras getîtet]
+
+Block 11
+[Herras lebt]
+

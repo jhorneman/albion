@@ -1,0 +1,549 @@
+
+Cutmaptextfile
+---------------------------------------------------------------------
+
+Block 0            (frei)
+[ ]
+
+Block 1
+[Ein Sicherungskasten.]
+
+Block 2
+[Ein Sessel.]
+
+Block 3
+[Eine Liege.]
+
+Block 4
+[Das Steuerpult fr den Atomreaktor.]
+
+Block 5
+[Ein Servicepanel.]
+
+Block 6
+[Eine Steuerungskonsole.]
+
+Block 7
+[Eine Flugsteuerungskonsole.]
+
+Block 8
+[Ein Kontrollpult.]
+
+Block 9
+[Eine chemische Toilette.]
+
+Block 10
+[Ein Schrank.]
+
+Block 11
+[Eine Sple.]
+
+Block 12
+[Handtcher.]
+
+Block 13
+[Zahnputzzeug.]
+
+Block 14
+[Eine Anzeige fr die Korridor-šberwachung.]
+
+Block 15
+[Kontroll-Anzeigen.]
+
+Block 16
+[Ein Teil des Reaktors.]
+
+Block 17
+[F„sser mit Mll, Wasser, Gift- und Rohstoffen.]
+
+Block 18
+[Eine ausgeschaltete Konsole.]
+
+Block 19
+[Eine Lampe.]
+
+Block 20
+[Ein Teller.]
+
+Block 21
+[Ein Glas.]
+
+Block 22
+[Ein Becher.]
+
+Block 23
+[Ein Beh„lter.]
+
+Block 24
+[Eine Flasche.]
+
+Block 25
+[Eine Kanne.]
+
+Block 26
+[Eine Dose.]
+
+Block 27
+[Ein Gef„.]
+
+Block 28
+[Ein Pfeffer- und ein Salzstreuer.]
+
+Block 29
+[Sojasoe.]
+
+Block 30
+[Ein Topf.]
+
+Block 31
+[Eine kleine Dose.]
+
+Block 32
+[Eine Schaufel.]
+
+Block 33
+[Ein Spaten.]
+
+Block 34
+[Ein Schraubenschlssel.]
+
+Block 35
+[Ein Schraubenzieher.]
+
+Block 36
+[Eine Handkonsole.]
+
+Block 37
+[Ein PDA. (Personal Digital Assistent)]
+
+Block 38
+[Eine Zange.]
+
+Block 39
+[Besteck und ein Becher.]
+
+Block 40
+[Geschirr.]
+
+Block 41
+[Eine Automatik-Tre.]
+
+Block 42
+[Ein Shuttle.]
+
+Block 43
+[Container.]
+
+Block 44
+[Eine Dusche.]
+
+Block 45
+[Ein Fahrzeug.]
+
+Block 46
+[Bodenmarkierungen.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 50
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 62
+[Kaum sind die Secus mit Tom in der Mitte auer Sichtweite der anderen, sprt
+Tom einen kurzen, scharfen Schmerz am Hals. Die Injektion l„t alles um ihn
+herum in Dunkelheit versinken.]
+
+Block 63
+[Unbestimmte Zeit sp„ter kommt Tom in einem Krankenzimmer wieder zu sich.]
+
+Block 64
+["Verdammt! Mein Kopf!^^Was soll das ganze bescheuerte Theater? Sind die hier
+alle bergeschnappt?"]
+
+Block 65
+["Die Tr ist gesperrt! Driscoll, Du bist in Schwierigkeiten. Irgendwas ist
+hier faul."]
+
+Block 66
+[Die Tr ist gesperrt und l„t sich nicht ”ffnen.]
+
+Block 67
+[Eine Konsole zur šberwachung von K”rperfunktionen.]
+
+Block 68
+["Sie haben dieses Krankenzimmer in eine Gef„ngniszelle verwandelt!"]
+
+Block 69
+["Tom! Warte, ich versuche, reinzukommen!"]
+
+Block 70
+[Pl”tzlich ”ffnet sich die Tr und Toms alter Freund Joe kommt herein!]
+
+Block 71           Tom
+["Joe! Endlich eine Menschenseele! Was ist hier eigentlich los? Warum werde
+ich hier wie ein Verbre..."]
+
+Block 72           Joe
+["Stop, stop! Beruhige Dich, Mann.^^Erstmal: Sch”n, da Du noch am Leben bist.
+Wir hatten Dich und Hofstedt schon abgeschrieben."]
+
+Block 73           Tom
+["Sorry, Alter. Ich freu' mich auch, Dich zu sehen."]
+
+Block 74           Joe
+["O.K. Ich wei nicht, wie lange wir hier Zeit haben. Vielleicht merken sie,
+da ich die Tr mit einer manipulierten Karte aufbekommen habe."]
+
+Block 75           T
+["Ich habe mir schon gedacht, da Dein Besuch hier inoffiziell ist. Sag' mir
+endlich, was hier passiert ist!"]
+
+Block 76           J
+["Nichts da! Zuerst bist Du dran. Leg' los, kurz und knapp."]
+
+Block 77           T
+["Kurz und knapp? Mann, Du hast ja keine Ahnung..."]
+
+Block 78
+[Tom schildert so kompakt wie m”glich seine unglaublichen Erlebnisse. Er
+berichtet von den Iskai und Menschen und seinen Abenteuern auf einer vor Leben
+strotzenden Welt.^^Joe wird immer fassungsloser.]
+
+Block 79           J
+["Wow. Das mu ich im Sitzen verdauen.^^ Wenn ich dich nicht so lange kennen
+wrde, wrde ich tats„chlich glauben, da Du 'n bichen Nebenluft ziehst.^^Das
+ist wirklich alles passiert?"]
+
+Block 80           T
+["Du weit, da ich mir sowas nicht aus den Fingern saugen wrde. Hofstedt
+k”nnte Dir alles best„tigen, wenn er nicht bei den Dji Cantos geblieben w„re."]
+
+Block 81           J
+["Immerhin wrde das einiges erkl„ren. Aber da diese Welt so..."]
+
+Block 82           T
+["Jetzt bist Du dran, mein Freund. Was ist hier passiert."]
+
+Block 83           J
+["Alles geht seinen normalen Gang. Und genau das ist das Problem."]
+
+Block 84           T
+["Du willst mir doch nicht erz„hlen, da hier keiner was davon gemerkt hat,
+was mit diesem Planeten los ist!"]
+
+Block 85           J
+["šberleg' mal! Wenn Du auf der Erde inmitten der Wste Gobi gelandet w„rst,
+und weiter vom Planeten nichts gesehen hast, was wrdest Du dann denken?"]
+
+Block 86           T
+["Der Landeplatz ist geschickt gew„hlt, schon wahr. Das l„t nur den Schlu
+zu, da falsche Daten von der AI und K„pt'n Brandt an die Besatzung
+weitergegeben wurden."]
+
+Block 87           J
+["Offenbar. Aber davon mal abgesehen, einige Dinge sind schon passiert.^^Das
+die Atmosph„re besser atembar ist, als im voraus vermutet, ist schwer zu
+ignorieren.^^Auerdem sind wir bei den ersten Abbauarbeiten auf verdammt
+seltsame und wehrhafte Viecher gestoen. Solch hoch entwickelten Lebensformen
+kann es auf einem fast leblosen Planeten kaum geben."]
+
+Block 88           T
+["Und niemand ist mitrauisch geworden?"]
+
+Block 89           J
+["Na ja. Die Kreaturen wurden von den Secus abgewehrt. Am Anfang gab es ein
+v”llig verrckte Serie von unerkl„rlichen Einstrzen und Unf„llen. Das hat uns
+so in Trab gehalten, da wir kaum Zeit zum Schlafen, geschweige denn zum
+Nachdenken hatten.^^Der K„pt'n ist nach der "Brute Force" - Methode
+vorgegangen. Hat eine Menge Munition und Material gekostet, aber mit der
+Ausrstung, die uns mitgegeben wurde, haben wir alle Probleme einfach
+niedergewalzt.^^Schlielich haben all die Vorf„lle langsam nachgelassen. Die
+Pr„mien wurden glatt auf's Doppelte erh”ht und viele an Bord haben dadurch
+ihre Neugier verloren. Die anderen haben keine M”glichkeit, irgend etwas ber
+diese Welt in Erfahrung zu bringen. Du weit, es ist untersagt, den Bereich
+der Anlage zu verlassen."]
+
+Block 90           T
+["Pat alles hervorragend zusammen. Jetzt ist mir klar, warum sie mich
+kaltgestellt haben.^^Ich war wohl etwas naiv. Aber da es DDT auf die dreiste
+Methode versucht, h„tte ich nie gedacht. Irgend jemand wird dahinterkommen!"]
+
+Block 91           J
+["Vielleicht. Vielleicht nicht.^^Der Tod von Inspektor Beegle erscheint
+dadurch natrlich ebenfalls in einem neuen Licht."]
+
+Block 92           T
+["Richtig. Er k”nnte was von der Manipulation der Sondendaten gemerkt haben
+und hat versucht, einen Kontakt zu seiner Dienststelle herzustellen, als es
+ihn erwischte."]
+
+Block 93           J
+["Das gezielte šberladen der over-c - Konsole kann eigentlich nur von Ned, dem
+Bordrechner herbeigefhrt werden. Wenn die AI tats„chlich aktiv bei der ganzen
+Sache mitmischt, und davon mssen wir ausgehen, sollten wir verdammt
+vorsichtig sein. Es gibt nicht viel an Bord der TORONTO, was nicht von der AI
+gesteuert werden kann."]
+
+Block 94           T
+["Wir mssen trotzdem hier heraus und mit den Leuten an Bord reden! Ich kenne
+doch viele der Leute. Wenn sie alles ber diese Welt wissen, kann ich mir
+nicht vorstellen, da alle weiter an der Zerst”rung des Planeten
+weiterarbeiten, Pr„mie oder nicht."]
+
+Block 95           J
+["Mag sein. Es wrde jedenfalls fr genug Trubel sorgen, um den Betrieb hier
+zum Erliegen zu bringen.^^Aber das ist nicht das Problem. Das Problem ist die
+AI."]
+
+Block 96           T
+["Was soll das Ding machen? Uns den Strom abstellen? Ned mag Kameras haben,
+aber es sind keine Maschinenpistolen daran geschraubt."]
+
+Block 97           J
+["Ich habe vor ein paar Wochen etwas entdeckt, was an Bord wohl nur wenige
+wissen drften: Es gibt nicht nur einen der knstlichen K”rper, durch die die
+AI mit uns kommuniziert. Es gibt Dutzende!^^Und die Dinger sind gef„hrlich,
+gerade in dieser Anzahl. Wenn Ned in der Lage ist, alle K”rper gleichzeitig zu
+steuern und Ernst macht, gibt es an Bord ein Gemetzel!"]
+
+Block 98           T
+["Ach du Scheie. Du meinst, DDT wrde Gewalt gegen die eigenen Leute
+anwenden?"]
+
+Block 99           J
+["Das kannst Du Dir ausrechnen. Wenn ein Schiff dieser Gr”e seine Mission
+nicht erfllt, ist das kein herber Verlust fr die Bilanzen.^^Es w„re das Ende
+der Firma.^^Das motiviert zu auergew”hnlichen Anstrengungen und Manahmen,
+sage ich Dir."]
+
+Block 100          T
+["Also gut.^^Ich k”nnte Dir jetzt lang und breit erz„hlen, wie auf der langen
+Reise hierher dieser Planet und seine Bewohner zu einem Teil von mir wurden
+und so weiter und so fort.^^Ich sage zu dem Thema nur das Eine:^^Diese Welt
+wird nur ber meine Leiche umgegraben, O.K.?"]
+
+Block 101          
+[Joe schaut Tom eine Weile schweigend an. Nach einer Denkpause sagt er:]
+
+Block 102          J
+["Mu ja tolle Gegenden auf dieser Welt geben. Ich wrde sie gerne mal
+kennenlernen.^^Also: Ich werd's bestimmt bereuen, aber...^^Ich bin dabei."]
+
+Block 103          T
+["Was soll ich sagen? Ich..."]
+
+Block 104          J
+["Wie w„r's mit: 'Danke'?^^Ha, vergi' es!"]
+
+Block 105          T
+["Hast Du 'ne Idee, wie's weitergehen k”nnte?"]
+
+Block 106          J
+["Wir mten versuchen, die Energieversorgung der AI lahmzulegen. Dann k”nnten
+wir mit der ganzen Besatzung sprechen, auch mit den Sicherheits|leuten. Ich
+gehe davon aus, da die Secus nicht alle ber Leichen gehen. Es k”nnte dann
+eine kleine Palastrevolution geben, ohne da das Risiko eines Blutbades durch
+die AI-K”rper besteht."]
+
+Block 107          T
+["Ich gehe mal davon aus, da wir der AI nicht einfach den Stecker 'rausziehen
+k”nnen, oder?"]
+
+Block 108          J
+["Ich wute, da die Frage kommt.^^Der Zentralrechner, der Neds knstliches
+Bewutsein enth„lt, ist in einem Spezialgeh„use untergebracht, dem selbst
+Weltraum|bedingungen nichts ausmachen. Die Energie|versorgung geschieht
+drahtlos. Unsere einzige Chance liegt im zentralen Steuerraum des
+Fusions|kraftwerkes. Dort mte eine Konsole stehen, die in der Lage ist, die
+Energie|bertragung zur AI zu unterbrechen."]
+
+Block 109          T
+["Wie stehen unsere Chancen, dorthin zu gelangen?"]
+
+Block 110          J
+["Normalerweise beschissen.^^Zwei Dinge k”nnten uns jedoch helfen. Erstens ist
+das Kraftwerk in dem Segment, in dem wir uns gerade befinden.^^Zweitens
+konferiert die AI gerade mit dem Kapit„n, vermutlich ber Dich, brigens. Die
+verbale Kommunikation Neds mit einem Menschen beansprucht immer noch mehr
+Rechenzeit als alle anderen Aufgaben. Das heit, die TORONTO wird zwar weiter
+gesteuert, aber andere rechenzeit|intensive Dinge werden unterdrckt.^^Dazu
+geh”rt zum Beispiel die visuelle Auswertung von Kamerabildern.^^Lange Rede,
+kurzer Sinn: Wir k”nnten versuchen, unbemerkt durch die Service-Ebene zum
+Kraftwerks|raum zu gelangen, die AI abklemmen und die Leute an Bord ber
+diesen Planeten aufzukl„ren."]
+
+Block 111          
+["Klingt gut. Auf geht's zum Kraftwerk."]
+
+Block 112
+["Das ist alles, was Dir dazu einf„llt?^^Was soll's, wir mssen erstmal hier
+einen Zugang zum Servicedeck finden. Es ist dafr gesorgt worden, da in
+dieser Abteilung sonst niemand ist, wir sollten aber diesen Bereich nicht
+verlassen, sonst haben wir gleich die Secus am Hals. Die sperren uns wieder
+ein, bevor Du einen Pieps von Deiner Story ablassen konntest."]
+
+Block 113
+["Auf die Gefahr hin, mich zu wiederholen: Auf geht's!"]
+
+Block 114
+[Ein Tr”ffner.^^ Neben der Tastatur befindet sich ein Schlitz zum Einfhren
+von Codekarten.^^ Hier ist bereits ge”ffnet worden.]
+
+Block 115
+[Ein Tr”ffner.^^ Neben der Tastatur befindet sich ein Schlitz zum Einfhren
+von Codekarten.]
+
+Block 116
+["Hinter dieser Tr mte sich ein Servicepanel befinden, durch das wir in die
+Service-Ebene hinabsteigen k”nnen."]
+
+Block 117
+["Diese Schleuse fhrt nach drauen. Hat bestimmt eine hohe Alarmpriorit„t.
+Wenn wir die ”ffnen, haben wir sofort die AI und die Secus am Hals."]
+
+Block 118
+["Hier geht es in den Hauptbereich der Krankenstation und zu den Unterknften
+der Secus. Viele Leute dort, wir sollten, wie gesagt, lieber versuchen, hier
+den Einstieg in die Service-Ebene zu finden."]
+
+Block 119
+["Kannst Du die Tr knacken? Sollte nicht schwieriger als vorhin bei meiner
+Tr sein, oder?"]
+
+Block 120
+["Schon wahr. Ich hatte jedoch nur {FAT }eine{NORS} programmierbare Karte.
+Weit Du, wie schwierig es ist, an die Dinger ranzukommen? Auerdem sieht es
+so aus, als sei diese Tr auch mit einem Code zu ”ffnen."]
+
+Block 121
+["Und wo sollen wir den Code herbekommen?"]
+
+Block 122
+["Keine Ahnung."]
+
+Block 123
+[Hier liegt ein Zettel mit einer Codenummer darauf.]
+
+Block 124
+["Ha! Es geht doch nichts ber menschliches Versagen!^^Wie gut, da es so
+viele Leute gibt, die ihre Codenummern nicht behalten k”nnen. La' uns die
+Nummer ablesen und ausprobieren!"]
+
+Block 125
+[Eine Tastatur zur Eingabe von Zahlencodes.]
+
+Block 126
+[{TECF}{CNTR}™FFNUNGSCODE EINGEBEN:]
+
+BLOCK 127
+[{TECF}{CNTR}FALSCHER CODE. ™FFNUNG VERWEIGERT.]
+
+BLOCK 128
+[{TECF}{CNTR}CODE KORREKT. ™FFNE SERVICEPANEL.]
+
+Block 129
+["Ah, das Servicepanel. Der Code fr diesen Zugang lautet 1712."]
+
+Block 130
+["Der ™ffnungscode ist 1712"]
+
+BLOCK 131
+[{TECF}{CNTR}CODE KORREKT. ™FFNE TšR.]
+
+Block 132
+[Die Tr ist verschlossen.]
+
+Block 133
+[In diesem Schrank liegt eine grne Codekarte!]
+
+Block 134
+[Als Tom die Schleuse n„her untersucht, meint Joe:]
+
+Block 135
+["Ich sag's nochmal: La' das Ding lieber in Ruhe. Wir wrden einen Alarm
+ausl”sen."]
+
+Block 136
+[Hier lagern eine Menge Stimdrinks!]
+
+Block 137
+["Natrlich von dem Zettel, den wir oben gefunden haben, Mann!"]
+
+Block 138
+[Eine Leiter. Sie fhrt nach unten.]
+
+Block 139
+[Auf dem Weg durch das Servicedeck k”nnen Tom und Joe den Secus knapp
+entkommen.^^Eilig rennen sie durch den Krankenbereich, um die Schleuse nach
+drauen zu finden.]
+
+Block 140
+[Tom und Joe haben die Schleuse nach drauen schon fast erreicht, da sehen sie
+einen der K”rper der AI den Weg in die Freiheit blockieren!]
+
+Block 141
+["Tom Driscoll, Joe Bernard, Ihr Widerstand gegen die Bordregeln und Ihre
+offensichtliche Bereitschaft, gegen Firmeninteressen vorzugehen, machen
+drastische Manahmen leider unumg„nglich.^^Tut mir leid."]
+
+Block 142
+[Der AI-K”rper hebt eine Waffe!]
+
+(Tom knallt dem AI-K”rper einen Feuerball um die Ohren.)
+
+Block 143
+[Durch den Feuerball besch„digt, torkelt der AI-K”rper hilflos umher.]
+
+Block 144          Joe
+["Mein Gott!^^Was war {FAT }das{NORS}? Wie hast Du das gemacht, verdammt?"]
+
+Block 145          Tom
+["Ein kleines Geschenk, das man mir auf der Insel der Dji Cantos berreicht
+hat.^^Noch Fragen?"]
+
+Block 146
+["Dutzende. Aber keine Zweifel mehr an Deinem Bericht."]
+
+Block 147
+["Wie sch”n.^^O.K., la' uns abhauen. Es wird schwer genug, sich unentdeckt
+durch die Wste zu schlagen."]

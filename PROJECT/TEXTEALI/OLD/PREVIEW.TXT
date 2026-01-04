@@ -1,0 +1,160 @@
+Just to spare you the trouble of having to copy all the text from the
+screen (don't you just hate 6 by 6 pixel fonts ?), here is, at great
+personal expense, the text from
+
+			A M B E R M O O N
+			 - the preview -
+
+We assume you have seen Amberstar and the text will stress the improvements
+made in Ambermoon.
+
+A major feature of Ambermoon is the new dungeon system : no longer do you
+have to move through a blocky map, now you can move freely through creepy
+dungeons and fascinating cities.
+
+This is achieved by a real-time texture-mapping dungeon system which allows
+the player to move and turn smoothly through the 3-dimensional maps.
+
+We have had this dungeon system for at least one and a half years now (!),
+and we have thanked God on our bare knees that we finally had a program
+in which to put it.
+
+The problem with a small company like Thalion is that we cannot simply
+start a new project. Even though we are no longer the first on the
+market with this technology, we feel it will still help to make Ambermoon
+a very special RPG.
+The feeling of really walking through a dark dungeon, with gruesome
+monsters lurking around every corner, is conveyed better than ever before.
+
+A special version of the dungeon system is present in the final game which
+is specifically written for turbo-boards, causing a significant increase
+in smoothness. This did of course mean twice as much work, which shows
+what kind of good-hearted people we are.
+
+The Character Status screen has remained much the same but is more pleasing
+to the eye due to the new graphics. All the pretty borders and screen
+layouts have been re-designed and re-drawn, as well as the portraits. The
+entire game now uses 32 colours and has been designed with the Amiga firmly
+in mind.
+
+The looks of the Inventory screen have been much improved as well, but here
+it is the user-friendliness which has been changed most dramatically.
+
+No longer does one need cumbersome icons to move items around - just click
+on an item and it is removed from the body or backpack. It is now attached
+to the mouse-pointer. Then click somewhere else (even in another party
+member's inventory !) and the program will intelligently put it there.
+Added to this, you can put up to 24 items in each backpack, and scroll
+through them using a scroll-bar.
+These are just a few examples of the new, more intuitive user-interface
+featured in Ambermoon.
+
+Again you will find chests filled with useful items, valuable gems,
+gold and food. But some chests are locked and you must try to open them
+first. A thief in the party sure comes in handy here, but you must
+still beware of traps...
+
+Once you have managed to open the chest, you may take out it's contents
+at you leisure - but now you can also put items, gold and food you are
+carrying back! No longer do you have to throw gold away because it is too
+heavy; just put it in a chest and return later to pick it up.
+
+It is very easy to store gold and food in a chest; when you are in the chest
+screen, simply enter the inventory screen and drop whatever you want. It
+won't disappear but will be stored in the chest.
+
+The worldmap in Ambermoon is four times bigger than the one in Amberstar, i.e.
+800 times 800 squares. All graphics have been drawn to a proper scale now,
+which means the party is no longer the same size as a tree or a mountain.
+
+But there is more than just one world in Ambermoon... we don't want to give
+away too much, but there will be other, different worlds...
+
+
+	Ambermoon was made by the following people :
+
+* Karsten Koeper, who does the design and the story and wrote the editors
+which are used to create all the maps, sub-adventures etc. He also does
+most of the editing. Karsten has played real RPG's for 10 years now and has
+an equal amount of experience with computer RPG's. Basically he plays
+almost everything which has something to do with role-playing.
+
+* Jurie Horneman - which is me. I programmed Amberstar on the Atari ST and
+am now working on Ambermoon on the Amiga. Both programs are written in 100%
+assembler. Although games of this complexity are usually written in a high-
+level language like C or Pascal, assembler gives me unsurpassed speed,
+flexibility and control over the machine, which hopefully shows.
+
+* Thorsten Mutschall, who did half of the graphics. Thorsten has years of
+experience in the software world, having worked for most of the major
+companies in Germany, and therefore is sometimes a bit cynical (subtle
+reference to the software world in general). He tends to make amazing
+graphics which stun everyone in the office, but being a perfectionist he
+is seldom happy with his own work (weirdo!). He is also a fan of fantasy
+books and real role-playing.
+
+* Monika Krawinkel, who did the other half of the graphics. When she isn't
+drawing graphics, Monika studies interior design, which is why she made all
+the interior 2D graphics (and a lot more of course). She has a fresh view on
+fantasy which gives her graphics a unique style, even though she has years
+of experience as a graphic artist.
+
+* Erik 'red-bearded giant' Simon. Erik is our development manager and
+therefore produces Ambermoon. His fierce, 2-meter-tall appearance makes even
+the boldest programmer tremble with fear and his bone-crunching neck-hold
+ensures that everyone makes their deadlines. Well, almost.
+Although he is usually occupied with designing and editing Lionheart, he found
+time to draw all the 2D surface graphics for the giant world maps.
+
+* Michael Bittner. Michael performed the impossible and wrote the real-time
+texture-mapping dungeon, driving the poor Amiga blitter to it's limits (unless
+you have a turbo-board of course). He is also a source of programming
+knowledge, having lots of experience with the Amiga and the Atari ST.
+
+* Matthias Steinwachs. Matthias is the 31-year old musician from Berlin who
+made all the tunes for Ambermoon (and Lionheart as well, by the way). For
+someone who produces such amazing music his letters are incredibly funny.
+
+Production started around April 1991 and will hopefully end before April 1992.
+By then, Ambermoon will have taken over 5 full person-years. Ambermoon will be
+released on the Amiga first, followed closely by the Atari ST version
+(probably 1 month later). A PC version will be made but no details are known
+at this moment.
+
+We hope you have found this text interesting and useful. As soon as new
+screens are completed we will send them to you (i.e. a free update service).
+If you have any questions, you can contact us in the  following ways :
+
+      Fax : -49 5241 24939
+
+Telephone : -49 5241 26686, ask for Jurie Horneman
+
+     Post : Thalion Software GmbH
+            c/o Jurie Horneman
+            Koenigstrasse 16
+            4830 Guetersloh
+            Germany
+
+Now, what you're probably thinking is :
+
+ "Damn, this is really good stuff, if I just had a bit more to write about,
+  I could easily fill that 3rd/4th/5th page."
+Well, being the considerate chaps that we are, here is some more stuff to
+fill those white spaces :
+
+- Ambermoon will be playable from floppy- and from hard-disk. Although we
+  advise playing from hard-disk, we will ensure that playing from floppy is
+  still enjoyable.
+
+- Ambermoon features an intelligent memory manager, which sucks up all the
+  memory the OS has to offer (MUCH more than in Amberstar !), and manages
+  this by itself, and quite intelligently by the way. This means that if you
+  have enough memory, loaded files will remain in memory for as long as
+  possible, so you won't have to load a lot. Ambermoon also features REAL
+  garbage collection (a sexy memory management word), and if you have ever
+  played Amberstar with 1Mb, you'll know what I'm talking about.
+
+- There are several graphics sets for each map type. For instance, there are
+  three different 2D world surface map graphic sets, some 2D interior map
+  graphic sets, and also several sets for 3D dungeons and cities, so there's
+  no chance of getting bored...

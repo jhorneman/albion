@@ -1,0 +1,43 @@
+158: Sarena, Kunsthandwerkerin
+=============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Kunsthandwerkerin."{WORDKunsthandwerkerin}]
+
+Block 1         Begr.
+["Togi Din, Fremde."]
+
+Block 2         "Kunsthandwerkerin"
+["Ja, ich verziere und bemale Tongef„e und andere Gegenst„nde. Ihr werdet die
+verschlungenen Formen, die wir so lieben, berall finden."{WORDFormen}]
+                DANN: +FORMEN+
+
+Block 3         "Formen"
+["Am wichtigsten fr uns sind Farben und Symbole. Geschwungene Linien, die
+symmetrisch wirken, es aber bei genauerem Hinsehen nicht sind, und r„tselhafte
+Formen, die zugleich Ornamente in einem Augenblick und D„monenfratzen im
+n„chsten Moment sein k”nnen. Es h„ngt alles vom Licht und vom Betrachter ab!
+Die Gr”ten unserer Kunst k”nnen Gegenst„nden durch ihre Symbole geradezu
+magische Kr„fte verleihen! Solche Gegenst„nde sind natrlich sehr begehrt."
+{WORDMagie}{WORDmagische Gegenst„nde}]
+                DANN. +GEGENSTNDE+
+
+Block 4         "magische Gegenst„nde"
+["Es gibt in Vanello und, so glaube ich, auch in Aballon H„ndler, die manchmal
+so kostbare Gegenst„nde anbieten."{WORDVanello}{WORDAballon}]

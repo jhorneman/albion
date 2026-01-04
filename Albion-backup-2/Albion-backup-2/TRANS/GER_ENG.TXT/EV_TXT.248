@@ -1,0 +1,92 @@
+Herras (Ratsvorsitzender) / Phase 3
+
+Block 0         (FAQs)
+[{BLOK000}"Meine Funktion ist es, den 'Rat der Gerechten' zu leiten und zu
+koordinieren."]
+
+Block 1         (Begrung)
+["Da seid Ihr ja wieder. Skeima Din, sch”n, da Ihr mal wieder vorbei schaut.
+Momentan gibt es einige Unstimmigkeiten im Rat, die es zu kl„ren gilt, daher
+habe ich nicht ganz so viel Zeit fr Euch."{WORDUnstimmigkeiten} {WORDGerchte}]
+
+Block 2         (Unstimmigkeiten, Rat)
+["Wie soll ich Euch das erkl„ren. Unser Ratsmitglied Perron ist der Meinung,
+da Gard und Riko nicht zum Wohle des Volkes entscheiden wrden. Nun sind Gard
+und Riko manchmal wirklich etwas steif, aber dennoch ist das ein gewaltiger
+Vorwurf von Perron, der manchmal etwas zu vorschnell reagiert und handelt.^^Da
+Perron aber keine Ruhe l„t, haben wir uns alle zusammengesetzt und das Thema
+angesprochen. Leider ist die Stimmung dadurch nicht besser geworden. Gard und
+Riko haben nun eine v”llig sture Haltung angenommen und behaupten, da sie mit
+Perron nicht mehr zusammenarbeiten k”nnten und m”chten. Sie sch„tzen ihn
+nicht, dabei ist er wirklich ein grundehrlicher Mensch, und da bin ich mir bei
+Gard und Riko nicht so sicher. Jedenfalls stehe ich eher auf der Seite von
+Perron, aber wenn Gard und Riko auf stur schalten, k”nnen wir im Rat nicht
+mehr vernnftig arbeiten. Naja, irgendwie mssen wir das Problem eben in den
+Griff bekommen."{WORDGard}{WORDRiko}{WORDPerron}{WORDHaltung} {WORDStimmung}]
+
+ 
+Block 3         (Gard, Riko)
+["Es ist manchmal wirklich schwer, mit ihnen zusammenzuarbeiten."]
+
+Block 4         (Perron)
+["Perron ist sehr offen und ich wei, woran ich bei ihm bin. Manchmal reagiert
+er vielleicht ein bichen bertrieben, aber das ist nicht so schlimm."]
+
+Block 5         (Haltung, Problem)
+["Vielleicht lenken Riko und Gard ja noch ein, ansonsten mu ich mir da eine
+L”sung berlegen."]
+
+Block 6         (Stimmung)
+["Die ist nach der letzten Aussprache natrlich nicht so gut."{WORDAussprache}]
+ 
+Block 7         (Aussprache)
+["Leider hat dieses Gespr„ch wenig brauchbare Resultate erzielt."]
+
+Block 8         (Beloveno)
+["So heit unsere Stadt hier."]
+
+Block 9         (Herras)
+["Das bin ich."]
+
+Block 10        (St„tte, Gerchte)
+["Naja, ich bin mir noch nicht sicher, ob da etwas dran ist, aber ich habe
+geh”rt, da dort immer mehr schreckliche Wesen aus der St„tte kommen sollen.
+Geht dort aber besser nicht hin. Es gibt ein Tabu, das es Menschen untersagt,
+diesen Ort zu betreten, und auerdem ist das Heiligtum im Besitz der Iskai."]
+
+Block 11        (Rathaus)
+["Das Rathaus ist das sch”nste Geb„ude in Beloveno. Ihr drft Euch hier ruhig
+umschauen, es wird Euch niemand hindern."]
+
+Block 12        (Warnung, Attentat, Mord)
+["Was meint Ihr???"{BLOK010}"Ach, das war nur so eine Vermutung von
+uns."{BLOK011}"Wir haben sehr wichtige Informationen fr Euch!"]
+
+Block 13        (Resp. 1)
+["Mhm, Ihr solltet nicht so leichtfertig mit W”rtern wie Warnung, Attentat
+oder Mord umgehen!"]
+
+Block 14        (Resp. 2)
+["Gut, dann erz„hlt mal."{BLOK010}"Gut, lat mich erz„hlen. Wo soll ich nur
+beginnen? Wir haben inzwischen mit vielen Leuten in der Stadt geredet und
+einige Informationen erhalten, die wir Euch unbedingt sagen mssen. Wir wissen
+allerdings selbst nicht sicher, ob die Informationen alle zuverl„ssig sind.
+Trotzdem solltet Ihr wissen, da ein Mordanschlag auf Euch geplant ist. Wir
+erfuhren davon zun„chst von Perron. Inzwischen haben wir weitere Hinweise,
+welche die Information best„tigen. Auch wenn es sich als ein schlechter Scherz
+herausstellen sollte, dann ist es wohl doch besser, Euch einmal zu viel als
+einmal zu wenig gewarnt zu haben."]
+
+Block 15        (Antwort darauf von Herras)
+["Ich kann es nicht glauben! Zun„chst m”chte ich Euch natrlich dafr danken,
+da Ihr mir diese Information weitergegeben habt. Ich habe von Perron brigens
+schon davon geh”rt, aber da ich Perron kenne, habe ich ihn dabei nicht allzu
+ernst genommen, was vielleicht ein Fehler war. Jedenfalls werde ich mich in
+n„chster Zeit vorsehen, und ich schlafe auch an einem anderen Ort. Ich bin auf
+jeden Fall dankbar, und sollte sich herausstellen, da da wirklich etwas
+geplant war, werde ich Euch belohnen!"]
+
+Block 16           (Zweites Mal warnen)
+["Ja danke, Ihr habt mir bereits davon berichtet. Ich werde auf der Hut sein
+und danke Euch noch einmal fr die Warnung."]
+

@@ -1,0 +1,92 @@
+; Script 21: Bero's Zuflucht
+
+show_map
+npc_lock 0
+npc_jump 0 13 10
+npc_lock 1
+npc_jump 1 13 17
+npc_turn 1 0
+
+fade_from_black
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 8
+pause 30
+
+text 129
+
+; Mellthas läuft auf Bero zu
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 8
+pause 20
+
+npc_text 174 126
+pause 10
+fade_to_black
+fill_screen 0
+fade_from_black
+text 127
+fade_to_black
+npc_jump 0 11 16
+npc_turn 0 2
+npc_jump 1 13 16
+npc_turn 1 2
+show_map
+update 4
+fade_from_black
+pause 60
+text 128
+fade_to_black
+

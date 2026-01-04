@@ -1,0 +1,25 @@
+Arrek (Neues Ratsmitglied Nummer 3) / Phase 6
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin einer der beiden neuen Mitglieder im 'Rat der Gerechten'."]
+
+Block 1         (Begrung)
+["Skeima Din, wir kennen uns nicht, newe? Mein Name ist Arrek und ich bin der
+Nachfolger von Riko. Wir haben uns bisher noch nicht kennengelernt, aber ich
+habe schon viel von Euch geh”rt."]
+
+Block 2         (Fortsetzung, egal was die Party antwortet)
+["Verzeihung, da ich Euch ins Wort platze, aber w„re es nicht gut, wenn Ihr
+zum Heiligtum von Srimalinar gehen wrdet und versuchen wrdet, das Schlimmste
+zu verhindern? Wenn ich richtig informiert bin, habt Ihr Beweise gegen Kontos
+gefunden, die ihn schwer belasten und gleichzeitig beweisen, da er der
+Hauptschuldige in diesem Konflikt ist?"]
+
+Block 3         (Arrek)
+["Das ist mein Name."]
+
+Block 4         (Melthar)
+[Das ist das andere neue Ratsmitglied.]
+
+Block 5         (Rathaus)
+["Wahrscheinlich kennt Ihr Euch hier besser aus als ich."]

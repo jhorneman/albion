@@ -1,0 +1,105 @@
+;***Erik's first script: Tom meets Christine***
+
+; Show the 2D map
+show_map
+
+; text "Tom sieht Chris"
+text 172
+
+; Tom geht hoch und ein wenig nach rechts
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+
+;Christine kommt von rechts hinein, geht zu Tom (15 Schritte) und bleibt stehen
+
+npc_lock 2
+npc_jump 2 60 66
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+npc_move 2 -1 0
+update 4
+
+;Dialog zwischen den beiden
+npc_text 183 63
+party_member_text 1 64
+npc_text 183 65
+party_member_text 1 66
+npc_text 183 67
+party_member_text 1 68
+npc_text 183 69
+party_member_text 1 70
+npc_text 183 71
+party_member_text 1 72
+npc_text 183 73
+party_member_text 1 74
+
+;Christine geht nach rechts.
+
+pause 5
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_move 2 1 0
+update 4
+npc_unlock 2

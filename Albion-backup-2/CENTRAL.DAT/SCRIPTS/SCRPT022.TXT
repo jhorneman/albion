@@ -1,0 +1,81 @@
+; *** Script 22: Nach Bero's Rettung
+
+; Nemos
+npc_lock 6
+npc_jump 6 81 25
+npc_turn 6 2
+; Bero
+npc_lock 8
+npc_jump 8 79 27
+npc_turn 8 1
+
+update 4
+fade_from_black
+
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+text 169
+pause 60
+npc_text 170 170
+npc_text 174 171
+npc_text 170 172
+party_member_text 4 173
+party_member_text 5 174
+npc_text 170 175
+party_member_text 1 176
+npc_text 174 177
+fade_to_black
+
+party_turn 1
+party_jump 47 36
+npc_jump 8 49 36
+npc_turn 8 3
+update 4
+fade_from_black
+
+npc_text 174 178
+pause 60

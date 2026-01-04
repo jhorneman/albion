@@ -1,0 +1,47 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 5
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fhre das Lebensmittelgesch„ft hier in der Stadt."]
+
+Block 1         (Begrung)
+["Nanu? Ihr seid hier? Bitte helft uns doch. Wir k”nnen Eure Hilfe derzeit
+wirklich gut gebrauchen! Durchleuchtet diesen omin”sen Kontos - vielleicht
+kann damit das Schlimmste verhindert werden. Ihr k”nnt die Bewohner von Kounos
+berzeugen, da sie sich in Kontos geirrt haben! Wir k”nnen es nicht, denn sie
+wrden sofort denken, da wir versuchen, sie aufzuhetzen. Ihr habt keinen
+Grund, so etwas zu tun. Bestimmt seid Ihr mittlerweile besser ber Kontos
+informiert, als ich?"{BLOK010}"Wir glauben, da Kontos im Recht
+ist!"{BLOK011}"Wir sind uns da selbst noch nicht ganz im
+Klaren."{BLOK012}"Kontos ist eine Gefahr, aber wir k”nnen nicht gegen ihn
+vorgehen!"{WORDKontos}{WORDHeiligtum}]
+
+Block 2         (Resp. 1 / Resp 2+3 sperr/ Bytecounter erh”hen:  Kontos gut)
+["Seid Ihr Eurer Sache da sicher??? Nach allem, was ich geh”rt habe, hat
+Kontos ganz andere Ziele. Aber ich gehe davon aus, da er Euch inzwischen auch
+berzeugt hat."]
+
+Block 3         (Resp. 2 / Resp 1+3 sperren)
+["Dann sammelt weiter Informationen ber ihn. Natrlich werdet Ihr nicht
+berall nur die Wahrheit h”ren, aber wenn Ihr sorgf„ltig zuh”rt, k”nnt Ihr
+Euch ganz bestimmt ein umfassendes Bild ber ihn machen."]
+
+Block 4         (Resp. 3 / Resp 1+2 sperren)
+["Ihr k”nnt! Sammelt Beweise gegen ihn, befragt die Leute und zeigt den
+Mahinos, da sie sich in Kontos geirrt haben! Ich habe schon von einigen
+Komplotten geh”rt, an denen Kontos beteiligt war. Ihr mt nur hartn„ckig
+suchen!"{WORDBeweise}]
+
+Block 5         (Kontos)
+["Unternehmt etwas!"]
+
+Block 6         (Heiligtum)
+["Ich glaube, dort eskaliert der Konflikt ziemlich! Vielleicht k”nnt Ihr noch
+das Schlimmste verhindern, wenn Ihr Beweise gegen Kontos findet!"]
+
+Block 7         (Beweise)
+["Ja unbedingt. Wir mssen so viele Beweise wie m”glich gegen Kontos finden!
+Besucht alle m”glichen Leute und fragt sie danach! Ihr mt einfach etwas
+finden! Und zeigt den Bewohnern von Kounos das wahre 'Ich' von Kontos!"]
+
+Block 8         (Kryte)
+["Das bin ich."]

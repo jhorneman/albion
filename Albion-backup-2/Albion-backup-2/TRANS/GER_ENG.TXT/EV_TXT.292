@@ -1,0 +1,45 @@
+
+Jeros, Waffenh„ndler
+=========================================================================
+
+Block 0
+[{BLOK000}"Ich verkaufe die Waffen und Rstungen. Auerdem k”nnt Ihr hier
+davon ausgehen, eine kompetente Beratung von einem erfahrenen J„gersmann zu
+erhalten. Ich kaufe auch gerne Sachen auf, wenn Ihr etwas interessantes dabei
+habt."{WORDJ„gersmann}]
+
+Block 1            (Begrung)
+[{WORDAngebot}"Skeima Din,^^Ihr werdet hier alles finden, was Reisende
+brauchen, um sich wirkungsvoll zu verteidigen und zu schtzen. Oder habt Ihr
+etwas interessantes anzubieten?"{WORDVerteidigen} {BLOK010}"K”nnen wir die
+Waffen und Rstungen einmal sehen?"{BLOK011}"Wir wrden gerne etwas
+verkaufen."{WORDSchmiede}]
+
+Block 2            (Verteidigen)
+["Aber es ist doch so, berall lauern Gefahren. Besonders auf Leute, die
+wertvolle Gegenst„nde dabei haben.^^Ihr seht so aus, wie wenn Ihr mit Waffen
+umgehen k”nnt. Am besten, Ihr werft mal einen Blick auf das Sortiment. Ihr
+werdet begeistert sein, denn mir ist sonst kein Laden bekannt, der ein ebenso
+groes wie hochwertiges Angebot hat."]
+
+Block 3            (J„gersmann)
+["Ich mu zugeben, da das schon lange zurckliegt, aber trotzdem habe ich in
+dieser Zeit viele Erfahrungen gesammelt, und so kenne ich mich mit Waffen
+aller Art bestens aus."]
+
+Block 4            (Schmiede)
+["Die Schmiede ist nebenan. Ihr k”nnt den Schmied ruhig besuchen. Er kann Euch
+Waffen reparieren. Und natrlich k”nnt Ihr ihm bei der Arbeit zusehen, wenn
+Ihr das m”chtet."]
+
+Block 5            (Angebot)
+["Oh, das Angebot ist ausgesprochen reichhaltig. Wir haben Munition in groen
+Mengen und groe, schwere Waffen. Wenn ich mich nicht irre, haben wir im
+Moment sogar ein paar magische Waffen im Verkauf."{WORDMagische Waffen}]
+
+Block 6            (Magische Waffen)
+["Das sind echte Rarit„ten. Ich glaube, so etwas werdet Ihr sonst nirgendwo
+kaufen k”nnen. Und das noch zu einem beraus gnstigen Preis."]
+
+Block 7            (Items geben)
+["Nein danke, Geschenke nehme ich keine an."]

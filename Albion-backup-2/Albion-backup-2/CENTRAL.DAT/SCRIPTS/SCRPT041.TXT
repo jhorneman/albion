@@ -1,0 +1,28 @@
+; Script 41; Showdown, Kampf gewonnen
+
+fill_screen 0
+fade_to_black
+npc_off 0
+npc_off 1
+npc_off 2
+npc_off 3
+npc_off 4
+npc_off 5
+npc_off 6
+npc_off 7
+npc_off 11
+npc_off 12
+npc_off 13
+npc_off 14
+npc_off 15
+npc_off 16
+update 4
+show_map
+update 4
+fade_from_black
+
+update 50
+party_member_text 1 94
+update 100
+party_member_text 1 95
+

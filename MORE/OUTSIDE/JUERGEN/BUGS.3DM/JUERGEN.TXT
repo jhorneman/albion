@@ -1,0 +1,39 @@
+(Windows-Editor - Text)
+
+
+
+Hallo Jürgen,
+
+ich hab 'ne Testkarte gemacht, die extrem aufschlußreich ist.
+Starte Albion mal mit den Parametern MAP 195 X 6 Y 7 und
+drehe Dich um Deine Achse. Von 25 Bildern bis hin zu
+2 Bildern / sec. ist alles drin, und das in einem völlig leeren,
+kleinen Raum!
+
+Ich hoffe, man kann hier noch einen kräftigen Geschwindigkeits-
+zuwachs erzielen. Die Automap zeigt Dir, dass es sich bei der
+Testmap um einen extrem großen, mit Zeug gefüllten Dungeon
+handelt.
+
+Ansonsten schau doch bitte auch mal nach den anderen Sachen:
+
+- Fehlfarben von "NoVanish" - Wänden in der Ferne 
+  (MAP 101, x 19 y 3, Richtung West & geradeaus laufen)
+- helle Pixel an den Übergängen von Wand und Boden & Decke
+  (fast überall zu sehen). Wenn diese Sache zu kompliziert
+  oder mit nur mit Geschw.verlust zu beheben ist, lass
+  es lieber.
+- Umdrehen von Bodenpolygonen (siehe screenshots im LBM-Format,
+zwei davon haben Koordinaten (JUERGEN3 + 4), die Dir vielleicht
+helfen, den Fehler zu reproduzieren. Es handelt sich dabei um
+die MAP 150.
+- Es scheint, daß die im LAB-INFO stehende Boden-Default-Farbe
+ignoriert wird (z.B. in MAP 110 sollte eine helle Farbe da sein,
+ist aber schwarz).
+
+
+Bis denn, kannst ja mal Bescheid sagen, falls Du was gefunden
+hast. Freue mich schon auf's nächste Meeting!
+
+
+-Es-

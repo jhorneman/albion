@@ -1,0 +1,338 @@
+
+Map-Textfile
+------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[GrÑser.]
+
+Block 2
+[Steine.]
+
+Block 3
+[Niedrige BodengewÑchse.]
+
+Block 4
+[Kleine éste und Wurzeln.]
+
+Block 5
+[SchilfgrÑser.]
+
+Block 6
+[Ein kleiner Obstbaum.]
+
+Block 7
+[Ein Kugelbaum.]
+
+Block 8
+[Ein Laubbaum.]
+
+Block 9
+[Eine Stromschnelle.]
+
+Block 10
+[Ein Wasserstrudel.]
+
+Block 11
+[Eine Wasserpflanze.]
+
+Block 12
+[Das Wasser ist sehr tief und die Strîmung scheint stark zu sein.]
+
+Block 13
+[Wasserpflanzentriebe.]
+
+Block 14
+[Eine blÅhende Pflanze.]
+
+Block 15
+[Ein Schirmbaum.]
+
+Block 16
+[Diese Pflanze leuchtet in faszinierenden Farbtînen.]
+
+Block 17
+[GemÅse.]
+
+Block 18
+[Ein Felsblock.]
+
+Block 19
+[An dieser Stelle ist das Wasser sehr flach und klar, so daû man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Strîmung.]
+
+Block 20
+[Ein Obstbaum.]
+
+Block 21
+[Ein Zaun.]
+
+Block 22
+[Eine Stengelpflanze.]
+
+Block 23
+[Eine Schlinggraspflanze.]
+
+Block 24
+[Ein Busch.]
+
+Block 25
+[Eine groûblÑttrige Pflanze.]
+
+Block 26
+[Ein Wasserfall.]
+
+Block 27
+[Ein Felsvorsprung.]
+
+Block 28
+[Eine Pflanze, die auf den Felsen wÑchst.]
+
+Block 29
+[Diese Schlingpflanze hat sich mit Tausen|den von Wur|zeln in der
+unregel|mÑûigen Fels|struk|tur ver|ankert. Sie macht einen sehr sta|bilen
+Ein|druck und durch ihre mannig|fal|tige Ver|Ñste|lungen bie|tet sie
+zahl|reiche Mîglich|kei|ten, an denen man sich fest|hal|ten kann.]
+
+Block 30
+[Eine HolzbrÅcke.]
+
+Block 31
+[Getreidefelder.]
+
+Block 32
+[Pilze.]
+
+Block 33
+[Eine UrkeltenhÅtte.]
+
+Block 34
+[Ein Eingang in eine UrkeltenhÅtte.]
+
+Block 35
+[Ein Zaun, der das Tiergehege abgrenzt.]
+
+Block 36
+[Ein Tor im Gatter.]
+
+Block 37
+[Eine Stadtmauer.]
+
+Block 38
+[Ein Tor in der Stadtmauer.]
+
+Block 39
+[Ein verschlossener Hîhleneingang.]
+
+Block 40
+[Ein offener Hîhleneingang.]
+
+Block 41
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 42
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 43
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 44
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 45
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 46
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 47
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 49
+[-frei-]
+
+Block 50
+[210]
+
+Block 51
+[211]
+
+Block 52
+[212]
+
+Block 53
+[213]
+
+Block 54
+[214]
+
+Block 55
+[215]
+
+Block 56
+[216]
+
+Block 57
+[217]
+
+Block 58
+[218]
+
+Block 59
+[219]
+
+Block 60
+[220]
+
+Block 61
+[221]
+
+Block 62
+[222]
+
+Block 63
+[223]
+
+Block 64
+[224]
+
+Block 65
+[225]
+
+Block 66
+[226]
+
+Block 67
+[227]
+
+Block 68
+[228]
+
+Block 69
+[229]
+
+Block 70
+[230]
+
+Block 71
+[231]
+
+Block 72
+[232]
+
+Block 73
+[233]
+
+Block 74
+[234]
+
+Block 75
+[235]
+
+Block 76
+[236]
+
+Block 77
+[237]
+
+Block 78
+[238]
+
+Block 79
+[239]
+
+Block 80
+[240]
+
+Block 81
+[241]
+
+Block 82
+[242]
+
+Block 83
+[243]
+
+Block 84
+[244]
+
+Block 85
+[245]
+
+Block 86
+[246]
+
+Block 87
+[247]
+
+Block 88
+[248]
+
+Block 89
+[249]
+
+Block 90
+[250]
+
+Block 91
+[251]
+
+Block 92
+[252]
+
+Block 93
+[253]
+
+Block 94
+[254]
+
+Block 95
+[255]
+
+Block 96
+[256]
+
+Block 97
+[257]
+
+Block 98
+[258]
+
+Block 99
+[259]
+
+Block 100
+[260]
+
+Block 101
+[261]
+
+Block 102
+[262]
+
+Block 103
+[263]
+
+Block 104
+[264]
+
+Block 105
+[265]
+
+Block 106
+[266]
+
+Block 107
+[267]
+
+Block 108
+[268]
+
+Block 109
+[269]

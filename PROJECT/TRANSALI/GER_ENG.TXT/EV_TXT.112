@@ -1,0 +1,39 @@
+NPC 112: Nisrii, Mitglied des Rates
+===================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+
+
+Block 0
+[{BLOK000}"Dsarii-ma. Mein Name ist Nisrii, Ratsmitglied und Tri-Nadh. Ich bin
+verantwortlich fr die Pflege und Auslegung der Gesetze."
+{WORDGesetze}{WORDTri-Nadh}]
+                DANN: Block2, +GESETZ+, +RAT+
+
+Block 1         Begrung
+["Dsarii-ma. Kann ich Euch helfen?"]
+
+Block 2         "TRI-NADH" WENN: Iskai fragt, SONST Block 4
+["Ich darf annehmen, da Du diese Frage fr Deine menschlichen Gef„hrten
+stellst, {LEAD}{NAME}."]
+                
+Block 3         
+["Tri-Nadh werden Personen genannt, die bei der Berhrung mit dem Trii eines
+Anderen nicht nur dessen Gefhle erspren k”nnen, sondern auch ganze Gedanken.
+Meist stellen sich diese besonders Begabten dem Ratskreis der Gesetze zur
+Verfgung. Sie berprfen zum Beispiel bei wichtigen Vereinbarungen die
+Redlichkeit der Vertragspartnern."{WORDGesetze}{Trii}]
+
+Block 4         WENN: Phase 1 + Gepr„ch beendet wird
+["Ich wnsche Euch Glck fr die Jagd nach Akiirs M”rdern."]
+
+Block 5
+["Viel Glck auf Euren Reisen."]

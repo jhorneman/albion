@@ -1,0 +1,116 @@
+	>>> The Questions <<<
+
+	a) Designing
+	b) Producing
+	c) Selling
+	d) General
+
+	*** Designing a computer game ***
+
+- DOES A GAME-DESIGNER NEED TO BE A PROGRAMMER ?
+
+- WHAT KIND OF GAMES ARE THERE ?
+Alright, that's a mean one, I admit. I will just give my list, let me know if
+I missed any or if you feel other subdivisions are possible.
+
+- IN WHAT FORMAT DOES ONE PUT A GAME DESIGN ?
+Or in other words, is there a way to describe any computer game ? Is there a
+list of items which one should simply check off ? Does it depend on the type
+of game ?
+
+- WHAT MAKES PEOPLE WANT TO KEEP PLAYING A GAME ?
+What elements keep players motivated ?
+
+- WHAT ELEMENTS MAKE A GAME GOOD ?
+This question concerns games in general as well as specific game types.
+
+
+	*** Producing a computer game ***
+
+- WHAT ABOUT EDITORS ?
+When should one use them ? What should they do ? How much effort should one
+put in them ? How can games be improved by the use of editors ? How does
+using an editor affect production ?
+
+- HOW CAN ONE PRODUCE A GAME ?
+Sorry, I saw no other way to phrase this question. What I mean is, there are
+several possibilities for a game developer to work :
+	- Free-lance
+	- Development team
+	- Big software company
+	and maybe more ?
+What are the advantages and disadvantages of each ?
+
+- HOW MANY PEOPLE DOES ONE NEED TO PRODUCE A GAME ?
+Can certain games only be developed by large groups ? How many programmers,
+graphics artists does one need ?
+
+- WHAT ARE THE MOST IMPORTANT QUALITIES FOR
+	GAME DESIGNERS
+	PROGRAMMERS
+	GRAPHIC ARTISTS
+	MUSICIANS
+  WHEN PRODUCING GAMES ?
+
+- WHAT IS PROFESSIONALITY IN GAME DEVELOPMENT ?
+i.e. what would you say makes a game developer professional ?
+
+- WHAT MUST ONE KEEP IN MIND WHEN PRODUCING A GAME ?
+What are the type of things one should know from the start ?
+
+- WHAT IS THE BEST ADVICE FOR A GAME DESIGNER, PROGRAMMER OR GRAPHIC ARTIST ?
+
+- WHAT CAN GO WRONG DURING PRODUCTION ?
+Insert your own juicy story here.
+
+- CAN YOU JUDGE YOUR OWN GAMES ?
+
+- CAN OTHER PEOPLE ?
+
+- WHAT'S THE BIGGEST/BEST LIE YOU HAVE EVER HEARD FROM/USED AS A PROGRAMMER ?
+
+- WHAT ABOUT CONSOLES ?
+Why doesn't everyone develop on them ? What are the differences in the
+development ? What games are suited for consoles ?
+
+
+	*** Selling a computer game ***
+
+- WHAT CAN GO WRONG WHEN YOU TRY TO SELL A COMPUTER GAME ?
+Insert your own sad story here.
+
+- WHAT SHOULD ONE LOOK FOR IN A CONTRACT ?
+
+- WHAT ABOUT LAWYERS OR AGENTS ?
+
+
+	*** Games in general ***
+
+- WHAT CAN ONE ACHIEVE WITH A COMPUTER GAME ?
+What effect does a computer game on an audience ?
+
+- WHY DO PEOPLE PLAY GAMES ?
+
+- WHAT POSITIVE USE DOES PLAYING GAMES HAVE ?
+
+- WHAT ABOUT THE MESSAGE IN COMPUTER GAMES ?
+
+- HOW WEIRD CAN ONE GET ?
+Have you ever heard of a game which did badly because it was too weird ?
+
+- WHAT ABOUT THE POSITION OF COMPUTER-GAMES AND -DEVELOPERS IN SOCIETY ?
+Will we ever get rid of the archetypal wimp-covered-with-zits-wearing-glasses
+hunched-behind-his-computer ?
+
+- SHOULD THERE BE A UNION OF GAME DEVELOPERS ?
+Or any other organization like the one Chris Crawford founded ?
+
+- SHOULD THERE BE A SCHOOL FOR GAME DEVELOPERS ?
+Or any other form of education ?
+
+- IS GAME DEVELOPMENT AN ACCEPTED PROFESSION OR SHOULD IT BE ?
+
+- WHAT ARE THE DIFFERENCES IN GAME DEVELOPMENT IN THE UNITED KINGDOM,
+GERMANY, FRANCE, THE U.S.A AND JAPAN ?
+
+- WHAT ABOUT IMPROVED INTERNATIONAL COOPERATION ?

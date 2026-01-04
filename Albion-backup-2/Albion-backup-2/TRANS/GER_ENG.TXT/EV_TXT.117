@@ -1,0 +1,147 @@
+NPC 117: Janiis, die Sebainah: Phase 2, Fall gel”st
+=====================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Eure Frage erstaunt mich. Ihr wit doch: Ich bin die Sebainah von
+Nakiridaani und damit Vorsitzende des Rates."]
+
+Block 1         Begrung, wenn noch nicht zur n„chsten Insel transportiert
+                LEAD=tom
+["Dsarii-ma, meine menschlichen Freunde. Nun, Tom? Seid Ihr nun bereit fr
+Eure Reise? Das Schiff ist fr Euch bereit gemacht worden." {BLOK010}"Ja,
+Sebainah Janiis. Ich denke, wir mssen Eure sch”ne Stadt nun verlassen."
+{BLOK011}"Habt bitte noch ein wenig Geduld. Wir m”chten noch eine kleine Weile
+hierbleiben."]
+
+Block 2         Antwort MC1,2 & MC9,1 & MC11,2
+["Oh, ich m”chte Euch nicht dr„ngen. Es freut mich, da es Euch bei uns so gut
+gef„llt. Entschuldigt mich nun bitte, meine Aufgaben warten auf mich."]
+                DANN: Gespr„ch beendet
+
+Block 3         "RAT"
+["Der Rat von Jirinaar ist die Regierung ganz Nakiridaanis. Im Rat sitzen die
+Sebai der Clans und w„hlen alle fnf Jahre den, oder die, Sebainah, das
+Oberhaupt des Rates. Ich regiere unser Volk in dieser Zeit, bin jedoch bei
+Entschei|dungen von groer Tragweite auf die Zustimmung des Rates angewiesen.
+Der Rat bildet die sogenannten Ratskreise, das sind Gruppen von Leuten, die
+von mindestens einem Ratsmitglied geleitet werden, um sich um bestimmte
+Aufgaben zu kmmern: zum Beispiel die Sebai-Auswahl, Streitigkeiten oder
+Familienangelegenheiten, wie Ehetrennungen."]
+                DANN: +SEBAI+
+
+Block 4         "RAT"2x
+["Wie ich Euch bereits erkl„rte, ist der Rat von Jirinaar die Regierung ganz
+Nakiridaanis."]
+
+
+Block 5         "SEBAINAH"
+["Der oder die Sebainah hat als Ratsoberhaupt natrlich groen Einflu. In
+Krisenzeiten k”nnte ich vom Rat sogar mit besonderen Machtbefugnissen
+ausgestattet werden, und w„re fr die Zeit der Krise Herr ber Leben und Tod
+auf Nakiridaani. In normalen Zeiten bin ich jedoch auf die Zusammenarbeit mit
+dem Rat angewiesen. Ich habe allerdings zwei Stimmen im Rat und kann bei
+Pattsituationen die Entscheidung treffen."]
+
+Block 6         "SEBAINAH"2x
+["Nun, das hatte ich doch schon erkl„rt, oder? Der oder die Sebainah ist das
+Ratsoberhaupt und regiert die Iskai von Nakiridaani fr fnf Jahre."]
+
+
+Block 7         "SEBAI"
+["Das Sebai-Ritual stellt die m„chtigste magische Handlung dar, derer wir
+f„hig sind, und sie kann von jedem durchgefhrt werden, sei sein magisches
+Talent auch noch so gering. Dazu mt Ihr wissen, da das Trii eines
+Neugeborenen in der ersten Woche ganz besondere Eigenschaften hat. Berhrt ein
+Erwachsener mit seinem Trii das des Neugeborenen, kann er sein gesamtes Selbst
+in den Geist des Kindes bertragen. Er oder sie kann das Leben neu beginnen,
+der K”rper des Erwachsenen stirbt bei der Zeremonie. Natrlich ist es
+verboten, das Ritual ohne Genehmigung des Ratskreises durchzufhren. Zusammen
+mit der Entfhrung eines Neugeborenen ist dies das schlimmste Verbrechen, das
+es gibt! Der Verbrecher und seine gesamte Familie werden nach unseren Gesetzen
+mit dem Tode bestraft. Nur wenige Personen mit besonderen Verdiensten, die
+Auserw„hlten, drfen das Ritual durchfhren. Ferner darf das Ritual
+selbstverst„ndlich nur mit Zustimmung der Mutter des Neugeborenen durchgefhrt
+werden. Meist ist es die Partnerin des Auserw„hlten oder eine Schwester einer
+Auserw„hlten. Ist das Ritual durchgefhrt, bekommt der oder die Auserw„hlte
+den Titel Sebai, gefolgt von einem Zusatz, der darauf hinweist, wie oft der
+Sebai das Ritual schon durchfhren durfte. Ich pers”nlich habe das Ritual zwei
+Mal erleben drfen."]
+
+Block 8         "SEBAI"2x
+["Das Ritual ist fr Menschen sicher schwer zu verstehen. Also: Das
+Sebai-Ritual stellt die m„chtigste magische Handlung dar, derer wir f„hig
+sind, und sie kann von jedem durchgefhrt werden, sei sein magisches Talent
+auch noch so gering. Dazu mt Ihr wissen, da das Trii eines Neugeborenen in
+der ersten Woche ganz besondere Eigenschaften hat. Berhrt ein Erwachsener mit
+seinem Trii das des Neugeborenen, kann er sein gesamtes Selbst in den Geist
+des Kindes bertragen. Er oder sie kann das Leben neu beginnen, der K”rper des
+Erwachsenen stirbt bei der Zeremonie. Natrlich ist es verboten, das Ritual
+ohne Genehmigung des Ratskreises durchzufhren. Zusammen mit der Entfhrung
+eines Neugeborenen ist dies das schlimmste Verbrechen, das es gibt! Der
+Verbrecher und seine gesamte Familie werden nach unseren Gesetzen mit dem Tode
+bestraft. Nur wenige Personen mit besonderen Verdiensten, die Auserw„hlten,
+drfen das Ritual durchfhren. Ferner darf das Ritual selbstverst„ndlich nur
+mit Zustimmung der Mutter des Neugeborenen durchgefhrt werden. Meist ist es
+die Partnerin des Auserw„hlten oder eine Schwester einer Auserw„hlten. Ist das
+Ritual durchgefhrt, bekommt der oder die Auserw„hlte den Titel Sebai, gefolgt
+von einem Zusatz, der darauf hinweist, wie oft der Sebai das Ritual schon
+durchfhren durfte. Ich pers”nlich habe das Ritual zwei Mal erleben drfen."]
+
+Block 9         Einwurf Drirr oder Sira WENN: Versprechen nicht
+                eingel”st.
+[{INK 001}Tom antwortet auf den Einwurf:{INK 002} {BLOK010}"Oh, ja, richtig!
+Vielen Dank fr das Erinnern daran. Janiis, verzeiht, aber wir haben noch
+etwas zu erledigen." {BLOK011}"Wir haben wichtigeres zu tun. Ich m”chte die
+Toronto m”glichst schnell erreichen."]
+
+Block 10        Antwort auf MC9,2 gleiche Person spricht
+["Ich kann nur hoffen, da Eure Versprechen Euren Freunden gegenber
+zuverl„ssiger sind..."]
+                DANN: Bit setzen, weiter mit Block 11
+
+Block 11        Sicherheitsabfrage
+["Ihr m”chtet also fahren? Ich hoffe, da ihr trotz des traurigen Vorfalls mit
+Akiir einen guten Eindruck von Jirinaar mitnehmt." {BLOK010}"Wir haben viel
+erlebt und einen Einblick in ein Volk bekommen, das mir nun nicht mehr so
+fremd erscheint wie noch vor kurzer Zeit. Der Abschied f„llt mir schon jetzt
+schwer, deswegen ist es besser, wir machen uns auf den Weg." {BLOK011}"Wenn
+ich es recht bedenke, m”chte ich vielleicht doch noch ein wenig bleiben,
+Janiis."]
+
+
+Block 12        Abschied von Nakiridaani (frs erste)
+["Es freut mich, da Ihr so denkt, Tom Driiskol. Ich lasse Euch nun zu Eurem
+Schiff bringen und wnsche Euch ein gute und erfolgreiche Reise!"]
+                DANN: Bit setzen (runter von N., fr Begrung von bekannten
+                Personen bei Wiederbesuch und dann ZS zur n„chsten Insel!
+
+Block 13        1.Begrung, wenn Nakiridaani wieder besucht wird LEAD=Tom
+["Dsarii-ma, Tom! Wie sch”n, Euch wieder zu sehen! Erz„hlt mir, wie ist es
+Euch ergangen?"^^ {INK 001}Tom fat in kurzen Worten zusammen, was er und
+seine Reisegef„hrten erlebt haben. Janiis ist fasziniert.]
+
+Block 14        2. Begrung bei Wiederbesuch
+["Dsarii-ma, meine Freunde. Kann ich etwas fr Euch tun?"]
+
+Block 15
+["Entschuldigt meine Einmischung, Janiis, aber ich m”chte kurz das Wort an Tom
+richten: Haben wir Argim, dem Wesen der alten Formerst„tte, nicht das
+Versprechen gegeben, ihm einen Musikkristall zu besorgen?"]
+
+Block 16
+[-dummy-]
+
+Block 17
+[SEQUENZ FOLGT: Schiff legt von Jirinaar ab, erreicht Insel der Ur-Kelten.]

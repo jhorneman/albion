@@ -1,0 +1,174 @@
+
+Textfile Konny. Ist in der Kneipe und gibt Tip, wie man an einen Reisefhrer
+rankommt.
+============================================================================
+
+
+Block 0
+[{BLOK000}"Meine Eltern sind Diamantschleifer und ich helfe im Familienbetrieb
+mit. Ich setze die geschliffenen Edelsteine in sch”ne Ketten oder Ringe ein.
+Manchmal darf ich auch selbst Steine schleifen. Aber das kann ich natrlich
+noch nicht so gut wie mein Vater."{WORDDiamantschleifer}]
+
+Block 1            (Begrung)
+["Skeima Din!^^Ich bin Konny. Ich habe schon geh”rt, da eine
+Abenteurer|gruppe in der Stadt ist. Sch”n, da ich Euch mal kennen|lerne. Habt
+Ihr schon viele tolle Sachen erlebt?"{BLOK010}"Ihr macht Euch keine
+Vorstellungen!"{BLOK011}"Na ja, ein paar."{BLOK012}"Nichts
+besonderes."{BLOK013}"Wit Ihr, wir sind gar nicht so scharf auf solche
+Erlebnisse."{BLOK014}"Nein, aber wir wollen das noch."]
+
+Block 2            (Begrung 2)
+["Skeima Din,^^kann ich Euch irgendwie helfen?"{WORDHilfe}]
+
+Block 3            (1,10)
+["So? Dann erz„hlt doch mal von Euren Erlebnissen."{WORDErlebnisse}]
+
+Block 4            (1,11)
+["Bestimmt untertreibt Ihr. Erz„hlt mir doch von Euren
+Erlebnissen."{WORDErlebnisse}]
+
+Block 5            (1,12+1,14)
+["Wie ich geh”rt habe, seid Ihr durch die halbe Welt gereist und dabei habt
+Ihr nichts besonderes erlebt? Das kann ich kaum glauben."{BLOK010}"Zugegeben,
+ein paar recht interessante Erlebnisse hatten wir schon."{BLOK011}"Warum
+interessiert Euch das denn so?"]
+
+Block 6            (1,13)
+["Das kann ich mir vorstellen. Wenn zuviel passiert, dann ist man
+wahrscheinlich froh, wenn man einmal zur Ruhe kommt. Seht Ihr, in meinem Leben
+ist das ganz anders. Ich habe immer das Gefhl, da ich zu wenig erlebe.
+Vielleicht k”nnt Ihr mir ja trotzdem ein wenig von Euren Erlebnissen erz„hlen.
+Bitte!"{WORDErlebnisse}]
+
+Block 7            (5,10)
+["Bitte erz„hlt mir davon. Ich h”re so gerne Geschichten von fremden Menschen
+und fremden L„ndern."{WORDErlebnisse}]
+
+Block 8            (5,11)
+["Abenteuer interessieren mich sehr. Ich habe viele Abenteuerbcher daheim,
+und ich finde es sehr spannend, wenn ich mal die M”glichkeit habe, Leute
+kennenzulernen, die groe Reisen machen. Und nun habe ich Euch kennengelernt.
+Natrlich wrde ich das auch verstehen, wenn Ihr mir nichts sagen m”chtet oder
+wenn Ihr bestimmte Informationen nicht weitergeben drft. Aber es ist doch
+hoffentlich nicht alles streng geheim?^^Ach bitte, erz„hlt mir doch von
+aufregenden Orten oder von Menschen und Wesen, die Ihr getroffen
+habt."{WORDErlebnisse}]
+
+Block 9            (Erlebnisse, wenn noch nicht mitgeteilt)
+["Ihr wrdet mir wirklich ein bichen was erz„hlen? Das w„re
+toll!"{BLOK010}"Nun, dann macht's Euch mal gemtlich, denn das kann eine ganze
+Weile dauern."]
+
+Block 10           (Fortsetzung)
+[{INK 002}Und so lauscht Konny interessiert {LEAD}{NAME}s Ausfhrungen,
+w„hrend die anderen still dasitzen und zuh”ren. Ihre Augen beginnen zu gl„nzen
+und sie ist wirklich mit dem ganzen Herz dabei.^^Als die Geschichte mit dem
+religi”sen Druidenfhrer zur Sprache kommt, ist sie richtig erregt und „rgert
+sich ber den Charakter von Kontos.^^Nach einiger Zeit ist {LEAD}{NAME} der
+Meinung, da gengend erz„hlt worden ist.^^-Taste-]
+
+Block 11           (Fortsetzung)
+["Das ist mitunter wirklich sehr spannend, was Ihr so alles erlebt habt. Zu
+gerne wrde ich mich Euch anschlieen, aber ich mu zu meiner Schande
+gestehen, da ich wohl nicht mutig genug w„re. Auerdem werde ich hier
+gebraucht. Jedenfalls bin ich gespannt, wie Ihr nun weiter|machen werdet und
+was Eure n„chsten Zielen sind."{WORDZiele}]
+
+Block 12           (Erlebnisse, wenn schon erz„hlt)
+["Ja, vielen Dank nochmal fr die ausfhrliche Schilderung und fr den tollen
+Reisebericht. Wit Ihr schon, wie Ihr weitermachen werdet? Was sind denn die
+n„chsten Ziele?"{WORDZiele}]
+
+Block 13           (Ziele)
+["Also es gibt ganz verschiedene M”glichkeiten, wie man von Umajo-Kenta aus
+weiterreisen kann. Da gibt es zun„chst den n”rdlichen Teil der Wste. Dort ist
+auch ein Gef„ngnis. Aber das ist ziemlich weit. Ganz oben, im Norden. Man mu
+schon gut zu Fu sein und man sollte gegen die Hitze irgendwie vorbereitet
+sein. Und dann gibt's natrlich den sdlichen Teil. Aber da kommt man nicht so
+leicht hin, weil man durch den Felsengrtel durch mu. Auerdem war dort vor
+einiger Zeit ein recht merkwrdiges Ereignis. Es heit, da es dort jetzt
+spukt. Aber lat Euch davon nicht abschrecken. Manche Leute sagen, ein
+riesiges Monster w„re vom Himmel gekommen. Aber ich habe nie etwas derartiges
+gesehen." {WORDN”rdlicher Teil}{WORDGef„ngnis}{WORDSdlicher Teil}]
+
+Block 14           (N”rdlicher Teil)
+["Dort ist unter anderem das Gef„ngnis. Aber wie schon gesagt. Der Weg ist
+weit und die Hitze ist problematisch. Besonders fr Fremde, denn die sind das
+nicht gew”hnt!"{WORDHitze}]
+
+Block 15           (Hitze)
+["Wir benutzen Poren”l, um damit fertig zu werden. Wenn Ihr daran Interesse
+habt, sprecht mal mit Agida."{WORDAgida}]
+
+Block 16           (Agida)
+["Sie wohnt ganz im Sden, direkt neben dem Hafen."]
+
+Block 17           (Gef„ngnis)
+["Dort stecken lauter b”se Menschen drin. Es gibt welche, ber die ich nie
+schlecht denken wrde, und trotzdem sind sie es.^^Wenn Ihr dorthin wandern
+m”chtet, dann geht immer in Richtung Norden. Das Gef„ngnis liegt knapp
+unterhalb der n”rdlichsten Spitze des Kontinents. Es gibt auch einen W„chter,
+der dort jeden Tag hin- und zurckwandert, um Essen und Getr„nke zu bringen.
+Vielleicht trefft Ihr ihn."]
+
+Block 18           (Sdlicher Teil)
+["Im sdlichen Teil war ich selbst auch noch nie. Es ist schwer, dorthin zu
+kommen, denn man mu durch den Felsengrtel, der sdlich von unserer Stadt
+liegt."{WORDFelsengrtel}]
+
+Block 19           (Felsengrtel)
+["Durch die Felsen k”nnt Ihr nicht durch. Die sind viel zu unwegsam und zu
+gro. Auerdem kann man sich da leicht verlaufen. Was wollt Ihr auch im
+sdlichen Teil?^^Wenn Ihr dort aber unbedingt hin m”chtet, so habe ich schon
+von einer M”glichkeit geh”rt:^^Es gibt einen Gang, der unter dem Felsengrtel
+durchfhrt. Das schwierigste daran ist, den Eingang zu finden. Ich k”nnte ihn
+Euch leider auch nicht zeigen. Aber ich wei jemanden, der ihn kennt.
+Vielleicht k”nntet Ihr ihn als Fhrer anheuern?"{WORDFhrer}]
+
+Block 20           (Fhrer)
+["Mhm, wenn es Euch wirklich wichtig ist, verrate ich ein kleines Geheimnis.
+Ihr mt mir aber versprechen, da es unter uns bleibt."{BLOK010}"Da k”nnt Ihr
+sicher sein!"{BLOK011}"Wir versprechen lieber nichts!"]
+
+Block 21           (20,11)
+["Tut mir leid, aber dann kann ich es Euch auch nicht sagen!"]
+
+Block 22           (20,10)
+["Ich hoffe, da ich mich auf Euch verlassen kann.^^Na sch”n, der Mann heit
+Ohl. Viele Brger der Stadt kennen ihn gar nicht, denn er ist sehr in sich
+gekehrt und l„t sich fast nie sehen. Deshalb ist es auch so schwer, ihn
+anzutreffen. Er ist ein sehr schchterner Bewohner und er mag keine langen
+Gespr„che. Trotzdem ist er aber nett und hilfsbereit, auch Fremden gegenber.
+Ich bin sicher, da er Euch helfen wird, wenn Ihr ihm sagt, da ich Euch
+schicke. Er ist ein fanatischer Diamanten-Sammler, daher kennt er unsere
+Familie ziemlich gut. Wie ich ihn kenne, k”nnt Ihr ihn mit ein paar
+Edelsteinen dazu berreden, mitzukommen.^^Ohl ist jeden Tag um genau 12:00 Uhr
+in der Erzmine, um zu sehen, ob die Bergleute interessante Rohlinge ans
+Tageslicht gef”rdert haben. Doch er ist nie all zu lange dort. Ihr mt
+pnktlich sein. Denn sonst bekommt Ihr ihn so gut wie nie zu Gesicht.^^Ohl
+wird Euch den Weg bestimmt zeigen. Jedenfalls wnsche ich Euch noch alles Gute
+auf Eurem weiteren Weg!"]
+
+Block 23           (Hilfe)
+["Vielleicht solltet Ihr mir erst mal von Euren Erlebnissen erz„hlen, damit
+ich so einen groben Eindruck habe, was Ihr bisher gemacht habt. Dann kann ich
+Euch vielleicht besser weiterhelfen..."{WORDErlebnisse}]
+
+Block 24           (Begrung, wenn Info-Bit gesetzt)
+["Skeima Din.^^Habt Ihr Ohl schon angetroffen? Wie gesagt, Ihr findet ihn
+t„glich um 12 Uhr in der Erzmine. Aber seid pnktlich, denn er h„lt sich dort
+nie lange auf."]
+
+Block 25           (Ohl)
+["Ich wei selbst auch nicht so besonders viel ber ihn, aber er kann Euch mit
+Sicherheit weiterhelfen."]
+
+Block 26           (Hilfe, wenn Erlebnisse schon erz„hlt)
+["Nachdem ich nun ein bichen ber Eure Vergangenheit Bescheid wei, kann ich
+Euch ja Auskunft ber weitere Reiseziele geben."{WORDZiele}]
+
+Block 27
+["Ich wrde schon gerne mit Euch gehen, aber ich werde hier gebraucht. Und ich
+glaube, ich bin auch nicht so mutig, wie ich gerne sein wrde. So gerne ich
+M„rchenbcher lese, ich wei doch, da mir nichts passieren kann."]

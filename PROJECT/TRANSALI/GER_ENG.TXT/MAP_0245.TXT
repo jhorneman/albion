@@ -1,0 +1,12 @@
+
+Textfile fÅr öbergangsdungeon GerÑtemacher
+========================================================================
+
+Block 0
+[-frei-]
+
+Block 1
+[Eine Treppe.]
+
+Block 2
+[Ein Loch im Boden.]

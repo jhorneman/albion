@@ -1,0 +1,74 @@
+
+
+Block 0     (Name) 
+[{BLOK000}"Ich heie Jonatharh. Ich bin hier der Chefkoch und Anfhrer der
+Sklaven." {WORDSklaven} {WORDKoch} {WORDAnfhrer}]  
+ 
+Block 1     (Sklaven) 
+["Das Wort hat natrlich einen schlechten Beigeschmack. Aber in Wirklichkeit
+hat man als Sklave der Kenget durchaus seine M”glichkeiten. Ich zum Beispiel
+kann mich nicht beklagen. Wenn man fleiig ist und kein bertriebenes
+Anspruchsdenken an den Tag legt, dann kann man hier wirklich was erreichen!"
+{WORDKenget Kamulos} {WORDM”glichkeiten}] 
+ 
+Block 2     (Kenget Kamulos) 
+["Sind irgendwie schon tolle Kerle, find' ich. Klar, man kann sich drber
+streiten, ob das so sinnvoll ist, diesen Kriegsgott Kamulos zu verehren. Aber
+immerhin machen sie es sich ja nicht einfach damit. Ist ja schlielich
+ziemlich gef„hrlich, das Ganze. Und eins mu man ihnen zu Gute halten: sie
+k„mpfen wirklich fair. Keine miesen Tricks oder so."] 
+ 
+Block 3    (Koch)  
+["Traditionell ist der Koch der Chef der Sklaven. Eine echte Ehre fr mich.
+Und auch nicht allzu schwierig. Ich meine, ich gebe mir schon Mhe beim
+Kochen, aber - bitte, verrate nicht, was ich Dir jetzt ganz inoffiziell
+anvertraue - Feinschmecker sind die alle nicht. Bei den Druiden geht's ja noch
+so gerade, aber den Kriegern k”nnte ich alles vorsetzen: sie wrden's klaglos
+essen. Die haben absolut keine Ahnung, wie gut sie es bei mir haben."
+{WORDDruiden} {WORDKrieger}] 
+ 
+Block 4    (M”glichkeiten) 
+["Naja, mir geht's nicht schlecht. Ich darf ohne Bewachung auf den Markt, um
+Lebensmittel einzukaufen, darf mir selbst mein Essen zubereiten und bekomme
+sogar eine Bezahlung. Davon werd' ich zwar nicht reich, aber ich habe ja auch
+wenig Kosten. Und die restlichen Sklaven kriegen gar nichts. Auer, da ihnen
+hier niemand was tut, weil sie ja auch unrein sind. Was unrein genau ist, wei
+ich brigens nicht. Das kann Dir aber vielleicht mein Sohn sagen. Der ist
+jetzt n„mlich sogar als Novize hier aufgenommen worden. Daran kannst du sehen,
+da man hier wirklich alle M”glichkeiten hat. Auch als Sklave! Biete mir die
+Freiheit an, und ich werde sie glatt ablehnen. Hier habe ich alles, was ich
+brauche. " {WORDSohn}] 
+ 
+Block 5    (Anfhrer) 
+["Meine Aufgabe ist es, die Sklaven zu disziplinieren. Manche von ihnen sind
+n„mlich schon arge Dummk”pfe, die nicht begreifen, wie gut sie es hier haben.
+Freies Essen, das nicht zu knapp ist, ein Dach ber dem Kopf, und - das wird
+oft untersch„tzt - hier ist man sicher! Nur ein Dummkopf wrde es wagen, die
+Kenget anzugreifen! Aber wie gesagt: machen scheint das nicht zu reichen. Und
+dann mu ich ihnen manchmal ein wenig Dankbarkeit einpeitschen. Nicht, da Du
+mich falsch verstehst: ich mache das nicht gerne! Aber es ist leider ab und zu
+notwendig!"] 
+ 
+Block 6    (Druiden) 
+["Die Druiden sind die K„mpfer, die nur mit Magie k„mpfen. Sie benutzen keine
+Schwerter oder so etwas. Einige von ihnen sind wirklich intelligente und nette
+Menschen. Ein oder zwei von ihnen wrde ich sogar als Freunde bezeichnen. Aber
+das drften die natrlich offiziell nicht zugeben."] 
+ 
+Block 7    (Krieger) 
+["Die Krieger beherrschen keine Magie und ben”tigen deshalb richtige Waffen.
+Meistens - ich sage das jetzt sozusagen inoffiziell - sind die ein kleines
+bichen dmmer als die Druiden. Und leider auch arroganter. Und wie gesagt:
+Eine Zunge haben die wie ein Brogg. "] 
+ 
+Block 8    (Sohn) 
+["Ruainaigh! Mein ganzer Stolz! Ein so cleveres Kerlchen. Wrde mich nicht
+wundern, wenn der es sogar bis zum Hohepriester bringt. Das Zeug dazu hat er
+allemal. Leider sehe ich ihn jetzt immer weniger, weil er halt soviel lernen
+mu. Bestellt ihm Gre von mir, wenn Ihr ihn seht. Und er soll doch mal
+wieder vorbeischauen bei seinem alten Vater. Seine Mutter sorgt sich ja immer
+recht arg um ihn. Als w„re er noch ein kleines Kind. Aber, Du kennst die
+Frauen, so sind sie nunmal: weich, naiv und doch unverzichtbar, nicht? Hahaha!"] 
+ 
+Block 9    (Begráung) 
+["Guten Tag, Fremder."]

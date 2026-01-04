@@ -1,0 +1,46 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."]
+
+Block 1         (Begrung)
+["Skeima Din, Kariah grt Euch. Ich habe eine dringende Information fr Euch!"]
+
+Block 2         (Begrung 2)
+["Skeima Din, habt Ihr ber meine Information nachgedacht?"]
+
+Block 3         (Information)
+["Man hat es nicht leicht als Hure! Vor einigen Tagen bekam ich nachts von
+einem Kunden den konkreten Hinweis, da Herras, Vorstand des 'Rates der
+Gerechten', umgebracht werden soll. Natrlich stecken Riko und Garp
+dahinter.^^Bitte! Ich kann es Euch nicht beweisen, aber helft! Tut etwas
+dagegen. Mir glaubt sonst keiner, Ihr seid meine letzte Hoffnung. Bitte!
+Verhindert das Attentat!"]
+
+Block 3         (Nein)
+["Dann tut es bitte!"]
+
+Block 4         (Ja)
+["Und zu welchem Ergebnis seid Ihr gekommen?"{BLOK010}"Wir mssen
+abwarten."{BLOK011}"Wir werden schauen, was sich machen l„t."]
+
+Block 5         (Resp. 1+2)
+["Wartet nicht zu lange! Die Zeit l„uft davon und Garp und Riko werden ihre
+Tat mit Sicherheit ausfhren!"]
+
+Block 6         (Hinweis)
+["Ihr mt verstehen, da ich Euch nicht sagen kann, von wem ich den Hinweis
+bekam. Ich bringe mich durch die Informationen, die ich Euch gebe, ohnehin
+schon in eine groe Gefahr."]
+
+Block 7         (Attentat, Mord)
+["Ich wei nicht, wann und wo das Ganze geplant ist. Bestimmt werden sie es so
+bald wie m”glich tun. Wenn Herras tot ist, hat die b”se Seite im Rat das
+šbergewicht! Bitte versucht, es zu verhindern. Die meisten Leute hier in der
+Stadt sind so blind, da sie die Gefahr nicht sehen oder nicht sehen wollen."]
+
+Block 8         (Kariah)
+["Das bin ich."]

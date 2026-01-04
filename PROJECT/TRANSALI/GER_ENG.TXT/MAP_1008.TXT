@@ -1,0 +1,189 @@
+
+Cutmaptextfile
+---------------------------------------------------------------------
+
+Block 0            (frei)
+[ ]
+
+Block 1
+[Ein Sicherungskasten.]
+
+Block 2
+[Ein Sessel.]
+
+Block 3
+[Eine Liege.]
+
+Block 4
+[Das Steuerpult fr den Atomreaktor.]
+
+Block 5
+[Ein Servicepanel.]
+
+Block 6
+[Eine Steuerungskonsole.]
+
+Block 7
+[Eine Flugsteuerungskonsole.]
+
+Block 8
+[Ein Kontrollpult.]
+
+Block 9
+[Eine chemische Toilette.]
+
+Block 10
+[Ein Schrank.]
+
+Block 11
+[Eine Sple.]
+
+Block 12
+[Handtcher.]
+
+Block 13
+[Zahnputzzeug.]
+
+Block 14
+[Eine Anzeige fr die Korridor-šberwachung.]
+
+Block 15
+[Kontroll-Anzeigen.]
+
+Block 16
+[Ein Teil des Reaktors.]
+
+Block 17
+[F„sser mit Mll, Wasser, Gift- und Rohstoffen.]
+
+Block 18
+[Eine ausgeschaltete Konsole.]
+
+Block 19
+[Eine Lampe.]
+
+Block 20
+[Ein Teller.]
+
+Block 21
+[Ein Glas.]
+
+Block 22
+[Ein Becher.]
+
+Block 23
+[Ein Beh„lter.]
+
+Block 24
+[Eine Flasche.]
+
+Block 25
+[Eine Kanne.]
+
+Block 26
+[Eine Dose.]
+
+Block 27
+[Ein Gef„.]
+
+Block 28
+[Ein Pfeffer- und ein Salzstreuer.]
+
+Block 29
+[Sojasoe.]
+
+Block 30
+[Ein Topf.]
+
+Block 31
+[Eine kleine Dose.]
+
+Block 32
+[Eine Schaufel.]
+
+Block 33
+[Ein Spaten.]
+
+Block 34
+[Ein Schraubenschlssel.]
+
+Block 35
+[Ein Schraubenzieher.]
+
+Block 36
+[Eine Handkonsole.]
+
+Block 37
+[Ein PDA. (Personel Digital Assistent)]
+
+Block 38
+[Eine Zange.]
+
+Block 39
+[Besteck und ein Becher.]
+
+Block 40
+[Geschirr.]
+
+Block 41
+[Eine Automatik-Tre.]
+
+Block 42
+[Ein Shuttle.]
+
+Block 43
+[Container.]
+
+Block 44
+[Eine Dusche.]
+
+Block 45
+[Ein Fahrzeug.]
+
+Block 46
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 50
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events.]

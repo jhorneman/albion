@@ -1,0 +1,39 @@
+171: Makaio, Heiler
+===================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin der oberste Heiler von Arjano."{WORDHeiler}{WORDArjano}]
+
+Block 1         Begr. phase 1
+["Togi Din, Reisende. Kann ich Euch helfen? Da Ihr auf der Suche nach dem
+verschollenen Bero seid, sind meine Dienste als Heiler fÅr Euch natÅrlich
+kostenlos."{WORDBero}{WORDHeiler} {BLOK010}"Ja, Makaio. Wir haben Verwundete
+unter uns." {BLOK011}"Wir brauchen Heilung von einer Art Krankheit."
+{BLOK012}"Ein verfluchter Gegenstand macht uns Probleme."]
+
+Block 2         Begr. phase 2
+["Togi Din! Ah, die Retter Beros, des alten Starrkopfes! Kann ich Euch
+behilflich sein?" {BLOK010}"Ja, Makaio. Wir haben Verwundete unter uns."
+{BLOK011}"Wir brauchen Heilung von einer Art Krankheit." {BLOK012}"Ein
+verfluchter Gegenstand macht uns Probleme."]
+
+Block 3         "heiler"
+["Mein Talent zur Heilung von Wunden zeigte sich schon in meiner Kindheit.
+Seitdem gibt mir diese Segnung Danus jeden Tag die ErfÅllung und die Freude,
+anderen helfen zu kînnen."{WORDDanu}]

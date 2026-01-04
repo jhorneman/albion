@@ -1,0 +1,43 @@
+NPC 142: Bewir, Bediensteter bei den Dji-Kas
+===========================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich arbeite bei den Dji-Kas, meistens bin ich unterwegs zum
+Einkaufen von allem mîglichen."{WORDDji-Kas}]
+
+Block 1         Begr.
+["Dsarii-ma, Besucher der Stadt!"]
+
+
+Block 2         "DJI-KAS"
+["Ihr mÅût wissen, daû Dji-Kas der Name der Magiergilde Jirinaars ist. Ihr
+findet sie im sÅdwestlichen Teil der Stadt. Dort Åben die magischen Talente
+unseres Volkes zahlreiche Experimente aus. Die Dji-Kas - Magie ist eine
+vielfÑltige Kunst: sie heilt, erschafft und zerstîrt.^ Ihr solltet das
+Gildenhaus unbedingt besuchen und mit Fasiir sprechen. So seltene Besucher
+will er bestimmt kennenlernen!"{WORDFasiir}{WORDJirinaar} {WORDMagie}]
+
+Block 3         "DJI-KAS"x2
+["Wart Ihr schon dort? Ihr wiût doch noch, das groûe Haus im SÅdwesten der
+Stadt."]
+
+Block 4         "DJI-KAS, MORD, AKIIR", Phase 1
+["Ich hoffe, Ihr findet den Meuchelmîrder und klÑrt das Ganze auf. Ich kenne
+doch die Leute der Dji-Kas. Sie wÅrden niemals einen so hinterhÑltigen Plan
+schmieden."]
+
+Block 5         "DJI-KAS, MORD,AKIIR", Phase 1
+["Ihr seid nun sicher sehr beliebt bei den Gildeleuten der Dji-Kas, nicht
+wahr?"]

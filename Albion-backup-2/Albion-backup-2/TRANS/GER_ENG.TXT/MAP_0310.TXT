@@ -1,0 +1,465 @@
+
+Maptextfile
+-------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Ein Kamin.]
+
+Block 2
+[Ein Kerzenleuchter.]
+
+Block 3
+[Ein geflochtener Korb.]
+
+Block 4
+[Ein Holztisch.]
+
+Block 5
+[Ein Hocker.]
+
+Block 6
+[Ein Himmelbett. Mit den Totensch„deln k”nnte man es gar als "H”llenbett"
+bezeichnen.]
+
+Block 7
+[Ein Schreibtisch.]
+
+Block 8
+[Ein Stuhl.]
+
+Block 9
+[Ein loderndes Feuer brennt in dieser S„ule, welches die Fratze in einem
+schummerigen Licht erscheinen l„t und beim Betrachter einen beklemmenden
+Zustand erweckt.]
+
+Block 10
+[Eine S„ule mit einer gr„lichen Fratze.]
+
+Block 11
+[Ein K„mpferbett. Wie die meisten M”bel hier, wirkt es etwas abschreckend.]
+
+Block 12
+[Ein Fa.]
+
+Block 13
+[Eine Art von Teppich, der aus getrockneten Pflanzenhalmen geknpft ist.]
+
+Block 14
+[Ein Glaskrug.]
+
+Block 15
+[Vorh„nge.]
+
+Block 16
+[Eine Kiste.]
+
+Block 17
+[Ein Schrank.]
+
+Block 18
+[Eine Fackel.]
+
+Block 19
+[Eine Menge unwichtiger Kleinkram liegt in den Regalen.]
+
+Block 20
+[Ein groer h”lzerner Zuber.]
+
+Block 21
+[Groe Holzregale.]
+
+Block 22
+[Dieses Bett wird derzeit wohl nicht benutzt.]
+
+Block 23
+[Verschiedene Hieb-, Stich- und Schuwaffen, die alle „uerst gef„hrlich
+aussehen.]
+
+Block 24
+[Ein Waffenregal.]
+
+Block 25
+[Ein Schild.]
+
+Block 26
+[Ein aufgespieter Sch„del. Ein unangenehmer Verwesungsgeruch deutet darauf
+hin, da die Greueltat noch nicht allzulange zurckliegt.]
+
+Block 27
+[An diesen Strohpuppen werden kriegerische F„higkeiten trainiert und erprobt.]
+
+Block 28
+[Ein mit Stroh umwickelter Holzpfahl. Dient zur šbung von Schlagtechniken.]
+
+Block 29
+[Eine Zielplatte fr Pfeil und Bogen.]
+
+Block 30
+[Ein Tablett mit Nahrungsmitteln.]
+
+Block 31
+[Kr„uter.]
+
+Block 32
+[Eine Truhe.]
+
+Block 33
+[Eine Karaffe.]
+
+Block 34
+[Ein Kochl”ffel.]
+
+Block 35
+[Ein Eimer.]
+
+Block 36
+[Ein L”ffel.]
+
+Block 37
+[Ein L”ffel und eine Gabel.]
+
+Block 38
+[Ein Trinkbecher.]
+
+Block 39
+[Zwei Trinkbecher.]
+
+Block 40
+[Ebesteck.]
+
+Block 41
+[Ein Teller.]
+
+Block 42
+[Ein Beh„lter.]
+
+Block 43
+[Gemse.]
+
+Block 44
+[Geb„ck.]
+
+Block 45
+[Ein Gewrz.]
+
+Block 46
+[Ein Metallteller.]
+
+Block 47
+[Ein Tonbeh„lter.]
+
+Block 48
+[Ein groer Glastopf.]
+
+Block 49
+[Ein Glasbeh„lter.]
+
+Block 50
+[Eine Holzdose.]
+
+Block 51
+[Eine groe Glasdose.]
+
+Block 52
+[Eine Flasche.]
+
+Block 53
+[Notizbl„tter.]
+
+Block 54
+[Ein Buch.]
+
+Block 55
+[Mehrere Bcher.]
+
+Block 56
+[Ein in Leder gebundenes Buch. Es sieht wertvoll aus.]
+
+Block 57
+[Schreibutensilien.]
+
+Block 58
+[Ein aufgeschlagenes Buch. Auf der linken Seite ist eine technische Skizze zu
+sehen, die rechte Seite enth„lt Beschreibungen dazu. Nichts besonderes.]
+
+Block 59
+[Ein kurzer Schreibstift.]
+
+Block 60
+[Ein schweres Kurzschwert.]
+
+Block 61
+[Ein schwerer Dolch.]
+
+Block 62
+[Eine Tre.]
+
+Block 63
+[Dieser m„chtige Kchenherd dient zum Erhitzen von Speisen und Getr„nken.]
+
+Block 64
+[Ein Wandbehang.]
+
+Block 65
+[Zerrissene Vorh„nge.]
+
+Block 66
+[Sch„bige Holzbetten.]
+
+Block 67
+[Eine verzierte S„ule.]
+
+Block 68
+[Ein Tierfell.]
+
+Block 69
+[Eine Treppe nach oben.]
+
+Block 70
+[Eine Treppe nach unten.]
+
+Block 71
+[Offene Schubladen mit Kleinkram.]
+
+Block 72
+[Ein Becher.]
+
+Block 73
+[Eine feine Schere.]
+
+Block 74
+[Eine Phiole.]
+
+Block 75
+[Ein Streitkolben.]
+
+Block 76
+[Phiolen.]
+
+Block 77
+[Ein Vergr”erungsglas.]
+
+Block 78
+[Groe Tcher.]
+
+Block 79
+[Ein Tuch.]
+
+Block 80
+[Ein Teppich.]
+
+Block 81
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 82
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 83
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 84
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 85
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 86
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 87
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 88
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 89
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 90
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 91
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 92
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 93
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 94
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 95
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 96
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 97
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 98
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 115
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 116
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 117
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 118
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 119
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 120
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 121
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 122
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 123
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 124
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 125
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 126
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 127
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 128
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 129
+[Die Kenget nehmen den Gef„hrten das Gold ab, mit dem sie fr das hohe Wissen
+bezahlen wollten!^^ Unsanft werden {LEAD}{NAME} und die anderen in eine
+feuchte Zelle gestoen.^^Es dauert eine Weile, dann haben sich alle etwas
+berappelt.]
+
+Block 130
+["Bravo, Khunag! Eine brillante Idee, den Geheimgang zu benutzen!"]
+
+Block 131
+["Zu meiner Zeit wurde der Durchgang noch nicht berwacht!"]
+
+Block 132
+["Was sollen wir nun Deiner Meinung nach tun? Auer, uns auf all' die
+exklusiven Foltermanahmen zu freuen, die uns Deine ehemaligen
+Glaubens|genossen versprochen haben..."]
+
+Block 133
+["Die h”herrangigen Kenget, zu denen ich geh”rte, wenn ich daran erinnern
+darf, sind im Besitz einiger Kenntnisse, die sie vor unberlegten Manahmen
+ihrer niedrigeren Brder schtzen sollen.^^Dazu geh”rt auch folgendes..."]
+
+Block 134
+[Khunag manipuliert hinter einem Steinbogen l„ngere Zeit herum...]
+
+Block 135
+["Damit mte unsere Zellentr ge”ffnet sein. Probiert es aus!"]
+
+Block 136
+["Tats„chlich! Die Tr ist nicht mehr verriegelt!^^Ich frage mich nur, wie wir
+jetzt noch an die Aufzeichnung des hohen Wissens gelangen sollen."]
+
+Block 137
+["Es mu hier irgendwo einen Zugang zu den Anlagen geben, die dem inneren
+Bereich vorgelagert sind. Da wir in der Abkrzung erwischt wurden, bleibt uns
+nichts anderes brig, als den Weg dort hindurch zu nehmen. Es ist nicht
+ungef„hrlich, aber es bleibt uns keine Wahl."]
+
+Block 138
+["Zun„chst mssen wir aus diesem Kerkerflur entkommen."]
+
+Block 139
+[Als {LEAD}{NAME} die Tr ”ffnet, kommt Bewegung in die dahinter befindlichen
+Kenget!^^Erst berrascht, dann wtend strzen sie sich auf ihre ehemaligen
+Gefangenen!]
+
+Block 140
+[Diese Tr ist mit einem soliden Schlo versehen worden. Sie ist verriegelt.]
+
+Block 141
+[Hier lagern einige Flaschen mit Tr„nken und ein Schlssel!]
+
+Block 142
+[Verborgen unter einigen Lumpen, liegt hier ein wundervolles Schwert!]
+
+Block 143
+[Hier lagern getrocknete Lebensmittel.]
+
+Block 144
+["Genau! Hier ist es. Hier kommen wir in die Bereiche Khamulons, die als
+Verteidigungs|anlagen gebaut wurden. Teilweise dienen sie auch heute noch
+diesem Zweck.^^Es wird nicht leicht werden. Lat uns gehen."]
+
+Block 145
+[Eine massive Steintreppe.]
+
+Block 146
+[Die Tr ist fest verriegelt.]

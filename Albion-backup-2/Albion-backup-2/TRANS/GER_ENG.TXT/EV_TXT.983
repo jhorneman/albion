@@ -1,0 +1,216 @@
+Drirr, Partymitglied Nr.3  
+=========================  
+  
+Legende:  
++WORT+  = Neues Wort wird in die Wortliste eingetragen  
+"WORT"  = Antwort bei Auswahl dieses Wortes  
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y  
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert  
+(N)     = Normales Textfenster, beschreibender Text  
+WENN:   = Bedingung, Erl„uterungen  
+DANN:   = Resultat, Erl„uterungen  
+SONST:  = Wenn nicht, dann...  
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht  
+  
+  
+  
+Block 0  
+[{BLOK000}"Ich bin Mitglied der Stiriik von Jirinaar und ein ausgebildeter
+K„mpfer."{WORDK„mpfer}{WORDStiriik}]  
+  
+Block 1         Begr. "Du"-Flag off  
+["Ihr m”chtet mit mir sprechen, Tom?" {BLOK010}"Erz„hlt mir doch ein wenig
+ber Eure Vergangenheit, Drirr." {BLOK011}"Wo finden wir Eurer Meinung nach
+den flchtigen M”rder?"] 
+  
+Block 2         Begr. "Du"-Flag ON  
+["Du hast Lust auf ein Schw„tzchen, Tom?"{WORDK„mpfer}{WORDStiriik}
+{BLOK010}"Mich wrde die Geschichte Deines bisherigen Lebens interessieren,
+Drirr."]  
+  
+Block 3         Antw. MC1,10 1x  
+["Wit Ihr, Tom, ich m”chte nicht verschlossen wirken, das ist wirklich nicht
+meine Art, aber lat uns das auf sp„ter verschieben."]  
+  
+Block 4         Antw. MC1,10 2x  
+["Nun, Tom, manches davon ist sehr pers”nlich. Ich wrde gern damit warten,
+bis wir uns etwas besser kennengelernt haben."]  
+  
+Block 5         Antw. MC2,10 1x  
+["Aber gern, nun, da wir Freundschaft geschlossen haben.^ Meine Wurzeln sind
+nicht nur in Jirinaar, sondern auch in Beloveno, einer Hafenstadt auf Maini,
+einem Land im Nordosten, zu finden. Die Stadt ist von Menschen gegrndet
+worden, aber es leben auch einige Iskai dort. Meine Mutter, eine wunderbare
+Person, bte dort einen Beruf aus, der bei den Iskai Jirinaars in sehr
+schlechtem Ansehen steht, in Beloveno jedoch als durchaus ehrenhaft gilt: Sie
+verdiente sich ihren Lebens|unterhalt in einem Freudenhaus. Ihr versteht jetzt
+vielleicht, da ich nicht meine Herkunft in Jirinaar nicht oft erw„hne.^
+Jedenfalls lernte meine Mutter dort meinen Vater kennen, einen H„ndler und
+Seereisenden, und folgte ihm in seine Heimatstadt Jirinaar. Kurz darauf kam
+ich zur Welt. Ich wuchs in einem glcklichen Elternhaus auf. Von meiner Mutter
+habe ich die Kenntnisse in zwei Menschen|sprachen und gelte daher bei den
+Stiriik Jirinaars als Spezialist fr Angelegen|heiten, die mit Menschen zu tun
+haben.^ Meine Eltern litten unter periodischen Anf„llen einer unheilbaren
+Krankheit, die sich meine Mutter in Beloveno zugezogen hatte. Auch ich hatte
+in meiner Kindheit Anzeichen der Krankheit, entwickelte aber Immunit„t
+dagegen. Meine Eltern hatten nicht so viel Glck. In meinem neunten Jahr starb
+meine Mutter an einem Ihrer Anf„lle und ein gutes Jahr sp„ter erlag auch mein
+Vater der Krankheit.^ Mein Eintritt bei den Stiriik ist wohl haupts„chlich
+meinem Vater zu verdanken. Im Gegensatz zu mir, wenn ich ehrlich bin, war er
+ein sehr beherrschter Mann, eine Eigenschaft, die bei uns sehr bewundert wird.
+Wit Ihr, kurz nach dem Tod meiner Mutter habe ich auf einer, „hm, Tour durch
+die Stadt etwas bertrieben und mein Vater mute mich aus der Verwahrung bei
+den Stiriik holen. Es war ein Wendepunkt in meinem Leben. Als ich dann sah,
+wie schnell sich der Gesundheits|zustand meines Vaters verschlechterte,
+schrieb ich mich bei den Stiriik ein und schwor mir, die Ausbildung
+durchzuhalten. Mein Vater starb bald darauf, aber mit Stolz auf mich in seinem
+Gesicht. Ich habe meinen Schwur erfllt und bin ein Stiriik geworden.^ Doch,
+Freund Tom, den Rest meines Lebens wollte ich dort eigentlich nicht
+verbringen, und deshalb habe ich mich Euch angeschlossen."]  
+  
+Block 6         Antw. MC2,10 1x  
+["Du m”chtest all' das wirklich noch einmal h”ren? Wenn Du meinst: ^Meine
+Wurzeln sind nicht nur in Jirinaar, sondern auch in Beloveno, einer Hafenstadt
+im Lande Trenkiriidan, zu finden. Die Stadt ist von Menschen gegrndet worden,
+aber es leben auch einige Iskai dort. Meine Mutter, eine wunderbare Person,
+bte dort einen Beruf aus, der bei den Iskai Jirinaars in sehr schlechtem
+Ansehen steht, in Beloveno jedoch als durchaus ehrenhaft gilt: Sie verdiente
+sich ihren Lebens|unterhalt in einem Freudenhaus. Ihr versteht jetzt
+vielleicht, da ich nicht meine Herkunft in Jirinaar nicht oft erw„hne.^
+Jedenfalls lernte meine Mutter dort meinen Vater kennen, einen H„ndler und
+Seereisenden, und folgte ihm in seine Heimatstadt Jirinaar. Kurz darauf kam
+ich zur Welt. Ich wuchs in einem glcklichen Elternhaus auf. Von meiner Mutter
+habe ich die Kenntnisse in zwei Menschen|sprachen und gelte daher bei den
+Stiriik Jirinaars als Spezialist fr Angelegen|heiten, die mit Menschen zu tun
+haben.^ Meine Eltern litten unter periodischen Anf„llen einer unheilbaren
+Krankheit, die sich meine Mutter in Beloveno zugezogen hatte. Auch ich hatte
+in meiner Kindheit Anzeichen der Krankheit, entwickelte aber Immunit„t
+dagegen. Meine Eltern hatten nicht so viel Glck. In meinem neunten Jahr starb
+meine Mutter an einem Ihrer Anf„lle und ein gutes Jahr sp„ter erlag auch mein
+Vater der Krankheit.^ Mein Eintritt bei den Stiriik ist wohl haupts„chlich
+meinem Vater zu verdanken. Im Gegensatz zu mir, wenn ich ehrlich bin, war er
+ein sehr beherrschter Mann, eine Eigenschaft, die bei uns sehr bewundert wird.
+Wit Ihr, kurz nach dem Tod meiner Mutter habe ich auf einer, „hm, Tour durch
+die Stadt etwas bertrieben und mein Vater mute mich aus der Verwahrung bei
+den Stiriik holen. Es war ein Wendepunkt in meinem Leben. Als ich dann sah,
+wie schnell sich der Gesundheits|zustand meines Vaters verschlechterte,
+schrieb ich mich bei den Stiriik ein und schwor mir, die Ausbildung
+durchzuhalten. Mein Vater starb bald darauf, aber mit Stolz auf mich in seinem
+Gesicht. Ich habe meinen Schwur erfllt und bin ein Stiriik geworden.^ Doch,
+Freund Tom, den Rest meines Lebens wollte ich dort eigentlich nicht
+verbringen, und deshalb habe ich mich Deiner Reise angeschlossen."]  
+  
+Block 7         "KMPFER" 1x  
+["Ich kann mit den meisten Waffen umgehen und mich so ganz gut meiner Haut
+erwehren. Ich bin einer kleinen Rauferei nur selten aus dem Weg gegangen."]  
+  
+Block 8         "KMPFER" 2x  
+["Wie ich schon sagte: Ich kann mit den meisten Waffen umgehen und mich so
+ganz gut meiner Haut erwehren. Ich bin einer kleinen Rauferei nur selten aus
+dem Weg gegangen."]  
+  
+Block 9         "Trenkiriidan"  
+["So heit bei uns Iskai die groe Landmasse nord”stlich von Nakiridaani. Die
+Menschen nennen dieses Land Maini."] 
+ 
+Block 10        "STIRIIK", 1x  
+["Die Stiriik sorgen fr die Durchsetzung der Gesetze des Rates. Auer bei den
+Hitzk”pfen und Verbrechern, denen die Aufmerk|samkeit der Stiriik gilt, steht
+der Dienst dort in hohem Ansehen. Die Ausbildung und Mitglied|schaft verlangt
+eine Menge Disziplin, eine Eigenschaft, die in unserem Volke nicht gerade
+stark ausgepr„gt ist, aber als Ideal gilt. Hochverdiente Stiriik werden
+manchmal sogar zu Auserw„hlten fr das Sebai-Ritual. Ich bin seit einiger Zeit
+dabei und stand vorwiegend Familien zur Seite, in denen ein Verwandter gegen
+das Gesetz verstoen hat."]  
+  
+Block 11        "STIRIIK", 2x  
+["Wie gesagt: Die Stiriik sorgen fr die Durchsetzung der Gesetze des Rates."]  
+ 
+Block 12 
+[{BLOK000}Was k”nnt Ihr sagen ber... {BLOK004}Danke fr das Gespr„ch!
+{BLOK005}Was ist Euer genauer Beruf, Drirr?]  
+
+EVTL. SPTER (Ha. Ha.): {BLOK001}Schau Dir mal dies hier an...   
+ 
+Block 13 
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch!] 
+
+EVTL. SPTER (Ha. Ha.): {BLOK001}Schau Dir mal dies hier an...   
+ 
+Block 14           M”rder?, in Haus Dji-Kas 
+["Wir sollten in die Straen der Stadt gehen, vielleicht erwischen wir den
+Kerl dort noch."] 
+ 
+Block 15           M”rder?, nach Begegn. mit Stiriik 
+["Wie Ihr geh”rt habt, ist der M”rder seltsamerweise in das alte Formergeb„ude
+geflohen. Argim wird sich freuen!"{WORDFormergeb„ude}{WORDArgim}] 
+ 
+Block 16           "Formergeb„ude" 
+["Ihr habt bestimmt die Geschichte vom alten Argim geh”rt. Als er damals dem
+Wahnsinn anheimfiel, zerst”rte er ja das alte Geb„ude der Formergilde. Der Ort
+befindet sich nord”stlich von Jirinaar. Er steht in einem sehr schlechten Ruf,
+es sollen dort ja seltsame Dinge vorgehen. M”chte wissen, wie der M”rder auf
+die Idee gekommen ist, dorthin zu fliehen.{WORDArgim}] 
+ 
+Block 17           M”rder? im Formerdungeon 
+["Nun, unsere einzige Hoffnung ist, da er irgendwo hier in diesen G„ngen ist.
+Lat uns weitersuchen."] 
+ 
+Block 18           M”rder? šberreste gefunden 
+["Nun, wir haben doch seine šberreste gefunden. Wenn wir nun noch
+herausbekommen, wer der Auftraggeber dieses Assassinen war..."] 
+ 
+Block 19           M”rder? Danach 
+["Dort, wo immer die Seele eines M”rders hingehen mag..."] 
+ 
+Block 20 
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch!
+{BLOK003}Ich m”chte gern, da Du uns vorerst verl„t, Drirr.] 
+ 
+Block 21
+["Nach allem, was wir zusammen erlebt haben, soll ich nun einfach gehen?"
+{BLOK000}Ja, bitte. {BLOK001}Nein, nein, sorry.]
+
+Block 22
+["Nun, ich denke, Du wirst Deine Grnde haben, Tom. Ich werde mich nach
+Jirinaar durchschlagen. Falls Du mich mal besuchen m”chtest, findest Du mich
+im Haus der Winde, der Gastst„tte im Hafengebiet. Macht's gut, wie Ihr
+Erdmenschen sagt!"]
+
+Block 23
+["Ich dachte schon..."]
+
+Block 24
+["Freunde! Sch”n, Euch zu sehen! Wut' ich doch, da Ihr ohne mich nicht
+auskommt!"]
+
+Block 25
+["Dsarii-ma. Braucht ihr den alten Drirr doch einmal wieder, hm?"]
+
+Block 26
+[{INK 002}"Ihr seid doch gekommen, damit ich mich wieder anschliee oder?"
+{BLOK000}"Genau. Komm bitte mit!" {BLOK001}"Noch nicht, sorry."]
+
+Block 27
+["Also gut. Ich gebe ohnehin zuviel Geld in dieser Kneipe aus!"^^{INK 001}
+Drirr reiht sich in die Gruppe der Gef„hrten ein.]
+
+Block 28
+["He, ich will mich nicht aufdr„ngen! Bis irgendwann einmal."]
+
+Block 29
+["Oh, Ihr seid schon eine ganze Menge Leute, da ist fr mich kein Platz mehr.
+Kommt doch sp„ter noch mal wieder."]
+
+Block 30
+["Nun, ich denke, Du wirst Deine Grnde haben, Tom. Ich bin hier in der Stadt
+im Haus der Winde, der Gastst„tte im Hafengebiet, zu finden. Macht's gut, wie
+Ihr Erdmenschen sagt!"]
+
+Block 31
+["Nun, ich denke, Du wirst Deine Grnde haben, Tom. Ich bleibe dann fr eine
+Weile hier in der Gastst„tte. Macht's gut, wie Ihr Erdmenschen sagt!"]
+
+Block 32
+["Die Triifalai-Samenk”rner werden von den Dji-Kas - Magiern benutzt, um ihre
+Kunst auszuben."]

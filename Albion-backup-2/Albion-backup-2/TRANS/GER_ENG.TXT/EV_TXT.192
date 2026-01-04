@@ -1,0 +1,61 @@
+192: Rainer Hofstedt, an Bord der TORONTO
+==============================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Physiker und Xenobiologe im Regierungsdienst."
+{WORDRegierungsdienst}]
+
+Block 1         "Begr. 1x"
+["Ah, hallo, Driscoll! Ich hoffe, Sie fhlen sich fit fr unseren Flug!"
+{WORDFlug}]
+
+Block 2         begr. 2x
+["Gr' Sie, Driscoll. Na, was haben Sie auf dem Herzen?"{WORDFlug}]
+
+Block 3         "Physiker, Xenobiologe, Regierungsdienst"
+["Nun, ich stehe in Regierungsdiensten, weil dies eine der wenigen
+M”glichkeiten ist, praktische Arbeit hier drauen zu leisten, ohne im Sold
+einer groen Firma wie DDT zu stehen."{WORDDDT}]
+
+Block 4         "Flug" 1x
+["Ja, ich bin gespannt auf Ihre Flugknste. Es ist fr mich jedesmal ein
+absoluter H”hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn es
+sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch”nheit, wie es
+Joshi einmal war, w„re natrlich noch interessanter gewesen.^^Aber dann h„tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfllt h„tte."
+{WORDNugget}{WORDJoshi}{WORDEnvi}{WORDAnlage}]
+
+Block 5         "Flug" 2x
+["Wie gesagt, ich bin gespannt auf Ihre Flugknste. Es ist fr mich jedesmal
+ein absoluter H”hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn
+es sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch”nheit, wie es
+Joshi einmal war, w„re natrlich noch interessanter gewesen.^ Aber dann h„tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfllt h„tte."
+{WORDNugget}{WORDJoshi}{WORDEnvi}{WORDAnlage}]
+
+Block 6
+[{BLOK000}Was k”nnen Sie mir sagen ber... {BLOK001}Schauen Sie sich dies hier
+mal an... {BLOK004}Bis sp„ter. {BLOK005}Was ist Ihre Aufgabe?]
+
+Block 7
+["Bis sp„ter."]

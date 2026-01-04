@@ -1,0 +1,185 @@
+Allgemeinwissen fÅr Urkelten, Typ: Bewohner des Dorfes Klouta
+==================================================================
+
+Block 0[leer]
+
+Block 1         "VIEH"
+["Viehbesitz ist die Grundlage allen Reichtums. Wer bei uns einen hohen Rang 
+hat, ist meist auch im Besitz von Vieh, das er zum Teil an seine Ceile 
+verpachtet."{WORDCeile}]
+
+Block 2         "CEILE, EHRENPREIS"
+["Ein Ceile, oder Begleiter, gehîrt zur Gefolgschaft des Mannes, von dem er 
+seinen Ehrenpreis ausgezahlt bekommen hat. Er verzichtet also gegen eine 
+Geldsumme und gÅnstige Pacht von Vieh auf einen Teil seiner gesetzlichen 
+Rechte wie beispiels|weise das Tragen von Waffen, und ist verpflichtet, bei 
+Versammlungen seine Stimme an den PÑchter abzugeben, der dadurch an Rang und 
+Einfluû gewinnt."{WORDVieh}{WORDGesetz}]
+
+Block 3         "PFLEGSCHAFT, ATTIO"
+["Es ist Åblich, seine Kinder im Alter von etwa 7 oder 8 Jahren in die 
+Pflegschaft zu einer anderen Familie zu geben, der Ziehvater wird Attio 
+genannt. Dort lernt das Kind einen Beruf, und die Pflegschaft fîrdert die 
+Verbindung zwischen den Familien. Die Pflegschaft endet schlieûlich bei 
+MÑdchen im Alter von 14 und bei Jungen von 17 Jahren."]
+
+Block 4         "RELIGION, GôTTER, DANU, LUGH"
+["Oh, es gibt eine Vielzahl von Gîttern, doch die Grîûten unter Ihnen sind 
+Lugh, der groûe Gott des Tatendrangs, der Reisenden und des Handels sowie 
+Danu, die groûe Gîttin und Mutter, deren Verkîrperung Albion, unsere
+Welt, ist.^ Daneben gibt es die Gîtter von Bauern, Handwerkern, Dichtern und 
+Kriegern sowie eine Menge geringerer Gottheiten, verehrt von den Bewohnern 
+ihrer Landstriche.^
+öber das Leben nach dem Tode wird gelehrt, daû wir in einem anderen, 
+wunder|schînen Land weiterleben."{WORDKrieger}{WORDHandwerker}{WORDDichter}
+{WORDAlbion}]
+
+Block 5         "TUATH, STAMM"
+["Der Tuath oder Stamm ist die Gemeinschaft aller Clans und Ihrer Familien 
+und wird vom Stammeskînig geleitet."{WORDStammeskînig}]
+
+
+Block 6         "KôNIG, STAMMESKôNIG"
+["Der Kînig ist unser oberster Herrscher, der das Wohl des Tuath bestimmt, 
+auch wenn er sich bei wichtigen Angelegen|heiten mit der Versammlung der 
+waffen|tragenden MÑnner berÑt.^Er ist die Verkîrperung des Tuath und seine 
+wichtigste Aufgabe ist es, fÅr Harmonie zwischen uns Menschen und dem Land zu 
+sorgen. Denn nur, wenn Einklang mit dem Land besteht, kînnen wir auf gute 
+Ernte, gesundes Vieh, wenige Krankheiten und Erhaltung des Friedens hoffen."
+{WORDTuath}{WORDVieh}]
+
+Block 7         "KRIEGER"
+["Jeder Mann bei uns ist auch ein Krieger, wenn der Frieden gebrochen wird. 
+MÑnner, die sich ausschlieûlich der Waffenkunst widmen, ohne einen anderen 
+Beruf auszuÅben, gibt es im Moment bei uns nicht viele, denn es herrscht 
+Friede im Land.]
+
+Block 8         "DICHTER"
+["Dichter stehen bei uns in hohem Ansehen und werden sogar von mÑchtigen 
+Kriegern gefÅrchtet, denn ein treffender Spottvers kann dem Ruf des 
+Betroffenen ebenso schaden, wie eine unrÅhmliche Niederlage."{WORDKrieger}]
+
+Block 9         "HANDWERKER"
+["Es gibt viele ehrbare Handwerksberufe, die des Tîpfers, des Grob|schmiedes, 
+des Tuchwebers oder des Korbflechters. Eine besondere Stellung nehmen die 
+Waffenschmiede ein, die alle der Gilde der Umajo angehîren."{WORDUmajo}] 
+
+Block 10        "WAFFENSCHMIEDE, UMAJO" 
+["Die Gilde der Umajo ist in einem groûen, heiûen Land weit im Osten von hier 
+beheimatet. Sie hÅten das Geheimnis, wie man Erz aus dem Leib von Danu 
+gewinnt, ohne sie zu erzÅrnen. Sie produzieren Schmuck und vorallem Waffen 
+und beanspruchen das Vorrecht, diese Waffen als einzige herstellen zu dÅrfen.^^
+Nur sie lehren die Kunst der Waffen|herstellung. So sind alle Waffenschmiede
+entweder aus dem Land der Umajo oder Leute von hier, die dort Ihr Handwerk 
+oder bei einem Gilden|mitglied lernten und nun selbst zur Gilde gehîren. Es 
+soll in alter Zeit sogar einen Krieg mit den Umajo gegeben haben.^^Seitdem 
+sind sie etwas groûzÅgiger in Ihren Preisen und in der Ausbildung von 
+îrtlichen Waffenschmieden. Doch man sagt, sie verfolgen noch heute 
+AbtrÅnnige, die ohne Mitglied der Gilde zu sein, das Waffen|schmiede|handwerk 
+ausÅben."{WORDDanu}]
+
+Block 11        "GESETZ"
+["Die Rechtsprechung zwischen zwei Parteien wird zumeist von einem dafÅr 
+ausgebildeten Druiden Åbernommen."{WORDDruiden}]
+
+Block 12        "DRUIDEN"
+["Die Druiden sind unsere Gelehrten. Sie beherrschen die Schrift, bewahren 
+das Wissen unserer Vorfahren und mehren es. Ihre Aufgaben sind vielfÑltig. Es 
+gibt diejenigen, die Recht sprechen oder die ausgeschickt werden, die Kinder 
+zu lehren und welche, die Mittler zwischen den Gîttern und den Menschen sind. 
+^Es sind Heiler und Beherrscher der magischen KÅnste unter Ihnen. Ihr Zentrum 
+ist die Schule von Arjano, dort leben und lehren die Grîûten von Ihnen."
+{WORDMagie}{WORDArjano}{WORDGîtter}{WORDHeiler}]
+
+Block 13        "MAGIE"
+["Magie ist die Kunst der Gîtter. Sie wird von besonders dafÅr begabten 
+Druiden ausgeÅbt, die in hohem Ansehen stehen und als gesegnet gelten."
+{WORDDruiden}{WORDGîtter}]
+
+Block 14        "HEILER, HEILUNG"
+["In Arjano werdet Ihr Heilung fÅr Euere Wunden finden."]
+
+Block 15        "ALBION"
+["So nennen wir die Welt, auf der wir leben."]
+
+Block 16        "SCHéDEL"
+["Der Kopf ist der Sitz aller Kraft, Macht und der Persînlichkeit eines 
+Menschen. Viele von uns bewahren daher die SchÑdel groûer besiegter Feinde 
+oder heldenhafter Vorfahren auf, damit sie ihnen GlÅck bringen."]
+
+Block 17        "HAIN, EICHE"
+["Die Legenden besagen, daû unsere Vorfahren vor langer, langer Zeit dort 
+zum ersten Mal Albion betreten haben. Manche bezweifeln das, weil der Ort 
+mitten im Land und nicht am Meer liegt. Aber dort wÑchst ein uralter Baum, 
+den es nirgendwo sonst auf der ganzen Welt gibt. Er wird von uns und 
+besonders von den Druiden als Heiligtum verehrt."{WORDAlbion}{WORDDruiden}]
+
+Block 18        Drinno
+["So wird der verbotene Teil Arjanos genannt. Vor langer Zeit ist dort etwas 
+schlimmes passiert und nun hausen dort DÑmonen! Drinno ist fest verschlossen,
+der Aufenthalt dort ist ein Tabu."]
+
+Block 19           Canto
+["Canto ist ein legendÑrer Held, fast schon ein Gott! Er hat unsere
+Vorfahren hierher in dieses Land gefÅhrt und war der weiseste und
+mÑchtigste aller Druiden!"]
+
+Block 20         Iskai
+["Ah, die PelztrÑger. Nun, manche sprechen abfÑllig Åber sie, andere
+respektieren sie besonders als Krieger."]
+
+Block 21
+["DarÅber weiû ich nicht viel."]
+
+Block 22
+["DarÅber weiû ich nicht viel."]
+
+Block 23
+["DarÅber weiû ich nicht viel."]
+
+Block 24
+["DarÅber weiû ich nicht viel."]
+
+********************ortsabhÑngiges Allgemeinwissen***************************
+
+Block 25        "KLOUTA"
+["Wiût Ihr nicht, daû das Dorf, in dem ihr euch befindet, so heiût? Es trÑgt 
+den gleichen Namen wie der Fluû, an dem es liegt."]
+
+Block 26        "ARJANO"
+["Das ist der Name der Schule der Druiden hier auf Gratogel. Sie liegt 
+nordwestlich von unserem Dorf, Ihr mÅût nur dem Fluû Klouta aufwÑrts 
+folgen."{WORDGratogel}{WORDDruiden}]
+
+Block 27        "GRATOGEL"
+["So heiût das Land, in dem Ihr Euch befindet."]
+
+Block 28        "VANELLO"
+["Vanello ist das Dorf in der NÑhe von Arjano."{WORDArjano}]
+
+Block 29        "ABALLON"
+["Aballon ist ein Dorf sÅdlich vom groûen Gebirge."]
+
+Block 30        "GEBIRGE"
+["Gratogel wird von einem groûen Gebirgszug in einen Nord- und einen SÅdteil 
+getrennt. Es fÅhrt nur ein Weg durch eine tiefe Schlucht hindurch und man 
+sagt, das die Passage nicht ganz ohne Gefahr ist."{WORDGefahr}]
+
+Block 31        "GEFAHR"
+["Man hîrt von öberfÑllen auf Reisende, die durch das groûe Gebirge gehen."]
+
+Block 32        "THARNOS"
+["Tharnos ist unser Stammeskînig, er lebe lang und 
+gesund."{WORDStammeskînig}]
+
+Block 33        "OIBELOS"
+["Das ist der Name des Kînigs von Vanello."{WORDVanello}]
+
+Block 34        "ARETHA"
+["Ich glaube, so heiût die Kînigin von Aballon."{WORDAballon}]
+
+Block 35        "NEMOS"
+["Nemos ist das Oberhaupt der Druiden von Arjano, ein sehr geachteter Mann."
+{WORDDruiden}{WORDArjano}]
+
+

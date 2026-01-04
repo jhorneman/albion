@@ -1,0 +1,86 @@
+; **** Script 26: Gegner-Nachschub! (bei den K.K.)
+
+npc_on 33
+npc_lock 33
+npc_jump 33 67 22
+npc_on 34
+npc_lock 34
+npc_jump 34 68 22
+npc_on 35
+npc_lock 35
+npc_jump 35 68 23
+npc_on 36
+npc_lock 36
+npc_jump 36 69 23
+
+show_map
+
+;fade_from_black
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+npc_move 33 -1 0
+npc_move 34 -1 0
+npc_move 35 -1 0
+npc_move 36 -1 0
+update 4
+
+text 192

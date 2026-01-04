@@ -1,0 +1,17 @@
+
+Posch - Waffenschmied in Beloveno alle Phasen
+===========================================================================
+
+Block 0
+[{BLOK000}"Mein Beruf ist es, Waffen herzustellen und an den Mann zu bringen.
+Damit verdiene ich den Lebensunterhalt fr mich und meine Familie."]
+
+Block 1            (Begrung)
+["Willkommen in Poschs Waffenladen. Beste Qualit„t und gnstige Preise werdet
+Ihr hier finden. Die Waffen stammen teilweise sogar direkt von den
+Metallmachern. Und die stellen allerbeste Klingen her. So haben die Waren, die
+Ihr in der Auslage seht, einen weiten Weg hinter sich. Sogar ber den
+Gebirgspa werden Waren transportiert. Ihr seht - das Angebot ist aktuell und
+umfangreich. Bestimmt findet Ihr, nach was Ihr sucht."{WORDMetallmacher}
+{WORDGebirgspa}{BLOK010}"Was habt Ihr denn fr Waffen zum Verkauf?"
+{BLOK011}"K”nnt Ihr Gegenst„nde reparieren?"]

@@ -1,0 +1,44 @@
+172: Ouktero, Magielehrer
+==========================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich gelte als talentierter Lehrer der magischen Knste." {WORDMagie}]
+
+Block 1         Begr. 
+["Togi Din, meine Kinder. Sucht Ihr Euer Wissen der Druidenmagie zu mehren?"
+{BLOK010}"Das ist wahr, Ouktero. Bitte lehrt uns neue Kenntnisse."]
+
+Block 2         "Lehrer"
+["Ich habe mein halbes Leben damit verbracht, das Wissen unserer Vorfahren zu
+vermitteln, einen ungleichen Kampf gegen das Vergessen zu fhren."
+{WORDVergessen}]
+
+Block 3         "Vergessen, Kampf"
+["Nun, ich habe fleiige und wibegierige Schler hier, aber es sind immer
+weniger geworden, so da unsere Anzahl weit unter der frherer Jahrhunderte
+liegt. Es gibt in jngster Zeit allerdings Hoffnung. Die Ernten der letzten
+Jahre waren so gut, da wieder mehr junge Leute Interesse an Dingen finden,
+die, zumindest scheinbar, nichts mit dem t„glichen šberleben zu tun haben."]
+
+Block 4         "Wissen, Magie"
+["Die Magie, auch Kunst der G”tter genannt, wurzelt im Wissen, das unsere
+Vorfahren von Danu erhielten und das wir zu bewahren und zu mehren versuchen.
+Diejenigen, die mit dem Talent fr die Knste gesegnet sind, bedrfen
+langj„hriger Anleitung und viel šbung, bis sie Meister ihres Faches werden."
+{WORDDanu}]

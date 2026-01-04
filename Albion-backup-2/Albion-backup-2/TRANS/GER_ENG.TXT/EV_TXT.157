@@ -1,0 +1,37 @@
+157: Firina, Frau von Tharnos
+=============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin die Gemahlin von Tharnos, dem Kînig des Tuath."
+{WORDTharnos}{WORDTuath}]
+
+Block 1         "Begr. 1x"
+["Togi Din, Besucher. Ich habe leider nur wenig Zeit fÅr Euch, ich bereite
+Gebete an Danu vor." {BLOK010}"Weswegen betet ihr, Firina?"{WORDDanu}]
+
+Block 2         Antw. MC1
+["Es handelt sich um ein sehr privates Problem, Åber das ich nicht sprechen
+mîchte."]
+
+Block 3         Begr. 2x
+["Togi Din. Was mîchtet Ihr noch von mir?"]
+
+BLock 4         Begr. nach Quest 1x
+["Togi Din, hilfreiche Besucher! Ich bin guter Hoffnung, daû Euer, mhm,
+Mitbringsel, uns GlÅck bringen wird. Auch ich mîchte Euch danken."]

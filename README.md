@@ -4,6 +4,9 @@ This repository contains files related to Albion, the role-playing game develope
 
 ## Contents
 
+### Archives
+`Archives` contains compressed archives of most of the Amiga and MS-DOS files below.
+
 ### Amiga source code
 `Amiga\src` contains part of the 68000 assembly source code of the original Amiga version of the game.
 
@@ -18,6 +21,10 @@ come to light during a move.
 
 * `DECSTORY.DOC` was some very early scene-setting for the Decadents: a group of humans in the game I was going to develop, but which was cut because I had no time to work on it.
 * `TEKGUIDE.DOC` was the technical guide for the other people on the team. Please note that a) it's written in bad German, b) I cannot guarantee everything I wrote there worked, was used, or was even implemented.
+
+### Miscellaneous
+
+`Albion-backup-2`, `MORE`, and `PROJECT` contain additional backups of Albion-related files.
 
 ## More information on Albion
 

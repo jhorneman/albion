@@ -1,0 +1,516 @@
+; ***Script 10: Akiir's Ermordung.
+
+;fill_screen 0
+;fade_to_black
+
+; evtl. störende NPCs aus
+npc_off 4
+npc_off 13
+
+; Versammlung positionieren
+;Akiir
+npc_lock 15
+npc_jump 15 203 25
+npc_turn 15 3
+
+;Junge
+npc_lock 16
+npc_jump 16 204 21
+npc_turn 16 3
+
+;Zusch. 1
+npc_lock 8
+npc_jump 8 203 19
+npc_turn 8 2
+
+;Zusch. 2
+npc_lock 10
+npc_jump 10 196 19
+npc_turn 10 1
+
+;Zusch. 3
+npc_lock 5
+npc_jump 5 195 21
+npc_turn 5 1
+
+;Sebainah
+npc_lock 11
+npc_jump 11 205 23
+npc_turn 11 3
+
+;Stiriik 1
+npc_lock 17
+npc_jump 17 198 18
+npc_turn 17 2
+
+;Stiriik 2
+npc_lock 18
+npc_jump 18 201 18
+npc_turn 17 2
+
+;Party pos.
+party_jump 179 25
+party_turn 1
+party_move 1 0
+update 1
+
+show_map
+fade_from_black
+
+;party geht nach rechts zur Versammlung
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 0 -1
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 10
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+text 186
+
+camera_lock
+
+; Begr. durch Sebainah, Vorstellung Akiir's
+npc_text 115 187
+pause 30
+npc_move 15 -1 0
+update 15
+pause 20
+npc_text 136 188
+pause 30
+npc_text 115 189
+song 52
+text 190
+
+; Mörder erscheint
+npc_lock 19
+npc_jump 19 178 25
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 4
+npc_move 19 1 0
+update 12
+
+;einige drehen sich zum Mörder
+party_turn 3
+npc_turn 10 2
+npc_turn 5 2
+
+; Ani: Mörder schießt Pfeil
+camera_lock
+;pause 0
+play_anim 7 37 0 1 1
+; patcht den toten Akiir in die Map
+;pause 0
+do_event_chain 12
+npc_off 15
+show_map
+update 1
+text 191
+update 1
+
+; Mörder haut ab
+npc_move 19 -1 0
+update 4
+npc_move 19 -1 0
+update 4
+npc_move 19 -1 0
+update 4
+npc_move 19 -1 0
+update 4
+
+
+; Sebainah ruft "hinterher, Stiriik
+; (und einige Iskai?) laufen los
+npc_text 115 192
+npc_move 17 -1 0
+npc_move 18 -1 1
+npc_move 19 -1 0
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 1
+npc_move 19 -1 0
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 19 -1 0
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 19 -1 0
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 19 -1 0
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 1
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 0
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 1
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 1
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 1
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 1
+npc_move 18 -1 0
+update 4
+npc_move 17 -1 1
+npc_move 18 -1 0
+update 4
+npc_move 18 -1 0
+update 4
+npc_move 18 -1 0
+update 4
+npc_move 18 -1 0
+update 4
+
+;patcht kaputtes Fenster
+do_event_chain 13
+
+; Sebainah geht zu Akiir's Leiche
+npc_move 11 0 1
+update 20
+pause 30
+npc_text 115 193
+
+; sound Fenster geht kaputt
+sound 37 80 30 0 0
+pause 60
+
+; Stiriik kommt rein: Mörder is wech
+npc_move 18 1 0
+update 4
+npc_move 18 1 0
+update 4
+npc_move 18 1 0
+update 4
+npc_move 18 1 0
+update 4
+npc_move 18 1 0
+update 4
+npc_move 18 1 0
+update 4
+npc_text 198 194
+
+;Sebainah antwortet, Stiriik haut ab.
+npc_text 115 195
+npc_move 18 -1 0
+update 4
+npc_move 18 -1 0
+update 4
+npc_move 18 -1 0
+npc_move 11 -1 0
+update 4
+npc_move 18 -1 0
+npc_move 11 -1 0
+update 4
+npc_move 18 -1 0
+npc_move 11 -1 0
+update 4
+npc_move 18 -1 0
+npc_move 11 -1 0
+update 4
+party_turn 1
+update 1
+npc_move 11 -1 0
+update 4
+npc_move 11 -1 0
+update 20
+pause 30
+
+; Gäste haun ab
+npc_move 16 -1 -1
+npc_move 8 0 -1
+npc_move 10 0 -1
+npc_move 5 0 -1
+update 4
+npc_move 16 -1 -1
+npc_move 8 0 -1
+npc_move 10 0 -1
+npc_move 5 0 -1
+update 4
+npc_move 16 -1 -1
+npc_move 8 0 -1
+npc_move 10 0 -1
+npc_move 5 0 -1
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+npc_move 16 -1 0
+npc_move 8 -1 0
+npc_move 10 -1 0
+npc_move 5 -1 0
+update 4
+
+
+;dialog mit Janiis
+npc_text 115 207
+party_member_text 1 208
+npc_text 115 209
+party_member_text 1 210
+npc_text 115 211
+party_member_text 1 212
+npc_text 115 213
+party_member_text 1 214
+npc_text 115 215
+party_member_text 1 216
+npc_text 115 217
+
+; drirr kommt rein
+npc_lock 20
+npc_jump 20 184 18
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 1 0
+update 4
+npc_move 20 0 1
+update 4
+npc_move 20 0 1
+update 4
+npc_move 20 0 1
+update 4
+npc_move 20 0 1
+update 4
+npc_move 20 0 1
+update 4
+npc_text 26 196
+npc_text 115 197
+npc_text 26 198
+npc_text 115 199
+npc_text 26 200
+party_member_text 1 201
+npc_text 26 202
+
+; Drirr in die Party, ab zu Frill
+fade_to_black
+fill_screen 0
+do_event_chain 18
+fade_from_black
+text 220
+fade_to_black
+camera_unlock
+party_jump 166 12
+party_turn 0
+npc_on 14
+npc_lock 14
+npc_jump 14 166 6
+npc_turn 14 2
+show_map
+update 10
+fade_from_black
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+; !!!geändert am 22.10. in Jurie's Auftrag wg. Flacker-Fehler am Ende der Sequenz
+;do_event_chain 14
+;pause 20
+;party_member_text 3 221

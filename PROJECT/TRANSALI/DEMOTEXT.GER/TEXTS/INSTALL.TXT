@@ -1,0 +1,65 @@
+	GERMAN INSTALLATION PROGRAM TEXTS
+
+	Internal error messages
+[Keine VGA-Karte vorhanden.]
+[Setup erlaubt maximal einen Parameter.]
+[Kann Scriptfile nicht îffnen:%s.]
+[Kann Script nicht lesen:%s.]
+[Nicht genug erweiterter Speicherplatz.]
+[Falsche Speicherplatzanforderung.]
+[Unbekanntes Token in Zeile %li:%s.]
+[Sprung zu unbekanntem Label in Zeile %li:%s.]
+[Fehler bei DSA_InitSystem.]
+[Kann Bild nicht laden:%s]
+[Token wurde nicht eingebaut in Zeile %li:%s.]
+[Offener String in Zeile %li:%s.]
+[Falsche Parameter-Anzahl in Zeile %li:%s.]
+[Kann nicht nach Laufwerk %c wechseln.]
+[Kann nicht in Verzeichnis %s wechseln.]
+[Kann copy-Datei nicht îffnen: %s.]
+[Kann %s nicht schreiben. Speicherplatz ?]
+[Kann Datei nicht umbenennen in Zeile %i:%s]
+[Kann leere Datei %s nicht erzeugen.]
+[Integer erwartet in Zeile %li.]
+[Falsche Sprache angegeben in Zeile %li:%s.]
+[ELSE ohne IF in Zeile %li:%s.]
+[ENDIF ohne IF in Zeile %li:%s.]
+[Zweites ELSE in Zeile %li gefunden:%s]
+[EOF statt ENDIF gefunden.]
+[Konnte Verzeichnis %s nicht anlegen.]
+[<ERROR>-Text zu lang]
+[Kein MenÅ definiert in Zeile %li:%s]
+[Zu viele MenÅeintrÑge in Zeile %li:%s]
+[Kann %s nicht anzeigen.]
+[Syntax Error in Zeile %li:%s]
+[Fehler beim Dateizugriff]
+[Kein CD-Laufwerk installiert!]
+[MenÅ ohne Optionen in Zeile %li:%s]
+
+	Standard texts
+[Ja]
+[Nein]
+[O.K.]
+[Laufwerk]		(as in "Drive C:")
+[Beenden]
+[Dateien werden kopiert...]
+[Seite %li/%li]		(used by text browser)
+[Abbrechen]
+
+	Window titles
+[Hinweis]
+[Frage]
+[Fehler!]
+
+	Various prompts and messages
+[Bitte wÑhlen Sie ein Ziellaufwerk:]
+[Bitte wÑhlen Sie Ihr CD-Laufwerk:]
+[Sie brauchen mindestens %liKb Festplattenspeicher zur Installation!]
+[Bitte Zielpfad angeben:]
+
+	Error messages
+[Laufwerk %c ist schreibgeschÅtzt. Installation wird abgebrochen.]
+[In Laufwerk %c kann kein DatentrÑger gefunden werden. Installation wird abgebrochen.]
+[Fehler beim Zugriff auf Laufwerk %c. Installation wird abgebrochen.]
+[Wenn es sich bei dem DatentrÑger um eine CD handelt, reinigen Sie diese bitte vorsichtig von mîglichen FingerabdrÅcken oder anderen Verunreinigungen.]
+

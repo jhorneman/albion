@@ -1,0 +1,32 @@
+; Script 200 Wüstenführer Ohl. Zeigt Eingang.
+
+; Ausblenden, dann Party und NPC plazieren,
+; dann einblenden.
+
+; Plazierung
+
+
+show_map
+npc_lock 1
+npc_jump 1 52 199
+npc_turn 1 1
+update 8
+
+npc_move 1 1 0
+update 8
+npc_move 1 1 0
+update 8
+npc_move 1 1 0
+update 8
+npc_move 1 1 0
+update 8
+npc_turn 1 2
+update 8
+npc_move 1 0 1
+update 8
+npc_move 1 0 1
+update 8
+npc_move 1 0 1
+update 8
+
+

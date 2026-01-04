@@ -1,0 +1,156 @@
+	*** Befehle in die Zwangssteuerungsskripts von Albion ***
+
+
+	party_on
+Die Party wird dargestellt.
+
+	party_off
+Die Party wird nicht mehr dargestellt.
+
+	party_jump x y
+Die Party hÅpft zu die neue Kartenkoordinaten.
+
+	party_move dx dy
+Die Party bewegt sich Åber der angegebene Vektor.
+
+	party_turn view_direction
+Die Party dreht sich in eine bestimmte Richtung.
+
+
+	npc_on npc_index
+Ein NPC in die aktuelle Karte wird angeschaltet.
+
+	npc_off npc_index
+Ein NPC in die aktuelle Karte wird ausgeschaltet.
+
+	npc_lock npc_index
+Ein NPC wird "gelockt" und wird ab jetzt nicht mehr vom Programm bewegt.
+Beim Beenden des Skripts werden alle NPCs automatisch geunlockt.
+
+	npc_unlock npc_index
+Ein NPC wird "geunlockt" und wird ab jetzt wieder vom Programm bewegt.
+Beim Beenden des Skripts werden alle NPCs automatisch geunlockt.
+
+	npc_jump npc_index x y
+Der NPC hÅpft zu die neue Kartenkoordinaten.
+
+	npc_move
+Der NPC bewegt sich Åber der angebene Vektor.
+
+	npc_turn npc_index view_direction
+Ein NPC dreht sich in eine bestimmte Richtung.
+
+
+	camera_lock
+Die Kamera wird "gelockt" und wird ab jetzt nicht mehr vom Programm bewegt.
+Beim Beenden des Skripts wird der Kamera automatisch geunlockt.
+
+	camera_unlock
+Die Kamera wird "geunlockt" und wird ab jetzt wieder vom Programm bewegt.
+Beim Beenden des Skripts wird der Kamera automatisch geunlockt.
+
+	camera_jump x y
+Die Kamera hÅpft zu die neue Playfieldkoordinaten (!).
+
+	camera_move dx dy
+Die Kamera bewegt sich Åber der angegebene Vektor.
+
+
+
+	do_event_chain chain_nr
+Eine Eventkette in die aktuelle Karte wird ausgefÅhrt.
+
+
+	sound effect_nr priority volume variability frequency
+Ein Soundeffekt wird abgespielt (siehe Eventbeschreibung).
+
+	song song_nr
+Ein Lied wird abgespielt.
+
+	ambient song_nr
+Ein ambientes Lied wird abgespielt.
+
+
+	set_quest_bit bit_index
+Ein Quest-Bit wird gesetzt.
+
+	clear_quest_bit bit_index
+Ein Quest-Bit wird gelîscht.
+
+
+	change_icon x y type sub_type value
+Ein Icon-change wird ausgefÅhrt (siehe Eventbeschreibung).
+
+
+	text block_nr
+Ein Text aus der Map-text Datei wird gezeigt.
+
+	party_member_text char_nr block_nr
+Ein Text aus der Map-text Datei, gesprochen von ein Partymitglied,
+wird gezeigt (siehe Eventbeschreibung).
+
+	npc_text char_nr block_nr
+Ein Text aus der Map-text Datei, gesprochen von ein NPC, wird gezeigt
+(siehe Eventbeschreibung).
+
+	active_member_text block_nr
+Ein Text aus der Map-text Datei, gesprochen von das aktive Partymitglied,
+wird gezeigt (siehe Eventbeschreibung).
+
+
+	update counter
+Das ganze Programm wird ein Anzahl mal geupdatet, wodurch sich die Party,
+NPCs und Kamera bewegen.
+
+	pause duration
+Das Programm wartet ein Anzahl 60te Sekunden, oder wartet auf ein Mausklick
+(siehe Eventbeschreibung).
+
+
+	show_map
+Die 2D Map wird dargestellt.
+
+	show_pic picture_nr x y
+Ein Bild wird dargestellt.
+
+	fill_screen colour
+Der Bildschirm wird mit eine bestimmt Farbe gefÅllt.
+
+
+	play_anim flic_nr x y nr_repeats play_mode
+Ein Animation wird abgespielt (siehe Eventbeschreibung).
+
+	start_anim flic_nr x y play_mode
+Ein Animation wird auf das Abspielen vorbereitet (siehe Eventbeschreibung).
+
+	play nr_frames
+Eine Anzahl Frames aus die aktuelle Animation werden abgespielt. Das Programm
+loopt die Animation automatisch.
+
+	stop_anim
+Eine Animation wird beendet und entfernt. Beim Beenden des Skripts wird eine
+eventuell noch vorhandene Animation automatisch entfernt.
+
+
+	wipe
+Das Bildschirm wird leergefegt.
+
+	fade_to_black
+Das Bildschirm wird auf schwarz geblendet.
+
+	fade_to_white
+Das Bildschirm wird auf wei· geblendet.
+
+	fade_from_black
+Das Bildschirm wird von schwarz eingeblendet.
+
+	fade_from_white
+Das Bildschirm wird von wei· eingeblendet.
+
+	load_pal palette_nr
+Eine Palette wird geladen und angezeigt.
+
+	restore_pal
+Die ursprungliche Palette (d.h. vor eventuelle Umblendungen) wird wieder
+hergestellt.
+

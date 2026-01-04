@@ -1,0 +1,70 @@
+; ****Script 60: Sira & Mellthas
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 26
+song 51
+show_pic 30
+pause 0
+
+party_member_text 5 27
+show_pic 30
+update 1
+pause 10
+
+party_member_text 4 28
+show_pic 30
+update 1
+pause 10
+
+party_member_text 5 29
+show_pic 30
+update 1
+pause 10
+
+party_member_text 4 30
+show_pic 30
+update 1
+pause 10
+
+party_member_text 5 31
+show_pic 30
+update 1
+pause 10
+
+party_member_text 4 32
+show_pic 30
+update 1
+pause 10
+
+party_member_text 5 33
+show_pic 30
+update 1
+pause 10
+
+party_member_text 4 34
+show_pic 30
+update 1
+pause 10
+
+party_member_text 5 35
+show_pic 30
+update 1
+pause 10
+
+party_member_text 4 36
+show_pic 30
+update 1
+pause 10
+
+pause 0
+fade_to_black
+fill_screen 0
+fade_from_black
+text 37
+song 3
+fade_to_black
+fill_screen 0
+fade_from_black
+;restore_pal

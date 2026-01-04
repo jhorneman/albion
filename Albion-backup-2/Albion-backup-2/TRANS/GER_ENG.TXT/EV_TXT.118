@@ -1,0 +1,44 @@
+NPC 118: Griibo, ein Ratsmitsglied
+==================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin ein Sebai-li des Clans des Rotholzes und Ratsmitglied."
+{WORDClan}]
+
+Block 1         Begrung 
+["Dsarii-ma."]
+
+Block 2         Begrung Phase 1
+["Dsarii-ma, J„ger von Akiirss M”rdern."]
+
+Block 3         "CLAN", "ROTHOLZ"
+["Unser Clan ist vorwiegend mit dem Handel besch„ftigt."{WORDHandel}]
+
+Block 4         "CLAN", "ROTHOLZ", 2.mal
+["Habt Ihr ein schlechtes Ged„chtnis? Ich sagte, unser Clan betreibt Handel."]
+
+Block 5         "HANDEL"
+["Wir handeln mit Waren innerhalb Nakiridaanis, aber auch mit entfernten
+St„dten wie Beloveno."{WORDBeloveno}{WORDNakiridaani}]
+
+Block 6         "HANDEL" 2x
+["Schon vergessen? Wir handeln mit Waren innerhalb Nakiridaanis, aber auch mit
+entfernten St„dten wie Beloveno."{WORDBeloveno}{WORDNakiridaani}]
+
+Block 7         "BELOVENO"
+["Das ist eine Hafenstadt, weit im Osten von hier."]
+ 
+Block 8         "BELOVENO"2x
+["Wie ich bereits sagte: Das ist eine Hafenstadt, weit im Osten gelegen."]

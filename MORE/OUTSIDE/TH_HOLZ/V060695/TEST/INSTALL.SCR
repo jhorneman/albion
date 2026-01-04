@@ -1,0 +1,9 @@
+//------------------------------------------------------------------------------
+//Install.scr - Beispiel-install-script fr SETUP.EXE
+//------------------------------------------------------------------------------
+//LOAD_BACKGROUND "install.lbm"
+EXECUTE_SILENT pause >NUL
+IF_EXISTS c:\os2
+	LOAD_BACKGROUND "install.lbm"
+	LOAD_BACKGROUND "install2.lbm"
+ENDIF

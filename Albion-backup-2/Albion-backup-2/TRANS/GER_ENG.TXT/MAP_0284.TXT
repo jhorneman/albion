@@ -1,0 +1,68 @@
+
+Maptextfile
+---------------------------------------------------------------------
+
+BLock 0
+[{BLOK000}Gasthaus
+{BLOK001}Gemischtwaren
+{BLOK002}Gilde der Magier
+{BLOK003}Wohnhaus
+{BLOK004}Stadttor]
+
+Block 1
+[Eine Tre.]
+
+Block 2
+[Ein Brunnen.]
+
+Block 3
+[Vielleicht wissen ja die Bewohner von Srimalinar etwas ber die Landung der
+Toronto. {LEAD}{NAME} spricht den Iskai darauf an:]
+
+Block 4
+["Ich glaube, ich wte darber, wenn etwas derart Groes hier gelandet oder
+entdeckt worden w„re. Die Gegend ist ziemlich hgelig. Wenn dieses Etwas
+wirklich so gro ist, wie Ihr erz„hlt, dann wird es die Landung nicht
+unbeschadet berstanden haben, denn es gibt hier keine groen Ebenen. Maini
+ist auerdem dicht besiedelt. Hier leben Menschen, Druiden und Iskai, und ich
+glaube nicht, da so etwas unbemerkt geblieben w„re."]
+
+Block 5
+["M”chtet Ihr etwas ber Srimalinar wissen?^^Die Stadt ist schon sehr alt.
+Ursprnglich kommen wir brigens alle von Nakiridaani. Es waren unsere
+Ururgroeltern, die damals das Land verlassen haben, um eine neue Siedlung zu
+grnden. Schlielich ist Nakiridaani kein riesiges Land. Hier gibt es viel
+Platz, und die Menschen und Druiden respektieren uns hier. Dafr sind wir auch
+sehr dankbar. Regelm„ig beten wir alle in unserer heiligen Gedenkst„tte, wo
+auch unsere Toten ihre ewige Ruhe finden. Alle, die in ihrem Leben fair und
+gtig waren, erlangen dort das ewige Bewutsein.^^Denkt bitte daran, da es
+ein Tabu gibt, welches Fremden untersagt, diesen Ort aufzusuchen. Wir
+betrachten es als tiefe Miachtung unseres Glaubens, wenn das Tabu gebrochen
+wird."]
+
+Block 6
+["Kennt Ihr Euch in Srimalinar aus? Wir sind eigentlich nur eine kleine
+Siedlung, auch wenn es von der Fl„che her schon einer Stadt gleicht. Aber Ihr
+werdet sehen, da wir nicht allzuviele sind. So gibt es auch nur einen Laden,
+in dem Ihr etwas einkaufen k”nnt. Das Gasthaus k”nnt Ihr ebenfalls gerne
+aufsuchen. Es ist eigentlich auch der wichtigste Treffpunkt in Srimalinar.
+Vielleicht l„t man Euch auch in das eine oder andere Wohnhaus hinein. Was
+Euch noch interessieren k”nnte, ist natrlich die Gilde der Magier. Wir sind
+bekannt fr unsere Magie-Gelehrten und ihre ber|durch|schnitt|lichen
+F„higkeiten."]
+
+Block 7
+["Papi mu vor der Stadt die Felder ernten. Ich darf derweil hier spielen.
+Aber wenn alle ernten sind, ist es irgendwie langweilig. Niemand ist da."]
+
+Block 8
+["Mir ist gestern Nacht schon wieder ein Kritah ber den Weg gelaufen. Ich
+hasse diese Viecher. Sie sind zwar eigentlich ungef„hrlich, aber sie stehlen
+glitzernde Gegenst„nde. Sie leben in den Felsh”hlen am Rande des
+Gebirges.^^Wie gesagt, sie stellen keine Gefahr fr uns dar, aber es ist
+allgemein bekannt, da es ein schlechtes Omen ist, diese Tiere zu treffen. Und
+nun habe ich wiederholt welche gesehen. Was mag nur passieren? Ich stelle mir
+schon die schrecklichsten Dinge vor!"]
+
+Block 9
+[Diese Tre ist fest verschlossen. Vermutlich ist niemand zuhause.]

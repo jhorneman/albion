@@ -1,0 +1,62 @@
+    
+Block 0		(Begrssung)       
+[{BLOK000}"Ich bin Drannagh, der Magielehrer der Erleuchteten."
+{WORDHelromier}{WORDAnimenkna}{WORDMagie}]      
+       
+Block 1		(Magie)       
+["Ich wei, da Ihr Helromier die M”glichkeit von Magie berhaupt bestreitet.
+Aber Tom, ich werde Euch zeigen, da ohne Magie berhaupt kein Leben
+existieren k”nnte. Jetzt gibt es einige unter Euch, die sagen, das Leben k„me
+vom Unbekannten Gott, und nur dieser verfge ber Magie. Und ich sage Euch,
+da aus diesen Menschen Animenkna spricht, der die Magie gerne fr sich
+alleine h„tte und sie schon gar nicht mit seinen Gesch”pfen, den Helromiern
+teilen m”chte. Wie auch immer: ich werde Euch erkl„ren, was Magie ist. Wenn
+ein Haus gebaut wird, so haben die Menschen, die dieses Haus bauen, eine ganz
+genaue Vorstellung davon, wie dieses Haus sp„ter auszusehen hat.
+Wahrscheinlich machen sie sogar vorher einen Plan. Und nach diesem Plan
+entsteht das Haus in Wirklichkeit, das vorher nur auf dem Plan existierte.
+Glaubt Ihr mir, da das Haus schon dann existiert, wenn sich gengend Wesen
+darauf konzentrieren, da es existiert? Konzentrieren ist jetzt ein schlechtes
+Wort, aber es gibt kein besseres. Das Haus existiert, sobald das Ens des
+Hauses erschaffen wird. Was ein Ens ist, kann Euch der Heiler sagen. Es ist so
+etwas, wie die Idee. Wenn Ihr eine Idee von etwas habt, und Ihr habt den
+Zugang zu Animebona, der Entit„t, dann k”nnt Ihr dieses Ens erschaffen. Und
+wenn Euch das gelingt, dann wird das Ens Materie. Das reicht bis zu D„monen
+oder gar Transporth”hlen. Von diesen wissen aber nur die
+Erleuchteten."{WORDHelromier} {WRNR----}{WORDEns}{WORDAnimebona}
+{WORDEntit„t}{WORDD„monen} {WORDTransporth”hlen} {WORDErleuchteten}] 
+       
+Block 2		(D„monen)       
+["D„monen sind Wesen, in denen Angst zum Ens geworden ist. Das heit jetzt
+leider nicht, da D„monen „ngstlich sind, sondern sie sind materialisierte
+Angsttr„ume. Sie entstehen eigentlich nur, wenn jemand seine pers”nlichen
+ngste in ein Ens ableiten will, um sie zu berwinden. Diesen gef„hrlichen Weg
+benutzen vor allem die Kenget Kamulos, ein kriegerischer Orden, von dem ich
+hoffe, da Ihr nie mit ihm zu tun bekommt."{WORDKenget Kamulos}]       
+       
+Block 3		(Transporth”hlen)       
+["Das sind natrlich auch sehr m„chtige Einrichtungen, die deshalb ganz streng
+nur den Erleuchteten vorbehalten bleiben mssen. An diesen Stelle ist die
+Energie der Animebona besonders stark. Wenn sich ein Ens dort vorstellt, an
+einem anderen Ort zu sein, dann ist es im n„chsten Augenblick wirklich an
+diesem Ort, also auch mit dem K”rper. Sie entstehen durch die Verantwortung,
+die alle Erleuchteten fr Albion empfinden. Wrde diese Verantwortung
+schwinden, verschw„nden auch die Transporth”hlen. Schon deshalb drfen sie der
+Allgemeinheit nicht zug„nglich gemacht werden. Wrde sie einer mibrauchen,
+mten wir sie verschwinden lassen.{WORDAlbion}]         
+       
+Block 4		(Kenget Kamulos)       
+["Ooh, da fragt Ihr besser Llanair, einen unserer Bediensteten. Er war einst
+Sklave der Kenget Kamulos und konnte fliehen. Der wei da ein paar deftige
+Geschichten zu erz„hlen!"]     
+     
+Block 5 		Begr.    
+["Seid gegrt. M”ge Animebona Euch immer sicher begleiten."{WORDAnimebona}
+{BLOK010}"Wir haben einen Gegenstand, dessen magische Energie aufgefrischt
+werden mu."]  
+  
+Block 6 		Begr., wenn harriet dabei    
+["Seid gegrt. M”ge Animebona Euch immer sicher begleiten."{WORDAnimebona}
+{BLOK010}{INK 001}Harriet:{INK 002}"Bitte mehrt meine magischen Kenntnisse,
+Drannagh." {BLOK011}"Wir haben einen Gegenstand, dessen magische Energie
+aufgefrischt werden mu."]

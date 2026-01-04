@@ -1,0 +1,198 @@
+; ****** script 29: showdown in Khamulon
+; ****** (part 1)
+
+;song 50
+show_map
+
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+text 144
+
+fade_to_black
+party_jump 27 17
+update 1
+
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_turn 3
+update 4
+
+camera_lock
+camera_move 0 -110
+update 1
+
+; Khunag raus
+do_event_chain 20
+party_move 0 -2
+party_turn 3
+npc_lock 25
+npc_jump 25 26 15
+npc_turn 25 0
+npc_lock 22
+npc_lock 23
+npc_lock 24
+show_map
+update 20
+fade_from_black
+
+npc_move 22 0 1
+update 4
+npc_turn 22 1
+update 5
+update 20
+
+; Rhain
+npc_text 10 145
+
+npc_move 23 1 0
+update 4
+npc_move 23 1 0
+update 4
+npc_move 23 0 1
+update 4
+npc_move 23 1 0
+update 4
+npc_move 23 1 0
+update 20
+npc_turn 23 2
+update 20
+
+; Cuain zu Rhain
+npc_text 9 146
+
+update 10
+npc_turn 23 1
+update 20
+
+; Cuain zu Tom
+npc_text 9 147
+
+party_member_text 1 148
+
+; Cuain
+npc_text 9 149
+
+party_member_text 1 150
+
+; Cuain
+npc_text 9 151
+
+; Cuain dreht eine Runde
+npc_move 23 0 1
+update 8
+npc_turn 23 1
+update 35
+npc_move 23 0 1
+update 8
+npc_turn 23 1
+update 35
+npc_move 23 0 1
+update 50
+npc_move 23 0 -1
+update 4
+npc_move 23 0 -1
+update 4
+npc_move 23 0 -1
+update 10
+npc_turn 23 1
+update 30
+
+; Cuain
+npc_text 9 152
+
+party_member_text 1 153
+
+; Cuain
+npc_text 9 154
+npc_text 9 155
+npc_turn 23 2
+update 15
+npc_text 9 156
+update 10
+npc_turn 23 1
+update 15
+npc_text 9 157
+update 10
+npc_turn 23 2
+update 4
+
+; Khunag
+npc_move 25 0 -1
+update 15
+npc_text 1 158
+
+; tom
+party_turn 2
+update 15
+party_member_text 1 159
+
+; khunag
+npc_text 1 160
+
+; cuain
+npc_turn 23 1
+update 15
+npc_text 9 161
+
+; tom
+party_turn 3
+update 15
+party_member_text 1 162
+
+; khunag
+npc_text 1 163
+
+; cuain
+npc_turn 23 2
+update 15
+npc_text 9 164

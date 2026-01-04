@@ -1,0 +1,74 @@
+
+Khunag, Kenget Kamulo zum Mitnehmen
+==========================================================================
+
+
+Block 0
+[{BLOK000}"Ich bin Magier der Kenget Kamulos, doch ich habe mich von ihnen
+klar distanziert und fÅhre nun mein eigenes Leben."]
+
+Block 1            (BegrÅûung 1)
+["Skeima Din,^^Ihr sprecht mit Khunag. Was mîchtet Ihr von mir? Ich werde
+nicht so gerne gestîrt. Es sei denn, Ihr mîchtet mich in einer wichtigen
+Angelegenheit sprechen."{WORDAngelegenheit}]
+
+Block 2            (BegrÅûung 2)
+["Skeima Din,^^bitte stîrt mich nur, wenn Ihr mich wirklich braucht."
+{WORDAngelegenheit}]
+
+Block 3            (Angelegenheit)
+["In welcher Angelegenheit wÅnscht Ihr mich zu sprechen?" {BLOK010}"Kînnt Ihr
+uns wertvolle Informationen beschaffen?" {BLOK011}"Ihr seht aus, wie ein
+Gelehrter der Magie." {BLOK012}"Wir suchen einen Trainer." {BLOK013}"Was
+haltet Ihr von der politischen Lage in dieser Gegend?" {BLOK014}"Wir mîchten
+nicht lÑnger stîren."]
+
+Block 4            (3,10)
+["Nein. Warum sollte ich?"]
+
+Block 5            (3,12)
+["Dann sucht weiter. Ich bin kein Trainer."]
+
+Block 6            (3,13)
+["Ich sehe keine groûen Probleme. Gelegentliche Unstimmigkeiten sind doch
+vîllig normal. Oder habt Ihr eine andere Definition von Problemen?"]
+
+Block 7            (3,14)
+["Skeima Din."]    (Dialogende)
+
+Block 8            (3,11)
+["Gut beobachtet. Ich will es auch nicht verbergen, ich bin wirklich ein
+Magier. Doch die Zeiten, als ich noch in meinem Beruf stand, sind vorbei.
+Gleichwohl sind meine magischen FÑhigkeiten so gut wie nie zuvor. Warum
+interessiert Ihr Euch so sehr dafÅr?" {BLOK010}"Jemanden mit FÑhigkeiten, wie
+Ihr sie habt, kînnten wir auf unserer Reise gut gebrauchen."]
+
+Block 9            (8,10)
+["Auf was fÅr einer Reise befindet Ihr Euch denn?" {BLOK010}"Nun..."]
+
+Block 10           (9,10)
+[So erzÑhlt Tom Åber die wichtigsten Stationen der bisherigen Reise und die
+zukÅnftigen Ziele.^^"Ein reizvoller Gedanke, dieses Mutterschiff einmal
+besichtigen zu kînnen. Ich wÅrde mich Eurer Gesellschaft anschlieûen,
+zumindest fÅr eine bestimmte Zeit, wenn Ihr mîchtet, daû ich mit Euch komme."
+{BLOK010}"Davor wÅrden wir aber gerne noch etwas mehr von Euch erfahren."
+{BLOK011}"Wir freuen uns, wenn Du mit uns kommst." {BLOK012}"Wir denken Åber
+Euer Angebot noch einmal nach."]
+
+Block 11           (10,10)
+["Ihr mÅût nicht unbedingt alles Åber mich wissen. Ich bin hier aufgewachsen
+und war dann eine ganze Zeit lang bei den Kenget Kamulos. Aus dieser Zeit
+kommen auch meine magischen FÑhigkeiten. Seit langem lebe ich aber hier mein
+eigenes Leben und kann tun und lassen, was ich mîchte.^^Ich werde Euch
+natÅrlich mit meiner Magie helfen, wenn ich mitkomme." {BLOK010}"Wenn Du
+mîchtest, kannst Du mit uns kommen!" {BLOK011}"Wir denken Åber Euer Angebot
+noch einmal nach."]
+
+Block 12           (11,11+10,12)
+["Laût mich wissen, wie Ihr Euch entschieden habt."]
+
+Block 13           (10,11+11,10)
+["Gut, ich komme mit Euch."]
+
+Block 14
+["Ich glaube, Eure Gruppe ist schon groû genug."]

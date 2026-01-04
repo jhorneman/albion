@@ -1,0 +1,228 @@
+; **** Script 50: Die Erschaffung
+;      des Samenkorns
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 201
+fade_to_black
+show_map
+
+party_jump 87 18
+party_turn 3
+
+;Joe
+npc_lock 6
+npc_jump 6 86 16 
+npc_turn 6 2
+
+;Drannagh
+npc_lock 0
+npc_jump 0 83 16
+npc_turn 0 1
+
+;Irkith
+npc_lock 2 
+npc_jump 2 83 19
+npc_turn 2 1
+
+;Birrh
+npc_lock 3
+npc_jump 3 82 21
+npc_turn 3 1
+
+;Frill
+npc_lock 4
+npc_jump 4 84 22
+npc_turn 4 0
+
+;Nemos
+npc_lock 5
+npc_jump 5 85 18 
+npc_turn 5 1
+
+;Rainer
+npc_lock 7
+npc_jump 7 86 20 
+npc_turn 7 0
+
+update 4
+
+fade_from_black
+update 20
+npc_text 21 202
+update 10
+
+fade_to_black
+
+party_jump 79 14
+party_turn 2
+; Harriet aus Party raus
+do_event_chain 15
+
+;Joe
+npc_on 6
+npc_lock 6
+npc_jump 6 77 15 
+npc_turn 6 1
+
+;Drannagh
+npc_lock 0
+npc_jump 0 80 16
+npc_turn 0 2
+
+;Irkith
+npc_lock 2 
+npc_jump 2 82 23 
+npc_turn 2 0
+
+;Birrh
+npc_lock 3
+npc_jump 3 84 22
+npc_turn 3 0
+
+;Frill
+npc_lock 4
+npc_jump 4 78 19
+npc_turn 4 1
+
+;Nemos
+npc_lock 5
+npc_jump 5 82 14
+npc_turn 5 2
+
+;Harriet
+npc_on 9
+npc_lock 9
+npc_jump 9 87 18
+npc_turn 9 3
+
+;Rainer
+npc_on 7
+npc_lock 7
+npc_jump 7 80 13
+npc_turn 7 2
+
+camera_lock
+camera_move 48 58
+update 4
+
+fade_from_black
+
+update 20
+text 203
+update 20
+
+fade_to_white
+fill_screen 194
+fade_from_white
+text 204
+fade_to_white
+show_pic 7 0 0
+fade_from_white
+pause 0
+npc_text 21 205
+pause 0
+fade_to_black
+show_map
+
+;!!!später wieder raus?
+load_pal 5
+
+; Dji Cantos neu positionieren
+
+;Drannagh
+npc_lock 0
+npc_jump 0 81 18
+npc_turn 0 1
+
+;Irkith
+npc_lock 2 
+npc_jump 2 80 23 
+npc_turn 2 0
+
+;Birrh
+npc_lock 3
+npc_jump 3 79 23
+npc_turn 3 0
+
+;Frill
+npc_lock 4
+npc_jump 4 77 22
+npc_turn 4 1
+
+;Nemos
+npc_lock 5
+npc_jump 5 82 17
+npc_turn 5 2
+
+;Harriet
+npc_lock 9
+npc_jump 9 84 18
+npc_turn 9 3
+
+update 4
+fade_from_black
+
+; Übergabe des Samenkorns
+
+npc_move 5 -1 0
+update 4
+
+npc_move 5 -1 0
+npc_turn 9 0
+update 4
+
+npc_move 5 -1 0
+npc_move 2 0 -1
+npc_turn 0 0
+npc_turn 4 0
+update 4
+
+npc_move 5 0 -1
+npc_move 3 0 -1 
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 2 0 -1 
+npc_move 3 0 -1 
+npc_move 4 0 -1 
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 10
+
+text 206
+
+npc_text 21 207
+party_member_text 1 208
+npc_text 21 209
+party_member_text 1 210
+npc_text 23 211
+party_member_text 1 212
+npc_text 23 213
+text 214
+npc_text 23 215
+party_member_text 1 216
+
+fade_to_black
+fill_screen 0
+; Harriet in Party rein
+do_event_chain 6
+npc_off 9
+fade_from_black
+text 217
+fade_to_black
+show_map
+update 8
+fade_from_black

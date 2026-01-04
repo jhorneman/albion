@@ -1,0 +1,227 @@
+
+Allgemeinwissen fr die Metallmacher  (Stufe A, viel Wissen)
+--------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1         (Ort: Umajo-Kenta)
+["Die meisten von uns lieben das Leben hier, das Klima und natrlich unsere
+Stadt. Die Wste mag auf den ersten Blick vielleicht als trostlos erscheinen,
+aber sie hat ihren eigenen Reiz. In Umajo-Kenta gibt es ja auerdem sehr
+sch”ne Pflanzen.^^Wenn man zwischen Meer und Wste lebt, kommt man in den
+Genu eines ganz besonderen Klimas und k”stlicher Luft. Ich hoffe, da Ihr
+euch wohl fhlen werdet.^^Zu Umajo-Kenta kann ich Euch noch ein wenig
+erz„hlen:^^Da wir die einzige Kultur sind, die Metall erzeugen und verarbeiten
+kann, geht es uns materiell ziemlich gut und Ihr werdet sehen, da man hier
+viele wertvolle Dinge kaufen kann. Wenn Ihr auf der Suche nach ausgefallenen
+Dingen seid, werdet Ihr hier bestimmt fndig, vorausgesetzt, da Ihr
+zahlungskr„ftig seid. Nahrungsmittel sind hier allerdings sehr teuer, denn wir
+bekommen alles mit Schiffen angeliefert. Ich wrde auch einen Besuch in den
+vielen traditionsreichen Gilden machen."{WORDMetall}{WORDGilden}{WORDPflanzen}]
+
+Block 2         (Metall)
+["Metall spielt bei uns eine sehr wichtige Rolle. Wir sind die einzige Kultur,
+die das Ritual kennt, das die G”ttin der Erde bes„nftigt. So k”nnen wir
+Metallerze und Edelsteine abbauen und weiterverarbeiten. Schon viele haben
+versucht, es nachzumachen. Aber es verst”t gegen unser aller Glauben, sich an
+den Sch„tzen unserer Welt einfach zu bedienen. Wer das trotzdem versucht, wird
+den ganzen Zorn von Mutter Erde spren und alles Unglck der Welt wird ber
+ihn hereinbrechen."{WORDRitual}{WORDMutter Erde}]
+
+Block 3         (Gilden)
+["Die wichtigsten Gilden sind die Gilde der Bergleute mit den Bergpriestern,
+die Gilde der Ger„temacher, die Gilde der Diamantschleifer und die Gilde der
+Waffenschmiede. Jede dieser Gilden hat in der Stadt ein Stammhaus. Die
+wichtigsten Gildenmitglieder treffen sich dort regelm„ig. Gildenh„user sind
+auch fr G„ste ge”ffnet."{WORDDiamantschleifer}
+{WORDBergleute}{WORDWaffenschmied}{WORDGer„temacher}]            
+
+Block 4         (Ritual)
+["Nur die Priester der Bergbauleute sind in der Lage, dieses Ritual
+durchzufhren. Es bes„nftigt die Mutter der Erde und es erlaubt uns, den Boden
+zu ”ffnen und Erze und Edelsteine abzubauen. Keinesfalls drfen wir aber mehr
+nehmen, als uns die G”ttin zugesteht. Das Ritual selbst ist natrlich ein
+wohlbehtetes Geheimnis, das Euch keiner verraten wird!"{WORDMutter Erde}]
+
+Block 5         (Mutter)
+["Sie herrscht ber die Erde und bestraft jeden, der sich an ihr vergeht. Zorn
+und Unglck werden ber diejenigen hereinbrechen, die das Ritual nicht
+ausfhren."{WORDZorn}{WORDUnglck}{WORDRitual}]
+
+Block 6         (Zorn,Unglck)
+["Wenn man das Ritual nicht durchfhrt, strzen Stollen ein, Arbeiter fallen
+einfach in Sch„chte, es gibt Explosionen, man kann die Luft nicht mehr atmen
+und andere schreckliche Dinge geschehen."]
+
+Block 7         (Waffenschmiede)
+["Waffenschmiederei ist das „lteste Handwerk in unserer Stadt. Neben
+tra|di|tionellen Hieb- und Stich|waffen werden auch Schil|de und Hel|me und
+andere Rs|tungs|ge|gen|st„n|de her|ge|stellt."]
+
+Block 8         (Bergleute,Bergpriester)
+["Die Bergleute bauen Erze und Edelsteine ab und die Bergpriester fhren das
+Ritual durch, welches durch unsere Religion begrndet wird, um die Mutter der
+Erde zu bes„nftigen.{WORDRitual} Diese Gilde ist sehr wichtig, denn alle
+anderen Gilden sind auf die Rohstoffe angewiesen. Ihr k”nnt Euch vielleicht
+vorstellen, da das nicht immer ganz unproblematisch ist und so gibt es
+regelm„ig Streitigkeiten."{WORDReligion}]
+
+Block 9         (Diamantschleifer)
+["Sie verarbeiten die Edelsteine aus den Bergwerken zu wertvollem Schmuck. Die
+meisten Erzeugnisse werden exportiert. Auch hier wird dieser Schmuck verkauft,
+aber die hohe Qualit„t der Erzeugnisse hat natrlich ihren Preis.{WORDPreis}"]
+
+Block 10        (Ger„temacher)
+["Unsere Ger„temacher sind st„ndig mit dem Austfteln neuer Erfindungen
+besch„ftigt. Es ist schon erstaunlich, was sie sich so alles ausdenken.
+Vielleicht habt Ihr schon von den ph„nomenalen Federwaffen geh”rt? Oder habt
+Ihr schon einmal ein Feinmechanik-Schlo an einer Tre oder an einer Truhe
+gesehen? Ihr k”nnt davon ausgehen, da es von unseren Ger„temachern
+hergestellt wurde. Man ist sehr zukunftsorientiert in dieser Gilde und
+teilweise wird unser Glauben dort zu wenig beachtet."]
+
+Block 11        (Preis)
+["Ist wirklich extrem teuer..."]
+
+Block 12        (Ort: Kneipe)
+["Im Nordwesten, neben der Gilde der Bergleute findet Ihr das Gasthaus
+'Erzmine'. Das ist die einzige Kneipe hier, aber dafr ist sie auch sehr gro."]
+
+Block 13        (Ort: Rathaus)
+["Es gibt in dem Sinne kein offizielles Rathaus in Umajo-Kenta. Aber wenn Ihr
+ein Anliegen oder Probleme habt, geht in das Haus des Ortsvorstehers. Es
+befindet sich im Nordosten der Stadt."]
+
+Block 14        (Heiler, Heilerin)
+["Es gab einmal einen Heiler in der Stadt. Aber durch unseren hohen Wohlstand
+geht es uns so gut, da nur selten jemand krank wird. Und so war der Heiler
+damals die meiste Zeit arbeitslos. Er ist dann irgendwann ausgewandert.
+Seitdem mssen wir einen Heiler kommen lassen, wenn jemand krank wird. Oder
+wir fahren mit dem Patienten auf die groe Insel.^^In unserem
+Gemischtwarenladen gibt es aber auch Tr„nke gegen šbelkeit, Vergiftungen und
+„hnliches."]
+
+Block 15        (Kounos)
+["Kounos ist ein kleines D”rfchen, wo immer noch ein recht traditioneller
+Lebensstil herrscht. Der Weg nach Kounos ist anstrengend und schwer zu
+beschreiben, denn Kounos liegt auf den Plateaus des Gebirges auf der groen
+Insel. Es ist ziemlich weit von hier."]
+
+Block 16        (Srimalinar)
+["Srimalinar ist ein sch”nes kleines Iskai-Dorf. Ist aber sehr weit weg von
+hier, es befindet sich auf dem groen Kontinent und liegt n”rdlich von
+Beloveno, auf der anderen Seite des Gebirges."{WORDIskai}]
+
+Block 17        (Religion)
+["Religion ist auch fr uns ein wichtiger Bestandteil unseres Lebens. Wir
+glauben an die Mutter der Erde, der wir unseren Reichtum zu verdanken haben.
+Und natrlich an alte Traditionen und Rituale, die unser Leben in dieser Form
+erm”glichen."{WORDMutter}{WORDRitual}]
+
+Block 18        (Iskai)
+["Iskai leben hier meines Wissens keine. Sie bevorzugen eine ppige Vegetation
+und dschungelm„iges Klima. Nun haben wir zwar innerhalb unserer Stadt einige
+Pflanzen, aber auerhalb der Stadt gibt es fast nur Wste."{WORDPflanzen}]
+
+Block 19        (Pflanzen)
+["Es gibt glcklicherweise zwei Brunnen hier, die gutes Trinkwasser f”rdern
+und mit denen wir auch unsere sch”nen Palmen, B„ume und Gr„ser in der Stadt
+gieen k”nnen."{WORDWasser}]
+
+Block 20        (Stadttor)
+["Es gibt ein Stadttor im Norden. Es ist direkt neben dem kleinen
+Wachh„uschen."]
+
+Block 21        (L„den)
+["Wir freuen uns immer, wenn Besucher in unseren zahl|reichen L„den gegen
+harte W„hrung einkaufen. Ihr werdet hier ein umfang|reiches Angebot finden. Es
+gibt einen Waffen- und einen Rstungs|h„ndler, einen Lebens|mittel|ver|k„ufer
+und einen Gemischt|waren|laden. Manche L„den sind auch gleich in den
+Gildenh„user integriert. Im Gemischtwarenladen findet Ihr auch erlesene
+Schmuckstcke sowie modernste Anfertigungen von unseren
+Ger„temachern."{WORDGilde}]
+
+Block 22        (W„hrung)
+["Das anerkannte Zahlungsmittel in Umajo-Kenta sind Gold|stcke. Bei manchen
+Leuten kann man aller|dings auch mit anderen Mitteln sehr viel erreichen, aber
+darauf gehe ich jetzt nicht genauer ein...hihi."]
+
+Block 23        (Klima)
+["Es gibt drei Klimazonen auf Albion. Gem„igt, warm und Wste. Mir
+per|s”nlich gef„llt es hier, in der Wste, am aller|besten."]
+
+Block 24        (Kenget Kamulos)
+["Das sind Druiden, die schwarze Magie beherrschen. Ich m”chte mit ihnen
+nichts zu tun haben."]
+
+Block 25        (Hafen)
+["Der Hafen von Umajo-Kenta liegt im Sdwesten. Ihr k”nnt ihn nicht verfehlen,
+wenn Ihr gen Sden geht. Es gibt hier eine Schiffsverbindung zwischen Beloveno
+und Umajo-Kenta."{WORDUmajo-kenta}]
+
+Block 26        (Schiff, Schiffe)
+["Die meisten Schiffe transportieren Gter von und nach Umajo-Kenta.
+Perso|nen|schiffahrt gibt es auch. Es verkehrt regelm„ig ein Schiff zwischen
+Beloveno und Umajo-Kenta."{WORDUmajo-kenta}{WORDSchiff}]
+
+Block 27        (Wetter)
+["Ja, sch”nes Wetter zur Zeit, was meint Ihr?"]
+
+Block 28        (Skeima Din)
+["Skeima Din. Achso, nun, das bedeutet bei uns in etwa 'Ein pr„chtiger Tag'."]
+
+Block 29        (Monopol)
+["Wir haben ein Monopol, was die Metallerzeugung angeht. Das liegt daran, da
+auer uns niemand wei, wie man Metallerz f”rdert, ohne Mutter Erde zu
+erzrnen."{WORDMutter}{WORDBergleute}]
+
+Block 30        (Erzmine)
+["Es gibt hier eine Erzmine, sie liegt in der nordwestlichen Ecke der Stadt.
+Auerdem gibt es auch ein Gasthaus mit diesem Namen, das ist ganz in der N„he."]
+
+Block 31        (Gef„ngnis)
+["Das ist ganz im Norden des Kontinents. Sehr weit, wenn man zu Fu geht. Der
+Eingang ist an einem groen Felsen."]
+
+Block 32        (Nelly)
+["Ihr kennt sie?^^Lat von Nelly lieber die Finger. Sie fhrt Euch sonst an
+der Nase lang und spielt ihre Un|schulds|nummer. Ihr kennt sie natr|lich
+nicht, sonst wtet Ihr, was sie frher alles angestellt hat."]
+
+Block 33        (Donnerknall, Donnergroll)
+                (Es geht um die Landung der Toronto)
+["Wie kommt Ihr darauf? Hat Zard, der Schwarzmaler, auf Euch eingeredet? Er
+behauptet steif und fest, da irgend etwas ganz Skurriles vom Himmel gekommen
+sei.^^Zugegeben, da war vor einiger Zeit wirklich ein extrem lautes Dr”hnen,
+das von Sden kam, aber ich denke, da das ein besonders starker Wstensturm
+war, wie es ihn hier ”fters gibt."]
+
+
+Block 34        (Nelly, wenn sie in der Stadt herumstreunt)
+["Sie mu sich hier irgendwo in der Gegend herumtreiben. Wenn Ihr sie findet,
+macht sie fertig! Wir suchen auch schon nach ihr. Synja, das arme M„dchen ist
+das erste unschuldige Opfer, und wenn wir sie nicht bald finden, wird es
+weitere geben!"]
+
+Block 35        (Nelly, wenn sie tot ist)
+["Der haben wir's gegeben. So, wie sie es verdient hat. Miststck. Sie hat es
+nicht berlebt und das ist gut so!"]
+
+Block 36        (Wste)
+["Natrlich ist die Wste nicht unbedingt lebensfreundlich, aber es gibt immer
+Stellen, wo ein ertr„gliches Klima herrscht, wie z.B. hier, wo wir unsere
+Stadt erbaut haben. Unser Wasser erhalten wir durch Brunnen und durch den
+Regen. Die Nahrungsmittel werden mit Schiffen
+gebracht."{WORDSchiffe}{WORDKlima}]
+
+Block 37        (Wasser, Brunnen)
+["Es gibt hier genug Wasser zum Leben, trotzdem mssen wir damit sparsam
+umgehen. Das Meerwasser k”nnen wir nicht verwenden, es ist sehr salzig. So
+bekommen wir unser Trinkwasser durch Brunnen aus dem Boden und wir sammeln
+Regenwasser. Da es sehr selten regnet, sind wir aber auf die Brunnen
+angewiesen."]
+
+
+Block 38           (ohl)
+["Das ist ein bekannter Edelsteinsammler."]

@@ -1,0 +1,41 @@
+
+Maptextfile Gef„ngnis
+------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Hinter diesen Gitterst„ben befinden sich Gefangene. Da die Gittertren aber
+sehr stabil aussehen, besteht sicher keine Gefahr.]
+
+Block 2
+[Durch diese Tre kommt man wieder in den Vorraum. Sie ist verschlossen.]
+
+Block 3
+[Durch diese Tre kommt man wieder in den Vorraum. Sie ist ge”ffnet.]
+
+Block 4
+[Ein leeres Schlsselbrett.]
+
+Block 5
+[An diesem Schlsselbrett h„ngt ein Schlssel.]
+
+Block 6
+[{INK 006}Kein freier Platz fr Gep„ck.]
+
+Block 7
+["Ich will hier raus! Lat mich raus!!!"]
+
+Block 8
+["Die Welt ist ungerecht und frustrierend! Aber was bedeuten wir schon. Wir
+sind ja auch nur kleine Sandk”rner."]
+
+Block 9
+["Lat mich nur in Ruhe, wenn ihr nicht darauf erpicht seid, mit einem Messer
+zwischen den Rippen rauszugehen."]
+
+Block 10
+["Grt die Welt von mir. Ich habe schon lange keine Sonne mehr gesehen. Aber
+ich darf hier glcklicherweise bald wieder raus. Ich freue mich schon darauf,
+wieder frische, warme Luft einatmen zu k”nnen."]

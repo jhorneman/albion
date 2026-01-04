@@ -1,0 +1,32 @@
+Hallo Juergen,
+
+auf der CD findest Du ein installierbares Albion. Zusätzlich die Sources und Headers, die Du selber runterkopieren mußt. Hier folgt die Fehlerliste:
+
+1 - In Karte 244, eine 3D Karte von Marcus, die eine Kombination von grosse Kästchengrösse und Mauerhöhe hat. Sobald man etwas mehr als 2 oder 3 Kästchen schauen kann, stürzt das Programm ab mit ein divide overflow, Position Polygon + 235. Die Variabele _yFaktor hat den Wert 0x1AE.
+
+2 - In Karte 122, auf Position 17, 30. Hier steht eine blaue Leuchterscheinung und ein Flugtier. Klickt man der Leuchterscheinung an, verhält das Programm sich so als hätte man das Flugtier angeklickt.
+
+3 - In Karte 122 x20 y15 vd east. Es sind dort quer durch den Dungeon NPCs zu sehen (Feuersäulen) obwohl die Objekte dieser NPCs das Vanish-Flag gesetzt haben.
+
+4 - In Karte 110 im SVGA-Modus wird der Hintergrund nicht mehr gezeichnet, bzw. anscheinend nur noch eine Zeile davon, am oberen Rand des Screens. Ich habe alles nachgeschaut und bei mir scheint alles zu stimmen (inklusiv die Daten in I3DM). Kannst Du mal schauen?
+
+5 - Weiter liefert die Identifizierungsfunktion keine Parameter zurück wenn eine Bodenplatte angeklickt wird.
+
+
+
+
+Startet man Albion mit der Parameter "?", wird eine Parameterliste ausgegeben. Wichtig dürften sein:
+
+CHEAT - damit Du nicht von Monster angegriffen wirdst,
+QUIET - damit das Programm still ist,
+MAP <Kartenummer> - damit man direkt in eine Karte hüpfen kann,
+X <x-Koordinate> - damit man direkt an eine bestimmte X-Koordinate hüpfen kann.
+Y <y-Koordinate> - damit man direkt an eine bestimmte Y-Koordinate hüpfen kann.
+VD <Blickrichtung> - damit man direkt in eine bestimmte Richtung schaut.
+SVGA - Um das Programm in SVGA zu starten.
+
+Weiter kann man im Spiel mit F12 den Cheatmodus an- und aus-schalten, und mit F9 ein Spielstand retten, die man dann mit der Parameter LOAD <Spielstandnummer> wieder laden kann.
+
+Bis denn,
+
+      Jurie.

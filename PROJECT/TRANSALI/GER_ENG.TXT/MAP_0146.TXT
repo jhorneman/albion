@@ -1,0 +1,241 @@
+
+MAP 144: Uni, 1. Level
+======================
+
+
+Block 0            frei
+[leer]
+
+Block 1            Schalter
+[Ein mechanischer Schalter.]
+
+Block 2            Minischalter
+[An der Wand befindet sich eine kleine, mechanische Taste.]
+
+Block 3            Mikroschalter
+[Leicht zu Åbersehen, ist ein winziger Schalter in die Wand eingelassen.]
+
+Block 4            Bodenplatte
+[Eine Bodenplatte. Es scheint, als wÅrde sie beim darÅberlaufen einsinken
+kînnen.]
+
+Block 5            TÅr
+[Eine TÅr.]
+
+Block 6            verschlossene TÅr
+[Die TÅr ist fest verriegelt, es ist kein Schloû zu erkennen.]
+
+Block 7            Gitter-Tor
+[Ein verschlossenes Fallgitter. Es ist kein Schloû daran.]
+
+Block 8            Brunnen
+[Ein Brunnen, gefÅllt mit klarem Wasser.]
+
+Block 9            Flammenschale an
+[Eine heiûe Flamme kommt aus der am Boden sichtbaren Messingscheibe.]
+
+Block 10           Flammenschale aus
+[Eine Messingscheibe am Boden.]
+
+Block 11           Flammenloch
+[Eine Messingscheibe mit einer groûen ôffnung darin.]
+
+Block 12           Flamme
+[Eine wandernde Flamme. Sie strahlt groûe Hitze aus.]
+
+Block 13           tranp. Wand
+[Eine transparente Wand aus sehr stabilem Material.]
+
+Block 14           Energiefeld
+[Dies scheint eine Art Kraftfeld zu sein. Es gibt ein Summen an der Hîrgrenze
+ab, die Haare strÑuben sich in seiner NÑhe und ein schmerzhaftes Ziehen in den
+Zahnwurzeln macht sich bemerkbar.]
+
+Block 15           Loch Boden
+[Ein groûes Loch im Boden.]
+
+Block 16           Loch Decke
+[An der Decke ist eine ôffnung zu sehen.]
+
+Block 17           BlumenstÑnder
+[Eine BlumensÑule, die frÅher diese RÑume geziert hat.]
+
+Block 18           Tisch und Hocker
+[Eine Sitzgruppe zeugt davon, daû diese RÑume frÅher einmal von Menschen
+bewohnt waren.]
+
+Block 19           Hocker
+[Ein vermoderter Hocker.]
+
+Block 20           Faû, leer
+[Ein altes Faû.]
+
+Block 21           Vase
+[Eine verstaubte Vase. {LEAD}{NAME} wirft einen Blick hinein, kann aber nichts
+finden.]
+
+Block 22           Kiste
+[Eine metallbeschlagene Truhe.]
+
+Block 23           Trashpile leer
+[Ein Haufen alten GerÅmpels. {LEAD}{NAME} stîbert ein wenig darin herum, kann
+aber nichts Verwendbares entdecken.]
+
+Block 24
+[Der Schalter lÑût sich nicht mehr bewegen.]
+
+Block 25           brÅchige Wand
+[Die Wand sieht an dieser Stelle sehr brÅchig aus.]
+
+Block 26           Wand zerkloppt
+[{LEAD}{NAME} fÅhrt ein paar krÑftige Hiebe gegen die Wand aus. Sie bricht
+zusammen!]
+
+Block 27
+[{LEAD}{NAME} fÅllt einen Eimer mit Wasser.]
+
+Block 28
+[{LEAD}{NAME} tritt in die Flamme und verbrennt sich!]
+
+Block 29
+[{LEAD}{NAME} kippt einen Eimer Wasser Åber die Flammen und lîscht sie!]
+
+Block 30
+[Eine weitere Flamme ist gelîscht.]
+
+Block 31
+[{LEAD}{NAME} tritt in das Kraftfeld hinein und sofort durchzieht ein
+furchtbarer Schmerz {HIS } Kîrper! Nach unendlich erscheinenden Sekunden
+bricht die Leucht|erscheinung in sich zusammen.]
+
+Block 32
+[Bei der BerÅhrung mit dem Stab bricht das Kraftfeld in sich zusammen! Der
+Stab zerfÑllt dabei zu Staub.]
+
+Block 33
+[Mit Hilfe des Seiles kînnen sich alle nach oben ziehen!]
+
+Block 34           Feuerball
+[Ein durch die Luft schwebender Feuerball. Er strahlt eine unertrÑgliche Hitze
+aus.]
+
+Block 35           Feuerball berÅhrt
+[Plîtzlich spÅren alle einen unertrÑglichen, brennenden Schmerz: ein Feuerball
+ist zu nahe gekommen!]
+
+Block 36           Rainer: Feuerball
+["Unglaublich. Ich verstehe nicht ganz, was diese Feuerkugel in der Luft hÑlt.
+Ist es eine brennende Gasblase? Aber wie kann sie dann so stabil sein?
+RÑtselhaft."]
+
+Block 37           Rainer: Kraftfeld
+["Ich beginne an meinem Verstand zu zweifeln! Dieses Feld scheint nicht
+elektrischen Ursprungs zu sein und es ist auch keine Energiequelle zu
+erkennen. Was um alles in der Welt erhÑlt es aufrecht? Dieser Planet scheint
+erschaffen worden zu sein, um das Weltbild von Naturwissen|schaftlern ins
+Wanken zu bringen."]
+
+Block 38           Bodenplatte 1st
+[Die Platte, die hier auf dem Boden angebracht ist, sinkt ein kleines StÅck
+ein.]
+
+Block 39           Bodenplatte 2nd
+[Bodenplatte gedrÅckt.]
+
+Block 40
+[Platzhalter]
+
+Block 41
+[Platzhalter]
+
+Block 42
+[Platzhalter]
+
+Block 43
+[Platzhalter]
+
+Block 44
+[Platzhalter]
+
+Block 45
+[Platzhalter]
+
+Block 46
+[Platzhalter]
+
+Block 47
+[Platzhalter]
+
+Block 48
+[Platzhalter]
+
+Block 49
+[Platzhalter]
+
+Block 50
+[Platzhalter]
+
+Block 51
+[Blitzartig hebt sich die transparente Wand in die Hîhe.]
+
+Block 52
+[In der nordwestlichen Ecke des Raumes hat sich etwas bewegt!]
+
+Block 53
+[{CNTR}{HIGH}Die roten WÑnde verschwinden und lassen die Bestien frei!]
+
+Block 54           "Seht!..."
+["Schaut Euch das an! Die Bestien hinter den roten WÑnden! Wir sind erledigt,
+wenn die freikommen sollten. Achtet darauf, wo ihr hintretet!"]
+
+Block 55           Drirr tuts 2
+["Sieh an! Blaue Bodenplatten. Daû man die roten mit Gefahr verbinden kann,
+und die grÅnen eher positive Effekte haben, sollte mittlerweile klar sein.^
+Was mag aber die Farbe blau zu bedeuten haben? Laût es uns ausprobieren..."]
+
+Block 56           Rainer oder Tom
+["Ich weiû nicht recht. Wir sollten lieber vorsichtig sein. Wer weiû, was wir
+damit wieder auslîsen."]
+
+Block 57           Rainer oder Tom wenn Neugier-Flag 1
+["Ich weiû nicht recht. Wir sollten lieber vorsichtig sein. Wer weiû, was wir
+damit wieder auslîsen. Wenn ich an Deinen letzten Versuch mit einer dieser
+Platten denke, Drirr..."]
+
+Block 58           Sira
+["Nun, interessant wÑre es ja schon, zu wissen, was passieren wÅrde. Aber
+wir..."]
+
+Block 59           Drirr
+["Sehr richtig! Haltet Euch fest, gleich bricht das ganze GebÑude Åber unseren
+Kîpfen zusammen!"^^ {INK 001}Mit dieser Bemerkung setzt Dirr einen Fuû auf
+eine der blauen Platten.]
+
+Block 60
+[{CNTR}{HIGH}Mit einem Krachen verschwindet der Boden in einem groûen Teil des
+Raumes!]
+
+Block 61           Drirr
+["Ach was. Es wird schon nicht das ganze GebÑude einstÅrzen!"]
+
+Block 62           verschl.Gitter
+[Dieses Gitter lÑût sich nicht bewegen, es ist blockiert.]
+
+Block 63
+[{LEAD}{NAME} hîrt noch, wie jemand von den GefÑhrten sagt: {INK 002}"Sehr
+geistreich, {LEAD}{NAME}! Machen Dir diese StÅrze etwa Spaû?"{INK 001}, da
+beginnt auch schon der Sturz in die Tiefe!]
+
+Block 64
+[Unter dem GerÅmpel meint {LEAD}{NAME}, etwas Interessantes zu sehen!]
+
+Block 65
+[Eine Ñtzende FlÅssigkeit schieût {LEAD}{NAME} ins Gesicht!]
+
+Block 66
+["Diese... Kreatur hinter der grÅnen Wand! Bei Ihrem Anblick bricht mir der
+kalte Schweiû aus! Es ist, als ob alte, lÑngst vergessen geglaubte éngste
+wiederkehren."]
+
+Block 67
+["Das ist ein DÑmon, eine magische Kreatur, ein Symbol der Angst."]

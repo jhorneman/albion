@@ -1,0 +1,387 @@
+; *** Script 19: 1. Mal Arjano betreten
+
+show_map
+pause 30
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+pause 60
+
+; "Wächter" geht zur Party
+npc_lock 1
+
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+
+npc_move 1 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+npc_move 1 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+npc_move 1 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+npc_move 1 0 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+; 1.Gespräch
+pause 30
+npc_text 168 129
+active_member_text 130
+npc_text 168 131
+pause 60
+
+; Wächter läuft hoch, Kamera folgt
+npc_move 1 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+npc_move 1 0 -1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+npc_move 1 0 -1
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+npc_move 1 0 -1
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_move 1 1 0
+update 4
+npc_move 1 1 0
+update 4
+npc_move 1 1 0
+update 4
+npc_move 1 1 0
+update 4
+
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_off 1
+
+; Kamera geht zurück
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+pause 60
+
+; Rainer & Sira
+party_member_text 2 132
+pause 120
+party_member_text 4 133
+pause 30
+
+; Wächter kommt wieder
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_on 1
+npc_lock 1
+npc_turn 1 0
+update 1
+ 
+npc_move 1 0 -1
+update 4
+npc_move 1 0 -1
+update 4
+
+npc_move 1 1 0
+update 4
+npc_move 1 1 0
+update 4
+npc_move 1 1 0
+update 4
+
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+npc_move 1 -1 0
+update 4
+
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 4
+npc_move 1 0 1
+update 10
+pause 30
+
+npc_text 168 134
+pause 60
+text 135
+
+; Wächter geht hoch, Party folgt
+
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+
+npc_move 1 1 0
+party_move 0 -1
+update 4
+npc_move 1 1 0
+party_move 1 0
+update 4
+npc_move 1 1 0
+party_move 1 0
+update 4
+npc_move 1 1 0
+party_move 1 0
+update 4
+
+npc_move 1 0 -1
+party_move 1 0
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+
+npc_move 1 -1 0
+party_move 0 -1
+update 4
+npc_move 1 -1 0
+party_move -1 0
+update 4
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1  0 1
+party_move -1 0
+update 4
+
+npc_move 1 0 1
+party_move 0 1
+update 4
+npc_off 1
+;party_move 0 1
+;update 4
+party_off
+
+fade_to_black
+
+npc_on 1

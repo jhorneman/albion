@@ -1,0 +1,8 @@
+; *** Script 24: 2. Abreise von Gratogel
+
+fade_to_black
+show_picture 2 0 0
+fade_from_black
+text 19
+pause 30
+show_picture 2 0 0

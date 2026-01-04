@@ -1,0 +1,63 @@
+183: Christine, TORONTO, Teil 1
+===============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich checke heute zum vierten Mal die Systeme zur Landung durch."
+{WORDLandung}]
+
+Block 1         Begr. 1x
+["Hallo Schatz. Na, noch ein wenig die Fe vertreten, bevor der Shuttleflug
+losgeht? Ich checke gerade die Systeme zur Landung dieses riesigen Pottes."
+{WORDFlug}{WORDLandung}{WORDTraum}]
+
+block 2         Begr. 2x
+["Bongiorno, Ser. Was gibt's?"]
+
+Block 3         "Landung, Systeme" 1x
+["Wenn alles klappt, und davon ist auszugehen, mssen wir uns fr ca. 45
+Minuten anschnallen. Danach sollte die Landung vollzogen sein und die Segmente
+des Schiffes sind horizontal ausgeklappt. Dann besteht innerhalb der Segmente
+wieder die korrekte Schwerkraft|richtung. Vergi nicht, das Zeug in Deiner
+Kabine gut zu verstauen."]
+
+Block 4         "Landung, Systeme" 2x
+["Mach Dir mal keine Sorgen, mein Ser. Die Systeme und alle Backupkreise
+sind topfit. Das l„uft wie am Schnrchen."]
+
+Block 5         "Flug, Shuttleflug"
+["Ich beneide Dich und Hofstedt. Ihr werdet den ersten Blick mit eigenen Augen
+auf Nugget werfen. Ich drcke Dir die Daumen fr den Flug, Tom. Pa' bitte auf
+Dich auf, ja?"{WORDHofstedt}{WORDNugget}]
+
+Block 6         "Flug, Shuttleflug"
+["Na, wenn Du nur ein halb so guter Pilot bist, wie Du mir erz„hlt hast, mu
+ich mir ja keine Sorgen machen. Im Ernst, Schatz, bau' keine Scheie, ja? Ich
+mag Dich wirklich."]
+
+Block 7         "Traum, Tr„ume"
+["Der Traum geht Dir immer noch nicht aus dem Kopf, was? Ist schon seltsam,
+da er immer wiederkehrt. Aber es ist ja eigentlich kein Alptraum. Du kannst
+sicher damit leben, bis er von allein wieder verschwindet."]
+
+Block 8
+[{BLOK000}Was kannst Du sagen ber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demn„chst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 9
+["Tsch, Groer."]

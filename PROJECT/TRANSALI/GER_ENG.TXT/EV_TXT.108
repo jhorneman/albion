@@ -1,0 +1,37 @@
+
+NPC 108: Sarrin, ein Junge
+==========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+
+
+Block 0
+[{BLOK000}"Na ja, ich lerne und manchmal helfe ich Zerlegen der Jagdbeute,
+wenn ich mich nicht davor drÅcken kann."]
+
+Block 1         BegrÅûung 1.mal
+["Oh, die Menschen! éhm, ich meine, Dsarii-ma!" {BLOK010}"Dsarii-ma. Wie alt
+bist Du denn?"]
+
+Block 2         BegrÅûung 2.mal
+["Dsarii-ma. Ihr mîchtet noch etwas von mir?"]
+
+Block 3         Antwort auf MC2,1
+["Ich bin schon 4 Jahre alt. Bald bekomme ich beigebracht, wie man Schmerzen
+unterdrÅckt. Aber es ist noch solange hin, bis ich volljÑhrig bin!"
+{WORDSchmerzen}{WORDVolljÑhrigkeit}]
+
+Block 4         "SCHMERZEN"
+["Ich weiû nicht, ob Menschen das auch kînnen, aber bei uns gibt es eine
+Methode, wie man Schmerzen irgendwie wegdenken kann. DemnÑchst lerne ich, wie
+das geht. Meine Ñlteren Geschwister kînnen es schon.{WORDGeschwister}"]
+
+Block 5         "SCHMERZEN", 2.mal
+["Hab' ich doch schon gesagt. Bald lerne ich, wie man Schmerzen wegdenkt."]

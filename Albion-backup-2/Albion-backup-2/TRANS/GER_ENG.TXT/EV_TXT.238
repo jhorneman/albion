@@ -1,0 +1,29 @@
+Melthar (Neues Ratsmitglied Nummer 2) / Phase 5
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin eines der neuen Mitglieder im 'Rat der Gerechten'. Die
+Arbeit ist fr mich eine echte Herausforderung. Will hoffen, da ich alles
+schaffe."]
+
+Block 1         (Begrung)
+["Willkommen und Skeima Din. Ich glaube, ich stelle mich Euch erst einmal kurz
+vor. Mein Name ist Mellthar, und ich bin eines der beiden neuen
+Ratsmitglieder. Wer h„tte gedacht, da Garp und Riko zwei verschlagene
+šbelt„ter sind und mit Kontos gemeinsame Sache machen?"{BLOK010}"Nun, es gab
+schon Leute, die das geglaubt haben..."{BLOK011}"Man steckt in den Menschen
+nicht drin."{WORDRathaus}{WORDMelthar}]
+
+Block 2         (Begrung 2)
+["Ah, da seid ihr ja wieder."{WORDRathaus}{WORDMelthar}]
+
+Block 3         (Resp. 1)
+["Ihr meint Perron. Ja, wir haben ihn nicht ernst genommen."]
+
+Block 4         (Resp. 2)
+["Wem sagt Ihr das..."]
+
+Block 5         (Melthar)
+["Das bin ich."]
+
+Block 6         (Rathaus)
+["Mittlerweile drftet Ihr es ja schon gut kennen."]

@@ -1,0 +1,36 @@
+160: Oibelos, Kînig von Vanello
+===============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Kînig von Vanello".{WORDKînig}{WORDVanello}]
+
+Block 1         "Begr. 1x"
+["Togi Din, Reisende. Ihr mîchtet mich sprechen?" {BLOK010}"Wir sind auf der
+Suche nach einem groûen Metallkîrper, der vom Himmel kam. Habt Ihr von etwas
+von einem solchen Ereignis gehîrt?"]
+
+Block 2         Antw. MC1
+["Nein, ich muû Euch enttÑuschen. Von einer derartigen Begebenheit auf
+Gratogel hÑtte ich bestimmt erfahren."{WORDGratogel}]
+
+Block 3         Begr. 2x
+["Togi Din. Was kann ich sonst noch fÅr Euch tun?"]
+
+Block 4            Kînig
+["Ja, ich bin das Oberhaupt der Menschen von Vanello."]

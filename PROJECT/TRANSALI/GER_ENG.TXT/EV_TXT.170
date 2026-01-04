@@ -1,0 +1,57 @@
+170: Nemos, Chef der Druiden
+============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin das Oberhaupt der Druiden
+Gratogels."{WORDDruiden}{WORDGratogel}]
+ 
+Block 1         Begr., wenn jemand bewuûtlos
+["Togi Din. Oh, ihr Gîtter! Ich sehe, ihr habt schwer Verwundete unter Euch!
+Geht rasch zu Makaio, in der NÑhe des Eingangs. Ihr wiût, er wird Eure Wunden
+gerne behandeln! Danach kînnen wir uns weiter unterhalten."]
+                DANN: GesprÑchsende
+
+Block 2         Begr. Phase 1
+["Togi Din, meine hilfreichen Besucher. Ich hoffe, Ihr kommt mit Euren
+Nachforschungen in Drinno voran."{WORDDrinno}{WORDBero}]
+
+Block 3         Antw. 2,10
+["Ich habe davon gelesen. Eine schreckliche Vorrichtung. Es soll aber
+GegenstÑnde geben, mit denen man ein solches Feld neutralisieren kann. In dem
+Buch war die Rede von einem regenbogenfarbenen Stab."]
+
+Block 4         Antw. 2,11
+["Die meisten Fallensysteme dort unten sind fÅr Angreifer, die sich in groûer
+Eile befinden, gebaut worden. Ich denke, viele von den Flammen lassen sich
+einfach durch Wasser lîschen. FÅllt Euch doch ein paar Eimer!"]
+
+Block 5         Antw. 2,12
+["Achtet auf eure Schritte, meine Freunde. Viele der DÑmonen sind gefangen, um
+sie auf unvorsichtige Besucher loszulassen, die einen Mechanismus ausgelîst
+haben."]
+
+Block 6         Antw. 2,13
+["Das alte Symbol, hmm. Seine Bedeutung ist im Grau der Vorzeit
+verlorengegangen, ich kann Euch leider nicht viel darÅber sagen."]
+
+Block 7         begr. Phase2
+["Togi Din! Schîn, Euch wieder zu sehen. Kann ich noch etwas fÅr Euch tun?"]
+
+Block 8            Gespr.ende Phase2
+["Lebt wohl. Ich denke, wir werden uns bald wiedersehen."]

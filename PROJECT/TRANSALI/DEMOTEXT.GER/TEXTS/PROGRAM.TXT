@@ -1,0 +1,78 @@
+	GERMAN PROGRAM TEXTS
+
+	Albion wasn't started from the Albion directory
+[Bitte starten Sie ALBION aus dem ALBION-Verzeichnis heraus.]
+
+	The Albion CD could not be found in the CD-ROM drive
+[Bitte legen Sie die ALBION-CD in Ihr CD-Laufwerk.]
+
+	An error occurred during the execution of the program
+[Ein Fehler ist aufgetreten.
+NÑhere Angaben finden Sie in der Datei ERROR.LOG.]
+
+	Final text in error log
+[Bitte lesen Sie im README.TXT, wie Sie unsere Hotline erreichen.]
+
+	A mouse driver could not be found
+[Kein Maustreiber gefunden!]
+
+	BBMEM could not be initialised
+[Es ist nicht genÅgend Speicher vorhanden, oder der Speicher
+ist zu stark fragmentiert. Geben Sie ALBILOW ein, um eine
+spezielle ALBION-Version zu starten oder lesen Sie im README.TXT
+mehr Åber dieses Problem.]
+
+	Good-bye messages
+[Danke, da· Sie das ALBION-Demo gespielt haben!]
+[Danke, da· Sie ALBION gespielt haben.]
+
+	Not enough memory for VMM environment string
+[Nicht genug Speicher fÅr Umgebungsvariabeln.
+Virtueller Speicher konnte nicht aktiviert werden.]
+
+	Not enough disk space to use VMM
+	Inserted: drive character and required disk space
+[Nicht genug freier Platz auf Laufwerk %c um virtuellen Speicher
+einzurichten. %lu Bytes werden noch benîtigt.]
+
+
+
+	ENGLISH PROGRAM TEXTS
+	(preliminary version)
+
+	Albion wasn't started from the Albion directory
+[Please start ALBION from the ALBION directory.]
+
+	The Albion CD could not be found in the CD-ROM drive
+[Please insert the Albion CD in your CD-ROM drive.]
+
+	An error occurred during the execution of the program
+[An error has occurred.
+Please examine the file ERROR.LOG.]
+
+	Final text in error log
+[Please read the README.TXT file to find out how to contact
+the Blue Byte hotline.]
+
+	A mouse driver could not be found
+[A mouse driver could not be found.]
+
+	BBMEM could not be initialised
+[Your computer either does not have enough memory, or memory
+was too fragmented. Please enter ALBILOW to start a special
+version of Albion, or read the README.TXT file to find out more
+about this problem.]
+
+	Good-bye messages
+[Thank you for playing the Albion demo.]
+[Thank you for playing Albion.]
+
+	Not enough memory for VMM environment string
+[Not enough memory for environment string.
+Virtual memory could not be activated.]
+
+	Not enough disk space to use VMM
+	Inserted: drive character and required disk space
+[There is not enough room on drive %c to use virtual memory.
+%lu more bytes are needed.]
+

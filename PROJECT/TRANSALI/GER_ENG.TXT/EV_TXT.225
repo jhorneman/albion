@@ -1,0 +1,25 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 8
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."]
+
+Block 1         (Begrung)
+["Willkommen, Kariah grt Euch. Sch”n, da ihr wieder mal vorbei kommt.
+Mittlerweile seid Ihr ja in aller Munde. Auch ich m”chte Euch nochmals fr
+Euren Einsatz danken. Nun, der neue Rat hat sich mittlerweile gut eingespielt
+und es herrscht wieder ein sehr gutes Klima in der Stadt. Was sage ich - auf
+dem ganzen Kontinent. Wie geht's denn bei Euch jetzt weiter?"{BLOK010}"Das ist
+kompliziert zu erkl„ren..."{BLOK011}"Nun, wir sind auf der Suche und werden
+weiterreisen."]
+
+Block 2         (Resp. 1+2)
+["Na prima. Ich gehe mal davon aus, da ich Euch da auch gar nicht groartig
+weiterhelfen kann, denn sonst h„ttet Ihr mich bestimmt um meine Mithilfe
+gebeten. Auf jeden Fall wnsche ich Euch noch viel Glck bei Eurer Suche und
+wer wei, vielleicht sehen wir uns ja eines sch”nen Tages wieder?"]
+
+Block 3         (Kariah)
+["Das bin ich."]

@@ -1,0 +1,30 @@
+
+Siobhan, Kriegerin zum Mitnehmen
+================================
+
+
+Block 0
+[{BLOK010}"Ich bin K„mpferin oder Kriegerin, wie manche sagen. Wenn Ihr
+m”chtet, reise ich mit Euch, denn ich bin st„ndig auf der Suche nach Anschlu
+und auerdem reise ich gerne um die Welt, um neue Dinge zu sehen und um
+Erfahrung zu sammeln."]
+
+Block 1            (Begrung)
+["Skeima Din,^^wenn Ihr Verst„rkung fr Eure Gruppe sucht, dann biete ich Euch
+hiermit meine Dienste an. Es kann vorteilhaft fr Euch sein, wenn Ihr eine
+Kriegerin dabei habt. Ich bin zwar noch kein Meisterk„mpfer, aber ich habe
+schon viel Erfahrung gesammelt, und man lernt ja st„ndig mit dazu. Jedenfalls
+wrde ich mich Euch gerne anschlieen.^^Es ist mir ganz gleich, wohin Ihr
+reist und welche Ziele Ihr verfolgt, solange ich dabei in der Welt herumkomme,
+neue Dinge kennenlerne und mich im K„mpfen ben kann." {BLOK010}"Ihr k”nnt
+gerne mit uns kommen." {BLOK011}"Danke fr das Angebot, aber wir kommen ganz
+gut zurecht."]
+
+Block 2            (1,10)
+["Gut, ich komme mit Euch."]
+
+Block 3            (1,11)
+["Vielleicht k”nnt Ihr zu einem sp„teren Zeitpunkt Verst„rkung gebrauchen."]
+
+Block 4
+["Ich glaube, Eure Gruppe ist bereits gro genug."]

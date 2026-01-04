@@ -1,0 +1,442 @@
+
+Maptext-File
+------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[ste und Wurzeln.]
+
+Block 2
+[Ein geflochtener Korb.]
+
+Block 3
+[Ein Glasgef„ fr Wasser und andere Getr„nke.]
+
+Block 4
+[Ein Fa.]
+
+Block 5
+[Ein pr„chtiges Tierfell.]
+
+Block 6
+[Ein Eimer.]
+
+Block 7
+[Eine Tonschale.]
+
+Block 8
+[Ein Trinkhorn.]
+
+Block 9
+[Ein Teller.]
+
+Block 10
+[Ein Tonkrug.]
+
+Block 11
+[Ein Krug.]
+
+Block 12
+[Ein Tischmesser.]
+
+Block 13
+[Eine Gabel.]
+
+Block 14
+[Ein L”ffel.]
+
+Block 15
+[Ein Tonbeh„lter.]
+
+Block 16
+[Steine.]
+
+Block 17
+[Eine Schale.]
+
+Block 18
+[Ein Ackerger„t.]
+
+Block 19
+[Eine Axt.]
+
+Block 20
+[Ein Kistendeckel.]
+
+Block 21
+[Eine Holzkiste.]
+
+Block 22
+[Eine kunstvoll beschlagene Holzkiste.]
+
+Block 23
+[Das stille ™rtchen.]
+
+Block 24
+[Ein Deckel.]
+
+Block 25
+[Ein groer Holzbottich.]
+
+Block 26
+[Ein groer Metallkessel.]
+
+Block 27
+[Ein Regal.]
+
+Block 28
+[In diesem Regal ist allerhand unwichtiges Zeug zu sehen.]
+
+Block 29
+[Eine Kommode.]
+
+Block 30
+[Ein Besen.]
+
+Block 31
+[Ein Bratrost.]
+
+Block 32
+[Darauf kann man Fleisch braten.]
+
+Block 33
+[Eine Feuerstelle.]
+
+Block 34
+[Eine umgefallene Karaffe.]
+
+Block 35
+[Ein Kochl”ffel.]
+
+Block 36
+[Ein dekoratives Wandschwert.]
+
+Block 37
+[Ein Holztisch.]
+
+Block 38
+[Ein Hocker.]
+
+Block 39
+[Ein zusammengeklappter Hocker.]
+
+Block 40
+[Ein massiver Etisch.]
+
+Block 41
+[Ein Baumstumpf.]
+
+Block 42
+[Zwei gekreuzte Speere.]
+
+Block 43
+[Ein groes Fa mit fremdartigen Getr„nken.]
+
+Block 44
+[Ein Zapfhahn.]
+
+Block 45
+[Eine Bettdecke.]
+
+Block 46
+[Ein komfortables und hbsch verziertes Bett.]
+
+Block 47
+[Dieses Bett ist schlicht aber zweck|m„ig.]
+
+Block 48
+[Eine Anrichte.]
+
+Block 49
+[Ein Kamin.]
+
+Block 50
+[Das Kaminfeuer strahlt eine angenehme W„rme ab.]
+
+Block 51
+[Ein kunstvoll angefertigter Topf.]
+
+Block 52
+[Getrocknete Kr„uter.]
+
+Block 53
+[Ein menschlicher Sch„del.]
+
+Block 54
+[Ein Schmuckschild.]
+
+Block 55
+[Ein Metalltopf.]
+
+Block 56
+[Ein Zierschwert.]
+
+Block 57
+[Eine Tre.]
+
+Block 58
+[Ein Kessel.]
+
+Block 59
+[Ein Messer.]
+
+Block 60
+[Ein Kurzdolch.]
+
+Block 61
+[Ein Dolch.]
+
+Block 62
+[Ein groer Dolch.]
+
+Block 63
+[Ein Kurzschwert.]
+
+Block 64
+[Ein Schwert.]
+
+Block 65
+[Ein Stich.]
+
+Block 66
+[Ein Wurfdolch.]
+
+Block 67
+[Eine kleine Axt.]
+
+Block 68
+[Eine Axt.]
+
+Block 69
+[Ein kleiner Bogen.]
+
+Block 70
+[Ein Bogen.]
+
+Block 71
+[Ein Pfeil.]
+
+Block 72
+[Ein kleiner Lederschild.]
+
+Block 73
+[Ein Lederschild.]
+
+Block 74
+[Ein Rundschild.]
+
+Block 75
+[Ein groer Schild.]
+
+Block 76
+[Eine Lederkappe.]
+
+Block 77
+[Eine beschlagene Kappe.]
+
+Block 78
+[Eine Metallhalbschale.]
+
+Block 79
+[Eine Lederweste.]
+
+Block 80
+[Eine Lederrstung.]
+
+Block 81
+[Ein beschlagenes Leder.]
+
+Block 82
+[Ein Paar Schuhe.]
+
+Block 83
+[Ein Paar Stiefel.]
+
+Block 84
+[Eine leere Flasche.]
+
+Block 85
+[Ein grner Heiltrank.]
+
+Block 86
+[Ein trkisener Heiltrank.]
+
+Block 87
+[Ein blauer Heiltrank.]
+
+Block 88
+[Ein Schlssel.]
+
+Block 89
+[Ein Seil.]
+
+Block 90
+[Ein Ring.]
+
+Block 91
+[Eine Fackel.]
+
+Block 92
+[Ein flacher Hammer.]
+
+Block 93
+[Eine Treppe. Sie fhrt nach oben.]
+
+Block 94
+[Eine Treppe. Sie fhrt nach unten.]
+
+Block 95
+[Eine Theke.]
+
+Block 96
+[Eine teppichartige Matte.]
+
+Block 97
+[Eine Zimmerpflanze.]
+
+Block 98
+[Ein Blumentopf.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 115
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 116
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 117
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 118
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 119
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 120
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 121
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 122
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 123
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 124
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 125
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 126
+["Was wollt Ihr hier?^^Wenn Ihr nach Beloveno reisen wollt, dann geht nach
+Sden. Wollt Ihr nach Srimalinar, geht nach Norden."]
+
+Block 127
+["Habt Ihr schon mit Kontos gesprochen? Er ist der m„chtige Anfhrer in
+unserem Dorf. Er ist sehr intelligent. Von ihm k”nnt Ihr was lernen!^^Im
+Keller unseres m„chtigen Fhrers gibt es einen groen Raum, in dem wir
+regelm„ig Versammlungen abhalten. Dort experimentiert Kontos auch mit
+Feuermagie. Er ist ein hervorragender Magier. Seine Versuchsbereiche sind
+aber abgesichert."]
+
+Block 128
+["Skeima Din,^^bestimmt habt Ihr etwas dabei, da ich Euch fr gutes Gold
+abkaufen kann. Ich lebe davon. Ich kaufe den Leuten Gegenst„nde ab und
+verkaufe sie wieder. Man kann gut davon leben. Ziemlich gut - ich bin nicht
+arm..."]
+
+Block 129
+["Tut mir nichts, sonst rufe ich meinen groen Bruder!"]
+
+--------------------------------Phasendialog Urkelten-------------------------
+
+
+Block 130          (Phase 0+1)
+["Skeima Din,^^wart Ihr schon bei Kontos, unserem groen Anfhrer? Er kann
+alle Eure Probleme l”sen, vorausgesetzt, da er fr Euch Zeit hat."]
+
+Block 131          (Phase 2+3)
+["Wit Ihr schon das Neuste? Es ist jetzt erwiesen, da im Heiligtum von
+Srimalinar nach schwarzer Magie geforscht wird. Der Verdacht besteht ja schon
+lange, aber nun haben wir auch handfeste Beweise. Die Iskai sind also
+tats„chlich bestrebt, die Weltherrschaft zu erlangen. Diese Biester!^^
+Klammheimlich forschen sie schon viele Jahre nach m„chtigen Wunderwaffen. Die
+schrecklichen Kreaturen, die man immer h„ufiger in der N„he des Heiligtums
+antrifft, sind der beste Beweis dafr. Sie zeigen an, da groe, dunkle Magie
+an diesem Ort angewendet und ausprobiert wird. Kontos hat ganz recht. Unsere
+einzige Chance ist es jetzt, St„rke zu zeigen und Schlimmeres zu verhindern.
+Die Einwohner von Beloveno glauben zwar nicht, da wir recht haben. Aber wenn
+wir solange warten wrden, bis sie sehen, da wir recht haben, dann ist es zu
+sp„t. Also werden wir tun, was getan werden mu!^^Achja, wenn Ihr mir nicht
+glaubt, dann besucht diese verrckten Iskai doch einmal selbst und berzeugt
+Euch davon. Ich garantiere Euch: Sie werden Euch nicht in ihr omin”ses
+Heiligtum hereinlassen, weil dann n„mlich jeder sehen wrde, was dort vor sich
+geht. So arbeiten sie unter dem Deckmantel eines Tabus und fhren die Welt an
+der Nase herum. Wir werden darauf nicht hereinfallen! M”gen sie die anderen
+einlullen!"]
+
+Block 132          (Phase 4)
+["Der Zeitpunkt ist gekommen. Wir werden nun der Iskai-Magie ein Ende bereiten
+und Ihr angebliches Heiligtum besetzen. Dann werden wir auch das Problem mit
+den Wesen in den Griff bekommen, die von den Iskai st„ndig gerufen werden.
+Jetzt ist der genau der richtige Zeitpunkt dazu. Wenn wir l„nger warten
+wrden, w„re es wom”glich zu sp„t. Also untersttzt unser Vorhaben und k„mpft
+mit uns auf der Seite von Kontos gegen das B”se und gegen die Iskai. Wir
+werden jetzt auch zum Heiligtum ziehen. Wir mssen die Iskai besiegen und
+gegen das B”se an diesem Ort vorgehen. Kommt doch mit und helft uns!"]
+
+Block 133
+["Habt Ihr etwas zu verkaufen?"]

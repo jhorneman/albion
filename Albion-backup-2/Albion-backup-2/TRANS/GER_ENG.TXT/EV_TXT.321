@@ -1,0 +1,38 @@
+ 
+Nemos, auf der Insel der Erleuchteten 
+===================================== 
+ 
+ 
+Block 0 
+[{BLOK000}"Hier gilt mein Titel als Oberhaupt der Druiden nicht viel, und ich
+bin froh darum. Ich bin hier Gleicher unter Gleichen."] 
+ 
+Block 1 	Begr. 
+["Togi Din. Ich hoffe, Ihr genieût Euren Aufenthalt hier. Dies hier ist eine
+Insel des Friedens, wo man meditieren kann, um neue Kraft aus Animebona zu
+schîpfen."{WORDAnimebona}{WORDmeditieren}] 
+ 
+Block 2	(meditieren) 
+["Der Segen der EntitÑt liegt auf diesem Ort. Hier tritt ihre Kraft am
+stÑrksten auf ganz Albion hervor. Es gibt bestimmte Orte auf dieser Insel, wo
+man durch lÑngere, ruhige Meditation an Kîrper und Geist zu wachsen
+vermag."{WORDAlbion}{WORDEntitÑt}{WORDOrte}] 
+ 
+Block 3	(Orte) 
+["Ihr werdet diese Orte finden, wenn Ihr nach den Blumen der Gîttin Ausschau
+haltet."{WORDBlumen der Gîttin}] 
+ 
+Block 4	(Blumen der Gîttin) 
+["So werden kleine BlÅten in leuchtenden Farben genannt, von denen man sagt,
+daû sie an von der EntitÑt besonders gesegneten Stellen wachsen."] 
+ 
+Block 5 Begr. Phase 2   
+["Dsarii-ma, Freunde. Ich hoffe, Ihr kommt gut voran bei der Beschaffung der
+Kenntnisse zur Erschaffung des Samenkorns."{WORDSamenkorn}]   
+   
+Block 6 Begr. Phase 3   
+["Dsarii-ma, Freunde. Wie ich sehe, seid Ihr noch nicht zum Zentrum der
+Gefahr, der Toronto, aufgebrochen. Bitte beeilt Euch!"{WORDTORONTO}]   
+ 
+Block 7            Bero
+["Ach, Bero! Dem geht es gut. Er ist schon wieder ganz der Alte!"]

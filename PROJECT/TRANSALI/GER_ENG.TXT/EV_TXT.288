@@ -1,0 +1,60 @@
+
+Synja, Opfer des Ausbruchs
+========================================================================
+
+Block 0
+[{BLOK000}"Ich habe noch keinen Beruf."]
+
+Block 1            (BegrÅûung)
+[Das Gesicht des MÑdchens ist vîllig verquollen. TrÑnen rinnen aus den Augen,
+und als sie Euch anspricht, redet sie leise und mit zittriger Stimme:^^"Habt
+Ihr die bîse Frau gesehen, die meine Mutti erstochen haben?^^Zuerst hat sie
+ihr das ganze Gold geraubt. Als Mami sich dann gewehrt hat, hat sie einfach
+ein Messer genommen und es ihr in den RÅcken
+gesteckt!"{WORDAufruhr}{WORDBeileid}]
+
+Block 2            (Aufruhr)
+["Das ganze Dorf sucht nach der Frau. Sie sagen alle, daû Nelly zurÅckgekehrt
+sei. Nelly ist eine bîse Frau. Alle suchen sie nun. Sogar der
+Orts|vorste|her."{WORDNelly}{WORDSuche}]
+
+Block 3            (Nelly)
+["Das ist die bîse Frau, die meine Mami erstochen hat, huuuhhhhh."{WORDMami}]
+
+Block 4            (Mami)
+["Sie war immer da, wenn ich sie gebraucht habe. Und nun habe ich niemanden
+mehr."{WORDEltern}]
+
+Block 5            (Eltern)
+["Die Leute sagen, ich kann im Haus des Ortsvorstehers wohnen. Mein Papi lebt
+schon seit einiger Zeit nicht mehr."]
+
+Block 6            (Suche)
+["Ich soll hier allen Leuten Bescheid sagen, damit alle bei der Suche nach
+Nelly helfen. Bestimmt tut sie noch mehr Bîses! Ohl hat sie vorher bereits
+gesehen. Sie ist bestimmt noch in der Stadt."{WORDOhl}]
+
+Block 7            (Ohl)
+["Ja, der hilft beim Suchen.^^Helft Ihr auch?"{BLOK010}"Ja,
+sicher."{BLOK011}"Vielleicht spÑter."{BLOK012}"Nein, wohl kaum."]
+
+Block 8            (7,10)
+["Das ist schîn. Aber Ihr mÅût aufpassen. Sie ist sehr gefÑhrlich!"{WORDGefahr}]
+
+Block 9            (7,11)
+["Bitte helft uns doch."]
+
+Block 10           (7,12)
+["Das ist schade."]
+
+Block 11           (Gefahr)
+["Ja, sie hat ein scharfes Messer. Und Ohl sagt, daû sie noch andere Waffen
+hat. Ihr mÅût vorsichtig sein."]
+
+Block 12           (Beileid)
+["Danke!^^Bitte helft doch mit beim Suchen. Sonst tut Nelly noch mehr
+Bîses."{WORDBîses}{WORDSuche}]
+
+Block 13           (Bîses)
+["Nelly muû ins GefÑngnis, weil sie bîse Dinge tut. Irgendwie ist sie da
+raus|gekommen."]

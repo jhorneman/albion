@@ -1,0 +1,198 @@
+
+Maptextfile fÅr Zeichensatz 10
+=============================================================================
+
+Block 0
+[-frei-]
+
+Block 1
+[Ein Laubbaum.]
+
+Block 2
+[Eine Schlinggraspflanze.]
+
+Block 3
+[Blattpflanzen.]
+
+Block 4
+[Ein Kaktus.]
+
+Block 5
+[Kleine BodengewÑchse.]
+
+Block 6
+[Felsen.]
+
+Block 7
+[Ein Dach aus Ziegeln.]
+
+Block 8
+[BrÅckengelÑnder.]
+
+Block 9
+[Eine Treppe.]
+
+Block 10
+[Ein alter umgestÅrzter Baumstamm.]
+
+Block 11
+[Laub, das von den BÑumen herabgefallen ist.]
+
+Block 12
+[Diese Pflanze pumpt mit ihren pulsierenden Bewegungen Wasser aus dem Boden an
+die Ober|flÑche.]
+
+Block 13
+[Ein Wasserfall.]
+
+Block 14
+[Felsbrocken.]
+
+Block 15
+[Eine TÅre.]
+
+Block 16
+[Eine SÑule.]
+
+Block 17
+[Eine abgebrochene SÑule.]
+
+Block 18
+[Hier flieût Wasser aus.]
+
+Block 19
+[Eine ôlfackel.]
+
+Block 20
+[Ein Schild.]
+
+Block 21
+[Eine wehende Fahne.]
+
+Block 22
+[Ein Hocker.]
+
+Block 23
+[Stromschnellen.]
+
+Block 24
+[Ein Tisch.]
+
+Block 25
+[Ein aufgeschlagenes Buch.]
+
+Block 26
+[Ein Buch.]
+
+Block 27
+[Wasser.]
+
+Block 28
+[Groûe PilzgewÑchse.]
+
+Block 29
+[Eine Wasserpflanze.]
+
+Block 30
+[Eine blÅhende Wasserpflanze.]
+
+Block 31
+[Eine Metallstange.]
+
+Block 32
+[Eine Steinplatte.]
+
+Block 33
+[{CNTR}Auf dem Schild steht:^^{INK 006} Kleiner Weg.^Cantos Haus: Norden]
+
+Block 34
+[Nach einer Weile ruhigen Verharrens und tiefer Konzentration spÅrt
+{LEAD}{NAME} plîtzlich, wie sich {HIS }e Gedanken ordnen und {HIS } Geist
+schÑrfer als zuvor arbeitet.]
+
+Block 35
+[Die Meditation bleibt erfolglos.^^ {LEAD}{NAME} spÅrt, daû die Energie, die
+diesen Ort umgab, nun erschîpft ist.]
+
+Block 36
+[{LEAD}{NAME}'s Meditation ist erfolglos.^^Es hat den Anschein, daû sich die
+Energien dieses Ortes erst wieder regenerieren mÅssen.]
+
+Block 37
+[{CNTR}Auf dem Schild steht:^^{INK 006} Groûer Weg.^Cantos Haus: OSTEN]
+
+Block 38
+[{CNTR}Auf dem Schild steht:^^{INK 006} Groûer Weg.^Cantos Haus: NORDEN]
+
+Block 39
+[{CNTR}Auf dem Schild steht:^^{INK 006} WESTEN: Groûer Rundweg]
+
+Block 40
+[{LEAD}{NAME} konzentriert sich eine Weile und geht gestÑrkt aus der
+Meditation hervor!]
+
+Block 41
+[Nach {HIS }er Meditation fÅhlt sich {LEAD}{NAME}, als ob {HE  } {HIS }en
+Kîrper besser unter Kontrolle hat.]
+
+Block 42
+[{LEAD}{NAME} meditiert eine Weile und bemerkt danach, daû {HE  } sich flinker
+bewegen kann!]
+
+Block 43
+[Ein schwer beschreibbares GefÅhl Åberkommt {LEAD}{NAME} nach {HIS }er
+Meditation. {HE  } fÅhlt sich optimistischer, als ob {HIM } im Leben weniger
+zustoûen kînne.]
+
+Block 44
+[{LEAD}{NAME} spÅrt nach {HIS }er Meditation, daû {HIS } Geist standfester
+geworden ist.]
+
+Block 45
+[{LEAD}{NAME} fÅhlt sich nach {HIS }er Meditation besser mit den KrÑften der
+Magie verbunden als zuvor.]
+
+Block 46
+[Aus dem Nebel schÑlt sich eine kleine Insel. Den Blicken Toms und seiner
+GefÑhrten offenbart sich ein Ort von unglaublicher Schînheit. Die Insel ist
+von WasserlÑufen durchzogen und mit majestÑtischen BÑumen bewachsen. Elegante
+BrÅcken Åberspannen die Landschaft, kleine GebÑude fÅgen sich in die Umgebung
+ein und im Hintergrund ist ein groûes Haus zu erkennen.^^Eine friedvolle,
+geborgene AtmosphÑre liegt Åber dem Ort.^^Frill verlÑût das Boot und die
+anderen folgen ihm. Das kleine Schiff legt sofort wieder ab, und Frill wendet
+sich an seine GÑste:]
+
+Block 47
+["Willkommen auf der Insel der Dji Cantos, oder Erleuchteten. Was Ihr nun
+sehen werdet, haben nicht viele auf dieser Welt erblickt. Folgt mir in unser
+Versammlungshaus, wo Ihr einen weiteren Bekannten treffen werdet."]
+
+Block 48
+[Sprachlos folgen die GefÑhrten Frill und nehmen den Anblick der Natur in sich
+auf...]
+
+Block 49
+[Vor dem Åberraschten Tom steht Nemos, den er als das Oberhaupt der Druiden
+von Gratogel kennengelernt hat.^^Auch er gehîrt offenbar zu der
+geheimnisvollen Gemeinschaft, die diese Insel beherbergt.]
+
+Block 50
+["Willkommen, Tom Driscoll, und willkommen seien auch Deine Begleiter."]
+
+Block 51           T
+["Togi Din, Nemos. Schîn, Euch wiederzusehen. Auch wenn, wie ich zugeben muû,
+mich die UmstÑnde etwas Åberraschen."]
+
+Block 52           Frill
+["Das ist verstÑndlich. Wir haben Euch einiges mitzuteilen."]
+
+Block 53           Nemos
+["So wie Ihr, Tom Driscoll, uns so manches mitteilen solltet.^^Folgt mir nun
+bitte ins Innere des Hauses. Dort werden wir eine Menge Informationen
+auszutauschen haben."]
+
+Block 54
+[{LEAD}{NAME} fÅhlt sich nach {HIS }er Meditation kîrperlich ausdauernder!]
+
+Block 55
+[Blumen der Gîttin.]

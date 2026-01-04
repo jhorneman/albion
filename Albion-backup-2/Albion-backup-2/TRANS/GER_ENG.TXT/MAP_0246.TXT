@@ -1,0 +1,100 @@
+
+Maptextfile fÅr GerÑtemacherdungeon / 2. Level
+===========================================================================
+
+
+Block 0
+[-frei-]
+
+Block 1
+[Ein TÅr.]
+
+Block 2            (SpezialtÅren gehen noch nicht auf)
+[Die TÅr klemmt, obwohl sie nicht verschlossen ist.]
+
+Block 3            (Hinweis auf TÅrenrÑtsel)
+[Wer durch die TÅren mîchte, der darf durch die TÅren!]
+
+Block 4            (Automatik-TÅre)
+[Diese TÅr kann nicht von Hand geîffnet werden.]
+
+Block 5            (Magischer Vorhang)
+[Ein magischer Vorhang.]
+
+Block 6            (Lîcher in der Decke)
+[Hier ist ein Loch in der Decke. Es ist aber zu hoch, um mit einem Seil
+hoch|zu|klettern.]
+
+Block 7
+[Dieses Feld sieht irgendwie anders aus, als die, die man bisher Åberall zu
+sehen bekam.]
+
+Block 8
+[Eine Treppe.]
+
+Block 9            (Kossotto, wenn Wissensbit nicht gesetzt)
+["Wer stîrt mich hier? Was habt Ihr hier eigentlich zu suchen? Bestimmt hat
+Euch Zebenno den SchlÅssel gegeben, dieser Taugenichts. Stîrt mich bitte
+nicht. Ich habe genug Arbeit und muû meinen Studien nachgehen. Und laût Euch
+noch einen Tip vom alten Kossotto geben: Paût auf die DÑmonen auf.^^HÑhÑ."]
+
+Block 10           (Kossotto, wenn Bit gesetzt ist.)
+["Da seid Ihr ja. Ich habe schon gehîrt, daû Ihr mich sucht. Und ich weiû, daû
+Sojekos mich beauftragt hat, Euch ein groûes Geheimnis zu verraten. Aber ich
+werde das nicht ohne eine entsprechende Gegenleistung von Euch tun.^^Schon
+seit langem sind wir dabei, das Ritual nachzuvollziehen, damit wir nicht alle
+auf die Bergpriester angewiesen sind. Wir sind auch schon ziemlich weit,
+allerdings fehlt uns das entscheidende Zauberwort. Wir kînnen uns in der Gilde
+der Bergleute nicht mehr sehen lassen, denn wir haben schon versucht, sie bei
+Ihrem Ritual zu beschatten. Leider vergeblich. Sie haben uns mehrmals
+ertappt.^^Wenn Ihr das Zauberwort herausbekommt und es mir sagt, werde ich
+Euch das Wissen vermitteln, das schwîre ich Euch bei meiner Ehre."]
+
+Block 11           (Requester)
+["Wiût Ihr das Zauberwort bereits?"]
+
+Block 12           (Nein)
+["Dann besorgt es bitte. Ihr kînnt es schaffen, denn zu Euch haben sie noch
+Vertrauen. Ich finde, es ist angemessen, daû Ihr fÅr dieses groûe Vertrauen,
+daû ich Euch entgegenbringe, indem ich Euch dieses Geheimnis verrate, mir und
+den anderen GerÑtemachern diesen Gefallen tut."]
+
+Block 13           (Ja)
+["Wie lautet es?"]
+
+Block 14           (Falsches Wort)
+["Ich kann mir nicht vorstellen, daû dieses Wort das mÑchtige Paûwort des
+Rituals ist."]
+
+Block 15           (Umajo Danu)
+["GÅtige Mutter der Erde, natÅrlich - das ist es. Da hÑtte ich auch selbst
+drauf kommen kînnen. Gut, versprochen ist versprochen.^^ZunÑchst einmal
+bedanke ich mich bei Euch fÅr die Hilfe. Und dann bitte ich jemanden von Euch,
+zu mir herzukommen, um ihm eine Schriftrolle zu Åbergeben und zu erklÑren."]
+
+Block 16           (öbergabe)
+[{LEAD}{NAME} erklÑrt sich bereit und geht zu Kossotto. Er bekommt von ihm
+eine Schriftrolle Åberreicht, der eine ausfÅhrliche ErklÑrung folgt. Die
+anderen hîren alle aufmerksam zu, aber auûer {LEAD}{NAME} scheint es niemand
+so richtig zu verstehen.^^Nach einiger Zeit ist Kossotto fertig und
+{LEAD}{NAME} macht irgendwie ebenfalls einen fertigen Eindruck. Auf alle FÑlle
+ist eine weitere wichtige Zutat zur Erschaffung des Samenkorns gefunden!]
+
+Block 17           (Schluûwort)
+["Ich wÅnsche Euch noch viel Erfolg!"]
+
+Block 18           (Ansprechen nach Zutat Åbergeben!)
+["Ich kann jetzt nichts mehr fÅr Euch tun."]
+
+Block 19
+["Es lautet 'GÅtige Erde, tu mir nichts an!'"]
+
+Block 20
+["Es lautet 'Umajo Danu'"]
+
+Block 21
+["Ihr kînnt die Schriftrolle nicht mehr mitnehmen, weil Ihr keinen Platz mehr
+frei habt!"]
+
+Block 22
+[Ein leeres Faû.]

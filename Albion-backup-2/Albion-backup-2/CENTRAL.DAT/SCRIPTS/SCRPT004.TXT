@@ -1,0 +1,87 @@
+;***Script 4: Flug des Shuttles***
+
+; bild laden, flc starten
+song 54
+show_pic 3 0 0
+fade_from_black
+;load_pal 31
+;update 1
+
+;pause 180
+start_anim 3 25 24 2
+
+; dialog und animationen
+play 5
+npc_text 192 5
+party_member_text 1 6
+npc_text 192 7
+party_member_text 1 8
+
+; show planet
+play_anim 12 0 0 1 2
+npc_text 192 9
+
+; back to shuttle
+show_pic 3 0 0
+start_anim 3 25 24 2
+play 1
+pause 120
+play 8
+
+party_member_text 1 10
+npc_text 196 11
+party_member_text 1 12
+npc_text 196 13
+npc_text 192 14
+npc_text 196 15
+party_member_text 1 16
+
+; Erste Ausfälle
+song 20
+sound 54 80 50 0 18000
+play 5
+party_member_text 1 17
+sound 54 80 30 0 16000
+npc_text 192 18
+sound 54 80 20 0 0
+
+; Shuttle geht putt
+play 12
+sound 54 80 40 0 20000
+npc_text 196 19
+party_member_text 1 20
+sound 54 80 60 0 15000
+npc_text 192 21
+
+sound 36 80 60 0 19000
+sound 54 80 150 0 0
+play 13
+party_member_text 1 22
+
+; Zwischentext
+fade_to_black
+fill_screen 0
+fade_from_black
+pause 120
+sound 46 80 0 0 0
+sound 46 80 150 0 6000
+sound 46 80 120 0 18000
+sound 37 80 0 0 7000
+ambient 0
+text 23
+fade_to_black
+fill_screen 0
+fade_from_black
+
+; kaputtes Shuttle am Boden
+start_anim 4 25 24 2
+play 5
+npc_text 192 24
+party_member_text 1 25
+npc_text 192 26
+party_member_text 1 27
+npc_text 192 28
+
+fade_to_black
+fill_screen 0
+fade_from_black

@@ -1,0 +1,56 @@
+159: Ferina, Kriegerin
+======================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin eine Kriegerin."{WORDKriegerin}]
+
+Block 1         Begr.
+["Togi Din, Fremde. Ihr wÅnscht?"]
+
+block 2         "Kriegerin"
+["Sagt es nicht! Ich weiû, daû Ihr dies fÅr einen ungewîhnlichen Beruf fÅr
+eine Frau haltet! Auch wenn es bei uns meist so ist, daû die Frauen Haus,
+Kinder und Herd hÅten, so ist es doch fÅr eine Frau, die den Willen und die
+Kraft hat, mîglich, alle Berufe zu ergreifen. Seht mich an, ich kann es im
+Kampf mit jedem Mann aufnehmen und ich habe schon so manchen zum Heiler
+geschickt, der sich Åberlegen fÅhlte!" {BLOK010}"Ferina, habt ihr vielleicht
+Lust, mich im Nahkampf zu trainieren?"]
+
+block 3         "Kriegerin" 2x
+["Ich mag es nicht besonders, mich zu wiederholen!"]
+
+Block 4 
+["Togi Din! Ihr mîchtet noch ein wenig trainieren?" {BLOK010}"Ja, ich kînnte
+noch öbung im Nahkampf gebrauchen!"]
+
+Block 5
+[{INK 002}"Also gut, {LEAD}{NAME}, gebt mir {PRIC} Gold und ich werde Euch
+Kampftricks beibringen, von denen Ihr nicht einmal wuûtet, daû es sie gibt!"]
+
+Block 6
+[Ferina mag groûspurig klingen, aber sie versteht ihr Handwerk. Nach einigem
+Training mit ihr spÅrt {LEAD}{NAME}, wie sich {HIS }e Nahkampf|fÑhigkeiten
+verbessert haben.]
+
+Block 7
+["Schaut wieder vorbei, wenn Ihr was dazulernen wollt, {LEAD}{NAME}.^^Lebt
+wohl!"]
+
+Block 8
+[{LEAD}{NAME} Åbergibt den Betrag. Das Training mit Ferina beginnt.]

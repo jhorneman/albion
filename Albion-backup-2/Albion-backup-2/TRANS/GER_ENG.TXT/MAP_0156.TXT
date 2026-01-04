@@ -1,0 +1,203 @@
+
+MAP 144: Uni, 1. Level
+======================
+
+
+Block 0            frei
+[leer]
+
+Block 1            kleiner Schalter
+[Ein kleiner mechanischer Schalter.]
+
+Block 2            r
+[Ein Schalter.]
+
+Block 3            schalter
+[Ein riesiger Schalthebel.]
+
+Block 4            Bodenplatte
+[Im Boden sind gl„sern wirkende Strukturen eingelassen.]
+
+Block 5            Tr
+[Eine Tr.]
+
+Block 6            verschlossene Tr
+[Die Tr ist fest verriegelt, es ist kein Schlo zu erkennen.]
+
+Block 7            Gitter-Tor
+[Ein verschlossenes Fallgitter. Es ist kein Schlo daran.]
+
+Block 8            Brunnen
+[Ein Brunnen, gefllt mit klarem Wasser.]
+
+Block 9            Flammenschale an
+[Eine heie Flamme kommt aus der am Boden sichtbaren Messingscheibe.]
+
+Block 10           Flammenschale aus
+[Eine Messingscheibe am Boden.]
+
+Block 11           Flammenloch
+[Eine Messingscheibe mit einer groen ™ffnung darin.]
+
+Block 12           Flamme
+[Eine wandernde Flamme. Sie strahlt groe Hitze aus.]
+
+Block 13           tranp. Wand
+[Eine transparente Wand aus sehr stabilem Material.]
+
+Block 14           Energiefeld
+[Dies scheint eine Art Kraftfeld zu sein. Es gibt ein Summen an der H”rgrenze
+ab, die Haare str„uben sich in seiner N„he und ein schmerzhaftes Ziehen in den
+Zahnwurzeln macht sich bemerkbar.]
+
+Block 15           Loch Boden
+[Ein groes Loch im Boden.]
+
+Block 16           Loch Decke
+[An der Decke ist eine ™ffnung zu sehen.]
+
+Block 17           Blumenst„nder
+[Eine Steins„ule mit einem Hohlraum darin.]
+
+Block 18           Tisch und Hocker
+[Im Innern dieser Steins„ule lodert ein Feuer.]
+
+Block 19           Hocker
+[Die Tr ist fest verschlossen.]
+
+Block 20           Fa, leer
+[Ein altes Fa.]
+
+Block 21           Vase
+[Eine verstaubte Vase. {LEAD}{NAME} wirft einen Blick hinein, kann aber nichts
+finden.]
+
+Block 22           Kiste
+[Eine metallbeschlagene Truhe.]
+
+Block 23           Trashpile leer
+[Ein Haufen alten Germpels. {LEAD}{NAME} st”bert ein wenig darin herum, kann
+aber nichts Verwendbares entdecken.]
+
+Block 24
+[Der Schalter l„t sich nicht mehr bewegen.]
+
+Block 25           brchige Wand
+[Die Wand sieht an dieser Stelle sehr brchig aus.]
+
+Block 26           Wand zerkloppt
+[{LEAD}{NAME} fhrt ein paar kr„ftige Hiebe gegen die Wand aus. Sie bricht
+zusammen!]
+
+Block 27
+[{LEAD}{NAME} fllt einen Eimer mit Wasser.]
+
+Block 28
+[{LEAD}{NAME} tritt in die Flamme und verbrennt sich!]
+
+Block 29
+[{LEAD}{NAME} kippt einen Eimer Wasser ber die Flammen und l”scht sie!]
+
+Block 30
+[Eine weitere Flamme ist gel”scht.]
+
+Block 31
+[{LEAD}{NAME} tritt in das Kraftfeld hinein und sofort durchzieht ein
+furchtbarer Schmerz {HIS } K”rper! Nach unendlich erscheinenden Sekunden
+bricht die Leucht|erscheinung in sich zusammen.]
+
+Block 32
+[Bei der Berhrung mit dem Stab bricht das Kraftfeld in sich zusammen! Der
+Stab zerf„llt dabei zu Staub.]
+
+Block 33
+[Mit Hilfe des Seiles k”nnen sich alle nach oben ziehen!]
+
+Block 34           Feuerball
+[Ein durch die Luft schwebender Feuerball. Er strahlt eine unertr„gliche Hitze
+aus.]
+
+Block 35           Feuerball berhrt
+[Pl”tzlich spren alle einen unertr„glichen, brennenden Schmerz: ein Feuerball
+ist zu nahe gekommen!]
+
+Block 36           Rainer: Feuerball
+["Unglaublich. Ich verstehe nicht ganz, was diese Feuerkugel in der Luft h„lt.
+Ist es eine brennende Gasblase? Aber wie kann sie dann so stabil sein?
+R„tselhaft."]
+
+Block 37           Rainer: Kraftfeld
+["Ich beginne an meinem Verstand zu zweifeln! Dieses Feld scheint nicht
+elektrischen Ursprungs zu sein und es ist auch keine Energiequelle zu
+erkennen. Was um alles in der Welt erh„lt es aufrecht? Dieser Planet scheint
+erschaffen worden zu sein, um das Weltbild von Naturwissen|schaftlern ins
+Wanken zu bringen."]
+
+Block 38           Bodenplatte 1st
+[Seht Euch vor! Diese gl„sernen Strukturen werden zu vielf„ltigen Zwecken
+eingesetzt. Sie l”sen, oft im Zusammenhang mit Feuer|erscheinungen, verborgene
+Mechanismen aus.]
+
+Block 39           Bodenplatte 2nd
+[Bodenstruktur ausgel”st.]
+
+Block 40           Ri-Mauer
+[Diese Wand ist von vielen tiefen Rissen durchzogen.]
+
+Block 41
+[Fuck ]
+
+Block 42
+[Platzhalter]
+
+Block 43
+[Platzhalter]
+
+Block 44
+[Platzhalter]
+
+Block 45
+[Platzhalter]
+
+Block 46
+[Platzhalter]
+
+Block 47
+[Platzhalter]
+
+Block 48
+[Platzhalter]
+
+Block 49
+[Platzhalter]
+
+Block 50
+["Dieser Bereich kommt mir bekannt vor. Ich glaube, dies ist das Reich des
+Tiermeisters und seiner Gehilfen. Hier unten werden Raubtiere fr
+Prfungsk„mpfe der Novizen gezchtet. Lat uns sehen, da wir hier
+verschwinden."]
+
+Block 51
+["Wenn ich mich recht erinnere, ist dies der Ausgang der Raubtierbereiche. Ein
+Schlssel befindet sich im Besitz des Tiermeisters.^^Ich denke, wir werden
+nicht umhin kommen, ihn zur Herausgabe des Schlssels zu bewegen.^^Er mu sich
+irgendwo in diesem Bereich befinden, denn er verl„t die Biester hier unten so
+gut wie nie."]
+
+Block 52
+[Ein berw„ltigender Gestank h„ngt hier in der Luft.]
+
+Block 53
+[Vor der gegenberliegenden Wand steht eine Gruppe Kenget Kamulos. Einer von
+ihnen spricht, ohne aufzublicken:^^^ {INK 002}"Wir sind bereit fr die
+Prfung, Meister."^^ {INK 001}Dann bemerken sie, wer vor ihnen steht.^^ {INK
+002}"Eindringlinge! Ihr wagt es! Gepriesen sei Kamulos fr diese
+Gelegenheit!"^^^ {INK 001}Sie greifen an!]
+
+Block 54
+[In diesem Raum ist endlich der Tiermeister! Er f„hrt herum und greift ohne zu
+z”gern oder ein Wort zu sprechen an. Seine Assistenten und die Tiere, um die
+er sich gerade gekmmert hat, untersttzen ihn dabei!]
+
+Block 55
+[Unter diesem Germpel ist etwas Interessantes zu sehen!]

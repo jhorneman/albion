@@ -1,0 +1,165 @@
+NPC 111: Sebai-Giz Frill, der Geschichtsforscher
+================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+[{BLOK000}"Ich stehe als Geschichtsgelehrter dem Rat und der oder dem Sebainah
+schon seit sehr langer Zeit beratend zur Verfgung.{WORDRat}{WORDSebainah}"]
+
+Block 1         Begrung 1.mal, Frill geht auf Party zu (chasing)! Tritt
+                erst in Erscheinung, wenn Phase 1 ausgel”st wurde!
+["Dsarii-ma, fremde Besucher. Mein Name ist Frill, ich geh”re dem Rat als
+Gelehrter fr Geschichte an. Eine schrecklicher Vorfall, den Ihr da miterleben
+mutet! Es ist bestimmt nicht einfach, als Fremde sogleich unseren Gesetzen
+unterworfen zu werden!"]
+                DANN: Einwurf Drirr, Block 2
+Block 2         Einwurf Drirr
+["Ich bemhe mich, ihnen zu helfen, wo es nur geht, Sebai-Giz Frill!"]
+                DANN: Block 3
+Block 3
+["Natrlich, Drirr. Sie sind bei Dir in guten H„nden.^^ Ich wei wohl, da
+euch die Zeit dr„ngt, aber um meine Neugier zu befriedigen, wrde ich gerne
+die Geschichte Eurer Ankunft auf Nakiridaani aus Eurem eigenen Munde h”ren."^^
+{INK 001} Tom, von einem seltsamen Gefhl des Vertrauens zu dem alten Iskai
+erfllt, erz„hlt Frill eine Zusammen|fassung ihrer Herkunft, der Reise und der
+ursprnglichen Absichten der Menschen auf diesem Planeten.^^ {INK 002} "H”chst
+erstaunlich. Welch' eine Ironie, da Ihr nichts ber die Anwesenheit Eurer
+Artgenossen auf unserer Welt wutet, bis dieser furchtbare Mord geschah.^ Kann
+nun ich meinerseits Euch vielleicht mit irgendwelchen Ausknften dienen?"
+{BLOK010}"Eurem Titel entnehme ich, da Ihr zwanzig Mal das Sebai-Ritual
+durchgefhrt hat. Euer Alter betr„gt also tats„chlich ber 600 Jahre?"
+{BLOK011}"Wie verlief die Geschichte zwischen Menschen und Iskai auf dieser
+Welt?" {BLOK012}"Habt Ihr eine Vermutung, wer den Mord an Akiir in Auftrag
+gegeben haben k”nnte?"]
+
+Block 4         Antwort auf MC3,1
+["Das ist wahr. Mein Interesse am Lauf dieser Welt und ihrer Geschichte l„t
+mich des Lebens nicht berdrssig werden, wie es so manchem mehrfachen Sebai
+geht. Mein Erfahrungsschatz ist es wiederum, der den Rat immer wieder
+veranlat, mich zum Kandidaten zu machen."{WORDSebai}]
+
+Block 5         Antwort auf MC3,2
+["Die Zeit, als die Menschen zum ersten Mal in Erscheinung traten, ist selbst
+fr mich im Dunkel der Geschichte verborgen. Aber, im Gegensatz zu manch
+anderen, bin ich der Meinung, da sie ursprnglich nicht von dieser Welt
+stammen: Ihr seid die Best„tigung meiner Theorie.^ Wie dem auch sei, das
+Zusammen|leben der Menschen mit uns verlief nicht immer friedlich. Besonders
+in den frhen Jahr|hunderten der menschlichen Anwesenheit mu es immer wieder
+zu Kriegen mit uns Iskai gekommen sein. Diese frhen Menschen betrachteten es
+offenbar als natrlich, sich ihren Lebens|raum mit Gewalt zu erobern. Im Laufe
+der Zeit wurden die Konflikte jedoch seltener, auch wenn die letzte
+Aus|einander|setzung erst 156 Jahre zurck|liegt. Unsere Rasse neigt jedoch
+dazu, schnell zu vergessen, w„hrend die Menschen sich, so glaube ich, im Laufe
+der Jahr|hunderte in ihrem Wesen zumindest teilweise „nderten. Es entwickelten
+sich bei ihnen verschiedene Kulturen, st„rker voneinander verschieden als es
+bei uns Iskai blich ist. Meines Wissens leben Iskai und Menschen heutzutage
+berall recht friedlich zusammen." {WORDKulturen}]
+                DANN: +KULTUREN+
+
+Block 6         Antwort auf MC3,3
+["Eine schwierige Frage. Ein vergleichbarer Vorfall ist schon ber 240 Jahre
+her, und dabei ging es um einen m„chtigen Handelsherren bei uns, der sich zu
+tief in Menschen-Angelegen|heiten einmischte. Akiir hatte keinerlei
+Beziehungen zu Menschen. Als Auftrag|geber kommen daher nur Iskai in Frage.
+Wer aber Grund fr solch ein abscheu|liches Vorhaben h„tte, ist mir ein
+R„tsel."]
+
+Block 7         Begrung 2.mal, Phase 1
+["Dsarii-ma, meine Freunde. Kann ich noch etwas tun, was Euch bei der
+Aufkl„rung des Verbrechens ntzlich ist?"{WORDKulturen}]
+
+Block 8         Begrung 2.mal, Phase 2
+[****Man sieht Frill vielleicht erst bei den Erleuchteten wieder!?!****]
+ 
+Block 9         "KULTUREN"
+["Soweit mir bekannt, leben nicht mehr alle Menschen so getreu den Sitten
+ihrer Vorfahren, wie das beispielsweise diejenigen auf der uns am n„chsten
+gelegen Insel tun.^^ Ferner gibt es da die Kenget Kamulos, bekannte Krieger,
+ihre Vertreter werden oft als Meuchelm”rder gedungen. So ist ja eines Ihrer
+Mitglieder fr die Ausfhrung des Mordes an Akiir verantwortlich. Auerdem
+wei ich von den Umajo und den Bewohnern von Beloveno." {WORDKenget
+Kamulos}{WORDBeloveno}{WORDUmajo}]
+
+Block 10        "KENGET KAMULOS"
+["Kenget Kamulos bedeutet in etwa "Die Marschierer Kamulos", wobei Kamulos der
+Name ihres h”chsten Gottes ist. Soviel ich wei, gibt es unter ihnen zwei
+Gruppen: Die Krieger und die Beherrscher ihrer Magie, die sehr m„chtig sein
+soll, wenn es um Kampf und Zerst”rung geht. Wo sie genau zu finden sind, ist
+eines ihrer Geheimnisse. Sie leben offenbar in der šberzeugung, als einzige
+die wahren Kriegerideale ihrer Vorfahren aufrecht zu erhalten."]
+
+Block 11        "BELOVENO"
+["Beloveno ist eine Hafenstadt im Sden der groen Landmasse weit im Nordosten
+von hier, die wir Trenkiriidan nennen, w„hrend sie bei den Menschen Maini
+heit. In diesem Land leben Menschen und Iskai nebeneinander. Beloveno selbst
+ist haupts„chlich von Menschen bewohnt, aber auch von einigen Iskai. Die Stadt
+lebt vorwiegend vom Handel. Wenn ich recht wei, stammt Drirrs Mutter von
+dort. Er kann Euch sicher auch einiges von dieser Stadt erz„hlen."]
+
+Block 12        "*DEKADENTE*"
+["šber dieses Volk habe ich nicht allzuviel Wissen. Sie leben in einer
+befestigten Stadt, die eine Meeresenge an einer wichtigen Seeroute beherrscht.
+Seit Jahrhunderten leben sie von den dort erhobenen Z”llen und ich habe
+geh”rt, da sie der Dekadenz anheim gefallen sind."]
+
+Block 13        "Umajo"
+["Im trockenen Land weit im Osten von hier leben einige Menschen, die sich der
+Gewinnung kostbarer Metalle verschrieben haben. Sie kennen Rituale, um die
+G”ttin, deren Sch„ndung dieses Graben nach Metallen darstellt, zu bes„nftigen.
+Sie stellen Waffen und allerlei kunstvolle Ger„tschaften und Schmuck her, und
+exportieren diese in die ganze Welt. Auch wir beziehen viele Metalle von
+ihnen. Vor langer Zeit war Ihr Monopol so stark, da es zu einem regelrechten
+Krieg unter den Menschen fhrte. Selbst heute noch gibt es keine gr”ere
+Schmiede bei den Menschen, die nicht unter dem Einflu der Umajo steht. Man
+sagt, da sie ihren Konkurrenten die Meuchelm”rder der Kenget Kamulos auf den
+Hals schicken, aber das ist nur ein Gercht."]
+                DANN: Rainer wirft etwas ein, Block 14."
+
+Block 14        WENN: Rainer nicht bewutlos
+["Seid Ihr wirklich davon berzeugt, Frill, da das Graben nach Rohstoffen den
+Zorn einer G”ttin herabbeschw”rt?"]
+                DANN: Frill antwortet.
+Block 15
+["Ihr beherrscht unsere Sprache bereits gut genug, so da ich die Zweifel in
+Euren Worten h”ren kann, Rainirr. Dies ist keine Frage des Glaubens, mein
+Freund, es hat auch unter uns manchmal Versuche gegeben, an gr”ere Mengen
+kostbaren Metalls aus den Tiefen der Erde zu kommen. Immer ist es dabei zu
+katastrophalen Vorg„ngen gekommen, Erdbeben oder dem Auftauchen entsetzlicher
+Wesen. Dies sind keine Gerchte, sondern Dinge, wie ich sie selbst erlebt
+habe. Nein, lat Euch sagen, da ich Aberglauben sehr wohl von Realit„t
+unterscheiden kann."]
+                DANN: Rainers Kommentar
+
+Block 16        Rainer
+["Seltsam, Driscoll, da jemand, der offenbar so gebildet ist wie Frill,
+solchen šberzeugungen anh„ngt."]
+                DANN: Tom
+Block 17 
+["Mhm, ganz meine Meinung. Er ist vertrauen|erweckend, trotzdem werde ich den
+Eindruck nicht los, da der alte Knabe sogar noch mehr wei, als er uns
+erz„hlt. Aber wir sollten jetzt besser wieder Iskai reden."]
+
+Block 18
+[{INK 001}{LEAD}{NAME} zeigt Frill den Zierdolch und erkl„rt, woher er stammt.
+Frill sagt:^^{INK 002} "Ein seltenes Stck aus alter Zeit. Dieser Dolch ist
+sicherlich ber 150 Jahre alt. Ich bin kein Spezialist fr diese Dinge, aber
+es wrde mich nicht wundern, wenn er sogar magische Wirkung entfalten
+k”nnte.^^ Die Familie von Bradir, dem neuen Oberhaupt der Formergilde, war im
+Besitz dieses Dolches. Seltsam, da der M”rder im Besitz dieser kostbaren
+Waffe war."]
+
+Block 19
+["Wie schon gesagt, der Dolch geh”rte einmal der Familie Bradirs, des
+Nachfolgers von Akiir als Oberhaupt der Formergilde."]
+
+Blovk 20
+["So lautet mein Name, sehr richtig."]

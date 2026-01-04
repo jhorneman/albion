@@ -1,0 +1,132 @@
+; Script 42: Showdown, hoch zum Reaktorraum
+
+
+show_map
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 20
+
+; Schott auf
+do_event_chain 11
+
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 120
+
+

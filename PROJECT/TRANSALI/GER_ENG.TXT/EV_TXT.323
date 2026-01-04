@@ -1,0 +1,46 @@
+
+Joe bei den Erleuchteten
+========================
+
+Block 0
+[!]
+
+
+Block 1	Begr. Phase 2
+["Hallo! Sch”n, da Ihr vorbeischaut!" {BLOK010}"Nun, wie gef„llt Dir das
+Leben hier, auerhalb der Toronto?" {BLOK011}"Wie geht es voran mit der
+Dokumentation?" {BLOK012}"Wir mssen weiter. Mach's gut, Joe!"]
+
+Block 2	Antw. 1,10
+["Phantastisch! Der Planet bertrifft ja all' Deine Beschreibungen, Tom. Ich
+war nie ein Naturliebhaber, aber was hier geboten wird, ist ja unglaublich.
+Hofstedt und die Leutchen hier bemhen sich auch sehr um mich, ich halte es
+hier gut noch 'n Weilchen aus!"]
+
+Block 3	Antw. 1,11
+["Sehr gut. Es gibt so viele neue Eindrcke festzuhalten! Das Schwierigste
+wird, das Material so zusammenzufassen, da unsere Leute an Bord der Toronto
+schon nach ein paar Minuten begreifen, was dies hier in Wirklichkeit fr eine
+umwerfend sch”ne Welt ist. Wir mssen damit rechnen, da die AI versucht, die
+šbertragung zu st”ren."]
+
+Block 4	Verabschiedung allg.
+["Tsch dann. Tom, la' nichts anbrennen!"]
+
+Block 5	Begr. Phase 3
+["Hallo! Jetzt wird es ernst, was? H”rt zu: Ich wei, da ich kein groer
+K„mpfer bin, aber ich kann in der Toronto auf dem Weg zum Reaktor sicher so
+einige hilfreiche Dinge tun. Wenn ihr wollt, bin ich dabei!" {BLOK010}"Du hast
+recht, Joe. Deine Kenntnisse k”nnen uns vielleicht helfen. Komm mit!"
+{BLOK011}"Wir berlegen uns noch die optimale Zusammenstellung der Gruppe.
+Warte bitte noch."]
+
+Block 6	Antw. 5,10
+["Alles klar!"^^{INK 001}Joe tritt in die Reihe der Gef„hrten.]
+
+Block 7	Antw. 5,11
+["Wie Du meinst. Ist vielleicht besser fr meine Gesundheit.^^Macht's gut."]
+
+Block 8
+[{INK 001}Die Gruppe ist bereits komplett!{INK 002}^^"He, ihr seid ja schon
+eine ganze Menge Leute. Da ist fr mich kein Platz mehr."]

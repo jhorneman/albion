@@ -1,0 +1,215 @@
+Rainer Hofstedt, Partymitglied Nr.2 
+=================================== 
+ 
+Legende: 
++WORT+  = Neues Wort wird in die Wortliste eingetragen 
+"WORT"  = Antwort bei Auswahl dieses Wortes 
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y 
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert 
+(N)     = Normales Textfenster, beschreibender Text 
+WENN:   = Bedingung, Erl„uterungen 
+DANN:   = Resultat, Erl„uterungen 
+SONST:  = Wenn nicht, dann... 
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht 
+ 
+ANMERKUNG: Auf Stichw”rter wird jedesmal gleich reagiert, weil es zu 
+aufwendig w„re, abzufragen, welches Partymitglied schon einmal ein Wort 
+gefragt hat. 
+ 
+ 
+ 
+Block 0 
+[{BLOK000}"Ich bin Physiker und Xenobiologe."] 
+ 
+Block 1         Begr. WENN: Tom spricht, "Du"-Flag off 
+                ANMERKUNG: Check & evtl. Deaktivierung von MC-S„tzen! 
+["Ja, Driscoll, was gibt es?"{WORDTORONTO} {BLOK010}"Erz„hlen Sie mir doch ein
+wenig ber Ihre Vergangenheit, Hofstedt." {BLOK011}"K”nnen Sie mir bitte eine
+Zusammenfassung Ihres Wissens ber die Biologie der Iskai geben?"] 
+ 
+Block 2         Iskai-Wissen 1x, Flag "Wrinn gesprochen" off 
+["Die Iskai, faszinierende Wesen! Fangen wir mit den Gemeinsamkeiten mit uns
+Menschen an. Sie sind warmbltige, zweige|schlechtliche S„ugetiere und
+ann„hernd humanoid gebaut, wenn auch gr”er und schmaler als wir.^
+Unterschiede gibt es natrlich mehr als Gemeinsamkeiten. Ihre K”rperkr„fte
+sind meist geringer als die eines Menschen, dafr sind Sie sehr schnell. Sie
+scheinen von Raubtieren abzustammen, ern„hren sich aber nicht nur von Fleisch,
+sondern auch von pflanzlicher Nahrung. Die Iskai besitzen einen Greifschwanz,
+mit dem sie so geschickt umgehen, da er fast wie eine dritte Hand eingesetzt
+wird. Ihre Lebens|erwartung ist geringer als unsere, sie betr„gt etwa 30 bis
+40 Jahre. Ihr K”rper ist von sehr kurzem, aber dichten Fell bedeckt, Grtel
+l„ngeren Fells ziehen sich bei manchen ber Brust- und Hftbereich. Es gibt
+viele Farbvari|ationen des K”rperfells sowie des langen Haupthaares.
+Lamellenartig geschachtelte Hornleisten sind am Kopf, an den Hauptgelenken
+sowie an Fingern und Fen zu sehen, dort wirken sie wie Krallen. Die
+Sinnesorgane der Iskai sind vorzglich, Ihr Geruchsinn ist besser als der des
+Menschen. Ihre hohe Stimmlage deutet darauf hin, da Ihr H”rspektrum gegenber
+dem unseren nach oben verschoben ist. Ich habe mitbekommen, da die weiblichen
+Iskai offenbar nur eine kurze Zeit des Jahres fruchtbar sind.^ Was die
+Unterschiede im sozialen Verhalten angeht, sind wir beide durch unsere
+Gespr„che mit den Iskai gleich schlau: Es gibt erstaunliche Parallelen genauso
+wie krasse Unterschiede."] 
+ 
+Block 3         Iskai-Wissen 2x, Flag "Wrinn gesprochen" off 
+["Ich soll es fr Sie noch einmal wiederholen? Nun gut:^^ Wie Sie wissen,
+faszinieren mich die Iskai ungemein! Fangen wir mit den Gemeinsamkeiten an.
+Sie sind warmbltige, zweige|schlechtliche S„ugetiere und ann„hernd humanoid
+gebaut, wenn auch gr”er und schmaler als wir.^ Unterschiede gibt es natrlich
+mehr als Gemeinsamkeiten. Ihre K”rperkr„fte sind meist geringer als die eines
+Menschen, dafr sind Sie sehr schnell. Sie scheinen von Raubtieren
+abzustammen, ern„hren sich aber nicht nur von Fleisch, sondern auch von
+pflanzlicher Nahrung. Die Iskai besitzen einen Greifschwanz, mit dem sie so
+geschickt umgehen, da er fast wie eine dritte Hand eingesetzt wird. Ihre
+Lebens|erwartung ist geringer als unsere, sie betr„gt etwa 30 bis 40 Jahre.
+Ihr K”rper ist von sehr kurzem, aber dichten Fell bedeckt, Grtel l„ngeren
+Fells ziehen sich bei manchen ber Brust- und Hftbereich. Es gibt viele
+Farbvari|ationen des K”rperfells sowie des langen Haupthaares. Lamellenartig
+geschachtelte Hornleisten sind am Kopf, an den Hauptgelenken sowie an Fingern
+und Fen zu sehen, dort wirken sie wie Krallen. Die Sinnesorgane der Iskai
+sind vorzglich, Ihr Geruchsinn ist besser als der des Menschen. Ihre hohe
+Stimmlage deutet darauf hin, da Ihr H”rspektrum gegenber dem unseren nach
+oben verschoben ist. Ich habe mitbekommen, da die weiblichen Iskai offenbar
+nur eine kurze Zeit des Jahres fruchtbar sind.^ Was die Unterschiede im
+sozialen Verhalten angeht, sind wir beide durch unsere Gespr„che mit den Iskai
+gleich schlau: Es gibt erstaunliche Parallelen genauso wie krasse
+Unterschiede."] 
+ 
+ 
+Block 4         Iskai-Wissen 1x, Flag "Wrinn gesprochen" ON 
+["Die Iskai, faszinierende Wesen! Fangen wir mit den Gemeinsamkeiten mit uns
+Menschen an. Sie sind warmbltige, zweige|schlechtliche S„ugetiere und
+ann„hernd humanoid gebaut, wenn auch gr”er und schmaler als wir.^
+Unterschiede gibt es natrlich mehr als Gemeinsamkeiten. Ihre K”rperkr„fte
+sind meist geringer als die eines Menschen, dafr sind Sie sehr schnell. Sie
+scheinen von Raubtieren abzustammen, ern„hren sich aber nicht nur von Fleisch,
+sondern auch von pflanzlicher Nahrung. Die Iskai besitzen einen Greifschwanz,
+mit dem sie so geschickt umgehen, da er fast wie eine dritte Hand eingesetzt
+wird. Ihre Lebens|erwartung ist geringer als unsere, sie betr„gt etwa 30 bis
+40 Jahre. Ihr K”rper ist von sehr kurzem, aber dichten Fell bedeckt, Grtel
+l„ngeren Fells ziehen sich bei manchen ber Brust- und Hftbereich. Es gibt
+viele Farbvari|ationen des K”rperfells sowie des langen Haupthaares.
+Lamellenartig geschachtelte Hornleisten sind am Kopf, an den Hauptgelenken
+sowie an Fingern und Fen zu sehen, dort wirken sie wie Krallen. Die
+Sinnesorgane der Iskai sind vorzglich, Ihr Geruchsinn ist besser als der des
+Menschen. Ihre hohe Stimmlage deutet darauf hin, da Ihr H”rspektrum gegenber
+dem unseren nach oben verschoben ist. Ich habe mitbekommen, da die weiblichen
+Iskai offenbar nur eine kurze Zeit des Jahres fruchtbar sind.^ Das
+erstaunlichste an Ihnen ist jedoch die kristalline Struktur auf Ihrer Stirn!
+Sie erm”glicht bei Berhrung den Austausch von Emotionen bis hin zu bewuten
+Gedanken. Die unglaub|lichsten Perspektiven er”ffnen sich jedoch in der ersten
+Lebenswoche eines neugeborenen Iskai: Es ist einem Erwachsenen mit Hilfe des
+Stirnorgans dann offenbar m”glich, seinen gesamten Bewutseins|inhalt in das
+Gehirn des Neugeborenen zu bertragen!^^ Was die Unterschiede im sozialen
+Verhalten angeht, sind wir beide durch unsere Gespr„che mit den Iskai gleich
+schlau: Es gibt erstaunliche Parallelen genauso wie krasse Unterschiede."] 
+ 
+ 
+Block 5         Iskai-Wissen 2x, Flag "Wrinn gesprochen" ON 
+["Sie m”chten es noch einmal h”ren? Nun gut: Fangen wir mit den
+Gemeinsamkeiten mit uns Menschen an. Sie sind warmbltige,
+zweige|schlechtliche S„ugetiere und ann„hernd humanoid gebaut, wenn auch
+gr”er und schmaler als wir.^ Unterschiede gibt es natrlich mehr als
+Gemeinsamkeiten. Ihre K”rperkr„fte sind meist geringer als die eines Menschen,
+dafr sind Sie sehr schnell. Sie scheinen von Raubtieren abzustammen, ern„hren
+sich aber nicht nur von Fleisch, sondern auch von pflanzlicher Nahrung. Die
+Iskai besitzen einen Greifschwanz, mit dem sie so geschickt umgehen, da er
+fast wie eine dritte Hand eingesetzt wird. Ihre Lebens|erwartung ist geringer
+als unsere, sie betr„gt etwa 30 bis 40 Jahre. Ihr K”rper ist von sehr kurzem,
+aber dichten Fell bedeckt, Grtel l„ngeren Fells ziehen sich bei manchen ber
+Brust- und Hftbereich. Es gibt viele Farbvari|ationen des K”rperfells sowie
+des langen Haupthaares. Lamellenartig geschachtelte Hornleisten sind am Kopf,
+an den Hauptgelenken sowie an Fingern und Fen zu sehen, dort wirken sie wie
+Krallen. Die Sinnesorgane der Iskai sind vorzglich, Ihr Geruchsinn ist besser
+als der des Menschen. Ihre hohe Stimmlage deutet darauf hin, da Ihr
+H”rspektrum gegenber dem unseren nach oben verschoben ist. Ich habe
+mitbekommen, da die weiblichen Iskai offenbar nur eine kurze Zeit des Jahres
+fruchtbar sind.^ Das erstaunlichste an Ihnen ist jedoch die kristalline
+Struktur auf Ihrer Stirn! Sie erm”glicht bei Berhrung den Austausch von
+Emotionen bis hin zu bewuten Gedanken. Die unglaub|lichsten Perspektiven
+er”ffnen sich jedoch in der ersten Lebenswoche eines neugeborenen Iskai: Es
+ist einem Erwachsenen mit Hilfe des Stirnorgans dann offenbar m”glich, seinen
+gesamten Bewutseins|inhalt in das Gehirn des Neugeborenen zu bertragen!^^
+Was die Unterschiede im sozialen Verhalten angeht, sind wir beide durch unsere
+Gespr„che mit den Iskai gleich schlau: Es gibt erstaunliche Parallelen genauso
+wie krasse Unterschiede."] 
+ 
+Block 6         Antwort MC1,11 (Vergangenheit) 1x 
+["Ja, es kann nichts schaden, wenn wir uns ein wenig n„her kennen|lernen.
+Also: Meinen Vater habe ich nie gekannt, ich bin als Sohn einer
+allein|erziehenden Programmiererin in Deutschland geboren. Sie arbeitete bei
+demselben Euro-Japanischen Multi, der die TORONTO gebaut hat. Ich wuchs in der
+abgeschirmten Welt der unter|nehmens|gebundenen Kinder|g„rten und Schulen auf
+und hatte die Gelegenheit zu einer erstklassigen Ausbildung. Trotz, besser
+wegen dieser von der Firma beeinfluten Ausbildung bin ich aus der
+Firmenkultur ausgebrochen und habe meine idealistischen Jahre in einigen mehr
+oder weniger radikalen Umwelt|organisationen verbracht. Sp„ter bin ich dann in
+Regierungs|dienste getreten, weil ich darin die einzige M”glichkeit sah,
+Xenobiologie vor Ort zu erleben, ohne in die Dienste eines Multis zu treten."] 
+ 
+Block 7         Antwort MC1,11 MC (Vergangenheit) 2x 
+["Noch einmal? Nun, von mir aus: Meinen Vater habe ich nie gekannt, ich bin
+als Sohn einer allein|erziehenden Programmiererin in Deutschland geboren. Sie
+arbeitete bei demselben Euro-Japanischen Multi, der die TORONTO gebaut hat.
+Ich wuchs in der abgeschirmten Welt der unter|nehmens|gebundenen Kinder|g„rten
+und Schulen auf und hatte die Gelegenheit zu einer erstklassigen Ausbildung.
+Trotz, besser wegen dieser von der Firma beeinfluten Ausbildung bin ich aus
+der Firmenkultur ausgebrochen und habe meine idealistischen Jahre in einigen
+mehr oder weniger radikalen Umwelt|organisationen verbracht. Sp„ter bin ich
+dann in Regierungs|dienste getreten, weil ich darin die einzige M”glichkeit
+sah, Xenobiologie vor Ort zu erleben, ohne in die Dienste eines Multis zu
+treten."] 
+ 
+Block 8         Begr. WENN: "Du"-Flag ON 
+                ANMERKUNG: Check & evtl. Deaktivierung von MC-S„tzen! 
+["Ja, Tom, was kann ich fr Dich tun?" {BLOK010}"Erz„hl' mir doch bitte ein
+wenig aus Deiner Vergangenheit, Rainer." {BLOK011}"Rainer, ich wrde gerne
+eine Zusammenfassung ber die Biologie der Iskai von Dir h”ren."
+{BLOK012}"Sag' mir doch bitte, was Du ber die Kelten der Erde weit."] 
+ 
+block 9         "TORONTO" 1x 
+["Wir mssen herausbekommen, wo die TORONTO nieder|gegangen ist, und
+versuchen, dorthin zu kommen."] 
+ 
+Block 10        "TORONTO" 2x 
+["Nun, das sollte doch mittlerweile klar sein: Wir mssen herausbekommen, wo
+die TORONTO nieder|gegangen ist, und versuchen, dorthin zu kommen."] 
+ 
+Block 11
+[{BLOK000}Was k”nnen Sie sagen ber... {BLOK004}Danke fr das Gespr„ch!] 
+ 
+Block 12
+[{BLOK000}Was kannst Du sagen ber... {BLOK004}Danke fr das Gespr„ch!]
+ 
+Block 13           Antw. 8,12
+["Oh je. Ich habe mich nie besonders fr Geschichte interessiert. Mal sehen,
+an was ich mich noch erinnern kann.^^Die Kelten waren einst die Beherrscher
+des westlichen Europas. Ich glaube, ihre Kulturgeschichte begann ca. 3000 vor
+Christus mit der Abspaltung von der indogermanischen Volksgruppe.^Sie
+breiteten sich in mehreren Wanderungs|wellen ber die Mitte und den Westen
+Europas aus. Ihre Bltezeit wurde durch die Eroberungen C„sars um 50 v. Chr.
+beendet. Trotz dieses Vorfalls und der sp„teren Christiani|sierung so um 400
+n. Chr. haben sich viele keltische V”lker lange ihre Kultur bewahrt. Ihr
+Einflu auf die Kultur der europ„ischen V”lker ist bis in die Gegenwart zu
+spren.^^Die bekanntesten keltischen Gestalten drften die Druiden sein. Sie
+waren wohl Priester der natur|orientierten Religion, Lehrer, Richter und
+Heiler in einem Berufsstand. Viele keltische Heldensagen bilden den Grundstein
+der bekanntesten europ„ischen Sagen, zum Beispiel geht die Artus-Sage auf
+keltische Motive zurck."]
+
+Block 14           Begr. nach Magiedemo
+["Ja, Driscoll, was gibt es?"{WORDTORONTO} {BLOK010}"Erz„hlen Sie mir doch ein
+wenig ber Ihre Vergangenheit, Hofstedt." {BLOK011}"K”nnen Sie mir bitte eine
+Zusammenfassung Ihres Wissens ber die Biologie der Iskai geben?"
+{BLOK012}"Was sagen Sie zu der Demonstration, die uns Fasiir, der Chef dieser
+Dji-Kas - Magiergilde, gegeben hat?"]
+
+Block 15           Antw. MC 14,12
+["Ich bin ziemlich erschttert. Ich kann immer noch nicht ganz fassen, was wir
+da gesehen haben, geschweige denn, da ich eine Erkl„rung dafr h„tte, wie
+dieser Fasiir das gemacht hat. Der Baum, der dort entstand war {FAT }
+real{NORS}! Diese Welt hat offenbar mehr šberraschungen fr uns parat, als sie
+uns ohnehin schon bereitet hat."]
+
+Block 16
+["Triifalai-K”rner brauche ich zur Ausbung meiner Magie, Tom. Wir sollten
+immer genug davon mit uns fhren."]

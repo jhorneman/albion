@@ -1,0 +1,1780 @@
+Block 0:
+[!]
+
+Block 1:
+[Beim Betreten der Bodenplatte vor der TÅr leuchtet diese auf. Gleichzeitig
+"ffnet sich die Tör.]
+
+Block 2:
+[Bodenplatte leuchtet auf.]
+
+Block 3:
+[Hier befindet sich eine Bodenplatte mit einer transparenten Leuchtfl"che.]
+
+Block 4:
+[Nachdem diese Bodenplatte aufleuchtet, "ffnet sich im "Westen" des Raumes die
+TÅr.]
+
+Block 5:
+[Ein Schalter.]
+
+Block 6:
+[Die Stellung des Schalters "ndert sich beim nochmaligen DrÅcken nicht mehr.]
+
+Block 7:
+[Die TÅr versucht sich zu schlie·en, bleibt aber offen. Offenbar hat ein
+Sensor bemerkt, da· noch jemand in der TÅr steht.]
+
+Block 8:
+[An der "n"rdlichen" Wand befindet sich ein Wandschrank.]
+
+Block 9:
+[Der Wandschrank ist leer, bereit zur Aufnahme von Gegenst"nden.]
+
+Block 10:
+[Ein Wandschrank.]
+
+Block 11:
+[Das Ger"usch kam von rechts, aus einiger Entfernung.]
+
+Block 12:
+[Sowie sich die TÅr mit den roten Leuchten "ffnet, schlie·t sich hinten
+diejenige mit der grÅnen Markierung. Der RÅckweg ist versperrt!]
+
+Block 13:
+[Dies mu· ein Serviceroboter sein. Er geht einer unbekannten Aufgabe nach.]
+
+Block 14:
+[Eine TÅr. Es ist kein ôffnungsmechanismus zu erkennen.]
+
+Block 15:
+[Eine Leuchtstoffr"hre. Sie strahlt kaltes, wei·es Licht ab.]
+
+Block 16:
+[Ein Stahltr"ger.]
+
+Block 17:
+[Die halbtransparenten W"nde markieren einen Servicezugang. Die Leiter in der
+Mitte fÅhrt nach oben.]
+
+Block 18:
+[Eine Zehnertastatur zum Eingeben von Zahlencodes.]
+
+Block 19:
+[Eine TÅr mit roten Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 20:
+[Eine TÅr mit grÅnen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 21:
+[Eine TÅr mit blauen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 22:
+[Die Zahlenkombination war offenbar korrekt: Die TÅr neben der Tastatur hat
+sich ge"ffnet.]
+
+Block 23:
+[Nichts passiert.]
+
+Block 24:
+[Yeah! Made it!]
+
+Block 25:
+[Eine Leiter. Sie fÅhrt nach oben.]
+
+Block 26:
+[Das rhytmische Blinken der Bodeplatte deutet wohl auf eine besondere Funktion
+hin.]
+
+Block 27:
+[Eine defekte Leuchtstoffr"hre.]
+
+Block 28:
+[{INK 001}Tom deponiert die Waffe in dem Wandschrank.{INK 002}^^ "So. Wenn ich
+jetzt von der anderen Seite dieser Schleuse hier wieder an den Schrank
+drankomme, hab' ich die Secus gelinkt und die Waffe geh"rt mir!"]
+
+Block 29:
+[{CNTR}{FAHI}THAT'S ALL, FOLKS !]
+
+Block 30:
+[Lade Bild:]
+
+Block 31:
+[Starte FLC:]
+
+Block 32:
+[Spiele StÅck von FLC:]
+
+Block 33:
+[Verlasse jetzt Script.]
+
+Block 34:
+["Sauberer Start, Driscoll."]
+
+Block 35:
+["Danke, bin in guter Fluglaune heute.^^Es ist vieles Routine in meinem Job,
+aber einen neuen Planeten anzufliegen, ist und bleibt das Gr"·te!"]
+
+Block 36:
+["Wem sagen Sie das! Gut, da· es meine Dienstelle nicht wei·, aber ich wÅrde
+sogar auf mein Gehalt verzichten, um diesen Augenblick zu erleben."]
+
+Block 37:
+["Wir kommen jetzt in Sichtweite!^^Sehen Sie sich das an, Hofstedt! Macht auf
+mich nicht den Eindruck einer WÅstenwelt."]
+
+Block 38:
+["In der Tat! Viele Wolken, und die Farbe w"re fÅr Staubwolken ungew"hnlich."]
+
+Block 39:
+["Ich werde mit der TORONTO sprechen. Versuchen Sie w"hrend|dessen, etwas auf
+ihre Instrumente zu bekommen.^^Shuttle an TORONTO! Ned, wie ist der Kontakt?"]
+
+Block 40:
+["Die Verst"ndigung ist ausgezeichnet, Mr. Driscoll. Sie haben nun
+Sichtkontakt mit dem Ziel?"]
+
+Block 41:
+["Ja. Der Planet ist dem Augenschein nach nicht unbedingt eine WÅste. Mr.
+Hofstedt befragt gerade die Instrumente."]
+
+Block 42:
+["Inter....nt. Oh, ich gl..be, die V..bind.g wird schw"..r. Aber fahr.n Sie
+fort."]
+
+Block 43:
+["Die dichte Wolkendecke macht die Messungen schwierig.^^Die Analyse weist in
+der Tat auf gro·e Rohstoffmengen hin...^^Es scheint mehr Wasser zu geben als
+angenomm..."]
+
+Block 44:
+["Ein.. Moment, Mr. Hofst..t. Die Verb...n.g wird imm.r schw"ch.r. Haben Sie
+Schwier..keit.n? Mr. Driscoll?"]
+
+Block 45:
+["Nein. Alles scheint im grÅnen Bereich zu sein."]
+
+Block 46:
+["Wow! Ich h"tte es nicht beschreien sollen!^^ Ausfall der Servos!
+Ersatzkreise gehen schnell 'runter! Versuche, manuell etwas zu
+machen!^^Hofstedt?"]
+
+Block 47:
+["Versuche, 'n Check zu fahren!"]
+
+Block 48:
+["Mr. Dr..coll? Ihr Status zeig. kriti...e Werte. Erbitte Bericht!"]
+
+Block 49:
+["Ausfall mehrerer Systeme! Manuelle Steuerung O.K.! Versuche umzukehren!"]
+
+Block 50:
+["Wir haben Probleme mit der Energieversorgung. Ich... HEY!"]
+
+Block 51:
+["Das hat geknallt! Schei·e, ich verliere die Kontrolle!^^ Hofstedt, halten
+sie sich fest!^^WIR GEHEN RUNTER!"]
+
+Block 52:
+[Das Shuttle ist bereits im Schwerkraftfeld des Planeten und stÅrzt schnell
+auf ihn zu!^^Harte St"·e erschÅttern das kleine Schiff, als es in die
+Atmosph"re eindringt.^^ Tom arbeitet fieberhaft und schafft mit den Resten
+manueller Kontrolle eine krachende Bruchlandung...^^^^Langsam kommen die
+M"nner wieder zu sich.]
+
+Block 53:
+["Ohh, mein Kopf!^^Mit ihnen fliege ich so schnell nicht wieder, Driscoll."]
+
+Block 54:
+["Bestimmt nicht mit diesem Shuttle.^^Au·erdem, Sie k"nnen mir dankbar sein,
+da· Sie noch leben! Die Automatik h"tte die Kiste nie heil heruntergebracht!"]
+
+Block 55:
+["O.K., O.K. Ist schon klar.^^Und nun?"]
+
+Block 56:
+["Nun schnappen wir uns die Masken, und steigen aus. ^^Wenn die Luft zum atmen
+reicht, gehen wir die Vorr"te durch und fangen an zu basteln, um einen
+Funkkontakt herzustellen.^^Wenn die Luft zu dÅnn ist... Gute Nacht."]
+
+Block 57:
+[Oh, Mann.^^Was soll's. Hat keinen Zweck, es herauszu|z"gern.^^Gehen wir!"]
+
+Block 58:
+["MEIN GOTT! Das ist also die WÅstenwelt! Ich werde verrÅckt! Schauen Sie doch
+nur!"]
+
+Block 59:
+["Fantastisch! Riechen Sie nur! H"ren Sie! Hier wimmelt es von Leben!"]
+
+Block 60:
+["Wie konnte die Sonde nur solche Daten senden? Das ist eine Sensation!"]
+
+Block 61:
+["Lassen Sie uns zuerst vom Shuttle weggehen. In dieser sauerstoff|reichen
+Atmosph"re k"nnte es..."]
+
+Block 62:
+[Alles um Tom herum versinkt in Licht, dann in Dunkelheit, die fÅr eine lange
+Zeit anh"lt. Dann beginnt Tom wieder seinen Traum zu tr"umen...]
+
+Block 63:
+[{CNTR}{FAHI} FEDDICH !]
+
+Block 64:
+[Wieder dieser Traum.]
+
+Block 65:
+[Mu· irgendwann mit Chris darÅber reden. Zeit, aufzuwachen. Mu· den Flug
+vorbereiten.]
+
+Block 66:
+[Der Flug.^^Das Shuttle. ^^War bereits dort. ^^Ist schon geschehen.
+^^^^Schmerzen. ^^^^^Irgend|etwas ist falsch, etwas stimmt nicht. Mehr
+Schmerzen! ^^^^^^^Was ist passiert?]
+
+Block 67:
+[Gott, der Absturz!^^Was war dann? Oh, Schei·e, die Schmerzen, warum wache ich
+nicht auf? ^^Hofstedt und ich gehen hinaus... ^^^^Alles voller Pflanzen und
+Tiere, der Planet lebt! Die Farben, das GrÅn, alles ist grÅn...]
+
+Block 68:
+[Srrniak? Rriiba nes anrji. Frinaard dra besiir wreniid?]
+
+Block 69:
+["Was um alles in der Welt... {FAT}^^WO BIN ICH? ^^Wer, WAS ist das?{NORS}
+^^Ich dachte, ich w"re WACH! ^^^Ich mu· hoch, um...^ "Aaauh! Oh, Schei·e!"]
+
+Block 70:
+["Ein recht deutliches Genesungs|zeichen, sch"tze ich. Willkommen unter den
+Lebenden!"]
+
+Block 71:
+[ ]
+
+Block 72:
+[Ein Sicherungskasten.]
+
+Block 73:
+[Ein Sessel.]
+
+Block 74:
+[Eine Liege.]
+
+Block 75:
+[Das Steuerpult fÅr den Atomreaktor.]
+
+Block 76:
+[Ein Servicepanel. In der Mitte befindet sich eine Tastatur zur Eingabe eines
+Codes.]
+
+Block 77:
+[Eine Steuerungskonsole.]
+
+Block 78:
+[Eine Flugsteuerungskonsole.]
+
+Block 79:
+[Ein Kontrollpult.]
+
+Block 80:
+[Eine chemische Toilette.]
+
+Block 81:
+[Ein Schrank.]
+
+Block 82:
+[Eine SpÅle.]
+
+Block 83:
+[HandtÅcher.]
+
+Block 84:
+[Zahnputzzeug.]
+
+Block 85:
+[Eine Anzeige fÅr die Korridor-öberwachung.]
+
+Block 86:
+[Kontroll-Anzeigen.]
+
+Block 87:
+[Ein Teil des Reaktors.]
+
+Block 88:
+[F"sser mit MÅll, Wasser, Gift- und Rohstoffen.]
+
+Block 89:
+[Eine ausgeschaltete Konsole.]
+
+Block 90:
+[Eine Lampe.]
+
+Block 91:
+[Ein Teller.]
+
+Block 92:
+[Ein Glas.]
+
+Block 93:
+[Ein Becher.]
+
+Block 94:
+[Ein Beh"lter.]
+
+Block 95:
+[Eine Flasche.]
+
+Block 96:
+[Eine Kanne.]
+
+Block 97:
+[Eine Dose.]
+
+Block 98:
+[Ein Gef"·.]
+
+Block 99:
+[Ein Pfeffer- und ein Salzstreuer.]
+
+Block 100:
+[Sojaso·e.]
+
+Block 101:
+[Ein Topf.]
+
+Block 102:
+[Eine kleine Dose.]
+
+Block 103:
+[Eine Schaufel.]
+
+Block 104:
+[Ein Spaten.]
+
+Block 105:
+[Ein SchraubenschlÅssel.]
+
+Block 106:
+[Ein Schraubenzieher.]
+
+Block 107:
+[Eine Handkonsole.]
+
+Block 108:
+[Ein PDA. (Personel Digital Assistent)]
+
+Block 109:
+[Eine Zange.]
+
+Block 110:
+[Besteck und ein Becher.]
+
+Block 111:
+[Geschirr.]
+
+Block 112:
+[Eine Automatik-TÅre.]
+
+Block 113:
+[Ein Shuttle.]
+
+Block 114:
+[Container.]
+
+Block 115:
+[Eine Dusche.]
+
+Block 116:
+[Ein Fahrzeug.]
+
+Block 117:
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 118:
+["Schon wieder dieser Traum. Mu· das zehnte Mal sein; was soll das nur?^^ Kann
+mich auch nicht erinnern, je in Farbe getr"umt zu haben...^^ Na ja, werde mir
+noch ein wenig die FÅ·e vertreten. Hoffentlich wird bald durchgegeben, wann
+ich das Shuttle zu unserem Vorausflug starten soll."]
+
+Block 119:
+["Hallo, Gro·er! Na, ausgeschlafen?"]
+
+Block 120:
+["Christine! Sch"n, Dich zu sehen, Schatz!^ Ich fÅhle mich wie ger"dert. Du
+hattest mal wieder recht, gestern abend. H"tte doch bei Dir schlafen sollen.
+Ich hatte wieder diesen verrÅckten Traum. Er wird jedesmal... deutlicher."]
+
+Block 121:
+["Ist schon verrÅckt. Du bist doch sonst kein Sensibelchen. Hat bestimmt was
+mit dem over-c - Sprung zu tun. Bleib heute Nacht bei mir, und ich werde Dir
+die Alptr"ume schon austreiben!"]
+
+Block 122:
+["Der Traum begann schon vorher, und es ist eigentlich auch kein Alptraum. Er
+ist nur so intensiv!^^ Ach egal, was soll's. Ich werde mal 'ne Runde drehen.
+Vielleicht treffe ich K"ptn Brandt und bekomme heraus, wann ich mit Snoopy
+starten soll."]
+
+Block 123:
+["Snoopy? Hast Du denn nicht...? Junge, Du mu·t einen guten Schlaf haben. Die
+Explosion war durch das ganze Segment zu spÅren!"]
+
+Block 124:
+["Explosion? Mach's nicht so spannend! Von was redest Du, Chris? Was ist mit
+Snoopy?"]
+
+Block 125:
+["Der Inspektor hat w"hrend des Sprunges an der over-c - Comanlage gesessen.
+Das Ding hat sich Åberladen und ist f"rmlich explodiert. Snoopy's Bestandteile
+waren im ganzen Raum zu finden, hei·t es."]
+
+Block 126:
+["Was fÅr'n Hammer! Junge, das mu· ich erstmal verdauen! Dann ist Hofstedt nun
+der einzige Regierungs|beauftragte an Bord."]
+
+Block 127:
+["Ja, ich habe geh"rt, da· Du den Vorausflug nun mit ihm anstatt Snoopy
+unternehmen sollst."]
+
+Block 128:
+["Der Tag f"ngt ja hervorragend an. Na ja, Hofstedt ist ganz in Ordnung, und
+an meinem Flugplan "ndert sich durch den Unfall sicher nichts. Ich werde mal
+eine Runde mit Joe Åber die Sache quatschen."]
+
+Block 129:
+["Dein Kumpel ist heute im "Nordosten" des Segmentes eingeteilt, in der N"he
+des Zugangs zum Comraum.^^ O.K. Ich werde mich auch mal auf'n Weg machen. Hab'
+noch viel Arbeit. Bis dann, SÅ·er."]
+
+Block 130:
+["TschÅ·, Christine."]
+
+Block 131:
+[Diese TÅr ist verschlossen.]
+
+Block 132:
+["éhem, Driscoll: Sei mir nicht b"se, aber ich h"tte jetzt gern etwas
+Privatsph"re. Bitte bleib drau·en."]
+
+Block 133:
+["Hier gibt es nichts zu sehen. Gehen Sie bitte weiter."]
+
+Block 134:
+[{INK 001}Dies ist Rainer Hofstedt, Physiker und Xenobiologe und
+Aufsichts|beauf|tragter der Regierung. Aufgeregt beginnt er ein Gespr"ch.]
+
+Block 135:
+["Dricoll! Gut, da· ich Sie treffe! Haben sie schon vom Tod Inspektor Beegles
+geh"rt?"]
+
+Block 136:
+["Hallo, Hofstedt. Ja, meine Lebensgef"hrtin hat mir gerade von der Sache
+berichtet. Mu· ja ein scheu·licher Anblick gewesen sein!"]
+
+Block 137:
+["Dieser sture britische Dicksch"del! Er war zwar kein Techniker, aber das der
+Betrieb der Comanlage w"hrend des over-c - Sprunges nicht problemlos ist,
+h"tte er eigentlich wissen mÅssen. Diese ganze öberlichttechnik ist noch lange
+nicht v"llig unter Kontrolle. Der arme Teufel!"]
+
+Block 138:
+["Das macht sie nun zum einzigen Regierungs|repr"sentanten an Bord, nicht
+wahr?"]
+
+Block 139:
+["Der einzige SchnÅffler, ja. Erinnern Sie mich blo· nicht daran!^^ Wie dem
+auch sei: Ich hatte gerade ein Gespr"ch mit Kapit"n Brandt. Er will den
+Vorausflug trotzdem durchfÅhren, mit meiner Wenigkeit anstelle von Beegle.^^
+Sieht aus, als h"tten Sie einen neuen Passagier, Driscoll."]
+
+Block 140:
+["Ich m"chte nicht piet"tslos erscheinen, aber dem Shuttle ist es gleich,
+welche zwei Personen es bef"rdert. Von mir aus kann der Flug planm"·ig
+stattfinden."]
+
+Block 141:
+["Ich mu· zugeben, da· ich mich sehr auf den Flug freue. Der Abflug sollte in
+den n"chsten Tagen stattfinden. Wir mÅssen wohl auf die Durchsage des Kapit"ns
+warten."]
+
+Block 142:
+["So ist es.^ Wir sehen uns sicher noch vorher. Bis dann, Hofstedt!"]
+
+Block 143:
+["Ja, bis dahin, Driscoll."]
+
+Block 144:
+["GrÅ·' Sie, Driscoll. Viel GlÅck bei ihrem Flug."]
+
+Block 145:
+[{INK 001}Der Sicherheitsmann wirft Tom nur einen mi·mutigen Blick zu. Er
+antwortet nicht.]
+
+Block 146:
+["Hallo, Driscoll! Habe geh"rt, Du hast 'nen neuen Passagier, jetzt, wo sie
+den Inspektor von der Wand gekratzt haben.^Ich drÅck Dir jedenfalls die Daumen
+fÅr den Flug."]
+
+Block 147:
+["Hi, Tom. Sorry, bin 'n bi·chen in Eile. Voller Dienstplan! Bis sp"ter."]
+
+Block 148:
+["Hallo, Tom. M"chte zu gern wissen, wie es jetzt im Comraum aussieht, wo es
+Snoopy erwischt hat. Zu bl"d, das die Secus davor Wache schieben."]
+
+Block 149:
+[{INK 001}Tom versucht, die letzten Nachrichten von der Konsole abzurufen. Vor
+den Meldungen erscheint folgendes:{TECF}^^ {CNTR}{INK 002}***Videodaten nicht
+verfÅgbar***^ ***Comverbindung nicht aktiv***^^ Textmodus aktiviert.]
+
+Block 150:
+["Hallo, Driscoll. Na, noch einen Blick auf Ihr Shuttle werfen? Ist alles in
+bester Ordnung mit dem Ding."]
+
+Block 151:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 1- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 152:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 2- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 153:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 3- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 154:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 3- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 155:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 4- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 156:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 5- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 157:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 6- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 158:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 7- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 159:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 8- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 160:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 9- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 161:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 10- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 162:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 11- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 163:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 12- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 164:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 13- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 165:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 14- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 166:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 15- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 167:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 16- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer ein|heit|lichen, offi|ziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 168:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 17- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 169:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 18- Europ"ische Union: Der 14. Versuch
+der EinfÅhrung einer einheitlichen offiziellen W"hrung ist am Widerstand
+Deutschlands gescheitert.]
+
+Block 170:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 19- McCartney-Erben rufen
+Inter|nationalen Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens
+an den McCartney-Erben die letzten zusammen|h"ngenden Regen|wald|gebiete?
+Besitz der Erben|gemein|schaft soll durch Eingreifen der Schutztruppen
+gesichert werden, fordern einige Staaten.]
+
+Block 171:
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} 20- Zufallsgeneratoren als Quelle allen
+öbels entlarvt! Schuld an Not, Krank|heit und Kriegen!]
+
+Block 172:
+[Eine Konsole zum Abruf von Nachrichten.]
+
+Block 173:
+[Ein riesiges Schott.]
+
+Block 174:
+["Guten Abend, Tom! Komm rein und la· uns einen gemÅtlichen Abend verbringen."]
+
+Block 175:
+[In dieser Nacht bleibt Tom von seinem Traum unbehelligt...^^ Einige Zeit
+sp"ter, Tom verl"·t Christines Kabine.]
+
+Block 176:
+[Dies ist die TÅr zu Christine's Kabine. Sie ist im Moment nicht anwesend.]
+
+Block 177:
+[Dies ist die TÅr zu Christine's Kabine.^ Chris scheint anwesend zu sein.]
+
+Block 178:
+[{CNTR}An die TÅr klopfen?]
+
+Block 179:
+["Hallo, Tom! Sch"n, Dich zu sehen. Komm rein, wir machen es uns gemÅtlich."]
+
+Block 180:
+[Eine Tastatur zur Eingabe von Zahlencodes.]
+
+Block 181:
+[{TECF}{CNTR}FALSCHER CODE. ôFFNUNG VERWEIGERT.]
+
+Block 182:
+[{TECF}{CNTR}ôFFNUNGSCODE EINGEBEN:]
+
+Block 183:
+[Tom steigt in die Service-Ebene hinab.]
+
+Block 184:
+[{TECF}{CNTR}CODE KORREKT. ôFFNE SERVICEPANEL.]
+
+Block 185:
+[Die Leiter fÅhrt hinab in die Service-Ebene.]
+
+Block 186:
+[Dies ist tats"chlich der Comraum! Tom sieht sich vorsichtig um, aber niemand
+ist hier. In der Luft h"ngt der Geruch nach verschmorter Elektronik.]
+
+Block 187:
+[Das sind also die öberreste der Comanlage. Die Explosion mu· in der Tat
+verheerend gewesen sein.]
+
+Block 188:
+[Tom will sich gerade abwenden, da f"llt sein Blick auf einen Gegenstand, der
+unter der zerst"rten Konsole liegt. Es ist eine Waffe!]
+
+Block 189:
+["Wie um alles in der Welt kommt die Kanone hier her? Au·er fÅr Secus sind
+Waffen an Bord strengstens verboten!^^ Ein interessanter Fund jedenfalls..."]
+
+Block 190:
+[Die zerst"rte Comanlage. Es ist nichts weiter Interessantes dort zu finden.]
+
+Block 191:
+[Die zerst"rte Comanlage. Darunter liegt etwas!]
+
+Block 192:
+[Scherben der zerst"rten Comanlage.]
+
+Block 193:
+[Auf den Gesichtern der Sicherheitsoffiziere ist erst VerblÅffung, dann Zorn
+zu sehen, als sie jemanden aus dem von ihnen bewachten Bereich spazieren sehen!]
+
+Block 194:
+["Bleiben Sie stehen, Driscoll! Wie kommen Sie in den abgesperrten Bereich?^^
+RÅhren Sie sich nicht, wir werden eine Leibesvisitation durchfÅhren!"]
+
+Block 195:
+[Colonel Priver tastet Tom ab...]
+
+Block 196:
+["In Ordnung. Sie k"nnen gehen. Aber das wird Folgen fÅr Ihre Personalakte
+haben, das kann ich ihnen versprechen!"]
+
+Block 197:
+["Eine Waffe! Driscoll, sind Sie wahnsinnig? Das wird Folgen fÅr Ihre
+Personalakte haben, darauf k"nnen Sie sich verlassen!^^ Verziehen Sie sich,
+Sie werden von uns h"ren!"^^{INK 001} Colonel Striver hat die Waffe
+konfisziert!]
+
+Block 198:
+["Schon wieder Sie! Sagen Sie, suchen Sie érger, oder was?"]
+
+Block 199:
+["Bleiben Sie ruhig!"^^{INK 001} Colonel Priver durchsucht Tom grÅndlich.]
+
+Block 200:
+[Dies ist Toms Aufbewahrungsort fÅr private Gegenst"nde.]
+
+Block 201:
+[Dies war der Raum Inspektor Beegles.]
+
+Block 202:
+[In diesem Schrank sind eine Menge Patronen!]
+
+Block 203:
+[Medipacs. Eine abgestimmte Mischung hochwirksamer Medikamente.]
+
+Block 204:
+[Spezialwerkzeuge dieser Art lassen sich hervor|ragend zum Knacken von
+mecha|nischen Schl"ssern zweck|entfremden!]
+
+Block 205:
+[Hier ist Nahrung in Form von Konzentratriegeln zu finden.]
+
+Block 206:
+[Dies ist der Shuttlehangar der TORONTO. Von hier aus werden alle FlÅge der
+kleinen Raumfahrzeuge gestartet.]
+
+Block 207:
+[{INK 001}Eine Lautsprecherdurchsage hallt durch die G"nge des Schiffes:^^
+{INK 002}"Durchsage fÅr Pilot Driscoll: Shuttle zum Start vorbereitet.
+Startaufruf folgt in KÅrze."]
+
+Block 208:
+[{INK 001}Eine Lautsprecherdurchsage:^^{INK 002} "Durchsage fÅr Pilot
+Driscoll: Bitte melden Sie sich zum Start des Erkundungsfluges."]
+
+Block 209:
+[{INK 001}Eine Lautsprecherdurchsage:^^{INK 002} Letzter Aufruf an Pilot
+Driscoll. Finden Sie sich sofort zum Start im Shuttlehangar ein!]
+
+Block 210:
+["Also gut. Ich mu· mich wohl auf den Weg machen."]
+
+Block 211:
+[Tom l"uft mit eiligen Schritten zum Shuttlehangar. Er wird dort bereits
+erwartet.]
+
+Block 212:
+[{FAHI}{CNTR}Nun folgt eine dicke Scriptsequenz: Tom & Rainer fliegen los und
+stÅrzen ab!]
+
+Block 213:
+[Im Shuttlehangar wird Tom bereits erwartet. Schnell l"uft er zu dem
+vorbereiteten Shuttle.]
+
+Block 214:
+[Dieses Schott fÅhrt zu den Kabinen des FÅhrungspersonals und des Kapit"ns.
+Der Zutritt ist fÅr andere Crewmitglieder nicht m"glich.]
+
+Block 215:
+[Hier geht es in das Segment der TORONTO, das die Krankenstation und die
+UnterkÅnfte des Sicherheits|personals enth"lt. Regul"re Besatzungs|mitglieder
+haben hier keinen Zutritt.]
+
+Block 216:
+["Aha, endlich ist es soweit. Ich sollte nicht vergessen, alles mitzunehmen,
+was ich auf diesem Flug dabei haben m"chte, wenn es losgeht."]
+
+Block 217:
+[Yep.]
+
+Block 218:
+[Dies ist der Shuttlehangar. Von hier aus wird der Vorausflug zu dem
+Zielplaneten starten.]
+
+Block 219:
+[Das Schott zur KommandobrÅcke. Nur wenige Besatzungs|mitglieder haben hier
+Zutritt, Tom geh"rt nicht zu ihnen.]
+
+Block 220:
+[Dies ist die Messe des Schiffes, Treffpunkt und Verpfleg|ungsraum fÅr die
+Besatzung.]
+
+Block 221:
+[Vor dem Eingang zum Comraum, wo die Kommuni|kations|anlagen des Schiffes
+unter|gebracht sind, stehen zwei Sicherheits|beauftrage Wache.]
+
+Block 222:
+[Hinter der unteren TÅr ist der Raum, in dem Joe, ein alter Freund Tom's,
+gerade arbeitet.]
+
+Block 223:
+[Zum Start des Shuttlefluges melden? {BLOK000}Ja, starten {BLOK001}Nein, noch
+warten]
+
+Block 224:
+[Tom geht zu einer Konsole und gibt seine Startbereitschaft durch.^^ Kurz
+darauf im Shuttlehangar...]
+
+Block 225:
+[Tom beschlie·t, den Aufruf vorerst zu ignorieren.]
+
+Block 226:
+[{CNTR}{INK 002}Bitte bedenken Sie: dies ist eine Preview-Version. Wir bitten,
+Bugs, fehlende Teile und mangelnde Feinabstimmung zu entschuldigen.^^^^
+{JUST}{INK 001} KURZINFO FöR PREVIEWVERSION:^^ Sie sind TOM DRISCOLL, ein
+Shuttlepilot an Bord der TORONTO. Die TORONTO ist ein Fabrik|raumschiff eines
+irdischen Konzerns, dessen Aufgabe der Abbau von Rohstoffen in gro·em Stil
+ist. Das Ziel der TORONTO ist ein Planet, der NUGGET genannt wurde, eine
+WÅstenwelt mit gro·en Rohstoffvorkommen.^^ Sie sollen in KÅrze mit einem
+Regierungs|kontolleur, Mr. BEEGLE, genannt SNOOPY, einen Vorausflug in einem
+kleinen Shuttle unternehmen, um den Zielplaneten vorab n"her zu
+untersuchen.^^{LEFT} Ihnen n"her bekannte Personen:^ CHRISTINE - Technikerin
+und ihre derzeitige Partnerin.^ RAINER HOFSTEDT - Wissenschaftler und zweiter
+Regierungs|beauftragter an Bord.^ JOE - Techniker und ein alter Freund von
+ihnen.^^{JUST} Dieses Szenario dient zur EinfÅhrung in die Handlung, es gibt
+noch keine K"mpfe. Sprechen Sie mit Personen, um n"here Informationen zu Ihrer
+Situation zu erhalten. Es gibt auch ein Puzzle zu l"sen; bei Erfolg kann man
+einen Gegenstand behalten, der einem das sp"tere Vorankommen erleichtert.^^
+Die Handlung setzt direkt nach dem Intro (siehe CD) ein. TOM erwacht aus
+seinem seltsamen Traum und beginnt seinen Tag.^^^ {CNTR}LOS GEHTS!]
+
+Block 227:
+[Als Tom auf den Gang hinaustritt, sieht er von rechts Christine, seine
+Lebens|gef"hrtin, auf sich zukommen.^^Freudig geht er ihr entgegen, um mit ihr
+zu sprechen.]
+
+Block 228:
+[{FAHI}- S C R I P T S E Q U E N Z - {NORS}^^ Hier wird eine Scriptsequenz
+beginnen, die den Flug nach Albion, den Absturz, die ersten Schritte auf dem
+Planeten, die Explosion des Shuttles und das Erwachen bei den Iskai darstellt.]
+
+Block 229:
+["Driscoll, es ist alles bereit fÅr ihren Flug."]
+
+Block 230:
+["Alle erforderlichen Daten zur Kursbestimmung stehen ihnen in den Systemen
+des Shuttles zur VerfÅgung, Mister Driscoll.^^W"hrend des Fluges werde ich
+direkt mit Ihnen kommunizieren, um Ihnen die Auswertung der Åbertragenen Daten
+sofort miteilen zu k"nnen."]
+
+Block 231:
+["Sie kennen Ihren Auftrag: DurchfÅhrung von Me·reihen im Orbit und vor Ort
+zur Verifizierung der Sondendaten. Bringen Sie Mister Hofstedt gut hinunter,
+Driscoll.^ Viel GlÅck."]
+
+Block 232:
+["Danke, Sir. Ich werde mich bemÅhen.^^Sind Sie bereit, Hofstedt?"]
+
+Block 233:
+["Aber sicher! Geben Sie Gas, Driscoll!"]
+
+Block 234:
+[Neben dem Shuttle trifft Tom auf Kapit"n Brandt, den Androidenk"rper von Ned,
+dem AI-System des Schiffes und natÅrlich auf Rainer Hofstedt, seinen Passagier.]
+
+Block 235:
+[Tom bringt das Shuttle sicher aus dem riesigen Mutterschiff.^^Das kleine
+Raumfahrzeug hat einen kr"ftigen Antrieb, und so sind die beiden schon nach
+ein paar Stunden in der N"he des Zielplaneten...]
+
+Block 236:
+["Am Ende dieses Ganges dort oben arbeitet Joe, das alte Haus, im
+Augenblick.^^Ich sollte ihn bald mal besuchen."]
+
+Block 237:
+["Die TORONTO ist der gr"·te Kasten, auf dem ich bisher geflogen bin, wie wir
+alle wohl. Alles ist noch neu, wie aus der Schachtel! DDT hat ihren Gewinn von
+3 Jahren in dieses Schiff investiert, habe ich geh"rt. öber 120 Milliarden
+Credits, da wird einem schwindlig!"{WRNR0183}]
+
+Block 238:
+["Warte mal. Ist schon seltsam. Man arbeitet fÅr diesen Multi, aber es f"llt
+mir schwer, mich auf Anhieb zu erinnern, was die AbkÅrzung bedeutet. Wird ja
+nichts anderes benutzt. Es war irgendwas mit Daimler-Daihatsu-Thomson oder so.
+Ist, glaube ich, aus zwei alten europ"ischen und 'nem japanischen Konzern
+entstanden."]
+
+Block 239:
+["Ein fantastisches Ding. Soll fast ein Viertel der Entwicklungs|kosten des
+ganzen Schiffes verschlungen haben. Wenn man bedenkt, das es erst 20 Jahre her
+ist, seit die erste Kiste schnell genug war, um mit Bewu·tseins|algorithmen
+umgehen zu k"nnen. Das Ding hat geantwortet wie ein schwach|sinniges Kind, und
+wenn Du heute mit sowas wie Ned sprichst, kommst DU Dir wie der Idiot vor.
+^^Immerhin eine gute Idee, Ned durch diesen Androiden|k"rper mit uns
+kommu|nizieren zu lassen. Man kommt sich dabei nicht ganz so merkwÅrdig vor,
+als wenn man mit einer Konsole oder einer Wand|instal|lation
+diskutiert.^^Au·erdem steuert Ned das ganze Schiff und sp"ter die Anlage. Ist
+schon irgendwie unheimlich, das gerade mal 80 Leute Besatzung n"tig sind, um
+das hier am Laufen zu halten."{WRNR0182}{WRNR0192}]
+
+Block 240:
+["Wenn sich auch nur die H"lfte der Daten best"tigt, die die Sonde Åber unser
+Ziel durchgegeben hat, kann sich jeder von seiner Pr"mie die Zulassung fÅr'n
+Indi leisten. Die Rohstoffmenge mu· fast so hoch wie auf Joshi sein. Was die
+genauen Daten angeht, wei· Hofstedt wohl am besten darÅber
+Bescheid."{WRNR0200}{WRNR0187}{WRNR0188}{WRNR0198}]
+
+Block 241:
+["Ja, stell Dir vor, mit 'nem Individualflitzer 'rumsausen, wie so'n reicher
+Sack!"]
+
+Block 242:
+["Der grÅne Planet. Na, jedenfalls frÅher mal. Zum GlÅck weisen die Daten Åber
+Nugget eine WÅstenwelt aus. Wir mÅssen uns zumindest nicht das Gejammer
+anh"ren, wie bei diesen Schlappohren von Joshi. Au·erdem, ich bin zwar
+wirklich kein Envi, aber einen blÅhenden Planeten wie Joshi umzugraben w"re
+dann doch nicht mein Ding."{WRNR0194}{WRNR0189}]
+
+Block 243:
+["Ja, Du hast schon irgendwie recht. Sie waren immerhin neben den Hoika die
+einzigen intelligenten Wesen, die entdeckt wurden. Aber sogar die Eierk"pfe
+von der Regierung meinten, das die Schlappohren schon am Ende ihrer
+Entwicklung angelangt waren. Irgendwie dekadent. Ja, trotzdem schade, da· sie
+sich diese Krankheit gefangen haben. Sie waren ja eh' nur noch ein paar
+tausend, aber wenn man bedenkt, da· eine ganze Rasse stirbt und nichts mehr
+bleibt...^ Na ja, zumindest die Hoika leben ja noch."{WRNR0190}{WRNR0202}]
+
+Block 244:
+["Die Siedler sind vielleicht ein wenig ruppig mit den Ureinwohnern Gaia's
+umgesprungen. Na ja, es ist schlie·lich die einzige bisher entdeckte Welt, auf
+der Menschen dauerhaft leben k"nnen. Die Hoika haben ja ihre Reservate
+zugewiesen bekommen."]
+
+Block 245:
+["Was meinst Du, die Comanlage oder den Antrieb?" {BLOK010}"Das Com."
+{BLOK011}"Den Antrieb."]
+
+Block 246:
+["Ich habe geh"rt, das es da ziemlich geknallt haben soll. Mu· 'ne ganz sch"ne
+Sauerei gegeben haben. Was mu· Snoopy auch w"hrend des Sprunges an der
+Comanlage herumfummeln. Beunruhigend ist nur, da· wir erstmal keinen Kontakt
+mehr zum HQ haben."{WRNR0193}{WRNR0199}]
+
+Block 247:
+["Hat wieder gut funktioniert, der over-c. Wenn man bedenkt, da· immer noch
+gerade mal 'ne Handvoll Leute wirklich verstehen, wie das Ding funktioniert..."]
+
+Block 248:
+["Wenn sich das Schiff auf dem Planeten zu der Anlage umgebaut hat, geht die
+Arbeit richtig los. Bin mal gespannt, ob alles funktioniert. Das Ding hier
+soll sich ja seine gesamte Infrastruktur selbst bauen. Man kann sich gar nicht
+vorstellen, wie gro· das Ganze anw"chst, wenn es erst mal den halben Planeten
+abgebaut hat. Die Strukturen werden riesig sein! Na ja, am Ende wird ja auch
+die Anlage eingeschmolzen und nach Hause geknallt."]
+
+Block 249:
+["Der Regierungsinspektor? Er hat seinen Kontrolljob ziemlich ernst genommen,
+er ist ja dem K"pt'n ein paar Mal ziemlich auf die Pelle gerÅckt, h"rt man.
+Der Typ der ihn entdeckt hat, sagte, er hat ihn unter der explodierten
+Com-Konsole gefunden. Und auf dem Sitz. Und ein bi·chen im
+Nachbarraum."{WRNR0196}{WRNR0202}]
+
+Block 250:
+["Hast Du das neueste von den Environmentalists geh"rt? Der radikale FlÅgel
+hat die letzte Galapagosinsel mit einem MinengÅrtel umgeben. Sind drei
+peruanische Milit"rboote bei 'draufgegangen. Die gem"·igten Envis sind am
+toben. Jetzt dÅrften sie's erstmal schwer haben, uns noch mehr Auflagen
+reinzudrÅcken."]
+
+Block 251:
+["Skipper Brandt macht einen guten Job, denke ich, auch wenn er ein bi·chen,
+na ja, kontaktscheu ist. Man sieht ihn selten au·erhalb der Dienstzeiten. Er
+spricht ja mehr mit der AI als mit der Besatzung."{WRNR0184}]
+
+Block 252:
+["Ich denke, die Regierungen schauen uns deshalb so genau auf die Finger, weil
+sie immer noch nicht die Tatsache verkraftet haben, da· die Konzerne die
+Raumfahrt beherrschen. Bei DDT gibt's ja schon genug Schreibkram, aber diese
+Regierungs|bÅrokraten w"ren doch nie in der Lage, ein Schiff wie die TORONTO
+zu bauen, selbst wenn sie das Geld dazu h"tten."{WRNR0182}]
+
+Block 253:
+["Die Daten versprechen einen Planeten, der Rohstoffe in genÅgend hoher
+Konzentration enth"lt, so da· sich der Einsatz von diesem Riesenkasten hier
+lohnt. Im HQ dÅrften die Korken geknallt haben, als die Ergebnisse der Sonde
+herein|gekommen sind. Bin mal gespannt, wie es auf Nugget aussieht. ^^Allzu
+aufregend wird's wohl nicht. Es soll sich um eine furz|trockene WÅsten|welt
+handeln, mit nicht mal genÅgend Sauerstoff zum freien Atmen. Keine Gift|stoffe
+in der Atmosph"re, allerdings. Kein Leben au·er vielleicht ein paar einfachen
+Pflanzen. Ist 'ne ganze Ecke kleiner als die Erde, aber durch die schweren
+Elemente k"nnen wir trotzdem um die 0,8 G Schwerkraft erwarten. Ist 'n guter
+Wert, schont das Material."{WRNR0199}]
+
+Block 254:
+["Die Jungs im HQ Osaka wird es Åberhaupt nicht freuen, da· wir keinen Kontakt
+mehr aufrecht erhalten k"nnen. Wenn diese ganze over-c - Technik nur nicht so
+schweine|teuer w"re, h"tten die bestimmt eine zweite Comanlage eingebaut.
+Sch"tze, wir mÅssen Nachrichten Åbermitteln, wenn die ersten Erzcontainer nach
+Hause gehen. Vielleicht schicken die uns dann die ben"tigten
+Ersatzteile."{WRNR0191}]
+
+Block 255:
+["Tja, nun ist er der einzige "Offizielle" an Bord. Eigentlich ist der Typ fÅr
+einen Eierkopf ganz in Ordnung. Kritisiert allerdings gern an der Firma herum,
+wenn man l"nger mit ihm spricht. Was soll's, sind ja auch keine Engel, die
+Sesselfurzer in den oberen Etagen."{WRNR0202}]
+
+Block 256:
+["Eine Kanone! Du wei·t, da· Du in Teufel's KÅche kommst, wenn die Secus Dich
+damit erwischen. Behalt lieber fÅr Dich, da· Du das Ding hast."{WRNR0201}]
+
+Block 257:
+["Die Security-Leute sind wohl auf keinem Schiff besonders beliebt. Seit dem
+Vorfall vor 10 Jahren auf der GATES, wo die Streikenden zusammengeschossen
+wurden, ist der ganze Berufstand in Verruf geraten."]
+
+Block 258:
+["Die TORONTO erfÅllt mich mich einer Mischung aus Ehrfurcht und Skepsis, um
+ehrlich zu sein. Der Physiker in mir bewundert diese fantastische technische
+Leistung. Schade nur, das all dies lediglich dazu dient, sich in eine Anlage
+zu verwandeln, um Rohstoffe von anderen Welten zu beschaffen und diese dabei
+zu verschandeln, auch wenn es sich um eine WÅstenwelt wie unser Ziel handelt,
+die von DDT so sinnig "Nugget" getauft wurde."{WRNR0183}{WRNR0186}{WRNR0192}]
+
+Block 259:
+["Daimler-Daihatsu-Thomson. Ich kenne Ihre Firma besser, als sie vielleicht
+galuben, Driscoll. Meine Mutter hat dort gearbeitet und ich habe einen Teil
+meiner Kindheit und Jugend innerhalb der Firmenkultur verbracht. Der
+zweitgr"·te Multi der Erde. Mehr Umsatz als das Brutto|sozial|produkt der
+meisten Staaten. DDT ist aus einem Zusammenschlu· zweier eur"p"ischer und
+eines japanischen Konzerns entstanden. Der Konzern gilt als einer der
+gesÅndesten unter den Gro·multis. Sieht so aus, als h"tten sie einen sicheren
+Arbeitsplatz, Driscoll."{WRNR0199}]
+
+Block 260:
+["Die neueste Generation bewu·ter Rechner. DDT h"tte sich dieses AI-System nie
+leisten k"nnen, wenn sie nicht selbst fÅhrend in der Technik w"ren, und auch
+so hat Ned fast 25% der Entwicklungskosten der ganzen TORONTO verschlungen.
+Das System enth"lt Prozessoren, die speziell auf die Bewu·tseins|algorithmen
+zugeschnitten sind. Ich habe mich schon mehrere Male mit Ned unterhalten und
+jedesmal hat es mir einen Schauer Åber den RÅcken gejagt. Ned ist wirklich ein
+intelligentes Bewu·tsein. Der Grad an Urteilsf"higkeit des Systems ist
+bahnbrechend.^ Das keine Kosten gescheut wurden, erkennt man auch daran, da·
+man die AI durch einen aufwendigen Anroidenk"rper sprechen l"·t. Die
+Hemmschwelle, mit einem kÅnstlichen Bewu·tsein zu kommunizieren, wird durch
+einen menschlich erscheinenden K"rper natÅrlich stark herabgesetzt."{WRNR0182}]
+
+Block 261:
+["Der Name fÅr unseren Zielplaneten bezeichnet gro·artig, was DDT darin sieht:
+ein profitables Rohstofflager und nicht mehr. Sind Ihnen die Daten, die uns
+von einer Sonde Åbermittelt wurden, nicht mitgeteilt worden? Lassen Sie mich
+kurz nachdenken.^^Also, die Daten weisen auf einen kleinen WÅstenplaneten hin,
+der aufgrund des schweren Kern aber Åber einen Schwerkraftwert von 0,8 G
+verfÅgt. Es ist eine sauerstoffhaltige Atmosph"re vorhanden, warscheinlich ist
+das Atmen im Freien aber ohne Hilfsmittel nicht m"glich. Die Sonne des Systems
+ist von "hnlicher Gr"·e wie die unseres Sonnensystems, strahlt aber ein etwas
+in r"tliche verschobenes Farbspektrum aus. Der Planet hat keine Achsenneigung,
+so da· mit gro·en geographischen Temperatur|"nderungen nicht zu rechnen ist.
+Ich denke, wir k"nnen mit Tages|temperaturen um die 50 Grad Celsius und
+Nachtempe|raturen unten dem Gefrierpunkt rechnen.^ Ein Sonnen|umlauf dauert
+skurrilerweise fast exakt so lange wie ein irdisches Jahr. So, ich denke, da·
+war alles, was bisher Åber unser Ziel bekannt ist. Nach unserem gemeinsamen
+Flug werden wir mehr wissen."{WRNR0183}{WRNR0205}]
+
+Block 262:
+["Das Zeitalter des Individualverkehrs ist ja schon seit Åber 100 Jahren
+eigentlich vorÅber. Nur die Spitzenverdiener k"nnen sich die Zulassung fÅr ein
+Individual|fahrzeug leisten. Meiner Meinung nach ist ein unver|antwortlicher
+Bl"dsinn, dafÅr die "ffentlichen Verkehrswege fÅr teures Geld instand zu
+halten, aber der Schein freier Mobilit"t mu· nun Mal gewahrt bleiben."]
+
+Block 263:
+["Erinnern Sie mich blo· nicht daran! Zusammen mit dem rÅcksichtslosen
+Vorgehen auf Gaia ist der Fall Joshi meiner Meinung nach der gr"·te Skandal
+der interstellaren Raumfahrt. Sie wissen ja, da· damals ein blÅhender Planet
+von einem Konkurrenz|unternehmen DDT's fast vollst"ndig zugrunde gerichtet
+wurde. Und wissen sie noch etwas? Wenn sich nicht herausgestellt h"tte, da·
+dabei nicht nur ein lebendiger Planet ruiniert, sondern auch intelligente
+Wesen dabei ausgerottet wurden, wÅrde es wohl heute noch keine Kontrollen
+geben. ^^Wenn ich an die Kommentare des Multis denke! "Der Planet hatte
+Giftstoffe in seiner Atmosph"re, die menschliches Leben nicht erlauben". Als
+ob das die einheimische Flora und Fauna dadurch weniger wertvolles leben
+darstellte! Unglaublich auch der Kommentar zum Ende der Grik'tra. Schlappohren
+haben sie sie genannt und gemeint, das sie dem irdischen Virus erlegen w"ren,
+weil sie dekadent und am Ende ihrer Entwicklungs|geschichte angelangt waren!
+Es ist...^^ Verzeihen sie, bei diesem Thema rede ich mich gern in Rage. Wie
+dem auch sei, dieser Vorfall ist letztendlich der Grund fÅr meine Anwesenheit
+auf dem Schiff. Kein privates Raumfahrzeug darf seit Joshi unerforschte
+Systeme ohne Begleitung eines Regierungs|beauftragten
+ansteuern."{WRNR0202}{WRNR0189}{WRNR0190}]
+
+Block 264:
+["Eine rassistische Bezeichnung, Driscoll. Die Grik'tra waren ein Kulturvolk
+mit einer Entwicklungs|geschichte, die zweihundertausend Jahre l"nger als die
+unsere ist. Ihre Zahl betrug nur noch einige tausend, als der von der Erde
+eingeschleppte Virus sie ausrottete."]
+
+Block 265:
+["Gaia ist ein Beispiel, da· wir offenbar nicht in der Lage sind, aus den
+Fehlern unserer Geschichte zu lernen. In der Euphorie nach der Erfindung, oder
+besser Entdeckung, des over-c hatte Gaia einfach nur das Pech, da· unter den
+ersten angesteuerten Sonnensystemen ein Planet existierte, der menschliches
+Leben erlaubte.^^Die Entdeckung einheimischer intelligenter Einwohner, der
+Hoika, war eine Sensation, die noch gr"·ere Aufregung als die erfolgreichen
+Tests des over-c ausl"ste; was die Siedler allerdings nicht daran hinderte,
+die Hoika "hnlich zu behandeln, wie es mit zahlreichen V"lkern auf der erde zu
+Zeiten des Kolonialismus passierte. Was fÅr eine Ausnahme Gaia darstellt, ist
+erst heute klar, denn es ist bislang die einzige Welt geblieben, auf der
+menschliches Leben dauerhaft m"glich ist."]
+
+Block 266:
+["Meinen sie die Comanlage oder den Antrieb?" {BLOK010}"Das Com."
+{BLOK011}"Den Antrieb."]
+
+Block 267:
+["Die Comanlage soll v"llig zerst"rt worden sein. Mein pers"nliches Verh"ltnis
+zu Snoop..., ehm, Inspektor Beegle war leider nicht das Beste. Ich wÅ·te zu
+gern, was er w"hrend des Sprunges an der Anlage zu suchen hatte.^ Die
+Hochenergietechnik der over-c Kommunikation ist leider so sÅndhaft teuer, das
+wir offenbar nicht genÅgend Ersatzteile mitfÅhren, um die Anlage wieder in
+Betrieb zu setzen."{WRNR0193}]
+
+Block 268:
+["Der over-c - Antrieb ist fÅr uns, was das Feuer fÅr den FrÅhmenschen war.
+Wir wissen nicht bis in alle Einzelheiten, was er genau bewirkt, aber wir
+verwenden ihn und er schleudert uns in eine neue Phase unserer
+Entwicklungs|geschichte, welche Konsequenzen es auch immer haben mag..."]
+
+Block 269:
+["Es wird faszinierend sein, zu beobachten, wie sich das Schiff zu einer
+Fabrik umbaut, die sich ihre eigene Infrastruktur baut. Das Ausma· an
+Automatisierung ist einfach unvorstellbar. Es entsteht ein metallener
+Organismus, der sich immer weiter selbst vergr"·ert und die ÅberschÅssigen
+Rohstoffe zur Erde schickt. ^^Die TORONTO wird mich noch in die Schizophrenie
+treiben! Hofstedt, der Xenobiologe trauert um die Verschandelung eines
+jungfr"ulichen Planeten, aber der Physiker Hofstedt ist gefesselt von der
+fantastischen technischen Leistung, die dieses Schiff darstellt."]
+
+Block 270:
+["Der Regierungsinspektor war ein wandelndes Klischee von einem Briten. Ich
+hielt ihn fÅr ziemlich arrogant, wir sind nicht besonders gut miteinander
+ausgekommen, um ehrlich zu sein. Aber er hat seinen Job ernst genommen, das
+mu· ich ihm lassen."]
+
+Block 271:
+["Wissen sie, ich war frÅher selbst bei den Environmentalists aktiv, bis der
+radikale FlÅgel immer mehr in Richtung Terrorismus abgedriftet ist. Immerhin
+hat der offizielle Teil der Organisation gro·artige Erfolge erzielt. Die
+gentechnisch gestÅtzte RÅckzÅchtung des Tigers letztes Jahr hat der
+Organisation glÅcklicherweise wieder Auftrieb im "ffentlichen
+Meinungs|barometer verliehen. Seit die gr"·ten Schweine|reien au·erhalb der
+Erde passieren, bessert sich der Zustand der letzten Naturreservate zusehends."]
+
+Block 272:
+["Brandt ist in Ordnung, sch"tze ich. Er ist v"llig fasziniert von Ned,
+unserer AI. Liegt vielleicht daran, das er seine Karriere als
+Software|ingenieur begonnen hat."{WRNR0184}]
+
+Block 273:
+["Seit die letzten Eigenm"chtigkeiten der Multis bekanntgeworden sind, hat der
+"ffentliche Druck auf die Konzerne erfreulich gro·e Ausma·e angenommen. Es ist
+fast soweit, das die Regierung ihre Bezeichnung wieder verdient."]
+
+Block 274:
+["Sind Ihnen die Daten, die uns von einer Sonde Åbermittelt wurden, nicht
+mitgeteilt worden? Lassen Sie mich kurz nachdenken.^^Also, die Daten weisen
+auf einen kleinen WÅstenplaneten hin, der aufgrund des schweren Kern aber Åber
+einen Schwerkraftwert von 0,8 G verfÅgt. Es ist eine sauerstoffhaltige
+Atmosph"re vorhanden, warscheinlich ist das Atmen im Freien aber ohne
+Hilfsmittel nicht m"glich. Die Sonne des Systems ist von "hnlicher Gr"·e wie
+die unseres Sonnensystems, strahlt aber ein etwas in r"tliche verschobenes
+Farbspektrum aus. Der Planet hat keine Achsenneigung, so da· mit gro·en
+geographischen Temperatur|"nderungen nicht zu rechnen ist. Ich denke, wir
+k"nnen mit Tagestemperaturen um die 50 Grad Celsius und Nachtemperaturen untrn
+dem Gefrierpunkt rechnen.^^Ein Sonnenumlauf dauert skurrilerweise fast exakt
+so lange wie ein irdisches Jahr. So, ich denke, da· war alles, was bisher Åber
+unser Ziel bekannt ist. Nach unserem gemeinsamen Flug werden wir mehr
+wissen."{WRNR0205}]
+
+Block 275:
+["In der DDT-Zentrale von Osaka wird man rotieren, seit der Kontakt
+abgebrochen ist, sch"tze ich."]
+
+Block 276:
+["So lautet mein Name; v"llig korrekt, Driscoll."]
+
+Block 277:
+["Sie sind im Besitz einer Waffe! Sind die Secus nicht die einzigen
+Besatzungs|mitglieder, die Waffen tragen dÅrfen? Sie sollten das Ding besser
+niemandem zeigen, Driscoll."]
+
+Block 278:
+["Ich bin Physiker und Xenobiologe im Regierungsdienst. Wie Sie wohl wissen,
+reise ich mit, um zu verhindern, da· sich Katastrophen wie die auf Joshi
+wiederholen k"nnen."]
+
+Block 279:
+["Die TORONTO erfÅllt mich mich einer Mischung aus Ehrfurcht und Skepsis, um
+ehrlich zu sein. Der Physiker in mir bewundert diese fantastische technische
+Leistung. Schade nur, das all dies lediglich dazu dient, sich in eine Anlage
+zu verwandeln, um Rohstoffe von anderen Welten zu beschaffen und diese dabei
+zu verschandeln, auch wenn es sich um eine WÅstenwelt wie unser Ziel handelt,
+die von DDT so sinnig "Nugget" getauft wurde."]
+
+Block 280:
+["Daimler-Daihatsu-Thompson. Ich kenne Ihre Firma besser, als sie vielleicht
+glauben, Driscoll. Meine Mutter hat dort gearbeitet und ich habe einen Teil
+meiner Kindheit und Jugend innerhalb der Firmenkultur verbracht. Der
+zweitgr"·te Multi der Erde. Mehr Umsatz als das Brutto|sozial|produkt der
+meisten Staaten. DDT ist aus einem Zusammenschlu· zweier eur"p"ischer und
+eines japanischen Konzerns entstanden. Der Konzern gilt als einer der
+gesÅndesten unter den Gro·multis. Der Verlust, den DDT durch die falschen
+daten Åber diesen Planeten einstecken mu·, wird allerdings hart sein."]
+
+Block 281:
+["Die neueste Generation bewu·ter Rechner. DDT h"tte sich dieses AI-System nie
+leisten k"nnen, wenn sie nicht selbst fÅhrend in der Technik w"ren, und auch
+so hat Ned fast 25% der Entwicklungskosten der ganzen TORONTO verschlungen.
+Das System enth"lt Prozessoren, die speziell auf die Bewu·tseins|algorithmen
+zugeschnitten sind. Ich habe mich schon mehrere Male mit Ned unterhalten und
+jedesmal hat es mir einen Schauer Åber den RÅcken gejagt. Ned ist wirklich ein
+intelligentes Bewu·tsein. Der Grad an Urteilsf"higkeit des Systems ist
+bahnbrechend."]
+
+Block 282:
+["Nun, der Name ist wohl nicht l"nger haltbar - der Planet hat sich ja als
+öberraschung ersten Grades herausgestellt. M"chte wissen, was mit der Sonde
+los war. Nun, einige Daten haben immerhin gestimmt. Die Tagesdauer betr"gt
+tats"chlich 18 Stunden, die warme Farbe des Sonnenlichtes stimmt, und auch die
+Abwesenheit von Jahreszeiten aufgrund der nicht vorhandenen Achsneigung des
+Planeten sind zutreffend."]
+
+Block 283:
+["Hier scheint sich der Individualverkehr haupts"chlich auf die eigenen FÅ·e
+zu beschr"nken."]
+
+Block 284:
+["Erinnern Sie mich blo· nicht daran! Zusammen mit dem rÅcksichtslosen
+Vorgehen auf Gaia ist der Fall Joshi meiner Meinung nach der gr"·te Skandal
+der interstellaren Raumfahrt. Sie wissen ja, da· damals ein blÅhender Planet
+von einem Konkurrenz|unternehmen DDT's fast vollst"ndig zugrunde gerichtet
+wurde. Und wissen sie noch etwas? Wenn sich nicht herausgestellt h"tte, da·
+dabei nicht nur ein lebendiger Planet ruiniert, sondern auch intelligente
+Wesen dabei ausgerottet wurden, wÅrde es wohl heute noch keine Kontrollen
+geben. Wenn ich an die Kommentare des multis denke! "Der Planet hatte
+Giftstoffe in seiner Atmosph"re, die menschliches Leben nicht erlauben". Als
+ob das die einheimische Flora und Fauna dadurch weniger wertvolles leben
+darstellte! Unglaublich auch der Kommentar zum Ende der Grik'tra. Schlappohren
+haben sie sie genannt und gemeint, das sie dem irdischen Virus erlegen w"ren,
+weil sie dekadent und am Ende ihrer Entwicklungs|geschichte angelangt waren!
+Es ist...^ verzeihen sie, bei diesem Thema rede ich mich gern in Rage. Wie dem
+auch sei, dieser Vorfall ist letztendlich der Grund fÅr meine Anwesenheit auf
+dem Schiff. Kein privates Raumfahrzeug darf seit Joshi unerforschte Systeme
+ohne Begleitung eines Regierungs|beauftragten ansteuern."]
+
+Block 285:
+["Ein rassistische Bezeichnung, Driscoll. Die Grik'tra waren ein Kulturvolk
+mit einer Entwicklungs|geschichte, die zweihundertausend Jahre l"nger als die
+unsere ist. Ihre Zahl betrug nur noch einige tausend, als der von der erde
+eingeschleppte Virus sie ausrottete."]
+
+Block 286:
+["Gaia ist ein Beispiel, da· wir offenbar nicht in der Lage sind, aus den
+Fehlern unserer Geschichte zu lernen. In der Euphorie nach der Erfindung, oder
+besser Entdeckung, des over-c hatte Gaia einfach nur das Pech, da· unter den
+ersten angesteuerten Sonnensystemen ein Planet existierte, der menschliches
+Leben erlaubte. Die Entdeckung einheimischer intelligenter Einwohner, der
+Hoika, war eine Sensation, die noch gr"·ere Aufregung als die erfolgreichen
+Tests des over-c ausl"ste; was die Siedler allerdings nicht daran hinderte,
+die Hoika "hnlich zu behandeln, wie es mit zahlreichen v"lkern auf der erde zu
+Zeiten des Kolonialismus passierte. Was fÅr eine Ausnahme Gaia darstellt, ist
+erst heute klar, denn es ist bislang die einzige welt geblieben, auf der
+menschliches Leben dauerhaft m"glich ist."]
+
+Block 287:
+["Die Comanlage soll v"llig zerst"rt worden sein. Mein pers"nliches Verh"ltnis
+zu Inspektor Beegle war leider nicht das Beste. Ich wÅ·te zu gern, was er
+w"hrend des Sprunges an der Anlage zu suchen hatte.^ Die Hochenergietechnik
+der over-c Kommunikation ist leider so sÅndhaft teuer, das wir offenbar nicht
+genÅgend Ersatzteile mitfÅhren, um die Anlage wieder in Betrieb zu setzen."]
+
+Block 288:
+["Der Umbau zur Fabrikanlage wird nun wohl nicht stattfinden k"nnen. Ich bin
+gar nicht mal sicher, ob die TORONTO, ohne zus"tzliche Ma·nahmen zu ergreifen,
+wieder starten kann."]
+
+Block 289:
+["Wissen sie, ich war frÅher selbst bei den Environmentalists aktiv, bis der
+radikale FlÅgel immer mehr in Richtung Terrorismus abgedriftet ist. Immerhin
+hat der offizielle Teil der Organisation gro·artige Erfolge erzielt. Die
+gentech-gestÅtzte RÅckzÅchtung des tigers letztes Jahr hat der Organisation
+glÅcklicherweise wieder Auftrieb im "ffentlichen Meinungsbarometer verliehen.
+Seit die gr"·ten Schweinereien au·erhalb der Erde passieren, bessert sich der
+Zustand der letzten Naturreservate zusehends."]
+
+Block 290:
+["Brandt ist in Ordnung, sch"tze ich. Er ist v"llig fasziniert von Ned,
+unserer AI. Liegt vielleicht daran, das er seine Karriere als
+Softwareingenieur begonnen hat."]
+
+Block 291:
+["Die Daten Åber diesen planeten mÅssen wohl leicht revidiert werden!"]
+
+Block 292:
+[{BLOK000}"Ich checke heute zum vierten Mal die Systeme zur Landung durch."
+{WRNR0206}]
+
+Block 293:
+["Hallo Schatz. Na, noch ein wenig die FÅ·e vertreten, bevor der Shuttleflug
+losgeht? Ich checke gerade die Systeme zur Landung dieses riesigen Pottes."
+{WRNR0205}{WRNR0206}{WRNR0207}]
+
+Block 294:
+["Bongiorno, SÅ·er. Was gibt's?"]
+
+Block 295:
+["Wenn alles klappt, und davon ist auszugehen, mÅssen wir uns fÅr ca. 45
+Minuten anschnallen. Danach sollte die Landung vollzogen sein und die Segmente
+des Schiffes sind horizontal ausgeklappt. Dann besteht innerhalb der Segmente
+wieder die korrekte Schwerkraft|richtung. Vergi· nicht, das Zeug in Deiner
+Kabine gut zu verstauen."]
+
+Block 296:
+["Mach Dir mal keine Sorgen, mein SÅ·er. Die Systeme und alle Backupkreise
+sind topfit. Das l"uft wie am SchnÅrchen."]
+
+Block 297:
+["Ich beneide Dich und Hofstedt. Ihr werden den ersten Blick mit eigenen Augen
+auf Nugget werfen. Ich drÅcke Dir die Daumen fÅr den Flug, Tom. Pa·' bitte auf
+Dich auf, ja?"{WRNR0200}{WRNR0186}]
+
+Block 298:
+["Na, wenn Du nur ein halb so guter Pilot bist, wie Du mir erz"hlt hast, mu·
+ich mir ja keine Sorgen machen. Im Ernst, Schatz, bau' keine Schei·e, ja? Ich
+mag Dich wirklich."]
+
+Block 299:
+["Der Traum geht Dir immer noch nicht aus dem Kopf, was? Ist schon seltsam,
+da· er immer wiederkehrt. Aber es ist ja eigentlich kein Alptraum. Du kannst
+sicher damit leben, bis er von allein wieder verschwindet."]
+
+Block 300:
+[{BLOK000}Was kannst Du sagen Åber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demn"chst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 301:
+[{BLOK000}"Ich simuliere ein paar Fehler, um den Reservesystemen ein bi·chen
+auf den Zahn zu fÅhlen."{WRNR0209}]
+
+Block 302:
+["Hallo, mein Alter! Willst mich von der Arbeit abhalten, hm? Gute Idee!"
+{BLOK010}"GrÅ·' dich, Joe! Hast du die Secus im Nachbarraum gesehen?"
+{BLOK011}"Joe! Das letzte Mal, da· Du so fertig ausgesehen hast, war nach der
+Tour durch Osaka kurz vor dem Start!"]
+
+Block 303:
+["Ja, sie sperren den Zugang zum Comraum ab. Arrogante Typen." {BLOK010}"Das
+stimmt. Du wei·t, ich war schon immer ein bi·chen neugierig. WÅrde zu gern mal
+einen Blick auf den Schrott im Comraum werfen!"]
+
+Block 304:
+["Mhm, ich wÅ·te, wie wir diese Geheimniskr"mer linken. Ich k"nnte Dir einen
+Zugang zum Servicedeck zeigen. Dort mÅ·test Du die Typen unterlaufen k"nnen
+und in den Comraum kommen. Wie sieht's aus?"{WRNR0208} {BLOK010}"Gute Idee!
+Schie·' los!" {BLOK011}"Ach, es ist den érger wohl doch nicht wert. Ich la·'
+es bleiben."]
+
+Block 305:
+["O.K. Pa· auf, die Wandpanels mit den grÅnen Lichtketten verkleiden Zug"nge
+zum Servicedeck. Du findest einen dieser Zug"nge rechts oben in dem Raum
+n"rdlich von diesem hier. Der Code, den Du bei den Dingern eingeben mu·t,
+lautet fÅr dieses Deck "1042". Dahinter findest Du eine Leiter nach unten und
+kannst Dir dann einen Weg bis zum Serviceaufgang in den Combereich
+suchen."{WRNR0208}]
+
+Block 306:
+["He, so kenne ich Dich ja gar nicht, Alter! Na ja, sag' mir Bescheid, wenn Du
+es Dir anders Åberlegst."]
+
+Block 307:
+["Das Servicedeck liegt unterhalb des Hauptdecks, wo wir uns gerade befinden.
+Es gibt Zugang zu den Einrichtungen des Schiffes und wird haupts"chlich von
+Service|robotern benutzt und von uns Technikern, wenn die KÅbel mit etwas
+nicht zurecht|kommen. ^^Du mu·t Dich darauf einstellen, da· es dort unten
+haupts"chlich fÅr die Robots eingerichtet wurde. Es gibt 'ne Menge
+Bodenschalt|platten und "hnlichen Schnickschnack, der die Schleusen steuert.
+Schau' Dich dort unten genau nach Schaltern um, wenn Du mal nicht
+weiterkommst, Dir ist ja kein Brot auf'n Kopf gefallen."]
+
+Block 308:
+["H"r blo· auf. So kurz vor dem Ziel ertrinke ich in Arbeit! Unser
+Sake|marathon in Osaka war's wenigstens Wert, har, har!"]
+
+Block 309:
+["Hi, Tom. Na, willst Du doch 'nen Tip, wie Du die Secus umgehen kannst?"
+{BLOK010}"O.K., O.K.! Du hast mich. Was schl"gst Du vor?"]
+
+Block 310:
+["Na, hast Du was Interessantes gesehen?"{WRNR0208} {BLOK010}"Bin noch nicht
+durchgekommen. Ich versuch's sp"ter nochmal." {BLOK011}"Wie war noch mal die
+Codenummer fÅr die Servicezug"nge?"]
+
+Block 311:
+["Denk dran, mit den Schaltern zu experimentieren und Dich an die Servicerobs
+zu halten, dann wird's schon klappen."]
+
+Block 312:
+["Wow! Zeig das Ding niemandem, sonst kassieren sie's sofort ein! 'Ne Knarre,
+ist ja hei·!"]
+
+Block 313:
+["Shit. H"ttest Du das Ding nicht im Servicedeck deponieren k"nnen, um es
+sp"ter von der anderen Seite abzuholen oder so? Na ja, jetzt ist es zu sp"t."]
+
+Block 314:
+["Ach, Routinekrempel, aber jede Menge davon. Ich simuliere die
+unwarschein|lichsten Ausf"lle, aber die Systeme des Schiffes stecken alles
+locker weg."]
+
+Block 315:
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Nun, das over-c - Com
+sieht tats"chlich Åbel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden!"]
+
+Block 316:
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Nun, das over-c - Com
+sieht tats"chlich Åbel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden! Die S"cke von der Secu haben mir das Ding allerdings abgenommen,
+weil der RÅckweg durch das Servicedeck versperrt war."]
+
+Block 317:
+["Ah, kleiner Alzheimer-Anfall, hm? Der Code lautet "1042". Viel GlÅck!"]
+
+Block 318:
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Das over-c - Com ist
+v"llig hinÅber. Snoopys öberreste haben sie aber schon beseitigt."]
+
+Block 319:
+["Sonst nichts Aufregendes gefunden? Ist ja direkt entt"uschend."]
+
+Block 320:
+[{BLOK000}"Ich bin Security - Offizier im Range eines Colonel."]
+
+Block 321:
+["Gehen sie weiter, hier gibt es nichts zu sehen." {BLOK010}"Was ist denn
+passiert? Sie stehen hier doch nicht zum VergnÅgen herum."]
+
+Block 322:
+["Sie haben sicher von dem Unfall des Inspektors mit der over-c - Comanlage
+geh"rt. Der Comraum ist bis auf weiteres gesperrt."{WRNR0210}]
+
+Block 323:
+["Der Raum bleibt solange fÅr die Besatzung geschlossen, bis keine Gefahr
+durch die defekte Anlage mehr besteht. Und jetzt ist Schlu· mit der Fragerei."]
+
+Block 324:
+["Werden sie nicht frech, Driscoll. FÅr Sie immer noch Colonel."]
+
+Block 325:
+["{HIGH}Sind Sie wahnsinnig?^ {NORS}Geben Sie sofort die Waffe heraus! Das
+wird Folgen fÅr Ihre Personalakte haben, Driscoll, das verspreche ich
+Ihnen!"^^ {INK 001}Priver nimmt Tom die Waffe ab.]
+
+Block 326:
+["Was wollen Sie denn noch? Wir werden nicht fÅrs Reden bezahlt."{WRNR0210}]
+
+Block 327:
+["Verschwinden Sie, Driscoll. Ich habe keine Lust, mit Unruhestiftern wie
+Ihnen zu diskutieren."]
+
+Block 328:
+[{BLOK000}Was k"nnen Sie mir sagen Åber... {BLOK001}Schauen Sie sich dies hier
+an... {BLOK004}Wiedersehn. {BLOK005}Was ist Ihre Aufgabe?]
+
+Block 329:
+[{BLOK000}"Ich bin Mathematiker und Navigator."{WRNR0203}]
+
+Block 330:
+["Hallo, Driscoll. Na, alles klar fÅr den Flug?"{WRNR0205}]
+
+Block 331:
+["Ah, Driscoll. Was kann ich noch fÅr Dich tun?"{WRNR0205}]
+
+Block 332:
+["Ich habe die Berechnungen Deiner Flugbahn nochmal ÅberprÅft. Ist alles im
+grÅnen Bereich, keine kritischen Punkte in der Bahn. Sollte 'n Kinderspiel
+werden."]
+
+Block 333:
+["Wie schon gesagt, die Berechnungen der Flugbahn sind fertig und ÅberprÅft."]
+
+Block 334:
+["Ziemlich harter Job, diesmal. Obwohl, oder gerade weil, wir Ned, die
+Wunder-AI an Bord haben. W"hrend des ganzen Fluges habe ich versucht, der AI
+Fehler nachzuweisen, aber es war nichts zu machen. Ich sch"tze, da· ich mich
+durch die öberprÅfungen noch selbst wegrationa|lisieren werde. Noch traut man
+den AI - Systemen nicht hundert|prozentig, aber das "ndert sich bald, sch"tze
+ich."{WRNR0184}]
+
+Block 335:
+[{BLOK000}"Ich bin MaschinenfÅhrer. Ich fahre gerade Tests Åber die
+Einsatzf"higkeit der Abbauanlagen."{WRNR0212}]
+
+Block 336:
+["Hallo, Driscoll. Wie steht's? Bald haben wir Nugget erreicht, dann hat fÅr
+mich die faule Zeit ein Ende."{WRNR0186}]
+
+Block 337:
+["Hallo, Driscoll. wie steht's?"]
+
+Block 338:
+["Nun, zuerst werden die mitgebrachten Systeme genÅgend Erze abbauen, um eine
+Fertigung fÅr weitere Roboter|systeme zu errichten. Dann entsteht ein
+selbstlaufender Proze·, bei dem immer mehr ÅberschÅssiges Erz abf"llt, da· wir
+mit den billigen Containern nach Hause ballern."{WRNR0213}{WRNR0214}]
+
+Block 339:
+["Die neuen Modelle sind riesig, mit integrierten Selbstreperatur|kreisen.
+Sind unverwÅstlich, die Dinger."]
+
+Block 340:
+["Es soll ja alle m"glichen Sorten auf Nugget geben".]
+
+Block 341:
+[{BLOK000}"Ich bin fÅr die Lebenserhaltung|systeme an Bord verantwortlich."
+{WRNR0215}]
+
+Block 342:
+["Hallo Driscoll, Du H"llenpilot. Schon die Sache mit Snoopy geh"rt?"
+{WRNR0193}]
+
+Block 343:
+["Hallo, Driscoll. Was gibt's denn noch?"]
+
+Block 344:
+["Alles im grÅnen Bereich, ich erwarte keine Probleme. Wenn's bei der Landung
+'n bi·chen von den F"kalien in's Frischwassersystem schleudert, wirst Du's
+schon merken!"]
+
+Block 345:
+[{BLOK000}"Ich bin fÅr die Versorgung der Besatzung mit Nahrung und Anderem
+verantwortlich."{WRNR0061}{WRNR0216}]
+
+Block 346:
+["Hallo. Womit kann ich dienen? 'Ne kleine Zwischenmahlzeit? Ich habe 'n paar
+gute Schokoriegel zu bieten. Ist nicht so sÅ·, das Zeug." {BLOK010}"Ja, gerne.
+Immer her damit."]
+
+Block 347:
+["Hallo, Driscoll. Noch'n bi·chen Nachschub gef"llig? Die Firma wird's
+verkraften." {BLOK010}"Ja, gerne. K"nnte noch was davon vertragen."]
+
+Block 348:
+["Hallo. Sorry, keine Schokoriegel mehr. Ich mu· langsam darauf achten, da·
+die anderen auch etwas abbekommen. Du wirst noch fett werden, Driscoll."]
+
+Block 349:
+["Hier hast Du 'ne Packung."^^ {INK 001}Sie Åberreicht Tom einige Rationen.]
+
+Block 350:
+["Es nicht gerade Feinschmeckerkost, was uns die Firma eingelagert hat. Aber
+mit ein bi·chen Intuition beim Programmieren der KÅche mache ich daraus ein
+genie·bares Essen."]
+
+Block 351:
+["Wenn Du neue Videos oder was zu lesen brauchst, wende Dich an mich, wenn ich
+in meinem BÅro bin."{WRNR0217}]
+
+Block 352:
+["Die Auswahl ist gro·, schau bei Gelegenheit meine Datenbank durch."]
+
+Block 353:
+[{BLOK000}"Ich bin MaschinenfÅhrerin fÅr die Abbauroboter. Im Augenblick
+sichere ich allerdings den Lagerraum ab."{WRNR0218}]
+
+Block 354:
+["Hi, Tom! Hab'n bi·chen wenig Zeit. Der Kapit"n hat mich dazu verdonnert, den
+Lagerraum fÅr die Landung vorzubereiten."{WRNR0206}{WRNR0196}]
+
+Block 355:
+["Na, Du wei·t doch. Normalerweise beginnt fÅr unsereins der Job erst nach der
+Landung, wenn es mit dem Abbau der Rohstoffe losgeht."]
+
+Block 356:
+["Wenn bei der Landung die Schwerkraftverh"ltnisse durcheinander geraten, darf
+hier natÅrlich nichts mehr unbefestigt herumstehen."]
+
+Block 357:
+["Ja, was gibts'n noch, Tom?"]
+
+Block 358:
+[{BLOK000}"Ich bin der technische Leiter fÅr alle Segmente."{WRNR0220}
+{WRNR0219}]
+
+Block 359:
+["Hallo, Driscoll."]
+
+Block 360:
+["Wann immer es irgendwo klemmt, kommen die Techniker zu mir und erwarten
+wundert"tige L"sungen. Na, ich will mich nicht beschweren, dieser Flug ist
+bisher v"llig reibungslos verlaufen. Die TORONTO ist wirklich ihr Geld
+wert."{WRNR0182}]
+
+Block 361:
+["Nun, wie ich schon sagte: Wann immer es irgendwo klemmt, kommen die
+Techniker zu mir und erwarten wundert"tige L"sungen. Na, ich will mich nicht
+beschweren, dieser Flug ist bisher v"llig reibungslos verlaufen. Die TORONTO
+ist wirklich ihr Geld wert."{WRNR0182}]
+
+Block 362:
+["Die TORONTO hat von ihren acht Segmenten ja nur zwei, in denen
+Lebenserhalt|ungsysteme installiert sind: Dieses hier und das Segment, in dem
+die Secus, die Krankenstation und der Kraftwerkskern untergebracht wurden. Die
+Åbrigen Segmente beinhalten Maschinen und Material zum Rohstoffabbau und
+mÅssen w"hrend des Fluges nicht gewartet werden, machen mir also auch keinen
+Trouble."{WRNR0201}]
+
+Block 363:
+["Nicht verstanden? Also nochmal: Die TORONTO hat von ihren acht Segmenten
+zwei, in denen Lebenserhalt|ungsysteme installiert sind: Dieses hier und das
+Segment, in dem die Secus, die Krankenstation und der Kraftwerkskern
+untergebracht wurden. Die Åbrigen Segmente enthalten Maschinen und Material
+zum Rohstoffabbau und mÅssen w"hrend des Fluges nicht gewartet
+werden."{WRNR0201}]
+
+Block 364:
+[{BLOK000}"Ich bin Physiker und Xenobiologe im Regierungsdienst." {WRNR0221}]
+
+Block 365:
+["Ah, hallo, Driscoll! Ich hoffe, Sie fÅhlen sich fit fÅr unseren Flug!"
+{WRNR0205}]
+
+Block 366:
+["GrÅ·' Sie, Driscoll. Na, was haben Sie auf dem Herzen?"{WRNR0205}]
+
+Block 367:
+["Nun, ich stehe in Regierungsdiensten, weil dies die eine der wenigen
+M"glichkeiten ist, praktische Arbeit hier drau·en zu leisten, ohne im Sold
+einer gro·en Firma wie DDT zu stehen."{WRNR0183}]
+
+Block 368:
+["Ja, ich bin gespannt auf ihre FlugkÅnste. Es ist fÅr mich jedesmal ein
+absoluter H"hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn es
+sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch"nheit, wie es
+Joshi einmal war, w"re natÅrlich noch interessanter gewesen.^^Aber dann h"tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfÅllt h"tte."
+{WRNR0186}{WRNR0188}{WRNR0194}{WRNR0192}]
+
+Block 369:
+["Wie gesagt, ich bin gespannt auf ihre FlugkÅnste. Es ist fÅr mich jedesmal
+ein absoluter H"hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn
+es sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch"nheit, wie es
+Joshi einmal war, w"re natÅrlich noch interessanter gewesen.^ Aber dann h"tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfÅllt h"tte."
+{WRNR0186}{WRNR0188}{WRNR0194}{WRNR0192}]
+
+Block 370:
+[{BLOK000}Was k"nnen Sie mir sagen Åber... {BLOK001}Schauen Sie sich dies hier
+mal an... {BLOK004}Bis sp"ter. {BLOK005}Was ist Ihre Aufgabe?]
+
+Block 371:
+[{BLOK000}"Ich bin der Kapit"n dieses Schiffes, wie Sie wissen sollten.]
+
+Block 372:
+["Was gibt es denn, Driscoll? Meine Zeit ist knapp bemessen, so kurz vor der
+Landung." {BLOK010}"Sir, ich wollte nur fragen, ob Sie mir etwas Genaueres
+Åber den Zeitpunkt des Shuttlefluges verraten k"nnen."]
+
+Block 373:
+["Tut mir leid, Driscoll, ich bin in Eile. Bitte richten Sie sich wegen Ihres
+Abfluges nach den Laut|sprecher|durch|sagen."]
+
+Block 374:
+["Ich kann Ihnen noch keine genaue Auskunft geben, Driscoll. Es wird aber
+nicht mehr allzu lange dauern. Die BrÅcke wird den Abflug|termin rechtzeitig
+durch Laut|sprecher|durch|sagen bekanntgeben.^^Entschul|digen Sie mich nun
+bitte, ich habe noch viel zu tun."]
+
+Block 375:
+["Sie sollten doch schon l"ngst starten, Driscoll. Haben Sie die Durchsagen
+nicht geh"rt? Der Startzeitpunkt liegt zwar in ihrem Ermessen, aber sie
+sollten unsere Geduld nicht allzu lange auf die Probe stellen."]
+
+Block 376:
+[{BLOK000}Was k"nnen Sie mir sagen Åber... {BLOK001}Schauen Sie sich dies hier
+bitte einmal an... {BLOK004}Auf Wiedersehen, Sir. {BLOK005}Was ist Ihre
+Aufgabe?]
+
+Block 377:
+[{BLOK000}"Ich bin Ned, das AI-System der TORONTO."]
+
+Block 378:
+[{INK 001}Dies ist der Androidenk"rper der von Ned, dem AI-Rechnersystem der
+TORONTO, zur Kommunikation mit Menschen benutzt wird.^^{INK 002} "Guten Tag,
+Mister Driscoll. Kann ich Ihnen behilflich sein?" {BLOK010}"Hallo, "h, Ned.
+Wissen Sie etwas Åber den Unfall, dem Inspektor Beegle zum Opfer fiel?"
+{BLOK011}"Ned, haben Sie noch irgendwelche genaueren Angaben, die meinen
+Vorausflug mit Dr. Hofstedt betreffen?" {BLOK012}"Laufen die
+Landevorbereitungen wie geplant?" {BLOK013}"Ich mu· nun weiter, Ned."]
+
+Block 379:
+["Die Entladung, die bedauerlicherweise zu Mister Beegles Ableben gefÅhrt hat,
+mu· w"hrend der over-c - Phase aufgetreten sein.^^ Leider ist mir nicht
+bekannt, warum Mister Beegle ausgerechnet zu diesem Zeitpunkt die Comanlage in
+Betrieb setzen wollte. Seine pers"nliche Beziehung zu den Åbrigen
+Crewmitgliedern war nicht ausgesprochen tiefgehend, so da· niemand Åber seine
+Motive Auskunft zu geben vermochte.^^Es tut mir leid, nicht mehr Licht in
+diese Angelegenheit bringen zu k"nnen, denn der Tod eines Regierungsbeamten,
+auch wenn es zweifelsfrei ein Unfall war, wirft ein schlechtes Licht auf
+unsere Firma."]
+
+Block 380:
+["Der ideale Abflugzeitpunkt wird gerade ermittelt, Mister Driscoll. Sie
+werden durch eine Durchsage rechtzeitig in Kenntnis gesetzt. Die
+Abtastinstrumente best"tigen bislang die Daten der Sonde durchgehend.^^Sie
+k"nnen erwarten, auf eine leblose WÅstenwelt ohne gr"·ere atmosph"rische
+Turbulenzen zu sto·en. Es wird sich bei ihrem Flug mit gro·er
+Warschein|lichkeit um eine reibungslose Routinean|gelegenheit handeln."]
+
+Block 381:
+["Ich bin erfreut, mitteilen zu k"nnen, da· alle Systeme mit einer Fehlerquote
+laufen, die alle bisherigen FlÅge von DDT-Raumfahrzeugen um das FÅnffache
+unterschreiten. Anders ausgedrÅckt: Alles l"uft wie am SchnÅrchen, Mister
+Driscoll."]
+
+Block 382:
+["Wie Sie aus den Durchsagen entnehmen k"nnen, ist alles fÅr den Start bereit.
+Sie brauchen sich nur zu melden, wenn Sie eine Durchsage h"ren."]
+
+Block 383:
+["Auf Wiedersehen, Mr. Driscoll."]
+

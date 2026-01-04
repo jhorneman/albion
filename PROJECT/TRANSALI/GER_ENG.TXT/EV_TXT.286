@@ -1,0 +1,64 @@
+
+Ohl, Diamantensammler und Fhrer
+==========================================================================
+
+Block 0
+[{BLOK000}"Ich war frher Diamantschleifer. Aber meine H„nde zittern
+mittlerweile so stark, da ich die Arbeit nicht mehr ausfhren kann. Seitdem
+sammle ich diese sch”nen Edelsteine."]
+
+Block 1            (Begrung Normal)
+["Ihr wollt wirklich zu mir?"{BLOK010}"Ja, k”nnt Ihr uns helfen?"]
+
+Block 2            (Begrung mit Ohl Info)
+[{WORDKonny}"Ihr wollt wirklich zu mir?"{BLOK010}"Ja, k”nnt Ihr uns
+helfen?"{BLOK011}"Konny schickt uns. Sie sagt, Ihr wit den Weg durch den
+Felsengrtel."]
+
+Block 3            (1,10+2,10)
+["Bedaure, ich glaube nicht, da ich Euch helfen kann."]
+
+Block 4            (2,11)
+["Ihr kommt von Konny?^^Das stimmt, ich wei einen Weg durch den Felsengrtel.
+Ich w„re auch bereit, Euch zum Eingang hinzufhren. Allerdings h„tte ich dafr
+gern eine kleine Gegenleistung. Ein Edelstein sollte eigentlich angemessen
+sein. Bedenkt, da Ihr den Eingang alleine wahrscheinlich nie finden
+werdet.^^Was meint Ihr?"{BLOK010}"Ja, wir nehmen gerne an."{BLOK011}"Ihr seid
+ein Halsabschneider!"{BLOK012}"Nehmt Ihr auch Goldmnzen?"]
+
+Block 5            (Begrung wenn die Party den Weg schon kennt)
+["Skeima Din,^^ich glaube, Ihr kennt den Weg jetzt."]
+
+Block 6            (4,10)
+["Das ist sch”n. Ich schlage vor, wir treffen uns dann um 18:00 Uhr vor dem
+Stadttor. Ich warte dann bereits auerhalb der Stadt auf Euch. Ich werde
+h”chstens eine Stunde warten, seid bitte pnktlich.^^Und denkt an den
+Edelstein!"]
+
+Block 7            (4,11)
+["Wie? Ich habe kein regelm„iges Einkommen mehr und eine Diamantensammlung.
+Wie soll ich das denn sonst finanzieren???"{BLOK010}"Das ist doch nicht unser
+Problem?"]
+
+Block 8            (7,10)
+["In dem Fall schon!"]
+
+Block 9            (4,12)
+["Nein - ich bin ein schlechter H„ndler. Wenn ich Edelsteine kaufen mu,
+bezahle ich das Doppelte, weil ich nicht gut feilschen kann."]
+
+Block 10           (Begrung in der Wste)
+["Da seid Ihr ja - habt Ihr den Diamanten dabei?"{BLOK010}"Ja."
+{BLOK011}"Nein."]
+
+Block 11           (10,11)
+["Dann zeige ich Euch den Eingang nicht!"]
+
+Block 12           (10,10)
+["Darf ich ihn haben?"]
+
+Block 13
+["Ich danke Euch, der ist wirklich sch”n."]
+
+Block 14
+["Leider habt Ihr keinen Stein dabei, an dem ich interessiert bin."]

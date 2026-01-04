@@ -1,0 +1,48 @@
+Arrim (Iskai-Brger) / Phase 3
+
+Block 0         (FAQs)
+[{BLOK000}"Ich baue H„user aus Pflanzen, wie Ihr hier bestimmt schon mehrere
+davon gesehen habt."]
+
+Block 1         (Begrung)
+["Skeima Din, vermittelt Ihr im Konflikt zwischen den V”lkern, der ja wohl
+bald entstehen wird?"{BLOK010}"Was gibt es denn da fr einen
+Konflikt?"{BLOK011}"Wenn es Euch hilft, tun wir das gerne"{BLOK012}"Wir haben
+leider keine Zeit dafr."{WORDKonflikt}]
+
+Block 2         (Resp. 3)
+["Das ist eine gef„hrliche Einstellung, wenn Ihr Euch auf diesen Standpunkt
+stellt. Immerhin seid Ihr hier G„ste und wenn es wirklich zu einem Konflikt
+kommen sollte, dann wird Euch das ganz bestimmt auch betreffen."]
+
+Block 3         (Resp. 2)
+["Das wrde uns allen helfen, da bin ich ganz sicher. Es ist immer gut, wenn
+man ein paar diplomatische Freunde hat, die eine neutrale Einstellung haben."]
+
+Block 4         (Resp. 1, Konflikt)
+["Momentan gibt es noch keine sicheren Aussagen, aber wenn sich herausstellt,
+da Kontos seine Anh„nger wirklich davon berzeugt, da unser Heiligtum
+gef„hrlich ist, dann werden sie bestimmt etwas dagegen unternehmen. Und das
+bedeutet, da sie entweder unser Tabu verletzen, oder sie gehen noch weiter
+und greifen uns direkt an. Das sind bis jetzt alles nur Spekulationen, aber
+wer wei. Unser Heiligtum ist nicht gef„hrlich! Leider kann ich Euch das
+aufgrund des Tabus nicht beweisen, aber diese komischen Wesen kommen irgendwo
+anders her. Allerdings mu ich zugeben, da ich auch noch nicht wei, woher
+sie genau kommen."{WORDWesen} {WORDHeiligtum}{WORDTabu}]
+
+Block 5         (Heiligtum)
+["Ja, geht da besser nicht hin. Unsere religi”sen Feiern finden dort statt. Es
+ist fr uns ein sehr wrdevoller Ort."]
+
+Block 6         (Tabu)
+["Dieses Tabu gibt es schon, solange ich zurckdenken kann. Das hat
+historische Grnde, die ich Euch jetzt aber nicht erkl„ren m”chte."]
+
+Block 7         (Arrim)
+["Ja?"]
+
+Block 8         (Wesen)
+["Wir wissen alle nicht, woher diese Wesen kommen. Sie scheinen magischen
+Ursprungs zu sein und die meisten davon trifft man ganz in der N„he unseres
+Heiligtums. Wir haben aber noch nie erlebt, da sie AUS unserem Heiligtum
+kommen."]

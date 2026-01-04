@@ -1,0 +1,434 @@
+
+Maptext-File
+------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[éste und Wurzeln.]
+
+Block 2
+[Ein geflochtener Korb.]
+
+Block 3
+[Ein GlasgefÑû fÅr Wein und andere GetrÑnke.]
+
+Block 4
+[Ein Faû.]
+
+Block 5
+[Ein prÑchtiges Tierfell.]
+
+Block 6
+[Ein Eimer.]
+
+Block 7
+[Eine Tonschale.]
+
+Block 8
+[Ein Trinkhorn.]
+
+Block 9
+[Ein Teller.]
+
+Block 10
+[Ein Tonkrug.]
+
+Block 11
+[Ein Krug.]
+
+Block 12
+[Ein Tischmesser.]
+
+Block 13
+[Eine Gabel.]
+
+Block 14
+[Ein Lîffel.]
+
+Block 15
+[Ein TonbehÑlter.]
+
+Block 16
+[Steine.]
+
+Block 17
+[Eine Schale.]
+
+Block 18
+[Ein AckergerÑt.]
+
+Block 19
+[Eine Axt.]
+
+Block 20
+[Ein Kistendeckel.]
+
+Block 21
+[Eine Holzkiste.]
+
+Block 22
+[Eine kunstvoll beschlagene Holzkiste.]
+
+Block 23
+[Das stille ôrtchen.]
+
+Block 24
+[Ein Deckel.]
+
+Block 25
+[Ein groûer Holzbottich.]
+
+Block 26
+[Ein groûer Metallkessel.]
+
+Block 27
+[Ein Regal.]
+
+Block 28
+[In diesem Regal ist allerhand unwichtiges Zeug zu sehen.]
+
+Block 29
+[Eine Kommode.]
+
+Block 30
+[Ein Besen.]
+
+Block 31
+[Ein Bratrost.]
+
+Block 32
+[Darauf kann man Fleisch braten.]
+
+Block 33
+[Eine Feuerstelle.]
+
+Block 34
+[Eine umgefallene Karaffe.]
+
+Block 35
+[Ein Kochlîffel.]
+
+Block 36
+[Ein dekoratives Wandschwert.]
+
+Block 37
+[Ein Holztisch.]
+
+Block 38
+[Ein Hocker.]
+
+Block 39
+[Ein zusammengeklappter Hocker.]
+
+Block 40
+[Ein massiver Eûtisch.]
+
+Block 41
+[Ein Baumstumpf.]
+
+Block 42
+[Zwei gekreuzte Speere.]
+
+Block 43
+[Ein groûes Faû mit Wasser, Bier oder Wein.]
+
+Block 44
+[Ein Zapfhahn.]
+
+Block 45
+[Eine Bettdecke.]
+
+Block 46
+[Ein komfortables und hÅbsch verziertes Bett.]
+
+Block 47
+[Dieses Bett ist schlicht aber zweck|mÑûig.]
+
+Block 48
+[Eine Anrichte.]
+
+Block 49
+[Ein Kamin.]
+
+Block 50
+[Das Kaminfeuer strahlt eine angenehme WÑrme ab.]
+
+Block 51
+[Ein kunstvoll angefertigter Topf.]
+
+Block 52
+[Getrocknete KrÑuter.]
+
+Block 53
+[Ein menschlicher SchÑdel.]
+
+Block 54
+[Ein Schmuckschild.]
+
+Block 55
+[Ein Metalltopf.]
+
+Block 56
+[Ein Zierschwert.]
+
+Block 57
+[Eine TÅre.]
+
+Block 58
+[Ein Kessel.]
+
+Block 59
+[Ein Messer.]
+
+Block 60
+[Ein Kurzdolch.]
+
+Block 61
+[Ein Dolch.]
+
+Block 62
+[Ein groûer Dolch.]
+
+Block 63
+[Ein Kurzschwert.]
+
+Block 64
+[Ein Schwert.]
+
+Block 65
+[Ein Stich.]
+
+Block 66
+[Ein Wurfdolch.]
+
+Block 67
+[Eine kleine Axt.]
+
+Block 68
+[Eine Axt.]
+
+Block 69
+[Ein kleiner Bogen.]
+
+Block 70
+[Ein Bogen.]
+
+Block 71
+[Ein Pfeil.]
+
+Block 72
+[Ein kleiner Lederschild.]
+
+Block 73
+[Ein Lederschild.]
+
+Block 74
+[Ein Rundschild.]
+
+Block 75
+[Ein groûer Schild.]
+
+Block 76
+[Eine Lederkappe.]
+
+Block 77
+[Eine beschlagene Kappe.]
+
+Block 78
+[Eine Metallhalbschale.]
+
+Block 79
+[Eine Lederweste.]
+
+Block 80
+[Eine LederrÅstung.]
+
+Block 81
+[Ein beschlagenes Leder.]
+
+Block 82
+[Ein Paar Schuhe.]
+
+Block 83
+[Ein Paar Stiefel.]
+
+Block 84
+[Eine leere Flasche.]
+
+Block 85
+[Ein grÅner Heiltrank.]
+
+Block 86
+[Ein tÅrkisener Heiltrank.]
+
+Block 87
+[Ein blauer Heiltrank.]
+
+Block 88
+[Ein SchlÅssel.]
+
+Block 89
+[Ein Seil.]
+
+Block 90
+[Ein Ring.]
+
+Block 91
+[Eine Fackel.]
+
+Block 92
+[Ein flacher Hammer.]
+
+Block 93
+[Eine Treppe. Sie fÅhrt nach oben.]
+
+Block 94
+[Eine Treppe. Sie fÅhrt nach unten.]
+
+Block 95
+[Eine Theke.]
+
+Block 96
+[Eine teppichartige Matte.]
+
+Block 97
+[Eine Zimmerpflanze.]
+
+Block 98
+[Ein Blumentopf.]
+
+Block 99
+[Ein FeuerbehÑlter.]
+
+Block 100
+[Ein Regal voller BÅcher.]
+
+Block 101
+[BÅcher.]
+
+Block 102
+[Ein Buch.]
+
+Block 103
+[Ein aufgeschlagenes Buch.]
+
+Block 104
+[Ein Brunnen, gefÅllt mit klarem Wasser.]
+
+Block 105
+[{LEAD}{NAME} fÅllt einen Eimer mit Wasser.]
+
+Block 106
+[Ein mechanischer Schalter.]
+
+Block 107
+[Der Schalter sitzt fest, er lÑût sich nicht mehr bewegen.]
+
+Block 108
+[Ein Schalterhebel.]
+
+Block 109
+[Eine Feuerschale auf dem Boden. Sie strahlt Licht und Hitze aus.]
+
+Block 110
+[{LEAD}{NAME} lÑuft in die Flammen und verbrennt sich!]
+
+Block 111
+[{LEAD}{NAME} leert einen Eimer Wasser Åber die Feuerschale und lîscht die
+Flammen!]
+
+Block 112
+[Eine Steinplatte mit einer versenkbaren FlÑche.]
+
+Block 113
+[Eine weitere Feuerschale ist gelîscht.]
+
+Block 114
+[Der Weg wird hier durch scharfe Klingen, die aus dem Boden ragen, versperrt.]
+
+Block 115
+[Kleine Messinglîcher im Boden.]
+
+Block 116
+[Eine eingedrÅckte Bodenplatte.]
+
+Block 117
+[Ein defekter Schalter.]
+
+Block 118
+[Eine erloschene Feuerschale.]
+
+Block 119
+[{LEAD}{NAME} setzt den Hebel in den defekten Schalter ein. Er scheint wieder
+funktionsfÑhig zu sein!]
+
+Block 120
+[Eine gelb gemusterte Steinplatte. Sie sieht aus, als wÅrde Sie beim Betreten
+etwas einsinken kînnen.]
+
+Block 121
+[Es passiert nichts. Der Schalter ist so funktions|untÅchtig wie er aussieht.]
+
+Block 122
+[Es passiert nichts.]
+
+Block 123
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 124
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 125
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 126                    Rainer, 3er-Puzzle
+["Ich denke, diese Bodenplatten mÅssen in einer bestimmten Reihenfolge begangen
+werden, um etwas zu erreichen."]
+
+Block 127
+["Wiût ihr, ich kann mich tÑuschen, aber ich habe den Eindruck, die
+kreuzfîrmige Anordnung der Klingen im Boden ist nicht zufÑllig gewÑhlt
+worden..."]
+
+Block 128                    Drirr 1
+["Seht euch mal die grauen Steinplatten an der Wand an. Ich bin neugierig,
+ob sie etwas bewirken, wenn man darauf tritt!"]
+
+Block 129                    Drirr tuts
+[{INK 001}{LEAD}{NAME} wirft einen Blick auf die Steinplatte. Sie hat eine
+versenkbare Platte in Ihrer Mitte. Bevor jemand einen Vorschlag machen kann,
+meint Drirr:^^
+{INK 002}"Was soll das ganze Anschauen? Ich probiere
+das Ding mal aus!^^ {INK 001}Drirr tritt ohne zu zîgern auf die Steinplatte.
+Kurz darauf schieûen ein StÅck weiter unten Klingen aus dem Boden und
+versperren den Weg!]
+
+Block 130                    Kommentar
+["Groûartig, Drirr, mein neugieriger Freund! Kannst Du uns nun noch verraten,
+wie wir weiterkommen sollen?"]
+
+Block 131                    Drirr 2
+["Nun ja. Immerhin sind die Klingen nicht unter unseren
+FÅûen herausgekommen. Was ist mit der Platte
+dort oben? Sie hat sich gehoben, als ich auf die untere getreten bin."]
+
+BLock 132                    Kommentar bei Verbrennung oben
+[{INK 001}{LEAD}{NAME}:{INK 002} "Aarh, verdammt! Eigentlich hÑttest DU Dir den
+Pelz verbrennen sollen, Drirr!"]
+
+Block 133                    Drirr 3
+["Seht, dort unten! Die Klingen haben sich wieder in den Boden geschoben! Wer
+sagts denn! Laût uns gehen!"]
+
+Block 134
+["Das Ding hat einen Mechanismus ausgelîst! Dort hinten sind Klingen aus dem
+Boden gekommen!"]
+
+Block 135                    Wand 1 geht runter
+[Das GerÑusch reibender Steinplatten kam aus sÅdwestlicher Richtung.]
+
+Block 136                    Chest 1
+[In dieser Truhe befinden sich einige GoldmÅnzen und ein schîn gearbeiteter
+Ring.]

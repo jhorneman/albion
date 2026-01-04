@@ -1,0 +1,582 @@
+
+Map-Textfile fÅr die Iskai-Cutmap (Indoor Satz 3)
+----------------------------------------------------------------------
+
+Block 0                      (frei)
+[leer]
+
+Block 1                      (Klo anfassen)
+[Kein Mitglied der Gruppe ist besonders erpicht darauf, dort hinzufassen.]
+
+Block 2                      (Sofa)
+[Ein groûes Sofa.]
+
+Block 3                      (Groûer Schrank)
+[Ein groûer Schrank.]
+
+Block 4                      (Bratrost)
+[Ein Bratrost.]
+
+Block 5                      (Bett)
+[Ein Bett.]
+
+Block 6                      (Feuerstelle)
+[Eine Feuerstelle.]
+
+Block 7                      (Bettdecke)
+[Die Bettdecke.]
+
+Block 8                      (Besteck)
+[Iskai-Besteck.]
+
+Block 9                      (Teller)
+[Ein Teller.]
+
+Block 10                     (BehÑlter)
+[Ein BehÑlter.]
+
+Block 11                     (Wurst)
+[Eine Wurst.]
+
+Block 12                     (Schinken)
+[Ein schinkenÑhnliches FleischstÅck.]
+
+Block 13                     (Kochlîffel)
+[Ein Kochlîffel.]
+
+Block 14                     (KrÑuter)
+[Diverse KrÑuter.]
+
+Block 15                     (FrÅchte)
+[FrÅchte.]
+
+Block 16                     (Fleisch)
+[Eine FleischspezialitÑt.]
+
+Block 17                     (Becher)
+[Ein Trinkbecher.]
+
+Block 18                     (Schale)
+[Eine Schale.]
+
+Block 19                     (GewÅrz)
+[Ein GewÅrz.]
+
+Block 20                     (GewÅrzdosen)
+[Kleine GewÅrzdosen.]
+
+Block 21                     (Becher)
+[Ein kleiner Becher.]
+
+Block 22                     (Messer)
+[Ein KÅchenmesser.]
+
+Block 23                     (GebÑck)
+[GebÑck.]
+
+Block 24                     (WÅrstchen)
+[Einige kleinere WÅrstchen.]
+
+Block 25                     (WÅrzflasche)
+[Dies ist dem Geruch nach ein FlÑschchen mit einer WÅrzflÅssigkeit.]
+
+Block 26                     (Tuch)
+[Ein Stofftuch.]
+
+Block 27                     (Tuch)
+[Ein Handtuch.]
+
+Block 28                     (Eimer)
+[Ein Eimer.]
+
+Block 29                     (Bratpfanne)
+[Eine Bratpfanne.]
+
+Block 30                     (Topf)
+[Ein Topf.]
+
+Block 31                     (Wasserbad-Kessel)
+[Innerhalb dieses Kessels befindet sich auf einem GestÑnge ein kleiner Topf,
+in dem Speisen besonders schonend erwÑrmt werden kînnen.]
+
+Block 32                     (Kissen)
+[Ein Kissen.]
+
+Block 33                     (Brat-Topf)
+[Eine groûe Bratpfanne.]
+
+Block 34                     (Fell-BÅrste)
+[Eine Fell-BÅrste.]
+
+Block 35                     (Wasser-Rinne)
+[Eine Wasserrinne.]
+
+Block 36                     (Wasser-Becken)
+[Ein Wasserbecken.]
+
+Block 37                     (Wasser-Sperre)
+[Eine Wassersperre.]
+
+Block 38                     (Krug)
+[Ein groûer Tonkrug.]
+
+Block 39                     (Kommode)
+[Eine Kommode.]
+
+Block 40                     (Gruscht)
+[In den FÑchern der Kommode liegt allerhand unwichtiges Kleinzeug.]
+
+Block 41                     (Kiste)
+[Eine Kiste.]
+
+Block 42                     (Kessel)
+[Das ist ein ziemlich groûer Kessel. Vielleicht dient er zur Lagerung von
+VorrÑten, von Wasser oder Speisen.]
+
+Block 43                     (Quelle)
+[In diesem Wasserbecken steht eine fremdartige Pflanze, die mit ihren
+pulsierenden Bewegungen Grundwasser aus dem Boden pumpt. Diese Quelle dient
+ganz offensichtlich der Wasserversorgung.]
+
+Block 44                     (AbwassertÅmpel)
+[Das Wasser in diesem TÅmpel riecht schlecht und faulig. Vermutlich sammeln
+sich hier die AbwÑsser.]
+
+Block 45                     (Wasserpflanzen)
+[Wasserpflanzen.]
+
+Block 46                     (BodengewÑchse)
+[BodengewÑchse.]
+
+Block 47                     (ex. Pflanze)
+[Eine exotische Pflanze.]
+
+Block 48                     (Graspfl.)
+[Schlinggraspflanze.]
+
+Block 49
+[Platzhalter fÅr weitere Cutmap-Events.]
+
+Block 50                     (Treppe runter)
+[Eine Treppe. Sie fÅhrt durch den Boden nach unten.]
+
+Block 51                     (Treppe rauf)
+[Diese Treppe geht durch die Decke nach oben.]
+
+Block 52                     (1st: Bett)
+[Es handelt sich hier offenbar um eine Art Bett. Die FÅllung besteht aus Sand,
+der durch seine groben, aber rundgeschliffenen Kîrner erstaunlichen Komfort
+bietet.]
+
+Block 53                     (1st: Sofa)
+[Das enorme Gebilde scheint eine Art Sitzmîbel zu sein. Es wirkt pflanzlich
+und ist offenbar gewachsen. Die OberflÑche ist weich und elastisch.]
+
+Block 54                     (Brunnen)
+[Der Brunnen des Hauses.]
+
+Block 55                     (1st: Wasserrinnen)
+[Die Wasserrinnen dienen wohl der Versorgung mit Trinkwasser. Sie durchziehen
+das Haus wie kleine BÑche.]
+
+Block 56                     (1st: Klo)
+[Der muffige Geruch und die Lîcher in dem Gebilde lassen nur den Schluû zu,
+daû es hier um eine Toilette handelt. Auch dieses "Mîbel" ist pflanzlichen
+Ursprungs und gedeiht prÑchtig; sicher eine Folge der regelmÑûigen DÅngung.]
+
+Block 57                     (Klo)
+[An diesem Ort finden die wirklich dringenden GeschÑfte der Welt statt.]
+
+Block 58
+[In dieser Pfanne brutzelt ein sÅûlich-scharf riechendes Gericht.]
+
+Block 59
+[Eine Sitzgelegenheit.]
+
+Block 60
+[Ein massiver Holztisch.]
+
+Block 61
+[Eine krÑftige Blattpflanze.]
+
+Block 62
+[Eine TÅre.]
+
+Block 63
+[Ein Messer.]
+
+Block 64
+[Ein Kurzdolch.]
+
+Block 65
+[Ein Dolch.]
+
+Block 66
+[Ein groûer Dolch.]
+
+Block 67
+[Ein Kurzschwert.]
+
+Block 68
+[Ein Iskai-Messer.]
+
+Block 69
+[Ein Iskai-Dolch.]
+
+Block 70
+[Ein Iskai-Stilett.]
+
+Block 71
+[Ein Iskai-Kurzschwert.]
+
+Block 72
+[Ein groûes Iskai-Stilett.]
+
+Block 73
+[Ein Iskai-Schwert.]
+
+Block 74
+[Ein groûes Iskai-Schwert.]
+
+Block 75
+[Ein Iskai-Langschwert.]
+
+Block 76
+[Eine Iskai-Lanze.]
+
+Block 77
+[Ein groûer Iskai-Dolch.]
+
+Block 78
+[Ein Iskai-Kurzstilett.]
+
+Block 79
+[Ein groûes Iskai-Stilett.]
+
+Block 80
+[Ein groûes Iskai-Schwert.]
+
+Block 81
+[Kleiner Bogen.]
+
+Block 82
+[Ein Bogen.]
+
+Block 83
+[Ein Pfeil.]
+
+Block 84
+[Ein langer Pfeil.]
+
+Block 85
+[Ein Lederschild.]
+
+Block 86
+[Ein kleiner Iskai-Schild.]
+
+Block 87
+[Ein Iskai-Schild.]
+
+Block 88
+[Ein groûer Iskai-Schild.]
+
+Block 89
+[Eine Lederkappe.]
+
+Block 90
+[Eine Iskai-Lederkappe.]
+
+Block 91
+[Eine Iskai-Metallkappe.]
+
+Block 92
+[Ein Iskai-Metallhelm.]
+
+Block 93
+[Ein Iskai-Brustschutz.]
+
+Block 94
+[Ein Iskai-Metall-Brustschutz.]
+
+Block 95
+[Eine leichte IskairÅstung.]
+
+Block 96
+[Eine IskairÅstung.]
+
+Block 97
+[Eine leere Flasche.]
+
+Block 98
+[Ein grÅner Heiltrank.]
+
+Block 99
+[Ein tÅrkisener Heiltrank.]
+
+Block 100
+[Ein blauer Heiltrank.]
+
+Block 101
+[Ein roter Trank.]
+
+Block 102
+[Ein violetter Trank.]
+
+Block 103
+[Ein blauer Trank.]
+
+Block 104
+[Ein SchlÅssel.]
+
+Block 105
+[Ein Seil.]
+
+Block 106
+[Eine Fackel.]
+
+Block 107
+[Ein Iskai-Notizblock.]
+
+Block 108
+[Ein Zettel.]
+
+Block 109
+[Ein Iskai-Ringbuch.]
+
+Block 110
+[Ein Iskai-Ringblock.]
+
+Block 111
+[Ein Schreibstift.]
+
+Block 112
+[Ein kurzer Schreibstift.]
+
+Block 113
+[Eine Sitzbank.]
+
+Block 114
+[Auch dieses Sitzmîbel ist fîrmlich aus dem Boden gewachsen und stellt eine
+bequeme Sitzbank dar.]
+
+Block 115
+[Ein Holzpfahl. An seinem oberen Ende befindet sich ein Schild.]
+
+Block 116
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 117
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 118
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 119
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 120
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 121
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 122
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 123
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 124
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 125
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 126
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 127
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 128
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 129
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 130
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 131
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 132
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 133
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 134
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 135
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 136
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 137
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 138
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 139
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 140
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 141
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 142
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 143
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 144
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 145
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 146
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 147
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 148
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 149
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 150
+[Paltzhalter fÅr weitere Cut-Map-Events.]
+
+Block 151
+[{CNTR}The planet: Into the jungle.]
+
+Block 152
+[{CNTR}The planet: Forest and waterfall.]
+
+Block 153
+[{CNTR}The planet: Through the desert.]
+
+Block 154
+[{CNTR}2D: Iskai interior design.]
+
+Block 155
+[{CNTR}2D: Iskai inn.]
+
+Block 156
+[{CNTR}2D: Dark druids: Gloomy but beautiful.]
+
+Block 157
+[{CNTR}2D: The "decadent".]
+
+Block 158
+[{CNTR}2D: The descendants of the celts.]
+
+Block 159
+[{CNTR}3D: The cursed Dji-Fadh place (organic dungeon).]
+
+Block 160
+[{CNTR}3D: Jirinaar, city of the Iskai.]
+
+Block 161
+[{CNTR}3D: Halls of the dark druids.]
+
+Block 162
+[{CNTR}3D: Mixed pixlers dungeon.]
+
+Block 163
+[{CNTR}3D: The little cave.]
+
+Block 164
+[{CNTR}3D: On board of the TORONTO.]
+
+Block 165
+[{CNTR}{FAHI}{INK 006}Welcome to the incredible ALBION-shortcut-map {NORS}(tm)
+{FAHI}!{NORS}^^{INK 001}Press F7 to return to this map at any time.]
+
+Block 166
+[{CNTR}Beloveno, the port town of the south.]
+
+Block 167
+[{CNTR}{INK 001}Welcome to a work-in-progress - version of^
+{HIGH}ALBION{NORS}.^{JUST} Please keep in mind that this version is BY NO
+MEANS REPRESENTATIVE OF THE GAMEPLAY of the finished product! There are still
+some essential parts of the program missing. Please refer to the printed
+manual which is enclosed with this CD.^^ Currently you are in a demo-map,
+which gives you access to different areas of ALBION. Press F7 to return to
+this map. Just go through the doors to take a look at the exceptionally wide
+range of in-game-graphics. Except for the user-interface, all texts are still
+in German, sorry.^^ How to play: Simply put, if you want to move, use the left
+mouse-button, if you want to do or to cancel something, press (or hold down)
+the right mouse-button. That's it, have fun poking around.^^ PLEASE TAKE A
+LOOK AT THE MANUAL!]
+
+Block 168
+[REMARK: It's possible to do some simple puzzle-solving in the next
+3D-szenario. Your goal is simply to reach the exit of this level, a ladder
+similar to the one where you've been entering the map. If you find a keyboard
+on the wall, the correct code is 1042.]
+
+Block 169
+[REMARK: The next 2D-szenario allows you to do some puzzles based on the
+functions of the program that are already included. There are a lot of hints
+by one of the members of your party since this is still a beginners scenario,
+but alas, they're in German, too.]
+
+Block 170
+[REMARK: This is one of the game's areas, where we began to "fill it with
+life". The persons who dont answer if you try to speak to them, will come up
+with a special dialogue screen shortly.]
+
+Block 171
+[REMARK: To leave the next room, step on the green plate on the floor, and
+watch the greenish transparent walls!]
+
+Block 172
+[An Isle of Peace: The Dji Cantos place]
+
+Block 173
+[Rainer]
+
+Blovk 174
+[Drirr]
+
+Block 175
+[Sira]
+
+Block 176
+[Mellthas]
+
+Block 177
+[Harriet]
+
+Block 178
+[Joe]
+
+Block 179
+[Khunag]
+
+Block 180
+[Kriegerin]
+
+Block 181
+[{BIG }{CNTR}Bit "Entlassen mîglich" getoggelt!]

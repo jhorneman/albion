@@ -1,0 +1,208 @@
+Allgemeinwissen fr Urkelten, Typ: Druiden 
+========================================== 
+ 
+Legende: 
+ 
++WORT+  = Neues Wort wird in die Wortliste eingetragen 
+"WORT"  = Antwort bei Auswahl dieses Wortes 
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y 
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert 
+(N)     = Normales Textfenster, beschreibender Text 
+WENN:   = Bedingung, Erl„uterungen 
+DANN:   = Resultat, Erl„uterungen 
+SONST:  = Wenn nicht, dann... 
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht 
+ 
+ 
+ 
+ 
+ 
+Block 0[leer] 
+ 
+Block 1         "VIEH" 
+["Viehbesitz ist die Grundlage allen Reichtums. Wer bei uns einen hohen Rang
+hat, ist meist auch im Besitz von Vieh, das er zum Teil an seine Ceile
+verpachtet."{WORDCeile}] 
+ 
+Block 2         "CEILE, EHRENPREIS" 
+["Ein Ceile, oder Begleiter, geh”rt zur Gefolgschaft des Mannes, von dem er
+seinen Ehrenpreis ausgezahlt bekommen hat. Er verzichtet also gegen eine
+Geldsumme und gnstige Pacht von Vieh auf einen Teil seiner gesetzlichen
+Rechte, wie beispiels|weise das Tragen von Waffen, und ist verpflichtet, bei
+Versammlungen seine Stimme an den P„chter abzugeben, der dadurch an Rang und
+Einflu gewinnt."{WORDVieh}{WORDGesetz}] 
+ 
+Block 3         "PFLEGSCHAFT, ATTIO" 
+["Es ist blich, seine Kinder im Alter von etwa 7 oder 8 Jahren in die
+Pflegschaft zu einer anderen Familie zu geben, der Ziehvater wird Attio
+genannt. Dort lernt das Kind einen Beruf, und die Pflegschaft f”rdert die
+Verbindung zwischen den Familien. Die Pflegschaft endet schlielich bei
+M„dchen im Alter von 14 und bei Jungen von 17 Jahren."] 
+ 
+Block 4         "RELIGION, G™TTER, DANU, LUGH" 
+["Oh, es gibt eine Vielzahl von G”ttern, doch die Gr”ten unter ihnen sind
+Lugh, der groe Gott des Tatendrangs, der Reisenden und des Handels, sowie
+Danu, die groe G”ttin und Mutter, deren Verk”rperung Albion, unsere Welt,
+ist.^ Daneben gibt es die G”tter von Bauern, Handwerkern, Dichtern und
+Kriegern, sowie eine Menge geringerer Gottheiten, verehrt von den Bewohnern
+ihrer Landstriche.^^ šber das Leben nach dem Tode wird gelehrt, da wir in
+einem anderen, wunder|sch”nen Land
+weiterleben."{WORDKrieger}{WORDHandwerker}{WORDDichter} {WORDAlbion}] 
+ 
+Block 5         "TUATH, STAMM" 
+["Der Tuath oder Stamm ist die Gemeinschaft aller Clans und Ihrer Familien und
+wird vom Stammesk”nig geleitet."{WORDStammesk”nig}] 
+ 
+Block 6         "K™NIG, STAMMESK™NIG" 
+["Der K”nig ist der Herrscher eines Tuath, der das Wohl des Stammes bestimmt,
+auch wenn er sich bei wichtigen Angelegen|heiten mit der Versammlung der
+waffen|tragenden M„nner ber„t. Er ist die Verk”rperung des Tuath, und seine
+wichtigste Aufgabe ist es, fr Harmonie zwischen uns Menschen und dem Land zu
+sorgen.^ Wir Druiden fhren zusammen mit dem K”nig bei seiner Einsetzung die
+notwendigen Rituale durch, um ihn, oder manchmal sie, zum Gemahl des Landes zu
+machen, das der Stamm bewohnt." {WORDTuath}] 
+ 
+Block 7         "KRIEGER" 
+["Jeder Mann bei uns ist auch ein Krieger, wenn der Frieden gebrochen wird.
+M„nner, die sich ausschlielich der Waffenkunst widmen, ohne einen anderen
+Beruf auszuben, gibt es im Moment bei uns nicht viele, denn es herrscht
+Friede im Land."] 
+ 
+Block 8         "DICHTER" 
+["Dichter stehen bei uns in hohem Ansehen und werden sogar von m„chtigen
+Kriegern gefrchtet, denn ein treffender Spottvers kann dem Ruf des
+Betroffenen ebenso schaden wie eine unrhmliche Niederlage."{WORDKrieger}] 
+ 
+Block 9         "HANDWERKER" 
+["Es gibt viele ehrbare Handwerksberufe, die des T”pfers, des Grob|schmiedes,
+des Tuchwebers oder des Korbflechters. Eine besondere Stellung nehmen die
+Waffenschmiede ein, die alle der Gilde der Umajo angeh”ren."{WORDUmajo}]  
+ 
+Block 10        "WAFFENSCHMIEDE, UMAJO"  
+["Die Gilde der Umajo ist in einem groen, heien Land weit im Osten von hier
+beheimatet. Sie hten das Geheimnis, wie man Erz aus dem Leib von Danu
+gewinnt, ohne sie zu erzrnen. Sie produzieren Schmuck und vor allem Waffen
+und beanspruchen das Vorrecht, diese Waffen als einzige herstellen zu drfen.
+Nur sie lehren die Kunst der Waffen|herstellung. So sind alle Waffenschmiede
+entweder aus dem Land der Umajo oder Leute von hier, die Ihr Handwerk dort
+oder bei einem Gilden|mitglied lernten und nun selbst zur Gilde geh”ren. Es
+soll in alter Zeit sogar einen Krieg mit den Umajo gegeben haben. Seitdem sind
+sie etwas grozgiger in Ihren Preisen und in der Ausbildung von ”rtlichen
+Waffenschmieden. Doch man sagt, sie verfolgen noch heute Abtrnnige, die, ohne
+Mitglied der Gilde zu sein, das Waffen|schmiede|handwerk ausben."{WORDDanu}] 
+ 
+Block 11        "GESETZ" 
+["Wir haben in unseren Reihen Rechtsgelehrte, die bei Streitigkeiten zwischen
+zwei Parteien Recht sprechen. Fr die Ausfhrung des Urteils sorgt der K”nig
+des Stammes."{WORDK”nig}] 
+ 
+Block 12        "DRUIDEN" 
+["Wir nehmen vielf„ltige Aufgaben in unserem Volke wahr. Wir lehren die
+Schrift, bewahren das Wissen unserer Vorfahren und bemhen uns, es zu mehren.
+Es gibt diejenigen, die Recht sprechen oder die ausgeschickt werden, die
+Kinder zu lehren, und welche, die Mittler zwischen den G”ttern und den
+Menschen sind. Es sind Heiler unter uns und Beherrscher der magischen Knste,
+die bei uns als die h”chste Kunst gilt."{WORDMagie}{WORDArjano}
+{WORDG”tter}{WORDHeiler}] 
+ 
+Block 13        "MAGIE" 
+["Magie wird auch die Kunst der G”tter genannt. Diejenigen von uns, die mit
+der Begabung dafr gesegnet sind, stehen in hohem Ansehen."
+{WORDDruiden}{WORDG”tter}] 
+ 
+Block 14        "HEILER" 
+["Wenn Ihr Hilfe fr Eure Wunden braucht, geht zu Makaio, unserem besten
+Heiler. Ihr findet sein Zimmer in der N„he des Eingangs zur Schule."] 
+ 
+Block 15        "ALBION" 
+["So nennen wir die Welt, auf der wir leben."] 
+ 
+Block 16        "SCHDEL" 
+["Traditionsbewute Menschen glauben, da der Kopf der Sitz aller Kraft, Macht
+und der Pers”nlichkeit eines Menschen ist. Viele bewahren daher die Sch„del
+groer, besiegter Feinde oder heldenhafter Vorfahren auf, damit sie ihnen
+Glck bringen. Wir lehren diese Vorstellung aber seit einiger Zeit nicht mehr."] 
+ 
+Block 17        "HAIN, EICHE" 
+["Dies ist der Ort, wo unsere Vorfahren zum ersten Mal diese Welt betraten.
+Dort w„chst ein uralter Baum aus dem Land unserer Vorfahren, der Qrenno. Er
+ist unser gr”tes Heiligtum und gilt als Symbol von Danus Gunst." {WORDDanu}] 
+ 
+Block 18        Drinno 
+["So wird der verbotene Teil Arjanos genannt. Vor langer Zeit fand dort eine
+Auseinandersetzung mit einer abtrnnigen Gruppe statt, aus denen sp„ter die
+Kenget Kamulos wurden. Noch heute beherbergt Drinno Fallensysteme und
+schreckliche Kreaturen, die dem Konflikt entstammen."] 
+ 
+Block 19       Canto 
+["Canto ist der geistige Urahn aller Druiden und eine legend„re Gestalt. Es
+heit, da er derjenige war, der die Menschen in dieses Land gefhrt hat, vor
+Hunderten oder Tausenden von Jahren. Seine Weisheit und seine Kenntnisse waren
+gro, so gro, da er von manchen schon fast wie ein Gott verehrt wird."] 
+ 
+Block 20       Iskai 
+["Oft h”rt man Dummk”pfe abf„llig ber sie reden. Aber wir wissen, da sie
+gute Krieger und Gelehrte hervorbringen. Ihre Art der Magie ist beeindruckend
+und sch”pferisch, und im Unterricht der Kinder versuchen wir, ihnen Respekt
+vor den Iskai beizubringen."] 
+ 
+Block 21        Kenget Kamulos 
+["Die Kenget Kamulos sind ein dunkler Punkt in unserer Vergangenheit, und ich
+spreche nicht gerne darber. Sie waren eine Gruppe von Druiden, die sich den
+Kriegeridealen unseres Volkes zu stark gewidmet haben und nach kraftvoller,
+zerst”rerischer Magie suchten. Ihr Verhalten gipfelte in einem Konflikt, der
+zur Entstehung des verbotenen Teiles Arjanos gefhrt hat. Die Abtrnnigen sind
+dann von hier fortgegangen und es wurden aus ihnen die Kenget Kamulos."] 
+ 
+Block 22          Bero, w„hrend Quest 
+["Bero, der alte Dicksch„del! Seine Leidenschaft fr magische Artefakte hat
+wohl seinen gew”hnlich recht scharfen Verstand getrbt. Hoffentlich ist er
+dort drunten in Drinno noch am Leben."{WORDDrinno}]  
+  
+Block 23           Bero, nach Quest 
+["Sch”n, da Ihr ihn lebend wiedergefunden habt! Seine Abenteuerlust drfte
+fr's Erste gestillt sein."] 
+ 
+Block 24 
+["Darber wei ich nicht viel."] 
+ 
+********************ortsabh„ngiges Allgemeinwissen*************************** 
+ 
+Block 25        "KLOUTA" 
+["Klouta ist das Dorf der Seeleute und Fischer an der Westkste unseres
+Landes."] 
+ 
+Block 26        "ARJANO" 
+["Das ist der Name unserer Schule, das Zentrum des Wissens der Menschen von
+Gratogel."{WORDGratogel}] 
+ 
+ 
+Block 27        "GRATOGEL" 
+["So heit das Land, in dem Ihr Euch befindet."] 
+ 
+Block 28        "VANELLO" 
+["Vanello ist das Dorf in der N„he von Arjano." {WORDArjano}] 
+ 
+Block 29        "ABALLON" 
+["Aballon ist ein Dorf sdlich vom groen Gebirge."] 
+ 
+Block 30        "GEBIRGE" 
+["Gratogel wird von einem groen Gebirgszug in einen Nord- und einen Sdteil
+getrennt. Es fhrt nur ein Weg durch eine tiefe Schlucht hindurch, und man
+sagt, das die Passage nicht ganz ohne Gefahr ist."] 
+ 
+Block 31        "GEFAHR" 
+["Man h”rt von šberf„llen auf Reisende, die durch das groe Gebirge gehen."] 
+ 
+Block 32        "THARNOS" 
+["Tharnos ist der Stammesk”nig von Klouta." {WORDStammesk”nig}] 
+ 
+Block 33        "OIBELOS" 
+["Das ist der Name des K”nigs von Vanello." {WORDVanello}] 
+ 
+Block 34        "ARETHA" 
+["Aretha heit die K”nigin von Aballon." {WORDAballon}] 
+ 
+Block 35        "NEMOS" 
+["Nemos ist unser Oberhaupt, ein Mann der von uns wegen seiner Gte und seinem
+berragenden Wissen sehr gesch„tzt wird.."]

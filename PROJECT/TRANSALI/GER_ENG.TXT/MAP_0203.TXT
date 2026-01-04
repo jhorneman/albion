@@ -1,0 +1,352 @@
+
+Map-Textfile
+------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Gr„ser.]
+
+Block 2
+[Steine.]
+
+Block 3
+[Niedrige Bodengew„chse.]
+
+Block 4
+[Kleine ste und Wurzeln.]
+
+Block 5
+[Schilfgr„ser.]
+
+Block 6
+[Ein kleiner Obstbaum.]
+
+Block 7
+[Ein Kugelbaum.]
+
+Block 8
+[Ein Laubbaum.]
+
+Block 9
+[Eine Stromschnelle.]
+
+Block 10
+[Ein Wasserstrudel.]
+
+Block 11
+[Eine Wasserpflanze.]
+
+Block 12
+[Das Wasser ist sehr tief und die Str”mung scheint stark zu sein.]
+
+Block 13
+[Wasserpflanzentriebe.]
+
+Block 14
+[Eine blhende Pflanze.]
+
+Block 15
+[Ein Schirmbaum.]
+
+Block 16
+[Diese Pflanze leuchtet in faszinierenden Farbt”nen.]
+
+Block 17
+[Gemse.]
+
+Block 18
+[Ein Felsblock.]
+
+Block 19
+[An dieser Stelle ist das Wasser sehr flach und klar, so da man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Str”mung.]
+
+Block 20
+[Ein Obstbaum.]
+
+Block 21
+[Ein Zaun.]
+
+Block 22
+[Eine Stengelpflanze.]
+
+Block 23
+[Eine Schlinggraspflanze.]
+
+Block 24
+[Ein Busch.]
+
+Block 25
+[Eine grobl„ttrige Pflanze.]
+
+Block 26
+[Ein Wasserfall.]
+
+Block 27
+[Ein Felsvorsprung.]
+
+Block 28
+[Eine Pflanze, die auf den Felsen w„chst.]
+
+Block 29
+[Diese Schlingpflanze hat sich mit Tausenden von Wurzeln in der
+unregel|m„igen Felsstruktur verankert. Sie macht einen sehr stabilen Eindruck
+und durch ihre mannig|faltige Ver„stelungen bietet sie zahl|reiche
+M”glich|keiten, an denen man sich fest|halten kann.]
+
+Block 30
+[Eine Holzbrcke.]
+
+Block 31
+[Getreidefelder.]
+
+Block 32
+[Pilze.]
+
+Block 33
+[Eine Urkeltenhtte.]
+
+Block 34
+[Ein Eingang in eine Urkeltenhtte.]
+
+Block 35
+[Ein Zaun, der das Tiergehege abgrenzt.]
+
+Block 36
+[Ein Tor im Gatter.]
+
+Block 37
+[Eine Stadtmauer.]
+
+Block 38
+[Ein Tor in der Stadtmauer.]
+
+Block 39
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 40
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 41
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 42
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 43
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 44
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 45
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 46
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 49
+[Beim Anblick der vielen Z„une, welche hier definitiv nicht als Viehgatter
+verwendet werden, dr„ngt sich einem natrlich die Frage auf, wie gut die
+Ureinwohner mit den schroffen Abgrnden zurecht kommen...]
+
+Block 50
+["Oink."]
+
+Block 51
+[Das Tier erwidert nichts.]
+
+Block 52
+["Ich mu tagsber die Felder ernten und mich um das Vieh kmmern. Ich komme
+aus Srimalinar, das ist die Iskai-Stadt im Nordwesten von Maini."]
+
+Block 53
+[Ein H”hleneingang.]
+
+Block 54
+[{LEAD}{NAME} findet einen versteckten Schatz.]
+
+Block 55
+[Kounos.]
+
+Block 56
+[Es ist eigenartig ruhig in Kounos. Kein menschlicher Laut ist zu h”ren und es
+liegt schon fast etwas Unheimliches ber dem Dorf. Vermutlich sind
+mittlerweile alle Einwohner beim Heiligtum von Srimalinar versammelt, um dort
+gegen die Iskai zu k„mpfen und das Heiligtum zu besetzen.]
+
+Block 57
+["Verschwindet! Wir mssen hier die Stellung halten."]
+
+Block 58
+["Keine Bange - wir greifen bald an und werden dem Schrecken ein Ende
+bereiten."]
+
+Block 59
+[Man schaut {LEAD}{NAME} und die anderen gereizt an. Ein Iskai in den vorderen
+Reihen meint:^^"Von allen Seiten h”rt man, da Ihr Beweise sucht, die Kontos
+belasten? Wenn Ihr so etwas finden wrdet, w„re das vielleicht eine letzte
+kleine Chance, einen Krieg zu verhindern. Ich kann nicht sagen, wann die
+Mahinos angreifen werden. Aber sie sehen nicht sehr friedlich aus, wie Ihr
+seht."^^Aber einige Mahinos entgegnen sofort:^^"Papperlapapp!^Wir werden dem
+Zirkus ein Ende bereiten und der Welt zeigen, was in diesem komischen Gebilde
+eigentlich vorgeht. Wir warten nur noch, bis Kontos den Angriffsbefehl
+gibt."^^{LEAD}{NAME} schaut in die Menge, um Kontos irgendwo zu finden, aber
+er kann ihn nicht entdecken.^^Aufgrund der gespannten Lage beschlieen
+{LEAD}{NAME} und die Gef„hrten, das Heiligtum besser nicht zu betreten.^^Wenn
+sich doch nur irgendwo Beweise gegen Kontos finden lassen wrden... Vielleicht
+hilft es, noch einmal alle Leute anzusprechen. Vielleicht findet man auch in
+Kontos Versuchswerkstatt irgend etwas, mit dem er belastet werden kann. Oder
+im Iskaidorf Srimalinar? Die Iskai sind schlielich die direkt Betroffenen und
+sicher nicht ganz ahnungslos...]
+
+Block 60           (Wiederbelebung von Tom)
+[Tom tritt zwischen beide Parteien und h„lt dabei das Beweisdokument hoch, so
+da es fr alle sichtbar ist. Ein Raunen geht durch die Reihen, als pl”tzlich
+Kontos aus dem Heiligtum kommt und sofort zu seinen Leuten spricht:]
+
+Block 61           (Kontos)
+["Glaubt ihm nicht! Fallt nicht darauf herein! Es handelt sich hierbei um
+einen ganz einfachen Trick. Man versucht, Euch fehlzuleiten. Das Dokument ist
+eine F„lschung!"]
+
+Block 62           (Iskai)
+["Wenn die eine Dokumenth„lfte dem Teil entspricht, da Edjirr aufbewahrt hat,
+dann ist es echt. Kann ich es einmal anschauen?"]
+
+Block 63           (Beschreibung)
+[Tom gibt dem Iskai das Dokument und sofort scharen sich einige andere Iskai
+um ihn herum. Pl”tzlich tritt aus den Reihen der Mahinos Darios hervor und
+bittet die Iskai, das Dokument ebenfalls untersuchen zu drfen. Das Grppchen
+mit dem Dokument zieht sich daraufhin zurck, w„hrend Kontos alle H„nde voll
+zu tun hat, die immer skeptischer wirkenden Mahinos zu
+beruhigen.^^{LEAD}{NAME} und {HIS }e Freunde nutzen die Zeit um zwischen
+beiden Parteien zu vermitteln. Sie erz„hlen den Iskai und den Mahinos von den
+vielen Gespr„chen, die sie in der letzten Zeit gefhrt hatten und von den
+gefundenen Beweisstcken. Die Unruhe, die mittlerweile beide Parteien
+ergriffen hat, weitet sich daraufhin zu einem gewaltigen Get”se aus.^^Kontos
+steht wie versteinert da und merkt, da er die Kontrolle ber das Geschehen
+immer mehr verliert. Schlielich unternimmt er eine letzte Anstrengung und
+brllt:]
+
+Block 64           (Kontos)
+["H”rt mir zu! Meine Thesen stimmen! Ich werde Euch beweisen, da dieser Ort
+voller Grauen und Schrecken ist! Ich werde ihn nun betreten und in wenigen
+Augenblicken mit den entsprechenden Beweisstcken wieder hier sein."]
+
+Block 65           (Iskai)
+["Wenn Ihr unser Heiligtum entweiht, werden wir uns an Euch r„chen!"]
+
+Block 66           (Kontos)
+["Pah - Heiligtum - Leere Sprche."]
+
+Block 67           (Kommentar)
+[Daraufhin betritt Kontos das heilige Geb„ude und natrlich folgen ihm sofort
+einige Iskai.^^Inzwischen ist Darios wieder zu seinen Stammesbrdern
+zurckgekehrt. Alle scharen sich sofort um ihn und er beginnt hastig zu reden.
+Auf den Gesichtern der Mahinos entsteht ein Ausdruck von Verzweiflung und
+Pein. Die Iskai besprechen sich ebenfalls untereinander. Nach einiger Zeit
+tritt dann ein Sprecher hervor und verkndet:]
+
+Block 68           (Iskai)
+["Wir sind uns ganz sicher, da das Dokument echt ist und wir es richtig
+verstanden haben. Darios wird uns recht geben, er hat sich selbst davon
+berzeugen k”nnen.^^Das Dokument ist ein Vertrag zwischen Kontos, Riko und
+Gard. Die drei haben vor sehr langer Zeit etwas entdeckt, da wir selbst nicht
+wuten. Unter unserem heiligen Gew”lbe liegen groe Mengen an wertvollen
+Metallen und Mineralien. Das erkl„rt auch den Zwischenfall, bei dem ein
+Unbekannter - wahrscheinlich war es Kontos - in das Heiligtum vorgedrungen ist
+und L”cher gegraben hat. Vermutlich hat er damals Proben entnommen. Kontos ist
+intelligent - er wute wahrscheinlich durch seine guten geographischen
+Kenntnisse, da die Bedingungen fr ein hohes Mineral- und Metallvorkommen an
+diesem Ort besonders gut sind. Und so steht unser Heiligtum schon seit
+Generationen auf einer Metallmine und wir haben keine Ahnung davon.^^Die Pl„ne
+von Kontos sind nun einfach zu verstehen: Durch seine zielgerichteten Gerchte
+wollte er sein Umfeld davon berzeugen, da dieser Ort eine Gefahr fr ganz
+Maini ist. Glcklicherweise ist ihm das nur teilweise gelungen. Der Plan sah
+vor, das Heiligtum zu zerst”ren, um dann in aller Ruhe die wertvollen Erze
+abbauen zu k”nnen. Gard und Rikos Aufgabe in diesem Komplott war es, die Lage
+in Beloveno zu kontrollieren. Sie versuchten, dort ebenfalls solche Gerchte
+auszustreuen. Zum Dank fr den Rckhalt w„ren sie natrlich an den Gewinnen
+beteiligt worden. In diesem Dokument sind bereits die Anteile festgelegt!
+Auerdem haben sie ihren Einflu im Rat zu Gunsten von Kontos genutzt.^^Doch
+Kontos hat auch Fehler gemacht: Mutter Erde h„tte es niemals zugelassen, die
+Erze ohne Ihr Einverst„ndnis an Kriminelle abzugeben. Natrlich glaubt Kontos
+nicht an solche Dinge. Er denkt, da mit Mathematik und Magie alles l”sbar
+ist."]
+
+Block 69           (Urkelte)
+["Aber die schrecklichen Wesen. Sie waren doch hier? Man findet ja immer noch
+welche von ihnen. Sie kommen doch aus dem Heiligtum?"]
+
+Block 70           (Iskai)
+["Nein, sie waren ebenfalls ein Werk von Kontos. Er ist der einzige Magier auf
+ganz Maini, der in der Lage ist, solche Kreaturen zu erschaffen und
+herbeizurufen. Das werden alle seine engsten Vertrauten best„tigen. Mit diesen
+Wesen sind ihm gleich zwei Dinge auf einmal geglckt. Er konnte seine Magie
+erproben und er schuf damit falsche Beweise, die seine Thesen untersttzten.
+Unsere Magie ist zu so etwas glcklicherweise nicht in der Lage. Auerdem
+beherrschen wir keine schwarze Magie."]
+
+Block 71           (Kommentar)
+[Diese l„ngere Ansprache bringt auch den letzten Mahino, der noch hinter
+Kontos steht, ins Wanken. Eine erneute Unruhe macht sich breit und in den
+Reihen der Mahinos wird kr„ftig diskutiert.^^Allem Anschein nach trifft es sie
+ziemlich hart, als sie feststellen mssen, da sie als Werkzeug zur
+Verwirklichung von Kontos habgierigen Pl„nen mibraucht worden sind. Und auch
+wenn noch die eine oder andere Frage offen ist, so ist doch ziemlich klar, da
+die Bewohner von Kounos an der Nase herumgefhrt worden sind.^^{LEAD}{NAME}
+und die anderen haben das Schlimmste verhindert und es ist jetzt nur eine
+Frage der Zeit, bis sich beide Parteien wieder vers”hnen werden. Die ersten
+besonders einsichtigen Mahinos haben sich bei den Iskai schon entschuldigt -
+andere haben sich beleidigt und niedergeschlagen auf den Rckweg nach Kounos
+gemacht. Aber eines ist bei beiden Parteien gleich: Die Dankbarkeit Euch
+gegenber, fr die Vermittlung und die friedliche L”sung. Sowohl Iskai als
+auch Mahinos laden Euch ein und sagen, da sie sich freuen wrden, wenn Ihr
+sie sp„ter noch einmal besuchen wrdet.^^Aber natrlich ist noch ein groes
+Problem da:^^Wo ist Kontos?^Was macht Kontos?^Und was tut er im Heiligtum?]
+
+Block 72           (Samenkorn)
+[Ein kleiner Busch mit Samen|k”rnern.]
+
+Block 73
+[Der Eingang ins Heiligtum.]
+
+Block 74
+[Vielleicht w„re es besser, das Tabu nicht zu brechen! Tom und die anderen
+halten es fr besser, das Heiligtum nicht zu betreten.]
+
+Block 75
+[Der Eingang in diese Htte ist verschlossen.]
+
+Block 76
+[Nach Srimalinar in Richtung Norden ber die Brcke.]
+
+Block 77
+[Die heilige St„tte der Iskai darf von Menschen nicht betreten werden.]
+
+Block 78
+["Mhm, ich glaube hier bahnt sich rger an. Wenn Ihr einverstanden seid,
+k”nnen wir versuchen mehr ber das Problem herauszufinden, indem wir ”fter mit
+allen wichtigen Leuten der verschiedenen D”rfer und St„dte reden.
+Vielleicht k”nnen wir dann ja vermitteln. Sollten wir etwas positives
+bewirken, dann k”nnen wir bestimmt Leute finden, die uns weiterhelfen."]
+
+Block 79
+["Skeima Din!^^Gut, da ich Euch endlich finde. Ich suche schon berall.
+Kariah schickt mich - sie hat Euch etwas wichtiges mitzuteilen, was
+sehr dringend ist. Ich wei nur, da es um Leben und Tod geht! Bitte geht so
+schnell Ihr k”nnt nach Beloveno und besucht sie in ihrem Wohnhaus. Bitte geht
+sofort. Wenn Ihr erst hier noch einige Leute besucht, ist es vielleicht schon
+zu sp„t. Das k”nnt Ihr danach ja immer noch tun."]
+
+

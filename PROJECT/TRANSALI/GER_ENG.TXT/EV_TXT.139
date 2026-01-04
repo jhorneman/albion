@@ -1,0 +1,31 @@
+NPC 139: Laila, Passantin
+=========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin Handwerkerin und stelle Tongef„e her."{WORDTongef„e}]
+
+Block 1         Begr. 1x
+["Dsarii-ma! Euch gibt es also wirklich! Ich hatte Eure Anwesenheit hier schon
+fr ein Gercht gehalten."{WORDGercht}]
+
+Block 2         Begr. 2x
+["Dsarii-ma! M”chtet Ihr noch etwas von mir?"]
+
+Block 3         "TONGEFE, HANDWERKERIN"
+["Ja, viele von den T”pfen und Schalen, die Ihr in Jirinaar seht, stammen von
+mir."{WORDJirinaar}]
+
+Block 4         "GERšCHT, GERšCHTE"
+["Nun, die Leute erz„hlen ja manchmal viel und bertreiben noch mehr."]

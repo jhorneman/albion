@@ -1,0 +1,24 @@
+NPC 141: Osini, Kind
+==========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Hrrmm... na ja, ich LEBE!"]
+
+Block 1         Begr.1x
+["Dsari... Ohh, seid Ihr breit! Ihr seht ja wirklich so komisch aus, wie man
+sagt."{WORDGeschwister}{WORDJirinaar}{WORDSebainah}]
+
+Block 2         Begr. 2x
+["Dsarii-ma! Da seid Ihr ja wieder!"]

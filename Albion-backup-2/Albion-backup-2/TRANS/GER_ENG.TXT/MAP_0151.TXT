@@ -1,0 +1,189 @@
+
+MAP 151, TORONTO, TEIL 1
+========================
+
+Block 0
+[!]
+
+Block 1
+[Beim Betreten der Bodenplatte vor der TÅr leuchtet diese auf. Gleichzeitig
+îffnet sich die TÅr.]
+
+Block 2
+[Bodenplatte leuchtet auf.]
+
+Block 3
+[Hier befindet sich eine Bodenplatte mit einer transparenten LeuchtflÑche.]
+
+Block 4
+[Nachdem diese Bodenplatte aufleuchtet, îffnet sich im "Westen" des Raumes die
+TÅr.]
+
+Block 5
+[Ein Schalter.]
+
+Block 6
+[Die Stellung des Schalters Ñndert sich nicht.]
+ 
+Block 7
+[Die TÅr versucht sich zu schlieûen, bleibt aber offen. Offenbar hat ein
+Sensor bemerkt, daû noch jemand in der TÅr steht.]
+
+Block 8
+[An der "nîrdlichen" Wand befindet sich ein Wandschrank.]
+
+Block 9
+[Der Wandschrank ist leer, bereit zur Aufnahme von GegenstÑnden.]
+
+Block 10
+[Ein Wandschrank.]
+
+Block 11
+[Das GerÑusch kam von rechts, aus einiger Entfernung.]
+
+Block 12
+[Sowie sich die TÅr mit den roten Leuchten îffnet, schlieût sich hinten
+diejenige mit der grÅnen Markierung. Der RÅckweg ist versperrt!]
+
+Block 13
+[Ein Serviceroboter.]
+
+Block 14
+[Eine TÅr. Es ist kein ôffnungsmechanismus zu erkennen.]
+
+Block 15
+[Eine Leuchtstoffrîhre. Sie strahlt kaltes, weiûes Licht ab.]
+
+Block 16
+[Ein StahltrÑger.]
+
+Block 17
+[Die halbtransparenten WÑnde markieren einen Servicezugang. Die Leiter in der
+Mitte fÅhrt nach oben.]
+
+Block 18
+[Eine Zehnertastatur zum eingeben von Zahlencodes.]
+
+Block 19
+[Eine TÅr mit roten Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 20
+[Eine TÅr mit grÅnen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 21
+[Eine TÅr mit blauen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 22
+["So weit, so gut. Laû uns versuchen, von hier bis zum Reaktorbereich
+vorzudringen, ohne etwas zu zerstîren, sonst hÑtten wir Ned und die Secus
+sofort am Hals. Hier unten gibt's 'ne Menge seltsamer
+Steuerungs|einrichtungen, die wir irgendwie verscheiûern mÅssen, um
+durchzukommen."]
+
+Block 23
+[Ein Serviceroboter. Er scheint deaktiviert zu sein.]
+
+Block 24
+[Tom fingert ein wenig an dem Roboter herum, bis Joe ihm zu Hilfe kommt.
+Einige Handgriffe spÑter erwacht die Servicemaschine tatsÑchlich zu
+elektronischem Leben und beginnt, sich zu bewegen.]
+
+Block 25
+[Joe fÅhrt einige Handgriffe an dem Roboter aus. TatsÑchlich erwacht der
+Automat zu elektronischem Leben und beginnt, unkontrolliert hin- und
+herzulaufen.]
+
+Block 26
+[Ein Schalter, der auf eine mit Stahlstreben versehenen Plexiglaswand montiert
+wurde.]
+
+Block 27
+[Der Schalter leuchtet kurz auf, aber sonst passiert nichts.]
+
+Block 28
+[Sobald {LEAD}{NAME} den Schalter betÑtigt, verschwindet die Wand blitzschnell
+in der Decke!]
+
+Block 29
+[Eine groûe Kontrollampe.]
+
+Block 30
+[Eine blinkende Bodenplatte.]
+
+Block 31
+["Diese Art von Bodenplatten werden meistens von Servicerobs gesteuert und
+lîsen irgend etwas aus, wenn die Dinger darÅber fahren. In diesem Fall wÅrden
+wir dann wohl die TÅr aufbekommen."]
+
+Block 32
+[Beim BetÑtigen des Schalters gehen hinten die Kontrollampen und
+Deckenleuchten an.]
+
+Block 33
+[Schlagartig erlîschen alle roten Leuchtkîrper.]
+
+Block 34
+["Wir haben es hier offenbar mit einer zeitabhÑngigen Steuerung zu tun!"]
+
+Block 35
+[Ein Schalter mit einer Kontrolleuchte daneben.]
+
+Block 36
+["Ha! Das GerÑusch ist Musik in meinen Ohren! Wenn jetzt nicht die TÅr
+aufgegangen ist, werde ich sauer. Ich mîchte mal wissen, welche Spinner die
+Systeme hier unten programmiert haben!"]
+
+Block 37
+["Shit. Jede Wette, daû wir es wieder mit einer verdammten Zeitschaltung zu
+tun haben."]
+
+Block 38
+[Die Leuchtplatten erlîschen.]
+
+Block 39
+["Zum Henker! Ich nehme an, daû wir die 4 Schalter in den Korridoren
+aktivieren mÅssen, um weiter|zukommen. Das schaffen wir nie in der kurzen
+Zeit, die Wegstrecke ist zu groû. Dem Typ, der das hier installiert hat,
+gehîren die Finger abgehackt!"]
+
+Block 40
+["Ja! Das war's! Dort hinten sind die PlexiglaswÑnde hochgegangen! Jetzt
+mÅûten wir die Zeitschaltung schaffen!"]
+
+Block 41
+["Ich schÑtze, hier geht es in die Halle, die dem Reaktorkern vorgelagert ist.
+Mit dieser Codeeingabe haben wir allerdings ein fettes Problem. Schlag' mich
+tot, aber ICH weiû den Code nicht!"]
+
+Block 42
+["Ich schÑtze, hier geht es in die Halle, die dem Reaktorkern vorgelagert ist.
+Mit dieser Codeeingabe haben wir allerdings ein Problemchen. Aber warte mal,
+wir haben doch diese Zettel gefunden! Wenn DIE nicht auf diesen Code
+hinweisen, soll mich der Blitz beim Scheiûen treffen!"]
+
+Block 43
+["Ein Zettel mit 'ner Nummer drauf, so, so. Du weiût, es ist strengstens
+verboten, irgendwelche Zugangscodes zu notieren, von wegen
+Sicherheits|vorschriften und so weiter.^^Allerdings kenne ich 'n paar
+Alzheimer-Kandidaten, die sich beim Anlagenbau ihre Codes trotzdem notiert und
+in der Anlage deponiert haben. Sie kamen sich zu dÑmlich dabei vor, zum
+fÅnften Mal zur Aufsicht zu rennen und zuzugeben, daû sie ihre Codes schon
+wieder vergessen haben. Ich schÑtze, dies hier ist so ein Fall, Ñhnlich wie
+oben.^^Der Code scheint allerdings nicht ganz vollstÑndig zu sein, der Zettel
+wurde zerteilt."]
+
+Block 44
+["Sag mal, mein Alter, was soll das denn werden? Wir sind kurz vor dem Ziel!
+Warum um alles in der Welt willst Du jetzt wieder umkehren?"]
+
+Block 45
+[Ein Wandschrank.]
+
+Block 46
+[In dem Schrank hat jemand ein kleines StÅck Papier vergessen.]
+
+Block 47
+[Nichts passiert.]

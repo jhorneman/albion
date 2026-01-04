@@ -1,0 +1,23 @@
+Edjirr (Iskai-Kneipenwirt) / Phase 6
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin der Kneipenwirt hier."]
+
+Block 1         (Begrung)
+["Ihr glaubt doch nicht im Ernst, da ich Euch auch noch bewirten werde? Ich
+wrde mich an Eurer Stelle hier nicht mehr blicken lassen. Geht lieber zur
+heiligen St„tte und versucht, Kontos und seine Anh„nger von Ihren Pl„nen
+abzuhalten. Inzwischen habe ich ja sogar handfeste Beweise gegen
+Kontos!"{WORDBeweise}]
+
+Block 2         (Kontos, Beweise / wenn Party das Beweisstck fehlt)
+["Die k”nnt Ihr gerne haben, damit Ihr seht, mit wem Ihr es zu tun habt. Ich
+habe auerdem noch Abschriften davon. Es ist leider nur ein Teil eines
+Dokumentes, welches Kontos vernichten wollte. Man kann aber noch eine ganze
+Menge lesen!"]
+
+Block 3         (Kontos, Beweise / wenn Party den Beweis schon hat)
+["Ich habe Euch das Dokument doch schon gegeben."]
+
+Block 4         (Edjirr)
+["Ich bin Edjirr."]

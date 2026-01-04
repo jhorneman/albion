@@ -1,0 +1,48 @@
+175: Frinos, Hter des Hains
+============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin der Hter des Hains."]
+
+Block 1         "Begr. 1x"
+["Togi Din. Verhaltet Euch hier bitte, der Heiligkeit des Hains entsprechend,
+ruhig."{WORDHain}]
+
+Block 2         "Hain, Hter"
+["Dies ist der Ort, wo unsere Vorfahren zum ersten Mal diese Welt betraten.
+Was Ihr hier seht, ist der Qrenno, der uralte Baum aus dem Land unserer
+Vorfahren. Er ist unser gr”tes Heiligtum und gilt als Symbol von Danus Gunst.
+Mir ist die groe Ehre zuteil geworden, sein W„chter zu sein und ihn vor
+Gefahr zu schtzen."{WORDDanu}{WORDGefahr}]
+
+block 3         "W„chter, Gefahr"
+["Mir stehen Mittel und Wege zur Verfgung, den Hain gegen Sch„ndungen zu
+verteidigen, auch wenn ich allein hier bin."]
+
+Block 4         WENN: Musikristall gegeben
+["Ein Musikkristall, welch eine Kostbarkeit! Ich gestehe, Ihr fhrt mich in
+Versuchung, denn auch ich bin nur ein Mensch, der sich hier manchmal ein wenig
+einsam vorkommt. Behaltet es fr Euch, aber ich wrde Euch dafr eine meiner
+Waffen anbieten, es ist ein m„chtiges magisches Artefakt, das manche Gefahr
+von Euch abwenden kann."^^{INK 001}Frinos bergibt {LEAD}{NAME} eine magische
+Waffe im Austausch fr den Musikkristall!]
+
+Block 5
+["Danke, aber ein Musikkristall ist mir genug, um ab und an die Einsamkeit zu
+vertreiben."]

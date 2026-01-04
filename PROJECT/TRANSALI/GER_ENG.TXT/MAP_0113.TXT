@@ -1,0 +1,819 @@
+ 
+Map-Textfile fr die Iskai-Cutmap (Indoor Satz 3) 
+---------------------------------------------------------------------- 
+ 
+Block 0                      (frei) 
+[leer] 
+ 
+Block 1                      (Klo anfassen) 
+[Kein Mitglied der Gruppe ist besonders erpicht darauf, dort hinzufassen.] 
+ 
+Block 2                      (Sofa) 
+[Ein groes Sofa.] 
+ 
+Block 3                      (Groer Schrank) 
+[Ein groer Schrank.] 
+ 
+Block 4                      (Bratrost) 
+[Ein Bratrost.] 
+ 
+Block 5                      (Bett) 
+[Ein Bett.] 
+ 
+Block 6                      (Feuerstelle) 
+[Eine Feuerstelle.] 
+ 
+Block 7                      (Bettdecke) 
+[Die Bettdecke.] 
+ 
+Block 8                      (Besteck) 
+[Iskai-Besteck.] 
+ 
+Block 9                      (Teller) 
+[Ein Teller.] 
+ 
+Block 10                     (Beh„lter) 
+[Ein Beh„lter.] 
+ 
+Block 11                     (Wurst) 
+[Eine Wurst.] 
+ 
+Block 12                     (Schinken) 
+[Ein schinken„hnliches Fleischstck.] 
+ 
+Block 13                     (Kochl”ffel) 
+[Ein Kochl”ffel.] 
+ 
+Block 14                     (Kr„uter) 
+[Diverse Kr„uter.] 
+ 
+Block 15                     (Frchte) 
+[Frchte.] 
+ 
+Block 16                     (Fleisch) 
+[Eine Fleischspezialit„t.] 
+ 
+Block 17                     (Becher) 
+[Ein Trinkbecher.] 
+ 
+Block 18                     (Schale) 
+[Eine Schale.] 
+ 
+Block 19                     (Gewrz) 
+[Ein Gewrz.] 
+ 
+Block 20                     (Gewrzdosen) 
+[Kleine Gewrzdosen.] 
+ 
+Block 21                     (Becher) 
+[Ein kleiner Becher.] 
+ 
+Block 22                     (Messer) 
+[Ein Kchenmesser.] 
+ 
+Block 23                     (Geb„ck) 
+[Geb„ck.] 
+ 
+Block 24                     (Wrstchen) 
+[Einige kleinere Wrstchen.] 
+ 
+Block 25                     (Wrzflasche) 
+[Dies ist dem Geruch nach ein Fl„schchen mit einer Wrzflssigkeit.] 
+ 
+Block 26                     (Tuch) 
+[Ein Stofftuch.] 
+ 
+Block 27                     (Tuch) 
+[Ein Handtuch.] 
+ 
+Block 28                     (Eimer) 
+[Ein Eimer.] 
+ 
+Block 29                     (Bratpfanne) 
+[Eine Bratpfanne.] 
+ 
+Block 30                     (Topf) 
+[Ein Topf.] 
+ 
+Block 31                     (Wasserbad-Kessel) 
+[Innerhalb dieses Kessels befindet sich auf einem Gest„nge ein kleiner Topf,
+in dem Speisen besonders schonend erw„rmt werden k”nnen.] 
+ 
+Block 32                     (Kissen) 
+[Ein Kissen.] 
+ 
+Block 33                     (Brat-Topf) 
+[Eine groe Bratpfanne.] 
+ 
+Block 34                     (Fell-Brste) 
+[Eine Fell-Brste.] 
+ 
+Block 35                     (Wasser-Rinne) 
+[Eine Wasserrinne.] 
+ 
+Block 36                     (Wasser-Becken) 
+[Ein Wasserbecken.] 
+ 
+Block 37                     (Wasser-Sperre) 
+[Eine Wassersperre.] 
+ 
+Block 38                     (Krug) 
+[Ein groer Tonkrug.] 
+ 
+Block 39                     (Kommode) 
+[Eine Kommode.] 
+ 
+Block 40                     (Gruscht) 
+[In den F„chern der Kommode liegt allerhand unwichtiges Kleinzeug.] 
+ 
+Block 41                     (Kiste) 
+[Eine Kiste.] 
+ 
+Block 42                     (Kessel) 
+[Das ist ein ziemlich groer Kessel. Vielleicht dient er zur Lagerung von
+Vorr„ten, von Wasser oder Speisen.] 
+ 
+Block 43                     (Quelle) 
+[In diesem Wasserbecken steht eine fremdartige Pflanze, die mit ihren
+pulsierenden Bewegungen Grundwasser aus dem Boden pumpt. Diese Quelle dient
+ganz offensichtlich der Wasserversorgung.] 
+ 
+Block 44                     (Abwassertmpel) 
+[Das Wasser in diesem Tmpel riecht schlecht und faulig. Vermutlich sammeln
+sich hier die Abw„sser.] 
+ 
+Block 45                     (Wasserpflanzen) 
+[Wasserpflanzen.] 
+ 
+Block 46                     (Bodengew„chse) 
+[Bodengew„chse.] 
+ 
+Block 47                     (ex. Pflanze) 
+[Eine exotische Pflanze.] 
+ 
+Block 48                     (Graspfl.) 
+[Schlinggraspflanze.] 
+ 
+Block 49 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 50                     (Treppe runter) 
+[Eine Treppe. Sie fhrt durch den Boden nach unten.] 
+ 
+Block 51                     (Treppe rauf) 
+[Diese Treppe geht durch die Decke nach oben.] 
+ 
+Block 52                     (1st: Bett) 
+[Es handelt sich hier offenbar um eine Art Bett. Die Fllung besteht aus Sand,
+der durch seine groben, aber rundgeschliffenen K”rner erstaunlichen Komfort
+bietet.] 
+ 
+Block 53                     (1st: Sofa) 
+[Das enorme Gebilde scheint eine Art Sitzm”bel zu sein. Es wirkt pflanzlich
+und ist offenbar gewachsen. Die Oberfl„che ist weich und elastisch.] 
+ 
+Block 54                     (Brunnen) 
+[Der Brunnen des Hauses.] 
+ 
+Block 55                     (1st: Wasserrinnen) 
+[Die Wasserrinnen dienen wohl der Versorgung mit Trinkwasser. Sie durchziehen
+das Haus wie kleine B„che.] 
+ 
+Block 56                     (1st: Klo) 
+[Der muffige Geruch und die L”cher in dem Gebilde lassen nur den Schlu zu,
+da es hier um eine Toilette handelt. Auch dieses "M”bel" ist pflanzlichen
+Ursprungs und gedeiht pr„chtig; sicher eine Folge der regelm„igen Dngung.] 
+ 
+Block 57                     (Klo) 
+[An diesem Ort finden die wirklich dringenden Gesch„fte der Welt statt.] 
+ 
+Block 58 
+[In dieser Pfanne brutzelt ein slich-scharf riechendes Gericht.] 
+ 
+Block 59 
+[Eine Sitzgelegenheit.] 
+ 
+Block 60 
+[Ein massiver Holztisch.] 
+ 
+Block 61 
+[Eine kr„ftige Blattpflanze.] 
+ 
+Block 62 
+[Eine Tre.] 
+ 
+Block 63 
+[Ein Messer.] 
+ 
+Block 64 
+[Ein Kurzdolch.] 
+ 
+Block 65 
+[Ein Dolch.] 
+ 
+Block 66 
+[Ein groer Dolch.] 
+ 
+Block 67 
+[Ein Kurzschwert.] 
+ 
+Block 68 
+[Ein Iskai-Messer.] 
+ 
+Block 69 
+[Ein Iskai-Dolch.] 
+ 
+Block 70 
+[Ein Iskai-Stilett.] 
+ 
+Block 71 
+[Ein Iskai-Kurzschwert.] 
+ 
+Block 72 
+[Ein groes Iskai-Stilett.] 
+ 
+Block 73 
+[Ein Iskai-Schwert.] 
+ 
+Block 74 
+[Ein groes Iskai-Schwert.] 
+ 
+Block 75 
+[Ein Iskai-Langschwert.] 
+ 
+Block 76 
+[Eine Iskai-Lanze.] 
+ 
+Block 77 
+[Ein groer Iskai-Dolch.] 
+ 
+Block 78 
+[Ein Iskai-Kurzstilett.] 
+ 
+Block 79 
+[Ein groes Iskai-Stilett.] 
+ 
+Block 80 
+[Ein groes Iskai-Schwert.] 
+ 
+Block 81 
+[Kleiner Bogen.] 
+ 
+Block 82 
+[Ein Bogen.] 
+ 
+Block 83 
+[Ein Pfeil.] 
+ 
+Block 84 
+[Ein langer Pfeil.] 
+ 
+Block 85 
+[Ein Lederschild.] 
+ 
+Block 86 
+[Ein kleiner Iskai-Schild.] 
+ 
+Block 87 
+[Ein Iskai-Schild.] 
+ 
+Block 88 
+[Ein groer Iskai-Schild.] 
+ 
+Block 89 
+[Eine Lederkappe.] 
+ 
+Block 90 
+[Eine Iskai-Lederkappe.] 
+ 
+Block 91 
+[Eine Iskai-Metallkappe.] 
+ 
+Block 92 
+[Ein Iskai-Metallhelm.] 
+ 
+Block 93 
+[Ein Iskai-Brustschutz.] 
+ 
+Block 94 
+[Ein Iskai-Metall-Brustschutz.] 
+ 
+Block 95 
+[Eine leichte Iskairstung.] 
+ 
+Block 96 
+[Eine Iskairstung.] 
+ 
+Block 97 
+[Eine leere Flasche.] 
+ 
+Block 98 
+[Ein grner Heiltrank.] 
+ 
+Block 99 
+[Ein trkisener Heiltrank.] 
+ 
+Block 100 
+[Ein blauer Heiltrank.] 
+ 
+Block 101 
+[Ein roter Trank.] 
+ 
+Block 102 
+[Ein violetter Trank.] 
+ 
+Block 103 
+[Ein blauer Trank.] 
+ 
+Block 104 
+[Ein Schlssel.] 
+ 
+Block 105 
+[Ein Seil.] 
+ 
+Block 106 
+[Eine Fackel.] 
+ 
+Block 107 
+[Ein Iskai-Notizblock.] 
+ 
+Block 108 
+[Ein Zettel.] 
+ 
+Block 109 
+[Ein Iskai-Ringbuch.] 
+ 
+Block 110 
+[Ein Iskai-Ringblock.] 
+ 
+Block 111 
+[Ein Schreibstift.] 
+ 
+Block 112 
+[Ein kurzer Schreibstift.] 
+ 
+Block 113 
+[Eine Sitzbank.] 
+ 
+Block 114 
+[Auch dieses Sitzm”bel ist f”rmlich aus dem Boden gewachsen und stellt eine
+bequeme Sitzbank dar.] 
+ 
+Block 115 
+[Ein Holzpfahl. An seinem oberen Ende befindet sich ein Schild.] 
+ 
+Block 116 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 117 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 118 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 119 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 120 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 121 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 122 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 123 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 124 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 125 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 126 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 127 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 128 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 129 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 130 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 131 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 132 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 133 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 134 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 135 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 136 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 137 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 138 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 139 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 140 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 141 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 142 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 143 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 144 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 145 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 146 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 147 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 148 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 149 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+Block 150 
+[Paltzhalter fr weitere Cut-Map-Events.] 
+ 
+block 151               NPC 1, Stiriik 
+["Dsarii-ma, Besucher des Rates."] 
+ 
+Block 152               NPC 2 
+["Dsarii-ma. Ich bin nur ein Schreibergehilfe mit viel zuviel Arbeit. Bitte
+entschuldigt mich, werte Besucher."] 
+ 
+Block 153               NPC 3 
+["Dsarii-ma. Ich geh”re dem Ratskreis fr Fluwirtschaft an. Ich glaube nicht,
+da wir etwas zu besprechen haben."] 
+ 
+Block 154               NPC 4 
+["Dsarii-ma. Entschuldigt mich, die Sebainah hat mir etwas aufgetragen, was
+keinen Aufschub duldet."] 
+ 
+Block 155               NPC 5 
+["Dsarii-ma. Falls ihr, wie viele Fremde, mit Sebai-Giz Frill sprechen wollt,
+findet ihr sein Arbeitszimmer im Ostflgel des Geb„udes.^^Er ist allerdings
+oft auf Reisen."]
+
+Block 156               NPC 6 
+["Ich geh”re dem Ratskreis fr Familien|angelegen|heiten an. Manchmal ist es
+eine schwierige Arbeit, denn Argumente kommen oft nicht gegen Emotionen an.
+Aber entschuldigt, ich rede zuviel, Ihr habt sicher wichtigeres zu tun."] 
+ 
+Block 157               NPC 7 
+["Dsarii-ma. Ich kann Euch sicher nur wenig von Nutzen sein. Ich bin ein
+Gehilfe Vris' und kmmere mich um den guten Zustand des Geb„udes."] 
+ 
+Block 158               NPC 8 
+["Dsarii-ma. Achtet auf die pr„chtigen Pflanzen im Versamm|lungsraum, sie
+unterliegen meiner Pflege!"] 
+ 
+Block 159               Tr nach drauen 
+[Diese Tr fhrt nach drauen.] 
+ 
+Block 160 
+[{FAHI}- S C R I P T S E Q U E N Z -{NORS}^^ Tom und Rainer laufen in den
+Versammlungsaal, dort wird die Feier durch die Ermordung Akiirs j„h
+unterbrochen. Die Party bekommt den Auftrag, den Mord aufzukl„ren.^^Es werden
+jetzt die Bits gesetzt, die den Zustand nach dem Mordanschlag signalisieren!
+^^Drirr tritt der Party bei! ^^Anschlieend wird mitgeteilt, da der flchtige
+M”rder in der N„he des Dji-Kas-Gildenhauses gesehen wurde. Alle machen sich
+dorthin auf den Weg...] 
+ 
+Block 161 
+[Dem angeschlagenen Tom wird bei der Ankunft im Ratsgeb„ude erste Hilfe
+zuteil...] 
+ 
+Block 162 
+[Dem angeschlagenen Rainer wird bei der Ankunft im Ratsgeb„ude erste Hilfe
+zuteil...] 
+ 
+--- Dialog ZS: Bradirs Erkl„rung 
+ 
+Block 163 
+[Bradir macht einen ruhigen, gefaten Eindruck, als die Sebainah ihn anspricht.] 
+ 
+Block 164       Sebainah 
+["Bradir, erkl„rt uns bitte Eure ungew”hnliche Reaktion beim Anblick der
+antiken Waffe, die der M”rder bei sich hatte."] 
+ 
+block 165       Bradir 
+["Sebainah, der Dolch ist Teil der Bezahlung des M”rders gewesen. Er geh”rt
+mir. Bei seinem Anblick verlor ich den Rest meiner Nerven.^^ Ich bin geradezu
+froh, da nun alles vorbei ist."] 
+ 
+Block 166       Drirr 
+["Ihr wollt sagen, da IHR der Auftraggeber wart? IHR habt Akiir, Euren
+bewunderten Freund, ermorden lassen?"] 
+ 
+Block 167       Bradir 
+["Nein, bei der G”ttin! Ich war es nicht, der den M”rder gedungen hat!"] 
+ 
+Block 168       Sebainah 
+["Aber Ihr kennt den Auftraggeber?"] 
+ 
+Block 169       Bradir 
+["Ja, Sebainah.^^Es war... Akiir selbst."] 
+ 
+Block 170       Drirr 
+[{CNTR}"WAS?"] 
+ 
+Block 171       Sebainah 
+[{CNTR}"UNM™GLICH!"] 
+ 
+Block 172       Tom 
+[{CNTR}"Das kann doch nicht sein!"] 
+ 
+block 173       Sira 
+["Ich wei, da Bradir der engste und ehrlichste Freund war, den mein Vater je
+hatte. Lassen wir ihn weiterreden."] 
+ 
+Block 174       Bradir 
+["Akiir wute seit fast einem Jahr, da er an einer unheilbaren Krankheit
+litt. Er hatte noch h”chstens ein halbes Jahr zu leben. Als er dann noch von
+Sira die Entscheidung erfuhr, zur Gilde der Dji-Kas zu wechseln, ver„nderte er
+sich zusehends, wurde immer unberechen|barer.^^ Vor einiger Zeit kam er mit
+dem Plan seines inszenierten Mordes auf mich zu. Neben der Rache an Fasiir
+wollte er damit erreichen, da Sira die Gilde der Dji-Kas wieder verl„t.^^Ich
+habe tagelang versucht, ihm den Plan auszureden, aber er war nicht davon
+abzubringen. Er hat an meine Ehre als Freund appelliert, ihm seinen letzten
+Wunsch zu erfllen. Ich... mir blieb nicht anderes brig!^^ Er hat den Dji-Kas
+Kriis mit einer absurden Summe bestochen und einen Assassinen des
+Menschen|volkes der Kenget Kamulos mit dem Mord beauftragt. Um den M”rder zu
+beseitigen, wurde als Treffpunkt nach der Tat das alte Zentrum unserer Gilde
+ausgemacht, in der Hoffnung, da die Raubtiere dort den letzten Zeugen
+beseitigen.^^ Die letzten Wochen waren die schlimmsten meines Lebens. Ich bin
+gerne bereit, mich der Prfung durch einen Tri-Nadh zu stellen, um meine
+Aufrichtigkeit zu belegen."] 
+ 
+Block 175 
+[Eine lange Pause entsteht, als alle das Geh”rte zu verdauen versuchen.^^
+Sira, Akiir's Tochter, findet als erste wieder Worte:] 
+ 
+Block 176       Sira 
+["Ich kenne Bradir seit meiner Kindheit als Freund unserer Familie. Er hat
+sich dies alles meiner Meinung nach nicht ausgedacht. Ich habe meinen Vater
+geliebt, aber ich wei, wie starrsinnig er sein konnte. Unter diesen extremen
+Bedingungen...^^ Er k”nnte wirklich so reagiert haben. Und das wegen MIR, oh,
+G”ttin.^^ Ich glaube Bradirs Worten."] 
+ 
+Block 177       Sebainah 
+["Auch ich bin bereit, Bradir Glauben zu schenken. Er ist von dem Verdacht des
+Mordes befreit.^^Kehrt zurck zu Eurer Gilde, Bradir, Ihr habt dort sicherlich
+einiges zu erkl„ren.^^Der zu Unrecht beschuldigte Fasiir wird sofort
+rehabilitiert.^^Kriis, der bestochene Dji-Kas, wird sich fr seinen Verrat
+verantworten mssen."] 
+ 
+Block 178       Tom 
+["Ist damit unserer Pflicht, den Mord aufzukl„ren, Genge getan, Sebainah
+Janiis?"] 
+ 
+Block 179       SEBAINAH 
+["So ist es. Ich danke Euch Menschen, und auch Euch, Drirr, fr die Aufkl„rung
+dieser Tat.^^Eurer Weiterreise steht nun nichts mehr im Wege."] 
+ 
+Block 180       Drirr 
+["Wir waren ein gutes Team. Tom und Rainiir, wenn Ihr es wnscht, werde ich
+Euch auf der Reise begleiten. Mir steht der Sinn nach ein wenig Aufregung."] 
+ 
+Block 181       Tom 
+["Aber gerne, Drirr! Ich bin froh, Euch dabeizuhaben!"] 
+ 
+Block 182       Sira 
+["Tom und Rainiir, ich habe Entscheidungen schon immer impulsiv getroffen.^^
+Auch ich m”chte mich Euch gern fr eine Weile anschlieen. Nach dem, was hier
+passiert ist, m”chte ich ein wenig Abstand von allem gewinnen.^^Eine Reise
+wird mir gut tun, und meine bescheidenen magischen Talente k”nnen Euch sicher
+ntzlich sein. Was sagt Ihr?"] 
+ 
+Block 183       Tom 
+["Ihr seid uns natrlich willkommen, Sira! Wir haben wahrscheinlich noch eine
+weite Reise vor uns, und je mehr unsere Gruppe umfat, desto besser!"] 
+ 
+block 184       SEBAINAH 
+["Obwohl Akiir's tragischer Plan ein Gefhl der Trauer hinterl„t, bin ich
+doch froh, da nun alles aufgekl„rt ist.^^Tom und Rainiir, Ihr seid weiterhin
+willkommene G„ste in Jirinaar. Wenn Ihr zur Weiterreise bereit seid, so
+sprecht mich an.^^Ich erkl„re die Versammlung nun fr beendet."] 
+ 
+Block 185 
+[Tom, Rainer, Drirr und Sira verlassen den Raum der Sebainah.] 
+ 
+---Akiirs Ermordung 
+ 
+Block 186 
+[Tom und Rainer treffen gerade rechtzeitig im Ratsgeb„ude ein.^^ Im
+Versammlungsraum treffen Tom und Rainer auf eine kleine Gruppe Iskai.^^ Die
+Sebainah begrt sie:] 
+ 
+block 187       Sebainah      
+["Dsarii-ma, Tom und Rainiir, willkommen zu unserer kleinen Zusammen|kunft.^^
+Darf ich Euch vorstellen: Akiir. Er ist das Oberhaupt der Gilde der Former,
+oder Dji-Fadh, wie wir sagen."] 
+ 
+Block 188       Akiir 
+["Dsarii-ma."] 
+ 
+Block 189       Sebainah 
+["Und dies hier ist Ratsmitglied..."] 
+ 
+Block 190 
+[Die Sebainah wird j„h unterbrochen, als pl”tzlich eine maskierte Gestalt in
+den Raum strmt.^^Geschockt erkennen Tom und Rainer, da es sich um einen
+Menschen handelt!] 
+ 
+Block 191 
+[Bevor jemand reagieren kann, schiet der Mensch einen kleinen Pfeil auf Akiir
+ab, der getroffen zu Boden sinkt!] 
+ 
+Block 192       Sebainah 
+["Stiriik! Ergreift den Menschen!"] 
+ 
+--- Iskai rennen K.K. hinterher, Sebainah l„uft zu Akiir. 
+ 
+Block 193       Sebainah 
+["Akiir ist tot. M”ge er in der G”ttin leben."] 
+ 
+--- Stiriik kommt herein 
+Block 194 
+["Der M”rder ist durch ein Fenster geflohen, Sebainah! Wir durchsuchen die
+Stadt!"] 
+ 
+Block 195 
+["Wir mssen schnell handeln. Schickt nach Drirr, dem Stiriik fr
+Menschen|angelegen|heiten!^^ Verehrte Ratsmitglieder, Briid, mein Neffe: ich
+mu Euch bitten, nun zu gehen. Es tut mir leid, da die Feier einen zu
+tragischen Ausgang nahm. ^^Tom und Rainiir, ich mu mit Euch sprechen."] 
+ 
+---Drirr kommt herein 
+ 
+block 196       drirr 
+["Dsarii-ma, Sebainah Janiis."] 
+ 
+Block 197       Sebainah 
+["Dsarii-ma, Drirr. Ihr seid bereits ber den Mordanschlag auf Akiir
+unterrichtet?"] 
+ 
+block 198       Drirr 
+["Ich bin im Bilde. Welch ein Schock!"] 
+ 
+Block 199       Sebainah 
+["In der Tat!^^Drirr, Ihr habt sicher schon von Tom und Rainiir, unseren
+Besuchern, geh”rt. Sie sind fremd auf dieser Welt und bedrfen Eurer Hilfe bei
+der Auf|kl„rung dieses Verbrechens besonders."] 
+ 
+Block 200       Drirr 
+["Ich werde ihnen nach Kr„ften zur Seite stehen, Sebainah.^^Tom und Rainiir,
+es tut mir leid, da wir uns unter diesen Umst„nden kennenlernen mssen."] 
+ 
+Block 201       Tom 
+["Dsarii-ma, Drirr. Wir sind ein wenig berw„ltigt vom Ablauf der Ereignisse."] 
+ 
+Block 202 
+["Das glaube ich Euch gerne. Wir sollten zuerst vielleicht ein paar Worte mit
+Sebai-Giz Frill wechseln. Er kann uns sicher etwas ber die Menschen|rasse
+erz„hlen, welche der M”rder angeh”rt.^^Lat uns in seinen Raum gehen, er ist
+bestimmt schon unterrichtet worden."] 
+ 
+---Stiriik nach gespr„ch mit Frill 
+ 
+Block 203 
+["Drirr! Der M”rder ist in der N„he des Gildenhauses der Dji-Kas-Magier
+gesehen worden!"] 
+ 
+Block 204       drirr 
+["Eine Spur! Lat uns sofort zu den Dji-Kas gehen!"] 
+ 
+Block 205 
+[Eilig machen sich alle auf den Weg zum Gildenhaus der Magier.] 
+ 
+Block 206 
+["Diese Tr fhrt zum Raum des Oberhauptes der Stadt, der Sebainah Janiis.^^
+Ich werde mich nun von Euch verabschieden."] 
+ 
+--- Dialog in Scripts. nach Akiirs Ermordung 
+ 
+Block 207 
+["Tom und Rainir, dies ist eine schwere Stunde. Manche werden vorschnell
+urteilen, da Ihr etwas mit dem Mord zu tun habt, nur weil Ihr Menschen seid.
+Ich kenne Eure Rasse nicht genau, bin aber der Meinung, da Euer Entsetzen
+ber dieses Ereignis genauso gro ist wie meines."] 
+ 
+Block 208 
+["Janiis, niemand hat uns berhaupt gesagt, da es auf dieser Welt
+einheimische MENSCHEN gibt! Wir versuchen gerade, uns von dem Schock zu
+erholen!"] 
+ 
+Block 209 
+["Ihr wutet es nicht? Aber ich dachte...^ Ihr mt die Worte unseres ersten
+Gespr„ches anders aufgefat haben, als ich sie gemeint hatte. Ihr h„ttet Eure
+Artgenossen auf der Insel kennengelernt, zu der wir Euch fahren wollten."] 
+ 
+Block 210 
+["Ihr sprecht, als ob Ihr Euer Angebot durch diese Tat nicht mehr aufrecht
+erhalten k”nntet."] 
+ 
+Block 211 
+["So ist es. Ich mu Euch leider mit einem Teil der Gesetze unseres Volkes
+bekannt machen, die durch diese Tat Bedeutung fr Euch erlangen. Um dem oft
+undiszipli|nierten Charakter vieler Iskai Rechnung zu tragen, gibt es das
+Gesetz der Sippenhaftung. Es ist so, da bei uns die gesamte Familie eines
+Verbrechers fr seine Vergehen haftet, um so vor Verst”en
+abzuschrecken.^Werden die Stiriik des šbelt„ters nicht sofort habhaft, ist es
+die Aufgabe der Familie, Ihr abtrnniges Mitglied zu finden oder das
+Verbrechen sonstwie aufzukl„ren. Dabei werden sie allerdings von mindestens
+einem Stiriik untersttzt und kontrolliert.^^Da Ihr die einzigen Menschen in
+Jirinaar seid, nehmt Ihr den Platz der Familie ein. Ihr seid nun verpflichtet,
+diesen Mord aufzukl„ren und die Schuldigen ausfindig zu machen. Erst dann kann
+ich Euch die Weiterreise gestatten."] 
+ 
+Block 212 
+["Aber wir sind immer noch Fremde auf dieser Welt. Wie sollen wir die
+Schuldigen an dieser Tat finden?"] 
+ 
+Block 213 
+["Deshalb habe ich bereits nach einem f„higen Stiriik schicken lassen. Er wird
+Euch bei Eurer Aufgabe helfen."] 
+ 
+Block 214 
+["Es sieht nicht so aus, als ob wir eine andere Wahl h„tten, oder?"] 
+ 
+Block 215 
+["Das stimmt leider. Ich kann mich nicht ber die Gesetze hinwegsetzen. Ich
+kann Euch nur viel Glck bei der Jagd nach dem flchtigen M”rder und seiner
+Auftraggeber wnschen."] 
+ 
+Block 216 
+["Ihr seid sicher, da dies von jemandem beauftragt wurde?"] 
+ 
+Block 217 
+["Zweifellos. Die M”rder geh”ren einem Menschen|volk an, da fr ihre
+Meuchelm”rder berhmt ist. Diese Leute t”ten selten aus eigenem Interesse.^Ihr
+solltet Euch mit Frill unterhalten, er ist wieder im Palast, wie ich geh”rt
+habe. Er ist sicher schon auf dem Weg hierher.^^Ah, ich sehe, hier kommt
+Drirr, der Stiriik, der Euch begleiten wird."] 
+ 
+Block 218 
+[{CNTR}{INK 001}Auf dem Schild steht:{INK 006}^^Arbeitszimmer von Sebai-Giz
+Frill {INK006}] 
+ 
+Block 219 
+[{CNTR}{INK 001}Auf dem Schild steht:{INK 006}^^Arbeitsraum der Sebainah
+Janiis, Oberhaupt Jirinaars] 
+ 
+Block 220 
+[Drirr schliet sich Tom und Rainer an.^^Gemeinsam gehen sie in das
+Arbeits|zimmer des Gelehrten Frill, der gerade von einer l„ngeren Reise
+zurckgekommen ist.^^Drirr erz„hlt, da er als der „lteste Iskai Nakiridaanis
+gilt und ber einen groen Wissensschatz verfgt.] 
+ 
+Block 221          Drirr 
+["Hoffentlich finden die Stiriik der Stadtwache bald eine Spur des M”rders.^^
+Vielleicht sollten wir ebenfalls die Straen der Stadt absuchen."] 
+ 
+Block 222 
+[Eiligen Schrittes laufen alle zum Gildenhaus der Magier von Jirinaar, den
+Dji-Kas.^^ Der M”rder ist nicht mehr auf der Strae zu finden, und so betritt
+man das Haus...] 
+ 
+Block 223 
+["Bei dieser Sebainah scheint es sich um die Chefin hier zu handeln. Bin
+gespannt, was sie von uns will."]
+
+Block 224 
+[Schnell wird Bradir zur Heilerin transportiert.^^Sobald er versorgt ist, gibt
+es im Ratsgeb„ude eine Versammlung im Raum der Sebainah, bei der Bradir sein
+Verhalten erkl„ren soll.^^ Neben Tom, Rainer und Drirr ist auch Sira als
+Tochter des Ermordeten Akiirs herbeigerufen worden.]

@@ -1,0 +1,436 @@
+
+Maptext-File
+------------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[ste und Wurzeln.]
+
+Block 2
+[Ein geflochtener Korb.]
+
+Block 3
+[Ein Glasgef„ fr Wasser und andere Getr„nke.]
+
+Block 4
+[Ein Fa.]
+
+Block 5
+[Ein pr„chtiges Tierfell.]
+
+Block 6
+[Ein Eimer.]
+
+Block 7
+[Eine Tonschale.]
+
+Block 8
+[Ein Trinkhorn.]
+
+Block 9
+[Ein Teller.]
+
+Block 10
+[Ein Tonkrug.]
+
+Block 11
+[Ein Krug.]
+
+Block 12
+[Ein Tischmesser.]
+
+Block 13
+[Eine Gabel.]
+
+Block 14
+[Ein L”ffel.]
+
+Block 15
+[Ein Tonbeh„lter.]
+
+Block 16
+[Steine.]
+
+Block 17
+[Eine Schale.]
+
+Block 18
+[Ein Ackerger„t.]
+
+Block 19
+[Eine Axt.]
+
+Block 20
+[Ein Kistendeckel.]
+
+Block 21
+[Eine Holzkiste.]
+
+Block 22
+[Eine kunstvoll beschlagene Holzkiste.]
+
+Block 23
+[Das stille ™rtchen.]
+
+Block 24
+[Ein Deckel.]
+
+Block 25
+[Ein groer Holzbottich.]
+
+Block 26
+[Ein groer Metallkessel.]
+
+Block 27
+[Ein Regal.]
+
+Block 28
+[In diesem Regal ist allerhand unwichtiges Zeug zu sehen.]
+
+Block 29
+[Eine Kommode.]
+
+Block 30
+[Ein Besen.]
+
+Block 31
+[Ein Bratrost.]
+
+Block 32
+[Darauf kann man Fleisch braten.]
+
+Block 33
+[Eine Feuerstelle.]
+
+Block 34
+[Eine umgefallene Karaffe.]
+
+Block 35
+[Ein Kochl”ffel.]
+
+Block 36
+[Ein dekoratives Wandschwert.]
+
+Block 37
+[Ein Holztisch.]
+
+Block 38
+[Ein Hocker.]
+
+Block 39
+[Ein zusammengeklappter Hocker.]
+
+Block 40
+[Ein massiver Etisch.]
+
+Block 41
+[Ein Baumstumpf.]
+
+Block 42
+[Zwei gekreuzte Speere.]
+
+Block 43
+[Ein groes Fa mit fremdartigen Getr„nken.]
+
+Block 44
+[Ein Zapfhahn.]
+
+Block 45
+[Eine Bettdecke.]
+
+Block 46
+[Ein komfortables und hbsch verziertes Bett.]
+
+Block 47
+[Dieses Bett ist schlicht aber zweck|m„ig.]
+
+Block 48
+[Eine Anrichte.]
+
+Block 49
+[Ein Kamin.]
+
+Block 50
+[Das Kaminfeuer strahlt eine angenehme W„rme ab.]
+
+Block 51
+[Ein kunstvoll angefertigter Topf.]
+
+Block 52
+[Getrocknete Kr„uter.]
+
+Block 53
+[Ein menschlicher Sch„del.]
+
+Block 54
+[Ein Schmuckschild.]
+
+Block 55
+[Ein Metalltopf.]
+
+Block 56
+[Ein Zierschwert.]
+
+Block 57
+[Eine Tre.]
+
+Block 58
+[Ein Kessel.]
+
+Block 59
+[Ein Messer.]
+
+Block 60
+[Ein Kurzdolch.]
+
+Block 61
+[Ein Dolch.]
+
+Block 62
+[Ein groer Dolch.]
+
+Block 63
+[Ein Kurzschwert.]
+
+Block 64
+[Ein Schwert.]
+
+Block 65
+[Ein Stich.]
+
+Block 66
+[Ein Wurfdolch.]
+
+Block 67
+[Eine kleine Axt.]
+
+Block 68
+[Eine Axt.]
+
+Block 69
+[Ein kleiner Bogen.]
+
+Block 70
+[Ein Bogen.]
+
+Block 71
+[Ein Pfeil.]
+
+Block 72
+[Ein kleiner Lederschild.]
+
+Block 73
+[Ein Lederschild.]
+
+Block 74
+[Ein Rundschild.]
+
+Block 75
+[Ein groer Schild.]
+
+Block 76
+[Eine Lederkappe.]
+
+Block 77
+[Eine beschlagene Kappe.]
+
+Block 78
+[Eine Metallhalbschale.]
+
+Block 79
+[Eine Lederweste.]
+
+Block 80
+[Eine Lederrstung.]
+
+Block 81
+[Ein beschlagenes Leder.]
+
+Block 82
+[Ein Paar Schuhe.]
+
+Block 83
+[Ein Paar Stiefel.]
+
+Block 84
+[Eine leere Flasche.]
+
+Block 85
+[Ein grner Heiltrank.]
+
+Block 86
+[Ein trkisener Heiltrank.]
+
+Block 87
+[Ein blauer Heiltrank.]
+
+Block 88
+[Ein Schlssel.]
+
+Block 89
+[Ein Seil.]
+
+Block 90
+[Ein Ring.]
+
+Block 91
+[Eine Fackel.]
+
+Block 92
+[Ein flacher Hammer.]
+
+Block 93
+[Eine Treppe. Sie fhrt nach oben.]
+
+Block 94
+[Eine Treppe. Sie fhrt nach unten.]
+
+Block 95
+[Eine Theke.]
+
+Block 96
+[Eine teppichartige Matte.]
+
+Block 97
+[Eine Zimmerpflanze.]
+
+Block 98
+[Ein Blumentopf.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 115
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 116
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 117
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 118
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 119
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 120
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 121
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 122
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 123
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 124
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 125
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 126
+[Das Fa ist leer und relativ leicht. Die Gruppe kann es verschieben.]
+
+Block 127
+[Die Tafeln sind nicht beschriftet.]
+
+Block 128
+[{INK 006}{CNTR}Rathaus von Beloveno.]
+
+Block 129
+[Das ist eine Tre.]
+
+Block 130
+[Die Tre ist verriegelt. Offensichtlich ist es auch nicht notwendig, diese
+Tre zu ”ffnen.]
+
+Block 131
+[Das ist der Ausgang.]
+
+Block 132
+["Skeima Din,^^wenn Ihr mit friedlichen Absichten kommt, drft Ihr das Rathaus
+gerne betreten."]
+
+Block 133
+["Hoffentlich findet Ihr Euch hier zurecht. Das Rathaus ist ein sehr groes
+Geb„ude, man kann sich leicht in den vielen G„ngen, S„len und
+Be|sprechungs|zimmern verlaufen. Merkt Euch einfach, da der Ausgang und die
+Empfangshalle im Norden liegen.^^Im Mittelbau findet Ihr Besprechungszimmer
+und Korridore, die zu den Vesperstuben fhren. Im Sdbau befindet sich die
+groe Aula und dahinter das Besprechungszimmer des Rates. Ich meine natrlich
+den 'Rat der Gerechten'. Ich helfe Euch gerne sp„ter noch einmal weiter und
+erkl„re Euch das ganze noch einmal, wenn Ihr m”chtet."]
+
+Block 134
+["Findet Ihr nicht, da etwas angemessenere Kleidung vorteilhaft w„re, wenn
+Ihr den 'Rat der Gerechten' besucht?^^Das hier sind heilige Hallen und wir
+haben es gern, wenn Fremde unsere Br„uche respektieren."]
+
+Block 135
+["Skeima Din.^^Ich finde es sch”n, da man sich nach an|streng|enden
+Be|spre|chung|en hier etwas entspannen kann. Das werdet Ihr nicht berall
+finden!"]
+
+Block 136
+["Skeima Din. Ich bin einer der neuen Ratsmitglieder. Dann seid Ihr Tom und
+seine Freunde? Freut mich, Euch kennenzulernen."]
+
+Block 137
+["Skeima Din. Ich ersetze Riko, das alte Ratsmitglied."]
+
+Block 138
+["Sollten wir Herras nicht warnen? An dem Hinweis von Kariah ist bestimmt
+etwas dran, und wenn nicht, dann besser einmal zuviel gewarnt, als einmal zu
+wenig."]

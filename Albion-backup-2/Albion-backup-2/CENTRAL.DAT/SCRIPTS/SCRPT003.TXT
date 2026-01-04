@@ -1,0 +1,112 @@
+;***Script 3: Abflug des Shuttles***
+show_map
+
+; Tom meldet sich an Konsole
+fade_to_black
+npc_off 13
+party_jump 96 40
+party_turn 1
+update 4
+fade_from_black
+text 169
+fade_to_black
+
+; NPCs 12(Rainer), 14 (Käpt'n), 15(AI)
+npc_lock 12
+npc_on 12
+npc_lock 14
+npc_lock 15
+
+npc_jump 12 183 68
+npc_turn 12 3
+npc_jump 14 178 66
+npc_turn 14 2
+npc_jump 15 179 65
+npc_turn 15 2
+
+
+; Tom plazieren und zum shuttle laufen lassen
+party_jump 170 63
+party_turn 2
+update 1
+fade_from_black
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 0 -1
+update 4
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+text 179
+pause 30
+
+; Dialog
+npc_text 193 174
+npc_text 194 175
+npc_text 193 176
+party_member_text 1 177
+npc_text 192 178
+fade_to_black
+fill_screen 0
+fade_from_black
+text 180
+fade_to_black

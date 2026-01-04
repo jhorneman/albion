@@ -1,0 +1,53 @@
+Perron (Ratsmitglied Nummer 1) / Phase 3
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Ich wrde Euch gern in einer ganz wichtigen Angelegenheit sprechen. Habt Ihr
+ein wenig Zeit fr mich?"{BLOK010}"Ja sicher, um was geht es
+denn?"{BLOK011}"Nein, wir haben leider selbst viel zu tun."
+{WORDRathaus}{WORDPerron}{WORDBeloveno}]  
+
+
+Block 2         (Resp. 2)
+["Das ist wirklich traurig, aber ich respektiere Eure Entscheidung."]
+
+Block 3         (Resp. 1)
+["Gard und Riko sind bei den letzten Ratssitzungen nicht mehr erschienen. Sie
+verhalten sich ziemlich merkwrdig. Ich glaube, da sie irgendetwas planen.
+Ihr habt zur Zeit einen guten Kontakt zu den meisten Bewohnern von Beloveno
+und den anderen D”rfern, und daher wollte ich Euch bitten, mich auf dem
+Laufenden zu halten, wenn Ihr Neuigkeiten ber diese Ratsmitglieder erfahrt,
+von denen ich noch nichts wei. Wenn Ihr erfahrt, was sie vorhaben, bitte sagt
+es mir. Was in letzter Zeit passiert ist, ist nicht normal. Will hoffen, da
+sie nichts B”ses im Schilde fhren. K”nnt Ihr mir diesen Gefallen
+tun?"{BLOK012}"Wir glauben schon."{BLOK013}"Wir werden sehen, was sich machen
+l„t."{BLOK014}"Wohl kaum."]
+
+Block 4         (Resp 1+2 von 3)
+["Das freut mich. Ich werde Euer Vertrauen ganz bestimmt nicht mibrauchen,
+aber es ist wichtig fr mich, ber die Entwicklung Bescheid zu wissen."]
+
+Block 5         (Resp. 3 von 3)
+["Ich sehe schon, Ihr habt Euch ebenfalls gegen mich verschworen..."]
+
+Block 6         (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 7         (Perron)
+["Das bin ich."]
+
+Block 8         (Beloveno)
+["Ich hoffe, da Euch unsere Stadt gef„llt. Besucht doch mal den Hafen im
+Sden oder macht mal einen Ausflug nach Kounos oder Srimalinar."]

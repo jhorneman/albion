@@ -1,0 +1,69 @@
+Dear translator-person,
+
+here are some tips and guidelines to help you translate the accompanying text.
+
+First of all let me make clear that this is only the text of one scenario of Albion. The text of the final game will be approximately ten times as big, excluding the manual. Also, the text you have here hasn't been checked or corrected, just in case you were wondering.
+
+You will find the texts in a special format, which should be left undisturbed. They consist of blocks like these:
+
+
+Block 3:
+[Hier befindet sich eine Bodenplatte mit einer transparenten LeuchtflÑche.]
+
+
+You should only translate the text between the [square brackets]. Leave the "Block" and the number: we need this information so that we can revert the text to it's original format.
+
+
+Block 28:
+[{INK 001}Tom deponiert die Waffe in dem Wandschrank.{INK 002}^^ "So. Wenn ich
+jetzt von der anderen Seite dieser Schleuse hier wieder an den Schrank
+drankomme, hab' ich die Secus gelinkt und die Waffe gehîrt mir!"]
+
+
+The words enclosed in {curly braces} are special commands which tell the program to change the look of the text (the ink colour in this case). Do not change this. As you may have noticed some special characters have been used as well. We recommend you leave these as you find them, but so that you know what's going on, here is a list:
+
+^	(Carriage return)
+Ends the current line and jumps to the start of the next line. As you hopefully will be able to see in the preview version of Albion we have sent you, the texts are displayed using a proportional font and with automatic word-wrapping and left and right justification. This means you must explicitly tell the program to start on a new line. Two ^'s effectively leaves one blank line between paragraphs.
+
+$	(Solid space)
+This character is printed as a normal space but is "immune" to justification and word-wrapping. This is quite practical when you want to position text using spaces, or want to start a sentence with a space.
+
+- /	(Hyphens)
+These characters are printed normally, but are also used as a "breaking point" for word-wrapping. This is practical for long English words: "Shoot-em-up-games" can be wrapped at any hyphen, which makes the text look better.
+
+|	(Syllable separator)
+This character won't be printed, but is used as a "breaking point" for word-wrapping. This is practical for long German words: "Katzen|ohren|post|leit|zahlen|um|stellungs|problem" can be wrapped at any |, which makes the text look better. A hyphen will be inserted automatically.
+
+~	(EOTPB)
+This character is used internally by the text processor and should not appear in the text.
+
+
+Another aspect of the texts which may require explanation is this:
+
+
+Block 302:
+["Hallo, mein Alter! Willst mich von der Arbeit abhalten, hm? Gute Idee!"
+{BLOK010}"GrÅ·' dich, Joe! Hast du die Secus im Nachbarraum gesehen?"
+{BLOK011}"Joe! Das letzte Mal, da· Du so fertig ausgesehen hast, war nach der
+Tour durch Osaka kurz vor dem Start!"]
+
+
+Note the {BLOK}s. Texts like these are used in dialogues. The initial text is what the person the player is talking to says. The texts behind the {BLOK}s are the options the player can choose from. This means that this text is being "spoken" by two different people: therefore two different text styles or voices can appear in textblocks such as these. Beware!
+
+The second textfile you will find contains keywords used in the game. The player can select these words from a list in order to ask other persons about these topics. These words again have a special format which should not be changed. An example:
+
+WORD 0079 Ausbildung 
+
+should be translated to:
+
+WORD 0079 Training
+
+The "WORD 0079" should be left unchanged. One final constraint: the length of these words may not exceed 20 characters.
+You will find that the textfile contains many empty entries (and we hope you take this into account when you bill us ;-)
+
+I hope this was of some help. We have some safety mechanisms to catch the occasional error in the text formatting (i.e. the brackets), so while you should be careful, you need not worry too much about making mistakes. If you have any questions, I can usually be reached 7 days a week between 10 AM and 10 PM. The number is 49-208-4508826. Additionally I can be reached by e-mail at horneman@bluebyte.de.
+
+Yours sincerely,
+
+      Jurie Horneman.
+

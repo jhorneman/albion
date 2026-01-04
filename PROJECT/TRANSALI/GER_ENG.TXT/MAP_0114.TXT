@@ -1,0 +1,693 @@
+
+Map-Textfile fr die Iskai-Cutmap (Indoor Satz 3)
+----------------------------------------------------------------------
+
+Block 0                      (frei)
+[leer]
+
+Block 1                      (Klo anfassen)
+[Kein Mitglied der Gruppe ist besonders erpicht darauf, dort hinzufassen.]
+
+Block 2                      (Sofa)
+[Ein groes Sofa.]
+
+Block 3                      (Groer Schrank)
+[Ein groer Schrank.]
+
+Block 4                      (Bratrost)
+[Ein Bratrost.]
+
+Block 5                      (Bett)
+[Ein Bett.]
+
+Block 6                      (Feuerstelle)
+[Eine Feuerstelle.]
+
+Block 7                      (Bettdecke)
+[Die Bettdecke.]
+
+Block 8                      (Besteck)
+[Iskai-Besteck.]
+
+Block 9                      (Teller)
+[Ein Teller.]
+
+Block 10                     (Beh„lter)
+[Ein Beh„lter.]
+
+Block 11                     (Wurst)
+[Eine Wurst.]
+
+Block 12                     (Schinken)
+[Ein schinken„hnliches Fleischstck.]
+
+Block 13                     (Kochl”ffel)
+[Ein Kochl”ffel.]
+
+Block 14                     (Kr„uter)
+[Diverse Kr„uter.]
+
+Block 15                     (Frchte)
+[Frchte.]
+
+Block 16                     (Fleisch)
+[Eine Fleischspezialit„t.]
+
+Block 17                     (Becher)
+[Ein Trinkbecher.]
+
+Block 18                     (Schale)
+[Eine Schale.]
+
+Block 19                     (Gewrz)
+[Ein Gewrz.]
+
+Block 20                     (Gewrzdosen)
+[Kleine Gewrzdosen.]
+
+Block 21                     (Becher)
+[Ein kleiner Becher.]
+
+Block 22                     (Messer)
+[Ein Kchenmesser.]
+
+Block 23                     (Geb„ck)
+[Geb„ck.]
+
+Block 24                     (Wrstchen)
+[Einige kleinere Wrstchen.]
+
+Block 25                     (Wrzflasche)
+[Dies ist dem Geruch nach ein Fl„schchen mit einer Wrzflssigkeit.]
+
+Block 26                     (Tuch)
+[Ein Stofftuch.]
+
+Block 27                     (Tuch)
+[Ein Handtuch.]
+
+Block 28                     (Eimer)
+[Ein Eimer.]
+
+Block 29                     (Bratpfanne)
+[Eine Bratpfanne.]
+
+Block 30                     (Topf)
+[Ein Topf.]
+
+Block 31                     (Wasserbad-Kessel)
+[Innerhalb dieses Kessels befindet sich auf einem Gest„nge ein kleiner Topf,
+in dem Speisen besonders schonend erw„rmt werden k”nnen.]
+
+Block 32                     (Kissen)
+[Ein Kissen.]
+
+Block 33                     (Brat-Topf)
+[Eine groe Bratpfanne.]
+
+Block 34                     (Fell-Brste)
+[Eine Fell-Brste.]
+
+Block 35                     (Wasser-Rinne)
+[Eine Wasserrinne.]
+
+Block 36                     (Wasser-Becken)
+[Ein Wasserbecken.]
+
+Block 37                     (Wasser-Sperre)
+[Eine Wassersperre.]
+
+Block 38                     (Krug)
+[Ein groer Tonkrug.]
+
+Block 39                     (Kommode)
+[Eine Kommode.]
+
+Block 40                     (Gruscht)
+[In den F„chern der Kommode liegt allerhand unwichtiges Kleinzeug.]
+
+Block 41                     (Kiste)
+[Eine Kiste.]
+
+Block 42                     (Kessel)
+[Das ist ein ziemlich groer Kessel. Vielleicht dient er zur Lagerung von
+Vorr„ten, von Wasser oder Speisen.]
+
+Block 43                     (Quelle)
+[In diesem Wasserbecken steht eine fremdartige Pflanze, die mit ihren
+pulsierenden Bewegungen Grundwasser aus dem Boden pumpt. Diese Quelle dient
+ganz offensichtlich der Wasserversorgung.]
+
+Block 44                     (Abwassertmpel)
+[Das Wasser in diesem Tmpel riecht schlecht und faulig. Vermutlich sammeln
+sich hier die Abw„sser.]
+
+Block 45                     (Wasserpflanzen)
+[Wasserpflanzen.]
+
+Block 46                     (Bodengew„chse)
+[Bodengew„chse.]
+
+Block 47                     (ex. Pflanze)
+[Eine exotische Pflanze.]
+
+Block 48                     (Graspfl.)
+[Schlinggraspflanze.]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 50                     (Treppe runter)
+[Eine Treppe. Sie fhrt durch den Boden nach unten.]
+
+Block 51                     (Treppe rauf)
+[Diese Treppe geht durch die Decke nach oben.]
+
+Block 52                     (1st: Bett)
+[Es handelt sich hier offenbar um eine Art Bett. Die Fllung besteht aus Sand,
+der durch seine groben, aber rundgeschliffenen K”rner erstaunlichen Komfort
+bietet.]
+
+Block 53                     (1st: Sofa)
+[Das enorme Gebilde scheint eine Art Sitzm”bel zu sein. Es wirkt pflanzlich
+und ist offenbar gewachsen. Die Oberfl„che ist weich und elastisch.]
+
+Block 54                     (Brunnen)
+[Der Brunnen des Hauses.]
+
+Block 55                     (1st: Wasserrinnen)
+[Die Wasserrinnen dienen wohl der Versorgung mit Trinkwasser. Sie durchziehen
+das Haus wie kleine B„che.]
+
+Block 56                     (1st: Klo)
+[Der muffige Geruch und die L”cher in dem Gebilde lassen nur den Schlu zu,
+da es hier um eine Toilette handelt. Auch dieses "M”bel" ist pflanzlichen
+Ursprungs und gedeiht pr„chtig; sicher eine Folge der regelm„igen Dngung.]
+
+Block 57                     (Klo)
+[An diesem Ort finden die wirklich dringenden Gesch„fte der Welt statt.]
+
+Block 58
+[In dieser Pfanne brutzelt ein slich-scharf riechendes Gericht.]
+
+Block 59
+[Eine Sitzgelegenheit.]
+
+Block 60
+[Ein massiver Holztisch.]
+
+Block 61
+[Eine kr„ftige Blattpflanze.]
+
+Block 62
+[Eine Tre.]
+
+Block 63
+[Ein Messer.]
+
+Block 64
+[Ein Kurzdolch.]
+
+Block 65
+[Ein Dolch.]
+
+Block 66
+[Ein groer Dolch.]
+
+Block 67
+[Ein Kurzschwert.]
+
+Block 68
+[Ein Iskai-Messer.]
+
+Block 69
+[Ein Iskai-Dolch.]
+
+Block 70
+[Ein Iskai-Stilett.]
+
+Block 71
+[Ein Iskai-Kurzschwert.]
+
+Block 72
+[Ein groes Iskai-Stilett.]
+
+Block 73
+[Ein Iskai-Schwert.]
+
+Block 74
+[Ein groes Iskai-Schwert.]
+
+Block 75
+[Ein Iskai-Langschwert.]
+
+Block 76
+[Eine Iskai-Lanze.]
+
+Block 77
+[Ein groer Iskai-Dolch.]
+
+Block 78
+[Ein Iskai-Kurzstilett.]
+
+Block 79
+[Ein groes Iskai-Stilett.]
+
+Block 80
+[Ein groes Iskai-Schwert.]
+
+Block 81
+[Kleiner Bogen.]
+
+Block 82
+[Ein Bogen.]
+
+Block 83
+[Ein Pfeil.]
+
+Block 84
+[Ein langer Pfeil.]
+
+Block 85
+[Ein Lederschild.]
+
+Block 86
+[Ein kleiner Iskai-Schild.]
+
+Block 87
+[Ein Iskai-Schild.]
+
+Block 88
+[Ein groer Iskai-Schild.]
+
+Block 89
+[Eine Lederkappe.]
+
+Block 90
+[Eine Iskai-Lederkappe.]
+
+Block 91
+[Eine Iskai-Metallkappe.]
+
+Block 92
+[Ein Iskai-Metallhelm.]
+
+Block 93
+[Ein Iskai-Brustschutz.]
+
+Block 94
+[Ein Iskai-Metall-Brustschutz.]
+
+Block 95
+[Eine leichte Iskairstung.]
+
+Block 96
+[Eine Iskairstung.]
+
+Block 97
+[Eine leere Flasche.]
+
+Block 98
+[Ein grner Heiltrank.]
+
+Block 99
+[Ein trkisener Heiltrank.]
+
+Block 100
+[Ein blauer Heiltrank.]
+
+Block 101
+[Ein roter Trank.]
+
+Block 102
+[Ein violetter Trank.]
+
+Block 103
+[Ein blauer Trank.]
+
+Block 104
+[Ein Schlssel.]
+
+Block 105
+[Ein Seil.]
+
+Block 106
+[Eine Fackel.]
+
+Block 107
+[Ein Iskai-Notizblock.]
+
+Block 108
+[Ein Zettel.]
+
+Block 109
+[Ein Iskai-Ringbuch.]
+
+Block 110
+[Ein Iskai-Ringblock.]
+
+Block 111
+[Ein Schreibstift.]
+
+Block 112
+[Ein kurzer Schreibstift.]
+
+Block 113
+[Eine Sitzbank.]
+
+Block 114
+[Auch dieses Sitzm”bel ist f”rmlich aus dem Boden gewachsen und stellt eine
+bequeme Sitzbank dar.]
+
+Block 115
+[Ein Holzpfahl. An seinem oberen Ende befindet sich ein Schild.]
+
+Block 116
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 117
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 118
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 119
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 120
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 121
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 122
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 123
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 124
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 125
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 126
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 127
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 128
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 129
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 130
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 131
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 132
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 133
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 134
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 135
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 136
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 137
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 138
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 139
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 140
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 141
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 142
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 143
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 144
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 145
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 146
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 147
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 148
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 149
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 150
+[Paltzhalter fr weitere Cut-Map-Events.]
+
+Block 151
+[{CNTR}Die Inschrift lautet:^^{INK 006} Raum der Stri Dji-Kas]
+
+Block 152
+[{CNTR}Auf dem Schild steht:^^{INK 006} Raum der Dra Dji-Kas]
+
+Block 153
+[Der Baum bietet einen seltsamen Anblick: Seine Wurzeln liegen auf dem
+Steinboden auf, trotzdem erfreut er sich bester Gesundheit. Was ihn am Leben
+erh„lt, ist nicht zu erkennen.]
+
+Block 154               NPC 1
+["Dsarii-ma. Was auch passieren mag, ich mu mich auf meine Studien
+konzentrieren. Die anderen Dra halten mich fr verrckt, aber die Magie ist
+mir wichtiger als ihre kleinen Streiche."]
+
+Block 155               NPC 2
+["Dsarii-ma. Bitte sucht Euch einen anderen Gespr„chs|partner, ich mu
+nachdenken."]
+
+Block 156               NPC 3
+[{INK 001}Der Angesprochene reagiert nicht, er scheint tief in Gedanken
+versunken zu sein."]
+
+Block 157               NPC 4
+["Dsarii-ma, Besucher unserer Gilde. Entschuldigt mich, ich habe noch zu tun."]
+
+Block 158               NPC 5
+["Verflucht, wieder ein Experiment miglckt! Krrrrsss! Sucht Euch besser
+jemanden zum Gespr„ch, der besser gelaunt ist."]
+
+Block 159               NPC 6
+[{INK 001}Der Angesprochene wirkt reichlich abwesend. Mit einem Blick auf Tom
+meint er:^^ {INK 002}"Sagt, Mensch, gibt es bei Euch auch Zeiten, wo Ihr nur
+an eine bestimmte Frau denken k”nnt? Ach, egal..."]
+
+Block 160               NPC 7
+["Dsarii-ma, Dsarii-ma. Ich suche mal wieder nach meinen Prfungs|unterlagen.
+Diese jungen Dra haben nichts als Unsinn im Kopf, irgendwie schaffen sie es
+immer wieder... Entschuldigt mich."]
+
+Block 161               Tr raus
+[Diese Tr fhrt nach drauen.]
+
+Block 162
+[{FAHI}- S C R I P T S E Q U E N Z -{NORS}^^ Der flchtige M”rder wird hier im
+Haus gesehen, der bestochene Dji-Kas Kriis bezichtigt Fasiir, den Mord in
+Auftrag gegeben zu haben. Sira ist entsetzt und verschwindet.]
+
+Block 163
+[Beim Versuch {LEAD}{NAME}s, den Inhalt der Kiste zu untersuchen, wird der
+anwesende Lagerverwalter aufmerksam und sagt:]
+
+Block 164
+["Verehrte G„ste, dies ist kein Selbstbedienungsladen!^^Ich mu Euch bitten,
+unsere Besitztmer in Ruhe zu lassen!"]
+
+Block 165
+[In den Moosboden ist hier eine Steinfl„che eingelassen worden.]
+
+Block 166
+[Fasiir fhrt seine Besucher in ein Zimmer des Hauses, wo eine Steinfl„che im
+Mossboden zu sehen ist.]
+
+Block 167
+["Der sch”nste Teil der Magie ist sicherlich derjenige, welcher Dinge
+erschafft, und sei es auch nur etwas Allt„gliches.^^Seht her!"]
+
+Block 168
+["Driscoll, ich... Haben Sie das gesehen? Das ist doch..., ich meine... ^^ Ich
+schnappe ber! Der Baum ist real! Das war doch kein Taschen|spieler|trick!"]
+
+Block 169
+["Das ist schon 'n Ding, zugegeben! Die Jungs hier sind keine Scharlatane,
+soviel steht fest. Mit Wachstums|beschleu|nigern hat das jedenfalls nichts
+mehr zu tun."]
+
+Block 170
+["Ein K”nigreich fr ein paar Meger„te! Die k”nnen sich hier doch nicht ber
+die Naturgesetze lustig machen!"]
+
+Block 171
+["Ich sehe, zugegebenermaen mit Befriedigung, da ich einige Zweifel
+ausr„umen konnte.^^Ich hoffe, Ihr denkt nun etwas anders ber unsere Kunst.^^
+Es war mir eine Ehre, mit Euch zu sprechen, {LEAD}{NAME}. Schaut Euch ruhig
+noch etwas bei uns um, ich mu mich jedoch nun wieder meinen Aufgaben widmen."]
+
+Block 172
+["Vielen Dank jedenfalls fr diese beeindruckende Demonstration Eures K”nnens,
+Fasiir."]
+
+Block 173
+["Dsarii-ma, J„ger von Akiir's M”rder!^^Lat mich Euch versichern, da wir
+nichts mit der Ermordung Akiirs zu tun haben! Kriis, dieser Verr„ter, ist mit
+Sicherheit bestochen worden, um Fasiir, unser Oberhaupt, in Verdacht zu
+bringen!"]
+
+Block 174
+["Dsarii-ma. Ihr seid auf der Jagd nach Akiirs M”rder, nicht wahr? Findet die
+Wahrheit heraus, und Ihr werdet feststellen, da Fasiir und unsere Gilde
+unschuldig an dem Verbrechen sind!"]
+
+Block 175
+["Dsarii-ma, J„ger des M”rders. Ich kann Euch zu dem ganzen Vorfall leider
+nicht mehr sagen, als da wir niemals ein solches Verbrechen begehen wrden.
+Kriis, dieser Verr„ter, hat gelogen!"]
+
+Block 176
+[Tom und Rainer sowie ihr neuer Begleiter, Drirr, betreten das Gildenhaus der
+Dji-Kas-Magier zusammen mit zwei Stiriik, den hiesigen Polizisten. Sie
+begegnen als erstes Sira, der Tochter des ermordeten Akiir, die zu der Gilde
+der Dji-Kas "bergelaufen" ist.]
+
+Block 177       Drirr
+["Habt Ihr schon die Nachricht vom Tode Eures Vaters erhalten, Sira?"]
+
+Block 178       Sira
+["Ja. Ich... hatte nicht einmal die Gelegenheit, noch einmal mit ihm zu
+sprechen. Oh, G”ttin, es ist... ^^Wit ihr, wer hinter dem Mord steckt?"]
+
+Block 179       Drirr
+["Ich trauere mit Euch, Sira.^^Nein, wir haben noch keine Spur. Es hie aber,
+der flchtige M”rder sei in der N„he dieses Geb„udes gesehen worden."]
+
+Block 180
+[Fasiir, das Oberhaupt der Dji-Kas-Magier, kommt hinzu.]
+
+Block 181       Fasiir
+["Dsarii-ma. Ich habe bereits von dem Mord an Akiir erfahren. Was fhrt Euch
+zu uns?"]
+
+Block 182       Drirr
+["Der M”rder ist in der N„he Eures Gildenhauses gesehen worden. Drfen wir uns
+hier ein wenig umschauen?"]
+
+Block 183       Fasiir
+["Aber selbstverst„ndlich. Wir haben nichts zu verbergen.^^Kommt!"]
+
+Block 184
+[Pl”tzlich taucht im Gang ein Iskai in Begleitung eines Menschen auf.^^ {FAT
+}Es ist der flchtige M”rder!^^{NORS} Als der Iskai seiner Beobachter gewahr
+wird, wirft er ein leuchtendes Korn!]
+
+Block 185
+[Als das blendende Licht vergeht, ist nur noch der Iskai zu sehen, der M”rder
+ist verschwunden!]
+
+Block 186       Drirr
+["Ich glaube, der M”rder ist nach Sden verschwunden! Hinterher! Stiriik,
+nehmt diesen Komplizen fest!"]
+
+Block 187       Tom
+["Verdammt! Er ist wieder durch ein Fenster entkommen!"]
+
+Danach, wieder oben
+
+Block 188       
+[Drirr wendet sich an den Iskai, der die Blendung herbeigefhrt hat.]
+
+Block 189       Drirr
+["Nun gut. Wer seid Ihr und warum habt Ihr dem M”rder zur Flucht verholfen?"]
+
+block 190       Fasiir
+[{INK 001}Fasiir, der Chef der Dji-Kas, mischt sich ein:^^{INK 002} "Sein Name
+ist Kriis, er ist, er WAR, ein Angeh”riger unserer Gilde.^^Kriis, widerlicher
+Skorrek, wie kommst Du dazu, dem M”rder bei uns Einla zu gew„hren?"]
+
+Block 191       Kriis
+["Aber Fasiir, Ihr selbst habt mir doch den Auftrag gegeben! Und nun wollt Ihr
+mich opfern? Daraus wird nichts! Ihr selbst habt doch den M”rder bezahlt!"]
+
+Block 192       Fasiir
+["WAS?^^Bist Du von Sinnen? Drirr, glaubt Ihm kein Wort! Ich habe mit der
+Sache nichts zu tun!"]
+
+Block 193       Drirr
+["Ich kenne die Ursache der Feindschaft zwischen Euch, Fasiir, und dem
+verstorbenen Akiir recht gut. Ein Motiv fr den Mord habt Ihr allemal!"]
+
+Block 194       Fasiir
+["Nach all' den Jahren soll ich ausgerechnet jetzt..."]
+
+Block 195       Drirr
+["Stiriik, nehmt bitte Kriis und Fasiir in Gewahrsam, bis wir den M”rder
+gefat und die Wahrheit herausgebracht haben."]
+
+---Stiriik, Fasiir und Kriis hauen ab.
+
+Block 196       Sira
+["Drirr, ich m”chte mich zurckziehen. Ich kann nicht l„nger hierbleiben, ich
+mu allein sein und ber alles nachdenken."]
+
+---Sira haut dann ab.
+
+Block 197       Drirr
+[{INK 001}Drirr wendet sich an Tom und Rainer:{INK 002}^^ "Wir h„tten den
+M”rder fast gehabt, verdammt. In diesem Haus ist er jedenfalls nicht mehr.
+Vielleicht erwischen wir ihn noch irgendwo in der Stadt."]
+
+Block 198
+[Alle brauchen einige Zeit, um nach dem blendenden Licht wieder etwas zu
+erkennen.]
+
+Block 199          Tom
+["Gut, Drirr, gehen wir. Nur noch eins:^ Was ist das fr eine alte Geschichte
+zwischen Fasiir und dem ermordeten Akiir?"]
+
+Block 200          Drirr
+["Nun, kurz gesagt, Akiir war einst mit Fasiir's Schwester verheiratet. Auf
+einem Jagdausflug von Akiir, Fasiir und seiner Schwester, auf dem Akiir trotz
+schlechten Wetters bestand, kam sie ums Leben. Fasiir gab Akiir die Schuld an
+dem Tod seiner Schwester, und das ist die Wurzel ihrer alten
+Feindschaft.^^Lat uns nun die Stadt absuchen."]
+
+Block 201
+[{CNTR}Auf dem Schild steht:^^{INK 006} Westen: Rejira, die Heilerin]
+
+Block 202
+[{CNTR}Auf dem Schild steht:^^{INK 006} Lager der Dji-Kas. Verkauf nur von der
+7. bis zur 21. Stunde durch Stri Krai]
+
+Block 203
+[{CNTR}Auf dem Schild steht:^^{INK 006} Arbeitszimmer von Fasiir, Oberhaupt
+der Dji-Kas]

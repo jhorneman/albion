@@ -1,0 +1,839 @@
+ 
+Cutmaptextfile 
+--------------------------------------------------------------------- 
+ 
+Block 0            (frei) 
+[ ] 
+ 
+Block 1 
+[Ein Sicherungskasten.] 
+ 
+Block 2 
+[Ein Sessel.] 
+ 
+Block 3 
+[Eine Liege.] 
+ 
+Block 4 
+[Das Steuerpult fr den Atomreaktor.] 
+ 
+Block 5 
+[Ein Servicepanel. In der Mitte befindet sich eine Tastatur zur Eingabe eines
+Codes.] 
+ 
+Block 6 
+[Eine Steuerungskonsole.] 
+ 
+Block 7 
+[Eine Flugsteuerungskonsole.] 
+ 
+Block 8 
+[Ein Kontrollpult.] 
+ 
+Block 9 
+[Eine chemische Toilette.] 
+ 
+Block 10 
+[Ein Schrank.] 
+ 
+Block 11 
+[Eine Sple.] 
+ 
+Block 12 
+[Handtcher.] 
+ 
+Block 13 
+[Zahnputzzeug.] 
+ 
+Block 14 
+[Eine Anzeige fr die Korridor-šberwachung.] 
+ 
+Block 15 
+[Kontroll-Anzeigen.] 
+ 
+Block 16 
+[Ein Teil des Reaktors.] 
+ 
+Block 17 
+[F„sser mit Mll, Wasser, Gift- und Rohstoffen.] 
+ 
+Block 18 
+[Eine ausgeschaltete Konsole.] 
+ 
+Block 19 
+[Eine Lampe.] 
+ 
+Block 20 
+[Ein Teller.] 
+ 
+Block 21 
+[Ein Glas.] 
+ 
+Block 22 
+[Ein Becher.] 
+ 
+Block 23 
+[Ein Beh„lter.] 
+ 
+Block 24 
+[Eine Flasche.] 
+ 
+Block 25 
+[Eine Kanne.] 
+ 
+Block 26 
+[Eine Dose.] 
+ 
+Block 27 
+[Ein Gef„.] 
+ 
+Block 28 
+[Ein Pfeffer- und ein Salzstreuer.] 
+ 
+Block 29 
+[Sojasoe.] 
+ 
+Block 30 
+[Ein Topf.] 
+ 
+Block 31 
+[Eine kleine Dose.] 
+ 
+Block 32 
+[Eine Schaufel.] 
+ 
+Block 33 
+[Ein Spaten.] 
+ 
+Block 34 
+[Ein Schraubenschlssel.] 
+ 
+Block 35 
+[Ein Schraubenzieher.] 
+ 
+Block 36 
+[Eine Handkonsole.] 
+ 
+Block 37 
+[Ein PDA. (Personal Digital Assistent)] 
+ 
+Block 38 
+[Eine Zange.] 
+ 
+Block 39 
+[Besteck und ein Becher.] 
+ 
+Block 40 
+[Geschirr.] 
+ 
+Block 41 
+[Eine Automatik-Tre.] 
+ 
+Block 42 
+[Ein Shuttle.] 
+ 
+Block 43 
+[Container.] 
+ 
+Block 44 
+[Eine Dusche.] 
+ 
+Block 45 
+[Ein Fahrzeug.] 
+ 
+Block 46 
+[Bodenmarkierungen.] 
+ 
+Block 47 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 48 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 49 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 50 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 51 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 52 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 53 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 54 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 55 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 56 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 57 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 58 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 59 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 60 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 61 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 62 
+["Schon wieder dieser Traum. Mu das zehnte Mal sein; was soll das nur?^^ Kann
+mich auch nicht erinnern, je in Farbe getr„umt zu haben...^^ Na ja, werde mir
+noch ein wenig die Fe vertreten. Hoffentlich wird bald durchgegeben, wann
+ich das Shuttle zu unserem Vorausflug starten soll."] 
+ 
+Block 63 
+["Hallo Groer! Na, ausgeschlafen?"] 
+ 
+Block 64 
+["Christine! Sch”n, Dich zu sehen, Schatz!^ Ich fhle mich wie ger„dert. Du
+hattest mal wieder recht, gestern abend. H„tte doch bei Dir schlafen sollen.
+Ich hatte wieder diesen verrckten Traum. Er wird jedesmal... deutlicher."] 
+ 
+Block 65 
+["Ist schon verrckt. Du bist doch sonst kein Sensibelchen. Hat bestimmt was
+mit dem over-c - Sprung zu tun. Bleib' heute Nacht bei mir, und ich werde Dir
+die Alptr„ume schon austreiben!"] 
+ 
+Block 66 
+["Der Traum begann schon vorher, und es ist eigentlich auch kein Alptraum. Er
+ist nur so intensiv!^^ Ach egal, was soll's. Ich werde mal 'ne Runde drehen.
+Vielleicht treffe ich K„pt'n Brandt und bekomme heraus, wann ich mit Snoopy
+starten soll."] 
+ 
+Block 67 
+["Snoopy? Hast Du denn nicht...? Junge, Du mut einen guten Schlaf haben. Die
+Explosion war durch das ganze Segment zu spren!"] 
+ 
+Block 68 
+["Explosion? Mach's nicht so spannend! Von was redest Du, Chris? Was ist mit
+Snoopy?"] 
+ 
+Block 69 
+["Der Inspektor hat w„hrend des Sprunges an der over-c - Comanlage gesessen.
+Das Ding hat sich berladen und ist f”rmlich explodiert. Snoopy's Bestandteile
+waren im ganzen Raum zu finden, heit es."] 
+ 
+Block 70 
+["Was fr'n Hammer! Junge, das mu ich erstmal verdauen! Dann ist Hofstedt nun
+der einzige Regierungs|beauftragte an Bord."] 
+ 
+Block 71 
+["Ja, ich habe geh”rt, da Du den Vorausflug nun mit ihm anstatt Snoopy
+unternehmen sollst."] 
+ 
+Block 72 
+["Der Tag f„ngt ja hervorragend an. Na ja, Hofstedt ist ganz in Ordnung, und
+an meinem Flugplan „ndert sich durch den Unfall sicher nichts. Ich werde mal
+eine Runde mit Joe ber die Sache quatschen."] 
+ 
+Block 73 
+["Dein Kumpel ist heute im Nordosten des Segmentes eingeteilt, in der N„he des
+Zugangs zum Comraum.^^ O.K. Ich werde mich auch mal auf'n Weg machen. Hab'
+noch viel Arbeit. Bis dann, Ser."] 
+ 
+Block 74 
+["Tsch, Christine."] 
+ 
+Block 75 
+[Diese Tr ist verschlossen.] 
+ 
+Block 76 
+["hem, Driscoll: Sei mir nicht b”se, aber ich h„tte jetzt gern etwas
+Privatsph„re. Bitte bleib' drauen."] 
+ 
+Block 77 
+["Hier gibt es nichts zu sehen. Gehen Sie bitte weiter."] 
+ 
+Block 78 
+[{INK 001}Dies ist Rainer Hofstedt, Physiker und Xenobiologe und
+Aufsichts|beauf|tragter der Regierung. Aufgeregt beginnt er ein Gespr„ch.] 
+ 
+Block 79 
+["Driscoll! Gut, da ich Sie treffe! Haben sie schon vom Tod Inspektor Beegles
+geh”rt?"] 
+ 
+Block 80 
+["Hallo, Hofstedt. Ja, meine Lebensgef„hrtin hat mir gerade von der Sache
+berichtet. Mu ja ein scheulicher Anblick gewesen sein!"] 
+ 
+Block 81 
+["Dieser sture britische Dicksch„del! Er war zwar kein Techniker, aber da der
+Betrieb der Comanlage w„hrend des over-c - Sprunges nicht problemlos ist,
+h„tte er eigentlich wissen mssen. Diese ganze šberlichttechnik ist noch lange
+nicht v”llig unter Kontrolle. Der arme Teufel!"] 
+ 
+Block 82 
+["Das macht Sie nun zum einzigen Regierungs|repr„sentanten an Bord, nicht
+wahr?"] 
+ 
+Block 83 
+["Der einzige Schnffler, ja. Erinnern Sie mich blo nicht daran!^^ Wie dem
+auch sei: Ich hatte gerade ein Gespr„ch mit Kapit„n Brandt. Er will den
+Vorausflug trotzdem durchfhren, mit meiner Wenigkeit anstelle von Beegle.^^
+Sieht aus, als h„tten Sie einen neuen Passagier, Driscoll."] 
+ 
+Block 84 
+["Ich m”chte nicht piet„tlos erscheinen, aber dem Shuttle ist es gleich,
+welche zwei Personen es bef”rdert. Von mir aus kann der Flug planm„ig
+stattfinden."] 
+ 
+Block 85 
+["Ich mu zugeben, da ich mich sehr auf den Flug freue. Der Abflug sollte in
+den n„chsten Tagen stattfinden. Wir mssen wohl auf die Durchsage des Kapit„ns
+warten."] 
+ 
+Block 86 
+["So ist es.^ Wir sehen uns sicher noch vorher. Bis dann, Hofstedt!"] 
+ 
+Block 87 
+["Ja, bis dahin, Driscoll."] 
+ 
+Block 88        Secu 1 
+["Gr' Sie, Driscoll. Viel Glck bei ihrem Flug."] 
+ 
+Block 89        Secu 2 
+[{INK 001}Der Sicherheitsmann wirft Tom nur einen mimutigen Blick zu. Er
+antwortet nicht.] 
+ 
+Block 90        Tech 1 
+["Hallo, Driscoll! Habe geh”rt, Du hast 'nen neuen Passagier, jetzt, wo sie
+den Inspektor von der Wand gekratzt haben.^Ich drck' Dir jedenfalls die
+Daumen fr den Flug."] 
+ 
+Block 91        Tech 2 
+["Hi, Tom. Sorry, bin 'n bichen in Eile. Voller Dienstplan! Bis sp„ter."] 
+ 
+Block 92        Tech 3 
+["Hallo, Tom. M”chte zu gern wissen, wie es jetzt im Comraum aussieht, wo es
+Snoopy erwischt hat. Zu bl”d, das die Secus davor Wache schieben."] 
+ 
+Block 93        News Vormeldung1 
+[{INK 001}Tom versucht, die letzten Nachrichten von der Konsole abzurufen. Vor
+den Meldungen erscheint folgendes:{TECF}^^ {CNTR}{INK 002}***Videodaten nicht
+verfgbar***^ ***Comverbindung nicht aktiv***^^ Textmodus aktiviert.] 
+ 
+Block 94 
+["Hallo, Driscoll. Na, noch einen Blick auf Ihr Shuttle werfen? Ist alles in
+bester Ordnung mit dem Ding."] 
+ 
+Block 95        News 1 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Europ„ische Union: Der 14. Versuch der
+Einfhrung einer ein|heit|lichen, offi|ziellen W„hrung ist am Widerstand
+Deutschlands gescheitert."] 
+ 
+Block 96 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "McCartney-Erben rufen Inter|nationalen
+Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens an den
+McCartney-Erben die letzten zusammen|h„ngenden Regen|wald|gebiete? Besitz der
+Erben|gemein|schaft soll durch Eingreifen der Schutztruppen gesichert werden,
+fordern einige Staaten."] 
+
+Block 97
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Rom. Papst Johannes Paul der 14.
+ver”ffentlichte heute seine Enzyklika zum Schutz des ungeborenen Lebens. Darin
+bekr„ftigt der Vatikan seine Standpunkte gegenber der Geburtenkontrolle und
+der Frage der Abtreibung. Auch weiterhin haben der Enzyklika zufolge Werden
+und Schutz des ungeborenen Lebens absoluten Vorrang vor 'individualistischen
+Partikularinteressen', wie es in dem Papier heit. Abtreibung sei auch
+weiterhin nur erlaubt, wenn das Leben der Mutter nicht anders erhalten werden
+kann. Die Schwangerschaftsverhtung bezeichnete der Papst als
+'verdammenswerten Eingriff in die biologischen Hoheitsrechte Gottes'. Auch
+eine st„ndig wachsende šberbev”lkerung k”nne kein Grund sein, von diesem
+Zivilisationsprinzip abzurcken."] 
+
+Block 98 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Brssel. Der Innenminister der
+Vereinigten Staaten von Europa, John McDermott, bezeichnete die jngste
+Enzyklika des Vatikans als 'weitere, fr diese Sekte kennzeichnende
+Verleugnung aller Realit„ten dieser Welt.' In diesem Zusammenhang wies
+McDermott auf die st„ndig steigenden Mitgliederzahlen religi”ser Sekten hin,
+hinter denen in der Regel nichts anderes stehe, als der Versuch, mit Hilfe von
+Gehirnw„sche an die Verm”gen der Mitglieder zu gelangen. Erschreckend sei
+insbesondere die hohe Anzahl Jugendlicher und junger Erwachsener, die Opfer
+dieser Methoden wrden. McDermott kndigte eine versch„rfte Beobachtung des
+Vatikans durch europ„ische Agenten an. Insbesondere wolle man die enorm
+angewachsene Rstungsindustrie des Vatikan unter Beobachtung halten. In
+jngster Zeit vermehren sich die Anzeichen, da der Vatikan auch ber
+biologische Waffensysteme verfgt."] 
+
+Block 99 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Stuttgart-Tokio. Ein Sprecher des
+DDT-Konzerns trat heute an die ™ffentlichkeit, um erstmals auf Gerchte zu
+reagieren, ein Fabrikschiff des Konzerns, die 'Toronto', sei auf einer Mission
+im All verschollen. Tatsache sei, so der Konzernsprecher, da die Funkanlage
+des Schiffs ausgefallen sei. Das Schiff selbst sende allerdings weiterhin
+Ortungssignale von einem Wstenplanet namens Nugget im Sektor HR-13- 4198. Man
+gehe davon aus, da die Systeme des Schiffes normal arbeiten und in wenigen
+Jahren die ersten Frachtschiffe der Toronto auf der Erde eintreffen werden.
+Eine Bergungsmission sei deshalb unn”tig und k„me fr den mit absoluter
+Sicherheit ausschliebaren Katastrophenfall auch zu sp„t, da eine Reise zu
+diesem Planeten mindestens drei Jahre in Anspruch n„hme. An der B”rse erholte
+sich in Folge dieser Pressemitteilung der Kurs der Wert der DDT-Aktien nur
+wenig."] 
+
+Block 100
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Straburg. Auf der Jahrestagung
+europ„ischer Sozialp„dagogen wurde heute eine Resolution verabschiedet, in der
+die europ„ische Staatsregierung aufgefordert wird, das Beten mit
+Minderj„hrigen ab sofort unter Strafe zu stellen. Es k”nne nicht angehen, so
+die 1. Vorsitzende der ESP, Annagret Bergmann-Lampe, da wehrlose Kinder den
+oft brutalen Weltuntergangs- oder Erl”sungsszenarien beinahe aller Religionen
+schutzlos ausgeliefert seien. In jngster Zeit, so die Vorsitzende, sei es an
+europ„ischen Schulen vermehrt zu religi”s motivierten Graffitos gekommen. Es
+reiche nicht aus, so Bergmann-Lampe, die šbelt„ter hart zu bestrafen. Man
+msse sie vielmehr als Suchtkranke erkennen und behandeln."] 
+
+Block 101 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Genf. Die Auenminister der
+europ„ischen, amerikanischen und asiatischen Staatengemeinden trafen sich
+heute zu ihrer halbj„hrlichen Routinekonferenz ber die weitere friedliche
+Zusammenarbeit, RwfZ. Unbersehbar im Vordergrund stand dabei der Handelskrieg
+zwischen den Amerikanern und Asien. Gegenseitige Vorwrfe ber zu hohe
+Schutzz”lle pr„gten das Bild. Die Drohung des asiatischen Kaisers, man werde
+das gemeinsam geplante Tunnelprojekt unter der Beringsee platzen lassen, war
+aber nicht Thema der Tagung. Mit einer gemeinsamen Abschluerkl„rung wird
+nicht vor morgen abend gerechnet."] 
+
+Block 102 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT}"Den diesj„hrigen Gatespreis fr
+Plasmaphysik errang der Chinese Huo Wong Gang fr eine bahnbrechende Arbeit
+auf dem Gebiet der Grundlagenforschung. Wong Gang erhielt den mit 470
+Millionen Credits dotierten Preis als erster Chinese. Der Gatespreis wird seit
+154 Jahren an herausragende Wissenschaftler und Gesch„ftsleute verliehen."] 
+
+Block 103 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Eine Meldung vom Sport. Golf. Im
+Nationscupspiel zwischen Irak und den USA steht die Partie nach 3 von 5 Runden
+2:1 fr den hohen Favoriten aus Amerika."] 
+
+Block 104 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Die Erdbebenwarnung fr morgen, den 9.
+September 2230. Im Bereich des Sankt Andreas Grabens kommt es zu keinen
+nennenswerten Erschtterungen. Nach dem groen Beben vom vergangenen Jahr
+bauen sich erneute Spannungen zwischen der amerikanischen Festlandsplatte und
+der pazifischen Platte nur sehr langsam wieder auf. Lediglich im Bereich von
+Los Angeles kann es zu einigen kleineren Erschtterungen kommen, die
+allerdings den Wert von 3.5 auf der nach oben offenen Richterskala nicht
+berschreiten drften. Ruhig verhalten sich auch die japanischen
+Kstenregionen, dort ist mit keinen Beben zu rechnen. Ein wenig unruhig k”nnte
+es aber im n”rdlichen Mittelmeer, westlich von Athen werden. Die Messungen der
+internationalen Bebenwarten rechnen mit einem Beben etwa der St„rke 5, das
+allerdings kaum Auswirkungen auf die griechische Provinzhauptstadt haben wird."] 
+
+Block 105 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Im Tarifkonflikt zwischen
+Raumfahrergewerkschaft und den supranationalen Raumzentren konnte auch heute
+keine entscheidende Ann„herung der unterschiedlichen Positionen erreicht
+werden. Die Arbeitnehmervertreter drohten mit Warnstreik, wenn die Arbeitgeber
+nicht bis zur n„chsten Verhandlungsrunde ein akzeptables Angebot vorgelegt
+h„tten. In der Hauptsache geht es in diesem Konflikt um eine Beteiligung der
+raumfahrenden Wissenschaftler an den durch ihre Experimente entstandenen
+Patenten. W„hrend die Arbeitgeberseite jede Beteiligung kategorisch 'in den
+Bereich der Utopie' verweist, so ein Firmensprecher, rechnet die Gegenseite
+vor, da alleine dieses Jahr aus den Patenten von im Weltraum erzielten
+Forschungsergebnissen 400 Milliarden Credits Tantiemen verteilt wrden. 'Von
+diesem Kuchen', so ein Gewerkschaftssprecher, 'h„tten wir gerne ein Stckchen
+ab.'"] 
+
+Block 106 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Nrnberg. Der Pr„sident der
+europ„ischen Anstalt fr Arbeit, Jagoda, legte heute seinen Bericht fr den
+Monat August vor. Demnach waren im August 76 Millionen Menschen in Europa ohne
+Arbeit, das entspricht einer Arbeitslosenquote von 16,7%. Der Sprecher der
+sozial”kologischen Opposition im Europaparlament, Guiseppe Piscator,
+verurteilte in diesem Zusammenhang die, so Piscator, hemmungslos unsoziale
+Politik der Unionsregierung, die den supranationalen Konzernen Rekordgewinne
+gestatte und gleichzeitig einer zunehmenden Verslumung der europ„ischen
+Grost„dte tatenlos zus„he. W”rtlich sagte Piscator: 'Ganz offensichtlich hat
+die Regierung ein pers”nliches Interesse daran, da in Europa bald
+amerikanische Verh„ltnisse herrschen. Die Opposition wird diesem Rckfall in
+den Thatcher- Kapitalismus nicht tatenlos zusehen!'"] 
+
+Block 107 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Am morgigen Montag beginnt in weiten
+Teilen Europas wieder die Schule nach den groen Sommerferien. Das
+Unionsverkehrsministerium bat heute deshalb alle Indipiloten, in den n„chsten
+Tagen besonders rcksichtsvoll zu fliegen, da wie jedes Jahr viele
+Erstkl„ssler unterwegs seien. Seien Sie also bitte vorsichtig."] 
+
+Block 108 
+["{TECF}NEWSFLASH (Textmodus):^^{LEFT} 3.Oktober und kein Ende. Der Vorschlag
+der Arbeitgeberverb„nde, den deutschen Nationalfeiertag 3.Oktober zugunsten
+der allgemeinen Ausbildungspflichtversicherung zu streichen, st”t weiterhin
+auf Widerstand. Heute meldete sich die Sudetendeutsche Landsmannschaft zu
+Wort, deren Vorsitzender, Herbert Hupka VI., davor warnte, diesen Tag aus dem
+Ged„chtnis der Deutschen zu streichen, bevor das Sudetenland nicht wieder
+deutsch sei. Gestern hatte schon die deutsche Landesregierung Bedenken gegen
+die Pl„ne ge„uert. Eine Reaktion der Unionsregierung steht noch aus."] 
+ 
+Block 109       News 1 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Die Erdbebenwarnung fr morgen, den 9.
+September 2195. Im Bereich des Sankt Andreas Grabens kommt es zu keinen
+nennenswerten Erschtterungen. Nach dem groen Beben vom vergangenen Jahr
+bauen sich erneute Spannungen zwischen der amerikanischen Festlandsplatte und
+der pazifischen Platte nur sehr langsam wieder auf. Lediglich im Bereich von
+Los Angeles kann es zu einigen kleineren Erschtterungen kommen, die
+allerdings den Wert von 3.5 auf der nach oben offenen Richterskala nicht
+berschreiten drften. Ruhig verhalten sich auch die japanischen
+Kstenregionen, dort ist mit keinen Beben zu rechnen. Ein wenig unruhig k”nnte
+es aber im n”rdlichen Mittelmeer, westlich von Athen werden. Die Messungen der
+internationalen Bebenwarten rechnen mit einem Beben etwa der St„rke 5, das
+allerdings kaum Auswirkungen auf die griechische Provinzhauptstadt haben wird."] 
+ 
+Block 110 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT}"Den diesj„hrigen Gatespreis fr
+Plasmaphysik errang der Chinese Huo Wong Gang fr eine bahnbrechende Arbeit
+auf dem Gebiet der Grundlagenforschung. Wong Gang erhielt den mit 470
+Millionen Credits dotierten Preis als erster Chinese. Der Gatespreis wird seit
+154 Jahren an herausragende Wissenschaftler und Gesch„ftsleute verliehen."] 
+ 
+Block 111       News 1 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Rom. Papst Johannes Paul der 14.
+ver”ffentlichte heute seine Enzyklika zum Schutz des ungeborenen Lebens. Darin
+bekr„ftigt der Vatikan seine Standpunkte gegenber der Geburtenkontrolle und
+der Frage der Abtreibung. Auch weiterhin haben der Enzyklika zufolge Werden
+und Schutz des ungeborenen Lebens absoluten Vorrang vor 'individualistischen
+Partikularinteressen', wie es in dem Papier heit. Abtreibung sei auch
+weiterhin nur erlaubt, wenn das Leben der Mutter nicht anders erhalten werden
+kann. Die Schwangerschaftsverhtung bezeichnete der Papst als
+'verdammenswerten Eingriff in die biologischen Hoheitsrechte Gottes'. Auch
+eine st„ndig wachsende šberbev”lkerung k”nne kein Grund sein, von diesem
+Zivilisationsprinzip abzurcken."] 
+
+ 
+Block 112 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Im Tarifkonflikt zwischen
+Raumfahrergewerkschaft und den supranationalen Raumzentren konnte auch heute
+keine entscheidende Ann„herung der unterschiedlichen Positionen erreicht
+werden. Die Arbeitnehmervertreter drohten mit Warnstreik, wenn die Arbeitgeber
+nicht bis zur n„chsten Verhandlungsrunde ein akzeptables Angebot vorgelegt
+h„tten. In der Hauptsache geht es in diesem Konflikt um eine Beteiligung der
+raumfahrenden Wissenschaftler an den durch ihre Experimente entstandenen
+Patenten. W„hrend die Arbeitgeberseite jede Beteiligung kategorisch 'in den
+Bereich der Utopie' verweist, so ein Firmensprecher, rechnet die Gegenseite
+vor, da alleine dieses Jahr aus den Patenten von im Weltraum erzielten
+Forschungsergebnissen 400 Milliarden Credits Tantiemen verteilt wrden. 'Von
+diesem Kuchen', so ein Gewerkschaftssprecher, 'h„tten wir gerne ein Stckchen
+ab.'"] 
+ 
+Block 113       News 1 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Genf. Die Auenminister der
+europ„ischen, amerikanischen und asiatischen Staatengemeinden trafen sich
+heute zu ihrer halbj„hrlichen Routinekonferenz ber die weitere friedliche
+Zusammenarbeit, RwfZ. Unbersehbar im Vordergrund stand dabei der Handelskrieg
+zwischen den Amerikanern und Asien. Gegenseitige Vorwrfe ber zu hohe
+Schutzz”lle pr„gten das Bild. Die Drohung des asiatischen Kaisers, man werde
+das gemeinsam geplante Tunnelprojekt unter der Beringsee platzen lassen, war
+aber nicht Thema der Tagung. Mit einer gemeinsamen Abschluerkl„rung wird
+nicht vor morgen abend gerechnet."] 
+ 
+Block 114 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "McCartney-Erben rufen Inter|nationalen
+Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens an den
+McCartney-Erben die letzten zusammen|h„ngenden Regen|wald|gebiete? Besitz der
+Erben|gemein|schaft soll durch Eingreifen der Schutztruppen gesichert werden,
+fordern einige Staaten."] 
+ 
+Block 115       News 1 
+[{TECF}NEWSFLASH (Textmodus):^^{LEFT} "Europ„ische Union: Der 14. Versuch der
+Einfhrung einer ein|heit|lichen, offi|ziellen W„hrung ist am Widerstand
+Deutschlands gescheitert."] 
+ 
+Block 116       
+[Eine Konsole zum Abruf von Nachrichten.] 
+ 
+Block 117 
+[Ein riesiges Schott.] 
+ 
+Block 118 
+["Guten Abend, Tom! Komm rein und la uns einen gemtlichen Abend verbringen."] 
+ 
+Block 119 
+[In dieser Nacht bleibt Tom von seinem Traum unbehelligt...^^ Einige Zeit
+sp„ter, Tom verl„t Christines Kabine.] 
+ 
+Block 120 
+[Dies ist die Tr zu Christines Kabine. Sie ist im Moment nicht anwesend.] 
+ 
+Block 121 
+[Dies ist die Tr zu Christines Kabine.^ Chris scheint anwesend zu sein.] 
+ 
+Block 122 
+[{CNTR}An die Tr klopfen?] 
+ 
+Block 123 
+["Hallo, Tom! Sch”n, Dich zu sehen. Komm rein, wir machen es uns gemtlich."] 
+ 
+Block 124 
+[Eine Tastatur zur Eingabe von Zahlencodes.] 
+ 
+Block 125 
+[{TECF}{CNTR}FALSCHER CODE. ™FFNUNG VERWEIGERT.] 
+ 
+Block 126 
+[{TECF}{CNTR}™FFNUNGSCODE EINGEBEN:] 
+ 
+Block 127 
+[Tom steigt in die Service-Ebene hinab.] 
+ 
+Block 128 
+[{TECF}{CNTR}CODE KORREKT. ™FFNE SERVICEPANEL.] 
+ 
+Block 129 
+[Die Leiter fhrt hinab in die Service-Ebene.] 
+ 
+Block 130 
+[Dies ist tats„chlich der Comraum! Tom sieht sich vorsichtig um, aber niemand
+ist hier. In der Luft h„ngt der Geruch nach verschmorter Elektronik.] 
+ 
+Block 131 
+[Das sind also die šberreste der Comanlage. Die Explosion mu in der Tat
+verheerend gewesen sein.] 
+ 
+Block 132 
+[Tom will sich gerade abwenden, da f„llt sein Blick auf einen Gegenstand, der
+unter der zerst”rten Konsole liegt. Es ist eine Waffe!] 
+ 
+Block 133 
+["Wie um alles in der Welt kommt die Kanone hierher? Auer fr Secus sind
+Waffen an Bord strengstens verboten!^^ Ein interessanter Fund jedenfalls..."] 
+ 
+Block 134 
+[Die zerst”rte Comanlage. Es ist nichts weiter Interessantes dort zu finden.] 
+ 
+Block 135 
+[Die zerst”rte Comanlage. Darunter liegt etwas!] 
+ 
+Block 136 
+[Scherben der zerst”rten Comanlage.] 
+ 
+Block 137 
+[Auf den Gesichtern der Sicherheitsoffiziere ist erst Verblffung, dann Zorn
+zu sehen, als sie jemanden aus dem von ihnen bewachten Bereich spazieren sehen!] 
+ 
+Block 138 
+["Bleiben Sie stehen, Driscoll! Wie kommen Sie in den abgesperrten Bereich?^^
+Rhren Sie sich nicht, wir werden eine Leibesvisitation durchfhren!"] 
+ 
+Block 139 
+[Colonel Priver tastet Tom ab...] 
+ 
+Block 140 
+["In Ordnung. Sie k”nnen gehen. Aber das wird Folgen fr Ihre Personalakte
+haben, das kann ich ihnen versprechen!"] 
+ 
+Block 141 
+["Eine Waffe! Driscoll, sind Sie wahnsinnig? Das wird Folgen fr Ihre
+Personalakte haben, darauf k”nnen Sie sich verlassen!^^ Verziehen Sie sich,
+Sie werden von uns h”ren!"^^{INK 001} Colonel Priver hat die Waffe konfisziert!] 
+ 
+Block 142 
+["Schon wieder Sie! Sagen Sie, suchen Sie rger, oder was?"] 
+ 
+Block 143 
+["Bleiben Sie ruhig!"^^{INK 001} Colonel Priver durchsucht Tom grndlich.] 
+ 
+Block 144 
+[Dies ist Toms Aufbewahrungsort fr private Gegenst„nde.] 
+ 
+Block 145 
+[Dies war der Raum Inspektor Beegles.] 
+ 
+Block 146 
+[In diesem Schrank sind eine Menge Patronen!] 
+ 
+Block 147 
+[Stimdrinks. Eine abgestimmte Mischung hochwirksamer Medikamente.] 
+ 
+Block 148 
+[Spezialwerkzeuge dieser Art lassen sich hervor|ragend zum Knacken von
+mecha|nischen Schl”ssern zweck|entfremden!] 
+ 
+Block 149 
+[Hier ist Nahrung in Form von Konzentrat-Riegeln zu finden.] 
+     
+Block 150 
+[Eine defekte Leuchtstoffr”hre.] 
+ 
+Block 151 
+[Dies ist der Shuttlehangar der TORONTO. Von hier aus werden alle Flge der
+kleinen Raumfahrzeuge gestartet.] 
+ 
+Block 152 
+[{INK 001}Eine Lautsprecherdurchsage hallt durch die G„nge des Schiffes:^^
+{INK 002}"Durchsage fr Pilot Driscoll: Shuttle zum Start vorbereitet.
+Startaufruf folgt in Krze."] 
+ 
+Block 153 
+[{INK 001}Eine Lautsprecherdurchsage:^^{INK 002} "Durchsage fr Pilot
+Driscoll: Bitte melden Sie sich zum Start des Erkundungsfluges."] 
+ 
+Block 154 
+[{INK 001}Eine Lautsprecherdurchsage:^^{INK 002} Letzter Aufruf an Pilot
+Driscoll. Finden Sie sich sofort zum Start im Shuttlehangar ein!] 
+ 
+Block 155 
+["Also gut. Ich mu mich wohl auf den Weg machen."] 
+ 
+Block 156 
+[Tom l„uft mit eiligen Schritten zum Shuttlehangar. Er wird dort bereits
+erwartet.] 
+ 
+Block 157 
+[{FAHI}{CNTR}Nun folgt eine dicke Scriptsequenz: Tom & Rainer fliegen los und
+strzen ab!] 
+ 
+Block 158 
+[Im Shuttlehangar wird Tom bereits erwartet. Schnell l„uft er zu dem
+vorbereiteten Shuttle.] 
+ 
+Block 159 
+[Dieses Schott fhrt zu den Kabinen des Fhrungspersonals und des Kapit„ns.
+Der Zutritt ist fr andere Crewmitglieder nicht m”glich.] 
+ 
+Block 160 
+[Hier geht es in das Segment der TORONTO, das die Krankenstation und die
+Unterknfte des Sicherheits|personals enth„lt. Regul„re Besatzungs|mitglieder
+haben hier keinen Zutritt.] 
+ 
+Block 161 
+["Aha, endlich ist es soweit. Ich sollte nicht vergessen, alles mitzunehmen,
+was ich auf diesem Flug dabei haben m”chte, wenn es losgeht."] 
+ 
+Block 162 
+[Yep.] 
+ 
+Block 163 
+[Dies ist der Shuttlehangar.]
+ 
+Block 164 
+[Das Schott zur Kommandobrcke. Nur wenige Besatzungs|mitglieder haben hier
+Zutritt, Tom geh”rt nicht zu ihnen.] 
+ 
+Block 165 
+[Dies ist die Messe des Schiffes, Treffpunkt und Verpfleg|ungsraum fr die
+Besatzung.] 
+ 
+Block 166 
+[Vor dem Eingang zum Comraum, wo die Kommuni|kations|anlagen des Schiffes
+unter|gebracht sind, stehen zwei Sicherheits|beauftrage Wache.] 
+ 
+Block 167 
+[Hinter der unteren Tr ist der Raum, in dem Joe, ein alter Freund Toms,
+gerade arbeitet.] 
+ 
+Block 168 
+[Zum Start des Shuttlefluges melden? {BLOK000}Ja, starten {BLOK001}Nein, noch
+warten] 
+ 
+Block 169 
+[Tom geht zu einer Konsole und gibt seine Startbereitschaft durch.^^ Kurz
+darauf im Shuttlehangar...] 
+ 
+Block 170 
+[Tom beschliet, den Aufruf vorerst zu ignorieren.] 
+ 
+Block 171 
+[{CNTR}{INK 002}Bitte bedenken Sie: dies ist eine Preview-Version. Wir bitten,
+Bugs, fehlende Teile und mangelnde Feinabstimmung zu entschuldigen.^^^^
+{JUST}{INK 001} KURZINFO FšR PREVIEWVERSION:^^ Sie sind TOM DRISCOLL, ein
+Shuttlepilot an Bord der TORONTO. Die TORONTO ist ein Fabrik|raumschiff eines
+irdischen Konzerns, dessen Aufgabe der Abbau von Rohstoffen in groem Stil
+ist. Das Ziel der TORONTO ist ein Planet, der NUGGET genannt wurde, eine
+Wstenwelt mit groen Rohstoffvorkommen.^^ Sie sollen in Krze mit einem
+Regierungs|kontolleur, Mr. BEEGLE, genannt SNOOPY, einen Vorausflug in einem
+kleinen Shuttle unternehmen, um den Zielplaneten vorab n„her zu
+untersuchen.^^{LEFT} Ihnen n„her bekannte Personen:^ CHRISTINE - Technikerin
+und ihre derzeitige Partnerin.^ RAINER HOFSTEDT - Wissenschaftler und zweiter
+Regierungs|beauftragter an Bord.^ JOE - Techniker und ein alter Freund von
+ihnen.^^{JUST} Dieses Szenario dient zur Einfhrung in die Handlung, es gibt
+noch keine K„mpfe. Sprechen Sie mit Personen, um n„here Informationen zu Ihrer
+Situation zu erhalten. Es gibt auch ein Puzzle zu l”sen; bei Erfolg kann man
+einen Gegenstand behalten, der einem das sp„tere Vorankommen erleichtert.^^
+Die Handlung setzt direkt nach dem Intro (siehe CD) ein. TOM erwacht aus
+seinem seltsamen Traum und beginnt seinen Tag.^^^ {CNTR}LOS GEHTS!] 
+ 
+Block 172 
+[Als Tom auf den Gang hinaustritt, sieht er von rechts Christine, seine
+Lebens|gef„hrtin, auf sich zukommen.^^Freudig geht er ihr entgegen, um mit ihr
+zu sprechen.] 
+ 
+Block 173 
+[{FAHI}- S C R I P T S E Q U E N Z - {NORS}^^ Hier wird eine Scriptsequenz
+beginnen, die den Flug nach Albion, den Absturz, die ersten Schritte auf dem
+Planeten, die Explosion des Shuttles und das Erwachen bei den Iskai darstellt.] 
+ 
+Block 174            Kapit„n 
+["Driscoll, es ist alles bereit fr ihren Flug."] 
+ 
+Block 175            AI 
+["Alle erforderlichen Daten zur Kursbestimmung stehen Ihnen in den Systemen
+des Shuttles zur Verfgung, Mister Driscoll.^^W„hrend des Fluges werde ich
+direkt mit Ihnen kommunizieren, um Ihnen die Auswertung der bertragenen Daten
+sofort mitteilen zu k”nnen."] 
+ 
+Block 176            Kapit„n 
+["Sie kennen Ihren Auftrag: Durchfhrung von Mereihen im Orbit und vor Ort
+zur Verifizierung der Sondendaten. Bringen Sie Mister Hofstedt gut hinunter,
+Driscoll.^ Viel Glck."] 
+ 
+Block 177            Tom 
+["Danke, Sir. Ich werde mich bemhen.^^Sind Sie bereit, Hofstedt?"] 
+ 
+Block 178 
+["Aber sicher! Geben Sie Gas, Driscoll!"] 
+ 
+Block 179 
+[Neben dem Shuttle trifft Tom auf Kapit„n Brandt sowie den Androidenk”rper von
+Ned, dem AI-System des Schiffes, und natrlich auf Rainer Hofstedt, seinen
+Passagier.] 
+ 
+Block 180 
+[Tom bringt das Shuttle sicher aus dem riesigen Mutterschiff.^^Das kleine
+Raumfahrzeug hat einen kr„ftigen Antrieb, und so sind die beiden schon nach
+ein paar Stunden in der N„he des Zielplaneten...] 
+ 
+Block 181 
+["Am Ende dieses Ganges dort oben arbeitet Joe, das alte Haus, im
+Augenblick.^^Ich sollte ihn bald mal besuchen."]
+
+Block 182          Fr Demoversion
+[{CNTR}{INK 003}Willkommen zum^^^
+{INK 006}{BIG }ALBION-DEMO{NORS}{INK 003}]
+
+Block 183
+[{INK 003}Dieses Demo enth„lt die
+unver„nderten ersten beiden Szenarien des kompletten Spiels.^^In Albion finden
+sich sehr viele unterschiedliche Features wie z.B. Kampfzauber, H„ndler und
+Trainer, die aber erst nach einiger Spielzeit auftauchen. Wollen Sie schnell in
+ein paar K„mpfe und einen 3D-Dungeon hineinschnuppern, k”nnen Sie den
+Spielstand "DEMO" laden: Westlich von Ihnen ist ein H”hleneingang, ein Stck
+im Sdwesten eine Stadt. Probieren Sie im Kampf mal den Feuerring aus, den
+Rainer Hofstedt bei sich hat!
+^^Zur Steuerung:^STEUERN Sie, indem Sie die linke Maustaste
+drcken; wenn Sie etwas TUN wollen, drcken Sie die rechte Maustaste oder
+halten Sie sie gedrckt.^^
+Zur Story:^Sie sind Tom Driscoll, Pilot an Bord
+eines riesigen Fabrik|raum|schiffes, der TORONTO. Ihr Job ist es, mit einem
+Regierungs|beamten einen Voraus|flug zum Zielplaneten an Bord eines kleinen
+Shuttles zu unternehmen. Sprechen Sie mit den Menschen in der TORONTO, um mehr
+ber Ihre Situation zu erfahren. TIP: Es gibt in diesem ersten Szenario eine
+Waffe und Munition zu finden, die Ihnen sp„tere K„mpfe erleichtern.^^Viel Spa
+beim Antesten von Albion. Sie k”nnen brigens Ihren Demo-Spielstand
+weiterfhren, wenn Sie Albion kaufen sollten (einfach den Spielstand in das
+neue SAVES - Verzeichnis kopieren).^^ Das komplette Spiel ist jetzt
+erh„ltlich!]

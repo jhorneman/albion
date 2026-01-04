@@ -1,0 +1,119 @@
+NPC 103: Giria, Toms "Krankenschwester"
+NPC: Giria, Toms "Krankenschweseter" 
+=======================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr. y
+OFF     = Standard MC-S„tze deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+
+Block 0
+[{BLOK000}"Nun, wenn ich nicht gerade versuche, bel zugerichtete Menschen
+wieder in die Senkrechte zu bringen, pflege ich die Wunden bel zugerichteter
+J„ger und J„gerinnen unseres Clans.{WORDClan}"]
+                DANN: +CLAN+ 
+
+
+Block 1         Begrung allg.
+["Dsarii-ma, meine ehemaligen Patienten!"]
+
+Block 2         Begrung WENN: 1)Tom bei Bewutsein 2)erstes Gespr„ch
+[{INK 001}Dies ist Giria, die sich um Toms und Rainers Verletzungen gekmmert
+hat.{INK 002}^^ "Dsarii-ma! Ich freue mich, da uns Eure Heilung gelungen ist,
+Tom. In der ersten Zeit in unserem Hause hatte ich meine Bedenken, ob Ihr es
+schafft. Aber Eure Rasse scheint ja wirklich enorm widerstandsf„hig zu sein."
+{WORDHeilung} {BLOK010}"Giria! Sch”n, Euch zu sehen. Wir m”chten uns bedanken
+fr alles, was Ihr fr uns getan habt." {BLOK011}"Ah, Giria. Ihr glaubt nicht,
+wie froh wir sind, Eurer Tyrannei im Kranken|zimmer entronnen zu sein!"]
+
+Block 3         Antwort auf 2,10
+["Es war mir eine Ehre. Nach all den zerkratzten und gebissenen J„gern war
+Eure Behandlung eine hochinteressante Abwechslung.{WORDJ„ger}"]
+                DANN: +JGER+   
+
+Block 4         Antwort auf 2,11
+["Wie schmeichelhaft. Vielleicht w„re es Euch lieber gewesen, wir h„tten Euch
+den Tieren des Waldes berlassen?"]
+                DANN: Giria ist beleidigt und bricht Gespr„ch ab (Block 5)
+                Es wird ein entsprechendes Questbit gesetzt. Wenn man sich
+                bei Giria beim n„chsten Gespr„ch entschuldigt, wird das Bit
+                gel”scht. Bei einer zweiten Beleidigung wird sie nie mehr
+                mit einem sprechen (zweites bit).
+
+Block 5(N)
+[Beleidigt bricht Giria das Gespr„ch ab.]
+
+
+Block 6         Begrung bei 1. Beleidigungsbit ACHTUNG: OFF!
+["Oh, die charmanten Menschen wieder einmal." {BLOK010}"Giria, verzeiht uns
+bitte. Die Bemerkung ber Euch war als Scherz gedacht. Wir wissen, da wir
+Euch viel zu verdanken haben." {BLOK011}"He, wir haben lediglich versucht, den
+seltsamen Humor Eurer Rasse nachzuempfinden!"]
+
+Block 7         Antwort auf MC6,1
+["Ich akzeptiere Eure Entschuldigung. Vielleicht war ich ja auch etwas grob.
+Ich vergesse manchmal, da Ihr Menschen anscheinend Eure Schmerzen nicht
+kontrollieren k”nnt.{WORDSchmerzen}"]
+                DANN: +SCHMERZEN+. Normale Dialogm”glichkeiten erlauben
+
+Block 8         Antwort auf MC6,2
+["Ich merke, da mein Interesse an Eurer Rasse ein Fehler war. Offenbar sind
+Euch die einfachsten Begriffe der Dankbarkeit unbekannt."]
+                DANN: 2. Beleidigungsbit setzen, Gespr„ch abbrechen.
+
+Block 9(N)      Begrung bei 2. Beleidigungsbit
+[Giria ist offenbar nicht mehr an einem Gespr„ch interessiert und wendet sich
+ab.]
+
+
+Block 10        Begrung, wenn jemand in der Party Bewutlos ist
+["Oh, ich sehe, Ihr habt einen ernsthaft Verwundeten unter Euch! Ihr solltet
+Euch zu den Heilern der Dji-Kas begeben, ich kann so schwere Wunden nicht
+behandeln. Soll ich Euch schnell den Weg dorthin zeigen?" {BLOK010}"Ja, bitte
+zeigt uns den Weg, Giria!" {BLOK011}"Nein, vielen Dank, aber wir wissen
+Bescheid."]
+		 DANN: Bei 10,10: MAP-EXIT               
+
+
+Block 11        "HEILUNG"
+["Ich versorge hier im Hause haupts„chlich die kleineren Wunden unserer J„ger.
+Fr die Heilung ernsthafter Verletzungen ziehen wir die Heiler der Dji-Kas
+Magier hinzu oder gehen zu Ihrem Haus. Die Dji-Kas verkaufen auch
+Medizin."{WORDJ„ger}{WORDDji-Kas}{WORDMedizin}]
+                DANN: +JGER+, +DJI-KAS+, +MEDIZIN+
+
+Block 12        WENN: "HEILUNG" 2x
+["Nun, wie ich schon sagte, wenn Ihr ernsthafte Verletzungen habt, wendet Euch
+besser an die Dji-Kas."]
+
+Block 13         "JGER"
+["Unser Clan verdient sich den Lebensunterhalt haupts„chlich durch die Jagd.
+Es gibt zwar auch Viehzchter in Jirinaar, aber die meisten Leute bevorzugen
+Wild. Je ehrenhafter ein Tier erlegt wurde, desto h”her ist der Erl”s. Wir
+fhren manchmal sogar waffenlose Jagden durch, insbesondere zur Initiation der
+jungen J„ger. Ihr k”nnt Euch vorstellen, da ich dann viel zu tun habe."]
+
+Block 14         WENN: "JGER" 2x
+["Ich hatte es, glaube ich, schon erw„hnt: Unser Clan verdient sich den
+Lebensunterhalt haupts„chlich durch die Jagd. Es gibt zwar auch Viehzchter in
+Jirinaar, aber die meisten Leute bevorzugen Wild. Je ehrenhafter ein Tier
+erlegt wurde, desto h”her ist der Erl”s. Wir fhren manchmal sogar waffenlose
+Jagden durch, insbesondere zur Initiation der jungen J„ger. Ihr k”nnt Euch
+vorstellen, da ich dann viel zu tun habe."]
+
+Block 15        "MEDIZIN"
+["Die Dji-Kas stellen ein Gebr„u her, das den verletzten K”rper st„rkt und die
+Heilung beschleunigt. Ich denke, ich werde Euch eine Kostprobe davon geben;
+die Fl„schchen sind nicht billig, aber eines k”nnen wir sicher
+entbehren."^^{INK 001}Giria bergibt {LEAD}{NAME} eine kleine Flasche mit
+trkis|farbener Flssigkeit darin.]
+
+Block 16        "MEDIZIN" 2x
+["Es tut mir leid, {LEAD}{NAME}, aber wir k”nnen es uns nicht leisten, mehr
+Medizin zu verschenken. Die Dji-Kas verkaufen Euch aber gerne davon."]

@@ -1,0 +1,61 @@
+Perron (Ratsmitglied Nummer 1) / Phase 0+1
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Willkommen im Rathaus von Beloveno!^^Wie gef„llt Euch unser Geb„ude? Wir
+sind ziemlich stolz darauf - denn es ist das pr„chtigste Geb„ude in der Stadt.
+Jedenfalls freue ich mich, Euch kennenzulernen, ich bin brigens Perron. Seit
+fnf Jahren bin ich Mitglied im 'Rat der Gerechten'. Es ist wirklich keine
+einfache Aufgabe, ein gutes Ratsmitglied zu sein."
+{WORDRathaus}{WORDRat}{WORDBeloveno}{WORDPerron}]
+ 
+Block 2         (Begrung 2)
+["Achja, Skeima Din, wir haben uns schon miteinander unterhalten. Wit Ihr
+noch, wer ich bin? Ja genau, Perron, Ratsmitglied und Kritiker des Systems.
+Zumindest sehe ich das als meine Aufgabe an."
+{WORDRathaus}{WORDRat}{WORDBeloveno}{WORDPerron}]
+
+
+Block 3         (Aufgabe, Rat)
+["Ihr interessiert Euch fr den Rat? Ich will Euch gerne etwas darber
+erz„hlen. Der 'Rat der Gerechten' besteht schon seit Generationen, wobei ich
+selbst erst seit 5 Jahren dabei bin. Es gibt 3 Ratsmitglieder, das sind zur
+Zeit Gard, Riko und meine Wenigkeit. Und dann gibt es noch den
+Ratsvorsitzenden Herras. Er ist wirklich ein weiser und wohlgesonnener
+Vorsitzender und ich bin froh, da er im Rat ist.^^Das kann ich leider nicht
+von allen behaupten. Manchmal frage ich mich ernsthaft, ob Gard und Riko ihre
+Aufgabe ernst nehmen, oder ob es sie einfach nicht interessiert. Wir treffen
+oft Entscheidungen, die meiner Ansicht nach absolut nicht im Interesse des
+Volkes stehen, und eine ganz wesentliche Mitschuld daran liegt bei Gard und
+Riko. Ich rede nicht gern schlecht ber andere Leute, aber manchmal ist es
+einfach wichtig, da man die Wahrheit sagt. Vielleicht rede ich mir das Ganze
+auch nur ein, trotzdem bleib' ich dabei. Ich bin der Meinung, da Gard und
+Riko mehr hinter ihren eigenen Interessen her sind, als da sie sich fr die
+Gemein|schaft einsetzen wrden. Aber wie gesagt, da ist natrlich nur meine
+subjektive Meinung. Sprecht mit anderen Leuten darber, die sehen das alles
+vielleicht ganz anders.^^Wart Ihr eigentlich schon in Kounos? Sprecht doch mal
+mit Kontos, Darios und den anderen Einwohnern. Die kennen Gard und Riko
+n„mlich auch, obwohl sie das manchmal leugnen."]
+
+Block 4         (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 5         (Perron)
+["Das bin ich."]
+
+Block 6         (Beloveno)
+["Ich hoffe, da Euch unsere Stadt gef„llt. Besucht doch mal den Hafen im
+Sden oder macht mal einen Ausflug nach Kounos oder Srimalinar."{WORDKounos}
+{WORDSrimalinar}{WORDHafen}]

@@ -1,0 +1,74 @@
+173: Torko, Sage
+================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Bewahrer des Wissens und kenne mich besonders gut mit
+magischen Artefakten aus."{WORDArtefakte}]
+
+Block 1         Begr. Phase 1 
+["Togi Din! Ihr sollt also nach Bero im verbotenen Teil Arjanos suchen. Es
+heit, da es dort unten manches magisches Artefakt gibt. Ich schaue es gerne
+fr Euch an und lasse Euch an meinem Wissen teilhaben. Ich mu allerdings zum
+Wohle der Schule von Arjano eine kleine Gebhr dafr
+erheben."{WORDBero}{WORDArjano}{WORDArtefakte} {BLOK010}"Es gibt in der Tat
+etwas, ber das wir gerne Eure Meinung wten, Torko."]
+
+Block 2         Begr. Phase 2
+["Togi Din, G„ste Arjanos. Nun, da Ihr Bero sicher zu uns hier oben
+zurckgebracht habt, seid Ihr sicher wieder auf Reisen unterwegs. Wenn Ihr
+magische Artefakte w„hrend Eurer Reisen an Euch gebracht haben solltet, werfe
+ich gerne einen Blick darauf. Wie Ihr wit, mu ich allerdings zum Wohle der
+Schule von Arjano eine kleine Gebhr dafr erheben." {BLOK010}"Es gibt in der
+Tat etwas, ber das wir gerne Eure Meinung wten,
+Torko."{WORDArtefakte}{WORDBero}]
+
+Block 3         "Wissen, Artefakte" 1x
+["Wahre Meister der Magie sind in der Lage, die ihnen innewohnenden Kr„fte
+dauerhaft auf spezielle Gegenst„nde zu bertragen. Diese kostbaren Artefakte
+erlauben es auch dem Laien, magische Wirkungen zu erzielen.^^ Besonders
+geeignet fr die Aufnahme magischer Kr„fte sind Kristalle verschiedener Art
+aus dem Schoe Danus. Viele dieser Artefakte wirken sich positiv auf K”rper
+und Geist desjenigen aus, der sie tr„gt. ^^Andere dieser Kleinode tragen
+Sprche in sich, die normalerweise nur ein Meister der Magie vollbringen kann.
+Allerdings ersch”pft sich die Wirkung darin irgendwann. Ich habe Gerchte
+geh”rt, da es Orte geben soll, wo sich die Kraft dieser Gegenst„nde
+regeneriert, aber n„heres dazu ist mir unbekannt."]
+
+Block 4         "Wissen, Artefakte" 2x
+["Nun, wie ich Euch schon erkl„rt habe, sind wahre Meister der Magie in der
+Lage, die ihnen innewohnenden Kr„fte dauerhaft auf spezielle Gegenst„nde zu
+bertragen. Diese kostbaren Artefakte erlauben es auch dem Laien, magische
+Wirkungen zu erzielen.^^ Besonders geeignet fr die Aufnahme magischer Kr„fte
+sind Kristalle verschiedener Art aus dem Schoe Danus. Viele dieser Artefakte
+wirken sich positiv auf K”rper und Geist desjenigen aus, der sie tr„gt.
+^^Andere dieser Kleinode tragen Sprche in sich, die normalerweise nur ein
+Meister der Magie vollbringen kann. Allerdings ersch”pft sich die Wirkung
+darin irgendwann. Ich habe Gerchte geh”rt, da es Meister der Magie gibt, die
+in der Lage sind, die Kraft dieser Gegenst„nde zu regenerieren, aber N„heres
+dazu ist mir unbekannt."]
+
+Block 5         "Bero" Phase 1
+["Bero teilt mein Interesse an magischen Artefakten, hat seine Leidenschaft
+aber auf Amulette gerichtet. Er ist ein recht impulsiver Mann, und so hat er
+unsere Warnungen ignoriert und ist nach Drinno, den verbotenen Bereich Arjanos
+hinabgestiegen."{WORDDrinno}]
+
+Block 6         "Bero" Phase 2
+["Ha, ich bin gespannt, ob nun, da Ihr Bero aus seiner prek„ren Situation
+gerettet habt, ein wenig mehr Vernunft in ihn einkehrt!"]

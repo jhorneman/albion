@@ -1,0 +1,50 @@
+NPC 146: Snird, Waffenschmied
+=============================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Mein Handwerk ist das Herstellen von Waffen."{WORDHandwerk}]
+
+Block 1         Begr.
+["Dsarii-ma. Ich begrÅûe Euch im Haus der Waffen." {BLOK010}"Dsarii-ma. Bitte
+zeigt uns eine Auswahl Eurer StÅcke." {BLOK011}"Dsarii-ma. Wir mîchten gerne
+etwas reparieren lassen."]
+
+Block 2         "HANDWERK,WAFFEN"
+["Ich bin Waffenschmied aus Leidenschaft. Ich liebe es, etwas mit den HÑnden
+herzustellen, besonders, wenn ich mit etwas so wertvollem wie Metall
+arbeite."{WORDMetall}]
+                DANN: Block 3
+
+block 3         WENN: Rainer dabei & bei bewuûtsein: Einwurf
+["Seltsam, daû Metall auf einem so rohstoffreichen Planeten wertvoll ist."]
+
+Block 4         "HANDWERK, WAFFEN" 2x
+["Wie gesagt, ich bin Schmied aus Leidenschaft."]
+
+block 5         "METALL"
+["Ja, unscheinbare StÅcke aus dem Leib der Gîttin, die sich unter der
+fachkundigen Hand in glÑnzende Kostbarkeiten verwandeln! Metall kommt
+oberirdisch leider recht selten vor, und das WÅhlen im Inneren der Erde wÅrde
+bedeuten, der Gîttin Gewalt anzutun. So kommt es, das beispielsweise
+Himmelsmetall besondere Kraft hat."{WORDGîttin}{WORDHimmelsmetall}]
+
+Block 6         "METALL"2x
+["Ein faszinierendes Material, ja."]
+
+block 7         "Himmelsmetall"
+["Wenn Metallkîrper aus den Himmeln Åber uns herabfallen und nicht in der Luft
+verbrennen, bevor sie aufschlagen, enthalten sie oft Metalle. Dieses Metall
+hat besondere Kraft. Man kann, unter Mithilfe eines begabten Dji-Kas,
+GegenstÑnde mit besonderer Macht daraus schmieden."{Dji-Kas}]

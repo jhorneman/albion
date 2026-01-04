@@ -1,0 +1,29 @@
+166: Drugstore Vanello 
+=======================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich handele mit Werkzeug und
+Gebrauchs|gegen|stÑnden."{WORDGebrauchsgegenstÑnde}]
+
+Block 1         Begr.
+["Togi Din, verehrte Kunden. Kann ich Euch mein Angebot zeigen?" {BLOK010}"Ja,
+gerne. Was habt Ihr uns anzubieten?"]
+
+Block 2         "Werkzeug, Gebr. geg."
+["Nun, ich kann Euch gerne meine Waren zeigen..."]

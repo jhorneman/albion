@@ -1,0 +1,5 @@
+; Script für Teleporter
+
+fade_to_white
+fill_screen 224
+fade_from_white

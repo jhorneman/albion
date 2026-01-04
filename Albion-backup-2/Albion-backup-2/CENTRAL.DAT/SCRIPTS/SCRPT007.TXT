@@ -1,0 +1,89 @@
+; ***Script 7: Giria sieht, das Tom aufgestanden ist.***
+
+show_map
+
+;Giria l‰uft zur Party
+npc_lock 3
+npc_on 3
+npc_jump 3 52 48
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 1 0
+update 4
+npc_move 3 0 -1
+update 4
+npc_move 3 0 -1
+update 4
+npc_move 3 0 -1
+update 4
+pause 20
+update 5
+
+;Giria sagt Text, und verl‰ﬂt den Screen
+update 30
+npc_text 103 220
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 0 1
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_move 3 -1 0
+update 4
+npc_off 3
+
+;Tom sagt was, dann Ende
+party_member_text 1 221
+party_member_text 2 222
+party_member_text 1 223
+party_member_text 2 224

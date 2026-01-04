@@ -1,0 +1,52 @@
+NPC 110: Larina, die Frau Wrinns
+Larina, die Frau Wrinns, NPC 110
+================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+["{BLOK000}Eigentlich bin ich J„gerin, aber nun kmmere ich mich gemein|sam
+mit meinem Mann um die Angele|genheiten des Clans."]
+
+Block 1         Begrung 1.mal
+["Dsarii-ma, unsere G„ste. Ich bin Larina, die Frau Wrinns. Ich bin bereits
+darber informiert worden, da Ihr willens wart, uns bei unseren finanziellen
+Schwierigkeiten zu untersttzen. Auch ich m”chte Euch dafr danken."
+{BLOK010}"Wir haben fr Eure Hilfe zu danken, Larina. W„re es indiskret zu
+fragen, wodurch der Geldmangel entstand?" {BLOK011}"Verzeiht, wenn dies eine
+zu pers”nliche Frage ist, aber wie denkt Ihr ber die Tatsache, da Euer
+Ehegatte ein Sebai ist?"{WORDEhe}{WORDSebai}]
+                DANN: +EHE+
+
+Block 2         Antwort auf MC1,1
+["Oh, gerade Ihr habt sicherlich ein gewisses Anrecht auf diese Auskunft. Ich
+mu Euch allerdings bitten, dieses Gespr„ch fr Euch zu behalten.^ Es gibt
+eigentlich keine besondere Einzelursache, aber die Ausgaben des Clans waren in
+den letzten Jahren einfach zu hoch. Seht ihr, Wrinn ist ein hervor|ragender
+Clanfhrer, sonst w„re er kein Sebai geworden, aber er legt Wert auf
+Repr„sen|tation unseres Clans. Es gab ein groes Fest nach dem Sebai-Ritual
+sowie einige Erwei|terungen des Hauses durch die Dji-Fadh, die recht teuer
+waren, zuletzt die Anschaffung des groen Brunnens."{WORDDji-Fadh}{WORDSebai}]
+
+Block 3         Antwort auf MC1,2
+["Ich betrachte es als groe Ehre, die Frau eines Sebai zu sein. Der K”rper,
+den Wrinn nun bewohnt, ist der eines Kindes, das er mit mir gezeugt hat, eine
+ideale Konstellation. Auerdem, seht ihr, Wrinn hat mich in sehr jungen Jahren
+geheiratet und ich freue mich nun auf viele weitere Jahre an seiner Seite."]
+
+Block 4         WENN: Phase 1, Gespr„ch beendet
+["Ach ja: Ich wnsche Euch gute Jagd nach Akiirs M”rdern!"]
+
+Block 5         Begrung 2.mal
+["Dsarii-ma. Kann ich Euch behilflich sein?"]
+
+Block 6
+["Lebt wohl, G„ste des Sdwind-Clans."]

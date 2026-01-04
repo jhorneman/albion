@@ -1,0 +1,351 @@
+
+Maptextfile
+--------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Eine brennende Fackel.]
+
+Block 2
+[Eine Fackel.]
+
+Block 3
+[Wandbeh„nge.]
+
+Block 4
+[Regale mit Bchern.]
+
+Block 5
+[Ein Fa.]
+
+Block 6
+[Ein groes Fa, in das man einen Zapfhahn schlagen kann.]
+
+Block 7
+[Ein Zapfhahn.]
+
+Block 8
+[Ein Teppich.]
+
+Block 9
+[Ein Sofa.]
+
+Block 10
+[Ein Sessel.]
+
+Block 11
+[Ein groes Sofa.]
+
+Block 12
+[Eine Sitzbank.]
+
+Block 13
+[Ein Beistelltisch.]
+
+Block 14
+[Ein Kchentisch.]
+
+Block 15
+[Eine Kanne.]
+
+Block 16
+[Ein Schreibtisch.]
+
+Block 17
+[Eine Decke.]
+
+Block 18
+[Leere Regale.]
+
+Block 19
+[Wrste und Fleischstcke, die zum Trocknen aufgeh„ngt wurden.]
+
+Block 20
+[In diesen Regalen liegen diverse unwichtige Gegenst„nde.]
+
+Block 21
+[Ein Kamin.]
+
+Block 22
+[Eine Glasflasche.]
+
+Block 23
+[Ein Bett.]
+
+Block 24
+[Ein Schrank.]
+
+Block 25
+[Eine Kommode.]
+
+Block 26
+[Ein Stuhl.]
+
+Block 27
+[Ein leeres Tablett.]
+
+Block 28
+[Ein Beh„lter.]
+
+Block 29
+[Ein Trinkbecher.]
+
+Block 30
+[Ein Teller.]
+
+Block 31
+[Gl„ser, Becher, Besteck.]
+
+Block 32
+[Auf dem Tablett befinden sich kulinarische Leckerbissen.]
+
+Block 33
+[Ein Buch.]
+
+Block 34
+[Kr„uter.]
+
+Block 35
+[Geb„ck.]
+
+Block 36
+[Ein Gewrz.]
+
+Block 37
+[Ein Stck Schinken.]
+
+Block 38
+[Eine aromatische Wurzel.]
+
+Block 39
+[Ein aufgeschlagenes Buch mit dem Titel: "Priorit„t der subgrammatikalischen
+Zeichensetzung im Kontext zur homogenen literaturwissenschaftlichen
+Definition."]
+
+Block 40
+[Verschiedene Bcher.]
+
+Block 41
+[Dieses Buch setzt sich kritisch mit der Existenzberechtigung von Wirbeltieren
+auseinander.]
+
+Block 42
+[Ein groer Tisch, der durch erstklassige Handarbeit angefertigt wurde.]
+
+Block 43
+[Ein scharfes Kchenmesser.]
+
+Block 44
+[Eine Flasche.]
+
+Block 45
+[Eine besch„digte Flasche.]
+
+Block 46
+[Eine Holzdose.]
+
+Block 47
+[Ein Glasbeh„lter.]
+
+Block 48
+[Ein Kissen.]
+
+Block 49
+[Eine Tre.]
+
+Block 50
+[Ein Herd, auf dem man Speisen und Getr„nke erhitzen kann.]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 62
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 63
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 64
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 65
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 66
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 67
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 68
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 69
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 70
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 71
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 72
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 73
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 74
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 75
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 76
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 77
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 78
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 79
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 80
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 81
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 82
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 83
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 84
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 85
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 86
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 87
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 88
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 89
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 90
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 91
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 92
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 93
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 94
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 95
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 96
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 97
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 98
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]

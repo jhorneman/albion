@@ -1,0 +1,56 @@
+185: Colonel Priver, Security
+=============================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Security - Offizier im Range eines Colonel."]
+
+Block 1         Begr. 1x
+["Gehen Sie weiter, hier gibt es nichts zu sehen." {BLOK010}"Was ist denn
+passiert? Sie stehen hier doch nicht zum VergnÅgen herum."]
+
+Block 2         Antw. 1,10
+["Sie haben sicher von dem Unfall des Inspektors mit der over-c - Comanlage
+gehîrt. Der Comraum ist bis auf weiteres gesperrt."{WORDComraum}]
+
+Block 3         "Comraum"
+["Der Raum bleibt solange fÅr die Besatzung geschlossen, bis keine Gefahr
+durch die defekte Anlage mehr besteht. Und jetzt ist Schluû mit der Fragerei."]
+                DANN: Gespr. wird abgebrochen.
+
+Block 4         "Secu"
+["Werden Sie nicht frech, Driscoll. FÅr Sie immer noch Colonel."]
+
+Block 5         WENN: Waffe gezeigt.
+["{HIGH}Sind Sie wahnsinnig?^ {NORS}Geben Sie sofort die Waffe heraus! Das
+wird Folgen fÅr Ihre Personalakte haben, Driscoll, das verspreche ich
+Ihnen!"^^ {INK 001}Priver nimmt Tom die Waffe ab.]
+
+Block 6         Begr. 2x
+["Was wollen Sie denn noch? Wir werden nicht fÅrs Reden bezahlt."{WORDComraum}]
+
+Block 7
+["Verschwinden Sie, Driscoll. Ich habe keine Lust, mit Unruhestiftern wie
+Ihnen zu diskutieren."]
+
+Block 8
+[{BLOK000}Was kînnen Sie mir sagen Åber... {BLOK001}Schauen Sie sich dies hier
+an... {BLOK004}Wiederseh'n. {BLOK005}Was ist Ihre Aufgabe?]
+
+Block 9
+["Wiederseh'n."]

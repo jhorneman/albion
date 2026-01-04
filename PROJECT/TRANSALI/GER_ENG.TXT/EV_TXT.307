@@ -1,0 +1,306 @@
+ 
+ 
+Block 0     (Name)  
+[{BLOK000}"Ich bin Rhunagh, der Zaubermeister."] 
+  
+Block 1     (Kenget Kamulos)                        	  
+["Kenget bedeutet Krieger in unserer alten Sprache. Kamulos ist unser Gott"
+{WORDKrieger} {WORDGott}]  
+  
+Block 2     (Gott)                                  	   
+["Unser Gott ist Kamulos, der Gott des Krieges, der Gott der
+Mutigen."{WORDKrieger}{WORDMut}]  
+  
+Block 3     (Mut, Angst)					 
+["Die Angst ist der Antrieb, sie zu berwinden. Die Angst ist Ergebnis der
+unreinen Geburt. Die Angst ist die Aufgabe eines Kriegers. Wer die Angst
+besiegt, besiegt seine Geburt, die Ergebnis der unreinen Vereinigung ist. Er
+besiegt das Fleisch durch den Geist und den Tod durch die Ehre. Denn der Tod
+ist nur fr den unreinen K”rper unausweichlich. Der reine Geist wird
+berleben. Nur der Unreine ist verdammt, im Kampf mitzusterben" {WORDFleisch}
+{WORDGeist} {WORDsterben} {WORDKampf} {WORDKrieger} {WORDUnreiner}]  
+  
+Block 4 MC:"Erz„hlt mir etwas ber Euren Ehrbegriff!"	  
+["Ehre ist der zentrale Begriff des Daseins. Ehre ist das Ziel und der Anfang
+allen Seins. Das Kleinkind ist ehrenvoll, wenn es sich schutzlos einem viel
+gr”eren Wesen anvertraut. Wird es gr”er, verliert es seine Ehre, wenn es das
+erste Mal feige ist. Und feige ist jeder einmal. Drum gilt es, die Ehre
+zurckzugewinnen, indem man seine Angst besiegt, seine Feigheit berwindet,
+sich wie das Kind einem gr”eren anvertraut: Kamulos" {WORDAngst} {WORDKamulos}]  
+  
+Block 5     (Letzte Schlacht)		   	  
+["Die letzte Prfung. Der letzte Kampf um die ewige Ehre. Der Kampf zwischen
+Mut und Feigheit, M„nnern und Memmen. Hoffentlich stehe ich dann auf der
+richtigen Seite: bei den Kenget. {WRNR----} {WORDKenget Kamulos}]  
+  
+Block 6     (Stolz)  
+["Die Kledo behaupten, Stolz sei nur ein Mittel der Ausbildung, etwas, da die
+Novizen antreibt auf ihrem Weg zum Artorn. Damit meinen sie aber nur den
+oberfl„chlichen Stolz des Fleisches. Der Stolz der Seele aber ist der Geist.
+Und deshalb ist der Cuain, der den gr”ten Geist besitzt, auch der stolzeste
+Kenget. Er hat alle Angst berwunden durch seine stolze Seele. Und diese ist
+seine sch„rfste Waffe im Kampf. Der wahre Stolz zeigt sich nicht durch
+Empfindlichkeit der Seele, sondern durch Sch„rfe des Geistes." {WORDArtorn}
+{WORDGeist} {WORDCuain} {WORDWaffen} {WORDAngst} {WORDKampf}]  
+  
+Block 7     (Ruhm)  
+["Ruhm ist nur das Ergebnis des Lernens. Wer nach Ruhm strebt, ohne nach der
+Beherrschung des Geistes zu streben, der wird elend zu Grunde gehen. Dem wird
+die Ehre nicht zuteil, dem wird die Freundschaft nicht zuteil. Und am Ende
+wird auch sein Ruhm verblassen. Denn Kamulos wird ihn verstoen." {WORDKamulos}]  
+  
+Block 8      (Stufen, Brder, Freund, Gef„hrte)  
+["Wir kennen drei Wesensstufen. Wir selbst sind auf der ersten. Auch einige
+Nichtkenget k”nnen, wenn sie ihre Angst beherrschen, auf der ersten Stufe
+stehen. Aber nur M„nner. Frauen sind bestenfalls Wesen zweiter Stufe. Deshalb
+ist der Sieg ber den Drang des Fleisches zur Frau so wichtig fr uns. Er ist
+das Symbol fr den Sieg des Bundes der Kenget ber den Tod des Geistes."
+{WORDFrauen} {WORDFleisch}] 
+ 
+Block 9     (Tod, sterben)					  
+["Da k”nnte ich Euch vieles sagen, aber der Zeremonienmeister ist ein wahrer
+Meister auf dem Gebiet des Todes. Nur soviel: Fr einen wahren Kenget bedeutet
+der Tod nichts anderes, als den Verlust eines schmerzenden Zahnes."
+{WORDZeremonienmeister} {WORDKenget}]  
+             
+Block 10    (Cuain)  
+["Der Cuain ist meistens ein Oqulo, was von den Kledo leichten Herzens
+akzeptiert wird, weil wir Oqulo „ngstlicher sind und deshalb den gr”eren
+Geist besitzen. Der Cuain wird von den Hohepriestern gew„hlt und amtiert bis
+zu seinem Tod. Unser letzter Cuain wurde im Heiligtum von diesem feigen M”rder
+Khunag erschlagen, w„hrend des heiligen Schlafes des Kamulos. Khunag war einer
+der beiden Gef„hrten des Cuain und als solcher ebenfalls Hohepriester. Er
+wollte sich selbst zum Cuain w„hlen lassen. Aber die Bluttat konnte aufgekl„rt
+werden und Khunag floh. Der neue Cuain ist jetzt Cairnain, der andere Gef„hrte
+des alten Cuain." {WORDOqulo} {WRNR----} {WORDKledo} {WORDKhunag} {WORDKamulos
+Schlaf} {WORDFnf Hohepriester} {WORDHeiligtum}]  
+  
+Block 11      (D„monen)  
+["D„monen sind materialisierte ngste und als magisches Erzeugnis die
+schwierigste Aufgabe. Man mu n„mlich die Angst vollst„ndig in den eigenen
+Geist einflieen lassen, ohne da dieser von der Angst berw„ltigt werden
+darf. Der Geist mu beinahe vollst„ndig aus Angst bestehen, ohne deshalb die
+Kontrolle ber sich zu verlieren. Er mu das groe Gef„ fr die Angst werden.
+Und dann, wenn dieses Gef„ bis zum Bersten gefllt ist, dann mu er diese
+Angst materialisieren. Das Opfer eines solchen D„monen wird an seinem Ende
+ehrfrchtig sein vor dem Sch”pfer seines M”rders, denn das Opfer wird die
+Angst durch und durch spren und verstehen, die der Oqulo aushalten mute, als
+er den D„monen schuf. Es wird verstehen, da es das Opfer von etwas gr”erem
+wurde: ein Opfer der Angst, die der Oqulo beherrscht hatte. Und so wird es
+seinen Tod als verdient akzeptieren." {WORDMagie}]  
+  
+Block 12    (Heiligtum)[ "Das Heiligtum liegt in den tieferen Stockwerken. Der Eingang zu den
+tieferen Stockwerken liegt am sdlichen Tor. Aber da kommt Ihr nicht rein.
+Kein Unreiner wird dort jemals hindurchgelangen." {WORDUnreiner}]  
+  
+Block 13    (Khunag)  
+["Wenn Ihr irgendetwas ber seinen Aufenthalt erfahrt, wrdet Ihr Euch groe
+Verdienste erwerben, wenn Ihr uns seinen Aufenthaltsort verrietet. Das w„re
+eine groartige Aufgabe fr einen unsrer Assassinen." {WORDAssassinen}]  
+  
+Block 14     (Waffen)  
+["Die Kledo benutzen Waffen im eigentlichen Sinne. Doch da fragt Ihr besser
+einen Schwertmeister. Die Oqulo werden nur an ihrem Geist ausgebildet."
+{WORDAusbildung}]  
+  
+Block 15     (Kampf, Gebet)                          
+["Die Schwertmeister reden vom Kampf als dem Gebet der Kenget. Das ist
+natrlich nicht ganz falsch. Denn der Kampf ist auch nach auen gerichtet,
+unserem Gott gewidmet, dem groen Kamulos. Aber mehr noch dient der Kampf der
+Vervollkommnung des eigenen Geistes. Der Kampf ist also auch Meditation, nach
+innen gerichtet, Schule des Geistes. Dies gilt natrlich insbesondere fr die
+Oqulo, deren einzige Waffe ja der Geist ist, der bei ihnen gr”er ist, als bei
+den Kledo, die ihre mangelnde Angst durch Waffen beschtzen mssen."
+{WORDWaffen} {WORDAngst} {WORDKledo} {WORDOqulo}]  
+   
+Block 16     (Krieger)                             
+["Krieger wird, wer sein Fleisch in den Dienst des Geistes stellt. Die
+vollkommene Beherrschung des Fleisches mu sein Ziel sein. Und erst dann hat
+er seine Angst v”llig besiegt. Er sprt keinen Ha mehr und kein Mitleid. Er
+ist reiner, ewiger Kenget." {WRNR----}]  
+  
+Block 17      (Magie)  
+["Magie, wie Ihr es nennt, ist nichts als die h”chste Emanation des
+menschlichen Geistes. Aus der gr”ten Angst entsteht durch den gr”ten Geist
+auch die gr”te Kraft. Diese ist es, die magisch ist, die aus dem scheinbaren
+Nichts Dinge erschafft. Aber auch die Dinge sind nichts anderes als gewandelte
+Kraft. Magie ist also nichts anderes, als die Kunst der Verwandlung der
+eigenen Geisteskraft in Materie. Recht einfach fr den, der es erlernt hat."
+{WORDGeist}]  
+  
+Block 18        (Schwerter)  
+["Da fragst Du besser den Schwertmeister. Mit Schwertern haben wir Oqulo
+nichts zu tun."]  
+  
+Block 19      (Kledo)  
+["Die Geistesschwachen. Kenget zwar, aber Kenget, deren Geist zu schwach ist,
+um wirkliche Angst zu verspren. Sie ben”tigen Schwerter im Kampf, den die
+Oqulo nur mit Hilfe ihres Geistes bestreiten." {WORDSchwerter}]  
+  
+Block 20   (Oqulo)  
+["Als Druide verfgst du ber keine materiellen Waffen, wenn du von dem Messer
+absiehst, da man halt im allt„glichen Leben braucht. Aber nie darf ein Oqulo
+dieses im Kampf benutzen. Seine Waffe ist der Geist, die reine šberwindung
+seiner Angst, die Trennung seiner Gedanken von seinem K”rper. Sein Mittel ist
+die Konzentration. šber zwei Stufen erreicht man den Status eines Oqulo. Man
+beherrscht dann einfache Dinge: Selbsthypnose und v”llige
+Schmerzunempfindlichkeit. Erst dann lernt der Novize die Kampfzauber, deren
+h”chste Stufe die Verteidigungszauber sind. Wenn er das alles beherrscht, wird
+er zum Priester geweiht. Erst als Priester wird man in die Geheimnisse der
+D„monenbeschw”rung eingeweiht und kann die F„higkeit erreichen, Waffen mit
+magischen F„higkeiten auszustatten" {WORDD„monen}{WORDMagie} {WRNR----}]  
+  
+Block 21    (Ausbildung}  
+["Das h„ngt natrlich davon ab, ob du zum Kledo oder zum Oqulo ausgebildet
+wirst." {WORDKledo} {WORDOqulo}]  
+  
+Block 22    (Rituale)  
+["Natrlich wei ich da einiges drber. Aber unser Zeremonienmeister ist da
+noch eher der richtige Mann fr Eure Fragen."{WORDZeremonienmeister}]  
+  
+Block 23         (Geist)  
+["Der Geist schafft die Beherrschung des Fleisches. Das Fleisch dr„ngt den
+Mensch zur Feigheit. Das Fleisch dr„ngt den Menschen zur Frau. Der Geist ist
+der Stolz der Seele. Und nur er kann den Mut des Fleisches schaffen. Und erst
+der Mut des Fleisches erschafft den Ruhm des Kriegers." {WORDMut}
+{WORDFleisch} {WORDRuhm} {WRNR----} {WORDStolz}]  
+  
+Block 24     (Assassinen)				  
+["Ja, ich wei, da wird viel drber geredet. Aber letzten Endes ist es unsere
+Sache. Und wenn die, die sich selbst als die Erleuchteten bezeichnen, wirklich
+so erleuchtet w„ren, dann verstnden sie diese Einrichtung und wrden sie
+gutheien. Denn ob diese sogenannten Opfer, ber die immer soviel geredet
+wird, nun von einem der Unseren ehrenvoll get”tet oder wie ein reudiger Hund
+von gedungenen M”rdern geschlachtet werden, das ist zumindest fr uns ein
+gewaltiger Unterschied. Indem wir diese Auftr„ge annehmen, geben wir den
+Opfern, deren Tod sowieso beschlossene Sache ist, eine Gelegenheit, in Ehren
+zu fallen. Sie werden es uns danken, wenn sie an Kamulos' Tafel bewirtet
+werden." {WORDTod} {WORDKamulos} {WRNR----} {WORDEhre}]  
+  
+Block 25    (Druiden)  
+["Als Druiden bezeichnen wir alle Mitglieder unseres Ordens, die mit Magie
+befat sind. Also nicht nur die Oqulo, sondern auch schon die Novizen."
+{WORDMagie}]  
+  
+Block 26    (Kamulos Schlaf, Neujahr)    
+["Auch da wei unser Zeremonienmeister wohl mehr drber als ich. Vielleicht
+gengt es Euch zu wissen, da dies unser Neujahrsfest ist. Am Ende eines
+Jahres ist Kamulos der vielen K„mpfe mde, die er bers Jahr hat ausfechten
+mssen, und legt sich fr einen Tag zur Ruhe, um am darauffolgenden Tag vom
+Blut der Ehre gest„rkt wieder das neue Jahr zu beginnen. Diesen Tag ruht der
+Orden und der Cuain f„llt als Kamulos in den Groen Schlaf, aus dem ihn erst
+das erste Licht des neuen Tages erweckt. Das ist unser wichtigstes Ritual."
+{WORDBlut der Ehre} {WORDRituale}]  
+  
+Block 27     (Sklaven)						  
+["Das sind Gefangene, Wesen dritter Stufe, die am Leben gelassen wurden, um
+T„tigkeiten zu verrichten, die einen Kenget sch„nden wrden: also alles, was
+irgendwie mit Haushalt zu tun hat. Dafr drfen ihre Kinder aber, wenn sie
+Talent zeigen, zum Kenget aufsteigen. Denn jeder Mensch, der Mut im Kampf
+zeigt, darf Kenget und sogar Cuain werden. Und nur, weil die Eltern sich feige
+haben gefangennehmen lassen, mu das Kind ja noch kein Feigling sein.
+Besonders nicht, wenn es hier erzogen wird, seine Familie aufgibt, um Teil
+unserer Familie zu werden. Der Sohn unseres Kochs beispielsweise ist jetzt
+Novize. Und wie man h”rt, macht Ruainaigh sich nicht schlecht. Er hat den
+Kontakt zu seiner Familie schon weitestgehend abgebrochen. Ein gutes Zeichen."
+{WORDStufen}{WORDKenget}{WORDCuain} {WORDMut}{WORDKampf}{WORDFamilie}]  
+  
+Block 28     (Drogen)						  
+["Mut ben”tigt die Klarheit des Geistes. Nur zu den Zeremonien nehmen wir
+bestimmte Drogen ein. Am besten schmeckt mir der Honigwein. Rauchen ist aber
+auch nicht schlecht." {WORDMut}]  
+  
+  
+Block 29     (Tagesablauf)					  
+["Naja! Wir stehen schon ziemlich frh auf, und vor dem Frhstck mssen wir
+erstmal eine Stunde meditieren. Mit Meditation geht's dann auch weiter, und so
+gibt's bis zum Mittag nur zwei Stunden Gebetsbungen. Nachmittags dann
+Zeremonienschulung und nochmal zwei Stunden Gebet. Abendbrot und Meditation
+bis zum Sonnenuntergang. Ziemlich viel Meditation, besonders im Sommer. Aber
+ich denke, das ist gut gegen die Angst." {WORDGebet} {WORDAngst}]  
+  
+Block 30     (Umwelt, Natur)  
+["Also, den Pflanzen tun wir nichts. Wozu auch. Sie werden ja bei der Letzten
+Schlacht nicht dabei sein. Auch die Tiere nicht. Um ehrlich zu sein, ich wei
+nicht, worauf Du mit dieser Frage hinauswillst?" {WORDLetzte Schlacht}]  
+  
+Block 31     (Familie)  
+["Alle hier im Orden sind meine Brder. Schwestern hat hier keiner. Auch meine
+Eltern habe ich verstoen, als ich Kenget wurde. Denn auch sie sind nur in der
+zweiten Stufe. {WORDStufen} {WORDKenget} {WORDBrder}"]  
+  
+Block 32    (Geheimgang)  
+["Nein, von einem Geheimgang wei ich nichts. Sagt mal, was wollt Ihr
+eigentlich hier? Wollt Ihr Assassinen mieten?" {WORDAssassinen}]  
+  
+Block 33     (Unreiner)  
+["Unrein ist eigentlich jeder, der kein Kenget ist. Aber da in jedem Mann
+m”glicherweise ein Kenget steckt, ohne da er das jemals wird, kann ein Mann
+durch seinen ehrenvollen Tod rein werden. Das ist allerdings fr einen
+Menschen schwer nachtr„glich festzustellen. Denn die Reinheit „uert sich
+durch tiefe Erkenntnis in die ewigen Gesetze Kamulos' im Moment des Todes.
+Aber Kamulos wei darum und schart die reinen Toten um seine Tafel."]  
+  
+*****************Spezielles  
+Wissen******************************  
+  
+Block 34    (Fechtmeister)  
+["Sein Name ist Cuarnainn."] 
+  
+Block 35    (Zaubermeister)  
+["Der steht vor Dir. Wozu stelle ich mich Dir eigentlich vor?" ]  
+  
+Block 36    (Zeremonienmeister)       
+["Der alte Arthor. Er ist der geachtetste Oqulo nach dem Cuain. Und er ist
+trotz seines Alters ein groer Krieger."]  
+  
+Block 37   (Artorn)  
+["Das ist der Zustand der v”lligen Umsetzung aller Angst in Konzentration und
+Unbewusstheit. Nicht die Angst soll unbewut werden. Sondern die Angst soll zu
+einer selbst„ndigen Wachheit fhren, wie sie die Katzen besitzen: Sie mssen
+die Gefahr nicht sehen, um dennoch angemessen auf sie zu reagieren. Sie sind
+kalt und mitleidlos gegen sich und ihre Gegner. Sie sind nicht unbedingt
+stark, und sie haben Angst. Aber sie sind die gef„hrlichsten Gegner, die man
+sich vorstellen kann. Sie sind, was ein Kenget im Artorn ist."]  
+  
+Block 38    (Fnf Hohepriester)  
+["Das sind der Zeremonienmeister, der Fechtmeister, die beiden Gef„hrten des
+Cuain und ich, der Zaubermeister."]  
+  
+Block 39      (Fleisch)  
+["Ein schwieriges Thema innerhalb unseres Ordens. Es gibt einige Kenget - zu
+denen ich nicht geh”re - die meinen, das Fleisch sei nur die Emanation des
+Geistes, der seine Existenz sichtbar machen will. Ich glaube, und das ist die
+Meinung der Mehrheit, da Fleisch und Geist wechselseitig voneinander
+abh„ngen, also nicht nur das Fleisch vom Geist, sondern auch der Geist vom
+Fleisch. Denn wie das Fleisch zerf„llt, wenn es keinen Geist mehr in sich hat,
+so zerfiele auch der Geist, wenn er die Herausforderungen des Fleisches nicht
+mehr kennen wrde. Wenn der Geist die Angst des Fleisches nicht mehr
+berwinden mu, dann wird er schlaff, wie der K”rper, der nichts mehr tragen
+mu. Dem Geist bliebe ohne das Fleisch nichts, woran er sich sch„rfen k”nnte."]  
+  
+Block 40     (Blut der Ehre)					  
+["Fr einen Kenget ist es die allerh”chste Ehre, sein Leben anl„lich des
+Neujahrsfestes zu lassen. Das Neujahrsfest der Kenget ist am Tage nach der
+Wintersonnenwende. Den Tag vorher schl„ft der Kriegsgott, und mit ihm ist der
+Cuain in tiefste Trance gefallen, aus der er erst wieder erwachen kann, wenn
+er mit dem Blut eines ehrenvoll gefallenen Kenget gewaschen wird, der
+mindestens Priesterstatus hatte. Zu diesem Zweck darf der „lteste Priester
+allj„hrlich zur Wintersonnenwende einen der fnf Hohepriester zum Zweikampf
+auf Leben und Tod fordern. Das Blut des dann in den h”chsten denkbaren Ehren
+Gefallenen ist es, das dem Kriegsgott wieder Leben einhaucht fr ein neues
+Jahr. Glcklich, wem solch ein Tod zu Teil wird." {WORDNeujahr}{WORDFnf
+Hohepriester}]  
+  
+Block 41     (Frauen)  
+["Erfahrungsgem„ leider die gr”te Gefahr fr die Kenget. Wieviele
+hoffnungsvolle Oqulo habe ich schon dahinwelken sehen, weil sie in einem
+schwachen Moment dem Stolz des Fleisches verfallen sind und den Stolz der
+Seele vergessen haben. Sie tauschten ihren Geist gegen ein schmutziges Weib
+ein, vermischten sich mit ihm, anstatt mit einem Bruder, und wandten sich ab
+von Kamulos Tafel." {WRNR----} {WRNR----}]  
+  
+Block 42    (Begrssung)  
+["Gegrt seid Ihr, Fremde. Ihr seht aus, als suchtet Ihr etwas? Ich habe
+gerade ein wenig Zeit. Fragt nur!"{WORDCuain} {BLOK010}"Erz„hlt mir etwas ber
+euren Ehrbegriff."]

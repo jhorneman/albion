@@ -1,0 +1,67 @@
+fade_to_black
+show_map
+party_jump 124 96
+npc_lock 1
+update 4
+fade_from_black
+
+npc_move 1 0 1
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 0 -1
+party_move -1 0
+party_turn 0
+update 20
+
+; iconchange tür auf
+do_event_chain 1
+update 15
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_off 1
+
+party_move 0 -1
+update 8
+
+fade_to_black
+
+npc_on 1

@@ -1,0 +1,111 @@
+
+Textfile fÅr GerÑtemacherdungeon
+===========================================================================
+
+
+Block 0
+[-frei-]
+
+Block 1            (Ausgang)
+[Der Ausgang.]
+
+Block 2
+["Besonders weit ist der Stollen wohl noch nicht ausgearbeitet!" meint
+{LEAD}{NAME} und deutet auf den Boden. Erst jetzt fÑllt auch den anderen auf,
+daû die Gleise gleich beim Eingang aufhîren. Zu Fuû ist der Tunnel allerdings
+gut passierbar.]
+
+Block 3            (Illusionswand)
+["Ich glaube, wir sind gerade durch eine Wand gelaufen! Das war wohl eine
+Illusionswand, aber sie sah verdammt echt aus."]
+
+Block 4            (Schatz)
+[Eine Truhe.]
+
+Block 5            (Treppe)
+[Eine Treppe.]
+
+Block 6            (Loch in Decke)
+[Dort ist ein Loch in der Decke.]
+
+Block 7            (Raumbeschreibung)
+[Das Loch, durch welches Tom und die anderen gefallen sind, ist zu hoch, um
+mit einem Seil wieder hochklettern zu kînnen.]
+
+Block 8
+[Eine TÅre.]
+
+Block 9
+[Ein Tisch mit einer Truhe.]
+
+Block 10
+[Eine heiûe Flamme.]
+
+Block 11
+["Autsch!"]
+
+Block 12
+["Die TÅre hat sich geîffnet!"]
+
+Block 13
+[Diese TÅre kann nicht durch einen SchlÅssel geîffnet werden.]
+
+Block 14
+[Ein Knopf an der Wand.]
+
+Block 15
+[Eine Fallgrube.]
+
+Block 16
+[Ein schillernder magi|scher Vor|hang.]
+
+Block 17
+[Diese TÅre ist mit einem SchlÅssel nicht zu îffnen.]
+
+Block 18
+[Der Hebel klemmt!]
+
+Block 19
+[Eine Kontaktplatte.]
+
+Block 20
+[{CNTR}Eine Inschrift in der Wand:^{INK 006}{FAT }ZurÅck mit Euch!]
+
+Block 21
+[Ein Hebel.]
+
+Block 22
+[{LEAD}{NAME} entdeckt einen versteckten Knopf an der Wand!]
+
+Block 23
+[Es ist kein Schloû, keine Klinke und kein Schalter zu sehen. Vermutlich ist
+die TÅre nur Åber einen Mechanismus zu îffnen. Die Farben von den Flammen
+spiegeln sich in der TÅre ganz unterschiedlich. Rot- und GrÅntîne sind sehr
+gut, Blautîne dagegen gar nicht zu sehen. Vielleicht ist die TÅre
+licht|empfind|lich.]
+
+Block 24
+["Seht!^^Diese Wand hat irgend eine Art von Schienen|mechanismus an den
+Kanten. Sie sieht wirklich merk|wÅrdig aus. Ich kînnte mir vorstellen, daû sie
+durch einen der Hebel in den Boden versenkt werden kann. Zu allem öberfluû hat
+sie auch noch eine Kaminnische. Vielleicht kann ein entsprechendes Feuer den
+Mechanismus mit Energie versorgen.^^Ich glaube wirklich, daû solche WÑnde
+Åber die vielen Hebel gesteuert werden kînnen."]
+
+Block 25
+["Was dieser Hebel jetzt wohl wieder bewirkt hat? Vielleicht hÑngt er mit
+einer dieser SchienenwÑnde zusammen."]
+
+Block 26
+["Hier befindet sich wohl eine Quelle."]
+
+Block 27
+[Aus dem Norden hîrt man ein furchtbares GerÑusch, das sich ungefÑhr so
+anhîrt, wie wenn man mit einem riesigen Bohrer ein Loch in den Boden bohrt.]
+
+Block 28
+["Habt Ihr das Knirschen gehîrt? Ich glaube, es kam aus der Richtung des
+Raumes, Åber den wir in diese Ebene gekommen sind."]
+
+Block 29
+[Eine Schienenwand.]

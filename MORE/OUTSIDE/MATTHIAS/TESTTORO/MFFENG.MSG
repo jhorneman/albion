@@ -1,0 +1,227 @@
+
+$D 
+$D      Error on disk
+$D      (write protected).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (Drive is not ready).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (Data error).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (Seek error).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (Disk full).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (File not found).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk
+$D      (Unable to read file).
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D      Error on disk.
+$D 
+$D 
+$D    Drive %s
+$D 
+
+$D 
+$D    Insert System Disk, please.
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Out of data space.
+$D    Converting ceased.
+$D 
+$D 
+$D 
+
+$D 
+$D    Same filename exists.
+$D    Unable to save.
+$D    Please choose another name.
+$D 
+$D 
+$D 
+
+$D 
+$D    Directory not empty.
+$D    Cannot remove directory.
+$D 
+$D 
+$D 
+
+$D 
+$D    Too many datas.
+$D    %s Track was not converted
+$D    completly.
+$D 
+$D 
+
+$D 
+$D    Not enough memory.
+$D    640KB required.
+$D 
+$D 
+$D 
+
+$D 
+$D  Unable to convert more than 500 bars
+$D  at once.
+$D 
+$D 
+$D 
+
+$D 
+$D    Data still exists in contents.
+$D    Cannot delete.
+$D 
+$D 
+$D 
+
+$D 
+$D    Read Failure.
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Write Failure.
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Format the diskette.
+$D    Are you sure?
+$D 
+$D    Drive %s
+$D 
+$D 
+
+$D 
+$D    Delete the file.
+$D    Are you sure?
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Delete the contents.
+$D    Are you sure?
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Terminating.
+$D    Are you sure?
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Reading
+$D    Wait a moment.
+
+$D 
+$D    Formating.
+$D    Wait a moment.
+
+$D 
+$D    Wait a moment.
+
+$D 
+$D    Wrong Directory.
+$D 
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Wrong Filename.
+$D 
+$D 
+$D 
+$D 
+$D 
+
+$D 
+$D    Same filename exists.
+$D    Overwrite.
+$D    Are you sure?
+$D 
+$D 
+$D 
+
+$D 
+$D 
+$D    Saving now.
+$D    Wait a moment.
+$D 
+$D 
+
+$D 
+$D    Wrong File format.
+$D    Cannot convert this file.
+$D 
+$D 
+$D 
+
+$D 
+$D  This diskette is for Ballade2.
+$D  Prepare new diskette,please.
+$D 
+$D    Drive %s
+$D 
+$D 
+
+$D 
+$D  %s   Track has wrong datas.
+$D    Cannot Convert completly.
+$D 
+$D 
+$D 
+
+
+
+

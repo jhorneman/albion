@@ -1,0 +1,51 @@
+Zerruma (Neuer Ratsvorsitzender) / Phase 5
+
+Block 0         (FAQs)
+[{BLOK000}"Meine Funktion ist es, den 'Rat der Gerechten' zu leiten und zu
+koordinieren."]
+
+Block 1         (Begrung)
+["Skeima Din, wir kennen uns noch nicht. Ich bin der neue Ratsvorsitzende. Ihr
+habt ja sicher die schreckliche Geschichte mitbekommen, die meinem Vorg„nger
+widerfahren ist."{WORDGeschichte}{WORDLage}]
+
+Block 2         (Begrung 2)
+["Skeima Din."{WORDGeschichte}{WORDLage}{WORDRathaus}]
+
+Block 3         (Geschichte, Stichwort Ratsvorsitzender wird gegeben)
+["Ich bin der Nachfolger von Herras. Ich wei nicht, ob Ihr die Geschichte
+mitbekommen habt. Herras ist nachts in seinem Bett ermordet worden. Wir
+vermuten, da Gard und Riko die Schuldigen sind, denn sie haben sich seitdem
+nicht mehr blicken lassen. Auerdem hatte Perron schon l„nger den Verdacht,
+da man Ihnen nicht vertrauen kann."{WORDGard}{WORDRiko}]
+
+Block 4         (Zerruma)
+["Ich bin Zerruma."]
+
+Block 5         (Gard, Riko)
+["Ich denke, die werden sich hier nicht mehr sehen lassen."]
+
+Block 6         (Perron)
+["Perron ist einer meiner Ratsmitglieder."]
+
+Block 7         (Beloveno)
+["So heit unsere Stadt hier."]
+
+Block 8         (Lage, Heiligtum, St„tte, Besetzung, Gerchte)
+["Kontos hat seine Pl„ne in die Tat umgesetzt und den Keller und das Gel„nde
+mit seinen Kriegern besetzt. Es ist doch erstaunlich, wie sehr die Bewohner
+von Kounos hinter ihrem Fhrer stehen. Er hat einen erheblichen Einflu auf
+sie. Ich finde es sehr fragwrdig, ob es wirklich die Schuld der Iskai ist,
+da diese schrecklichen Kreaturen entstehen. Kontos behauptet es jedenfalls,
+und seine Anh„nger glauben es. Auf alle F„lle kann man es den Iskai nicht
+verbeln, wie sie auf diese Kriegserkl„rung reagieren. Sie sind im Moment
+dabei, ebenfalls Krieger zur heiligen St„tte zu senden, und was dann passiert,
+k”nnt Ihr Euch sicher denken. Aber das ist ja auch klar, schlielich ist ihr
+Tabu, ihr Stolz und ihre Religion miachtet und verletzt worden. Da Ihr ja
+eine recht gemischte Gruppe seid, kann es durchaus passieren, da Ihr in
+einigen L„den nicht mehr bedient werdet. Das Verh„ltnis zwischen Iskai und
+Menschen ist momentan sehr gespannt!"]
+
+Block 9         (Rathaus)
+["Das Rathaus ist das sch”nste Geb„ude in Beloveno. Ihr drft Euch hier ruhig
+umschauen, es wird Euch niemand hindern."]

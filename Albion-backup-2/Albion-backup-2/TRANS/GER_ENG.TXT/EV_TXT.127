@@ -1,0 +1,156 @@
+NPC 127: Rejira, die Heilerin
+=============================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Meine gr”tes Talent, fr das ich der G”ttin sehr dankbar bin,
+liegt in der Heilkunst."{WORDHeilung}]
+
+Block 1 [ ]
+
+*******Unter-Allgemeinwissensblock fr Dji-Kas*******************************
+Block 2         "Dji-Kas, Magier, Magiergilde, Zauberer, Magie, Zauber"
+["Unsere Magie ist tief mit dieser Welt verwurzelt. Ihr k”nnt das zum Beispiel
+daran erkennen, da wir fr fast alle unsere Sprche eine bestimmte Sorte von
+Samenk”rnern benutzen, um unsere geistigen Kr„fte darin zu konzentrieren. Wir
+sind ferner Stolz auf die Vielseitigkeit unserer Kunst. Wir kennen Magie zum
+Erschaffen und Zerst”ren, zum Verletzen und zum Heilen.^ Als Kennzeichen
+unserer Gilde tragen wir eingef„rbte Muster im Fell. Der Anfhrer der Dji-Kas
+ist Sebai-fre Fasiir. Er verbringt seine gesamte Zeit im
+Gildenhaus."{WORDSamenkorn}{WORDHeilung}{WORDFasiir}{WORDGildenhaus}]
+                
+
+Block 3         "FASIIR"
+["Sebai-fre Fasiir leitet unsere Gilde schon seit ber 120 Jahren. Er ist eine
+lebende Legende unter den Dji-Kas und ein hervorragender Lehrmeister, der
+seinen Schlern schnell neue Kenntnisse beibringt, sowie sie dafr bereit
+sind."]
+
+Block 4         "SAMENKORN, SAMENK™RNER, KORN, K™RNER"
+["Nicht das Samenkorn selbst entfaltet die magische Wirkung, aber der Geist
+des Dji-Kas verwendet sie, um darin seinen Fokus zu finden. Die K”rner stammen
+von einer seltenen Pflanze namens Triifalai, das bedeutet "Trii der G”ttin".
+Die Samen werden brigens auch im Gildenhaus verkauft."{WORDTrii} {WORDG”ttin}] 
+
+Block 5         "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                "WUNDEN, VERWUNDUNG"
+["Ich bin dankbar fr meine Begabung, auch wenn sie oft dazu fhrt, da ich
+kaum noch ein Privatleben habe. Manchmal komme ich tagelang nicht aus dem
+Gildenhaus heraus." {WORDGildenhaus}]
+
+Block 6         "Triifalai"
+["Dies ist der Name einer Pflanze, deren Samenk”rner von uns sehr begehrt
+sind.{WORDSamenkorn}"]
+
+Block 7
+[]
+
+Block 8         "Former,Formergilde, Dji-Fadh, Baumeister"
+["Oh, die Baumeister. Das Verh„ltnis unserer Gilden ist nicht immer ungetrbt.
+Manche ihrer besten Talente fhlen sich von unserer vielseitigen Kunst
+angezogen und wechseln ber zu unserer Gilde. Aber wer soll es Ihnen
+belnehmen? Wer hat schon Lust, all seine Kr„fte in den Bau von Behausungen zu
+stecken, und seinen sie noch so sch”n? Vielleicht sind die Dji-Fadh auch
+erzrnt, da wir so in der Lage waren, unser Gildenhaus ohne ihre Hilfe zu
+erschaffen."{WORDGilde}]
+
+Block 9         "GILDENHAUS"
+["Das Gildenhaus hat schon seit langer Zeit seinen Platz im sdwestlichen
+Viertel Jirinaars. Es ist von den Dji-Kas selbst erbaut worden und beherbergt
+viele Gildenmitglieder und alle Dra."{WORDDra}]
+
+Block 10        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 1
+["Der Mord an Akiir ist niemals von uns in Auftrag gegeben worden! Kriis hat
+gelogen, wei die G”ttin, warum er das getan hat! Wir haben keinen Grund, um
+so etwas Sch„ndliches zu tun!"{WORDG”ttin}]
+
+Block 11        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 2
+["Lat mich Euch noch einmal pers”nlich dafr danken, da Ihr uns von dem
+Mordverdacht an Akiir befreit habt!"]
+
+Block 12        "AKIIR", normal
+["Akiir ist das Oberhaupt der Former, einer Gilde, die meist ein etwas
+gespanntes Verh„ltnis zu der unseren hat. Besonders Akiir geht keinem Konflikt
+aus dem Wege."{WORDFormer}]
+
+Block 13        "Fasiir", Phase 1
+["Ihr kennt Fasiir nicht so gut wie wir, die wir t„glich mit ihm umgehen. Er
+wrde niemals ein solches Verbrechen in Auftrag geben! Aber ich sch„tze, Ihr
+werdet den Worten eines Mitglieds seiner Gilde wenig Glauben schenken."]
+
+Block 14        "Fasiir", Phase 2
+["Ich bin Euch aufrichtig dankbar, da Ihr seinen Namen reingewaschen habt."]
+
+Block 15
+["šber einen Mord wei ich nichts."]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18
+[dummy]
+
+Block 19
+[dummy]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21        Begrung
+["Dsarii-ma, Reisende. Sucht Ihr Heilung fr Eure Wunden?" {BLOK010}"Ja,
+Rejira, wir bedrfen Eurer Hilfe." {BLOK011}"Eigentlich nicht, aber wir h„tten
+gerne Medizin." {BLOK012}"Nein, vielen Dank. Wir wollten nur mal
+hereinschauen."]
+
+
+Block 22        Antwort auf MC21,12
+["Wie sch”n! Es passiert nur allzu selten, da mich die Leute nur fr ein
+Gespr„ch aufzusuchen." {BLOK010}"Ja, lat uns ein Schw„tzchen fhren."
+{BLOK011}"Wir mssen leider weiter, Rejira."]
+
+Block 23        Anwort auf MC22,10
+[{INK 001}{LEAD}{NAME} berichtet ein wenig von den Begebenheiten der
+bisherigen Reise. Rejira ist hocherfreut:^^ {INK 002}"Vielen Dank. Ich liebe
+aufregende Gespr„che!"]
+                Dann: Schw„tz-bit setzen
+
+Block 24        Antw. auf MC22,11
+["Wie schade. Viel Glck auf Euren Reisen."]
+                DANN: Gespr„ch Ende
+
+Block 25        WENN: Gespr. Ende, Schw„tz-Bit gesetzt, Chance von 50%
+["Oh, wartet. Ich glaube, ich habe hier noch ein kleines Geschenk fr Euch."]
+                DANN: 1 Heiltrank (st„rke 2)
+Block 26
+[SOON COMING: HEALER-SCREEN!]
+
+Block 27
+[SOON COMING: MERCHANT-SCREEN!]
+
+Block 28
+["Es war eine nette Abwechslung, mit Euch gesprochen zu haben. Pat auf Euch
+auf!"]
+
+Block 29
+["Wie kann ich Euch helfen?" {BLOK010}"Es geht um Verletzungen, Rejira."
+{BLOK011}"Einer von uns ist krank, glaube ich." {BLOK012}"Wir haben rger mit
+einem verfluchten Gegenstand."]
+
+Block 30
+["Ich kann Euch Tr„nke zur St„rkung des K”rpers und des Geistes anbieten."]

@@ -1,0 +1,12 @@
+F="test2.wvl"
+
+;Track 02 (loop):
+B=0 , P=121 , S=11025 , R=70 , C=1 , W=8 , "..\digital\wasser02.raw"
+;Track 03
+B=0 , P=122 , S=11025 , R=60 , C=1 , W=8 , "..\digital\tier05.raw"
+;Track 04
+B=0 , P=123 , S=11025 , R=60 , C=1 , W=8 , "..\digital\insect02.raw"
+;Track 05
+;B=0 , P=124 , S=11025 , R=60 , C=1 , W=8 , "..\digital\tier26.raw"
+;Track 06
+B=0 , P=125 , S=11025 , R=64 , C=1 , W=8 , "..\digital\bird08.raw"

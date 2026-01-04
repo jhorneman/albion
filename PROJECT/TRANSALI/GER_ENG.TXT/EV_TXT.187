@@ -1,0 +1,49 @@
+187: Akira Mitsamati, Abbautechniker
+====================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Maschinenfhrer. Ich fahre gerade Tests ber die
+Einsatzf„higkeit der Abbauanlagen."{WORDAbbauanlagen}]
+
+Block 1         Begr. 1x
+["Hallo, Driscoll. Wie steht's? Bald haben wir Nugget erreicht, dann hat fr
+mich die faule Zeit ein Ende."{WORDNugget}]
+
+Block 2         Begr. 2x
+["Hallo, Driscoll. Wie steht's?"]
+
+Block 3         "maschinenfhrer, Abbauanlagen"
+["Nun, zuerst werden die mitgebrachten Systeme gengend Erze abbauen, um eine
+Fertigung fr weitere Roboter|systeme zu errichten. Dann entsteht ein
+selbstlaufender Proze, bei dem immer mehr berschssiges Erz abf„llt, das wir
+mit den billigen Containern nach Hause ballern."{WORDRoboter}{WORDErz}]
+
+Block 4         "Roboter"
+["Die neuen Modelle sind riesig, mit integrierten Selbstreparatur|kreisen.
+Sind unverwstlich, die Dinger."]
+
+Block 5         "Erz"
+["Es soll ja alle m”glichen Sorten auf Nugget geben".]
+
+ Block 6
+[{BLOK000}Was kannst Du sagen ber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demn„chst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 7
+["Tsch, Tom."]

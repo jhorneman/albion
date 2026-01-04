@@ -1,0 +1,107 @@
+
+Textfile fr Beloveno
+-----------------------------------------------------------------
+
+Block 0
+[{BLOK000}Waffenschmied {BLOK001}Rstungsschmied {BLOK002}Gemischtwaren
+{BLOK003}Gasthaus {BLOK004}Herberge {BLOK005}Lebensmittel {BLOK006}Rathaus
+{BLOK007}Heilerin {BLOK008}Stadttor {BLOK009}Hafen {BLOK010}Marktplatz
+{BLOK011}Wohnhaus {BLOK012}Wohnhaus {BLOK013}Wohnhaus {BLOK014}Wohnhaus]
+
+Block 1
+[Ein groer Steinblock.]
+
+Block 2
+[Eine Tre.]
+
+Block 3
+[Die Tre ist verschlossen und l„t sich nicht ”ffnen. Wahrscheinlich befindet
+sich momentan niemand in dem Geb„ude.]
+
+Block 4
+[Hier werden die angelieferten Waren kontrolliert.]
+
+Block 5
+[Hier ist ein groer Platz mit einem Brunnen, zahlreichen Tischen, Beh„ltern
+und F„ssern. Vermutlich handelt es sich hierbei um eine Art von Marktplatz.]
+
+Block 6
+[{INK 006}{CNTR}Rstungen, Helme und Panzer.]
+
+Block 7
+[{INK 006}{CNTR}Wurf-, Hieb- und Stichwaffen.]
+
+Block 8
+[{INK 006}{CNTR}Gemischtwaren.]
+
+Block 9
+["Beloveno Freunde!^^Da w„ren wir also. Ich wrde vorschlagen, da wir uns
+zun„chst einmal die Stadt anschauen. Vielleicht erfahren wir ja irgend etwas
+ber die Toronto. Irgendwie mssen wir eben versuchen, weiterzukommen. Aber in
+einer groen Stadt hat man ja viele M”glichkeiten."]
+
+Bloxk 10
+[Ein Brunnen.]
+
+Block 11
+["Skeima Din,^^sucht Ihr etwas Bestimmtes?"]
+
+Block 12
+[Mit geschickten Umschreibungen versuchen Tom und seine Gef„hrten
+nachzufragen, ob der Dorfbewohner irgend etwas wei, was mit der
+Toronto-Landung zusammenh„ngt. Aber es sieht schlecht aus. Zimos hat nichts
+Derartiges beobachtet und er wei auch nichts ber Gerchte oder Meldungen,
+die auf ein solches Ereignis schlieen lassen.^^Wenn er die Wahrheit sagt,
+dann ist der Toronto-Landeplatz doch noch ein ganzes Stck weg. Dann stellt
+sich natrlich die Frage, wie die Reise weitergeht. Vielleicht findet man ja
+eine neue effektive Transport|m”glich|keit, wenn man einige Leute besser
+kennenlernt. Also lohnt es sich bestimmt, Beloveno und die n„here Umgebung
+grndlich zu erforschen.]
+
+Block 13
+["Wenn Ihr etwas haben m”chtet, dann redet mit den Leuten. Nur so kommt man
+hier zu etwas. Wer nicht gut reden kann, hat hier schlechte Karten. Sprecht
+die Leute ”fters an! Es zahlt sich aus, wenn man hartn„ckig ist. Erst vor
+kurzem habe ich den kleinen Zierspringbrunnen meinem Nachbarn abgeschwatzt. Er
+braucht ihn schon seit Jahren nicht mehr, aber ich mute 5 Mal nachfragen, bis
+er dann schlielich nachgegeben hat. Manche Leute sind einfach stur. Die
+meisten Leute sind hier so veranlagt. Und manche „ndern auch Ihr Meinung
+”fters, wenn sich die politische Lage in der Welt „ndert. Also bleibt einfach
+an den Leuten dran und redet mit ihnen."]
+
+Block 14
+["Ich kann mir leider keine Zeit fr ein ausfhrliches Gespr„ch nehmen. Aber
+wenn Ihr mal mit jemanden eine Unterhaltung angefangen habt, dann sprecht
+denjenigen doch einmal auf den Gebirgspa, auf Kounos und Srimalinar an."]
+
+Block 15
+["Wenn Ihr aus der Stadt herausgeht, schtzt Euch vor den Krondirs. Das sind
+ziemlich aggressive Raubtiere."]
+
+Block 16
+["Bitte trampelt nicht auf unseren Getreidefeldern herum, wenn Ihr hier die
+Umgebung erkundet. Ein Viertel der letzten Ernte wurde zerst”rt, weil manche
+Leute nichts Besseres zu tun hatten, als ber unsere Felder abzukrzen."]
+
+Block 17
+["Ich stehe manchmal stundenlang am Hafen und lausche dem Wellenrauschen. Die
+Naturgewalten beeindrucken mich immer wieder aufs neue. Ist es nicht herrlich,
+die frische, salzige Luft einzuatmen und die Gischt auf dem Gesicht zu spren?"]
+
+Block 18
+["Wie lauft Ihr denn hier rum? Also die Menschen werden immer komischer..."]
+
+Block 19
+["Ihr k”nnt und mt nicht alles verstehen."]
+
+Block 20
+["Skeima Din. Wenn Ihr Leute kennenlernen m”chtet, macht doch einmal einen
+Besuch in der Kneipe. Dort ist auch gleich eine Herberge mit drin, in der man
+ein Zimmer mieten und bernachten kann."]
+
+Block 21
+["Wenn Ihr neu in der Stadt seid, solltet Ihr Euch erst im Rathaus anmelden!"]
+
+Block 22
+[{CNTR}{INK 006}Geschlossen.^Ge”ffnet von 8 bis 22 Uhr.]
+

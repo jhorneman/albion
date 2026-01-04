@@ -1,0 +1,209 @@
+
+Map-Text-File fr Cut-Map 1001
+---------------------------------------------------------------------
+
+Block 0
+[-frei-]
+
+Block 1
+[Ein Wasserstrudel.]
+
+Block 2
+[Ein Felsbrocken.]
+
+Block 3
+[Schwimmende Wasserpflanzen.]
+
+Block 4
+[Das Wasser ist tief und die Str”mung scheint stark zu sein.]
+
+Block 5
+[Wasserpflanzen.]
+
+Block 6
+[Ein Stein.]
+
+Block 7
+[Riesige Luftwurzeln.]
+
+Block 8
+[Exotische Pflanzen in beeindruckender Gr”e.]
+
+Block 9
+[Dichter Dschungel.]
+
+Block 10
+[Ein Kugelbaum.]
+
+Block 11
+[Ein Spinnenbaum. Seine roten Frchte ziehen Insekten an, die vergiftet
+herabfallen.]
+
+Block 12
+[Ein Blattknollenbaum.]
+
+Block 13
+[Eine Schlinggraspflanze.]
+
+Block 14
+[Niedrige Bodengew„chse.]
+
+Block 15
+[Netzpflanzen.]
+
+Block 16
+[Eine Stengelpflanze.]
+
+Block 17
+[Steine.]
+
+Block 18
+[Wurzeln und abgebrochene ste.]
+
+Block 19
+[Pilze.]
+
+Block 20
+[Ein Busch.]
+
+Block 21
+[Ein kakteenartiges Gew„chs.]
+
+Block 22
+[Felsen.]
+
+Block 23
+[Ein Wasserfall.]
+
+Block 24
+[Eine morastige Stelle.]
+
+Block 25
+[Eine Pflanze hat sich hier im Fels verankert.]
+
+Block 26
+[Ein Felsvorsprung.]
+
+Block 27
+[Diese Pflanze leuchtet in faszinierenden Farbt”nen.]
+
+Block 28
+[Ein halbpflanzliche Stadtmauer.]
+
+Block 29
+[Das Stadttor.]
+
+Block 30
+[Ein Brckenpfeiler.]
+
+Block 31
+[Eine Iskai-Brcke.]
+
+Block 32
+[Diese Pflanze bietet durch ihre mannigfaltige Ver„stelung viele
+Haltem”glichkeiten und ist mit Tausenden von Wurzeln fest in die Felswand
+gewachsen.]
+
+Block 33
+[An dieser Stelle ist das Wasser sehr flach und klar, so da man auf den Grund
+schauen kann. Zahlreiche Steinbrocken liegen dort und es gibt fast keine
+Str”mung.]
+
+Block 34
+[Eine Stromschnelle.]
+
+Block 35
+[Dji-Fadh-Ruinen.]
+
+Block 36
+[Eine bunte Kuppel.]
+
+Block 37
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 38
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 39
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 40
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 41
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 42
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 43
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 44
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 45
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 46
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 47
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 48
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 50
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 51
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 52
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 53
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 54
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 55
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 56
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 57
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 58
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 59
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 60
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 61
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 62
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 63
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 64
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 65
+[Platzhalter fr weitere Cutmap-Events]
+
+Block 66
+[Platzhalter fr weitere Cutmap-Events]

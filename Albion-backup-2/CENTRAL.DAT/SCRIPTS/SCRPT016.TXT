@@ -1,0 +1,1197 @@
+; **** Script 16: Schiffsreise zur Insel der Urkelten
+
+Fill_screen 0
+fade_from_black
+text 84
+fade_to_black
+;show_map
+npc_lock 85
+npc_jump 85 97 138
+npc_turn 85 1
+party_off
+update 4
+show_map
+fade_from_black
+
+; FAKE: Da sich an der Oberfl. die
+; Party langsamer bewegt, führe
+; ich die Kamera statt der Party
+; mit dem Schiff
+
+camera_lock
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+party_member_text 1 85
+party_member_text 2 86
+party_member_text 1 87
+text 88
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+update 125
+
+text 89
+
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+update 80
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+text 90
+fade_to_black
+show_picture 8 0 0
+fade_from_black
+pause 0
+
+fade_to_black

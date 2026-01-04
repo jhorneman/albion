@@ -1,0 +1,142 @@
+NPC 123: Fasiir, Chef der Dji-Kas, Phase 2 
+==========================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Dank Euch, bin ich immer noch Oberhaupt der Dji-Kas, Freunde."]
+
+Block 1         "BRADIR"
+["Ihr k”nnt Euch denken, da ich gemischte Gefhle ber ihn empfinde. Auch aus
+Freundschaft darf man nicht das Leben eines anderen ruinieren wollen."]
+
+*******Unter-Allgemeinwissensblock fr Dji-Kas*******************************
+Block 2         "Dji-Kas, Magier, Magiergilde, Zauberer, Magie, Zauber"
+["Unsere Magie ist tief mit dieser Welt verwurzelt. Ihr k”nnt das zum Beispiel
+daran erkennen, da wir fr fast alle unsere Sprche eine bestimmte Sorte von
+Samenk”rnern benutzen, um unsere geistigen Kr„fte darin zu konzentrieren. Wir
+sind ferner stolz auf die Vielseitigkeit unserer Kunst. Wir kennen Magie zum
+Erschaffen und Zerst”ren, zum Verletzen und zum Heilen.^ Als Kennzeichen
+unserer Gilde tragen wir eingef„rbte Muster im Fell."
+{WORDSamenkorn}{WORDHeilung}{WORDFasiir}{WORDGildenhaus}]
+                
+
+Block 3         "FASIIR"
+[{INK 001}Fasiir wirkt amsiert.^^ {INK 002}"Nun, Ihr sprecht gerade mit ihm!."]
+
+Block 4         "SAMENKORN, SAMENK™RNER, KORN, K™RNER"
+["Nicht das Samenkorn selbst entfaltet die magische Wirkung, aber der Geist
+des Dji-Kas verwendet sie, um darin seinen Fokus zu finden. Die K”rner stammen
+von einer seltenen Pflanze namens Triifalai, das bedeutet "Trii der G”ttin".
+Die Samen werden brigens auch im Gildenhaus verkauft."{WORDTrii} {WORDG”ttin}] 
+
+Block 5         "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                "WUNDEN, VERWUNDUNG"
+["Gleich neben dem Eingang zum Gildenhaus findet Ihr Stri Rejira, eine
+Meisterin der Heilkunst. Sie wird Eure Verletzungen heilen."]
+
+Block 6         "Triifalai"
+["Dies ist der Name einer Pflanze, deren Samenk”rner von uns sehr begehrt
+sind.{WORDSamenkorn}"]
+
+Block 7
+[]
+
+Block 8         "Former,Formergilde, Dji-Fadh, Baumeister"
+["Oh, die Baumeister. Das Verh„ltnis unserer Gilden ist nicht immer ungetrbt.
+Manche Ihrer besten Talente fhlen sich von unserer vielseitigen Kunst
+angezogen und wechseln ber zu unserer Gilde. Ich mu auch eingestehen, mit
+Akiir, dem obersten Stri der Former, kein allzu gutes Verh„ltnis zu haben. Es
+geht um alte Rivalit„ten zwischen uns."{WORDGilde}{WORDAkiir}]
+
+Block 9         "GILDENHAUS"
+["Das Gildenhaus hat schon seit langer Zeit seinen Platz im sdwestlichen
+Viertel Jirinaars. Es ist von den Dji-Kas selbst erbaut worden und beherbergt
+viele Gildenmitglieder und alle Dra."{WORDDra}]
+
+Block 10        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 1
+["Ich versuche, Akiir zugute zu halten, da er sich in einer extremen Lage
+befand. Er war nicht mehr bei sich, dessen bis ich sicher."]
+
+Block 11        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 2
+["Lat mich Euch noch einmal pers”nlich dafr danken, da Ihr uns von dem
+Mordverdacht an Akiir befreit habt!"]
+
+Block 12        "AKIIR", normal
+["Akiir ist das Oberhaupt der Former, einer Gilde, die meist ein etwas
+gespanntes Verh„ltnis zu der unseren hat. Besonders Akiir geht keinem Konflikt
+aus dem Wege."{WORDFormer}]
+
+Block 13        "Fasiir", Phase 1
+["So lautet mein Name, richtig."]
+
+Block 14        "Fasiir", Phase 2
+["So lautet mein Name, richtig."]
+
+Block 15
+["Der Mordanschlag leitete eine schlimme Zeit fr mich ein. Zum Glck konntet
+Ihr alles aufkl„ren, Freunde."]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18
+[dummy]
+
+Block 19
+[dummy]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21        Begrung 1.mal WENN Sira CONS
+["Dsarii-ma, Freunde! Lat mich Euch zuerst fr die Aufkl„rung der furchtbaren
+Geschichte mit Akiir danken! Was mu in ihm vorgegangen sein, als er von
+seinem bevorstehenden Tod wute! Entsetzlich.^ Aber Dank Euch ist mein Name
+wieder frei von Verdacht. Ich kann Euch nicht vergelten, was Ihr fr mich
+getan habt, aber bitte Euch, dies als kleine Anerkennung anzunehmen. Es mag
+Euch auf Euren Reisen ntzlich sein. Ich habe es seit langer Zeit unter
+Verschlu gehalten, denn es ist eine gef„hrliche Waffe, vermutlich von
+Menschenmagiern geschaffen. Ich bin jedoch sicher, da dieser Dolch bei Euch
+gut aufgehoben ist."^^ {INK 001}Fasiir berreicht einen Dolch mit einer Klinge
+aus grnem Kristall.]
+                DANN: n guten mag. Gegenstand
+
+Block 22        Begr. 1.mal wenn Sira CONS
+["Kann ich Euch sonst noch behilf|lich sein, Freunde?" {WORDBradir}{WORDAkiir}
+{BLOK010}{INK 001}Sira:{INK 002}"Ich wrde gerne mein Wissen mehren, Fasiir."]
+
+Block 23        Begrung 1.mal wenn Sira nicht CONS 
+["Kann ich Euch sonst noch behilf|lich sein, Freunde?"{WORDBradir}{WORDAkiir}]
+
+Block 24        Begrung 2.mal wenn Sira CONS       
+["Dsarii-ma und Willkommen, Freunde. Kann ich Euch noch behilf|lich sein?"
+{WORDBradir}{WORDAkiir} {BLOK010}{INK 001}Sira:{INK 002}"Ich wrde gerne mein
+Wissen mehren, Fasiir."]
+
+Block 25        "KRIIS"
+["Kriis, dieser j„mmerliche Skorrek! Er ist noch in der Obhut der Stiriik, ein
+schwieriger Fall fr die Rechtsprechung. Ich finde, um es vorsichtig zu
+formulieren, sein Verhalten unverzeihlich."]
+
+Block 26        Begrung 2.mal wenn Sira CONS       
+["Dsarii-ma und Willkommen, Freunde. Kann ich Euch noch behilf|lich sein?"
+{WORDBradir}{WORDAkiir}]
+
+Block 27
+["Aber ja, Sira, ich unterrichte Dich gerne. Selbst|verst„ndlich kostenlos."]

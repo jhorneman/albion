@@ -1,0 +1,43 @@
+Arrim (Iskai-Brger) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Ich baue H„user aus Pflanzen, wie Ihr hier bestimmt schon mehrere
+davon gesehen habt."]
+
+Block 1         (Begrung)
+["Skeima Din, kennen wir uns nicht schon? Habt Ihr auch schon von den
+Gerchten ber Kontos geh”rt?"{WORDGerchte}]
+
+Block 2         (Gerchte)
+["Wir wissen hier alle nicht so recht, was wir davon halten sollen. Kontos
+erz„hlt den Bewohnern seines Dorfes, da wir fr die schrecklichen Wesen
+verantwortlich seien, die in der N„he unserer heiligen St„tte entstehen. Wir
+k”nnen wohl nicht l„nger leugnen, da wir dieses Problem haben. Aber es ist
+einfach eine Frechheit, zu erz„hlen, da dies unsere Absicht w„re. Kontos
+stellt uns ja richtig b”sartig dar. Fragt Edjirr, den Kneipenwirt. Er denkt da
+wie ich.^^Habt Ihr davon auch schon geh”rt?"{BLOK010}"Ja,
+gelegentlich."{BLOK011}"Nein."{WORDHeiligtum}{WORDWesen} {WORDTabu}]
+
+Block 3         (Resp. 1)
+["Seht Ihr. Wir wissen nicht, warum er so etwas erz„hlt. Wem will er damit
+helfen?"]
+
+Block 4         (Resp. 2)
+["Nicht? Na, vielleicht ist es ja auch nicht so wichtig..."]
+
+Block 5         (Heiligtum)
+["Ja, geht da besser nicht hin. Unsere religi”sen Feiern finden dort statt. Es
+ist fr uns ein sehr wrdevoller Ort."]
+
+Block 6         (Tabu)
+["Dieses Tabu gibt es schon, solange ich zurckdenken kann. Das hat
+historische Grnde, die ich Euch jetzt aber nicht erkl„ren m”chte."]
+
+Block 7         (Arrim)
+["Ja?"]
+
+Block 8         (Wesen)
+["Wir wissen alle nicht, woher diese Wesen kommen. Sie scheinen magischen
+Ursprungs zu sein, und die meisten davon trifft man ganz in der N„he unseres
+Heiligtums. Wir haben aber noch nie erlebt, da sie AUS unserem Heiligtum
+kommen."]

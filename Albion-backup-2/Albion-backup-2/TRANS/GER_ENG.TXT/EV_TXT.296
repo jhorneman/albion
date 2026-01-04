@@ -1,0 +1,83 @@
+
+Sojekos, Ortsvorsteher der Stadt
+==========================================================================
+
+Block 0
+[{BLOK000}"Ich regle alle offiziellen Angelegenheiten in der Stadt und bin
+Ansprech|partner in Streit- und Krisen|f„llen. Auer|dem bin ich fr die
+Stadt|kasse zu|st„n|dig."]
+
+Block 1            (Begrung)
+["Seid willkommen.^^Ich hoffe, Ihr kommt aus einem wichtigen Grund, denn meine
+Zeit ist kost|bar. Wie kann ich Euch hel|fen?"{BLOK010}"Wir m”ch|ten Euch
+ger|ne eine wich|tige Mit|teilung machen."{BLOK011}"Entschuldigt bitte, wir
+haben uns geirrt."]
+
+Block 2            (Begrung, nach Erkl„rung)
+["Wie schon gesagt, ich habe Kossotto Bescheid geben lassen. Er ist
+in|for|miert und kann Euch das n”tige Wissen ver|mitteln. Ihr fin|det ihn in
+den Versuchs|kellern der Ger„te|macher."]
+
+Block 3            (1,11)
+["Wie?^^Das ist Euch jetzt ein|gefallen? Na sch”n, dann st”rt mich bitte nicht
+weiter."]       
+
+                   fhrt zu Dialogende
+
+Block 4            (1,10)
+["Gut, dann erz„hlt mal."^^Und so beginnt Tom, die lange Geschichte mit den
+wich|tigs|ten Ereig|nissen zu er|z„h|len. Ob|wohl er sich kurz fat, dauert es
+doch ziem|lich lange, aber Sojekos h”rt auf|merk|sam zu und unter|bricht ihn
+kein ein|ziges Mal.^^Tom er|z„hlt von der Erde, von der To|ron|to und von den
+Erleb|nissen hier mit seinen neuen Freun|den. Er erz„hlt auch von sei|nem
+Gesinnungs|wandel und von den Ge|fahren, die dieser Welt nun drohen. Er
+schil|dert die Dring|lich|keit des An|liegens sehr deut|lich und Sojekos
+scheint den Ernst der Lage auch zu be~grei|fen.]
+
+Block 5            (Fortsetzung)
+["Also so eine Geschichte habe ich wei Gott noch nie zu Ohren be|kommen. Aber
+da ich schon viel von Euch geh”rt habe, da die wich|tigsten Punkte in Eurer
+Schil|derung durch|aus mit mei|nen Infor|mationen ber|ein|stimmen -
+neben|bei, ich habe das Raum|schiff auch landen sehen, auch wenn ich damals
+noch nicht wute, da es eines war - und da Ihr nicht den Ein|druck von
+durch|gedreh|ten Spin|nern macht, bin ich durch|aus bereit, Euch zu glau|ben.
+Und damit ist Euch natr|lich auch meine volle Unter|sttzung sicher.^^Tja,
+Ihr mt nun also wissen, wie man Metall mit Hilfe von Magie zer|st”ren kann.
+Ich mu leider geste|hen, da ich selbst nicht ber dieses Wissen ver|fge,
+aber es gibt hier Leute, die sich damit aus|kennen."{WORDWissen}]
+
+Block 6            (Wissen)
+["Diese Leute, die ich meine, sind etwas schwer zug„nglich. Sie wrden Euch
+dieses Wissen unter nor|malen Umst„n|den nicht ver|mitteln, denn Wissen ist
+fr uns Kapital, da wir nor|maler|weise nicht an Fremde
+weiter|geben."{WORDUmst„nde}]
+
+Block 7            (Umst„nde)
+["In diesem Fall liegen die Dinge aber etwas anders. Wir sind sehr froh, da
+Ihr bereit seid, uns zu helfen, und die Sache ist fr uns so lebens|wich|tig,
+da wir wir Euch das Wissen ver|mitteln wer|den.^^Die Person, die dazu in der
+Lage ist, heit Kossotto. K”nnt Ihr Euch den Namen merken?"{WORDKossotto}]
+
+Block 8            (Kossotto)
+["Sch”n, Kossotto ist Ger„temacher, aber er l„t sich in der Gilde so gut wie
+nie sehen. Er wrde Euch diese Magie nie verraten, wenn ich ihn nicht dazu
+zwingen wrde. Glck|licher|weise re|spektiert er mich und so wird er tun, was
+ich ihm sage, auch wenn es ihm nicht pat. Kossotto mu in allem, was er tut,
+fr sich einen Vorteil sehen, sonst ist er zu nichts zu bewegen. Aber er ist
+schlie|lich nicht dumm und wird ein|sehen, da dies fr alle hier einen
+groen Nutzen hat. Ich werde gleich nach diesem Ge|spr„ch jeman|den schicken,
+der Kossotto Be|scheid geben wird. Ihr mt trotz|dem per|s”n|lich zu ihm
+gehen, denn ich wei nicht, in welcher Form Euch dieses Wissen ver|mittelt
+wird. Kennt Ihr seinen Aufent|halts|ort?"{WORDAufenthaltsort}]
+
+                   Questbit setzen!
+
+Block 9            (Aufenthaltsort)
+["Kossotto ist fast immer in den alten Versuchs|kellern der Ger„te|macher. Er
+wird nicht gern gest”rt - deshalb werdet Ihr ihn im aller|hin|ters|ten Winkel
+finden. Sucht ihn auf und lat Euch von ihm helfen. Ich bedanke mich schon
+einmal im Namen aller Brger von Umajo-Kenta fr Eure Dienste. Obwohl Ihr
+natr|lich an dem ganzen šbel auch nicht ganz un|schul|dig seid - schlie|lich
+sind ein paar von Euch mit diesem feind|lichen Raum|schiff hierher gekommen -
+be|trachte ich Euch doch alle als Freun|de, denn Ihr habt ein|gesehen, da Ihr
+im Un|recht wart. Ich danke Euch dafr.^^Nun geht und besucht Kossotto."]

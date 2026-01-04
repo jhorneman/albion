@@ -1,0 +1,231 @@
+; Gefängnis-Ausbruch
+;
+; 
+fade_to_black
+show_map
+party_jump 29 34
+party_turn 2
+npc_lock 1
+npc_on 1
+npc_jump 1 29 17
+npc_turn 1 2
+camera_lock
+camera_jump 300 300
+update 20
+fade_from_black
+
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_lock 0
+
+
+
+npc_move 1 -1 0
+npc_move 0 -1 0
+update 4
+
+npc_move 1 -1 0
+npc_move 0 -1 0
+update 4
+
+npc_move 1 -1 0
+npc_move 0 -1 0
+update 4
+
+npc_move 1 -1 0
+npc_move 0 0 1
+update 4
+
+
+
+camera_move 0 4
+npc_move 1 0 1
+npc_move 0 0 1
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+npc_move 1 0 1
+npc_move 0 0 1
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+npc_move 1 0 1
+npc_move 0 0 1
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+npc_move 1 0 1
+npc_move 0 1 0
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+
+camera_move 0 4
+npc_move 1 1 0
+npc_move 0 0 1
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+camera_move 0 4
+npc_move 1 1 0
+npc_move 0 0 1
+update 1
+
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+
+npc_move 1 1 0
+npc_move 0 0 1
+update 4
+
+npc_move 1 1 0
+party_move 0 1
+update 4
+
+npc_text 203 171
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+npc_move 0 -1 0
+update 4
+
+npc_move 1 0 1
+npc_move 0 -1 0
+update 4
+
+npc_move 1 0 1
+npc_move 0 -1 0
+npc_turn 0 2
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+
+
+npc_move 1 -1 0
+update 4
+
+npc_move 1 -1 0
+update 4
+
+npc_text 203 172
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+
+
+npc_move 1 1 0
+update 4
+
+npc_move 1 1 0
+update 4
+
+
+
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+npc_move 1 0 1
+update 4
+
+
+
+npc_off 1
+update 4
+
+npc_text 203 173
+active_member_text 174
+
+party_turn 2
+update 2
+
+party_move 0 1
+update 4
+
+party_move 0 1
+update 4
+
+party_move 0 1
+update 4
+
+npc_text 203 175
+
+party_move 0 1
+update 4
+
+party_move 0 1
+update 4
+
+fade_to_black
+

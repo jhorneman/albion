@@ -1,0 +1,102 @@
+
+MAP 150, TORONTO, TEIL 1
+========================
+
+Block 0
+[!]
+
+Block 1
+[Beim Betreten der Bodenplatte vor der TÅr leuchtet diese auf. Gleichzeitig
+îffnet sich die TÅr.]
+
+Block 2
+[Bodenplatte leuchtet auf.]
+
+Block 3
+[Hier befindet sich eine Bodenplatte mit einer transparenten LeuchtflÑche.]
+
+Block 4
+[Nachdem diese Bodenplatte aufleuchtet, îffnet sich im "Westen" des Raumes die
+TÅr.]
+
+Block 5
+[Ein Schalter.]
+
+Block 6
+[Die Stellung des Schalters Ñndert sich beim nochmaligen DrÅcken nicht mehr.]
+ 
+Block 7
+[Die TÅr versucht sich zu schlieûen, bleibt aber offen. Offenbar hat ein
+Sensor bemerkt, daû noch jemand in der TÅr steht.]
+
+Block 8
+[An der nîrdlichen Wand befindet sich ein Wandschrank.]
+
+Block 9
+[Der Wandschrank ist leer, bereit zur Aufnahme von GegenstÑnden.]
+
+Block 10
+[Ein Wandschrank.]
+
+Block 11
+[Das GerÑusch kam von rechts, aus einiger Entfernung.]
+
+Block 12
+[Sowie sich die TÅr mit den roten Leuchten îffnet, schlieût sich hinten
+diejenige mit der grÅnen Markierung. Der RÅckweg ist versperrt!]
+
+Block 13
+[Dies muû ein Serviceroboter sein. Er geht einer unbekannten Aufgabe nach.]
+
+Block 14
+[Eine TÅr. Es ist kein ôffnungsmechanismus zu erkennen.]
+
+Block 15
+[Eine Leuchtstoffrîhre. Sie strahlt kaltes, weiûes Licht ab.]
+
+Block 16
+[Ein StahltrÑger.]
+
+Block 17
+[Die halbtransparenten WÑnde markieren einen Servicezugang. Die Leiter in der
+Mitte fÅhrt nach oben.]
+
+Block 18
+[Eine Zehnertastatur zum Eingeben von Zahlencodes.]
+
+Block 19
+[Eine TÅr mit roten Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 20
+[Eine TÅr mit grÅnen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 21
+[Eine TÅr mit blauen Markierungsleuchten an der Seite. Es ist kein
+ôffnungsmechanismus zu erkennen.]
+
+Block 22
+[Die Zahlenkombination war offenbar korrekt: Die TÅr neben der Tastatur hat
+sich geîffnet.]
+
+Block 23
+[Nichts passiert.]
+
+Block 24
+[Yeah! Made it!]
+
+Block 25
+[Eine Leiter. Sie fÅhrt nach oben.]
+
+Block 26
+[Das rhythmische Blinken der Bodenplatte deutet wohl auf eine besondere
+Funktion hin.]
+
+Block 27
+[Eine defekte Leuchtstoffrîhre.]
+
+Block 28
+[{INK 001}Tom deponiert die Waffe in dem Wandschrank.{INK 002}^^ "So. Wenn ich
+jetzt von der anderen Seite dieser Schleuse hier wieder an den Schrank
+drankomme, hab' ich die Secus gelinkt und die Waffe gehîrt mir!"]

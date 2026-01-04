@@ -1,0 +1,36 @@
+165: Bragona, EssenshÑndlerin in Klouta 
+========================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich handele mit FrÅchten, Brot und Fleisch."
+{WORDFrÅchte}{WORDBrot}{WORDFleisch}]
+
+Block 1         "Begr. 1x"
+["Togi Din, meine hungrigen Reisenden. Kann ich Euch meinen vorzÅglichen
+Proviant anbieten?" {BLOK010}"Ja, wir kînnten etwas Verpflegung gebrauchen."]
+
+Block 2         "FrÅchte"
+["FÅr die Reise empfehle ich getrocknete FrÅchte. Ich habe hier besonders gute
+Ware von den berÅhmten Feldern von Aballon!"{WORDAballon}]
+
+Block 3         "Brot"
+["Ja, hervorragendes Dauerbrot von hier und aus Vanello."{WORDVanello}]
+
+Block 4         "Fleisch"
+["Ich habe gepîkeltes Fleisch und gerÑucherten Fisch, hier aus dem Dorf."]

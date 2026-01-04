@@ -1,0 +1,51 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 1
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."]
+
+Block 1         (Begrung)
+["Skeima Din, Kariah grt Euch. Ich glaube, ich habe eine wichtige
+Information fr Euch. Vielleicht k”nnt Ihr der Stadt einen wichtigen Dienst
+erweisen. Seid Ihr bereit zu helfen?"{WORDJa}{WORDNein}]
+
+Block 2         (Information, Ja)
+["Ja, wo fange ich denn da am besten an? Nun arbeite ich ja im Freudenhaus und
+so habe ich schon mal ab und zu den einen oder anderen Kunden, der in unserer
+Gesellschaft eine bedeutende Rolle spielt. Viele von Ihnen vertrauen mir dabei
+Informationen an, die ich teilweise gar nicht wissen m”chte und die auch ganz
+sicher nicht fr die ™ffentlichkeit bestimmt sind. Indem ich solche
+Informationen weitergebe, bringe ich mich natrlich auch selbst in Gefahr. Die
+Sache, wegen der ich Euch anspreche, ist mir allerdings so wichtig, da ich
+dieses Risiko in Kauf nehme.^^Es geht konkret um Gard und Riko. Sie sind
+Mitglieder im 'Rat der Gerechten' und sie regieren nicht fr, sondern gegen
+unsere Gemeinschaft. Ihr eigenes Wohlergehen ist Ihnen weit wichtiger, sie
+sind gierig und streben nach Macht und Reichtum!^^Ihr seid erfahren im Kampf!
+Ihr k”nntet sie absetzen oder t”ten! Die Stadt wrde Euch das ganz bestimmt
+danken! Glaubt mir."{BLOK010}"Ihr stellt Euch das ein wenig einfach vor, liebe
+Kariah. Wir haben weder Beweise, da das alles stimmt, was ihr uns soeben
+erz„hlt habt, noch k”nnen wir die Informationen als Beweise anfhren, denn sie
+sind Euch ja alle in den lustvollsten Stunden anvertraut worden. Bestimmt seid
+Ihr nicht bereit, die Identit„t der Informanten preiszugeben, und das ist nur
+verst„ndlich. Schlielich wrdet Ihr Euch dadurch in groe Gefahr begeben.
+Ganz besonders dann, wenn das alles stimmt, was Ihr uns erz„hlt habt.^^Wir
+k”nnen auch nicht einfach gegen Gard und Riko vorgehen. Mit welchem Recht? Mit
+welcher Begrndung? Wir k”nnen sie nicht einfach absetzen. Und t”ten scheidet
+vorerst mal ganz aus. Es tut uns leid, da wir Euch keine verbindlichere Hilfe
+zusagen k”nnen, aber wir werden versuchen, mehr ber Gard und Riko
+herauszufinden. Wir versuchen Euch auf dem Laufenden zu halten."]
+
+Block 3         (Antwort von Kariah auf Block 3)
+["Vielleicht bin ich zu panisch, das ist m”glich. Aber nach all meiner
+Erfahrung wei ich, da diese kleinen Geheimnisse, die mir nachts anvertraut
+werden, fast immer Wahrheiten sind. Und dann haben wir wirklich allen Grund
+zur Besorgnis. Bitte, bleibt an der Sache dran. Und besucht mich wieder!"]
+
+Block 4         (Nein)
+["Das ist wirklich traurig...šberlegt es Euch doch noch einmal. K”nnt Ihr uns
+helfen?"]
+
+Block 5         (Kariah)
+["Das bin ich."]

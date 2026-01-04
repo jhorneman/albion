@@ -1,0 +1,49 @@
+Normalo 2 (Aurino, mÑnnl./ist in der Kneipe anzutreffen) / Phase 2
+
+Block 0         (FAQs)
+[{BLOK000}"Ich erleche wilde Tiere in den WÑldern, schlachte sie und verkaufe
+das Fleisch. Sochesehen kînnt Ihr mich als JÑcher, Metzcher und VerkÑufer
+bezeichnen, newe."]
+
+Block 1         (BegrÅûung)
+["Skeima Din, man hîrt ja viel von Euch. ChefÑllt Euch Maini? Wart Ihr schon
+in Kounos? Habt Ihr mal Kontos besucht? Ist ein biûchen komisch, der Kerl,
+newe."{WORDKontinent}{WORDKounos}{WORDKontos}{WORDMaini}]
+
+Block 2         (BegrÅûung 2)
+["Und nochmal einen schînen Tach. Wir haben uns ja schon
+kennenchelernt."{WORDKontinent}{WORDKounos}{WORDKontos}]
+ 
+Block 3         (Kontos)
+["Ich kenne den Kontos schon sehr lange. FrÅher war das ein netter Kerl und
+man konnte sich richtich chut mit ihm unterhalten. Aber das ist schon lange
+nicht mehr mîchlich. Vor vielen Jahren hat er damit bechonnen, sich mit
+schwarzer Machie und mit Relichion zu beschÑftichen, und inzwischen hÑlt er
+sich wohl fÅr den allertollsten Druiden Åberhaupt. UrsprÅnglich hat er
+Åbrichens mal hier in Beloveno chelebt. Dann hat er sich mit Riko
+anchefreundet und seitdem hat er sich immer weiter von mir entfernt, newe.
+Inzwischen hat er in Kounos viele AnhÑnger fÅr seine Theorien chefunden. Naja,
+soll er nur machen. Ich denke, die meisten werden mit der Zeit schon dahinter
+kommen, daû er nicht mehr chanz normal ist."
+{WORDKontinent}{WORDKounos}{WORDMagie}{WORDTheorien}]
+ 
+Block 4         (Kontinent)
+["Nun, ich meine chanz Maini hier, newe. Beloveno, Srimalinar, Kounos, alles.
+Die chanze Nord- und SÅdseite des Kontinents."]
+
+Block 5         (Kounos)
+["Ihr wart doch sicher schon da, oder? Das ist das Dîrfchen auf den Plateaus,
+in dem noch ein recht traditioneller Lebensstil besteht, newe. Auûerdem treibt
+Kontos dort sein Unwesen. Ihr merkt schon - ich halte nichts von ihm."]
+
+Block 6         (Magie)
+["Ich verstehe nicht viel von Machie. Ich habe auch noch nie welche
+chebraucht, newe."]
+
+Block 7         (Theorien)
+["Ach, da mîchte ich char nicht weiter drauf einchehen. Aber so ein
+intellichenter Kerl wie Kontos ist schon im Stande, einiches auszuhecken,
+newe."]
+
+Block 8         (Aurino)
+["Das bin ich."]

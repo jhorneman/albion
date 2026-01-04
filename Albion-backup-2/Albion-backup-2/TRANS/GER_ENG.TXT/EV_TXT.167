@@ -1,0 +1,27 @@
+167: Tamno, Waffenschmied Vanello 
+==================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+
+[{BLOK000}"Ich bin der Waffenschmied von Vanello."]
+
+Block 1         Begr.
+["Togi Din, Reisende. Was kann ich Euch anbieten, um Eure Fahrten etwas
+sicherer zu machen?" {BLOK010}"Bitte zeigt uns eine Auswahl Eurer Waffen."
+{BLOK011}"Kînnt Ihr folgendes reparieren..." {BLOK012}"Lebt wohl."]

@@ -1,0 +1,54 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 3
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."]
+
+Block 1         (Begrung)
+["Skeima Din, Kariah grt Euch. Ich habe eine dringende Information fr Euch!
+Es ist wirklich sehr eilig!"{WORDInformation}]
+
+Block 2         (Begrung 2)
+["Skeima Din, habt Ihr ber meine Information nachgedacht? Bitte handelt
+schnell, solange das noch m”glich ist. Habt Ihr denn berhaupt darber
+nachgedacht?"{WORDInformation}{WORDJa}{WORDNein}]
+
+ 
+Block 3         (Information)
+["Man hat es nicht leicht als Hure! Vor einigen Tagen bekam ich nachts von
+einem Kunden den konkreten Hinweis, da Herras, Vorstand des 'Rates der
+Gerechten', umgebracht werden soll. Natrlich stecken Riko und Gard
+dahinter.^^Bitte! Ich kann es Euch nicht beweisen, aber helft! Tut etwas
+dagegen. Mir glaubt sonst keiner, Ihr seid meine letzte Hoffnung. Bitte!
+Verhindert das Attentat!^^Ich wei jetzt auch, da das Attentat unmittelbar
+bevorsteht. Aber Ihr k”nnt es jetzt noch
+verhindern!"{WORDAttentat}{WORDHinweis}]
+ 
+Block 4         (Nein)
+["Dann tut es bitte!"]
+
+Block 5         (Ja)
+["Und zu welchem Ergebnis seid Ihr gekommen?"{BLOK010}"Wir mssen
+abwarten."{BLOK011}"Wir werden schauen, was sich machen l„t."]
+
+Block 6         (Resp. 1+2)
+["Wartet nicht zu lange! Die Zeit l„uft davon, und Gard und Riko werden Ihre
+Tat mit Sicherheit ausfhren!"]
+
+Block 7         (Hinweis)
+["Ihr mt verstehen, da ich Euch nicht sagen kann, von wem ich den Hinweis
+bekam. Ich bringe mich durch die Informationen, die ich Euch gebe, ohnehin
+schon in eine groe Gefahr. Ich habe noch einen neuen Hinweis erhalten, da
+das Attentat unmittelbar bevorsteht!"]
+
+Block 8         (Attentat, Mord)
+["Das Attentat steht unmittelbar bevor! Vielleicht glaubt Herras Euch, wenn
+Ihr ihn warnt. Oder versucht Gard und Riko aufzuhalten. Wenn Herras tot ist,
+hat die b”se Seite im Rat das šbergewicht! Bitte versucht, das zu verhindern.
+Die meisten Leute hier in der Stadt sind so blind, da sie die Gefahr nicht
+sehen oder nicht sehen wollen."]
+
+Block 9         (Kariah)
+["Das bin ich."]

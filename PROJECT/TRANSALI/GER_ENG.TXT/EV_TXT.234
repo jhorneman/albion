@@ -1,0 +1,47 @@
+Perron (Ratsmitglied Nummer 1) / Phase 6
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Skeima Din, ich habe nicht viel Zeit, ich werde gleich auf die Reise zur
+heiligen St„tte von Srimalinar aufbrechen."{WORDHeiligtum}{WORDRathaus}]
+
+Block 2         (St„tte, Heiligtum, Srimalinar, Reise)
+["Der Konflikt zwischen den Iskai und den Menschen eskaliert immer weiter.
+Nachdem die Menschen nun die heilige St„tte der Iskai besetzt haben, sind
+bereits viele Iskai-Krieger herbeigezogen, um die St„tte zu verteidigen. Die
+Iskai haben inzwischen eigentlich allen Menschen gegenber eine ablehnende
+Haltung, obwohl nicht die ganze Bev”lkerung dieses Kontinents hinter Kontos
+und seinen Pl„nen steht. Aber das sehen die Iskai nicht, sie beurteilen alle
+Menschen gleich. Das wiederum hat zur Folge, da manche Menschen auch den
+Iskai gegenber ablehnende Haltungen einnehmen. šberall ist das Klima schon so
+gereizt, da keiner mehr dem anderen traut. Es kann Euch ohne weiteres
+passieren, da Ihr in manchen L„den keine Waren mehr einkaufen k”nnt. Wenn Ihr
+wissen m”chtet, was geschieht, dann reist zur heiligen St„tte von
+Srimalinar."{WORDKonflikt}{WORDKontos}]
+
+Block 3         (Konflikt,Pl„ne)
+["Laut Kontos sollen wir Menschen den Iskai ihre heilige St„tte wegnehmen,
+weil sie dort angeblich gef„hrliche Experimente mit schwarzer Magie
+durchfhren. Ich bin mir da nicht so ganz sicher. Auerdem sind wir, so denke
+ich, nicht in der Lage, darber zu bestimmen, wem was zusteht."]
+
+Block 4         (Kontos)
+["Haltet Euch fern von ihm!"]
+
+Block 5         (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 6         (Perron)
+["Das bin ich."]

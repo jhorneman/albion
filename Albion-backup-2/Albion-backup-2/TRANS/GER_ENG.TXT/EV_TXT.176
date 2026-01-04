@@ -1,0 +1,46 @@
+176: Roves, BÅcherwurm
+======================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin der Leiter der Bibliothek Arjanos."{WORDBibliothek}
+{WORDArjano}]
+
+Block 1         "Begr. 1x"
+["Togi Din. Willkommen in der Bibliothek Arjanos. Haltet bitte Eure Stimme
+gesenkt, um die Studierenden nicht abzulenken."{WORDBibliothek}{WORDArjano}
+{WORDSpruchrollen} {BLOK010}"Habt Ihr vielleicht Aufzeichnungen zum Thema
+Magie zu verkaufen?"]
+
+Block 2         "Bibliothek"
+["Hier ist das Wissen vieler Jahrhunderte versammelt. Seit vor 400 Jahren die
+Kunst des Buchdruckes erfunden wurde, benîtigt die Bibliothek nicht mehr so
+viel Platz wie in den alten Zeiten. Die Pergamentrollen mÅssen enormen Platz
+eingenommen haben. Wie dem auch sei, alles hier sind BÅcher Åber die Magie,
+philosophische Gedanken oder Lehrmaterial fÅr Kinder und Novizen. Ihr werdet
+fÅr Euch nicht viel Interessantes finden, fÅrchte ich."]
+
+Block 3
+["Nun, ich hÑtte hier in der Tat einige Spruchrollen, die interessant fÅr Euch
+sein kînnten."]
+
+Block 4            "Spruchrollen"
+["Spruchrollen erlauben es auch dem fÅr die Magie Unbegabten, einen Zauber
+auszufÅhren.^^Wird eine solche Spruchrolle jedoch von jemandem gelesen, der
+etwas von der Art der Magie versteht, um die es sich handelt, kann der- oder
+diejenige den Spruch dauerhaft lernen und anwenden."]

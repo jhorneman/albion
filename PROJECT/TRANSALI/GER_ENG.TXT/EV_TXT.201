@@ -1,0 +1,171 @@
+
+Allgemeinwissen fr die Normalos  (Bewohner von Kounos)
+--------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1         (Ort: Beloveno)
+["Beloveno ist die groe Hafenstadt. Sie liegt sdlich des Gebirges. Folgt dem
+Gebirgspa."{WORDGebirgspa}]
+
+Block 2         (Ort: Kneipe)
+["Sie ist in der Htte, in der Kontos untergebracht ist."]
+
+Block 3         (Ort: Rathaus)
+["Darber wei ich nichts."]
+
+Block 4
+["Darber wei ich nichts."]
+
+Block 5         (Sugo)
+["Sugo ist eines unserer beliebtesten Getr„nke. Ihr mt es unbedingt einmal
+versuchen. Vielleicht sollte ich Euch fairerweise sagen, da Sugo ein
+vergorener Obstsaft mit einer stark anregenden Wirkung ist. Wer Sugo nicht
+kennt, sollte ihn mit Vorsicht genieen! Ihr w„rt nicht die ersten Fremden,
+die nach zwei Gl„sern Sugo zu keiner weiteren Konver|sation mehr im Stande
+w„ren."]
+
+Block 6         (Heilerin, Ramina)
+["Darber wei ich nichts."]
+
+Block 7         (Kounos)
+["Wir m”gen unser Dorf und lieben das Leben auf den hohen Plateaus."]
+
+Block 8         (Kontos)
+["Kontos ist unser Fhrer! Wir folgen ihm alle. Was wrden wir nur ohne ihn
+tun."]
+
+Block 9         (H”hle)
+["Ja, es gibt zahlreiche H”hlen in der Gegend hier. In manchen von ihnen leben
+Einsiedler, die meisten sind einfach leer. Es gibt eine besonders groe H”hle,
+die wir allerdings meiden. Sie ist so gro, da man sich endlos verlaufen kann
+und das ist leider schon vorge|kommen. Bereits drei Brger aus Beloveno sind
+in der H”hle verschollen. Wenn ihr dennoch eine Expedition in die H”hlen
+machen wollt, nehmt ausreichend Proviant und ein Seil mit. Die Eing„nge findet
+Ihr entlang des Gebirges."]
+
+Block 10        (Kritahs)
+["Vielleicht habt Ihr nachts schon einmal kleine schwarze Tiere gesehen, die
+herumhuschen. Wir nennen sie Kritahs, und abgesehen davon, da sie die
+Angewohn|heit haben, glitzernde Gegenst„nde zu stehlen, sind sie eigentlich
+ziemlich harmlos. Die Kritahs leben irgendwo in den H”hlen der Gebirgsmassive,
+aber wo genau, wei ich auch nicht."]
+
+Block 11        (Srimalinar)
+["Srimalinar ist ein sch”nes kleines Iskai-Dorf. Es liegt n”rdlich von Kounos,
+auf der anderen Seite des Gebirges."]
+
+Block 12        (Heiligtum)
+["Das ist ein Gew”lbe nahe des Dorfes Srimalinar."] 
+
+Block 13        (Gebirgspa,Pa)
+["Das ist richtig, es gibt tats„chlich einen Pa ber das Gebirge, der die
+Sd- und die Nordseite unseres Kontinents verbindet. Eigentlich ist das ein
+ganz schmaler Pfad, der teilweise kaum noch zu erkennen ist, weil er recht
+selten benutzt wird. Er geht von Beloveno an unserem Dorf vorbei und fhrt
+dann weiter n”rdlich nach
+Srimalinar."{WORDNordseite}{WORDSdseite}{WORDKounos}
+{WORDSrimalinar}{WORDBeloveno}]
+ 
+Block 14        (Sch„del)
+["Wir lieben die Tradition und sind stolz auf unsere Vergangenheit."]
+
+Block 15        (Herberge)
+["Darber wei ich nichts."]
+
+Block 16        (Nordseite)
+["Das ist der Teil n”rdlich des groen Gebirges. Dort liegt Srimalinar. Man
+kommt dort ber den Gebirgspa hin."{WORDPa}]
+
+Block 17        (Sdseite)
+["Alles was sdlich des groen Gebirges liegt, bezeichnen wir als Sdseite.
+Dazu geh”rt auch Beloveno und der Hafen. Wart Ihr schon auf der
+Nord|seite?"{WORDHafen}]
+
+Block 18        (Tabu)
+["Das Tabu bezieht sich auf das Heiligtum von Srima|linar. Die Iskais in
+diesem Dorf nehmen es mit diesem aus alten Zeiten kommenden Tabu ziemlich
+ernst und fhlen sich ange|griffen, wenn jemand gegen das Tabu verst”t!"]
+
+Block 19        (Magie)
+["Wenn ihr Leute mit hohen magischen F„hig|keiten sucht, dann wendet Euch an
+unseren Fhrer oder versucht es einmal in Srimalinar."{WORDSrimalinar}]
+
+Block 20        (H„user, Bauweise)
+["Darber wei ich nichts."]
+
+Block 21        (Religion)
+["Religion ist fr uns sehr wichtig. Wir sind froh, da wir von Kontos so viel
+lernen konnten."]
+ 
+Block 22        (Iskai)
+["Srimalinar ist ein Dorf auf der Nord|seite des Kon|tinents, in dem Iskais
+leben. Dort gibt es auch eine Magier-Gilde."{WORDMagie}{WORDIskai}{WORDGilde}]
+
+Block 23        (Gilde)
+["Die n„chste Magier-Gilde ist in Srimalinar."{WORDMagie}{WORDSrimalinar}]
+
+Block 24        (Stadttor)
+["Darber wei ich nichts."]
+
+Block 25        (Marktplatz)
+["Darber wei ich nichts."]
+
+Block 26        (L„den)
+["Wenn Ihr L„den sucht, dann geht nach Beloveno oder nach Srimalinar."]
+
+Block 27        (W„hrung)
+["Das anerkannte Zahlungsmittel sind Gold|stcke. Bei manchen Leuten kann man
+aller|dings auch mit anderen Mitteln sehr viel erreichen, aber darauf gehe ich
+jetzt nicht genauer ein...hihi."]
+
+Block 28        (Klima)
+["Es gibt drei Klimazonen auf Albion. Gem„igt, warm und Wste. Mir
+per|s”nlich gef„llt es hier, im gem„igten Teil, am aller|besten."]
+
+Block 29        (Metallmacher)
+["Die Metallmacher leben auf dem Ost-Konti|nent und haben ein Monopol fr die
+Herstellung von Metall. Vielleicht werdet Ihr im Laufe Eurer Reise noch auf
+sie stoen."]
+
+Block 30        (Kenget Kamulos)
+["šber die Kenget Kamulos kann ich Euch auch nicht viel sagen. Sie sind
+ausgesprochen m„chtig und beherrschen schwarze Magie. Ich bin froh, wenn ich
+mit denen nichts zu tun habe... Sie leben im Osten des Kontinents."]
+
+Block 31        (Hafen)
+["In Beloveno gibt es einen Hafen."]
+
+Block 32        (Schiff, Schiffe)
+["Schiffe gibt es nur in Beloveno."]
+
+Block 33        (Landweg)
+["Ich meine den Weg ber den Gebirgspa!"{WORDPa}]
+
+Block 34        (Krankheit)
+["Ich bin froh, wenn ich gesund bin."]
+
+Block 35        (Freudenhaus)
+["Das gibt's in Beloveno."]
+
+Block 36        (Wetter)
+["Ja, sch”nes Wetter zur Zeit, was meint Ihr?"]
+
+Block 37        (Herras)
+["Darber wei ich nichts."]
+
+Block 38        (Riko, Gard, Perron)
+["Darber wei ich nichts."]
+
+Block 39        (Skeima Din)
+["Skeima Din. Achso, nun, das bedeutet bei uns in etwa 'Ein pr„chtiger Tag'."]
+
+Block 40           (Maini)
+["So heit unser Land."]
+
+Block 41           (Kontos)
+["Glcklicherweise habt Ihr ihn umgebracht."]
+
+Block 42           (religion)
+["Religion ist fr uns sehr wichtig."]

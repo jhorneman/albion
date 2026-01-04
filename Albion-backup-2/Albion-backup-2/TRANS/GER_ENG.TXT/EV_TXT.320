@@ -1,0 +1,30 @@
+Frill, auf der Insel der Erleuchteten   
+=====================================   
+   
+Block 0   
+[{BLOK000}"Nun, hier bei den Dji Cantos, oder Erleuchteten, habe ich eine
+„hnliche Funktion wie im Rat von Jirinaar: Ich besch„ftige mich mit
+Geschichte."{WORDErleuchteten}]   
+   
+Block 1 Begr. 1x   
+["Dsarii-ma, Freunde. Nun, wie gef„llt Euch unser kleiner Versammlungsort?"
+{BLOK010}"Eine wundersch”ne Anlage, und die Natur um das Haus herum ist
+paradiesisch. Ihr seid sicher oft hier."]   
+   
+Block 2 Antw. 1,10   
+["Das ist wahr. Ich bin in Jirinaar ja bekannt fr meine h„ufigen Reisen. Nun
+seht Ihr, wohin sie meist fhren. Die Transporth”hlen erm”glichen es uns
+allen, uns h„ufig hier zum Gedankenaustausch zu
+versammeln."{WORDTransporth”hlen}]    
+   
+Block 3 Begr. 2x   
+["Dsarii-ma. Sch”n, wieder mit Euch zu reden."]   
+   
+Block 4 Begr. Phase 2   
+["Dsarii-ma, Freunde. Ich hoffe, Ihr kommt gut voran bei der Beschaffung der
+Kenntnisse zur Erschaffung des Samenkorns."{WORDSamenkorn}]   
+   
+Block 5 Begr. Phase 3   
+["Dsarii-ma, Freunde. Wie ich sehe, seid Ihr noch nicht zum Zentrum der
+Gefahr, der Toronto, aufgebrochen. Ich wnsche Euch Glck und den Segen
+Animebonas fr das Unternehmen."{WORDAnimebona}{WORDTORONTO}]

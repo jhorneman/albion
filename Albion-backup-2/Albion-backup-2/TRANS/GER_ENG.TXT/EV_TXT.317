@@ -1,0 +1,56 @@
+  
+Block 0		(Begrssung)     
+[{BLOK000}"Ich bin Birrh, der Heiler und Lehrer der Heilkunde an diesem Ort.
+Ihr wirkt neugierig. Was wnscht Ihr zu wissen?"{WORDEns}]     
+     
+Block 1		(Ens)     
+["Ens ist das, was Euch lebendig macht. Ens ist Euer Ich. Ens ist das, was
+Euch von den Toten genauso unterscheidet wie von allem anderen, was
+existiert." {BLOK010}"Also ist Ens die Seele eines Menschen?"]   
+     
+Block 2		(Ens 2)     
+["Nein. Die Seele ist eine Ordnungskategorie Animenknas. Eine Seele haben laut
+Bathrig nur Menschen. Kein Tier besitzt eine Seele, behauptet er. Bes„en
+Iskai in seinem Sinne eine Seele? Schwer zu sagen. Jedenfalls ist diese Seele
+nichts anderes, als der Versuch Animenknas, das Ens fr sich zu
+kategorisieren, einzuordnen. Wenn man das Ens mit Euren W”rtern einfach
+zusammenfassen wollte, dann mte man sagen, Ens ist Seele plus Gewissen. Aber
+natrlich ist das Ens untrennbar.^^Und wenn ich jetzt sage: Eure Seele ist der
+K”rper Eures Ens und Euer Gewissen ist sein Handeln, dann glaube ich zwar, das
+dies die beste Erkl„rung ist, die mit den Mitteln Eures Denkens verst„ndlich
+ist. Bedenkt aber auch immer, da ein K”rper von seinen Handlungen nicht zu
+trennen ist."{WORDBathrig}]     
+     
+Block 3		(Bathrig)     
+["Bathrig... Ich kann nicht verleugnen, da dieses Wesen etwas Faszinierendes
+umgibt. Keiner wendete geschickter Animebona gegen sich selbst. Seine Worte
+klangen nach Freiheit und Animebona, und was er sagte, war Animenkna."
+{WORDAnimebona}{WORDAnimenkna}]
+  
+Block 4   
+["Gesundheit und ein ruhiges Ens wnsche ich Euch."{WORDEns} {BLOK010}"Wir
+bedrfen Eurer Hilfe als Heiler, Birrh."]  
+ 
+Block 5 		Begr. Phase 2    
+["Seid gegrt. Ich hoffe, Ihr kommt gut voran bei der Beschaffung der
+Kenntnisse zur Erschaffung des Samenkorns."{WORDSamenkorn} {BLOK010}"Wir
+bedrfen Eurer Hilfe als Heiler, Birrh."]  
+    
+Block 6		Begr. Phase 3    
+["Seid gegrt. Wie ich sehe, seid Ihr noch nicht zum Zentrum der Gefahr, der
+Toronto, aufgebrochen. Ich wnsche Euch Glck und den Segen
+Animebonas."{WORDAnimebona}{WORDTORONTO} {BLOK010}"Wir bedrfen Eurer Hilfe
+als Heiler, Birrh."]  
+ 
+Block 7 		Heilen 
+["Aber selbstverst„ndlich! Wie kann ich Euch helfen?" {BLOK010}"Wir haben
+Verwundete unter uns." {BLOK011}"Wir brauchen Heilung von einer Art
+Krankheit." {BLOK012}"Ein verfluchter Gegenstand macht uns Probleme."
+{BLOK013}"Es ist doch nicht so schlimm, Verzeihung. Wir mssen gehen."]  
+ 
+Block 8            Antw. 7,13 
+["Natrlich. Lebt wohl."]
+
+Block 9            "Heilkunde"
+["Ich kenne mich mit den meisten Gebrechen des K”rpers aus. Wenn ihr Hilfe
+braucht, wendet Euch jederzeit an mich."]

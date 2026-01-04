@@ -1,0 +1,120 @@
+184: Joe, TORONTO, Teil 1
+=========================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich simuliere ein paar Fehler, um den Reservesystemen ein bichen
+auf den Zahn zu fhlen."{WORDReservesysteme}]
+
+Block 1         Begr. 1x, noch nicht Panelcode verraten
+["Hallo, mein Alter! 'willst mich von der Arbeit abhalten, hm? Gute Idee!"
+{BLOK010}"Gr' dich, Joe! Hast du die Secus im Nachbarraum gesehen?"
+{BLOK011}"Joe! Das letzte Mal, da Du so fertig ausgesehen hast, war nach der
+Tour durch Osaka, kurz vor dem Start!"]
+
+Block 2         Antw. 1, 10
+["Ja, sie sperren den Zugang zum Comraum ab. Arrogante Typen." {BLOK010}"Das
+stimmt. Du weit, ich war schon immer ein bichen neugierig. 'wrde zu gern
+mal einen Blick auf den Schrott im Comraum werfen!"]
+
+Block 3         Antw. 2,10
+["Mhm, ich wte, wie wir diese Geheimniskr„mer linken. Ich k”nnte Dir einen
+Zugang zum Servicedeck zeigen. Dort mtest Du die Typen unterlaufen k”nnen
+und in den Comraum kommen. Wie sieht's aus?"{WORDServicedeck} {BLOK010}"Gute
+Idee! Schie' los!" {BLOK011}"Ach, es ist den rger wohl doch nicht wert. Ich
+la' es bleiben."]
+
+Block 4         Antw. 2, 10
+["O.K. Pa auf, die Wandpanels mit den grnen Lichtketten verkleiden Zug„nge
+zum Servicedeck. Du findest einen dieser Zug„nge rechts oben in dem Raum
+n”rdlich von diesem hier. Der Code, den Du bei den Dingern eingeben mut,
+lautet fr dieses Deck "1042". Dahinter findest Du eine Leiter nach unten und
+kannst Dir dann einen Weg bis zum Serviceaufgang in den Combereich
+suchen."{WORDServicedeck}]
+
+Block 5         Antw. 2, 11
+["He, so kenne ich Dich ja gar nicht, Alter! Na ja, sag' mir Bescheid, wenn Du
+es Dir anders berlegst."]
+
+Block 6         "Servicedeck"
+["Das Servicedeck liegt unterhalb des Hauptdecks, wo wir uns gerade befinden.
+Es gibt Zugang zu den Einrichtungen des Schiffes und wird haupts„chlich von
+Service|robotern benutzt und von uns Technikern, wenn die Kbel mit etwas
+nicht zurecht|kommen. ^^Du mut Dich darauf einstellen, da es dort unten
+haupts„chlich fr die Robots eingerichtet wurde. Es gibt 'ne Menge
+Bodenschalt|platten und „hnlichen Schnickschnack, der die Schleusen steuert.
+Schau' Dich dort unten genau nach Schaltern um, wenn Du mal nicht
+weiterkommst. Dir ist ja kein Brot auf'n Kopf gefallen."]
+
+Block 7         Antw. 1,11
+["H”r' blo auf. So kurz vor dem Ziel ertrinke ich in Arbeit! Unser
+Sake|marathon in Osaka war's wenigstens Wert, har, har!"]
+
+Block 8         Begr., WENN: 3, 11 gew„hlt
+["Hi, Tom. Na, willst Du doch 'nen Tip, wie Du die Secus umgehen kannst?"
+{BLOK010}"O.K., O.K.! Du hast mich. Was schl„gst Du vor?"]
+
+Block 9         Begr. wenn tip gegeben ; MCs je nach Situation sperren!
+["Na, hast Du was Interessantes gesehen?"{WORDServicedeck} {BLOK010}"Bin noch
+nicht durchgekommen. Ich versuch's sp„ter nochmal." {BLOK011}"Wie war noch mal
+die Codenummer fr die Servicezug„nge?"]
+
+Block 10        Antw. 9,10
+["Denk dran, mit den Schaltern zu experimentieren und Dich an die Servicerobs
+zu halten, dann wird's schon klappen."]
+
+Block 11        Antw. 9,11
+["Wow! Zeig' das Ding niemandem, sonst kassieren sie's sofort ein! 'ne Knarre,
+ist ja hei!"]
+
+Block 12        Antw. 9,12
+["Shit. H„ttest Du das Ding nicht im Servicedeck deponieren k”nnen, um es
+sp„ter von der anderen Seite abzuholen oder so? Na ja, jetzt ist es zu sp„t."]
+
+Block 13        "Fehler, Reservesysteme"
+["Ach, Routinekrempel, aber jede Menge davon. Ich simuliere die
+unwahrschein|lichsten Ausf„lle, aber die Systeme des Schiffes stecken alles
+locker weg."]
+
+Block 14         Begr. wenn tip gegeben ; MCs je nach Situation sperren!
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Nun, das over-c - Com
+sieht tats„chlich bel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden!"]
+
+Block 15         Begr. wenn tip gegeben ; MCs je nach Situation sperren!
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Nun, das over-c - Com
+sieht tats„chlich bel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden! Die S„cke von der Secu haben mir das Ding allerdings abgenommen,
+weil der Rckweg durch das Servicedeck versperrt war."]
+
+Block 16         Code
+["Ah, kleiner Alzheimer-Anfall, hm? Der Code lautet "1042". Viel Glck!"]
+
+Block 17           War da, hat aber Waffe nicht mitgenommen
+["Na, hast Du was Interessantes gesehen?" {BLOK010}"Das over-c - Com ist
+v”llig hinber. Snoopys šberreste haben sie aber schon beseitigt."]
+
+Block 18
+["Sonst nichts Aufregendes gefunden? Ist ja direkt entt„uschend."]
+
+Block 19
+[{BLOK000}Was kannst Du sagen ber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demn„chst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 20
+["Mach's gut, Tom."]

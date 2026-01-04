@@ -1,0 +1,58 @@
+; **** script 30: Nach Kampf mit Cuain
+
+npc_off 25
+npc_off 23
+
+npc_lock 24
+
+npc_lock 22
+
+show_map
+
+camera_lock
+camera_move 0 -25
+update 1
+
+fade_from_black
+
+update 150
+text 166
+update 50
+
+npc_move 24 0 -1
+update 4
+npc_move 24 0 -1
+update 4
+npc_move 22 1 0
+npc_move 24 1 0
+update 4
+npc_move 24 1 0
+npc_move 22 1 0
+update 4
+npc_move 22 0 -1
+update 10
+
+; Rhain
+npc_text 10 167
+
+; Arthor, ZEM
+npc_text 8 168
+
+; Rhain
+npc_text 10 169
+
+; Arthor, ZEM
+npc_text 8 170
+
+; Rhain (zu Arthor)
+npc_text 10 171
+
+; Rhain (zur Party)
+npc_text 10 172
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 173
+fade_to_black
+

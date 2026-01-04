@@ -1,0 +1,24 @@
+Riko (Ratsmitglied Nummer 3) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin ein Mitglied im 'Rat der Gerechten'. Mehr kann ich Euch
+dazu nicht sagen und mehr mt Ihr auch nicht wissen."]
+
+Block 1         (Begrung)
+["Skeima Din, habt Ihr ein dringendes Anliegen?"]
+
+Block 2         (Begrung 2)
+["Skeima Din, ich habe viel zu tun. Bitte st”rt mich nur, wenn Ihr etwas
+wirklich Wichtiges habt."]
+
+Block 3         (Ja)
+["Leider bin ich zu besch„ftigt und kann mir keine Zeit fr Euch nehmen."]
+
+Block 4         (Nein)
+["Dann st”rt mich bitte nicht weiter."]
+
+Block 5         (Riko)
+["Das ist mein Name."]
+
+Block 6         (Alles andere)
+["Bitte fragt nicht mich, ich bin zu besch„ftigt."]

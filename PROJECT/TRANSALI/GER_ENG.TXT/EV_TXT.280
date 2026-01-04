@@ -1,0 +1,48 @@
+
+Waffenschmied
+-------------
+
+Block 0
+[{BLOK000}"Ich mache alle mîglichen Metallarbeiten. Aber hauptsÑchlich bin ich
+Waffenschmied."{WORDWaffenschmied}]
+
+Block 1
+["Skeima Din, Gerwad ist mein Name. Ich hoffe, es gefÑllt Euch in
+Umajo-Kenta."{WORDUmajo-kenta}]
+
+Block 2
+["Skeima Din. Nun, ich habe mich Euch ja schon vorgestellt. Wie Ihr seht,
+arbeite ich den ganzen Tag mit Metall."{WORDMetall}]
+
+Block 3
+["Ich rede nicht mit Leuten, die mich beklauen wollen!"]
+
+Block 4            (Metall)
+["Waffenschmiede mÅssen ziemlich hart ran. Ist wirklich keine einfache Arbeit,
+und den ganzen Tag steht man direkt neben dem Feuer. Dabei verdiene ich mir
+nicht mal eine goldene Nase."{WORDVerdienst}]
+
+Block 5            (Verdienst)
+["Nun, ich bekomme zwar einen guten Preis fÅr meine Waren, aber der Gewinn ist
+nicht besonders hoch, denn die Bergleute verlangen immer hîhere Preise fÅr das
+Metallerz."{BLOK010}"Kînnen Sie das denn so einfach?"{BLOK011}"Dann holt Euch
+Euer Erz doch selbst."]
+
+Block 6
+["Ja, leider kînnen sie das, denn niemand auûer den Bergpriestern beherrscht
+das Ritual und kann Erz abbauen. Ich komme trotzdem noch ganz gut Åber die
+Runden. Nebenher repariere ich noch
+Waffen."{WORDRitual}{WORDBergleute}{WORDReparaturen}]
+
+Block 7
+["Das ist nicht so einfach. Wer das Ritual nicht kennt, der darf kein Erz
+abbauen, denn sonst kommt UnglÅck Åber ihn. Mutter Erde ist in dieser
+Beziehung sehr streng."{WORDRitual}{WORDMutter}{WORDUnglÅck}]
+
+Block 8
+["{UNKN}???^^Was um alles in der Welt ist denn jetzt schon wieder {UNKN}?]
+
+Block 9            (Reparaturen)
+["Wenn Ihr mîchtet, kînnt Ihr gerne meine Dienste in Anspruch nehmen. Die
+meisten Sachen sind danach fast wie neu."{BLOK010}"Kînnt Ihr uns etwas
+reparieren?"]

@@ -1,0 +1,70 @@
+NPC 149: Jiris, Viehzchter
+=================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin Viehzchter und hte hier drauen meine Herde."
+{WORDViehzchter}{WORDHerde}]
+
+Block 1         Begr. 1x
+["Dsarii-ma. Was wollt Ihr denn vom alten Jiris?" {BLOK010}"Dsarii-ma. K”nnt
+Ihr uns den Weg zur alten Ruine der Dji-Fadh sagen?"]
+                DANN: Bit setzen
+
+Block 2         Antw. MC1,10 1x
+["Aber ja. Doch seid Ihr sicher, da Ihr zum alten Argim wollt? Es sollen dort
+seltsame Dinge passieren!^^ {INK 001}{LEAD}{NAME}:^ {INK 002}Wir gehen nicht
+ohne Grund und auch nicht aus šbermut dorthin. K”nnt Ihr uns weiterhelfen?"^^
+{INK 001}Jiris:^ {INK 002}"Nun gut. Haltet Euch in n”rdlicher Richtung, bis
+Ihr auf einen See trefft. Umgeht ihn in ”stlicher Richtung, bis Ihr eine
+verfallene Strae seht. Folgt ihr, bis zu einer toten Abzweigung nach Westen.
+Etwas weiter in dieser Richtung mte noch die alte Brcke stehen, wenn sie
+nicht schon im Flu gelandet ist. Seid vorsichtig dort."]
+
+
+Block 3         Antw. MC1,10 2x
+["Ihr m”chtet schon wieder dort hin? Nun, nicht meine Sache. Also:^ Haltet
+Euch in n”rdlicher Richtung, bis Ihr auf einen See trefft. Umgeht ihn in
+”stlicher Richtung, bis Ihr eine verfallene Strae seht. Folgt ihr, bis zu
+einer toten Abzweigung nach Westen. Etwas weiter in dieser Richtung mte noch
+die alte Brcke stehen, wenn sie nicht schon im Flu gelandet ist. Seid
+vorsichtig dort."]
+
+Block 4         "VIEHZšCHTER"
+["Unsere Familie bt diesen Beruf schon seit langer Zeit aus. Nicht alle
+k”nnen und wollen sich das teure Fleisch der J„ger leisten, wir bieten beste
+Qualit„t fr weniger Geld. Ich mag meine Herde und meinen Beruf: ich bin kein
+St„dter und geniee das Leben hier drauen."]
+
+BLock 5         "VIEHZšCHTER" 2X
+["Wie schon gesagt: Unsere Familie bt diesen Beruf schon seit langer Zeit
+aus. Nicht alle k”nnen und wollen sich das teure Fleisch der J„ger leisten,
+wir bieten beste Qualit„t fr weniger Geld. Ich mag meine Herde und meinen
+Beruf: ich bin kein St„dter und geniee das Leben hier drauen."]
+
+Block 6         "HERDE"
+["Man nennt die Tiere Mimins. Sie sind meist friedlich und ihr Fleisch ist
+hervorragend. Ich sorge fr sie und sie fr mich."]
+
+Block 7         "HERDE" 2X
+["Sagte ich das nicht bereits?^ Man nennt die Tiere Mimins. Sie sind meist
+friedlich und ihr Fleisch ist hervorragend. Ich sorge fr sie und sie fr
+mich."]
+
+Block 8         Begr., wenn nicht Phase 1
+["Dsarii-ma! Welch ein seltsamer Besuch! ^Oh, verzeiht, aber mein Benehmen ist
+nicht so raffiniert wie das der St„dter, hir, hir!"]
+
+Block 9         Begr.2x, wenn nicht Ph.1
+["Dsarii-ma! Ihr seid also noch nicht gefressen worden, hir, hir!"]

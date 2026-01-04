@@ -1,0 +1,33 @@
+162: Rifrako, der "Sammler"
+===========================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin ein HÑndler in gewîhnlichen und in auûer|gewîhnlichen
+Dingen, ja, hm."{WORDHÑndler}]
+
+Block 1         "Begr."
+["Togi Din. Ahh, Reisende, wie ich sehe, hm? Gut, sehr gut! Kennen wir uns?
+Oder nicht? Ach, egal, hm? Ihr braucht sicher etwas, das Euch die Reisen
+erleichtert, hm? Oder habt Ihr dem alten Rifrako etwas Schînes aus fernen
+LÑndern mitgebracht, hm?" {BLOK010}"Zeigt uns bitte Euer Angebot, mein guter
+Rifrako."]
+
+Block 2         "HÑndler, Dinge"
+["Ja, ich handle mit schînen Sachen, mit nÅtzlichen Sachen und manchmal mit
+magischen Sachen, ja!"]

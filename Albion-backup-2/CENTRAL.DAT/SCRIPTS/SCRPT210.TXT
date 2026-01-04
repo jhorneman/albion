@@ -1,0 +1,17 @@
+;
+; Bild von Iskai-Konflikt anzeigen.
+
+fade_to_black
+show_pic 10
+
+fade_from_black
+
+do_event_chain 18
+
+fade_to_black
+fill_screen 0
+load_pal 2
+show_map
+fade_from_black
+
+

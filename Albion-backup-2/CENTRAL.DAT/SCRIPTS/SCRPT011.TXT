@@ -1,0 +1,100 @@
+; **** Script 11: Nach Dialog mit Frill, noch im Ratsgebäude
+
+;Stiriik pos.
+npc_lock 17
+npc_jump 17 151 19
+show_map
+
+;und reinlaufen lassen
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_move 17 1 0
+update 10
+pause 30
+npc_text 198 203
+party_member_text 3 204
+
+camera_lock
+
+npc_move 17 -1 0
+party_move 0 1
+update 4
+npc_move 17 -1 0
+party_move 0 1
+update 4
+npc_move 17 -1 0
+party_move 0 1
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+npc_move 17 -1 0
+party_move -1 0
+update 4
+update 30
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 222
+fade_to_black
+
+;AUFRÄUMEN!
+npc_off 17
+npc_off 18
+npc_off 19
+npc_off 20

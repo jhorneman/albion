@@ -1,0 +1,14 @@
+The TEXTS sub-directory contains all the text files that need translating.
+
+The WRDCOUNT sub-directory contains the biggest two textfiles in a "raw"
+format where you can do a wordcount without counting comments and
+special commands in the text. DO NOT TRANSLATE THESE!
+
+The TRANS.DOC is a Word for Windows 6.0 document containing a detailed
+description of what needs to be done.
+
+I can be reached during working hours at 49-208-4508826 or by e-mail at
+horneman@bluebyte.de
+
+Jurie Horneman
+Blue Byte Software GmbH

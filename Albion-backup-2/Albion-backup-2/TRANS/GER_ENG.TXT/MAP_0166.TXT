@@ -1,0 +1,66 @@
+MAP-CLONE FöR SHUTTLEEXPLOSION
+================================
+
+Block 0
+R
+["MEIN GOTT! Das ist also die WÅstenwelt! Ich werde verrÅckt! Schauen Sie doch
+nur!"]
+Block 1
+T
+["Phantastisch! Riechen Sie nur! Hîren Sie! Hier wimmelt es von Leben!"]
+
+Block 2
+R
+["Wie konnte die Sonde nur solche Daten senden? Das ist eine Sensation!"]
+
+Block 3
+T
+["Lassen Sie uns zuerst vom Shuttle weggehen. In dieser sauerstoff|reichen
+AtmosphÑre kînnte es..."]
+ 
+Block 4
+[Alles um Tom herum versinkt in Licht, dann in Dunkelheit, die fÅr eine lange
+Zeit anhÑlt. Dann beginnt Tom wieder, seinen Traum zu trÑumen...]
+
+Block 5
+[{CNTR}{FAHI} FEDDICH !]
+
+
+Block 6
+**** Tom wacht auf, wÑhrend der Sequenz werden Textblîcke eingeblendet.
+     Es wird ein Auschnitt aus der Introsequenz recycled (letzte
+     Traumsekunden, Blende auf weiû).
+[Wieder dieser Traum.]
+
+Block 7
+**** Tom
+[Muû irgendwann mit Chris darÅber reden. Zeit, aufzuwachen. Muû den Flug
+vorbereiten.]
+
+Block 8
+**** Langsame Blende auf schwarz
+[Der Flug.^^Das Shuttle. ^^War bereits dort. ^^Ist schon geschehen.
+^^^^Schmerzen. ^^^^^Irgend|etwas ist falsch, etwas stimmt nicht. Mehr
+Schmerzen! ^^^^^^^Was ist passiert?]
+
+Block 9
+**** Letzter Textblock, danach verschwommenes Aufblenden auf grÅnes
+     Iskai-Zimmer
+[Gott, der Absturz!^^Was war dann? Oh, Scheiûe, die Schmerzen, warum wache ich
+nicht auf? ^^Hofstedt und ich gehen hinaus... ^^^^Alles voller Pflanzen und
+Tiere, der Planet lebt! Die Farben, das GrÅn, alles ist grÅn...]
+
+Block 10
+**** "Krankenschwester" erscheint aus dem Dunkel und spricht unverstÑndliche
+     Sprache
+[Srrniak? Rriiba nes anrji. Frinaard dra besiir wreniid?]
+
+Block 11
+**** Tom ist geschockt
+["Was um alles in der Welt... {FAT }^^WO BIN ICH? ^^Wer, WAS ist das?{NORS}
+^^Ich dachte, ich wÑre WACH! ^^^Ich muû hoch, um...^ "Aaauh! Oh, Scheiûe!"] 
+
+Block 12
+**** Rainer spricht zu Tom, ein Dialog beginnt
+["Ein recht deutliches Genesungs|zeichen, schÑtze ich. Willkommen unter den
+Lebenden!"]

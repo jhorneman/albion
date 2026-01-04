@@ -1,0 +1,51 @@
+; **** script 35: 2. Teil, Reaktorraum
+
+show_map
+npc_lock 0
+npc_jump 0 27 48
+npc_turn 0 2
+party_jump 29 48
+party_turn 2
+camera_lock
+camera_move 0 -32
+update 2
+fade_from_black
+
+text 71
+
+npc_move 0 0 1
+update 4
+npc_move 0 0 1
+update 4
+pause 60
+npc_text 184 72
+pause 60
+sound 64 80 0 0 0 
+text 73
+npc_text 196 74
+npc_turn 0 1
+update 2
+npc_turn 0 0
+update 2
+npc_text 184 75
+pause 20
+party_turn 3
+update 2
+pause 20
+party_member_text 1 76
+sound 64 80 0 0 0 
+npc_text 196 78
+party_member_text 1 79
+npc_text 184 80
+sound 64 80 0 0 0 
+npc_text 196 81
+party_member_text 1 82
+npc_text 184 83
+party_member_text 1 84
+
+fade_to_black
+npc_off 0
+fill_screen 0
+fade_from_black
+text 85
+fade_to_black

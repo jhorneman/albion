@@ -1,0 +1,88 @@
+
+Zebenno, Ger„temacher
+=======================================================================
+
+Block 0
+[{BLOK000}"Ich denke mir Mechanismen aus, die ich in unserem Testgew”lbe
+ausprobiere."{WORDMechanismen}{WORDTestgew”lbe}]
+
+Block 1            (Begrung normal)
+["Tut mir leid, bin im Moment sehr in Eile. Die Erzpreise sind wieder
+frchterlich angestiegen und ich mu hier erst einmal einige wichtige Dinge
+kl„ren.^^Ein anderes Mal rede ich gerne mit Euch."] (Dialogende)
+
+Block 2            (Begrung mit Grubit)
+["Skeima Din. Es ist schrecklich, Metallerz wird st„ndig
+teurer."{BLOK010}"Skeima Din Zebenno, wir m”chten Dir einen Gru von Merdger
+bermitteln."]
+
+Block 3            (2,10)
+["Ein Gru von Merdger?^^Sch”nen Dank auch, woher kennt Ihr denn
+Merdger?"{BLOK010}"Wir haben ihn zuf„llig getroffen."{BLOK011}"Er ist ein
+alter Freund von uns."{BLOK012}"Wir haben ihn besucht, weil wir Euer
+Testgew”lbe besichtigen wollen."]
+
+Block 4            (3,10)
+["Ja, Merdger ist ein angenehmer Mensch. Und er hat schon tolle Sachen
+entwickelt."{WORDEntwicklungen}]
+
+Block 5            (3,11)
+["Das glaube ich kaum. Ich kenne alle seine Freunde. Wenn Ihr jemanden M„rchen
+erz„hlen wollt, sucht Euch ein anderes Opfer."]
+
+Block 6            (3,12)
+["Was m”chtet Ihr denn in unserem Testgew”lbe. M”chtet Ihr etwa meine
+zahlreichen Mechanismen testen?"{WORDTestgew”lbe}{WORDMechanismen}]
+
+Block 7            (Entwicklungen)
+["Ja, er hat viele tollen Sachen entwickelt. Seine neueren Erfindungen sind
+Tr„nke mit besonderen Wirkungen. Habt Ihr schon einmal etwas von Poren”l
+geh”rt?"{WORDPoren”l}]
+
+Block 8            (Poren”l)
+["Fragt doch mal Agida danach. Sie wohnt im Sden und wei die Wirkungen
+dieses ™ls zu sch„tzen. Sie kann Euch auch ein paar gute Reisetips geben."]
+
+Block 9            (Testgew”lbe)
+["Eigentlich ist das nicht fr die ™ffentlichkeit bestimmt. Wir testen dort
+unsere Entwicklungen. Es ist erstaunlich, was man alles anstellen kann, wenn
+man Technik konsequent weiter|ent|wickelt. Auf meine vielen Mechanismen, die
+ich entwickelt habe, bin ich auch sehr stolz. Aber den Schlssel kann ich Euch
+natrlich nicht geben."]
+
+Block 10           (Mechanismen)
+["Ich entwickle konsequent weiter und baue immer neue Schutzmechanismen, die
+dann sp„ter als Schl”sser, Absperrungen und anderweitig eingesetzt werden. Nur
+mit den Testpersonen mangelt es noch ein bichen."{WORDTestpersonen}]
+
+Block 11           (Testpersonen)
+["Ich finde nicht gengend Leute, die meine Errungenschaften kompetent testen
+k”nnen. Es drfen ja auch nicht meine Kollegen sein, denn die waren
+schlielich bei der Entwicklung dabei und kennen die meisten Erfindungen
+schon."{BLOK010}"Wir wrden uns bereit erkl„ren, einige Dinge zu
+testen."{BLOK011}"Ihr findet bestimmt jemanden."]
+
+Block 12           (11,11)
+["Ich hoffe auch."]
+
+Block 13           (11,10)
+["Hmmm, ich darf das eigentlich nicht, aber ich wrde Euch den Schlssel
+berlassen, wenn Ihr das einmal tun m”chtet. Aber Ihr mt vorsichtig sein.
+Nicht alles ist ganz ungef„hrlich!"{BLOK010}"Nein, lieber doch
+nicht."{BLOK011}"Ja gerne, wir passen auf."]
+
+Block 14           (13,10)
+["Das kann ich verstehen. Ich bin Euch deswegen auch nicht b”se."]
+
+Block 15           (13,11)
+["Na gut. Ich gebe ihn Euch. Aber erz„hlt es niemanden weiter."]
+
+Block 16           (Wenn Schlssel geben nicht klappt)
+["Ihr k”nnt ihn ja gar nicht mehr mitnehmen!"]
+
+Nach Schlsselbergabe mu NPC ausgeschaltet werden!
+----------------------------------------------------
+
+Block 17
+["So, ich mu jetzt aber dringend weiter. Merdger wartet schon auf mich. Euch
+noch alles Gute."]

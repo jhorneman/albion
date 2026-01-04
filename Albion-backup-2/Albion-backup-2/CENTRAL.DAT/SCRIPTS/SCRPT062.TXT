@@ -1,0 +1,305 @@
+; **** Script 16: Für Demo, Ende des Demos
+
+Fill_screen 0
+fade_from_black
+text 84
+fade_to_black
+;show_map
+npc_lock 85
+npc_jump 85 97 138
+npc_turn 85 1
+party_off
+update 4
+show_map
+fade_from_black
+
+; FAKE: Da sich an der Oberfl. die
+; Party langsamer bewegt, führe
+; ich die Kamera statt der Party
+; mit dem Schiff
+
+camera_lock
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+camera_move 2 2
+update 1
+
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+npc_move 85 1 0
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+camera_move 2 0
+update 1
+
+sound_fx_off
+song 58
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 95
+
+fade_to_black
+show_picture 32 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 33 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 34 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 35 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 36 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 37 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 38 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 39 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 40 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 41 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 42 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 43 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 44 0 0
+fade_from_black
+pause 180
+
+fade_to_black
+show_picture 45 0 0
+fade_from_black
+pause 180
+
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 96

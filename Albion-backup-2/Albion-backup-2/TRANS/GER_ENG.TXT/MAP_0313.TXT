@@ -1,0 +1,615 @@
+ 
+Maptextfile 
+------------------------------------------------------------------------- 
+ 
+Block 0 
+[frei] 
+ 
+Block 1 
+[Ein Kamin.] 
+ 
+Block 2 
+[Ein Kerzenleuchter.] 
+ 
+Block 3 
+[Ein geflochtener Korb.] 
+ 
+Block 4 
+[Ein Holztisch.] 
+ 
+Block 5 
+[Ein Hocker.] 
+ 
+Block 6 
+[Ein Himmelbett. Mit den Totensch„deln k”nnte man es gar als "H”llenbett"
+bezeichnen.] 
+ 
+Block 7 
+[Ein Schreibtisch.] 
+ 
+Block 8 
+[Ein Stuhl.] 
+ 
+Block 9 
+[Ein loderndes Feuer brennt in dieser S„ule, welches die Fratze in einem
+schummerigen Licht erscheinen l„t und beim Betrachter einen beklemmenden
+Zustand erweckt.] 
+ 
+Block 10 
+[Eine S„ule mit einer gr„lichen Fratze.] 
+ 
+Block 11 
+[Ein K„mpferbett. Wie die meisten M”bel hier, wirkt es etwas abschreckend.] 
+ 
+Block 12 
+[Ein Fa.] 
+ 
+Block 13 
+[Eine Art von Teppich, der aus getrockneten Pflanzenhalmen geknpft ist.] 
+ 
+Block 14 
+[Ein Glaskrug.] 
+ 
+Block 15 
+[Vorh„nge.] 
+ 
+Block 16 
+[Eine Kiste.] 
+ 
+Block 17 
+[Ein Schrank.] 
+ 
+Block 18 
+[Eine Fackel.] 
+ 
+Block 19 
+[Eine Menge unverst„nd|licher Manus|kripte liegen in den Regalen.] 
+ 
+Block 20 
+[Ein groer h”lzerner Zuber.] 
+ 
+Block 21 
+[Groe Holzregale.] 
+ 
+Block 22 
+[Dieses Bett wird derzeit wohl nicht benutzt.] 
+ 
+Block 23 
+[Verschiedene Hieb-, Stich- und Schuwaffen, die alle „uerst gef„hrlich
+aussehen.] 
+ 
+Block 24 
+[Ein Waffenregal.] 
+ 
+Block 25 
+[Ein Schild.] 
+ 
+Block 26 
+[Ein aufgespieter Sch„del. Ein unangenehmer Verwesungsgeruch deutet darauf
+hin, da die Greueltat noch nicht allzulange zurckliegt.] 
+ 
+Block 27 
+[An diesen Strohpuppen werden kriegerische F„higkeiten trainiert und erprobt.] 
+ 
+Block 28 
+[Ein mit Stroh umwickelter Holzpfahl. Dient zur šbung von Schlagtechniken.] 
+ 
+Block 29 
+[Eine Zielplatte fr Pfeil und Bogen.] 
+ 
+Block 30 
+[Ein Tablett mit Nahrungsmitteln.] 
+ 
+Block 31 
+[Kr„uter.] 
+ 
+Block 32 
+[Eine Truhe.] 
+ 
+Block 33 
+[Eine Karaffe.] 
+ 
+Block 34 
+[Ein Kochl”ffel.] 
+ 
+Block 35 
+[Ein Eimer.] 
+ 
+Block 36 
+[Ein L”ffel.] 
+ 
+Block 37 
+[Ein L”ffel und eine Gabel.] 
+ 
+Block 38 
+[Ein Trinkbecher.] 
+ 
+Block 39 
+[Zwei Trinkbecher.] 
+ 
+Block 40 
+[Ebesteck.] 
+ 
+Block 41 
+[Ein Teller.] 
+ 
+Block 42 
+[Ein Beh„lter.] 
+ 
+Block 43 
+[Gemse.] 
+ 
+Block 44 
+[Geb„ck.] 
+ 
+Block 45 
+[Ein Gewrz.] 
+ 
+Block 46 
+[Ein Metallteller.] 
+ 
+Block 47 
+[Ein Tonbeh„lter.] 
+ 
+Block 48 
+[Ein groer Glastopf.] 
+ 
+Block 49 
+[Ein Glasbeh„lter.] 
+ 
+Block 50 
+[Eine Holzdose.] 
+ 
+Block 51 
+[Eine groe Glasdose.] 
+ 
+Block 52 
+[Eine Flasche.] 
+ 
+Block 53 
+[Notizbl„tter.] 
+ 
+Block 54 
+[Ein Buch.] 
+ 
+Block 55 
+[Mehrere Bcher.] 
+ 
+Block 56 
+[Ein in Leder gebundenes Buch. Es sieht wertvoll aus.] 
+ 
+Block 57 
+[Schreibutensilien.] 
+ 
+Block 58 
+[Ein aufgeschlagenes Buch. Auf der linken Seite ist eine technische Skizze zu
+sehen, die rechte Seite enth„lt Beschreibungen dazu.] 
+ 
+Block 59 
+[Ein kurzer Schreibstift.] 
+ 
+Block 60 
+[Ein schweres Kurzschwert.] 
+ 
+Block 61 
+[Ein schwerer Dolch.] 
+ 
+Block 62 
+[Eine Tre.] 
+ 
+Block 63 
+[Dieser m„chtige Kchenherd dient zum Erhitzen von Speisen und Getr„nken.] 
+ 
+Block 64 
+[Ein Wandbehang.] 
+ 
+Block 65 
+[Zerrissene Vorh„nge.] 
+ 
+Block 66 
+[Sch„bige Holzbetten.] 
+ 
+Block 67 
+[Eine verzierte S„ule.] 
+ 
+Block 68 
+[Ein Tierfell.] 
+ 
+Block 69 
+[Eine Treppe nach oben.] 
+ 
+Block 70 
+[Eine Treppe nach unten.] 
+ 
+Block 71 
+[Offene Schubladen mit Kleinkram.] 
+ 
+Block 72 
+[Ein Becher.] 
+ 
+Block 73 
+[Eine feine Schere.] 
+ 
+Block 74 
+[Eine Phiole.] 
+ 
+Block 75 
+[Ein Streitkolben.] 
+ 
+Block 76 
+[Phiolen.] 
+ 
+Block 77 
+[Ein Vergr”erungsglas.] 
+ 
+Block 78 
+[Groe Tcher.] 
+ 
+Block 79 
+[Ein Tuch.] 
+ 
+Block 80 
+[Ein Teppich.] 
+ 
+Block 81 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 82 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 83 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 84 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 85 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 86 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 87 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 88 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 89 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 90 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 91 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 92 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 93 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 94 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 95 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 96 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 97 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 98 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 99 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 100 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 101 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 102 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 103 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 104 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 105 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 106 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 107 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 108 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 109 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 110 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 111 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 112 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 113 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 114 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 115 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 116 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 117 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 118 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 119 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 120 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 121 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 122 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 123 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 124 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 125 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 126 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 127 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 128 
+[Platzhalter fr weitere Cutmap-Events.] 
+ 
+Block 129 
+["Wir sollten unbedingt versuchen, Khunag auf die Beine zu bekommen.^^Er kann
+uns hier unten bestimmt wertvolle Tips geben."] 
+ 
+Block 130 
+[{LEAD}{NAME} schaut sich um.^^ Dies hier ist offensichtlich ein bewohnter
+Teil Khamulons.] 
+ 
+Block 131 
+["Wir haben Glck! Der Durchbruch hat uns direkt in den inneren Bereich
+gefhrt! Wir sind in der N„he des Haupteingangs.^^Alle Kenget hier werden uns
+ebenfalls sofort angreifen.^^Ich werde Euch an manchen Tren Weghinweise
+geben, die uns direkt zum Aufbe|wahrungsort des h”chsten Wissens fhren. Dort
+finden wir die gewnschte Schriftrolle."] 
+ 
+Block 132 
+[Die Tr ist verschlossen.] 
+ 
+Block 133 
+["Dies ist der Haupteingang zum inneren Bereich. Die Tr ist gew”hnlich
+verriegelt."] 
+ 
+Block 134 
+[Hier liegen Spruchrollen der Kenget Kamulos!] 
+ 
+Block 135 
+[{LEAD}{NAME} sieht eine Kristallaxt!] 
+ 
+Block 136 
+[Hier werden einige wirkungsvolle Tr„nke aufbewahrt!] 
+ 
+Block 137 
+[{LEAD}{NAME} sieht hier ein Amulett liegen!] 
+ 
+Block 138 
+["Nicht hier entlang! Diese Tr fhrt nicht zum Raum, wo das hohe Wissen
+aufbewahrt wird."] 
+ 
+Block 139 
+["Diese Tr ist richtig! Sie fhrt in Richtung des Raums des hohen Wissens!"] 
+ 
+Block 140 
+["Von dieser Halle aus fhren alle Tren zu Bibliotheksr„umen des inneren
+Bereiches. Gew”hnlich sind sie gut besucht.^^Macht Euch auf Angriffe gefat!"] 
+ 
+Block 141 
+["Dies ist der Vorraum zum Aufbewahrungsort des hohen Wissens.^^ Wir haben es
+bald geschafft!"] 
+ 
+Block 142 
+["Diese Tr fhrt zu den Schlafr„umen und ist fr uns uninteressant. Ich
+glaube, wir mssen nach Norden!"] 
+ 
+Block 143 
+[Die Tr ist verriegelt.] 
+ 
+Block 144 
+[In dem Raum hinter der Tr sitzen Arthor, der Zeremonien|meister, Rhain, der
+Tom und die Gef„hrten in Khamulon empfangen hat, sowie der Cuain
+pers”nlich!^^Entgeistert starren die Kenget die Eindring|linge an.] 
+ 
+Block 145	(Rhain, zur Party gedreht) 
+["Was f„llt Euch ein! Kein Unreiner darf diesen Raum betreten. Und kein
+Unreiner wird diesen Raum jemals lebend verlassen!"] 
+ 
+Block 146	(Cairnain, Richtung Rhain,) 
+["Rhain, m„ige Dich. Gerade das Unreine darf Deinen Geist niemals aus dem Lot
+bringen."] 
+ 
+Block 147	(Cairnain, Richtung Tom) 
+["Erkl„rt Euch. Was wollt Ihr hier? Und wie habt Ihr hierhin gefunden?"] 
+ 
+Block 148	(Tom, Richtung Cairnain) 
+["Wir wurden nicht vorgelassen und muten uns deshalb unseren Weg bahnen. Es
+ist wichtig. Sehr wichtig sogar. Letzten Endes geht es auch um Eure Existenz
+und um die Eures Ordens!"] 
+ 
+Block 149	(Cairnain, Richtung Tom) 
+["Wer bist Du, Todgeweihter, da Du hier das Wort fhrst? Und wer sind Deine
+Gef„hrten."] 
+ 
+Block 150	(Tom, Richtung Cairnain) 
+["Ich heie Tom Driscoll und komme wie Du vom Planeten Erde. Nur bin ich dort
+geboren und mit einem Himmelsschiff hier hergekommen. Meine Gef„hrten sind
+Freunde, die mich bei meinem schweren Auftrag begleiten. Denn die Existenz
+Albions ist in Gefahr. Das Schiff, mit dem ich kam, hat bereits damit
+begonnen, Euren Planeten zu zerst”ren, hoher Cuain. Um es aufzuhalten und
+selbst zu zerst”ren ben”tigen wir Euer Hohes Wissen."] 
+ 
+Block 151	(Cairnain, Richtung Tom) 
+["Du bist ein Narr, Driscoll. Denn Dein Herz ist aufrichtig, ohne den Ha zu
+spren, der Dich begleitet."] 
+ 
+Block 152	(Cairnain, Geht einmal an der Gruppe vorbei, Richtung Tom) 
+["Man hat Dich betrogen, Erdling! Das Hohe Wissen ist hier. Aber Du wirst es
+nicht bekommen. Die Kenget werden sich dem letzten Gefecht, das lange
+prophezeit war, nicht entziehen. Die Zeit scheint gekommen, in der Kamulos zur
+letzten Schlacht ruft."] 
+ 
+Block 153	(Tom, Richtung Cairnain) 
+["Ich wei nicht, welchen Ha Ihr meint, hoher Cuain. Aber ich wei auch, da
+niemand wirklich wei, wer am Ende an der letzten Schlacht teilnimmt. Und es
+mag sein, hie es, da auch Menschen, die im Leben unrein waren, auf der
+richtigen Seite stehen werden, wenn sie nur einen reinen Tod gestorben sind.
+Aber niemand wei, welcher von den Lebenden auf der richtigen Seite stehen
+wird, wenn es zur letzten Schlacht kommt. Allen meinen Gef„hrten geht es um
+die Rettung Albions. Wir stehen auf Eurer Seite!"] 
+ 
+Block 154	(Cairnain, Richtung Tom) 
+["Nehmen wir einmal an, Du h„ttest Recht, Erdling. Nehmen wir an, in der
+letzten Schlacht k„mpfen neben den Kenget die aufrechten Menschen mit, die
+zwar ihre Angst nicht beherrschen, aber fr die richtige Sache einstehen, was
+immer dies sei. Nehmen wir an, um die letzte Schlacht zu gewinnen, mu ich Dir
+unser Hohes Wissen aush„ndigen. Wrde ich das tun? Ich wrde es tun,
+natrlich!"] 
+ 
+Block 155	(Cairnain, Richtung Tom) 
+["Nehmen wir weiter an, in der letzten Schlacht stnden sogar die Iskai, sogar
+weibliche Iskai und Menschen auf unserer Seite. Wer steht dann auf der
+anderen? Das k”nnen ja nicht mehr viele sein! Vielleicht der Verr„ter Khunag?
+Ja, Khunag bestimmt, oder?"] 
+ 
+Block 156	(Cairnain, Richtung Khunag) 
+["Aber wen sehe ich denn da auf Deiner Seite? Glaubst Du, ich habe Dich nicht
+erkannt? Dein Gesicht konntest du ver„ndern, Verr„ter! Die Lge in Deinen
+Augen blieb! Deine Feigheit, die diesen Raum vergiftet, blieb!"] 
+ 
+Block 157	(Cairnain, Richtung Tom) 
+["Man hat Dich betrogen, Driscoll! Du kannst nicht der Bote der letzten
+Schlacht sein! Und wenn, dann stehst Du nicht auf unserer Seite! Warum,
+Khunag, kamst Du hierher?"] 
+ 
+Block 158	(Khunag, Richtung Cuain)) 
+["Was mich treibt, Cairnain? Das weit Du sehr gut! Wer war es denn, der mich
+damals dazu angestiftet hat, den Cuain zu erschlagen. Ich h”re heute noch
+Deine Stimme: 'Dies ist Dein Auftrag Khunag. Die Aufgabe, die Dir Kamulos
+auferlegt hat. Geh' und erschlage Argagh!' Die Rache ist es, die mich treibt.
+Und nur deshalb bin ich hier. Ich war Dein Werkzeug auf dem Weg zur Macht. Die
+armen Wichte hier sind meines. Du wirst sie nicht schonen, wenn Du mich
+besiegst, aber ich. Und ich werde ihnen sogar das Hohe Wissen berlassen. Und
+deshalb werden sie auch jetzt noch fr mich k„mpfen, wo sie sich von mir
+betrogen wissen. Heute ist der Tag, an dem Du Deinen Gott sehen wirst."] 
+ 
+Block 159	(Tom, Richtung Khunag) 
+["Was soll das heien, Khunag?"] 
+ 
+Block 160	(Khunag, Richtung Cairnain!) 
+["Tut mir leid, Tom!"] 
+ 
+Block 161	(Cairnain, Richtung Khunag, auch, wenn er Tom anspricht.) 
+["Deine Lgenm„rchen interessieren niemanden hier, Khunag. Dein Frevel ist
+untilgbar. Genauso wie Deine weitere Schande, Dich diesem Kampf auch wieder
+nur mit Hilfstruppen zu stellen. Mir war frher schon verd„chtig, mit welchen
+Mitteln Du k„mpftest, immer bemht, Deine Gegner m”glichst schmerzhaft sterben
+zu lassen. Nein, Dir glaubt hier keiner mehr. Aber es stimmt, ich werde Deine
+Gehilfen nicht verschonen, wenn ich Dich besiegt habe. Daran kannst Du sehen,
+Driscoll, wer hier ehrlich ist. Es tut mir fast leid um Ddich, aber Du stehst
+auf der falschen Seite."] 
+ 
+Block 162	(Tom, an Khunag) 
+["Wir haben mit Euren dreckigen Intrigen nichts zu tun!"] 
+ 
+Block 163	(Khunag, an Tom) 
+["Du bist wirklich ein Narr, Driscoll. Und Du wirst einer bleiben. Denn Du
+bist und bleibst ein Instrument meiner Rache. Ich habe Argagh geliebt. Doch
+Cairnain trieb uns mit seinen Intrigen auseinander. Und zum Schlu gelang es
+ihm, meinen guten Willen gegen den Cuain zu richten. Er hat mich fr seine
+Zwecke benutzt, wie ich jetzt Euch benutzen werde, den alten Cuain zu r„chen.
+Ich wute immer, da hier in diesem Raum der Verr„ter Cairnain auf uns wartet.
+Doch wie gesagt: Du sollst dein Hohes Wissen kriegen. Wenn Du mir noch einmal
+hilfst."] 
+ 
+Block 164	(Cairnain, Richtung Khunag!!!) 
+["Vielleicht macht er das ja wirklich, Driscoll. Vielleicht gibt er Dir ja
+hinterher das Hohe Wissen. Sicher w„re ich mir da an Deiner Stelle aber nicht.
+Doch was sollen solche migen Gespr„che. Kein ehrenhaftes Wort wird jemals
+ber Khunags Lippen kommen. Er hat mein Heiligtum genug verunreinigt mit
+seinen stinkenden Behauptungen. Es wird Zeit fr ihn, zu sterben.^^{FAT }Macht
+Euch bereit, ins Antlitz Kamulos zu sehen!"] 
+ 
+Block 165
+[Die Flucht ist erfolglos: Cairnain, der Cuain, nun die Verk”rperung des
+Gottes Kamulos, greift sofort wieder an!]
+
+Block 166
+[Fr einen Moment herrscht Stille nach dem furchtbaren Kampf.^^Fassungslos
+sehen die beiden brig|gebliebenen Kenget Kamulos auf die Leiche ihres Cuains,
+den der Gott Kamulos wieder verlassen hat.]
+
+Block 167
+["Ihr... ihr habt den Cuain in seiner Verk”rperung Kamulos besiegt!"]
+
+Block 168 
+["Dafr werdet ihr den dreij„hrigen Tod sterben, Unreine!"]
+
+Block 169
+["Haltet ein, Arthor! Ihr habt gesehen, zu was sie als K„mpfer f„hig sind!
+Sicher k”nnen sie besiegt werden, wenn wir die anderen rufen, aber bedenkt die
+Szene hier!^^{FAT }Kamulos{NORS} ist im offenen Kampf durch Unreine besiegt
+worden! Der Schock wird fr die anderen noch gr”er sein als fr uns."]
+
+Block 170
+["Bei meiner Ehre, Ihr habt recht!"]
+
+Block 171
+["Wir werden den Tod des Cuains auf eine ehrenvolle Weise erkl„ren."]
+
+Block 172
+["Unreine, Ihr seid im Besitz dessen, wofr Ihr hierher gekommen seid. Ihr
+werdet trotz Eurer unfalichen Tat am Leben bleiben. Ich werde Euch ber einen
+Fluchtgang aus Kamulos geleiten.^^Kommt nie wieder an diesen Ort
+zurck.^^Schweigt ber diesen Vorfall.^^Ansonsten gibt es keinen Ort auf
+dieser Welt, an dem wir Euch nicht finden werden."]
+
+Block 173
+[Rhain geleitet {LEAD}{NAME} und die Gef„hrten schweigend durch schmale G„nge
+bis zu einem Durchbruch in der Flanke des Gebirges. Ohne ein weiteres Wort
+l„t er alle durch die ™ffnung treten und verschliet die getarnte Tr.]

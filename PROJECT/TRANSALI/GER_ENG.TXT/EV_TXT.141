@@ -1,0 +1,36 @@
+NPC 141: Jila, Navigatorin
+==========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin Navigatorin zur See, zur Zeit auf Landurlaub."
+{WORDNavigatorin}{WORDLandurlaub}]
+
+Block 1         Begr.1x
+["Dsarii-ma. Kann ich Euch helfen?"]
+
+Block 2         "SEE, NAVIGATORIN"
+["Ja, ich habe schon viele HÑfen angefahren, bin aber meist zwischen hier und
+Beloveno unterwegs."{WORDBeloveno}]
+
+Block 3         "LANDURLAUB"
+["Unser Schiff wird zur Zeit Åberholt. Das kann eine Weile dauern, und so
+suche ich etwas Spaû in der Stadt."{WORDSpaû}]
+
+Block 4         "SPAû"
+["Recht lustig geht es meist im Haus des Windes zu, ein îffentliches Haus im
+Hafengebiet. Schaut doch mal 'rein."{WORDHafen}] 
+
+Block 5         "BELOVENO"
+["Eine Hafenstadt im Osten, wo viel gehandelt wird."]

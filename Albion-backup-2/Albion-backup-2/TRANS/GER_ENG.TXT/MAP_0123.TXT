@@ -1,0 +1,87 @@
+
+MAP 123
+=======
+
+
+Block 0
+[!]
+
+Block 1
+[Ein groes Tongef„. Es befindet sich nichts von besonderem Wert darin.]
+
+Block 2
+[Ein Fa. Es enth„lt nichts Interessantes.]
+
+Block 3
+[Eine Ansammlung von altem Germpel. {LEAD}{NAME} st”bert ein wenig darin
+herum, kann aber nichts von Wert entdecken.]
+
+Block 4
+[Dieser Metallhaufen stammt offensichtlich von den šberresten des Shuttles. Es
+gelingt {LEAD}{NAME} allerdings nicht, darin noch etwas Funktions|tchtiges zu
+entdecken.]
+
+Block 5
+[Eine Vorratskiste. Sie enth„lt nichts, was das Mitnehmen lohnen wrde.]
+
+Block 6
+[Ein kr„ftiges, pilz„hnliches Gew„chs.]
+
+Block 7
+[An dieser Stelle scheint die pflanzliche Wand brchig zu sein: Tiefe Risse
+durchziehen das organische Material. Mit einem geeigneten Werkzeug k”nnte man
+hier sicher etwas ausrichten.]
+
+Block 8
+[{LEAD}{NAME} setzt zu einem kr„ftigen Schlag mit der Spitzhacke an. Die Wand
+strzt zusammen und gibt einen Durchgang frei!]
+
+Block 9
+[Pl”tzlich passieren mehrere Dinge gleichzeitig:^ Hinten strzt die Decke ein,
+als vorne die W„nde in Bewegung geraten und von scharfen Klauen niedergerissen
+werden! ^^Raubtierhafte Kreaturen kommen aus der neugeschaffenen ™ffnung und
+greifen an!]
+ 
+Block 10
+[In dieser Vase befinden sich haltbar gemachte Lebensmittel.]
+
+Block 11
+[{LEAD}{NAME} findet hier einige Essensrationen.]
+
+Block 12
+[Unter diesem Germpel meint {LEAD}{NAME}, etwas Interessantes zu sehen!]
+
+Block 13
+[Eine Vorratskiste.]
+
+Block 14
+[Unter den scharfen Metalltrmmern erblickt {LEAD}{NAME} etwas, das {HIS }
+Aufmerksamkeit auf sich zieht!]
+
+Block 15
+[In dieser Kiste findet {LEAD}{NAME} etwas Brauchbares.]
+
+Block 16
+[{INK 001}{LEAD}{NAME} findet einen Chronometer in den Metalltrmmern. Tom
+meint:{INK 002}^^ "Unglaublich! Diese Uhr ist noch funktionstchtig!"]
+
+Block 17
+[{INK 001}Tom:{INK 002}^^ "Sieh an! Hier sind noch ein paar Patronen
+heilgeblieben!"]
+
+Block 18
+[{INK 001}Tom:{INK 002}^^ "Glck gehabt! Diese Stimdrinks sind zwar
+verschrammt, aber noch einsatzbereit!"]
+
+Block 19
+[Unter all dem alten Zeug findet sich etwas Interessantes.]
+
+Block 20
+["Ein Einsturz!^Und was sind das fr Tiere? Sehen aggressiv aus, passen Sie
+auf, Driscoll!"]
+
+Block 21
+["Hier irgendwo ist die Stelle, wo die Wand eingestrzt
+ist. Mit der Spitzhacke aus der Kiste k”nnten wir den Einsturz vielleicht
+beseitigen."]
+

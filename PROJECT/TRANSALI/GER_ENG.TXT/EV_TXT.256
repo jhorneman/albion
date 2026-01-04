@@ -1,0 +1,36 @@
+Arrim (Iskai-Brger) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Ich baue H„user aus Pflanzen, wie Ihr hier bestimmt schon mehrere
+davon gesehen habt."]
+
+Block 1         (Begrung)
+["Nanu? Fremde Gesichter in unserer Stadt? Mein Name ist Arrim, ich begre
+Euch in Srimalinar."{WORDSrimalinar}]
+
+Block 2         (Begrung 2)
+["Ah, ich habe Euch schon getroffen. Ich bin mir nicht sicher, ob ich Euch
+irgendwie helfen kann."{WORDSrimalinar}]
+
+Block 3         (Srimalinar)
+["Was gibt es denn Wissenswertes ber unsere Stadt...mhm, Ihr solltet nicht in
+die N„he unseres Heiligtums kommen. Es gibt ein Tabu, welches das Betreten des
+Heiligtums durch Menschen und Fremde verbietet. Ihr mt Euch auf alle F„lle
+daran halten, denn das Tabu wurde bisher immer respektiert, und der Ort hat
+fr uns eine groe Bedeutung. Wenn Ihr irgendwelche gl„nzenden Gegenst„nde
+dabei habt, mt Ihr darauf besonders achten. Auf keinen Fall solltet Ihr sie
+unbeaufsichtigt liegen lassen. Es gibt hier viele kleine Tiere, wir nennen sie
+Kritahs. Die stehlen wirklich alles, was gl„nzt und blinkt. Die Kritahs leben
+in den H”hlen des Gebirges. Eigentlich sind es ziemlich scheue Tiere, aber
+manchmal k”nnt Ihr trotzdem eins sehen."{WORDTabu}{WORDHeiligtum}{WORDKritahs}]
+
+Block 4         (Heiligtum)
+["Ja, geht da besser nicht hin. Unsere religi”sen Feiern finden dort statt. Es
+ist fr uns ein sehr wrdevoller Ort."]
+
+Block 5         (Tabu)
+["Dieses Tabu gibt es schon, solange ich zurckdenken kann. Das hat
+historische Grnde, die ich Euch jetzt aber nicht erkl„ren m”chte."]
+
+Block 6         (Arrim)
+["Ja?"]

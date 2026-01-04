@@ -1,0 +1,63 @@
+Kontos (Druide, fhrt Kounos an, wohnt in seinem Keller) / Phase 1
+
+Block 0         (FAQs)
+[{BLOK000}"Ich m”chte nicht prahlen, aber mittlerweile bin ich der am meisten
+respektierte und f„higste Magier in der Umgebung. Desweiteren habe ich mich
+schon seit vielen Jahren mit religi”sen Theorien besch„ftigt... aber wozu
+erz„hle ich Euch das, sicher seid Ihr absolut nicht auf dem neuesten Stand der
+wissenschaftlichen Erkenntnisse."]
+
+Block 1         (Begrung)
+["Seht Ihr nicht, da ich besch„ftigt bin? Ich lasse mich nur „uerst ungern
+bei den Vorbereitung meiner Ansprachen st”ren. Also, was m”chtet Ihr von
+mir?"{WORDAnsprache}{WORDKounos}]
+
+Block 2         (Begrung 2)
+["Ihr seid ja schon wieder hier? H”rt, ich bin wirklich ein umg„nglicher
+Mensch, aber ich habe leider nicht die Zeit, mich um alle m”glichen, sich auf
+der Durchreise befindlichen Fremden zu kmmern. Und ganz besonders dann nicht,
+wenn ich Ansprachen vorbereite. Nun, um Klartext zu reden, ich bereite im
+Moment eine Ansprache vor! Also fat Euch kurz und beschr„nkt Euch auf das
+Wichtigste."{WORDAnsprache}{WORDKounos}]
+
+Block 3         (Ansprache(n))
+["Von Zeit zu Zeit ist es n”tig, da ich das Allgemeinwissen der Einwohner von
+Kounos etwas aufbessere. Ich veranstalte dann eine Art von Gottesdienst - mit
+diesem Wort drftet Ihr wohl noch am ehesten etwas anfangen k”nnen. So haben
+meine Stammesbrder schon einen betr„chtlichen Wissensstand erhalten und
+natrlich w„chst dieser st„ndig weiter an. Sie sind dankbar dafr und ich
+denke, mit Recht. Schlielich bin ich auf diesem Gebiet eine „uerst
+kompetente Kapazit„t und ich meine es gut mit Kounos und seinen Einwohnern.
+Ich gebe ihrem Leben einen Sinn und einen Glauben. Sie haben jetzt etwas, fr
+das es sich lohnt, zu leben, und glaubt mir, das ist berhaupt das
+Wichtigste."{WORDGlaube}]
+
+Block 4         (Glaube(n), Sinn, Religion)
+["Ich denke nicht, da Ihr die Grundzge unserer gesamten Religion in wenigen
+Minuten begreifen werdet und m”chte sie daher nur umreien: Die Fhrung durch
+unseren obersten Herrn und der stetige Aufstieg unserer Kultur sind die
+wichtigsten Merkmale unserer Religion."{WORDReligion}]
+
+Block 5         (Magie)
+["Es ist gef„hrlich, die Geheimnisse der Magie Fremden anzuvertrauen. Ich
+werde Euch diesbezglich auch keine weiteren Ausknfte erteilen, obgleich ich
+mich selbst als einen der kompetentesten Lehrer fr magische F„higkeiten
+halte. Ich h„tte, nebenbei bemerkt, natrlich auch nicht die Zeit, Euch
+Magie-Unterricht zu erteilen. Ich denke, Ihr seid auch nicht deshalb gekommen."]
+
+Block 6         (Kounos)
+["Nun, vielleicht habt Ihr schon bemerkt, da wir hier noch einen recht
+traditionellen Lebensstil haben. Das ist gut so, denn so k”nnen wir uns auf
+unsere Religion und die wichtigen Dinge des Lebens konzentrieren."]
+
+Block 7         (Kontos)
+["Was glaubt Ihr, wen Ihr vor Euch habt?"]
+
+Block 8            (Beweisdoku)
+["Damit habe ich nichts zu tun. Was wollt Ihr damit? Werft es fort - es ist
+eine wertlose F„lschung."]
+
+Block 9            (Fetzen)
+["Das ist ein Fetzen eines Dokuments. Was soll ich damit? Was wollt Ihr
+damit? Es ist ohne den anderen Teil sowiso nicht zu gebrauchen."]
+

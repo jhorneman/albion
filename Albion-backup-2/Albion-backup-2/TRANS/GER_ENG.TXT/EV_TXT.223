@@ -1,0 +1,46 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 4+5
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."]
+
+Block 1         (Begrung, wenn Vorsitzender lebt.)
+["Oh, da seid Ihr ja. Erst einmal Tausend Dank an Euch! Ich bin, wie wir wohl
+alle, wirklich sehr froh, da durch Eure Hilfe das Schlimmste verhindert
+wurde. Ganz bestimmt wird Euch der neue Rat dafr frstlich belohnen. Und ich
+w„re sogar bereit, kostenlos... Aber was habt Ihr denn??? Ist Euch nicht gut?
+Ihr seht so komisch aus?"{BLOK010}"Ich glaube, das war die Aufregung der
+letzten Tage."{BLOK011}"Das ist gleich wieder besser..."{BLOK012}"Nein, alles
+in Ordnung."{WORDRat}{WORDHerras}]
+
+Block 2         (Resp. 1-3)
+["Mhm, manchmal benehmt Ihr Euch wirklich komisch... Jedenfalls freue ich
+mich, da es noch Leute wie Euch gibt. Und das ist wirklich ein ernst
+gemeintes Lob."{WORDLob}]
+
+Block 3         (Lob,Dank, wenn Vorsitzdender lebt)
+["Ihr habt es verdient!"]
+
+Block 4         (Rat)
+["Da wrde ich jetzt unbedingt mal hingehen. Es hat sich ja jetzt einiges
+ge„ndert."]
+
+Block 5         (Begrung wenn Vorsitzender tot ist)
+["Achje, da seid Ihr ja wieder. Nun ist's also doch so gekommen, wie ich
+gesagt habe. Und ich habe es wirklich oft gesagt. Herras ist tot und ich bin
+der Meinung, da Ihr ganz magebend Mitschuld daran habt. Was h„tte es Euch
+schon gekostet, das zu verhindern? Was denn?^^Na sch”n, Herras ist tot und das
+l„t sich nun mal nicht mehr rckg„ngig machen. Verzeiht, aber ich bin gerade
+nicht in der Stimmung fr ein weiteres Gespr„ch."{WORDRat}{WORDHerras}]
+
+Block 6         (Herras, wenn tot)
+["Ich m”chte mit Euch nicht mehr darber reden. H„ttet Ihr etwas unternommen,
+wrde er jetzt noch leben!"]
+
+Block 7         (Kariah)
+["Das bin ich."]
+
+Block 8         (Herras, wenn lebendig)
+["Was ist mit Herras?"]

@@ -1,0 +1,156 @@
+NPC 130: Bradir, Freund und Vize Akiirs, Phase 2
+================================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich bin nun das Oberhaupt der Gilde, aber meiner Meinung nach nur
+ein ungengender Ersatz fr Akiir."]
+
+Block 1 [ ]
+
+******************Unter-Allgemeinwissen fr Dji-Fadh*************************
+
+Block 2         "Dji-Fadh, Former"
+["Was wir tun, sehen wir als Mischung von Magie, Kunst und Handwerk an. Wir
+sind eine der „ltesten Gilden Jirinaars und wie Ihr sicher wit, k”nnen wir
+mit Hilfe unserer Magie Pflanzen erschaffen, ver„ndern und dauerhaft in eine
+gewnschte Form bringen. So sind wir in der Lage, komplette H„user aus
+lebendem Pflanzen|material erstehen zu lassen, die nicht nur sch”n anzusehen
+sind, sondern auch alle Funktionen erfllen, die fr das Wohlbefinden ihrer
+Bewohner notwendig sind."]
+
+Block 3         "AKIIR" 
+["Ich betrachte ihn noch immer als meinen Freund. Wer wei, welche Reaktionen
+ich zeigen wrde, wenn ich um meinen baldigen Tod wte."]
+
+Block 4         
+[!]
+
+Block 5         
+[!]
+
+Block 6         "SIRA"
+["Sira ist die einzige Tochter Akiirs. Sie ist zu den Dji-Kas gegangen, was
+Akiir sehr getroffen hat."]
+
+Block 7
+[]
+
+Block 8         "DJI-KAS, MAGIER, ZAUBERER"
+["Ich befrchte, die Vorf„lle um Akiirs Ende haben unser Verh„ltnis nicht
+gerade verbessert. Sehen wir, was die Zukunft bringt, an mir soll eine
+Ann„herung nicht scheitern."]
+
+Block 9         "GILDENHAUS"
+["Unser Gildenhaus konkurriert mit dem Ratsgeb„ude um den Titel des sch”nsten
+Bauwerks Jirinaars. Es wird von uns st„ndig gepflegt und ver„ndert und auch
+zur Vorfhrung unseres K”nnens benutzt, wie Ihr im ”stlichen Flgel sehen
+k”nnt."]
+
+Block 10        
+[!]
+
+Block 11        "FASIIR"
+["Ich habe noch nicht den Mut aufgebracht, mich bei ihm pers”nlich zu
+entschuldigen, aber ich werde es tun, sobald sein Zorn sich etwas gelegt hat."]
+
+Block 12        
+["So heie ich, richtig."]
+
+Block 13
+["Mir f„llt es noch immer sehr schwer, ber all' das zu reden. Ich versuche,
+Akiir als Freund in Erinnerung zu behalten, dessen Geist in seinen letzten
+Wochen getrbt war."]
+
+Block 14
+[dummy]
+
+Block 15
+[dummy]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18        "ARGIM"
+["Ihr habt davon geh”rt? Nun, um ehrlich zu sein, Argims Geschichte ist ein
+wunder Punkt in der Geschichte unserer Gilde. Er war vor fast 150 Jahren das
+Oberhaupt der Dji-Fadh. Damals war das Gildenhaus der Dji-Fadh auerhalb der
+Stadt zu finden, ein pr„chtiges Geb„ude mitten im Wald nahe eines Han. Nun,
+Argim war ein groartiges Talent, aber von wankelmtigem Charakter. Dies war
+der Grund fr die Ablehnung seines gr”ten Zieles: ein Auserw„hlter zu werden.
+Als er von der Abweisung erfuhr, verlor er v”llig die Kontrolle ber sich. Er
+schwor, trotzdem die Unsterblichkeit erlangen zu wollen. In einem wahnwitzigem
+Ausbruch seiner Macht zerst”rte er das ganze Geb„ude und verwandelte es in
+einen seltsamen Ort, der heute von allen gemieden wird. Man sagt sogar, er
+h„tte seinen Geist diesem Ort aufgepr„gt."]
+
+Block 19        "HAN"
+["Es gibt Orte, wo die Kraft der G”ttin besonders zu spren ist und magische
+Handlungen verst„rkt werden, aber oft auch schwieriger sind. Ein solches
+Energiezentrum nennt sich Han."]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+
+Block 21        Begrung 1.mal
+["Dsarii-ma! Oh, G”ttin, was soll ich Euch blo sagen? Ich kann Euch nur um
+Verzeihung bitten, da ich nicht eher mit der Wahrheit herausgekommen bin. Nun
+erscheint mir die Zeit seit Akiirs Tod als ein einziger Alptraum.^ Ich danke
+Euch, da Ihr mich daraus geweckt habt." {BLOK010}"Wie haben Eure
+Gildegenossen reagiert, Bradir?" {BLOK011}"Macht Euch keine Sorgen mehr,
+Bradir. Ihr wart in einer ausweglosen Situation und Euer Sinn fr Freundschaft
+ehrt Euch."]
+
+Block 22        Begrung 2.mal
+["Dsarii-ma, Reisende. Seid willkommen in der Gilde."{WORDAkiir}{WORDFasiir}]
+
+Block 23        Antwort auf MC21,10
+["Mir fehlen dazu die Worte. Sie haben Ihr Verst„ndnis damit ausgedrckt, mich
+als Oberhaupt der Gilde zu best„tigen. Es war ein unbeschreib|lich gutes
+Gefhl, das zu h”ren."]
+
+Block 24        Antw. auf MC21,11
+["Habt Dank fr Eure tr”stenden Worte, {LEAD}{NAME}. Ich bin froh, da Ihr mir
+nichts nachtragt."]
+
+Block 25        WENN: Gespr„chsende, 1x
+["Bevor Ihr geht, m”chte ich Euch bitten, dies als Ausdruck meiner Reue
+anzunehmen. Nein, wirklich, bitte nehmt es, mir liegt viel daran, es Euch zu
+geben."^^ {INK 001}Er drckt den Gef„hrten einen groen Goldbetrag und den
+magischen Zierdolch, der als Beweisstck diente, in die Hand.^^ {INK 002}"Das
+Gold stammt aus Akiirs Nachla fr mich und der Dolch tr„gt nun schlechte
+Erinnerungen fr mich. Auerdem, da ich nicht zum K„mpfer geboren bin, habt
+ihr ja gesehen."]
+                DANN: Dolch und Kohle
+
+Block 26        Begr. 2.mal, nur einmal, wenn Sira dabei!
+["Dsarii-ma. Ach, Sira! La' mich Dir noch einmal sagen, wie leid mir die
+ganze Geschichte tut. Du mut Schreckliches durchgemacht haben."^^ {INK
+001}Sira:^ {INK 002}"Es war nicht einfach, Bradir, zu wissen, da mein Vater
+all das wegen mir angezettelt hat. Aber Du weit so gut wie ich, da er kein
+schlechter Iskai war. Er hat Schw„che angesichts seines Todes gezeigt und wem
+w„re das nicht zu verzeihen. Und Du hast lediglich versucht, ihm einen letzten
+Dienst als Freund zu erweisen."{WORDAkiir}{WORDFasiir}]
+
+Block 27
+["Lebt wohl."]
+
+Block 28           Dolch gezeigt
+["Ein altes Erbstck, aber nun geh”rt er Euch. Ich verbinde zu viele schlechte
+Erinnerungen damit."]

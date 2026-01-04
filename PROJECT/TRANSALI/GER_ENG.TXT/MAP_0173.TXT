@@ -1,0 +1,39 @@
+
+Transporterhîhle
+=========================================================================
+
+Block 0
+[-frei-]
+
+Block 1
+[Der Ausgang.]
+
+Block 2
+[Eine gleiûende Leuchterscheinung.]
+
+Block 3
+[Die GefÑhrten treten in einer anderen Hîhle wieder aus dem Licht heraus.]
+
+Block 4
+["Ich... ich bin sprachlos.^^ Welch ein Erlebnis!"]
+
+Block 5
+[Hier glitzert ein kleiner TÅmpel mit kristallklarem Wasser.]
+
+Block 6
+["Was wir dort vorne sehen, ist eine der seltenen Manifestationen Animebonas.
+Wenn wir in das Licht treten, werden sich uns verschiedene Wege auftun. Wir
+sollten uns in das heiûe Land der Umajo wenden, um das groûe Metallschiff zu
+finden."]
+
+Block 7
+["Dieser kleine Teich ist von der EntitÑt gesegnet."]
+
+Block 8
+["Sollten wir nicht versuchen, so schnell wie mîglich Euer Metallschiff zu
+erreichen, Tom Driscoll? Dann ist dies nicht die richtige Hîhle.^^Wir mÅssen
+die Hîhle des heiûen Landes wÑhlen."]
+
+Block 9
+["Wir brechen so schnell wie mîglich dorthin auf, Harriet. Habt noch ein wenig
+Geduld, bitte."]

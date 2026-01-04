@@ -1,0 +1,19 @@
+;
+; Mechanismus überlastet
+; Ani: Feuerball
+
+
+show_map
+party_jump 222 215
+party_turn 0
+camera_lock
+camera_jump 3360 3300
+show_map
+update 16
+
+sound 36 80 0 0 0
+play_anim 9 143 45 1 129
+
+
+load_pal 28
+show_map

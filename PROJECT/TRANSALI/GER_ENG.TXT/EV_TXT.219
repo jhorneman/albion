@@ -1,0 +1,48 @@
+Normalo 3 (Kariah, weibl./ist in der Kneipe anzutreffen) / Phase 0
+
+Block 0         (FAQs)
+[{BLOK000}"Tja, Ihr Lieben...an meiner aufreizenden Kleidung solltet Ihr
+eigentlich schon erkennen, wo ich arbeite. Oh, Ihr k”nnt mich dort gerne mal
+besuchen. Allerdings geben die meisten m„nnlichen Wesen nur ungern zu, da sie
+ab und zu ein Freudenhaus aufsuchen."{WORDFreudenhaus}]
+
+Block 1         (Begrung)
+["Skeima Din, mhm, da sind ja ein paar gut gebaute Kerls unter Euch. Oh, keine
+Sorge, ich werde mich nicht an Euch vergehen. Da komme ich schon durch meinen
+Beruf voll auf meine Kosten. Aber wenn Ihr m”chtet, k”nnt Ihr mich gerne mal
+im 'Haus der roten Vorh„nge' besuchen. Lat Euch nicht von den klebrigen
+Teppichen und den Keuchlauten abschrecken, die meisten Kunden fhlen sich bei
+uns ziemlich wohl. Achja, ich heie brigens Kariah. Freut mich, Euch
+kennen|zulernen. Wir reden weiter, wenn Ihr wieder mal vorbeikommen werdet."]
+ 
+Block 2         (Begrung 2)
+["Hallo, ich glaube, wir kennen uns schon. Sagt, Ihr wart immer noch nicht im
+'Haus der roten Vorh„nge'. Seid Ihr einfach zu prde oder finanziell knapp bei
+Kasse? Oder wit Ihr unsere Qualit„ten nicht zu sch„tzen?"{BLOK010}"Nun, wir
+haben es vielleicht nicht ganz so n”tig, wie Ihr glaubt."{BLOK011}"Ja, wir
+sind ganz wild darauf - je schneller, umso besser!"{BLOK012}"Im Gegensatz zu
+Euch mssen wir uns um die wirklich wichtigen Dinge kmmern."{BLOK013}"Wir
+machen gerne mal einen Besuch, im Moment haben wir aber dringendere Probleme."]
+
+Block 3         (Resp. 1)
+["Soso, also doch prde, herher. Gut, ich will Euch nicht weiter von wichtigen
+Dingen abhalten. Alles Gute noch, fr Eure Reise!"]
+
+Block 4         (Resp. 2)
+["Ist das wahr? Meint Ihr gleich hier??? Alle zusammen??? Juchuuhhh..."]
+
+Block 5         (Resp. 3)
+["Was sind denn die wirklich wichtigen Dinge im Leben? Aber ich m”chte Euch
+nicht in eine philosophische Diskussion verwickeln, denn schlielich mt Ihr
+Euch ja um wirklich wichtige Dinge kmmern. Ich bin mir nicht sicher, ob ich
+Eure wichtige Zeit dann noch l„nger in Anspruch nehmen darf..."]
+
+Block 6         (Resp. 4)
+["Das ist in Ordnung, dann wnsche ich noch alles Gute und viel Glck bei der
+L”sung Eurer Probleme."]
+
+Block 7         (Freudenhaus)
+["Ich arbeite dort. Manchmal ist es wirklich eine harte Arbeit!"]
+
+Block 8         (Kariah)
+["Das bin ich."]

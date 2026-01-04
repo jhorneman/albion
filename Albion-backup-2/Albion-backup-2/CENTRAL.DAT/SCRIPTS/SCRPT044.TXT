@@ -1,0 +1,21 @@
+; Script 44: Tom's Nacht bei Christine
+
+show_map
+fade_to_black
+fill_screen 0
+fade_from_black
+text 119
+fade_to_black
+
+; tür zu
+do_event_chain 69
+
+npc_on 2
+npc_off 23
+
+party_jump 63 66
+party_turn 2
+
+show_map
+update 4
+

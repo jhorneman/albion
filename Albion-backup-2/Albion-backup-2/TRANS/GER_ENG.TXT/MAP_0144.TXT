@@ -1,0 +1,206 @@
+
+MAP 144: Uni, 1. Level
+======================
+
+
+Block 0            frei
+[leer]
+
+Block 1            Schalter
+[Ein mechanischer Schalter.]
+
+Block 2            Minischalter
+[An der Wand befindet sich eine kleine, mechanische Taste.]
+
+Block 3            Mikroschalter
+[Leicht zu Åbersehen, ist ein winziger Schalter in die Wand eingelassen.]
+
+Block 4            Bodenplatte
+[Eine Bodenplatte. Es scheint, als wÅrde sie beim darÅberlaufen einsinken
+kînnen.]
+
+Block 5            TÅr
+[Eine TÅr.]
+
+Block 6            verschlossene TÅr
+[Die TÅr ist fest verriegelt, es ist kein Schloû zu erkennen.]
+
+Block 7            Gitter-Tor
+[Ein verschlossenes Fallgitter. Es ist kein Schloû daran.]
+
+Block 8            Brunnen
+[Ein Brunnen, gefÅllt mit klarem Wasser.]
+
+Block 9            Flammenschale an
+[Eine heiûe Flamme kommt aus der am Boden sichtbaren Messingscheibe.]
+
+Block 10           Flammenschale aus
+[Eine Messingscheibe am Boden.]
+
+Block 11           Flammenloch
+[Eine Messingscheibe mit einer groûen ôffnung darin.]
+
+Block 12           Flamme
+[Eine wandernde Flamme. Sie strahlt groûe Hitze aus.]
+
+Block 13           tranp. Wand
+[Eine transparente Wand aus sehr stabilem Material.]
+
+Block 14           Energiefeld
+[Dies scheint eine Art Kraftfeld zu sein. Es gibt ein Summen an der Hîrgrenze
+ab, die Haare strÑuben sich in seiner NÑhe und ein schmerzhaftes Ziehen in den
+Zahnwurzeln macht sich bemerkbar.]
+
+Block 15           Loch Boden
+[Ein groûes Loch im Boden.]
+
+Block 16           Loch Decke
+[An der Decke ist eine ôffnung zu sehen.]
+
+Block 17           BlumenstÑnder
+[Eine BlumensÑule, die frÅher diese RÑume geziert hat.]
+
+Block 18           Tisch und Hocker
+[Eine Sitzgruppe zeugt davon, daû diese RÑume frÅher einmal von Menschen
+bewohnt waren.]
+
+Block 19           Hocker
+[Ein vermoderter Hocker.]
+
+Block 20           Faû, leer
+[Ein altes Faû.]
+
+Block 21           Vase
+[Eine verstaubte Vase. {LEAD}{NAME} wirft einen Blick hinein, kann aber nichts
+finden.]
+
+Block 22           Kiste
+[Eine metallbeschlagene Truhe.]
+
+Block 23           Trashpile leer
+[Ein Haufen alten GerÅmpels. {LEAD}{NAME} stîbert ein wenig darin herum, kann
+aber nichts Verwendbares entdecken.]
+
+Block 24
+[Der Schalter lÑût sich nicht mehr bewegen.]
+
+Block 25           brÅchige Wand
+[Die Wand sieht an dieser Stelle sehr brÅchig aus.]
+
+Block 26           Wand zerkloppt
+[{LEAD}{NAME} fÅhrt ein paar krÑftige Hiebe gegen die Wand aus. Sie bricht
+zusammen!]
+
+Block 27
+[{LEAD}{NAME} fÅllt einen Eimer mit Wasser.]
+
+Block 28
+[{LEAD}{NAME} tritt in die Flamme und verbrennt sich!]
+
+Block 29
+[{LEAD}{NAME} kippt einen Eimer Wasser Åber die Flammen und lîscht sie!]
+
+Block 30
+[Eine weitere Flamme ist gelîscht.]
+
+Block 31
+[{LEAD}{NAME} tritt in das Kraftfeld hinein und sofort durchzieht ein
+furchtbarer Schmerz {HIS } Kîrper! Nach unendlich erscheinenden Sekunden
+bricht die Leucht|erscheinung in sich zusammen.]
+
+Block 32
+[Bei der BerÅhrung mit dem Stab bricht das Kraftfeld in sich zusammen! Der
+Stab zerfÑllt dabei zu Staub.]
+
+Block 33
+[Mit Hilfe des Seiles kînnen sich alle nach oben ziehen!]
+
+Block 34           Feuerball
+[Ein durch die Luft schwebender Feuerball. Er strahlt eine unertrÑgliche Hitze
+aus.]
+
+Block 35           Feuerball berÅhrt
+[Plîtzlich spÅren alle einen unertrÑglichen, brennenden Schmerz: ein Feuerball
+ist zu nahe gekommen!]
+
+Block 36           Rainer: Feuerball
+["Unglaublich. Ich verstehe nicht ganz, was diese Feuerkugel in der Luft hÑlt.
+Ist es eine brennende Gasblase? Aber wie kann sie dann so stabil sein?
+RÑtselhaft."]
+
+Block 37           Rainer: Kraftfeld
+["Ich beginne an meinem Verstand zu zweifeln! Dieses Feld scheint nicht
+elektrischen Ursprungs zu sein und es ist auch keine Energiequelle zu
+erkennen. Was um alles in der Welt erhÑlt es aufrecht? Dieser Planet scheint
+erschaffen worden zu sein, um das Weltbild von Naturwissen|schaftlern ins
+Wanken zu bringen."]
+
+Block 38           Bodenplatte 1st
+[Die Platte, die hier auf dem Boden angebracht ist, sinkt ein kleines StÅck
+ein.]
+
+Block 39           Bodenplatte 2nd
+[Bodenplatte gedrÅckt.]
+
+Block 40
+[Eine der wandernden Flammen hat Tom und die GefÑhrten erreicht! Die Hitze des
+Feuers ist unertrÑglich!]
+
+Block 41
+[Platzhalter]
+
+Block 42
+[Platzhalter]
+
+Block 43
+[Platzhalter]
+
+Block 44
+[Platzhalter]
+
+Block 45
+[Platzhalter]
+
+Block 46
+[Platzhalter]
+
+Block 47
+[Platzhalter]
+
+Block 48
+[Platzhalter]
+
+Block 49
+[Platzhalter]
+
+Block 50
+[Platzhalter]
+
+Block 51
+[Ein GerÑusch ist aus westlicher Richtung gekommen.]
+
+Block 52
+[In der sÅdwestlichen Ecke des Raumes hat sich die TÅr geîffnet!]
+
+Block 53
+[Das Tor rechts von den Schaltern hat sich geîffnet!]
+
+Block 54
+[Neben einer Menge Bodenplatten sind hier groûe Flammen zu sehen, die sich
+unberechenbar Åber den Boden bewegen.]
+
+Block 55
+["Hm! Eine recht wirkungsvolle Mechanik!"]
+
+Block 56
+[Die Steinwand verschwindet zÅgig im Boden!]
+
+Block 57
+[Hinter dem Gitter ist ein groûer Schalter zu erkennen. Leider kommt man durch
+die StÑbe nicht heran.]
+
+Block 58
+[Eine verschlossene Kiste.]
+
+Block 59
+[Unter diesem GerÅmpel meint {LEAD}{NAME} etwas Interessantes zu sehen!]

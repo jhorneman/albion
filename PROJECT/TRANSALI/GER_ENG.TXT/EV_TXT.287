@@ -1,0 +1,41 @@
+
+Amine, Taschenspielerin
+=======================================================================
+
+
+Block 0
+[{BLOK000}"Ich bin Taschenspielerin."]
+
+Block 1            (BegrÅûung)
+["Skeima Din.^^Habt Ihr vielleicht Lust auf ein kleines Spiel|chen? Wenn Ihr
+gut seid, kînnt Ihr sehr viel Gold gewinnen. Aber Ihr kînnt auch viel
+ver|lieren, wenn Ihr Pech habt."{WORDSpiel}]
+
+Block 2            (Spiel)
+["Es ist ein WÅrfelspiel:^^Ich wÅrfel zuerst mit 3 WÅrfeln und dann wÅrfelt
+Ihr mit drei WÅrfeln. Wenn Ihr meine Punkt|zahl erreicht oder Åber|bietet,
+ge|hîrt der Ein|satz Euch, an|sonsten ge|hîrt er mir. Ist das nicht
+fair?"{WORDEinsatz}]
+
+Block 3            (Einsatz)
+["Ich steu're 10 MÅnzen bei und Ihr gebt noch einmal 10 dazu. Wenn Ihr spielen
+mîchtet, dann sagt mir, daû ich wÅrfeln soll."{WORDWÅrfeln}]
+
+Block 4            (WÅrfeln 1)
+["Ihr habt ja gar nicht genÅgend Gold!"]
+
+Block 5            (WÅrfeln 2)
+["Diesmal habt Ihr kein GlÅck gehabt. Ich habe gewonnen. Der Einsatz gehîrt
+mir. Danke fÅr das Spiel!"]
+
+Block 6            (WÅrfeln 3)
+["Gratuliere! Ihr habt gewonnen. Der Einsatz gehîrt Euch."]
+
+Block 7            (Schînheitskînigin)
+["Ihr findet mich hÅbsch, ist das wahr? Ihr seid aber wirklich schmeichelhaft.
+Ach, das ist doch gar nicht zu fassen. Und das meint Ihr wirklich ganz
+ehrlich?^^Ich weiû gar nicht was ich sagen soll. Kommt, ich lade Euch zu einem
+Freispiel ein."{WORDFreispiel}]
+
+Block 8            (Wurde schon gespielt)
+["Ich denke, ein Freispiel genÅgt!"]

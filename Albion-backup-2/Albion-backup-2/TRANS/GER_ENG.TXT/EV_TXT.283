@@ -1,0 +1,127 @@
+
+Textfile fr Nelly (Strafgefangene)
+------------------------------------------------------------------
+
+
+Block 0
+[{BLOK000}"Beruf? Seit langer Zeit habe ich kein Tageslicht mehr gesehen. Ihr
+glaubt doch nicht, da ich hier arbeiten kann? Aber vor diesem schrecklichen
+Miverst„ndnis war ich als Priesterin und Heilerin t„tig."{WORDMiverst„ndnis}]
+
+Block 1
+[{WORDMiverst„ndnis}"Nanu? Wer seid Ihr denn? Und wie kommt Ihr
+hierher?"{BLOK010}"Wir stellen hier die Fragen!"{BLOK011}"Wir machen einen
+Besuch hier und sind auf der Suche nach Informationen."]
+
+Block 2
+["Ihr mt mich hier rausholen. Ich bin unschuldig!"{WORDMiverst„ndnis}]
+
+Block 3            (Miverst„ndnis)
+["Ihr mt mir glauben, ich bin unschuldig. Ich kann doch hier nicht meine
+besten Jahre verlieren. Bitte helft mir!"{BLOK010}"Wir wissen ja berhaupt
+nichts ber Dich!"{BLOK011}"Nein, das wird schon seinen Grund haben, da Du
+hier bist."{BLOK012}"Nun, vielleicht l„t sich darber reden."{BLOK013}"Warum
+sollten wir?"]
+
+Block 4            (3,10)
+["Ich kann Euch nicht meine ganze Vergangenheit erz„hlen, bevor der W„chter
+kommt und die Besuchszeit beendet. Aber seht mich an und urteilt. Bin ich
+kriminell? Ich bin es nicht. Es war ein Versehen, ein
+Fehlurteil!"{BLOK010}"Wir glauben Dir."{BLOK011}"Wir glauben nicht, da man in
+die Seele eines Menschen hineinsehen kann."{BLOK012}"Wir glauben Dir nicht."]
+
+Block 5            (4,12)
+["Tja, das ist mein Schicksal. Niemand glaubt mir - absolut niemand!"]
+
+Block 6            (4,10)
+["Ihr glaubt mir? Dann helft mir! Bitte!"{WORDHilfe}]
+
+Block 7            (4,11)
+["Natrlich kann man das nicht. Aber man kann sich trotzdem ein Bild von
+Fremden machen. Wie kann ich Euch denn meine Unschuld beweisen?"{WORDUnschuld}]
+
+Block 8            (3,11)
+["Ja genau - fragt mich am besten gar nicht weiter. Wom”glich wrdet Ihr noch
+Probleme wegen mir bekommen. Es ist ja auch nicht Euer Problem, wenn
+Unschuldige hinter Gittern sitzen. ^^Es ist immer das gleiche: Weil es solche
+Leute wie Euch gibt, hat es dieses Fehlurteil gegeben."{WORDFehlurteil}]
+
+Block 9            (Unschuld)
+["Was m”chtet Ihr wissen?"{BLOK010}"Den Grund der Verurteilung."{BLOK011}"Wann
+ist das passiert?"{BLOK012}"Wie lange mt Ihr noch ben?"]
+
+Block 10           (9,10 / Patient)
+["Es ging um einen Patienten, den ich betreut habe. Er war sehr krank und ich
+konnte ihm nicht mehr helfen. Man hat mir vorgeworfen, da ich mich nicht
+gengend um ihn gekmmert h„tte, aber es war eine schwere Krankheit und er war
+in schlechter Verfassung. Ich habe all mein Wissen eingesetzt, aber es hat
+leider nicht gereicht."]
+
+Block 11           (9,11)
+["Das war jetzt vor 3 Jahren."]
+
+Block 12           (9,12)
+["Noch 7 Jahre. Ich habe dafr insgesamt 10 Jahre aufgebrummt bekommen. Es ist
+besonders hart, weil ich unschuldig bin."]
+
+Block 13           (Fehlurteil)
+["Der Ortsvorsteher von Umajo-Kenta ist kein Richter. Leider fhrt er sich so
+auf, als w„re er einer. Dummerweise nimmt er seine Sache nicht besonders
+genau. Wenn Ihr ihn fragen werdet, erz„hlt er Euch bestimmt wieder, da ich
+ganz sicher schuldig bin. Aber eigentlich hat er schon ein schlechtes
+Gewissen, weil er n„mlich wei, da er Unrecht gesprochen hat.^^Bitte helft
+mir doch."{WORDHilfe}]
+
+Block 14           (Hilfe)
+["Wenn Ihr mir wirklich helfen wollt, dann lat mich raus. Der Schlssel h„ngt
+links neben der Zellentre. Zum Hauptausgang komme ich schon irgendwie alleine
+raus.^^Nochwas, solltet Ihr mir wirklich helfen, sei Euch mein Dank
+gewi!"{BLOK010}"Das ist nicht n”tig."{BLOK011}"Wie k”nnt Ihr uns
+helfen?"{BLOK012}"Wir werden nicht helfen!"{WORDSchlssel}]
+
+Block 15           (14,10)
+["Wer wei, vielleicht kann ich etwas fr Euch tun und Ihr werdet meinen Dank
+brauchen k”nnen."{WORDDank}]
+
+Block 16           (14,11 / Dank)
+["Ich k”nnte Euch Informationen besorgen, die Euch bestimmt
+interessieren."{WORDInformationen}]
+
+Block 17           (14,12)
+["Das werdet Ihr bestimmt bereuen!"]
+
+Block 18           (Informationen)
+["Mhm, ich glaube, darber reden wir, wenn es soweit ist!"]
+
+Block 19           (3,13)
+["Ich werde mich bei Euch zum Dank revanchieren!"{WORDDank}]
+
+Block 20           (3,12)
+["Das ist sch”n, dann erz„hle ich Euch n„mlich erst einmal, warum ich hier
+bin."{WORDPatient}]
+
+Block 21           (1,10)
+["Jaja, ist ja schon gut. Dann fragt mal."]
+
+Block 22           (1,11)
+["Mhm, da kann ich Euch bestimmt weiterhelfen. Aber dafr mt Ihr mir auch
+eine Gefallen tun."{WORDGefallen}]
+
+Block 23           (Gefallen)
+["Ihr mt mir dann helfen, dieses Gef„ngnis zu verlassen."{WORDHilfe}]
+
+Block 24           (Schlssel)
+["Ich komme natrlich nicht an ihn ran! Aber fr Euch ist es ganz einfach. Er
+h„ngt direkt neben der Tre."]
+
+Block 25
+["Was ich wirklich brauche, ist der Schlssel, der neben der Zellentre
+h„ngt."{WORDSchlssel}]
+
+Block 26           (Nelly)
+["Das bin ich."]
+
+Block 27           (Tre wurde ge”ffnet)
+["Vielen Dank Freunde!^^In Euch steckt eben doch noch etwas Gutes. Ich mu
+jetzt schauen, da die W„chter nicht auf mich auf|merk|sam wer|den. Wir sehen
+uns dann noch in der Stadt, wo ich mich bei Euch be|danken werde."]

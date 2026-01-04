@@ -1,0 +1,30 @@
+168: Bennos, Futterh„ndler Aballon 
+==================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+
+[{BLOK000}"Ich verkaufe gutes Essen aller Art."{WORDEssen}]
+
+Block 1         Begr.
+["Togi Din, Reisende! Bei mir bekommt Ihr alle K”stlichkeiten Aballons zu
+gnstigen Preisen." {BLOK010}"Ja, wir k”nnten etwas Reiseproviant gebrauchen."]
+
+Block 2         "Essen"
+["Ihr wit, Aballon ist berhmt fr seine Frchte, aber auch unsere Schweine
+werden bei gutem Futter fett und wohlschmeckend."]

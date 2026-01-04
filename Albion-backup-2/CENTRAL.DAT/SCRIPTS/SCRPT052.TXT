@@ -1,0 +1,18 @@
+; **** Script 52: Training bei Ferina (NPC 159), M139
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 6
+fade_to_black
+npc_lock 0
+npc_jump 0 20 17
+npc_turn 0 3
+party_jump 18 17
+party_turn 1
+show_map
+update 4
+fade_from_black
+update 10
+npc_text 159 7
+update 10

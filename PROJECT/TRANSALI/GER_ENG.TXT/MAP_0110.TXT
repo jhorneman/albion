@@ -1,0 +1,195 @@
+
+Texte Map 110: JIRINAAR
+
+
+Block 0                      (Frei)
+[{BLOK000}Ratsgeb„ude, Sitz der Sebainah {BLOK001}Stadttor {BLOK002}Haus des
+Sdwind-Clans {BLOK003}Dji-Kas-Gilde (Magier) und Heilerin
+{BLOK004}Dji-Fadh-Gilde (Former) {BLOK005}Gastst„tte "Haus der Winde"
+{BLOK006}Waffenschmied {BLOK007}Lebensmittel-Laden {BLOK008}Gemischtwaren
+{BLOK009}Kampftrainer]
+
+Block 1         Schild
+[{CNTR}Auf dem Schild steht:^^ {INK 006}Sitz des Rates von Jirinaar]
+  
+Block 2         NPC 1, Kind
+[{INK 001}Der junge Iskai ist den Anblick von Menschen wohl noch nicht
+gew”hnt. Er f„ngt hemmungslos an zu kichern und bekommt kein Wort heraus.]
+
+Block 3         NPC 2, Kind
+["Dsarii-ma! Das mu ich meiner Schwester erz„hlen, da ich Euch getroffen
+habe! Die wird vielleicht neidisch sein!"]
+
+Block 4         NPC 3, Stiriik
+["Dsarii-ma, G„ste der Stadt. Verhaltet Euch ruhig und freundlich, dann werdet
+Ihr auch keine Schwierigkeiten bekommen."]
+
+Block 5         NPC 4, Stiriik
+["Dsarii-ma. Seid wachsam in der Hafengegend. Dort gibt es so manchen
+Hitzkopf, der auf rger aus ist."]
+
+Block 6         NPC 5, Stiriik
+["Dsarii-ma, G„ste der Stadt. Geniet den Besuch in unserer Stadt!"]
+
+block 7         NPC 6, barbusige Iskai
+["Dsarii-ma, Besucher! Ich hoffe, Euch gefallen die vielen reizvollen
+Anblicke, die unsere Stadt zu bieten hat."]
+
+Block 8         NPC 7
+["Habe keine Lust auf eine Unterhaltung mit Euch."]
+
+Block 9         NPC 8
+["Dsarii-ma. Ist die Gr”e dieser Stadt nicht phantastisch? Ich komme von
+auerhalb und bin jedesmal berw„ltigt!"]
+
+Block 10        WENN: Rainer da & bei Bewutsein, 1x
+["Wir erz„hlen ihm besser nicht, da auf der Erde mancher Wohnkomplex mehr
+Einwohner als ganz Jirinaar hat..."]
+
+Block 11        NPC 9, Stiriik
+["Dsarii-ma. Haltet Euch von rger fern, wir Stiriik k”nnen nicht berall
+sein."]
+
+Block 12        Schild
+[{CNTR}Das Schild verkndet:^^ {INK 006}Wanja, Haus der ntzlichen Waren^
+Tretet ein von der 6. bis zur 19. Stunde]
+
+Block 13        Schild
+[{CNTR}Auf dem Schild steht:^^ {INK 006}Snird, Haus der Waffen^ Willkommen von
+der 10. bis zur 20. Stunde]
+
+Block 14        Schild
+[{CNTR}Auf dem Schild kann man lesen:^^ {INK 006}Zirr & Viri's Haus der Winde^
+™ffentliches Haus]
+
+Block 15        Schild
+[{CNTR}Die Inschrift besagt:^^ {INK 006}Frinja, Haus des guten Essens^ Von der
+6. bis zur 21. Stunde ge”ffnet]
+
+Block 16        Schild
+[{CNTR}Auf dem Schild steht:^^ {INK 006} Haus des Clans des Sdwindes]
+
+Block 17        Schild
+[{CNTR}Auf dem Schild ist zu lesen:^^ {INK 006}Gildenhaus der Dji-Kas]
+
+Block 18        Schild
+[{CNTR}Das Schild besagt:^^ {INK 006}Gildenhaus der Dji-Fadh^ Tore der
+Gildenmitglieder]
+
+Block 19        Schild
+[{CNTR}Die Inschrift besagt:^^ {INK 006}Gildenhaus der Dji-Fadh^ ™ffentlicher
+Eingang]
+
+Block 20        Gesch„ft geschlossen
+[Die Tr ist verriegelt und niemand reagiert auf {LEAD}{NAME}s Klopfen. Das
+Gesch„ft hat wohl geschlossen.]
+
+Block 21
+[Diese Tr ist verschlossen.]
+
+Block 22
+[{LEAD}{NAME} wird von einem der Iskai in Kampfausrstung, die neben dem
+Stadttor stehen angesprochen:^^ {INK 002}"Dsarii-ma, Besucher unserer Stadt.
+Ich mu Euch bitten, die Stadt nicht zu verlassen, bevor Ihr mit Sebainah
+Janiis gesprochen habt.^ Auerdem ist die Wildnis, die Jirinaar umgibt, nicht
+ungef„hrlich fr Fremde, die nicht mit der Umgebung vertraut sind."]
+
+Block 23
+["Dsarii-ma, Besucher unserer Stadt. Ich mu Euch bitten, die Stadt nicht zu
+verlassen, bevor Ihr mit Sebainah Janiis gesprochen habt.^ Auerdem ist die
+Wildnis, die Jirinaar umgibt, nicht ungef„hrlich fr Fremde, die nicht mit der
+Umgebung vertraut sind."]
+
+Block 24
+["Hier befindet sich brigens das Hauptgeb„ude der Stiriik, meiner werten
+Kollegen. Es ist allerdings nur fr Stiriik zug„nglich, wir mssen auf eine
+Besichtigung verzichten. Unter uns, allzuviel vers„umen wir dabei nicht."]
+
+Block 25
+["Dsarii-ma! Verget nicht, bei Sebainah Janiis vorzusprechen."]
+
+Block 26
+[{INK 001}Tom und Rainer werden von einem Iskai in einer Art Kampfausrstung
+angesprochen:^^{INK 002} "Dsarii-ma, Besucher unserer Stadt. Ich komme ja
+gerade rechtzeitig. Wie ich sehe, seid Ihr von Euren Wunden genesen.^^Ich
+m”chte Euch im Namen der Sebainah, der Ratsvorsitzenden, in Jirinaar
+willkommen heien. Die Sebainah l„t Euch zu einem Gespr„ch mit ihr
+bitten.^^Sie ist im Ratsgeb„ude zu finden, dem Geb„ude in der Mitte der Stadt.
+Es ist umgeben vom Flu und durch seine Gr”e nicht zu verfehlen. Die Sebainah
+ist zu fast jeder Stunde des Tages im Ratsgeb„ude, Ihr k”nnt sie jederzeit
+aufsuchen.^^Wenn Ihr es allerdings wnscht, kann ich Euch sofort zu ihr
+fhren."]
+
+Block 27
+["Wnscht Ihr sofort von mir zur Sebainah geleitet zu werden?"]
+
+Block 28
+["Lat euch nicht allzu lange Zeit, bis Ihr die Sebainah besucht.^
+Entschuldigt mich nun bitte."]
+
+Block 29
+["Dsarii-ma. Ich hoffe, Euer Gespr„ch mit der Sebainah war angenehm."]
+
+Block 30
+[Der Iskai macht sich auf den Weg zum Ratsgeb„ude. Tom und Rainer haben Mhe
+mit der Geschwindigkeit seiner langen Schritte mitzuhalten, aber bald
+erreichen sie das Regierungsgeb„ude der Stadt und treten ein.]
+
+Block 31
+["Gratuliere zu diesem h”chst diplomatischen Vorgehen, Driscoll! ^^Nicht nur,
+da Sie die Leute beleidigt haben, die unser Leben gerettet haben. Ich m”chte
+auch darauf hinweisen, da wir keine Ahnung haben, wo das Metall unseres
+Shuttles lagert und wie wir es in das hiesige Zahlungsmittel umwandeln sollen."]
+
+Block 32
+[Die Tr zum Haus des J„gerclans ist durch ein Schlo gesichert.]
+
+Block 33
+[{INVE}{NAME} schliet die Tr mit dem Schlssel von Wrinn auf.]
+
+Block 34
+["Das pr„chtige Haus hier geh”rt brigens einem reichen H„ndler. Er lebt sehr
+zurckgezogen, wir werden hier kaum Einla finden."]
+
+Block 35
+["Hier wohnt einer der Ratsherren. Nettes H„uschen, was?"]
+
+Block 36
+[Eine Art Springbrunnen.]
+
+Block 37
+[Die Tr zum Haus des J„gerclans. Sie ist durch ein Schlo gesichert.]
+
+Block 38
+[Eine Tr.]
+
+Block 39
+[{CNTR}{INK 003}{FAHI}YO!^^1 hour passed!]
+
+Block 40
+[{INK 001}Ein Stiriik kommt heran und sagt atemlos zu Drirr:^^{INK 002}
+"Dsarii-ma, Drirr! Gerade ist ein Viehzchter in die Stadt gekommen, der den
+Kenget Kamulos - M”rder in die Ruine des alten Former-Zentrums hat gehen
+sehen!"]
+
+Block 41
+["Wir sollten uns schnellstens zum alten Former|geb„ude begeben. Vielleicht
+erwischen wir den M”rder noch!"]
+
+Block 42
+["Danke, wir m”chten uns zuvor ein wenig in der Stadt umsehen."]
+
+Block 43
+["Dsarii-ma. Willkommen in Jirinaar."]
+
+Block 44
+["Dsarii-ma und gute Reise!"]
+
+Block 45
+["Das alte Formergeb„ude, oder der alte Argim, wie manche sagen, liegt
+nord”stlich der Stadt, glaube ich.^^Ich war auch noch nie dort..."^^ Lat uns
+sofort dorthin gehen, vielleicht schnappen wir den Kerl dort!"]
+
+Block 46        Schild
+[{CNTR}In kleiner Schrift steht hier:^^ {INK 006}Die Kunst des Kampfes.^ 8.
+bis 19. Stunde]

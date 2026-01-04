@@ -1,0 +1,73 @@
+
+Maptextfile
+----------------------------------------------------------------------
+
+Block 0
+[{BLOK000}Stadttor {BLOK001}Gasthaus Erzmine {BLOK002}Gilde der
+Bergleute/Zimmer{BLOK003}Gilde der GerÑtemacher {BLOK004}Gilde der
+Waffenschmiede {BLOK005}Gilde der Diamantschleifer {BLOK006}Gemischtwaren
+{BLOK007}Lebensmittel]
+
+Block 1
+[Geîffnet zwischen 8 und 20 Uhr.]
+
+Block 2
+[Eine TÅre.]
+
+Block 3
+[{CNTR}Auf dem Schild neben der TÅre steht:^{INK 006}Willkommen im Gasthaus
+Erzmine.]
+
+Block 4
+[Zwischen 3 und 18 Uhr geschlossen.]
+
+Block 5
+[Eine verschlossene TÅre.]
+
+Block 6
+[Ein Monument.]
+
+Block 7
+[Diese Tîpfe gehîren dem Lebens|mittel|hÑndler.]
+
+Block 8
+[Durch dieses Stadttor gelangt man wieder in die WÅste.]
+
+Block 9
+["Ich wandere tÑglich zum GefÑngnis, um meinen Wachkollegen abzulîsen. Wollt
+Ihr mit mir kommen? Aber ich warne Euch, es ist ein langer und beschwerlicher
+Weg."]
+
+Block 10
+["Ha!^^So sieht man sich wieder. Narren seid Ihr, harhar. Aber ich will nicht
+unfair sein und gebe Euch ein paar der versprochenen Informationen. Die erste
+Information: Ich war nicht ganz aufrichtig, als ich Euch Åber meine
+Vergangenheit aufgeklÑrt habe. Aber ich mîchte mich trotzdem erkenntlich
+zeigen. Wenn Ihr auf der Suche nach einem Weg in den sÅdlichen Teil des
+Kontinents seid, dann kann ich Euch den Eingang in das Stollensystem zeigen.
+Es gibt nur wenige, die das Portal kennen und es Euch zeigen wÅrden. Wenn Ihr
+interessiert seid, treffen wir uns um Null Uhr vor dem Stadttor. Und nun stîrt
+mich bitte nicht weiter, denn ich mîchte noch meinen GeschÑften nachgehen."]
+
+Block 11
+[Aus nÑherer Entfernung hîrt man plîtzlich laute Ausrufe:^^{CNTR}{INK 006}"Wir
+haben sie!"^"Nimm das, Du MiststÅck!"^"Widerliches Weib!"^"Das wird wehtun.
+Und jetzt die Spitze, harhar."^^{LEFT}{INK 001}Es scheint einen heftigen Kampf
+zu geben und den Ausrufen nach ist Nelly dabei schlecht weggekommen.]
+
+Block 12
+["Skeima Din,^^seid Ihr zu Besuch hier oder seid Ihr neue Bewohner von
+Umajo-Kenta? Unsere Stadt wird nÑmlich immer grîûer."]
+
+Block 13
+["Ich muû noch einkaufen."]
+
+Block 14
+["Hoffentlich seid Ihr mit friedlichen Absichten hier. Ich bin mir immer
+unsicher, wenn ich auf der Straûe eine Gruppe von Leuten treffe, die ich nicht
+kenne."]
+
+Block 15
+["Achtet auf Sandtaucher, wenn Ihr durch die WÅste wandert. Das sind
+schreckliche Viecher und sie sind nicht zu sehen, denn sie lauern unter dem
+Sand. Aber Schritte hîren sie auf viele Kilometer Entfernung."]

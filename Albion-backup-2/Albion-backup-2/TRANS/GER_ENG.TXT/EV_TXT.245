@@ -1,0 +1,29 @@
+Arrek (Neues Ratsmitglied Nummer 3) / Phase 8
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin einer der beiden neuen Mitglieder im 'Rat der Gerechten'."]
+
+Block 1         (Begrung)
+["Skeima Din, zum Dank fr Eure Hilfe h„tte ich da ein kleines Geschenk fr
+Euch..."{BLOK010}"Da sagen wir nicht nein."{WORDRathaus}{WORDArrek}
+{WORDMelthar}]
+ 
+Block 2         (Begrung 2)
+["Skeima Din, ich freue mich, Euch wiederzusehen."{WORDRathaus}
+{WORDMelthar}{WORDArrek}] 
+
+Block 3         (Geschenk wird berreicht)
+["Ihr drft es behalten. Vielleicht wird es Euch einmal ntzliche Dienste
+erweisen."]
+
+Block 4         (Arrek)
+["Das ist mein Name."]
+
+Block 5         (Melthar)
+[Das ist das andere neue Ratsmitglied.]
+
+Block 6         (Rathaus)
+["Wahrscheinlich kennt Ihr Euch hier besser aus als ich."]
+
+Block 7
+["Ihr habt das Geschenk doch schon bekommen!"]

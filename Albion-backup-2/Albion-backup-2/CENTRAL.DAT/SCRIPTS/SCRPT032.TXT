@@ -1,0 +1,195 @@
+; **** Script 32: Empfang auf der Toronto,
+; **** Start des 2.Toronto-Teiles
+
+npc_lock 0 
+npc_jump 0 34 55
+
+npc_lock 1
+npc_jump 1 36 55
+
+npc_lock 2
+npc_jump 2 39 47
+npc_turn 2 2
+
+npc_lock 3
+npc_jump 3 43 46
+npc_turn 3 2
+
+npc_lock 4
+npc_jump 4 42 45
+npc_turn 4 2
+
+npc_lock 5
+npc_jump 5 41 43
+npc_turn 5 2
+
+npc_lock 6
+npc_jump 6 37 44
+npc_turn 6 2
+
+npc_lock 7
+npc_jump 7 40 46
+npc_turn 7 2
+
+fill_screen 0
+fade_from_black
+text 1
+fade_to_black
+
+show_map
+update 10
+fade_from_black
+
+; Tom und Secus laufen zum "Empfang"
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 7
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 7
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 7
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 15
+
+text 2
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 7
+
+npc_move 0 1 0
+npc_move 1 1 0
+party_move 1 0
+update 7
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+npc_move 0 0 -1
+npc_move 1 0 -1
+party_move 0 -1
+update 7
+
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+npc_text 193 3
+npc_text 184 4
+npc_text 183 5
+npc_text 194 6
+party_member_text 1 7
+npc_text 193 8
+party_member_text 1 9
+pause 60
+npc_text 194 10
+party_member_text 1 14
+text 11
+pause 10
+
+npc_move 0 0 1
+npc_move 1 0 1
+party_move 0 1
+update 7
+
+npc_move 0 0 1
+npc_move 1 0 1
+party_move 0 1
+update 7
+
+npc_move 0 0 1
+npc_move 1 0 1
+party_move 0 1
+update 7
+
+npc_move 3 0 1
+update 10
+npc_text 183 12
+npc_text 194 13
+
+pause 10
+fade_to_black

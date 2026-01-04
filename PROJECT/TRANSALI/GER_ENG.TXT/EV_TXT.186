@@ -1,0 +1,50 @@
+186: Robert Shaw, Navigator
+===========================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Mathematiker und Navigator."{WORDNavigator}]
+
+Block 1         Begr. 1x
+["Hallo, Driscoll. Na, alles klar fÅr den Flug?"{WORDFlug}]
+
+Block 2         Begr. 2x
+["Ah, Driscoll. Was kann ich noch fÅr Dich tun?"{WORDFlug}]
+
+Block 3         "Flug"
+["Ich habe die Berechnungen Deiner Flugbahn nochmal ÅberprÅft. Ist alles im
+grÅnen Bereich, keine kritischen Punkte in der Bahn. Sollte 'n Kinderspiel
+werden."]
+
+Block 4         "Flug" 2x
+["Wie schon gesagt, die Berechnungen der Flugbahn sind fertig und ÅberprÅft."]
+
+Block 5         Mathematiker, Navigator
+["Ziemlich harter Job, diesmal. Obwohl, oder gerade weil wir Ned, die
+Wunder-AI an Bord haben. WÑhrend des ganzen Fluges habe ich versucht, der AI
+Fehler nachzuweisen, aber es war nichts zu machen. Ich schÑtze, daû ich mich
+durch die öberprÅfungen noch selbst wegrationa|lisieren werde. Noch traut man
+den AI - Systemen nicht hundert|prozentig, aber das Ñndert sich bald, schÑtze
+ich."{WORDAI}]
+
+ Block 6
+[{BLOK000}Was kannst Du sagen Åber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demnÑchst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Blok 7
+["Bis dann."]

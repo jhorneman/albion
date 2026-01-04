@@ -1,0 +1,32 @@
+Garp (Ratsmitglied Nummer 2) / Phase 0+1
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten'. Ich sorge dafr, da alles
+reibungslos abl„uft."]
+
+Block 1         (Begrung)
+["Willkommen in Beloveno. Ich bin Gard, Mitglied im 'Rat der
+Gerechten'."{WORDRat}{WORDRathaus}]
+ 
+Block 2         (Begrung 2)
+["War noch etwas? Ich bin ziemlich besch„ftigt, wir haben bald wieder eine
+Ratssitzung."{WORDRathaus}{WORDRat}]
+
+Block 3         (Rat, Ratssitzung)
+["Ich bin eines der drei Ratsmitglieder. Mein Kollege heit Riko und dann gibt
+es noch Perron. Riko ist etwas wortkarg, aber ein lieber Kerl. Auerdem sollte
+ich vielleicht erw„hnen, da Perron ziemlich sensibel ist und alle m”glichen
+Gespenster sieht. Lat Euch von ihm nicht verunsichern. Schlielich ist da
+noch Herras, der Ratsvorsitzende. Ihr k”nnt ja mal alle besuchen. Ich hoffe,
+Ihr geniet den Aufenthalt in unserer sch”nen Stadt. Wir werden versuchen, es
+Euch so angenehm wie m”glich zu machen. Wenn Ihr etwas braucht, lat es mich
+wissen. Ich bin immer fr Euch da."{WORDRiko} {WORDPerron}{WORDGard}]
+ 
+Block 4         (Riko, Perron)
+["Riko und Perron sind die beiden anderen Ratsmitglieder im Rat."]
+
+Block 5         (Gard)
+["Das bin ich."]
+
+Block 6         (Rathaus)
+["Schaut Euch ruhig um. Unser Rathaus ist ziemlich gro."]

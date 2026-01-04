@@ -1,0 +1,39 @@
+Normalo 1 (Kryte, weibl./ist in der Kneipe anzutreffen) / Phase 4
+
+Block 0         (FAQs)
+[{BLOK000}"Oh, ich fhre das Lebensmittelgesch„ft hier in der Stadt."]
+
+Block 1         (Begrung)
+["Skeima Din. Haben wir nicht schon miteinander geredet? Ich habe geh”rt, da
+Ihr Euch in den Konflikt mit einmischt. Ich finde das gut - viele werden Euch
+eher Glauben schenken und ganz besonders in Zeiten, wo das gegenseitige
+Vertrauen sowieso schon stark strapaziert ist. Achja, wenn wir schon beim
+Thema sind: Ich bin mir mittlerweile auch nicht mehr so sicher, was die
+Stellung von Kontos angeht. Von einer guten Freundin habe ich geh”rt, da es
+eine Verbindung zwischen ihm und den Ratsmitgliedern Gard und Riko gibt, die
+ja mageblich an der Verschw”rung gegen Herras beteiligt waren. Eigentlich
+sollte man diesen Spuren nachgehen und die Sache kl„ren, wenn da wirklich
+etwas dran ist. Nun, ich bin wohl nicht diplomatisch genug fr so ein
+Aufgabengebiet. Aber wenn Euch etwas an dem Land hier liegt, dann versucht zu
+helfen - denn Ihr werdet von allen Beteiligten am ehesten als neutrale
+Vermittler angesehen. Vielleicht gelingt es Euch ja, Beweise fr oder gegen
+die Schuld von Kontos zu finden."{WORDKontos}{WORDHeiligtum}]
+
+Block 2         (Kontos)
+["Wie gesagt, ich bin mir nicht mehr sicher, was ich von ihm halten soll.
+Vielleicht k”nnt Ihr Beweise sammeln, die ihn be- oder entlasten?{BLOK010}"An
+was fr Beweise denkt Ihr denn?"{BLOK011}"Wie sollen wir denn da herankommen?"]
+
+Block 3         (Resp. 1 oder Beweise)
+["Bestimmt gibt es irgendwelche Schriftstcke, aus denen hervorgeht, mit
+welchen Personen Kontos verbndet ist."]
+
+Block 4         (Resp. 2)
+["Keine Ahnung - so eine Suche ist sicher auch nicht ganz ungef„hrlich!"]
+
+Block 5         (Heiligtum)
+["Ich glaube, die Sache ist mittlerweile ziemlich ernst. Haben Kontos und
+seine Anh„nger ihren Plan nicht schon in die Tat umgesetzt?"]
+
+Block 6         (Kryte)
+["Das bin ich."]

@@ -1,0 +1,65 @@
+
+
+Joe, Partymitglied 7
+====================
+
+Block 0
+[!]
+
+Block 1            Begr. Toronto Teil2
+["Was gibt's denn, mein Alter? Wir mÅssen uns beeilen, bevor wir entdeckt
+werden!" {BLOK010}"Joe, Danke Dir nochmal, das Du mich nicht hÑngen lÑût!"
+{BLOK011}"Hast recht, wir kînnen spÑter schwÑtzen."]
+
+Block 2            Antw. MC 1,10 1x
+["He, Du weiût doch, daû man's nicht sieht, wenn ich rot werde. Ich vertraue
+Dir halt mehr als der Firma. Wenn sich allerdings 'rausstellt, daû Du doch
+hier 'rumspinnst, nehme ich Dich gemÅtlich auseinander!"]
+
+Block 3            MC1,10 2x
+["Schluû mit den Lobeshymnen, sonst glaub' ich selbst noch, was fÅr'n toller
+Kerl ich bin. Laû' uns lieber den Weg zum Reaktor|kontroll|pult suchen."]
+
+Block 4            Begr. Phase 3
+["Was gibt's denn, mein Alter?" {BLOK010}"Bist Du Dir wirklich sicher, daû Du
+beim Angriff auf die Toronto dabei sein willst?" {BLOK011}"ErzÑhl' mir doch
+mal was Åber die Dokumentation, die Du aufgenommen hast." {BLOK012}"Laû' uns
+weitergehen."]
+
+Block 5            MC 4,10
+["Ich will gar nicht so genau 'drÅber nachdenken. Ich werde mich hinter Eurem
+RÅcken verstecken, wenn uns die Kugeln um die Ohren pfeifen sollten, aber mit
+mir dabei haben wir eine grîûere Chance, durch das Servicedeck bis zum Reaktor
+vorzudringen."]
+
+Block 6            MC 4,11
+["Nun, ich hab' hier erstmal ein paar Aufnahmen der Natur und des Hauses
+gemacht und 'n paar Leutchen gespeichert. Frill hat mich dann noch in diese
+groûe Iskai-Stadt mitgenommen, Mann, was fÅr Farben!^^Ich glaube, unseren
+Leuten an Bord der Toronto werden die Augen aus'm Kopf fallen, wenn sie das
+sehen. Wir sollten so schnell wie mîglich die Dokumentation in eine geeignete
+Konsole einspeisen, wenn wir an Bord sind. Der Trubel, der dann an Bord
+entsteht, kann uns nur nÅtzlich sein."]
+
+Block 7            MC 4,12 TschÅû
+["O.K. Weiter geht's."]
+
+Block 8            Wenn: hau ab
+["Na ja, wenn Du meinst, daû Du auf mich verzichten kannst...^^Was soll's, ich
+will mal hier nicht den verstoûenen Sohn spielen. Wenn Du Dir's anders
+Åberlegt, findest Du mich im Haus der Erleuchteten. Bis dann!"]
+
+Block 9
+[{BLOK003}Ich mîchte gern, daû Du uns vorerst verlÑût, Joe.]
+
+Block 10            Begr. Phase 3
+["Was gibt's denn, mein Alter?"
+{BLOK010}"Hast Du irgendwelche Tips?"
+{BLOK011}"Laû' uns mal weitergehen."]
+
+Block 11
+["Wir sollten in der Serviceebene auf Panels achten, hinter denen
+Steuerelektronik liegt. Vielleicht kînnen wir so ein paar Sperren auûer Betrieb
+setzen. Ich melde mich, wenn wir auf etwas Interessantes stoûen."]
+
+

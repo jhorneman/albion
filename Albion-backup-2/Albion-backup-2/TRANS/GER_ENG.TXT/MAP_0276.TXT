@@ -1,0 +1,24 @@
+
+Maptextfile fÅr Kontos-Dungeon Level 1
+--------------------------------------
+
+Block 0            (frei)
+[ ]
+
+Block 1            (TÅre)
+[Eine TÅre.]
+
+Block 2
+[Die TÅre hat kein Schloû. Sie kann weder von Hand, noch mit einem SchlÅssel
+geîffnet werden.]
+
+Block 3
+[Wer das Amulett sieht, muû sterben!]
+
+Block 4
+[{LEAD}{NAME} findet 10 GoldmÅnzen.]
+
+Block 5
+["Unglaublich, diese Wand muû eine TÑuschung sein - wir kînnen einfach
+hindurchgehen."]
+

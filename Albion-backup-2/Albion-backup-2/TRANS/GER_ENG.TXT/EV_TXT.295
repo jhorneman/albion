@@ -1,0 +1,81 @@
+
+Bergbaupriester Kossea; in der Bergbaugilde
+=========================================================================
+
+
+Block 0
+[{BLOK000}"Ich bin Bergpriester und kann das Ritual durchfhren."{WORDRitual}]
+
+Block 1            (Begrung)
+["Skeima Din, ich bin zur Zeit mit meinen spirituellen Vor|berei|tungen fr
+meine Pre|digt be|sch„f|tigt. Aber ich hel|fe Euch trotz|dem gern, wenn Ihr
+et|was wissen m”ch|tet."{WORDVorbereitungen}]
+
+Block 2            (Begrung 2)
+["Skeima Din, ich glaube, wir kennen uns bereits. Leider habe ich nach wie vor
+viel zu tun."{WORDArbeit}]
+
+Block 3            (Vorbereitungen)
+["In unserer Gilde gibt es nur zwei Bergpriester, so sind wir ziemlich im
+Ein|satz, denn wir bauen fast st„n|dig Erz ab, und das Ritual mu min|des|tens
+zweimal t„g|lich durch|ge|fhrt wer|den, sonst er|zr|nen wir Mutter Er|de.
+Wir brau|chen aller|dings ei|ne mehr|stn|dige men|tale Vor|berei|tungs|zeit
+fr die Durch|fhrung der Zere|monie."{WORDRitual}{WORDArbeit}]
+
+Block 4            (Arbeit)
+["Ja, der Bedarf an Erzen und Edel|stei|nen wird immer gr”er - wir kommen mit
+dem Ab|bau kaum hin|ter|her."{WORDAbbau}]
+
+Block 5            (Abbau)
+["Alle anderen Gilden ben”tigen Erze und Rohdiamanten fr die
+Wei|ter|bear|bei|tung. Da wir die einzigen sind, die den Abbau betreiben
+k”nnen, sind wir ge|zwungen, sehr viel zu ar|bei|ten, wenn uns da|ran liegt,
+da unser Handel flo|riert und das m”ch|ten wir na|tr|lich schon."{WORDHandel}]
+
+Block 6            (Handel)
+["Wir sind die einzigen, die Metall her|stellen k”nnen, und durch dieses
+Mono|pol ist un|sere Exis|tenz ge|sichert, denn wir schicken unsere
+Me|tall|erzeug|nisse in die ganze Welt. Des|halb ist es auch sehr wich|tig fr
+uns, da das Wissen zur Durch|fhrung des Rituals in un|seren Rei|hen bleibt.
+Denn wenn an|dere Kul|turen dieses Wissen er|langen, gibt es kei|nen Grund
+mehr, warum sie auf un|sere Erzeug|nisse ange|wiesen sind.^^Aus diesem Grund
+passen wir st„n|dig auf, da kein Frem|der die|ses Wissen er|langt. Bevor wir
+das Ritual durch|fhren, ver|gewissern wir uns mehr|fach, ob wir wirk|lich
+alleine sind. Erst dann fin|det die Zere|monie statt und wir k”nnen wie|der
+Erze ab|bauen. Wir sehen es auch „uerst un|gern, wenn Frem|de in unseren
+Stollen herum|schnffeln. Also denkt daran, Ihr drft Euch ger|ne in un|serer
+Gil|de um|schauen, aber geht bitte nicht in die Ab|bau|stollen."{WORDStollen}]
+
+Block 7            (Stollen)
+["Die Stollen befinden sich im Norden, wo wir in der groen Fels|wand un|sere
+Ab|bau|tunnel ge|gra|ben ha|ben. Dort sind auch ein paar Gleis- und
+Ver|lade|anla|gen. Aber wie schon ge|sagt, wir se|hen das „uerst un|gerne,
+wenn Frem|de ver|su|chen, hin|ter uns her|zuspio|nie|ren."{WORDSpionage}]
+
+Block 8            (Spionage)
+["Wenn wir jemanden dabei erwischen, k”nnen wir „uerst ungemtlich werden.
+Denn das w„re nicht das erste Mal, da das jemand versucht."{WORDVersuch}]
+
+Block 9            (Versuch)
+["Wir haben Merdger, ein Ger„temacher, vor einiger Zeit entdeckt, wie er uns
+beim Ritual beschatten wollte."{WORDGer„temacher}]
+
+Block 10           (Ger„temacher)
+["Die Ger„te|macher ha|ben sowieso ein ange|spanntes Ver|h„lt|nis zu uns. Sie
+glau|ben, da der Akt des Ri|tuals rei|ner Aber|glau|be und so|mit un|n”tig
+w„re. Doch ich habe ge|h”rt, da sie be|reits selbst ver|sucht ha|ben, Er|ze
+ab|zu|bauen. Das er|laubt die g|tige Mutter der Er|de aber nie|mals de|nen,
+die da|zu nicht be|rech|tigt sind, und so wa|ren alle Ver|suche bis|her
+ziem|lich erfolg|los. Merd|ger ge|steht sich offiziell immer noch nicht ein,
+da an den al|ten Tradi|tio|nen nicht alles rei|ner Aber|glau|be ist, aber
+immer|hin sieht er doch, da er et|was falsch macht und fragt sich nun:
+Was?^^Er wird es nicht schaffen, uns aus|zu|spionie|ren. Denn wir passen
+mittler|wei|le ganz ge|nau auf.^^Aber das mit den Ger„te|machern ist schon
+seit langem ein Pro|blem. Sie denken auch, un|sere Prei|se w„|ren viel zu
+hoch, doch se|hen sie auf der an|de|ren Sei|te nicht ein, wie hart wir
+ar|bei|ten. Es ist ja wohl nur ge|recht, wenn wir ei|nen ange|messenen An|teil
+ha|ben m”ch|ten."{WORDAnteil}]
+
+Block 11           (Anteil)
+["Das ist der Teil, den uns die an|deren Gil|den fr die Er|ze und fr die
+Roh|diaman|ten be|zahlen. Da|von le|ben wir."]

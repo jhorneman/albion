@@ -1,0 +1,44 @@
+NPC 113: Nadri, Schreiberin
+===========================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+
+
+Block 0
+[{BLOK000}"Sagte ich das nicht? Ich arbeite in den Ratskreisen als
+Schreiberin."]
+
+Block 1         BegrÅûung 1.mal
+["Dsarii-ma, Besucher. Ich bin Schreiberin hier in den Ratskreisen. Kann ich
+Euch helfen?" {BLOK010}"Was genau ist die Aufgabe einer Schreiberin?"
+{BLOK011}"Schîne Kleidung, die Ihr da tragt."] 
+
+Block 2         BegrÅûung 2.Mal
+["Dsarii-ma, Besucher."]
+
+Block 3         Antwort MC1,1
+["Hier in den Ratskreisen werden tÑglich viele groûe und kleine
+Entschei|dungen getrof|fen. All das muû schriftlich festgehalten werden, und
+genau das tue ich. Es ist keine besonders aufregende Arbeit, aber sie steht in
+hohem Ansehen."]
+
+Block 4         Antwort MC1,2 WENN: LEAD kein Iskai
+["Es verwundert mich, daû Ihr als Mensch einen Blick dafÅr habt. Oh,
+Verzeihung, das ist mir nur so heraus|gerutscht. Ich freue mich Åber Eure
+Bemerkung. Wiût ihr, frÅher bin ich meistens nackt unterwegs gewesen, aber
+seit kurzem steht mir der Sinn nach etwas Provokation, deshalb trage ich nun
+Kleidung."{WORDNackt}]
+                DANN: +NACKT+
+
+Block 5         Antwort MC1,2 WENN: LEAD = Iskai
+["Oh, vielen Dank. Wiût ihr, frÅher bin ich meistens nackt unterwegs gewesen,
+aber seit kurzem steht mir der Sinn nach etwas Provokation, deshalb trage ich
+nun Kleidung."{WORDNackt}]

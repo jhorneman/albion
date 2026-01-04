@@ -1,0 +1,61 @@
+; Script 59: END-SEQUENCE, Part 1
+
+show_map
+text 107
+
+;Samenkorn geht hoch
+play_anim 14 140 20 1 1
+play_anim 15 20 0 1 0
+sound_effect 69 100 100 0 7000
+sound_effect 70 100 100 0 7000
+sound_effect 36 100 100 0 11000
+sound_effect 42 100 100 0 11000
+sound_effect 43 100 100 0 11000
+sound_effect 69 100 100 0 11000
+sound_effect 70 100 100 0 11000
+fade_to_white
+npc_off 17
+update 2
+party_off
+fill_screen 194
+fade_from_white
+text 108
+party_member_text 1 123
+pause 60
+fade_to_black
+fill_screen 0
+sound_fx_off
+fade_from_black
+text 109
+fade_to_black
+
+; song 57
+
+;Animationen starten
+start_anim 16 0 0 3
+fade_from_black
+pause 60
+play 29
+pause 60
+stop_anim
+start_anim 17 0 0 1 3
+pause 60
+play 208
+pause 60
+play_anim 18 0 0 1 3
+pause 60
+
+; Text, Bild 1.Mal
+fade_to_black
+fill_screen 0
+fade_from_black
+text 110
+fade_to_black
+show_pic 15 0 0
+fade_from_black
+pause 0
+text 111
+show_pic 15 0 0
+pause 0
+fade_to_black
+pause 120

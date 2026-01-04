@@ -1,0 +1,103 @@
+; **** Script 14: Bradir's Erklärung
+
+; Leute und Party pos.
+fill_screen 0
+fade_from_black
+text 224
+fade_to_black
+party_jump 61 23
+party_move 0 1
+party_move -1 0
+party_move -1 0
+party_move -1 0
+party_move -1 0
+party_turn 0
+
+npc_lock 21
+npc_jump 21 59 21
+npc_turn 21 2
+
+npc_lock 22
+npc_jump 22 57 22
+npc_turn 22 0
+
+show_map
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+fade_from_black
+
+; Dialog Erklärung
+text 163
+pause 30
+npc_text 115 164
+npc_text 128 165
+party_member_text 3 166
+npc_text 128 167
+npc_text 115 168
+npc_text 128 169
+party_member_text 3 170
+npc_text 115 171
+party_member_text 1 172
+npc_text 120 173
+npc_text 128 174
+pause 30
+text 175
+pause 120
+npc_text 120 176
+pause 120
+npc_text 115 177
+party_member_text 1 178
+npc_text 115 179
+pause 60
+party_member_text 3 180
+party_member_text 1 181
+pause 30
+npc_text 120 182
+party_member_text 1 183
+pause 60
+npc_text 115 184
+pause 60
+text 185
+
+; raus aus dem Raum der Sebainah und Ende
+fade_to_black
+npc_off 21
+npc_off 22
+; Sira in die Party
+do_event_chain 21
+party_jump 57 35
+party_turn 1
+update 1
+show_map
+fade_from_black

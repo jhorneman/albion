@@ -1,0 +1,468 @@
+
+Map-Textfile fr die Iskai-Cutmap (Indoor Satz 3)
+----------------------------------------------------------------------
+
+Block 0                      (frei)
+[leer]
+
+Block 1                      (Klo anfassen)
+[Kein Mitglied der Gruppe ist besonders erpicht darauf, dort hinzufassen.]
+
+Block 2                      (Sofa)
+[Ein groes Sofa.]
+
+Block 3                      (Groer Schrank)
+[Ein groer Schrank.]
+
+Block 4                      (Bratrost)
+[Ein Bratrost.]
+
+Block 5                      (Bett)
+[Ein Bett.]
+
+Block 6                      (Feuerstelle)
+[Eine Feuerstelle.]
+
+Block 7                      (Bettdecke)
+[Die Bettdecke.]
+
+Block 8                      (Besteck)
+[Iskai-Besteck.]
+
+Block 9                      (Teller)
+[Ein Teller.]
+
+Block 10                     (Beh„lter)
+[Ein Beh„lter.]
+
+Block 11                     (Wurst)
+[Eine Wurst.]
+
+Block 12                     (Schinken)
+[Ein schinken„hnliches Fleischstck.]
+
+Block 13                     (Kochl”ffel)
+[Ein Kochl”ffel.]
+
+Block 14                     (Kr„uter)
+[Diverse Kr„uter.]
+
+Block 15                     (Frchte)
+[Frchte.]
+
+Block 16                     (Fleisch)
+[Eine Fleischspezialit„t.]
+
+Block 17                     (Becher)
+[Ein Trinkbecher.]
+
+Block 18                     (Schale)
+[Eine Schale.]
+
+Block 19                     (Gewrz)
+[Ein Gewrz.]
+
+Block 20                     (Gewrzdosen)
+[Kleine Gewrzdosen.]
+
+Block 21                     (Becher)
+[Ein kleiner Becher.]
+
+Block 22                     (Messer)
+[Ein Kchenmesser.]
+
+Block 23                     (Geb„ck)
+[Geb„ck.]
+
+Block 24                     (Wrstchen)
+[Einige kleinere Wrstchen.]
+
+Block 25                     (Wrzflasche)
+[Dies ist dem Geruch nach ein Fl„schchen mit einer Wrzflssigkeit.]
+
+Block 26                     (Tuch)
+[Ein Stofftuch.]
+
+Block 27                     (Tuch)
+[Ein Handtuch.]
+
+Block 28                     (Eimer)
+[Ein Eimer.]
+
+Block 29                     (Bratpfanne)
+[Eine Bratpfanne.]
+
+Block 30                     (Topf)
+[Ein Topf.]
+
+Block 31                     (Wasserbad-Kessel)
+[Innerhalb dieses Kessels befindet sich auf einem Gest„nge ein kleiner Topf,
+in dem Speisen besonders schonend erw„rmt werden k”nnen.]
+
+Block 32                     (Kissen)
+[Ein Kissen.]
+
+Block 33                     (Brat-Topf)
+[Eine groe Bratpfanne.]
+
+Block 34                     (Fell-Brste)
+[Eine Fell-Brste.]
+
+Block 35                     (Wasser-Rinne)
+[Eine Wasserrinne.]
+
+Block 36                     (Wasser-Becken)
+[Ein Wasserbecken.]
+
+Block 37                     (Wasser-Sperre)
+[Eine Wassersperre.]
+
+Block 38                     (Krug)
+[Ein groer Tonkrug.]
+
+Block 39                     (Kommode)
+[Eine Kommode.]
+
+Block 40                     (Gruscht)
+[In den F„chern der Kommode liegt allerhand unwichtiges Kleinzeug.]
+
+Block 41                     (Kiste)
+[Eine Kiste.]
+
+Block 42                     (Kessel)
+[Das ist ein ziemlich groer Kessel. Vielleicht dient er zur Lagerung von
+Vorr„ten, von Wasser oder Speisen.]
+
+Block 43                     (Quelle)
+[In diesem Wasserbecken steht eine fremdartige Pflanze, die mit ihren
+pulsierenden Bewegungen Grundwasser aus dem Boden pumpt. Diese Quelle dient
+ganz offensichtlich der Wasserversorgung.]
+
+Block 44                     (Abwassertmpel)
+[Das Wasser in diesem Tmpel riecht schlecht und faulig. Vermutlich sammeln
+sich hier die Abw„sser.]
+
+Block 45                     (Wasserpflanzen)
+[Wasserpflanzen.]
+
+Block 46                     (Bodengew„chse)
+[Bodengew„chse.]
+
+Block 47                     (ex. Pflanze)
+[Eine exotische Pflanze.]
+
+Block 48                     (Graspfl.)
+[Schlinggraspflanze.]
+
+Block 49
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 50                     (Treppe runter)
+[Eine Treppe. Sie fhrt durch den Boden nach unten.]
+
+Block 51                     (Treppe rauf)
+[Diese Treppe geht durch die Decke nach oben.]
+
+Block 52                     (1st: Bett)
+[Es handelt sich hier offenbar um eine Art Bett. Die Fllung besteht aus Sand,
+der durch seine groben, aber rundgeschliffenen K”rner erstaunlichen Komfort
+bietet.]
+
+Block 53                     (1st: Sofa)
+[Das enorme Gebilde scheint eine Art Sitzm”bel zu sein. Es wirkt pflanzlich
+und ist offenbar gewachsen. Die Oberfl„che ist weich und elastisch.]
+
+Block 54                     (Brunnen)
+[Der Brunnen des Hauses.]
+
+Block 55                     (1st: Wasserrinnen)
+[Die Wasserrinnen dienen wohl der Versorgung mit Trinkwasser. Sie durchziehen
+das Haus wie kleine B„che.]
+
+Block 56                     (1st: Klo)
+[Der muffige Geruch und die L”cher in dem Gebilde lassen nur den Schlu zu,
+da es hier um eine Toilette handelt. Auch dieses "M”bel" ist pflanzlichen
+Ursprungs und gedeiht pr„chtig; sicher eine Folge der regelm„igen Dngung.]
+
+Block 57                     (Klo)
+[An diesem Ort finden die wirklich dringenden Gesch„fte der Welt statt.]
+
+Block 58
+[In dieser Pfanne brutzelt ein slich-scharf riechendes Gericht.]
+
+Block 59
+[Eine Sitzgelegenheit.]
+
+Block 60
+[Ein massiver Holztisch.]
+
+Block 61
+[Eine kr„ftige Blattpflanze.]
+
+Block 62
+[Eine Tre.]
+
+Block 63
+[Ein Messer.]
+
+Block 64
+[Ein Kurzdolch.]
+
+Block 65
+[Ein Dolch.]
+
+Block 66
+[Ein groer Dolch.]
+
+Block 67
+[Ein Kurzschwert.]
+
+Block 68
+[Ein Iskai-Messer.]
+
+Block 69
+[Ein Iskai-Dolch.]
+
+Block 70
+[Ein Iskai-Stilett.]
+
+Block 71
+[Ein Iskai-Kurzschwert.]
+
+Block 72
+[Ein groes Iskai-Stilett.]
+
+Block 73
+[Ein Iskai-Schwert.]
+
+Block 74
+[Ein groes Iskai-Schwert.]
+
+Block 75
+[Ein Iskai-Langschwert.]
+
+Block 76
+[Eine Iskai-Lanze.]
+
+Block 77
+[Ein groer Iskai-Dolch.]
+
+Block 78
+[Ein Iskai-Kurzstilett.]
+
+Block 79
+[Ein groes Iskai-Stilett.]
+
+Block 80
+[Ein groes Iskai-Schwert.]
+
+Block 81
+[Kleiner Bogen.]
+
+Block 82
+[Ein Bogen.]
+
+Block 83
+[Ein Pfeil.]
+
+Block 84
+[Ein langer Pfeil.]
+
+Block 85
+[Ein Lederschild.]
+
+Block 86
+[Ein kleiner Iskai-Schild.]
+
+Block 87
+[Ein Iskai-Schild.]
+
+Block 88
+[Ein groer Iskai-Schild.]
+
+Block 89
+[Eine Lederkappe.]
+
+Block 90
+[Eine Iskai-Lederkappe.]
+
+Block 91
+[Eine Iskai-Metallkappe.]
+
+Block 92
+[Ein Iskai-Metallhelm.]
+
+Block 93
+[Ein Iskai-Brustschutz.]
+
+Block 94
+[Ein Iskai-Metall-Brustschutz.]
+
+Block 95
+[Eine leichte Iskairstung.]
+
+Block 96
+[Eine Iskairstung.]
+
+Block 97
+[Eine leere Flasche.]
+
+Block 98
+[Ein grner Heiltrank.]
+
+Block 99
+[Ein trkisener Heiltrank.]
+
+Block 100
+[Ein blauer Heiltrank.]
+
+Block 101
+[Ein roter Trank.]
+
+Block 102
+[Ein violetter Trank.]
+
+Block 103
+[Ein blauer Trank.]
+
+Block 104
+[Ein Schlssel.]
+
+Block 105
+[Ein Seil.]
+
+Block 106
+[Eine Fackel.]
+
+Block 107
+[Ein Iskai-Notizblock.]
+
+Block 108
+[Ein Zettel.]
+
+Block 109
+[Ein Iskai-Ringbuch.]
+
+Block 110
+[Ein Iskai-Ringblock.]
+
+Block 111
+[Ein Schreibstift.]
+
+Block 112
+[Ein kurzer Schreibstift.]
+
+Block 113
+[Eine Sitzbank.]
+
+Block 114
+[Auch dieses Sitzm”bel ist f”rmlich aus dem Boden gewachsen und stellt eine
+bequeme Sitzbank dar.]
+
+Block 115
+[Ein Holzpfahl. An seinem oberen Ende befindet sich ein Schild.]
+
+Block 116
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 117
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 118
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 119
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 120
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 121
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 122
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 123
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 124
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 125
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 126
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 127
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 128
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 129
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 130
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 131
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 132
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 133
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 134
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 135
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 136
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 137
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 138
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 139
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 140
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 141
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 142
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 143
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 144
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 145
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 146
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 147
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 148
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 149
+[Platzhalter 2 fr weitere Cut-Map-Events.]
+
+Block 150
+[Platzhalter 2 fr weitere Cut-Map-Events.]

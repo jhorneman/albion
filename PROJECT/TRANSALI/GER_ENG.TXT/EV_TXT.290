@@ -1,0 +1,46 @@
+
+Kyla, Lebensmittel
+========================================================================
+
+Block 0
+[{BLOK000}"Wie Ihr seht, besitze ich einen kleinen Laden und verkaufe hier
+Lebensmittel. Ich hoffe, da Ihr Euch durch die hohen Preise nicht abschrecken
+lat."{WORDPreise}]
+
+Block 1            (Begrung 1 Uhrzeitabh„ngig)
+["Skeima Din,^^ich habe zur Zeit leckeres Fleisch und frisches Geb„ck da. Was
+h„ttet Ihr denn gerne?"{BLOK010}"Wir wrden gerne Rationen kaufen."]
+
+Block 2            (Begrung 2 Uhrzeitabh„ngig)
+["Skeima Din, momentan gibt es frisches Obst und Sugo aus Beloveno. Greift zu,
+hier gibt es nur gute Sachen."{BLOK010}"Wir wrden gerne Rationen kaufen."]
+
+Block 3            (Buy-Text)
+["Vielen Dank. Lat es Euch schmecken."]
+
+Block 4            (Preise)
+["Es mag Euch teuer erscheinen. Aber bedenkt, da alle Lebensmittel mit dem
+Schiff her|ge|bracht wer|den mssen. In der Wste w„chst ohne Wasser nun
+einmal nichts und Wasser ist fr uns sehr kost|bar. Das Meer|wasser k”nnen wir
+wegen dem ho|hen Salz|gehalt nicht ver|wenden, und Regen|wasser ist knapp. Und
+damit mssen wir auch noch die Pflan|zen in un|serer Stadt ver|sor|gen. Aber
+die Br|ger von Uma|jo-Ken|ta ver|die|nen durch das Me|tall-Mo|nopol
+glck|licher|wei|se ganz gut, so da unsere Preise nur fr Fremde etwas
+ber|teuert erschei|nen. Ihr wer|det hier Lebens|mittel aber nir|gendwo
+billiger
+erhal|ten."{WORDMonopol}{WORDWste}{WORDPflanzen}{WORDWasser}{WORDKaufen}]
+
+Block 5            (Kaufen)
+["Ich kann Euch leider keine Sonderpreise machen, aber ich kann Euch
+versichern, da Ihr hier nur qualitativ hochwertige Waren erhalten
+werdet."{WORDWaren}]
+
+Block 6            (Waren)
+["Waren k”nnt Ihr bei Zeibe kaufen. Sie verkauft alles m”gliche. Vom Schwert
+ber Rs|tungen und Muni|tion bis hin zur Fackel und Heil|tr„nken. Wenn Ihr
+nach Waffen Aus|schau hal|tet, dann geht aber besser zu Jeros. Er hat eine
+gr”ere Aus|wahl. Bei Mykonou k”nnt Ihr er|le|sene Edel|stei|ne und feine
+Schmuck|stcke erwer|ben, und ich verkau|fe Lebens|mittel. Ihr findet Mykonou
+in der Gil|de der Diamant|schleifer. Jeros ver|kauft im Haus des
+Waffen|schmieds und Zeibe hat ihren eige|nen La|den, der bri|gens gleich
+neben|an ist."{WORDDiamantschleifer} {WORDWaffenschmied}]

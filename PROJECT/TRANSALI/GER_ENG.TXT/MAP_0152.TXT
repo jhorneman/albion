@@ -1,0 +1,39 @@
+
+MAPTEXTE MAP 152
+================
+
+Block 0
+[!]
+
+Block 1
+[Hier steht eine riesige Maschine, anscheinend zum Abbauen von groûen
+Erzmengen.]
+
+Block 2
+["Oh, ein Mini-Erzbagger, sieh an. War wohl kein Platz mehr in den
+Maschinen|segmenten und sie haben die Dinger hier gelagert."]
+
+Block 3
+[Eine Leuchtrîhre. Sie strahlt ein kaltes, weiûes Licht aus.]
+
+Block 4
+[Eine orangefarbene Signallampe.]
+
+Block 5            Joe
+["O.K. Das wÑre geschafft. Was Du hier siehst, ist die Halle, die den
+Reaktorkern umgibt. Von hier aus sollten wir zum Kern selbst vordringen
+kînnen."]
+
+Block 6
+["Wir haben unser Ziel endlich erreicht! Du wirst doch jetzt nicht umkehren
+wollen, {LEAD}{NAME}! Laû uns versuchen, unsere Aufgabe zu Ende zu fÅhren!"]
+
+Block 7
+["Was ist in mich gefahren? Ich werde doch jetzt nicht umkehren, nun, da wir
+so weit gekommen sind!"]
+
+Block 8
+[Eine massive MetalltÅr.]
+
+Block 9
+["Die Reaktorhalle! Wir haben es fast geschafft! Schnell, in den Reaktorraum!"]

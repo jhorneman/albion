@@ -1,0 +1,15 @@
+;
+; Anzeigen Schatzkarte
+
+
+fade_to_black
+show_pic 29 0 0
+fade_from_black
+
+pause 0
+
+fade_to_black
+fill_screen 0
+load_pal 19
+fade_from_black
+

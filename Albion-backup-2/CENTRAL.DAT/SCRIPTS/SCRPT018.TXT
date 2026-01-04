@@ -1,0 +1,162 @@
+; *** Script Aliis, die "Verkäuferin" der Dji-Fadh
+
+fade_to_black
+party_jump 107 50
+show_map
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+party_move -1 0
+update 4
+
+npc_lock 1
+npc_jump 1 102 50
+npc_turn 1 1
+update 10
+
+fade_from_black
+
+pause 30
+
+npc_text 131 29
+pause 10
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 0 1
+party_move -1 0
+update 4
+
+npc_move 1 0 1
+party_move 0 1
+update 4
+
+npc_move 1 0 1
+party_move 0 1
+update 4
+
+npc_move 1 -1 0
+party_move 0 1
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 20
+
+npc_turn 1 0
+update 3
+npc_turn 1 1
+update 3
+pause 20
+npc_text 131 27
+pause 30
+
+npc_move 1 0 1
+party_move -1 0
+update 4
+
+npc_move 1 0 1
+party_move 0 1
+update 4
+
+npc_move 1 -1 0
+party_move 0 1
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 0 -1
+party_move -1 0
+update 4
+
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+
+npc_move 1 0 -1
+party_move 0 -1
+update 4
+
+npc_move 1 -1 0
+party_move 0 -1
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 4
+
+npc_move 1 -1 0
+party_move -1 0
+update 20
+
+npc_turn 1 0
+update 3
+pause 10
+npc_text 131 28
+pause 30
+
+npc_turn 1 1
+update 3
+pause 20
+npc_text 131 30
+party_member_text 1 31
+npc_text 131 32
+
+

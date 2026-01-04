@@ -1,0 +1,14 @@
+
+Bagga - Rstungsschmied in Beloveno alle Phasen
+===========================================================================
+
+Block 0
+[{BLOK000}"Ich bin Verk„uferin fr Schilde, Panzer und sonstige schtzende
+Kleidung."]
+
+Block 1            (Begrung)
+["Skeima Din.^^Sucht Ihr etwas bestimmtes? Ich kann Euch alles m”gliche
+verkaufen, mit dem Ihr Euch schtzen k”nnt: Panzer, Westen, Helme, Kappen,
+Schilde, Stiefel, u.s.w. Wenn Ihr natrlich bereits verwundet seid, dann geht
+besser zu Ramina und lat Euch heilen."{WORDRamina}{BLOK010}"Was gibt es hier
+denn so alles?"]

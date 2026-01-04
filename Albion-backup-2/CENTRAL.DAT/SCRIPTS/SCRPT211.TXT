@@ -1,0 +1,19 @@
+;
+; Bild von Nellys Gefangennahme-Konflikt anzeigen.
+
+fade_to_black
+show_pic 9
+
+fade_from_black
+
+pause 0
+text 11
+pause 0
+
+fade_to_black
+fill_screen 0
+load_pal 51
+show_map
+fade_from_black
+
+

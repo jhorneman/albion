@@ -1,0 +1,44 @@
+190: Alice Takashi, Maschinenfhrerin
+=======================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin Maschinenfhrerin fr die Abbauroboter. Im Augenblick
+sichere ich allerdings den Lagerraum ab."{WORDMaschinenfhrerin}]
+
+Block 1         "Begr. 1x"
+["Hi, Tom! Hab 'n bichen wenig Zeit. Der Kapit„n hat mich dazu verdonnert,
+den Lagerraum fr die Landung vorzubereiten."{WORDLandung}{WORDKapit„n}]
+
+Block 2         "Maschinenfhrerin, Abbauroboter"
+["Na, Du weit doch. Normalerweise beginnt fr unsereins der Job erst nach der
+Landung, wenn es mit dem Abbau der Rohstoffe losgeht."]
+
+Block 3         "Landung"
+["Wenn bei der Landung die Schwerkraftverh„ltnisse durcheinander geraten, darf
+hier natrlich nichts mehr unbefestigt herumstehen."]
+
+Block 4         Begr. 2x
+["Ja, was gibt's noch, Tom?"]
+
+Block 5
+[{BLOK000}Was kannst Du sagen ber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demn„chst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 6
+["Tsch, Tom."]

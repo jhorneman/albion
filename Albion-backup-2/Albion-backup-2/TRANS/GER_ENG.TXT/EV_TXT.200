@@ -1,0 +1,233 @@
+
+Allgemeinwissen fr die Normalos  (Stufe A, viel Wissen)
+--------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1         (Ort: Beloveno)
+["Gef„llt Euch Beloveno? Die Stadt ist schon sehr alt, sie hat viel Tradition
+und in dem groen Hafen herrscht eine florie|render Handel. Es gibt eine nette
+Kneipe, eine Heilerin, viele L„den und ein Rathaus, auf das alle Brger von
+Beloveno beson|ders stolz sind, weil es ein sehr sch”nes Bauwerk ist. Im
+Norden der Stadt haben wir einen kleinen Park. Wenn ihr Euch erholen m”chtet,
+ist das ein geeigneter Ort. Ja, dort ganz in der N„he ist auch eine Herberge.
+Das Stadttor kennt Ihr ja. Wenn Ihr weiterreisen m”chtet, sucht den
+Gebirgspa."{WORDKneipe}{WORDRathaus}{WORDHeilerin} {WORDStadttor}
+{WORDGebirgspa} {WORDL„den}{WORDHerberge}{WORDHafen}] 
+
+Block 2         (Ort: Kneipe)
+["Wart Ihr noch nicht dort? Sie heit 'Zum offenen Zapfhahn' und ist im
+gleichen Geb„ude, wie die Herberge. Wenn Ihr eine Nacht durchmachen wollt,
+seid Ihr dort genau richtig. Im Zapfhahn ist immer m„chtig was los und es gibt
+dort den besten Sugo weit und breit."{WORDSugo}]
+
+Block 3         (Ort: Rathaus)
+["Wir haben ein sehr groes Rathaus, das Platz fr alle Besprechungen bietet.
+Alle wichtigen Angele|gen|heiten werden dort gekl„rt und wenn es einen
+offiziellen Anla gibt, dann versammelt sich dort die ganze Stadt. Im Rathaus
+werdet Ihr tagsber auch den Rat der Gerechten antreffen. Das Rathaus ist das
+gr”te Geb„ude in Beloveno und kann daher kaum verfehlt werden. Ihr findet es
+im Westen."{WORDRat}{WORDRat der Gerechten}]
+
+Block 4         (Rat der Gerechten)
+["Der Rat der Gerechten regiert unsere Stadt. Er besteht aus drei
+Rats|mit|gliedern und dem Ortsvorsteher Herras-Qennikos. Ihr werdet ihn
+tagsber im Rathaus finden, wenn Ihr ein Anliegen habt."{WORDRathaus}
+{WORDPerron}]
+
+Block 5         (Sugo)
+["Sugo ist eines unserer beliebtesten Getr„nke. Ihr mt es unbedingt einmal
+versuchen. Vielleicht sollte ich Euch fairerweise sagen, da Sugo ein
+vergorener Obstsaft mit einer stark anregenden Wirkung ist. Wer Sugo nicht
+kennt, sollte ihn mit Vorsicht genieen! Ihr w„rt nicht die ersten Fremden,
+die nach zwei Gl„sern Sugo zu keiner weiteren Konver|sation mehr im Stande
+w„ren."]
+
+Block 6         (Heilerin, Ramina)
+["Unsere Heilerin heit Ramina. Ihre Krankenstation ist ein kleines
+beschei|denes H„uschen im Norden von Beloveno. Ramina verfgt ber
+auer|ordent|liche Kenntnisse und ist zudem wirklich gutmtig. Wenn Ihr krank
+seid, hilft sie Euch bestimmt."{WORDKrankheit}]
+
+Block 7         (Kounos)
+["Kounos ist ein kleines D”rfchen, wo immer noch ein recht traditioneller
+Lebensstil herrscht. Der Weg nach Kounos ist anstrengend und schwer zu
+beschreiben, denn Kounos liegt auf den Plateaus des Gebirges. Versucht einfach
+Felsw„nde zu finden, an denen groe Schling|pflanzen wachsen. Mit ein wenig
+šbung kann man dort auf die Plateaus klettern. Kounos liegt recht weit oben,
+aber wenn Ihr gezielt sucht, werdet Ihr es finden."]
+
+Block 8         (Kontos)
+["Kontos ist ein Druide, der in Kounos lebt. Er ist dort mittler|weile ein
+ange|sehener religi”ser Fhrer des Dorfes geworden. Kontos ist sehr
+intelligent und ich habe geh”rt, da er sehr gut zaubern kann. Ich habe sowohl
+Schlechtes als auch Gutes von ihm geh”rt."{WORDKounos}]
+
+Block 9         (H”hle)
+["Ja, es gibt zahlreiche H”hlen in der Gegend hier. In manchen von ihnen leben
+Einsiedler, die meisten sind einfach leer. Es gibt eine besonders groe H”hle,
+die wir allerdings meiden. Sie ist so gro, da man sich endlos verlaufen kann
+und das ist leider schon vorge|kommen. Bereits drei Brger aus Beloveno sind
+in der H”hle verschollen. Wenn ihr dennoch eine Expedition in die H”hlen
+machen wollt, nehmt ausreichend Proviant und ein Seil mit. Die Eing„nge findet
+Ihr entlang des Gebirges."]
+
+Block 10        (Kritahs)
+["Vielleicht habt Ihr nachts schon einmal kleine schwarze Tiere gesehen, die
+durch die Straen huschen. Wir nennen sie Kritahs und abgesehen davon, da sie
+die Angewohn|heit haben, glitzernde Gegenst„nde zu stehlen, sind sie
+eigentlich ziemlich harmlos. Die Kritahs leben irgendwo in den H”hlen der
+Gebirgsmassive, aber wo genau, kann ich Euch leider auch nicht sagen."]
+
+Block 11        (Srimalinar)
+["Srimalinar ist ein sch”nes kleines Iskai-Dorf. Es liegt n”rdlich von
+Beloveno, auf der anderen Seite des Gebirges. Wie fr die Einwohner von Kounos
+spielt auch fr die Iskais in Srimalinar die Religion eine ganz wichtige
+Rolle. In der N„he ihrer Stadt befindet sich ein Heiligtum, das sie regelm„ig
+aufsuchen. Auerdem gibt es in Srimalinar eine Magier-Gilde."
+{WORDGilde}{WORDHeiligtum} ]
+
+Block 12        (Heiligtum)
+["Das ist ein Gew”lbe nahe des Dorfes Srimalinar. Ich m”chte Euch raten, dort
+besser nicht hinzugehen, denn es gibt ein Tabu, welches es Fremden verbietet,
+das Heiligtum und dessen n„here Umgebung zu betreten. Die Bewohner von
+Srimalinar fhlen sich heraus|gefor|dert, wenn jemand dieses Tabu
+verletzt!"{WORDTabu}{WORDSrimalinar}]
+
+Block 13        (Gebirgspa,Pa)
+["Das ist richtig, es gibt tats„chlich einen Pa ber das Gebirge, der die
+Sd- und die Nordseite unseres Kontinents verbindet. Eigentlich ist das ein
+ganz schmaler Pfad, der teilweise kaum noch zu erkennen ist, weil er recht
+selten benutzt wird. Er geht an Kounos vorbei und fhrt dann weiter n”rdlich
+nach Srimalinar. Ich bin selbst nie dort gewesen und kann Euch deshalb auch
+keine detai|lier|teren Infor|mationen dazu
+geben."{WORDNordseite}{WORDSdseite} {WORDKounos}
+{WORDSrimalinar}{WORDBeloveno}]
+
+Block 14        (Sch„del)
+["Naja, diese Sch„del sind nicht mehr ganz zeitgem„. Trotzdem h„ngen sie noch
+in vielen Wohnungen als Zierge|gen|stand. Oft sind es auch Erbstcke von
+unseren Ur-Eltern."]
+
+Block 15        (Herberge)
+["Die ist ganz in der N„he des Stadtparks. Sie befindet sich im selben Geb„ude
+wie die Kneipe."]
+
+Block 16        (Nordseite)
+["Das ist der Teil n”rdlich des groen Gebirges. Dort liegt Srimalinar. Man
+kommt dort ber den Gebirgspa hin."{WORDPa}]
+
+Block 17        (Sdseite)
+["Alles was sdlich des groen Gebirges liegt, bezeichnen wir als Sdseite.
+Dazu geh”rt auch Beloveno und der Hafen. Wart Ihr schon auf der
+Nord|seite?"{WORDHafen}]
+
+Block 18        (Tabu)
+["Das Tabu bezieht sich auf das Heiligtum von Srima|linar. Die Iskais in
+diesem Dorf nehmen es mit diesem aus alten Zeiten kommenden Tabu ziemlich
+ernst und fhlen sich ange|griffen, wenn jemand gegen das Tabu verst”t!"]
+
+Block 19        (Magie)
+["Wenn Ihr Leute mit hohen magischen F„hig|keiten sucht, dann wendet Euch an
+Kontos in Kounos oder versucht es einmal in Srimalinar."{WORDSrimalinar}]
+
+Block 20        (H„user, Bauweise)
+["Wie Ihr seht, bauen wir eher einfach und zweckm„ig. Unser prunk|vollstes
+Bauwerk ist wohl das Rathaus."{WORDRathaus}]
+
+Block 21        (Religion)
+["In Beloveno sind die Bewohner nicht besonders religi”s orientiert. In Kounos
+und Srimalinar ist das allerdings ganz anders."{WORDKounos}{WORDSrimalinar}]
+ 
+Block 22        (Iskai)
+["Srimalinar ist ein Dorf auf der Nord|seite des Kon|tinents, in dem Iskais
+leben. Dort gibt es auch eine Magier-Gilde."{WORDMagie}{WORDIskai}{WORDGilde}]
+
+Block 23        (Gilde)
+["Die n„chste Magier-Gilde ist in Srimalinar."{WORDMagie}{WORDSrimalinar}]
+
+Block 24        (Stadttor)
+["Das Stadttor ist im Norden, direkt neben den kleinen Wachh„uschen. Frher
+hatten wir einmal drei Stadttore. Man konnte damals Beloveno auch im Westen
+und Osten verlassen. Ihr findet dort noch kleine Wachh„uschen - Relikte aus
+diesen Zeiten."] 
+
+Block 25        (Marktplatz)
+["Unser Marktplatz befindet sich mitten im Ort, direkt neben dem Rathaus. Wenn
+Ihr Glck habt, ist vielleicht gerade Markt."]
+
+Block 26        (L„den)
+["Wir freuen uns immer, wenn Besucher in unseren zahl|reichen L„den gegen
+harte W„hrung einkaufen. Ihr werdet hier ein umfang|reiches Angebot finden. Es
+gibt einen Waffen- und einen Rstungs|h„ndler, einen Lebens|mittel|ver|k„ufer
+und einen Gemischt|waren|laden. Ferner bietet Euch Ramina, unsere Heilerin,
+ihre Dienste an. Die meisten L„den findet Ihr um den Markt|platz
+herum."{WORDMarktplatz}{WORDW„hrung}]
+
+Block 27        (W„hrung)
+["Das anerkannte Zahlungsmittel in Beloveno sind Gold|stcke. Bei manchen
+Leuten kann man aller|dings auch mit anderen Mitteln sehr viel erreichen, aber
+darauf gehe ich jetzt nicht genauer ein...hihi."]
+
+Block 28        (Klima)
+["Es gibt drei Klimazonen auf Albion. Gem„igt, warm und Wste. Mir
+per|s”nlich gef„llt es hier, im gem„igten Teil, am aller|besten."]
+
+Block 29        (Metallmacher)
+["Die Metallmacher leben auf dem Ost-Konti|nent und haben ein Monopol fr die
+Herstellung von Metall. Vielleicht werdet Ihr im Laufe Eurer Reise noch auf
+sie stoen."]
+
+Block 30        (Kenget Kamulos)
+["šber die Kenget Kamulos kann ich Euch auch nicht viel sagen. Sie sind
+ausgesprochen m„chtig und beherrschen schwarze Magie. Ich bin froh, wenn ich
+mit denen nichts zu tun habe... Sie leben im Osten des Kontinents."]
+
+Block 31        (Hafen)
+["Der Hafen von Beloveno liegt im Sden. Ihr k”nnt ihn nicht verfehlen, wenn
+Ihr gen Sden geht. Manchmal sieht man schon von weitem die hohen Mastspitzen
+der vielen Schiffe, die dort ankern."{WORDSchiffe}]
+
+Block 32        (Schiff, Schiffe)
+["Die meisten Schiffe transportieren Gter von und nach Beloveno.
+Perso|nen|schiffahrt gibt es eigentlich kaum noch. Wenn Ihr Euch nach einer
+Trans|port|m”glich|keit umschaut, versucht besser auf dem Landweg weiter zu
+kommen."{WORDLandweg}]
+
+Block 33        (Landweg)
+["Ich meine den Weg ber den Gebirgspa!"{WORDPa}]
+
+Block 34        (Krankheit)
+["Vor vielen Jahren litten viele Leute in der Stadt an einer merkwrdigen
+Krankheit, die sich in periodischen Anf„llen zeigte. In einigen F„llen endete
+diese Krankheit mit dem Tode. Glcklicherweise ist mir nicht bekannt, da zur
+Zeit jemand unter der Krankheit leidet."]
+
+Block 35        (Freudenhaus)
+["Das gibt's in unserer Stadt auch."]
+
+Block 36        (Wetter)
+["Ja, sch”nes Wetter zur Zeit, was meint Ihr?"]
+
+Block 37        (Herras)
+["Herras ist Rats-Vorsitzender des 'Rat der Gerechten'."]
+
+Block 38        (Riko, Gard, Perron)
+["Perron, Gard und Riko sind Mitglieder im 'Rat der Gerechten'. Ihr
+Vorsitzender ist Herras."]
+
+Block 39        (Skeima Din)
+["Skeima Din. Achso, nun, das bedeutet bei uns in etwa 'Ein pr„chtiger Tag'."]
+
+Block 40           (Maini)
+["So heit unser Land."]
+
+Block 41           (Edelsteine)
+["Sie sind begehrte Sammelobjekte."]
+
+Block 42
+["Herras war Rats-Vorsitzender des 'Rat der Gerechten'."]
+
+Block 43
+["Ich wei nicht, wo sie sind."]

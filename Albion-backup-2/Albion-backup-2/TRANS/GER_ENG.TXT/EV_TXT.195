@@ -1,0 +1,111 @@
+
+ARGIM
+=====
+
+Block 0
+[{BLOK000}"Existieren. Leben. FÅhlen. Riechen. Hîren. Sehen."]
+
+Block 1            Begr. 1x
+["Ahh, ein komplexer Verstand. So lange her, so lange. Schîn. Reden."
+{BLOK010}"Wer oder was bist Du?"]
+
+Block 2            MC 1,10
+["Ich bin... hier. Ich bin nun dieser Ort. Vor langer Zeit... war ich klein,
+war ich einzeln, allein." {BLOK010}"Du warst einmal jemand anderes?"]
+
+Block 3
+["Ja... Einst war ich... war ich wie Du. Iskai." {BLOK010}{FAT }"Oh,
+Gîttin!{NORS} Du... Ihr wart einmal... {FAT }ARGIM{NORS} !"]
+
+Block 4
+["Ja."]
+
+Block 5            Zentraler MC-Block
+["Es ist schîn, zu reden." {BLOK010}"Was ist damals passiert?" {BLOK011}"Kînnt
+Ihr mir etwas Åber Euer jetziges Leben erzÑhlen, Argim?" {BLOK012}"Wir sind
+auf der Suche nach einem Menschen, der hier eingedrungen ist." {BLOK013}"Ich
+mîchte den Kontakt nun abbrechen, Argim".]
+
+Block 6            MC 5,10
+["Es ist so lange her, es ist... schwer. Ich bin nicht mehr gewohnt auf diese
+Art zu... denken, mich zu erinnern. Ich wollte leben. Mein Leben war so kurz.
+Ich wurde... heiû. So zornig. Alles... floû aus mir heraus. Ich breitete mich
+aus. Es ist... schwierig zu vermitteln.^^ Aber alles wurde gut. Ich lebe."]
+
+Block 7            MC 5,11
+["Ich lebe. Das ist schîn. Ich lebe in diesem Ort. Ich bin dieser Ort. Ich
+lebe in den Tieren hier. Ich erlebe alles, was sie erleben.^^ Ich bin in
+ihnen. Ich spÅre, wie sie leben, wie sie jagen und gejagt werden, wie sie
+lieben und sterben.^^ Es ist wundervoll. Ich bin glÅcklich. Ich vermisse nur
+wenig. GesprÑche wie dieses. Und Musik."]
+
+Block 8            MC 5,12
+["Ja. Es war ein Mensch hier. Er war ein gutes Raubtier. Doch er war nicht das
+einzige Raubtier hier. Er ist im Kreislauf aufgegangen. Er lebt nicht mehr."
+{BLOK010}"DÅrfen wir einen Blick auf seine öberreste werfen? Wir haben sie im
+Raum hinter der Struktur, durch die wir kommunizieren, gesehen."]
+
+Block 9            MC 9,13
+["Aber ja, {LEAD}{NAME}. Ich werde nach unserem Kontakt diese Struktur
+bewegen."]
+
+Block 10           MC 5,13
+["Das ist schade. Ich fand diesen Kontakt sehr schîn. Kommt bitte wieder.^^
+Und ich... ich mîchte Euch um etwas bitten. Ich erinnere mich an Musik,
+herrliche Musik. Ich vermisse Musik. Ich trÑume oft von Musik aus dem
+Kristall. Bitte bringt mir einen Musikkristall. Versprecht Ihr mir das?"
+{BLOK010}"Wir versprechen es Euch, Argim. Wir bringen Euch einen
+Musikkristall." {BLOK011}"Wir bezweifeln, daû wir ein solches Kleinod besorgen
+kînnen, Argim."]
+
+Block 11           MC 10,10
+["Ich freue mich sehr. Laût mich Euch Dankbarkeit zeigen.^^ In dem groûen Raum
+stehen zwei Quellen der Farbe. Verbindet sie mit einem Weg des
+Lichtes.^Erfreut euch anschlieûend an den Quellen der Kraft. ^^Nun lebt wohl.
+Ich warte auf Eure Wiederkehr."]
+
+Block 12
+["Das ist sehr traurig. Ich sehne mich sehr nach Musik. Lebt wohl."]
+
+Block 13            Zentraler MC-Block mit Musikkristall
+["Es ist schîn, zu reden." {BLOK001}"Wir haben Euch einen Musikkristall
+mitgebracht, Argim!" {BLOK011}"Was ist damals passiert?" {BLOK012}"Kînnt Ihr
+mir etwas Åber Euer jetziges Leben erzÑhlen, Argim?" {BLOK013}"Ich mîchte den
+Kontakt nun abbrechen, Argim."]
+
+Block 14           Begr. 2x
+["Ihr seid wieder da! Ich freue mich."]
+
+Block 15            Zentraler MC-Block nach Musikkristall
+["Es ist schîn, zu reden." {BLOK010}"Was ist damals passiert?" {BLOK011}"Kînnt
+Ihr mir etwas Åber Euer jetziges Leben erzÑhlen, Argim?" {BLOK012}"Hat Euch
+der Musikkristall gefallen?" {BLOK013}"Ich mîchte den Kontakt nun abbrechen,
+Argim."]
+
+Block 16           MC 15,12
+["Oh, ja! Die Musik hat mir viel Freude bereitet! Ich bin Euch dankbar."]
+
+Block 17           Abschied nach Kr. Åbergeben
+["Ich habe mich sehr Åber Euren Besuch gefreut. Mîge die Gîttin Åber Eure Wege
+wachen."]
+
+Block 18           Dankesworte bei Kr. Åbergeben
+["Die Musik ist in mein Leben zurÅckgekehrt! Ich freue mich! Ich bin
+glÅcklich. Habt Dank."]
+
+Block 19           Falscher Gegenstand
+["Wolltet Ihr mir nicht einen Musikkristall geben, {LEAD}{NAME}?"]
+
+Block 20           Zentraler MC-Block
+["Es ist schîn, zu reden." {BLOK010}"Was ist damals passiert?" {BLOK011}"Kînnt
+Ihr mir etwas Åber Euer jetziges Leben erzÑhlen, Argim?" {BLOK013}"Ich mîchte
+den Kontakt nun abbrechen, Argim".]
+
+Block 21           WÑhrend Kontakt: an Party
+[{INK 001}{LEAD}{NAME} richtet einen kurzen Satz an die anderen:^^{INK 002}
+"Das ist unglaublich. Ich habe Kontakt mit dem Bewuûtsein, daû einmal Argim
+war!"^^ {INK 001}Dann konzentriert {HE  } sich wieder auf Argims Gedanken.]
+
+Block 22           Nach erstem Kontakt
+["Welch ein Erlebnis! Stellt euch vor: ..."^^ {INK 001}{LEAD}{NAME} berichtet
+den anderen von dem Kontakt mit Argims Bewuûtsein."]

@@ -1,0 +1,85 @@
+; Script20: Begrüßung in Arjano durch Nemos
+
+show_map
+npc_lock 6
+npc_jump 6 6 17
+
+fade_from_black
+
+; Nemos läuft auf Party zu
+
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 4
+npc_move 6 0 -1
+update 8
+pause 30
+
+npc_text 170 144
+party_member_text 2 145
+npc_text 170 146
+party_member_text 2 147
+npc_text 170 148
+npc_text 170 149
+party_member_text 1 150
+npc_text 170 151
+party_member_text 1 152
+npc_text 170 153
+party_member_text 1 154
+npc_text 170 155
+party_member_text 1 156
+npc_text 170 157
+party_member_text 1 158
+npc_text 170 159
+party_member_text 1 160
+party_member_text 3 161
+party_member_text 4 162
+party_member_text 2 163
+npc_text 170 164
+
+; Mellthas kommt hinzu
+npc_lock 7
+npc_jump 7 7 21
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 8
+pause 30
+
+; Mellthas spricht
+; !!!!nachher richtiges Portrait
+; einsetzen!!!!
+npc_text 27 165
+npc_text 170 166
+npc_text 27 167
+
+fade_to_black
+
+npc_jump 6 80 27
+npc_off 7
+update 4

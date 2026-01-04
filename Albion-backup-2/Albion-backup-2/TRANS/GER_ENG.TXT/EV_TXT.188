@@ -1,0 +1,41 @@
+188: Michelle Laton, Bordtechnikerin
+====================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0
+[{BLOK000}"Ich bin fÅr die Lebenserhaltung|systeme an Bord verantwortlich."
+{WORDLebenserhaltung}]
+
+Block 1         Begr. 1x
+["Hallo Driscoll, Du Hîllenpilot. Schon die Sache mit Snoopy gehîrt?"
+{WORDSnoopy}]
+
+Block 2         Begr. 2x
+["Hallo, Driscoll. Was gibt's denn noch?"]
+
+Block 3         "Lebenerhaltungsysteme"
+["Alles im grÅnen Bereich, ich erwarte keine Probleme. Wenn's bei der Landung
+'n biûchen von den FÑkalien ins Frischwassersystem schleudert, wirst Du's
+schon merken!"]
+
+Block 4
+[{BLOK000}Was kannst Du sagen Åber... {BLOK001}Schau Dir mal dies hier an...
+{BLOK004}Bis demnÑchst! {BLOK005}Was ist Dein augenblicklicher Job?]
+
+Block 5
+["TschÅû dann."]

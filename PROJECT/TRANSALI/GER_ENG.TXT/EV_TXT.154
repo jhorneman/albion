@@ -1,0 +1,140 @@
+154: Allgemeinwissen fÅr Urkelten, Typ: Kinder 
+==============================================
+
+Legende:
+
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - SÑtze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, ErlÑuterungen
+DANN:   = Resultat, ErlÑuterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum AnfÅhrer fÅr diesen Dialog gemacht
+
+
+
+
+
+Block 0[leer]
+
+Block 1         "VIEH"
+["Wer viel Vieh hat, hat es gut."]
+
+Block 2         "CEILE, EHRENPREIS"
+["Wenn man ein Ceile ist, muû man tun, was einem sein Herr sagt."]
+
+Block 3         "PFLEGSCHAFT, ATTIO"
+["Na ja, ich bin nicht gern von meinen Eltern weg, aber dafÅr hab' ich auch
+eine zweite Familie."]
+
+Block 4         "RELIGION, GôTTER, DANU, LUGH"
+["Oh, es gibt viele Gîtter, und wenn man sie ehrt, bringen sie einem GlÅck und
+so."]
+
+Block 5         "TUATH, STAMM"
+["Das sind halt alle, die hier leben!"]
+
+Block 6         "KôNIG, STAMMESKôNIG"
+["Oh, der Kînig! Er ist reich und alle mÅssen tun, was er sagt!"]
+
+Block 7         "KRIEGER"
+["Bei uns kann jeder kÑmpfen, wenn Krieg ist. Alle Jungs Åben mit den Waffen
+und sogar manche MÑdchen!"]
+
+Block 8         "DICHTER"
+["Dichter schreiben viel, ist ziemlich langweilig. Manche machen aber ganz
+lustige Reime und das ist toll!."]
+
+Block 9         "HANDWERKER"
+["Die Leute, die alle mîglichen Dinge machen."]
+
+Block 10        "WAFFENSCHMIEDE, UMAJO" 
+["Weiû nicht so genau, ich glaube, nicht jeder darf Waffen machen oder so."]
+
+Block 11        "GESETZ"
+["Die Druiden sagen, wer Recht hat, wenn sich welche streiten."]
+
+Block 12        "DRUIDEN"
+["Die Druiden sind weise MÑnner und Zauberer. Wir werden auch zu ihnen
+geschickt, um zu lernen."]
+
+Block 13        "MAGIE"
+["Die Druiden machen Magie, sie kînnen alles verzaubern!"]
+
+Block 14        "HEILER"
+["Wenn es jemanden ganz schlecht geht, wird er nach Arjano zu den Druiden
+gebracht."]
+
+Block 15        "ALBION"
+["Na, so heiût doch unsere Welt!"]
+
+Block 16
+["DarÅber weiû ich nicht viel."]
+
+Block 17        "HAIN, EICHE"
+["Die Legenden besagen, daû unsere Vorfahren vor langer, langer Zeit dort zum
+ersten Mal Albion betreten haben. Manche bezweifeln das, weil der Ort mitten
+im Land und nicht am Meer liegt. Aber dort wÑchst ein uralter Baum, den es
+nirgendwo sonst auf der ganzen Welt gibt. Er wird von uns und besonders von
+den Druiden als Heiligtum verehrt."]
+
+Block 18        Drinno
+["So wird der verbotene Teil Arjanos genannt. Vor langer Zeit ist dort etwas
+Schlimmes passiert, und nun hausen dort DÑmonen! Drinno ist fest verschlossen,
+der Aufenthalt dort ist ein Tabu."]
+
+Block 19
+["DarÅber weiû ich nicht viel."]
+
+Block 20
+["DarÅber weiû ich nicht viel."]
+
+Block 21
+["DarÅber weiû ich nicht viel."]
+
+Block 22
+["DarÅber weiû ich nicht viel."]
+
+Block 23
+["DarÅber weiû ich nicht viel."]
+
+Block 24
+["DarÅber weiû ich nicht viel."]
+
+********************ortsabhÑngiges Allgemeinwissen***************************
+
+Block 25        "KLOUTA"
+["Klouta ist am Meer."]
+
+Block 26        "ARJANO"
+["Da sind die ganzen Druiden zu Hause."]
+
+Block 27        "GRATOGEL"
+["Seid Ihr aber dumm. So heiût dieses Land hier!"]
+
+Block 28        "VANELLO"
+["Vanello ist das Dorf in der NÑhe von Arjano."]
+
+Block 29        "ABALLON"
+["Aus Aballon kommen ganz tolle FrÅchte."]
+
+Block 30        "GEBIRGE"
+["In der Mitte unseres Landes sind ganz groûe Berge, da leben RÑuber und
+DÑmonen!"]
+
+Block 31        "GEFAHR"
+["Da weiû ich nichts darÅber."]
+
+Block 32        "THARNOS"
+["Tharnos ist der Stammeskînig von Klouta."]
+
+Block 33        "OIBELOS"
+["Oibelos ist der Name des Kînigs von Vanello."]
+
+Block 34        "ARETHA"
+["Sie ist die Kînigin von Aballon."]
+
+Block 35        "NEMOS"
+["Nemos ist der oberste Druide."]

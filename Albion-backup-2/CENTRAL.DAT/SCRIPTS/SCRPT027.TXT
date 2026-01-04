@@ -1,0 +1,204 @@
+; **** Script 27: Eingang Khamulon
+
+fill_screen 0
+fade_from_black
+text 195
+fade_to_black
+show_map
+
+
+; Rhain
+npc_lock 37
+npc_jump 37 39 155
+npc_turn 37 2
+
+; Wächter
+npc_lock 38
+npc_jump 38 58 166
+npc_turn 38 0
+
+update 1
+fade_from_black
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 0 -1
+party_move 0 -1
+update 4
+
+npc_move 38 -1 0
+party_move 0 -1
+update 4
+
+npc_move 38 -1 0
+party_move 0 -1
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+
+npc_move 38 -1 0
+party_move -1 0
+update 4
+npc_turn 38 0
+update 1
+
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+
+
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 10
+
+npc_move 38 0 1
+update 4
+npc_move 38 0 1
+update 4
+npc_move 38 0 1
+update 4
+npc_move 38 0 1
+update 4
+npc_move 38 0 1
+update 4
+npc_off 37
+
+npc_text 10 196
+active_member_text 197
+npc_text 10 198
+active_member_text 199
+npc_text 10 200
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 201
+fade_to_black
+party_jump 21 89
+party_turn 1
+camera_unlock
+show_map
+update 4
+fade_from_black
+active_member_text 202
+party_member_text 9 203
+active_member_text 204
+party_member_text 9 214
+

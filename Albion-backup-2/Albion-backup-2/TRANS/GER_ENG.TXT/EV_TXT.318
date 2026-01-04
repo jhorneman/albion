@@ -1,0 +1,64 @@
+MaireÔs Lied
+Block 0
+[{BLOK000}"Ich bin Maire, die Bardin. Mein Leben gehîrt der Musik und dem
+Lied."{WORDLied}]
+
+Block 1
+["Seid gegrÅût, Besucher von Canto's Haus."]
+
+Block 2            "Lied"
+["Ich bin gerade mit der öberarbeitung eines sehr alten Liedes
+fertig|geworden. Es ist vielleicht das wichtigste Lied, das wir kennen, denn
+es ist das Lied der Welt.^^Mîchtet Ihr es hîren?" {BLOK010}"Aber gerne,
+Maire!" {BLOK011}"Ein andermal, wir sind in Eile."]
+
+Block 3            Antw. 2,10
+["Macht es Euch bequem, es ist ein langes Werk..."]
+
+Block 4            Antw. 2,11
+["Wie es Euch beliebt. Ich bin noch fÅr eine ganze Weile hier zu finden, die
+Melodie des Liedes benîtigt noch etwas Feinschliff.^^Lebt wohl."]
+
+Block 5            Nach dem Lied
+["Ich danke Euch fÅr Eure Aufmerksamkeit, Besucher.^^Nun lebt wohl, ich mîchte
+noch ein wenig an der Melodie arbeiten."]
+
+Block 6            Das Lied
+[{CNTR}{INK 003} An ihrem Morgen sprach Animebona: Es sei Fluû im Gedanken und
+auch im Sein. Und die Welt tat sich auf und alles Gedenken wurd Wesen in ihr,
+ein Alles Allein. Und zu ihr am Abend sprach er, Animenkna: Die Menschen
+schufst Du, die Pflanzen, das Tier. Laû Ersteren, Schwester, die Letzteren
+lenken Und ordnen die Dinge und huldigen Dir! Zu ihrem Bruder sprach
+Animebona: Gedanken von mir sind's, die Du benennst Und ordnen zu suchst. Sag:
+lenkt wohl die Angst dich, Daû Du Åber Alles das Eine nicht kennst? GekrÑnkt
+ging von dannen: er, Animenkna. Und strich durch die WÑlder, die Berge, das
+Meer. Gab Ordnung den Wesen und keines vergaû er, Bracht' Feuer den Menschen
+und Eisen zur Wehr. Dann rief die Menschen, er, Animenkna, Und wies einen
+jeden in seinen Trieb. Und nannte Helromier die einen von beiden Und Kelten
+die andren, bei ersten er blieb. Und nannte Sa-Ethar Helromiens FÅhrer, Und
+wies ihm die Richtung in endlose Schlacht, KÑmpft wider des Flusses Kinder,
+die Kelten. Mit Feuer die Ordnung, mit Ordnung die Macht! Cingetorix stand auf
+und auch sein Bruder, Der Catuvellaunus. Doch da rÅckte schon Sa-Ethar, zum
+Kampfe auf Sein oder sterben, GegÅrtet mit Broto, dem Schwert und auch Sohn.
+Sie kamen zusammen am frÅhen Morgen Und kÑmpften den Tag und die Nacht und so
+fort. Da fiel Vercingetorix am jungen Abend Und Catuvellaunus am gleichen Ort.
+Im Sterben sprach er, der Catuvellaunus: Verflucht ist dein Schwert, dein
+Broto, dein Geist. Sa-Ethar! Dein Stachel wird bald Dich verraten. Und Mord
+wird zur Ordnung, die Macht nur verheiût! Dann ging er hinÅber, der
+Catuvellaunus. Und Sa-Ethar folgte ihm bald in den Tod, Erschlagen von Broto,
+dem falschen Sohne, Das Schwert bracht' der Hand, die es ordnet, den Tod. Doch
+auch der Stachel wurd' bald gezogen. Es wuchsen die Sîhne der Gegner heran.
+Canto der SchlÑfer und Bathrig, Helromier, Ulysses gleich, paût sich der
+Wesenheit an. Er schien ein Diener der Animebona, Die Worte sie flossen den
+Wogen gleich. Doch war dieser Fluû von Listen vergiftet: Die Quelle lag in
+Animenknas Reich. Die Kelten sie tranken, vom KÑmpfen ermattet, Verfielen dem
+Namen vieltausendfach, Den Bathrig dem Gott aller Gîtter gegeben. Die
+Wesenheit rief und Canto wurd' wach. Lang hatt' er geschlafen, auf fernen
+Wegen, Und probte und ritt Animenknas Stier Zu retten die Kelten rief
+Animebona, Vor Bathrig und seinem Gotte Iaghvir. Die letzten der Kelten sah
+Animebona Versammelt um Canto, nur wenige Mann. Stark war ihr Geist und die
+Sehnsucht nach Albion, Das Land hinter Nebeln, das Canto ersann. Sie fÅhrte
+die Kelten, Animebona Auf steinlosen Pfaden ohn' Dunkel und Licht, Bis eines
+Tages in Cantos Geiste Das Weiûe Land durch die Nebel durchbricht. Das Weiûe
+Land, sprach Animebona Besteht aus allen Farben zugleich. Ihr kînnt es nicht
+brechen, denn dies ist Albion: Gehet hin und erleuchtet Euch!]

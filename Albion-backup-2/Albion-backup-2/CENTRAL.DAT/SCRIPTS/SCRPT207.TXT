@@ -1,0 +1,60 @@
+; Script 207: Schiff nach Insel der Erleuchteten
+
+;show_map
+npc_lock 31
+npc_jump 31 143 126
+npc_turn 31 3
+party_off
+update 10
+fade_from_black
+update 25
+
+text 50
+update 10
+
+npc_move 31 -1 0
+party_move -1 0
+update 8
+npc_move 31 -1 0
+party_move -1 0
+update 8
+npc_move 31 -1 0
+party_move -1 0
+update 8
+npc_move 31 -1 0
+party_move -1 0
+update 8
+npc_move 31 -1 0
+party_move -1 0
+update 8
+text 51
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+npc_move 31 -1 1
+party_move -1 1
+update 8
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 52
+fade_to_black

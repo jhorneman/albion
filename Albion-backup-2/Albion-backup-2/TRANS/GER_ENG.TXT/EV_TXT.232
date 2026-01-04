@@ -1,0 +1,79 @@
+Perron (Ratsmitglied Nummer 1) / Phase 4
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin Mitglied im 'Rat der Gerechten' und mu dafr sorgen, da
+die Interessen des Volkes bercksichtigt werden, was leider keine einfache
+Aufgabe ist."]
+
+Block 1         (Begrung)
+["Skeima Din, seit Eurem letzten Besuch gab es viele Ver„nderungen."]
+
+Block 2         (Ver„nderungen, wenn Vorsitzender noch lebt.)
+["Zun„chst gibt es zwei neue Ratsmitglieder, die Garp und Riko ersetzen. Sie
+sind Neuerungen gegenber aufgeschlossen und es macht richtig Spa, mit ihnen
+zusammenzuarbeiten. An dieser Stelle m”chte ich mich auch noch einmal fr Eure
+Hilfe bedanken. H„ttet Ihr Herras nicht gewarnt, wrde er inzwischen wom”glich
+gar nicht mehr leben.^Und ich habe etwas herausgefunden, da Euch auch
+interessieren drfte: Es gibt eine Verbindung zwischen Garp, Riko und Kontos.
+Riko hat es in einem Gespr„ch nur indirekt zugegeben, aber ich bin mir ganz
+sicher, da es so ist. Kontos hatte durch diese Verbindung groen Einflu auf
+die Regierungsgesch„fte von Beloveno, soviel ist mir schon einmal klar
+geworden. Allerdings wei ich noch nicht, was ihre wahre Absichten sind. Ich
+denke, da sie ber das Attentat auf Herras weit hinausgehen."]
+
+Block 3         (Verbindung, wenn Vorsitzender noch lebt.)
+["Wie gesagt, viel mehr habe ich darber auch noch nicht herausgefunden, aber
+ich lasse nicht locker."]
+
+Block 4         (Rat, wenn Vorsitzdender noch lebt.)
+["Dank Eurer Hilfe funktioniert es bei uns wieder prima. Die neuen
+Ratsmitglieder sind mit vollem Eifer dabei und arbeiten sich ein."]
+
+Block 5         (Attentat, wenn Vorsitzender noch lebt.)
+["Ich bin wirklich froh, da Ihr es verhindern konntet!"]
+
+Block 6         (Herras, wenn er noch lebt)
+["Herras hat eingesehen, da er die Sache nicht ernst genug genommen hat. Aber
+glcklicherweise ist es ja noch einmal gut ausgegangen."]
+
+Block 7         (Kontos)
+["Haltet Euch fern von ihm!"]
+
+Block 8         (Ver„nderungen, wenn Herras tot ist)
+["Herje, was soll ich sagen. Es herrscht ein Chaos hier. Garp und Riko sind
+untergetaucht, da sie beim Attentat gesehen wurden. Ihre Stellungen im Rat
+h„tten sie ohnehin nicht halten k”nnen, da ich mir mittlerweile sicher bin,
+da es eine Verbindung zwischen ihnen und Kontos gibt. Kontos konnte dadurch
+seinen Einflu auf Beloveno ausweiten.^Leider hatte ich recht behalten und
+wenn Ihr mir geglaubt h„ttet, w„re das Attentat m”glicherweise verhindert
+worden. Leider hat mir niemand geglaubt!"{BLOK010}"Wir konnten ja nicht
+wissen, da Ihr recht hattet."{BLOK011}"Sind wir hier fr alles
+zust„ndig?"{BLOK012}"Tut uns leid..."]
+
+Block 9         (Resp. 1+2)
+["Natrlich nicht!"]
+
+Block 10        (Resp. 3)
+["Davon wird Herras auch nicht wieder lebendig, aber ich will Euch keine
+weiteren Vorwrfe machen."]
+
+Block 11        (Attentat, wenn Herras tot ist)
+["Was soll ich noch dazu sagen, Herras ist tot."]
+
+Block 12        (Rat)
+["Wir werden einen neuen Rat aufstellen mssen, da bleibt ja nichts anderes
+brig."]
+
+Block 13        (Rathaus)
+["Der Rat tagt regelm„ig im Rathaus, und manchmal, wenn es einen besonders
+wichtigen Anla gibt, dann laden wir die ganze Stadt in unseren groen
+Veranstaltungssaal ein. Aber das passiert nur, wenn es etwas wirklich
+wichtiges ist. Wir haben hier eine ganze Menge an kleinen Zimmern, in denen
+wir ber Probleme reden k”nnen und die auch fr die unterschiedlichsten Zwecke
+gemietet werden k”nnen. Im Sdflgel des Hauses ist der groe
+Veranstaltungssaal, von dem ich Euch erz„hlt habe, und ein Beratungszimmer. Im
+Nordflgel findet Ihr die Besprechungszimmer und im Mittelbau befinden sich
+Kche und Brotzimmer. Ihr drft Euch gerne umschauen."]
+
+Block 14        (Perron)
+["Das bin ich."]

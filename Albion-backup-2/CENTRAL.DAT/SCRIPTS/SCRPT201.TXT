@@ -1,0 +1,560 @@
+; Nach Edelstein-Deal.
+;
+; Führung zum Felsengang.
+; 
+; 
+
+show_map
+npc_lock 1
+npc_jump 1 52 199
+npc_turn 1 1
+update 5
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 0 -1
+party_move 0 -1
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+; 11
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+;21
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+;31
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+;41
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 1 0
+party_move 1 0
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_move 1 0 1
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+update 8
+
+npc_move 1 -1 0
+party_move 0 1
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 -1 0
+party_move -1 0
+update 8
+
+npc_move 1 0 1
+party_move 0 1
+update 8
+
+npc_turn 1 3
+party_turn 3
+update 8
+
+clear_quest_bit 236
+

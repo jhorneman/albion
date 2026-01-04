@@ -1,0 +1,214 @@
+NPC 122: Fasiir, Chef der Dji-Kas, Phase 0 
+==========================================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+SONST:  = Wenn nicht, dann...
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht
+
+
+Block 0
+[{BLOK000}"Ich habe die Ehre, Oberhaupt der Dji-Kas sein zu drfen."]
+
+Block 1         "BRADIR"
+["Ich glaube, er ist ein Freund Akiirs."]
+
+*******Unter-Allgemeinwissensblock fr Dji-Kas*******************************
+Block 2         "Dji-Kas, Magier, Magiergilde, Zauberer, Magie, Zauber"
+["Unsere Magie ist tief mit dieser Welt verwurzelt. Ihr k”nnt das zum Beispiel
+daran erkennen, da wir fr fast alle unsere Sprche eine bestimmte Sorte von
+Samenk”rnern benutzen, um unsere geistigen Kr„fte darin zu konzentrieren. Wir
+sind ferner stolz auf die Vielseitigkeit unserer Kunst. Wir kennen Magie zum
+Erschaffen und Zerst”ren, zum Verletzen und zum Heilen.^ Als Kennzeichen
+unserer Gilde tragen wir eingef„rbte Muster im Fell."
+{WORDSamenkorn}{WORDHeilung}{WORDFasiir}{WORDGildenhaus}]
+                
+
+Block 3         "FASIIR"
+[{INK 001}Fasiir wirkt amsiert.^^ {INK 002}"Nun, Ihr sprecht gerade mit ihm!."]
+
+Block 4         "SAMENKORN, SAMENK™RNER, KORN, K™RNER"
+["Nicht das Samenkorn selbst entfaltet die magische Wirkung, aber der Geist
+des Dji-Kas verwendet sie, um darin seinen Fokus zu finden. Die K”rner stammen
+von einer seltenen Pflanze namens Triifalai, das bedeutet "Trii der G”ttin".
+Die Samen werden brigens auch im Gildenhaus verkauft."{WORDTrii} {WORDG”ttin}] 
+
+Block 5         "HEILT, HEILUNG, HEILEN, HILFE, VERLETZUNG,
+                "WUNDEN, VERWUNDUNG"
+["Gleich neben dem Eingang zum Gildenhaus findet Ihr Stri Rejira, eine
+Meisterin der Heilkunst. Sie wird Eure Verletzungen heilen."]
+
+Block 6         "Triifalai"
+["Dies ist der Name einer Pflanze, deren Samenk”rner von uns sehr begehrt
+sind.{WORDSamenkorn}"]
+
+Block 7
+[]
+
+Block 8         "Former,Formergilde, Dji-Fadh, Baumeister"
+["Oh, die Baumeister. Das Verh„ltnis unserer Gilden ist nicht immer ungetrbt.
+Manche Ihrer besten Talente fhlen sich von unserer vielseitigen Kunst
+angezogen und wechseln ber zu unserer Gilde. Ich mu auch eingestehen, mit
+Akiir, dem obersten Stri der Former, kein allzu gutes Verh„ltnis zu haben. Es
+geht um alte Rivalit„ten zwischen uns."{WORDGilde}{WORDAkiir}]
+
+Block 9         "GILDENHAUS"
+["Das Gildenhaus hat schon seit langer Zeit seinen Platz im sdwestlichen
+Viertel Jirinaars. Es ist von den Dji-Kas selbst erbaut worden und beherbergt
+viele Gildenmitglieder und alle Dra."{WORDDra}]
+
+Block 10        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 1
+["Der Mord an Akiir ist niemals von uns in Auftrag gegeben worden! Kriis hat
+gelogen, wei die G”ttin, warum er das getan hat! Wir haben keinen Grund, um
+so etwas Sch„ndliches zu tun!"{WORDG”ttin}]
+
+Block 11        "MORD, AKIIR, KENGET KAMULOS," WENN: Phase 2
+["Lat mich Euch noch einmal pers”nlich dafr danken, da Ihr uns von dem
+Mordverdacht an Akiir befreit habt!"]
+
+Block 12        "AKIIR", normal
+["Akiir ist das Oberhaupt der Former, einer Gilde, die meist ein etwas
+gespanntes Verh„ltnis zu der unseren hat. Besonders Akiir geht keinem Konflikt
+aus dem Wege."{WORDFormer}]
+
+Block 13        "Fasiir", Phase 1
+["Ihr kennt Fasiir nicht so gut wie wir, die wir t„glich mit ihm umgehen. Er
+wrde niemals ein solches Verbrechen in Auftrag geben! Aber ich sch„tze, Ihr
+werdet den Worten eines Mitglieds seiner Gilde wenig Glauben schenken."]
+
+Block 14        "Fasiir", Phase 2
+["Ich bin Euch aufrichtig dankbar, da Ihr seinen Namen reingewaschen habt."]
+
+Block 15
+["šber einen Mord wei ich nichts."]
+
+Block 16
+[dummy]
+
+Block 17
+[dummy]
+
+Block 18
+[dummy]
+
+Block 19
+[dummy]
+
+Block 20
+[dummy]
+
+*****************************************************************************
+Block 21        Begrung 1.mal, Rainer mu bei Bewutsein sein!
+["Dsarii-ma und willkommen im Haus der Dji-Kas. Darf ich mich vorstellen:
+Fasiir, oberster Strii der Dji-Kas und Sebai-fre.^ Ich habe schon ber die
+beeindruckende, wenn auch letztlich fr Euch verh„ngnis|volle Magie Eurer
+Flug|maschine geh”rt. Wie Ihr Euch denken k”nnt, bin ich sehr an einem
+Gespr„ch mit Euch interessiert. K”nnt Ihr mir grob die Grund|prinzipien Eurer
+Magie erkl„ren?" {BLOK010}"Ich will es gerne versuchen, Sebai-fre Fasiir."
+{BLOK011}"Ich glaube kaum, da mir eine Erkl„rung gelingen wrde."]
+
+Block 22        Antw. MC21,10 & MC 27,10
+["Vielen Dank, da Ihr meine Neugier befriedigen wollt."^^ {INK
+001}{LEAD}{NAME} beginnt zu sprechen:^ {INK 002}"Wir nennen es Technik, es sind
+fort|geschrittene Maschinen, die uns zu Reisen durch die Luft und sogar
+zwischen den Welten bef„higen. Sie beruhen gr”ten|teils auf einfachen
+Grundprin|zipien, die aber..."^^ {INK 001}Es wird eine lange Erkl„rung,
+oftmals unter|brochen von erstaun|lich scharf|sinnigen Fragen Fasiirs. Dann
+meint er:^^ {INK 002}"Das ist ja h”chst erstaunlich. Wenn ich recht verstanden
+habe, beziehen Eure Maschinen ihre Energie aus Materie, ohne durch geistige,
+also ohne magische Anstren|gungen zum Laufen gebracht werden zu mssen!"]
+                DANN: Einwurf Rainer
+
+Block 23        Rainer
+[{INK 001}Rainer wirft ein:{INK 002} "Verzeiht, Fasiir. Ich habe Euch und
+andere Iskai nun schon oft ber Magie sprechen geh”rt und das scheint mir
+berhaupt nicht zu dem sonst so aufgeschlos|senen Wesen Eures Volkes zu
+passen. Vorstellungen ber Magie geh”ren bei uns schon seit Hunderten von
+Jahren in den Bereich des Aberglaubens und..."^^ {INK 001}Fasiir:^ {INK
+002}"Jetzt begreife ich! Ihr haltet Magie also fr einen Aberglauben, eine
+Einbildung, mit der wir versuchen, die Gesetze der Welt zu erkl„ren! Glaubt
+mir, so ist es ganz und gar nicht! Ihr mt frwahr aus einer seltsamen Welt
+stammen, die nur die Energie aus der Materie kennt. Lat mich Euch etwas
+demonstrieren! Folgt mir bitte in unsere Experimentierecke!"]
+                DANN: ZS Magiedemo (Baum entsteht, Menschen sind feddich)
+
+Block 24        Antw. MC22,11
+["Wie Ihr meint. Es ist natrlich Euer gutes Recht, Eure Geheimnisse fr Euch
+behalten zu wollen. Entschuldigt mich nun bitte, ich habe zu tun."]
+                DANN: Bricht das Gespr„ch ab, Beleidigungs-Bit setzen!
+
+Block 25
+[-dummy-]
+
+Block 26        Begrung WENN: jemand bewutlos ist       
+["Wie ich sehe, bedrft Ihr unserer Heilkr„fte! Begebt Euch schnell in den
+Raum in der N„he des Eingangs, dort wird Euch geholfen!"]
+
+Block 27        Begrung 2.mal, wenn Beleidigungs-bit gesetzt
+["Dsarii-ma." {BLOK010}"Verzeiht, wenn wir Euch beleidigt haben sollten,
+Sebai-fre. Wenn Ihr Wert darauf legt, will ich gerne eine Erkl„rung unserer
+"Magie" versuchen." {BLOK011}"Entschuldigt, wir mssen weiter."]
+
+Block 28        Begrung 2.mal
+["Dsarii-ma, Besucher! Kann ich noch etwas fr Euch tun? Bitte keine zweite
+Demonstration, ich bin nicht mehr der Jngste, hir, hir!"]
+
+Block 29        "AKIIR"
+["Akiir! Es gab da einen Vorfall, vor vielen Jahren, seitdem sind wir
+verfeindet. Es ist damals etwas passiert, da... verzeiht, ich spreche nicht
+gerne darber."]
+
+Block 30        "AKIIR", 2x
+["Wie schon gesagt, ich spreche nicht gerne ber unsere Feindschaft."]
+
+Block 31
+[SEQUENZ FOLGT!]
+
+Block 32        Tom
+[{INK 001}Tom wirft ein:{INK 002}^^ "Verzeiht, Fasiir. Ich habe Euch und
+andere Iskai nun schon oft ber Magie sprechen geh”rt und das scheint mir
+berhaupt nicht zu dem sonst so aufgeschlos|senen Wesen Eures Volkes zu
+passen. Vorstellungen ber Magie geh”ren bei uns schon seit Hunderten von
+Jahren in den Bereich des Aberglaubens und..."^^ {INK 001}Fasiir:^ {INK
+002}"Jetzt begreife ich! Ihr haltet Magie also fr einen Aberglauben, eine
+Einbildung, mit der wir versuchen, die Gesetze der Welt zu erkl„ren! Glaubt
+mir, so ist es ganz und gar nicht! Ihr mt frwahr aus einer seltsamen Welt
+stammen, die nur die Energie aus der Materie kennt. Lat mich Euch etwas
+demonstrieren! Folgt mir bitte in unsere Experimentierecke!"]
+
+Block 33
+[Fasiir fhrt seine Besucher in ein Zimmer des Hauses, wo eine Steinfl„che im
+Moosboden zu sehen ist.]
+
+Block 34
+["Der sch”nste Teil der Magie ist sicherlich derjenige, welcher Dinge
+erschafft, und sei es auch nur etwas Allt„gliches.^^Seht her!"]
+
+Block 35
+["Driscoll, ich... Haben Sie das gesehen? Das ist doch..., ich meine... ^^ Ich
+schnappe ber! Der Baum ist real! Das war doch kein Taschen|spieler|trick!"]
+
+Block 36
+["Das ist schon 'n Ding, zugegeben! Die Jungs hier sind keine Scharlatane,
+soviel steht fest. Mit Wachstums|beschleu|nigern hat das jedenfalls nichts
+mehr zu tun."]
+
+Block 37
+["Ein K”nigreich fr ein paar Meger„te! Die k”nnen sich hier doch nicht ber
+die Naturgesetze lustig machen!"]
+
+Block 38
+["Ich sehe, zugegebenermaen mit Befriedigung, da ich einige Zweifel
+ausr„umen konnte.^^Ich hoffe, Ihr denkt nun etwas anders ber unsere Kunst.^^
+Es war mir eine Ehre, mit Euch zu sprechen, {LEAD}{NAME}. Schaut Euch ruhig
+noch etwas bei uns um, ich mu mich jedoch nun wieder meinen Aufgaben widmen."]
+
+Block 39
+["Vielen Dank jedenfalls fr diese beeindruckende Demonstration Eures K”nnens,
+Fasiir."]

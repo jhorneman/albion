@@ -1,0 +1,54 @@
+; IST WEGEN AUFTEILUNG DES SCRIPTS ENTFALLEN!
+; **** Script 15: Trainer geht zum Kampfplatz
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 157
+fade_to_black
+show_map
+npc_lock 0
+npc_jump 0 7 12
+npc_turn 0 2
+party_jump 7 19
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_turn 0
+update 10
+
+fade_from_black
+pause 60
+
+; Trainer-Event Nahkampf
+do_event_chain 5
+
+fade_to_black
+fill_screen 0
+fade_from_black
+text 159
+fade_to_black
+show_map
+npc_jump 0 14 7
+npc_turn 0 3
+party_jump 8 7
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 10
+fade_from_black
+pause 30
+text 158

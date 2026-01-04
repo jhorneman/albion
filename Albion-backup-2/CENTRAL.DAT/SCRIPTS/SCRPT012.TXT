@@ -1,0 +1,1053 @@
+; **** Script 12: Im Haus der Dji-Kas
+
+
+; relevante Personen positionieren
+
+;Sira
+npc_lock 7
+npc_jump 7 54 19
+npc_turn 7 1
+
+;Fasiir
+npc_lock 2
+npc_jump 2 62 29
+npc_turn 2
+
+;Kriis
+npc_lock 1
+npc_jump 1 63 78
+npc_turn 1 3
+
+;K.K.
+npc_lock 15
+npc_jump 15 61 78
+npc_turn 15 1
+
+;Stiriik 1
+npc_lock 16
+npc_jump 16 61 10
+npc_turn 16 2
+
+;Stiriik 2
+npc_lock 17
+npc_jump 17 63 8
+npc_turn 17 2
+
+;evtl. störende NPCs aus
+npc_off 4
+npc_off 8
+npc_off 12
+npc_off 14
+
+; los geht's
+show_map
+update 1
+fade_from_black
+
+party_move 0 1
+;npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+party_move 0 1
+;npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+party_move 0 1
+;npc_move 16 0 1
+;npc_move 17 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+;npc_move 17 0 1
+update 4
+
+party_move 0 1
+npc_move 16 1 1
+;npc_move 17 0 1
+update 4
+
+;Sira kommt heran
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+update 4
+
+npc_move 7 1 0
+update 4
+npc_move 7 1 0
+update 4
+npc_move 7 1 0
+update 4
+npc_move 7 1 0
+update 4
+
+; Text & Dialog mit Sira
+text 176
+party_member_text 3 177
+npc_text 120 178
+party_member_text 3 179
+
+; Fasiir kommt hinzu
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+npc_move 2 0 -1
+update 4
+text 180
+npc_text 122 181
+party_member_text 3 182
+npc_text 122 183
+
+; langer Weg den Gang hinunter
+npc_move 2 0 1
+update 4
+
+party_move -1 1
+npc_move 16 0 1
+npc_move 17 0 1
+;npc_move 7 0 0
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 -1 1
+npc_move 17 -1 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 1 0
+update 4
+
+;sind beim brunnen
+party_move 1 0
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 1 0
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+npc_move 2 1 0
+update 4
+
+party_move 1 0
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+npc_move 2 1 0
+update 4
+
+party_move 1 0
+npc_move 16 1 0
+npc_move 17 0 1
+npc_move 7 1 0
+npc_move 2 1 0
+update 4
+
+party_move 0 1
+npc_move 16 1 0
+npc_move 17 1 0
+npc_move 7 1 0
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 1 0
+npc_move 17 1 0
+npc_move 7 1 0
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 1 0
+npc_move 17 1 0
+npc_move 7 1 0
+npc_move 2 1 0
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 1 0
+npc_move 2 1 0
+update 4
+
+party_move 1 0
+npc_move 16 0 1
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 1 0
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 1 0
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 1 0
+npc_move 17 0 1
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 1 0
+npc_move 7 0 1
+npc_move 2 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 -1 0
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 0 1
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 0 1
+party_move -1 0
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 0 1
+party_move -1 0
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 -1 0
+party_move -1 0
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 -1 0
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 -1 0
+party_move 0 1
+npc_move 16 -1 0
+npc_move 17 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 -1 0
+npc_move 16 -1 0
+npc_move 17 -1 0
+party_move 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 0 1
+npc_move 16 -1 0
+npc_move 17 -1 0
+party_move 0 1
+update 4
+
+npc_move 2 -1 0
+npc_move 7 0 1
+party_move -1 0
+npc_move 16 0 1
+npc_move 17 -1 0
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+party_move -1 0
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 -1 0
+party_move 0 1
+npc_move 16 0 1
+npc_move 17 -1 0
+update 4
+
+npc_move 2 0 1
+npc_move 7 -1 0
+npc_move 16 -1 0
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 7 -1 0
+npc_move 16 -1 0
+npc_move 17 0 1
+update 4
+
+npc_move 7 -1 0
+npc_move 16 -1 0
+npc_move 17 -1 0
+update 4
+
+npc_move 7 0 1
+npc_move 16  0 1
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 2 0 1
+npc_move 7 0 1
+npc_move 16 0 1
+;npc_move 17 0 1
+party_move 0 1
+update 16
+
+;pause 0
+
+; Der Mörder kommt ins Bild
+camera_lock
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+camera_move 0 4
+update 1
+text 184
+pause 40
+
+; Kriis und K.K. drehen sich
+song 52
+npc_turn 1 0
+update 1
+pause 10
+npc_turn 15 0
+update 1
+pause 10
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+
+; K.K. wendet sich zur Flucht
+npc_turn 15 1
+update 2
+npc_move 15 0 1
+update 4
+npc_move 15 0 1
+update 4
+npc_move 15 0 1
+update 4
+npc_move 15 0 1
+update 4
+npc_off 15
+
+camera_lock
+update 2
+;pause 0
+; Blendspruch!
+play_anim 8 20 0 1 1
+sound_effect 38 90 100 0 22000
+sound_effect 34 90 100 0 22000
+;pause 0
+
+fade_to_white
+pause 60
+show_map
+update 1
+fade_from_white
+text 198
+pause 60
+party_member_text 3 186
+
+camera_unlock
+
+; kaputtes Fenster patchen
+do_event_chain 29
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+npc_move 16 0 1
+npc_move 17 0 1
+party_move 0 1
+update 4
+
+;Stiriik haben Kriis erreicht
+npc_move 16 1 0
+update 4
+npc_move 17 1 0
+update 4
+npc_turn 17 2
+update 1
+
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 1 0
+update 4
+party_move 1 0
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+party_move -1 1
+update 4
+party_move -1 1
+update 4
+party_move 0 1
+update 4
+party_move 0 1
+update 4
+
+; sira und fasiir neu pos.
+npc_jump 7 59 78
+npc_jump 2 61 76
+
+party_member_text 3 187
+pause 25
+party_move 1 -1
+update 4
+party_move 1 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move -1 -1
+update 4
+party_move -1 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+party_move 0 -1
+update 4
+
+; wieder oben bei Kriis
+camera_lock
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+camera_move 0 -4
+update 1
+text 188
+party_member_text 3 189
+npc_turn 1 2
+update 1
+pause 20
+npc_move 2 0 1
+update 4
+pause 20
+npc_text 122 190
+npc_turn 1 2
+update 1
+pause 20
+npc_text 121 191
+npc_text 122 192
+party_member_text 3 193
+npc_text 122 194
+party_member_text 3 195
+
+;Stiriik, Fasiir und Kriss ab
+npc_move 17 0 -1
+update 4
+npc_move 17 0 -1
+update 4
+
+npc_move 1 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+npc_move 2 0 -1
+npc_move 1 0 -1
+npc_move 16 0 -1
+npc_move 17 0 -1
+update 4
+
+pause 30
+npc_text 120 196
+npc_move 7 1 0
+update 4
+npc_move 7 1 0
+update 4
+npc_move 7 1 0
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+npc_move 7 0 -1
+update 4
+;camera_unlock
+
+pause 30
+party_member_text 3 197
+party_member_text 1 199
+party_member_text 3 200
+
+npc_off 7
+npc_off 2
+npc_off 1
+npc_off 16
+npc_off 17
+
+npc_on 4
+npc_on 8
+npc_on 12
+npc_on 14

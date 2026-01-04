@@ -1,0 +1,199 @@
+ 
+  
+Block 0     (Name)  
+[{BLOK000}"Mein Name ist Branagh. Ich bin Krieger. Was erwartest Du sonst an
+diesem Ort?" {WORDKrieger}]  
+  
+Block 1     (Kenget Kamulos)                        	  
+["Kenget bedeutet Krieger in unserer alten Sprache. Kamulos ist unser Gott"
+{WORDKrieger} {WORDGott}]  
+  
+Block 2     (Gott)   
+["Unser Gott ist Kamulos, der Gott des Krieges, der Gott der Mutigen.
+{WORDKrieger} {WORDMut}"]  
+  
+Block 3     (Mut, Angst)	 
+["Es geht nicht darum, keine Angst zu haben. Wir sollen lernen, unsere Angst
+zu berwinden. Nur der Geistlose hat berhaupt keine Angst. Deshalb kann nur
+der Kluge Mut haben, und nur der Mutige wird ehrenvoll sterben, ob mit oder
+ohne Waffen. Der Feige wird als Sklave sterben." {WORDEhre} {WORDGeist}
+{WORDWaffen} {WORDSklaven}]  
+  
+Block 4     (Ehre)                   	  
+["Ehre hat, wer mutig ist. Die gr”te Ehre ist es, im selbstgew„hlten Kampf zu
+sterben. Ich hoffe, da ich dieses Glck haben werde, damit ich an der Tafel
+des Kamulos teilhaben darf, wo die ruhmvollen Kenget stolz auf die Letzte
+Schlacht warten. {WORDKampf} {WORDStolz} {WORDLetzte Schlacht} {WORDRuhm}"]  
+  
+Block 5     (Letzte Schlacht)		   	  
+["Die letzte Prfung. Der letzte Kampf um die ewige Ehre. Der Kampf zwischen
+Mut und Feigheit, M„nnern und Memmen. Hoffentlich stehe ich dann auf der
+richtigen Seite: bei den Kenget." {WRNR----} {WORDKenget Kamulos}]  
+  
+Block 6     (Stolz)						 
+		  
+["Mein Stolz ist Teil meiner Ehre und wer ihn verletzt, mu sterben. Also
+sieh' Dich vor."]  
+  
+Block 7     (Ruhm)						 
+		  
+["Die Suche nach Ruhm ist der leuchtende Weg zur Ehre. Im ehrenvollen Kampf
+und vor allem im ehrenvollen Tod werde ich den gr”ten Ruhm finden."
+{WORDEhre} {WORDTod}]  
+  
+Block 8    (Stufen, Brder)         		  
+["Frauen sind Wesen zweiter Stufe. Mit ihnen ist der Umgang genauso
+sch„ndlich, wie mit Tieren und Iskai und Menschen. Der Mann ist zweite Stufe,
+weil er mit der Frau umgeht. Und weil er kein Kenget ist. Drum mu er Kenget
+werden und den Umgang mit Frauen meiden, wenn er in der ersten Stufe sein
+m”chte. Und es k„mpft sich an der Seite des Freundes und Bruder mutiger."
+{WRNR----}{WORDFrauen} {WORDKenget}]  
+  
+Block 9     (Tod, sterben)                          	        
+["Der Tod im Kampf ist mein h”chstes Lebensziel! Im Kampf gegen Khunag zu
+sterben, das w„re fr mich ein Traum. Aber der Zeremonienmeister wei noch
+viel mehr darber." {WORDKhunag}]  
+  
+Block 10     (Cuain)                          	  
+["Er ist unser Fhrer. Unser oberster Druide und als h”chste Emanation die
+Fleischwerdung unseres Gottes, des ewigen Kamulos. Aber fragt doch einmal
+unseren Zeremonienmeister!"]  
+  
+Block 11     (D„monen)						 
+	  
+["Es heit, die groen Druiden k”nnten sie beschw”ren, aber gesehen habe ich
+noch keinen. Sie werden auch nur selten in der freien Natur entfesselt.
+Meistens sollen sie Geheimg„nge bewachen und so. Am besten fragt Ihr mal den
+Zaubermeister." {WORDNatur} {WORDDruiden}]  
+  
+Block 12     (Heiligtum)  
+["Das Heiligtum, oder innerer Bereich, liegt in den tieferen Stockwerken. Der
+Eingang zu den tieferen Stockwerken liegt am sdlichen Tor. Aber da kommt Ihr
+nicht rein. Kein Unreiner wird dort jemals hindurchgelangen." {WORDGeheimgang}
+{WORDUnreiner}]  
+  
+Block 13     (Khunag)  
+["So heit der feige M”rder unseres letzten Cuain. Er erschlug den Cuain,
+w„hrend Kamulos schlief, inmitten unseres Heiligtums, dem inneren Bereich."
+{WORDCuain} {WORDKamulos Schlaf} {WORDHeiligtum}]  
+  
+Block 14      (Waffen)   
+["Meinst Du Schwerter oder Magie?" {WORDSchwerter} {WORDMagie}]  
+  
+Block 15     (Kampf, Gebet)                         
+["Der Kampf ist mein Gebet, meine Hingabe an Kamulos." {WORDGebet}
+{WORDKamulos}]  
+  
+Block 16   (Krieger)                              
+["Wir sind die Marschierer des K”rpers. Wir k„mpfen mit unserer k”rperlichen
+St„rke und Geschicklichkeit. Wir t”ten ohne und mit Waffen, aber ohne Magie.
+Wir sind die Kledo." {WORDWaffen} {WORDMagie} {WORDKledo} {WORDKampf}]   
+  
+Block 17      (Magie)  
+["Da mut Du einen Oqulo fragen. Das sind die K„mpfer des Geistes."]  
+   
+Block 18    (Schwerter)  
+["Wir Kledo kennen 5 Kategorien des Kampfes. Die niedrigste ist der Kampf mit
+kleinen Stichwaffen, dann folgt der einh„ndige Schwertkampf, der Fernkampf,
+der zweih„ndige Schwertkampf und als h”chste Form der K”rperbeherrschung der
+waffenlose Kampf. In dieser Reihenfolge werden wir auch ausgebildet."
+{WORDAusbildung}]  
+  
+Block 19   (Kledo)   
+["Zum Kledo wirst du, wenn du Meister des einh„ndigen Schwertkampfes und
+Schler des Fernkampfes bist. Das schafft l„ngst nicht jeder!" {WORDKampf}]  
+  
+Block 20     (Oqulo)  
+["Das ist die erste Stufe eines Druiden nach dem Novizentum." {WRNR----}]  
+  
+Block 21    (Ausbildung)    
+["Als Kledo verfgst du ber keine Magie, es sei denn, du kommst in den Besitz
+einer magischen Waffe. In der Novizenzeit lernst du die fnf Waffengattungen
+und erreichst dadurch die Stufe der Transzendenz, die n”tig ist, um als
+Priester bis zum Artorn vorzudringen." {WORDArtorn}{WRNR----}]  
+  
+Block 22     (Riten)  
+["šber die Riten wei der Zeremonienmeister natrlich am meisten. Ich m”chte
+Euch nichts Falsches erz„hlen. Es gibt da ein paar heikle Dinge, zum Beispiel
+den Umgang mit Drogen oder so. Also fragt am besten den Meister." {WORDDrogen}]  
+  
+Block 23     (Geist)  
+["Der Geist ist das zentrale Medium unseres Ordens. Der Geist lenkt alles, und
+wenn du ihn beherrschst, dann wird dir die h”chste Ehre zuteil." {WORDEhre}]  
+  
+Block 24     (Assassinen)  
+["Da fragt Ihr am besten den Fechtmeister."]  
+  
+Block 25     (Druiden)   
+["Druide ist, wer seine Angst berwindet. Druide ist, wer Ehre hat. Und
+Druiden k„mpfen mit Magie. Sie beherrschen angeblich sogar D„monen."
+{WORDAngst} {WORDEhre} {WORDMagie} {WORDD„monen}]   
+  
+Block 26     (Kamulos Schlaf, Neujahr)  
+["Am Tag vor Neujahr ruht Kamulos von seinen K„mpfen des vergangenen Jahres.
+Dann ruht auch der Cuain und tr„gt keine Waffen. Um so ruchloser das
+Verbrechen des Khunag."]  
+  
+Block 27     (Sklaven)						  
+["Das sind Gefangene, Wesen dritter Stufe, die am Leben gelassen wurden, um
+T„tigkeiten zu verrichten, die einen Kenget sch„nden wrden: also alles, was
+irgendwie mit Haushalt zu tun hat. Dafr drfen ihre Kinder aber, wenn sie
+Talent zeigen, zum Kenget aufsteigen. Denn jeder Mensch, der Mut im Kampf
+zeigt, darf Kenget und sogar Cuain werden. Und nur, weil die Eltern sich feige
+haben gefangennehmen lassen, mu das Kind ja noch kein Feigling sein.
+Besonders nicht, wenn es hier erzogen wird, seine Familie aufgibt, um Teil
+unserer Familie zu werden." {WORDStufen} {WRNR----}{WORDKenget}
+{WORDCuain}{WORDMut}{WORDKampf}{WORDFamilie}]  
+  
+Block 28     (Drogen)						  
+["Mut ben”tigt die Klarheit des Geistes. Nur zu den Zeremonien nehmen wir
+bestimmte Drogen ein. Am besten schmeckt mir der Honigwein. Rauchen ist aber
+auch nicht schlecht." {WORDMut}]  
+  
+Block 29     (Tagesablauf)					  
+["Naja! Wir stehen schon ziemlich frh auf, und vor dem Frhstck mssen wir
+erstmal eine Stunde meditieren. Mit Meditation geht's dann auch weiter, und so
+gibt's bis zum Mittag nur zwei Stunden Gebetsbungen. Nachmittags dann
+Zeremonienschulung und nochmal zwei Stunden Gebet. Abendbrot und Meditation
+bis zum Sonnenuntergang. Ziemlich viel Meditation, besonders im Sommer. Aber
+ich denke, das ist gut gegen die Angst." {WORDGebet} {WORDAngst}]  
+  
+Block 30     (Umwelt, Natur)  
+["Also, den Pflanzen tun wir nichts. Wozu auch. Sie werden ja beim Letzten
+Gefecht nicht dabei sein. Auch die Tiere nicht. Um ehrlich zu sein, ich wei
+nicht, worauf Du mit dieser Frage hinauswillst?" {WORDLetzte Schlacht}]  
+  
+Block 31     (Familie)  
+["Alle hier im Orden sind meine Brder. Schwestern hat hier keiner. Auch meine
+Eltern habe ich verstoen, als ich Kenget wurde. Denn auch sie sind nur in der
+zweiten Stufe." {WORDStufen} {WORDKenget} {WORDBrder}]  
+  
+Block 32     (Geheimgang)  
+["Nein, von einem Geheimgang wei ich nichts. Sagt mal, was wollt Ihr
+eigentlich hier? Wollt Ihr Assassinen mieten?" {WORDAssassinen}]  
+  
+Block 33     (Unreiner)  
+["Unrein ist eigentlich jeder, der kein Kenget ist. Aber da in jedem Mann
+m”glicherweise ein Kenget steckt, ohne da er das jemals wird, kann ein Mann
+durch seinen ehrenvollen Tod rein werden. Das ist allerdings fr einen
+Menschen schwer nachtr„glich festzustellen. Denn die Reinheit „uert sich
+durch tiefe Erkenntnis in die ewigen Gesetze Kamulos' im Moment des Todes.
+Aber Kamulos wei darum und schart die reinen Toten um seine Tafel."]  
+  
+Block 34 
+[!]  
+  
+   
+********************Spezielles  
+Wissen**************************  
+  
+Block 35    (Artorn) 12  
+["Der Zustand des h”chsten Glcks und der h”chsten Ehre. Wenn Kamulos deinen
+Geist erfllt und sich aller Geist in Kampfkraft und Todesmut verwandelt. Dann
+kontrolliert nicht mehr deine Angst dein Handeln, sondern die totale
+šberwindung derselben. Unser Fechtmeister kann Dir da mehr drber erz„hlen."
+{WORDGeist}]  
+  
+Block 36    (Begrssung)  
+["Die Gesetze der Kenget Kamulos erlegen es mir auf, gastfreundlich zu sein.
+Fasse Dich aber bitte kurz." {WORDCuain}]

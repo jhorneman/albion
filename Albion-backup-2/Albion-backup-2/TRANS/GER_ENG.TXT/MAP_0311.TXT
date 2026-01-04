@@ -1,0 +1,729 @@
+
+Maptextfile
+-------------------------------------------------------------------------
+
+Block 0
+[frei]
+
+Block 1
+[Ein Kamin.]
+
+Block 2
+[Ein Kerzenleuchter.]
+
+Block 3
+[Ein geflochtener Korb.]
+
+Block 4
+[Ein Holztisch.]
+
+Block 5
+[Ein Hocker.]
+
+Block 6
+[Ein Himmelbett. Mit den Totensch„deln k”nnte man es gar als "H”llenbett"
+bezeichnen.]
+
+Block 7
+[Ein Schreibtisch.]
+
+Block 8
+[Ein Stuhl.]
+
+Block 9
+[Ein loderndes Feuer brennt in dieser S„ule, welches die Fratze in einem
+schummerigen Licht erscheinen l„t und beim Betrachter einen beklemmenden
+Zustand erweckt.]
+
+Block 10
+[Eine S„ule mit einer gr„lichen Fratze.]
+
+Block 11
+[Ein Bett. Wie die meisten M”bel hier, wirkt es etwas abschreckend.]
+
+Block 12
+[Ein Fa.]
+
+Block 13
+[Eine Art von Teppich, der aus getrockneten Pflanzenhalmen geknpft ist.]
+
+Block 14
+[Ein Glaskrug.]
+
+Block 15
+[Vorh„nge.]
+
+Block 16
+[Eine Kiste.]
+
+Block 17
+[Ein Schrank.]
+
+Block 18
+[Eine Fackel.]
+
+Block 19
+[Eine Menge unwichtiger Kleinkram liegt in den Regalen.]
+
+Block 20
+[Ein groer h”lzerner Zuber.]
+
+Block 21
+[Groe Holzregale.]
+
+Block 22
+[Dieses Bett wird derzeit wohl nicht benutzt.]
+
+Block 23
+[Verschiedene Hieb-, Stich- und Schuwaffen, die alle „uerst gef„hrlich
+aussehen.]
+
+Block 24
+[Ein Waffenregal.]
+
+Block 25
+[Ein Schild.]
+
+Block 26
+[Ein aufgespieter Sch„del. Ein unangenehmer Verwesungsgeruch deutet darauf
+hin, da die Greueltat noch nicht allzulange zurckliegt.]
+
+Block 27
+[An diesen Strohpuppen werden kriegerische F„higkeiten trainiert und erprobt.]
+
+Block 28
+[Ein mit Stroh umwickelter Holzpfahl. Dient zur šbung von Schlagtechniken.]
+
+Block 29
+[Eine Zielplatte fr Pfeil und Bogen.]
+
+Block 30
+[Ein Tablett mit Nahrungsmitteln.]
+
+Block 31
+[Kr„uter.]
+
+Block 32
+[Eine Truhe.]
+
+Block 33
+[Eine Karaffe.]
+
+Block 34
+[Ein Kochl”ffel.]
+
+Block 35
+[Ein Eimer.]
+
+Block 36
+[Ein L”ffel.]
+
+Block 37
+[Ein L”ffel und eine Gabel.]
+
+Block 38
+[Ein Trinkbecher.]
+
+Block 39
+[Zwei Trinkbecher.]
+
+Block 40
+[Ebesteck.]
+
+Block 41
+[Ein Teller.]
+
+Block 42
+[Ein Beh„lter.]
+
+Block 43
+[Gemse.]
+
+Block 44
+[Geb„ck.]
+
+Block 45
+[Ein Gewrz.]
+
+Block 46
+[Ein Metallteller.]
+
+Block 47
+[Ein Tonbeh„lter.]
+
+Block 48
+[Ein groer Glastopf.]
+
+Block 49
+[Ein Glasbeh„lter.]
+
+Block 50
+[Eine Holzdose.]
+
+Block 51
+[Eine groe Glasdose.]
+
+Block 52
+[Eine Flasche.]
+
+Block 53
+[Notizbl„tter.]
+
+Block 54
+[Ein Buch.]
+
+Block 55
+[Mehrere Bcher.]
+
+Block 56
+[Ein in Leder gebundenes Buch. Es sieht wertvoll aus.]
+
+Block 57
+[Schreibutensilien.]
+
+Block 58
+[Ein aufgeschlagenes Buch. Auf der linken Seite ist eine technische Skizze zu
+sehen, die rechte Seite enth„lt Beschreibungen dazu.]
+
+Block 59
+[Ein kurzer Schreibstift.]
+
+Block 60
+[Ein schweres Kurzschwert.]
+
+Block 61
+[Ein schwerer Dolch.]
+
+Block 62
+[Eine Tre.]
+
+Block 63
+[Dieser m„chtige Kchenherd dient zum Erhitzen von Speisen und Getr„nken.]
+
+Block 64
+[Ein Wandbehang.]
+
+Block 65
+[Zerrissene Vorh„nge.]
+
+Block 66
+[Sch„bige Holzbetten.]
+
+Block 67
+[Eine verzierte S„ule.]
+
+Block 68
+[Ein Tierfell.]
+
+Block 69
+[Eine Treppe nach oben.]
+
+Block 70
+[Eine Treppe nach unten.]
+
+Block 71
+[Offene Schubladen mit Kleinkram.]
+
+Block 72
+[Ein Becher.]
+
+Block 73
+[Eine feine Schere.]
+
+Block 74
+[Eine Phiole.]
+
+Block 75
+[Ein Streitkolben.]
+
+Block 76
+[Phiolen.]
+
+Block 77
+[Ein Vergr”erungsglas.]
+
+Block 78
+[Groe Tcher.]
+
+Block 79
+[Ein Tuch.]
+
+Block 80
+[Ein Teppich.]
+
+Block 81
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 82
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 83
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 84
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 85
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 86
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 87
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 88
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 89
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 90
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 91
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 92
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 93
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 94
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 95
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 96
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 97
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 98
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 99
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 100
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 101
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 102
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 103
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 104
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 105
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 106
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 107
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 108
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 109
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 110
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 111
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 112
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 113
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 114
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 115
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 116
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 117
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 118
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 119
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 120
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 121
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 122
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 123
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 124
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 125
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 126
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 127
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 128
+[Platzhalter fr weitere Cutmap-Events.]
+
+Block 129
+[Khunag:{INK 002}^ "Dies ist der Eingangs|bereich."]
+
+Block 130
+[Khunag:{INK 002}^ "Wir sind in der N„he der Kche."]
+
+Block 131
+[Khunag:{INK 002}^ "Wir sind bei den Zellen der Novizen."]
+
+Block 132
+[Khunag:{INK 002}^ "Der Gang zum G„ste|zimmer und den Novizenzellen".]
+
+Block 133
+[Khunag:{INK 002}^ "Der šbungsraum der Druiden-Novizen."]
+
+Block 134
+[Khunag:{INK 002}^ "Der šbungsraum der Krieger-Novizen."]
+
+Block 135
+[Khunag:{INK 002}^ "Dies ist ein Gebetsraum."]
+
+Block 136
+[Khunag:{INK 002}^ "Ein Vorratsraum."]
+
+Block 137
+[Khunag:{INK 002}^ "Wir kommen hier zu den Sklaven|r„umen."]
+
+Block 138
+[Khunag:{INK 002}^ "Der Empfangsraum fr Besucher."]
+
+Block 139
+[Khunag:{INK 002}^ "Der Aufenthalts|raum fr Novizen."]
+
+Block 140
+[Khunag:{INK 002}^ "Die zentrale S„ulenhalle."]
+
+Block 141
+[Khunag:{INK 002}^ "Die Halle der Novizenzellen."]
+
+Block 142          W„chter Eingang 1
+["Kommt nicht auf dumme Gedanken, Besucher!^^Wie Ihr seht, ist unser
+Eingangs|bereich leicht zu verteidigen!"]
+
+Block 143          W„chter Eingang 2
+["Gre, Besucher. Ihr drft die Anlage nur in Begleitung eines Kenget
+verlassen."]
+
+Block 144          KHUNAG
+["Das heit, da wir erst den Beschlu der Kenget ber den Kauf des hohen
+Wissens abwarten mssen.^^Aber glaubt mir, sie werden ablehnen."]
+
+Block 145          Sklave 1
+[{INK 001}Ein Sklave:{INK 002}^^ "Wir haben selten Besucher. Ich habe mich
+manchmal gefragt, ob es tats„chlich Menschen auerhalb Khamulons gibt."]
+
+Block 146
+[{INK 001}Ein Sklave:{INK 002}^^ "Es ist uns nicht erlaubt, mit Besuchern zu
+sprechen."]
+
+Block 147
+[{INK 001}Eine Sklavin:{INK 002}^^ "Mein Sohn wird bald Novize der Kledo. Er
+wird der mutigste Krieger von allen sein!"]
+
+Block 148
+[{INK 001}Eine Sklavin:{INK 002}^^ "Sprecht lieber mit Kredos, dem obersten
+Sklaven. Er ist meist in der Kche zu finden."]
+
+Block 149
+[{INK 001}Ein Sklave:{INK 002}^^ "Bitte haltet mich nicht von der Arbeit ab.
+Ich bin schon oft genug bestraft worden."]
+
+Block 150
+[{INK 001}Ein Sklave:{INK 002}^^ "Ich war einmal ein Kledo Kamulos. Aus Liebe
+zu meiner Frau bin ich zurck zu den Sklaven gegangen."]
+
+Block 151          Novize Kledo 1
+["Ich verehre den Fechtmeister Cuarnainn sehr. Er beherrscht seinen K”rper wie
+kein anderer."]
+
+Block 152          Novize Kledo 2
+["Ich brauche ein wenig Ruhe, Besucher. Meine ersten Schwertlektionen haben
+ihre Spuren hinterlassen."]
+
+Block 153          Novize Kledo 3
+["Ich bin froh, aus den Sklaven|quartieren in die Reihen der Novizen
+aufgestiegen zu sein."]
+
+Block 154          NoTalk
+["Ich wte nicht, was ich mit Besuchern zu besprechen h„tte.^^Lebt wohl."]
+
+Block 155          Novize 1 Oqulo
+["Das Studium der Magie ist mein Lebensinhalt. Endlich kann ich trotz meines
+schw„chlichen K”rpers k„mpfen, zur Ehre Kamulos!"]
+
+Block 156          Novize 2 Oqulo
+["Vor kurzem habe ich die ersten Kampfzauber gelernt. Ein herrliches Gefhl,
+die Energie durch meinen Geist str”men zu spren!"]
+
+Block 157          Kledo 1
+["Ich be hier mit den Novizen. Sie mssen lernen, Angst und Schmerz zu
+akzeptieren und zu beherrschen."]
+
+Block 158          Kledo 2
+["Gre, Besucher. Ich war schon zu K„mpfen auerhalb Khamulons unterwegs.
+Hoffentlich seid ihr wegen eines Auftrages fr uns hier, ich zeige der Welt
+dort drauen jederzeit gern die šberlegenheit der Kampfkunst der Kledo
+Kamulos!"]
+
+Block 159          Kledo 3
+["Meine Ausbildung mit Fernwaffen ist fast beendet. Bald werde ich die
+h”chsten Stufe der Kriegskunst erlernen: den waffenlosen Kampf."]
+
+Block 160          Oqulo 1
+["Wendet Euch an Rhunagh, unseren Zaubermeister, wenn ihr ein Gespr„ch fhren
+wollt. Er ist meist im Gebetsraum im Osten des Komplexes zu finden."]
+
+Block 161          Oqulo 2
+["Wir haben dieses Jahr einige sehr talentierte Novizen, die Ausbildung geht
+gut voran. Kamulos wird zufrieden sein."]
+
+Block 162          Oqulo 3
+["Einen Gegner im Feuer meines Geistes zu verbrennen, ist die reine Form der
+Verehrung Kamulos' !"]
+
+Block 163          Novize Oqulo 3
+["Ich durfte gestern einen Feuerzauber von einer Spruchrolle ablesen!^^Ein
+phantastisches Erlebnis, denn die Spruchrollen erlauben es auch dem Ungebten,
+Zauber auszufhren, die er noch gar nicht beherrscht!"]
+
+Block 164          W„chter 1 Abgang
+["Besucher haben hier nichts verloren!"]
+
+Block 165          W„chter 2 Abgang
+["Die Bereiche der Kledo und Oqulo Kamulos drfen nicht durch Auenstehende
+entweiht werden. Bleibt hier, in den Bereichen der Novizen."]
+
+Block 166          Khunag
+["Die Treppe hinter dieser Tr fhrt in die Wohnbereiche der ausgebildeten
+Kledo Kamulos und Oqulo Kamulos. Wir haben hier keinen Zutritt."]
+
+Block 167
+[Die Tr ist verschlossen. Ein W„chter spricht {LEAD}{NAME} an:{INK 002}^^
+"Besucher haben hier keinen Zutritt!"]
+ 
+Block 168          Ausgangstr
+[Dies ist die Tr nach drauen. Sie ist verriegelt. Einer der W„chter bemerkt
+{LEAD}{NAME} und spricht {HIM } an:]
+
+Block 169
+[Diese Tr ist verschlossen.]
+
+Block 170
+[In dieser offenen Schublade liegt eine Spruchrolle!]
+
+Block 171
+[Hier wird allerlei Kleinkram aufbewahrt. Einiges davon sieht interessant aus.]
+
+Block 172
+[Hier hat jemand eine Spruchrolle liegenlassen!]
+
+Block 173
+[In dieser Kiste liegt ein funkelnder Ring!]
+
+Block 174
+[Diese Kiste enth„lt ntzliche Dinge.]
+
+Block 175
+[Hier liegen eine Menge Nahrungsmittel.]
+
+Block 176
+[{LEAD}{NAME} sieht ein sch”n gearbeitetes Amulett!]
+
+Block 177
+[Hier stehen einige Heiltr„nke!]
+
+Block 178
+[Ein Schrank mit einigen Flaschen.]
+
+Block 179
+[Auf der Innenseite der Flammenschale ist ein kleiner Schalter zu erkennen!]
+
+Block 180
+[In der Feuerschale ist ein kleiner Hebel versteckt.^^ {LEAD}{NAME} bet„tigt
+vorsichtig den heien Schalter!]
+
+Block 181
+[Eine ™ffnung in der Wand entsteht!]
+
+Block 182          Khunag
+["Na, also! Durch den Geheimgang werden wir in die inneren Bereiche gelangen!"]
+
+Block 183
+[In der Kiste sind einige Tr„nke!]
+
+Block 184
+["Bitte st”rt mich nicht bei meinen Studien! Es w„re mir lieber, wenn Ihr mein
+Zimmer verlassen wrdet."]
+
+Block 185
+[{INK 002}"Gre, Besucher. Verzeiht, ich mu mich auf meine Studien
+konzentrieren."]
+
+Block 186
+[{INK001}Der anwesende Novize ruft:^^{INK 002} "He! Lat bitte die Finger
+davon! Ich wrde es begren, wenn Ihr mein Zimmer verlat!"]
+
+Block 187
+[Pl”tzlich erschallt ein Ruf aus einem verdeckten Nebengang!]
+
+Block 188
+[{CNTR}{INK 002}"Was habt Ihr hier zu suchen?"^^{FAHI}ALARM!]
+
+Block 189
+[{INK 002}"Ihr habt versucht, die inneren Bereiche Khamulons zu entweihen!"]
+
+Block 190
+[{INK 002}"Ergebt Ihr Euch in die Gefangenschaft?"]
+
+Block 191
+[{INK 002}"Ihr wollt Euch die Ehre des Kampfes erweisen? Sehr gut!"^^ {INK
+001}Die Kenget Kamulos greifen an!]
+
+Block 192
+[Weitere Kenget Kamulos erscheinen!]
+
+Block 193
+[Die Kenget Kamulos greifen sofort wieder an!]
+
+Block 194
+["Bringt sie in den Kerkerbereich!"]
+
+Block 195
+[Die Wache leitet die Gef„hrten in den Berg hinein. Weite G„nge in
+schummerigem Zwielicht durchziehen den Berg. Die Anlage mu riesig sein!]
+
+Block 196
+["Gre. Es passiert nicht oft, da wir in Khamulon Besuch bekommen.^^Erkl„rt
+den Grund Eures Hierseins. Keine H”flichkeits|floskeln, bitte! Kommt sofort
+zur Sache."]
+
+Block 197
+[Wie Ihr wnscht. Wir sind gekommen, um Euch ein Gesch„ft vorzuschlagen.^^Wir
+m”chten fr einen hohen Goldbetrag eine Aufzeichnung ber einen
+speziellen Aspekt Eurer magischen Kunst erwerben. Es handelt sich um das
+Wissen, wie groe Energiemengen magisch geb„ndigt werden k”nnen."]
+
+Block 198
+["{FAT }Ihr wollt das hohe Wissen?{NORS}^^Ihr habt die Stirn, uns um einen
+Kernbereich unseres magischen Wissens zu bitten?"]
+
+Block 199
+["Das ist wahr. {FAT }Ihr{NORS} habt um Offenheit gebeten. Wir haben eine
+wichtige Mission zu erfllen."]
+
+Block 200
+["Wir kmmern uns nie um die Beweggrnde unserer Besucher. Ihr habt recht,
+Eure Offenheit ist bemerkenswert.^^Bevor ich voreilig ablehne, werde ich diese
+Sache mit dem Cuain, unserem Oberhaupt, zu besprechen haben.^^Ich lasse Euch
+zu unseren G„stequartieren bringen. Ihr drft Euch in diesem Teil Khamulons,
+dem Bereich der Novizen und Sklaven, frei bewegen. Versucht nicht, in andere
+Teile vorzudringen.^^Ich lasse Euch in einiger Zeit wissen, wie unsere
+Entscheidung lautet."]
+
+Block 201
+[Die Gef„hrten werden durch lange G„nge und Hallen in ein ger„umiges Zimmer
+gefhrt.]
+
+Block 202
+["Hm, der Kenget Kamulos hat besser reagiert, als ich dachte. Zumindest hat er
+uns nicht gleich hinausgeworfen oder in Ketten gelegt."]
+
+Block 203
+["Glaubt mir, sie werden irgend etwas planen, das uns nicht gef„llt.^^Niemals
+werden die Kenget das hohe Wissen preisgeben."]
+
+Block 204
+["Nun, es bleibt uns wohl nichts anderes brig, als aufmerksam zu bleiben und
+abzuwarten.^^Lat uns hier ein wenig umschauen, je mehr wir ber diesen Ort in
+Erfahrung bringe k”nnen, desto besser."]
+
+Block 205
+["Mir ist gerade etwas eingefallen, was Euch sicher interessieren wird.^^Wie
+Ihr wit, bin ich der Meinung, da die Kenget Kamulos das hohe Wissen niemals
+freiwillig herausgeben werden. Wir mssen es uns daher ohne ihre Zustimmung
+holen.^^Aus meiner Novizenzeit ist mir eine Zelle bekannt, die einen Durchgang
+in einen Gang ”ffnet, der uns Zugang zu den inneren Bereichen erlaubt. Mit
+etwas Glck finde ich den Raum, in dem unter anderem Aufzeichnungen ber das
+hohe Wissen verwahrt werden.^^Was meint Ihr?"]
+
+Block 206
+[Soll Khunag alle zu der Zelle mit dem geheimen Zugang fhren? {BLOK000}Ja,
+sofort. {BLOK001}Nein, noch warten.]
+
+Block 207
+["Wie Ihr meint. Ich halte es fr die einzige M”glichkeit, an das hohe Wissen
+zu gelangen."]
+
+Block 208
+[Khunag fhrt die Gef„hrten zu einer Zelle im n”rdlichen Bereich der
+Novizen|r„ume.]
+
+Block 209
+["Hier ist es. Irgendwo mu ein versteckter Schalter sein."]
+
+Block 210
+["Verdammt. Es ist jemand in der Zelle."]
+
+Block 211
+["In dieser Zelle ist, wenn ich mich recht erinnere, der geheime Zugang zu den
+inneren Bereichen. Es mu hier irgendwo einen versteckten Schalter geben."]
+
+Block 212
+["Mir ist gerade etwas eingefallen, was Euch sicher interessieren wird.^^Wie
+Ihr wit, bin ich der Meinung, da die Kenget Kamulos das hohe Wissen niemals
+freiwillig herausgeben werden. Wir mssen es uns daher ohne ihre Zustimmung
+holen.^^Aus meiner Novizenzeit ist mir eine Zelle bekannt, die einen Durchgang
+in einen Gang ”ffnet, der uns Zugang zu den inneren Bereichen erlaubt. Dies
+hier ist die Zelle."]
+
+Block 213
+["Die Kenget lassen uns lange warten. Ich m”chte nochmal dringend raten, den
+geheimen Zugang zu benutzen. Wir haben eine gute Chance, das hohe Wissen zu
+stehlen!"]
+
+Block 214
+["Ich werde Euch ab und zu kurze Hinweise geben, wo wir uns befinden.^^
+Khamulon ist sehr gro, fast der ganze Berg wurde mit Hilfe von Sklaven und
+Magie ausgeh”hlt."]
+
+Block 215
+[Khunagh fhrt die anderen in eine Zelle am n”rdlichen Ende des Bereiches der
+Novizenzellen.]

@@ -1,0 +1,46 @@
+Melthar (Neues Ratsmitglied Nummer 2) / Phase 6
+
+Block 0         (FAQs)
+[{BLOK000}"Ich bin eines der neuen Mitglieder im 'Rat der Gerechten'. Die
+Arbeit ist fr mich eine echte Herausforderung. Will hoffen, da ich alles
+schaffe."]
+
+Block 1         (Begrung)
+["Himmel, ich glaube, er f„llt uns auf den Kopf!"{WORDWer?}{WORDRathaus}]
+
+Block 2         (Wer, Kopf, Himmel)
+["Na der Himmel...! Ich meine, ich glaube, der Himmel f„llt uns auf den Kopf.
+Mhm, entschuldigt bitte meine Hysterie. Ich bin nur v”llig durcheinander, weil
+so vieles schiefl„uft und sich ein Krieg anbahnt."{WORDKrieg}]
+
+Block 3         (Krieg, Histerie)
+["Sagt nur, Ihr wit darber nicht Bescheid? Aber das ist doch das
+Gespr„chsthema berhaupt! Ich verstehe berhaupt nicht..."{BLOK010}"Jetzt
+beruhigt Euch bitte wieder."{BLOK011}"Habt Ihr irgendwelche Neuigkeiten?"]
+
+Block 4         (Resp. 1)
+["ABER ICH BIN DOCH V™LLIG RUHIG! Oh bitte, ich glaube, ich bin dem
+Regierungsstre noch nicht so ganz gewachsen. Vielleicht liegt es auch an den
+schrecklichen Neuigkeiten, die man so h”rt."]
+
+Block 5         (Resp. 2, Neuigkeiten)
+["Es wird wohl nicht mehr lange dauern, bis wir hier Krieg haben. Es sind
+bereits bewaffnete Iskai- und Menschenkrieger am Heiligtum von Srimalinar
+versammelt. Und dabei ist es gar nicht so, da die ganze Bev”lkerung hinter
+Kontos Pl„nen steht. Zumindest kann ich das fr Beloveno sagen. Aber das
+wissen die Iskai leider nicht. Und sie glauben den Menschen auch nicht mehr.
+Wer wei, vielleicht wrden sie Euch glauben. Zumindest k”nntet Ihr einige
+Wahrheiten ber Kontos preisgeben..."{WORDHeiligtum}{WORDKontos}]
+
+Block 6         (Krieg, Heiligtum)
+["Leider wird es wohl auf einen Krieg hinauslaufen, wenn sich nichts mehr
+„ndert. An Eurer Stelle wrde ich da mal hinreisen."]
+
+Block 7         (Pl„ne, Kontos)
+["Ich glaube, die allerwenigsten wissen im Moment, was Kontos wirklich vorhat!"]
+
+Block 8         (Melthar)
+["Das bin ich."]
+
+Block 9         (Rathaus)
+["Mittlerweile drftet Ihr es ja schon gut kennen."]

@@ -1,0 +1,163 @@
+NPC 129: Bradir, Freund und Vize Akiirs, Phase 1 
+================================================ 
+ 
+Legende: 
++WORT+  = Neues Wort wird in die Wortliste eingetragen 
+"WORT"  = Antwort bei Auswahl dieses Wortes 
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y 
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert 
+(N)     = Normales Textfenster, beschreibender Text 
+WENN:   = Bedingung, Erl„uterungen 
+DANN:   = Resultat, Erl„uterungen 
+SONST:  = Wenn nicht, dann... 
+LEAD=x  = x wird zum Anfhrer fr diesen Dialog gemacht 
+ 
+ 
+Block 0 
+["{BLOK000}Ich bin nun das Oberhaupt der Gilde und kann mich doch nicht daran
+freuen."] 
+ 
+Block 1 [ ] 
+ 
+******************Unter-Allgemeinwissen fr Dji-Fadh************************* 
+ 
+Block 2         "Dji-Fadh, Former" 
+["Was wir tun, sehen wir als Mischung von Magie, Kunst und Handwerk an. Wir
+sind eine der „ltesten Gilden Jirinaars und wie Ihr sicher wit, k”nnen wir
+mit Hilfe unserer Magie Pflanzen erschaffen, ver„ndern und dauerhaft in eine
+gewnschte Form bringen. So sind wir in der Lage, komplette H„user aus
+lebendem Pflanzen|material erstehen zu lassen, die nicht nur sch”n anzusehen
+sind, sondern auch alle Funktionen erfllen, die fr das Wohlbefinden ihrer
+Bewohner notwendig sind."] 
+ 
+Block 3         "AKIIR" WENN: PHASE 0 
+["Ich trauere tief um den besten Freund, den ich hatte. Ich wei im Augenblick
+nicht, wie ich mit dem Verlust zurechtkommen soll."] 
+ 
+Block 4         "AKIIR" WENN: PHASE 1 
+[!] 
+ 
+Block 5         "AKIIR" WENN: PHASE 2 
+[!] 
+ 
+Block 6         "SIRA" 
+["Sira ist die einzige Tochter Akiirs. Sie ist zu den Dji-Kas gegangen, was
+Akiir sehr getroffen hat."] 
+ 
+Block 7 
+[] 
+ 
+Block 8         "DJI-KAS, MAGIER, ZAUBERER" 
+["Ich konnte einige meiner Gildegenossen nur mit Mhe davon abhalten, sich zu
+bewaffnen und in das Haus der Dji-Kas zu strmen."] 
+ 
+Block 9         "GILDENHAUS" 
+["Unser Gildenhaus konkurriert mit dem Ratsgeb„ude um den Titel des sch”nsten
+Bauwerks Jirinaars. Es wird von uns st„ndig gepflegt und ver„ndert und auch
+zur Vorfhrung unseres K”nnens benutzt, wie Ihr im ”stlichen Flgel sehen
+k”nnt."] 
+ 
+Block 10         
+[!] 
+ 
+Block 11        "FASIIR", WENN: Phase 1 
+["Kann es wirklich sein, da er Akiir gedungene M”rder geschickt hat? Ich wei
+es nicht."] 
+ 
+Block 12         
+[!] 
+ 
+Block 13 
+[dummy] 
+ 
+Block 14 
+[dummy] 
+ 
+Block 15 
+[dummy] 
+ 
+Block 16 
+[dummy] 
+ 
+Block 17 
+[dummy] 
+ 
+Block 18        "ARGIM" 
+["Ihr habt davon geh”rt? Nun, um ehrlich zu sein, Argims Geschichte ist ein
+wunder Punkt in der Geschichte unserer Gilde. Er war vor fast 150 Jahren das
+Oberhaupt der Dji-Fadh. Damals war das Gildenhaus der Dji-Fadh auerhalb der
+Stadt zu finden, ein pr„chtiges Geb„ude mitten im Wald nahe eines Han. Nun,
+Argim war ein groartiges Talent, aber von wankelmtigem Charakter. Dies war
+der Grund fr die Ablehnung seines gr”ten Zieles: ein Auserw„hlter zu werden.
+Als er von der Abweisung erfuhr, verlor er v”llig die Kontrolle ber sich. Er
+schwor, trotzdem die Unsterblichkeit erlangen zu wollen. In einem wahnwitzigem
+Ausbruch seiner Macht zerst”rte er das ganze Geb„ude und verwandelte es in
+einen seltsamen Ort, der heute von allen gemieden wird. Man sagt sogar, er
+h„tte seinen Geist diesem Ort aufgepr„gt."] 
+ 
+Block 19        "HAN" 
+["Es gibt Orte, wo die Kraft der G”ttin besonders zu spren ist und magische
+Handlungen verst„rkt werden, aber oft auch schwieriger sind. Ein solches
+Energiezentrum nennt sich Han."] 
+ 
+Block 20 
+[dummy] 
+ 
+***************************************************************************** 
+ 
+Block 21        Begrung 1.mal 
+["Dsarii-ma. Bitte fragt mich nicht nach Akiir, er war mein Freund und ich
+kann seinen Tod immer noch nicht fassen." {BLOK010}"Verzeiht, aber wir sind
+mit der Suche nach seinen M”rdern beauftragt. K”nnt Ihr uns etwas Hilfreiches
+sagen?"] 
+ 
+Block 22        Begrung 2.mal 
+["Dsarii-ma. Ihr seid immer noch auf der Suche nach dem flchtigen M”rder,
+nehme ich an." {BLOK010}"Das ist richtig, Bradir. Ist Euch vielleicht noch
+etwas eingefallen?"] 
+ 
+Block 23        Antwort auf MC21,10 
+["Oh, G”ttin! So, wie die Gesetze stehen, seid ja auch Ihr Menschen in diese
+Angele|genheit hinein|gezogen worden. Dabei tragt Ihr doch nun berhaupt keine
+Schuld an den Gescheh|nissen!^ Aber, um Eure Frage zu beantworten, ich kann
+Euch leider nicht weiterhelfen. Ich wei wirklich nicht, was in Fasiir
+gefahren ist."{WORDFasiir}{WORDMord}] 
+ 
+Block 24        Antwort auf MC22,10 
+["Nichts, was mit dieser Sache zu tun hat, werde ich je vergessen k”nnen. Ihr
+ahnt nicht, wie sehr ich mir wnschte, Euch etwas sagen zu k”nnen, aber ich
+kann Euch nichts Neues offenbaren."] 
+ 
+Block 25        WENN: Gespr„chsende 
+["Ich wnschte wirklich, ich h„tte Euch helfen k”nnen. Lebt wohl."] 
+ 
+Block 26        WENN: Der Gegenstand gezeigt wird 
+[{INK 001}Als {LEAD}{NAME} wortlos den Dolch vor Bradirs Augen h„lt, zuckt er
+zusammen und auch die Menschen erkennen den gequ„lten Ausdruck, der in seine
+Augen tritt. Er tritt n„her und sagt:^^ {INK 002}"Es ist seltsam. Nun, in
+diesem Augenblick, vor den ich mich am meisten frchtete, fhle ich eine
+seltsame Erleichterung. Verzeihe mir, Akiir!"^^ {INK 001}{FAT }Bradir greift
+an!] 
+ 
+Block 27 
+[Nun folgt ein Kampf, in dessen Verlauf man Bradir zum Aufgeben bringt oder
+"t”tet". "T”tet" man ihn, wird anschlieend davon ausgegangen, da er noch
+lebt. Er erkl„rt dann den Plan Akiirs. Anschlieend kommt ein Map-Exit zur
+Sebainah und Erkl„rung des Vorgefallenen.]
+
+Block 28 
+[Verletzt sinkt Bradir nach dem Kampf in die Knie. Der Schmerz vertreibt den
+wirren Ausdruck von seinem Gesicht und seine Augen werden wieder klar.] 
+ 
+Block 29       Drirr 
+["Wir mssen ihn schnell zur Heilerin bringen, sonst erfahren wir nie, warum
+er uns angegriffen hat!"] 
+ 
+Block 30 
+[Schnell wird Bradir zur Heilerin transportiert.^^Sobald er versorgt ist, gibt
+es im Ratsgeb„ude eine Versammlung im Raum der Sebainah, bei der Bradir sein
+Verhalten erkl„ren soll.^^ Neben Tom, Rainer und Drirr ist auch Sira als
+Tochter des Ermordeten Akiirs herbeigerufen worden.] 
+ 
+Block 31
+[NUR FšR DEBUGGING! ENCOUNTER BRADIR AUSFšHREN?]

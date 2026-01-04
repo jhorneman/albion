@@ -1,0 +1,78 @@
+
+NPC 109: Krinn, ein alter J„ger
+===============================
+
+Legende:
++WORT+  = Neues Wort wird in die Wortliste eingetragen
+"WORT"  = Antwort bei Auswahl dieses Wortes
+MCx,y   = Multiple-Choice-Text Nr.x (passend zum Textblock), MC-Text Nr.y
+OFF     = Standard-MC - S„tze (offer Gold etc.) werden deaktiviert
+(N)     = Normales Textfenster, beschreibender Text
+WENN:   = Bedingung, Erl„uterungen
+DANN:   = Resultat, Erl„uterungen
+
+
+Block 0
+[{BLOK000}"Mein Name ist Krinn, ich bin der Stri der Jagd im Sdwind-Clan und
+somit fr die Aus|bildung der jungen J„ger verantwortlich."
+{WORDJagd}{WORDAusbildung}{WORDStri}]
+                DANN: +JAGD+, +AUSBILDUNG+
+
+Block 1         Begrung 1.mal
+["Dsarii-ma, G„ste des Hauses."]
+
+Block 2         Begrung 2.mal
+["Dsarii-ma, Besucher. M”chtet Ihr noch etwas von mir wissen?"]
+
+Block 3         "JAGD" 1.mal
+["Die meisten unserer Clanmitglieder befinden sich st„ndig auf der Jagd nach
+wilden Weidetieren oder Raubtieren, wie dem Krondir oder dem Warniak. Ich
+selbst nehme schon seit drei Jahren nicht mehr daran teil, ich bin zu alt
+dafr. Bedenkt, da ich schon das acht|unddreiigste Jahr erreicht habe. Der
+Clan hat mir vor kurzem angeboten, mich beim Rat zum Sebai-Ritual
+vorzu|schlagen. Es hat mich sehr geehrt, aber ich habe abgelehnt."
+{WORDRat}{WORDSebai}{WORDClan}{WORDWarniak}{WORDKrondir} {BLOK010}"Ihr wrdet
+das Ritual ablehnen, Krinn? Darf man fragen, warum?"]
+
+Block 4         Antwort auf MC3,1
+["Es ist eine Frage der pers”nlichen Einstellung. Es wird allgemein
+angenommen, da ein Neuge|borenes ber keine eigene Pers”n|lichkeit verfgt.
+Mir wrde es trotzdem so vorkommen, als ob ich ein Leben einnehmen, ja
+ausl”schen wrde.^ Abgesehen davon: Ich hatte ein erflltes Leben und frchte
+das Ende nicht."]
+
+Block 5         "JAGD" 2.mal
+["Wie ich Euch erl„utert habe, bleibe ich aus Grnden des Alters lieber in
+diesem sch”nen Haus."{WORDHaus}]
+
+Block 6         "AUSBILDUNG",1.mal
+["Aufgrund meiner langen Erfahrung bringe ich den jungen J„gern alles bei, was
+sie zum šberleben und zur erfolgreichen Jagd wissen mssen, bis hin zur Jagd
+auf Raubtiere, wie Krondir und Warniak."{WORDKrondir}{WORDWarniak}]
+
+Block 7         "AUSBILDUNG",2.mal
+["Wie Ihr bereits wit, bringe ich den jungen J„gern alles bei, was sie zum
+šberleben und zur erfolgreichen Jagd wissen mssen."]
+
+Block 8         WENN: Phase 1, gespr. beendet
+["Ach ja: Auch ich habe von dem Mord an Akiir geh”rt. Viel Glck bei Eurer
+Jagd!"]
+
+Block 9         Verabschiedung
+["Lebt wohl."]
+
+Block 10           Warniak
+["Das Warniak ist ein riesiges, geflgeltes Knochentier. Es hat einen
+gefrchteten Giftstachel am Hinterleib, das Gift kann bis zur L„hmung fhren
+oder den Getroffenen in den Wahnsinn treiben.^^Trotzdem wird manchmal Jagd auf
+Warniaks gemacht, denn ihr K”rper enth„lt einen kugelf”rmigen Mineralvorrat,
+der fr heilende Medizin gebraucht wird. Die H„ndler zahlen hohe Preise fr
+die Warniak-Kugeln!"]
+
+Block 11           Krondir
+["Ein Krondir ist ein riesiges Raubtier, das vornehmlich auf zwei Beinen
+l„uft. Es hat groe Kraft und ist ein frchterlicher Gegner. Zum Glck sind
+die Krondir meist Einzelg„nger.^^Ihr Fleisch ist fast ungeniebar und wird
+h”chstens als K”der fr andere Raubkreaturen zu gebrauchen sein. Die Krondir
+tragen jedoch eine Struktur, „hnlich unserem Trii, auf ihrem Stirnhorn, das
+als Schmuckstck sehr begehrt ist. Man erzielt gute Preise dafr."{WORDTrii}]

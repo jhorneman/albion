@@ -1,0 +1,2129 @@
+
+!
+
+
+Beim Betreten der Bodenplatte vor der Tr leuchtet diese auf. Gleichzeitig
+”ffnet sich die Tr.
+
+
+Bodenplatte leuchtet auf.
+
+
+Hier befindet sich eine Bodenplatte mit einer transparenten Leuchtfl„che.
+
+
+Nachdem diese Bodenplatte aufleuchtet, ”ffnet sich im "Westen" des Raumes die
+Tr.
+
+
+Ein Schalter.
+
+
+Die Stellung des Schalters „ndert sich beim nochmaligen Drcken nicht mehr.
+
+
+Die Tr versucht sich zu schlieáen, bleibt aber offen. Offenbar hat ein
+Sensor bemerkt, daá noch jemand in der Tr steht.
+
+
+An der n”rdlichen Wand befindet sich ein Wandschrank.
+
+
+Der Wandschrank ist leer, bereit zur Aufnahme von Gegenst„nden.
+
+
+Ein Wandschrank.
+
+
+Das Ger„usch kam von rechts, aus einiger Entfernung.
+
+
+Sowie sich die Tr mit den roten Leuchten ”ffnet, schlieát sich hinten
+diejenige mit der grnen Markierung. Der Rckweg ist versperrt!
+
+
+Dies muá ein Serviceroboter sein. Er geht einer unbekannten Aufgabe nach.
+
+
+Eine Tr. Es ist kein ™ffnungsmechanismus zu erkennen.
+
+
+Eine Leuchtstoffr”hre. Sie strahlt kaltes, weiáes Licht ab.
+
+
+Ein Stahltr„ger.
+
+
+Die halbtransparenten W„nde markieren einen Servicezugang. Die Leiter in der
+Mitte fhrt nach oben.
+
+
+Eine Zehnertastatur zum Eingeben von Zahlencodes.
+
+
+Eine Tr mit roten Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.
+
+
+Eine Tr mit grnen Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.
+
+
+Eine Tr mit blauen Markierungsleuchten an der Seite. Es ist kein
+™ffnungsmechanismus zu erkennen.
+
+
+Die Zahlenkombination war offenbar korrekt: Die Tr neben der Tastatur hat
+sich ge”ffnet.
+
+
+Nichts passiert.
+
+
+Yeah! Made it!
+
+
+Eine Leiter. Sie fhrt nach oben.
+
+
+Das rhythmische Blinken der Bodenplatte deutet wohl auf eine besondere
+Funktion hin.
+
+
+Eine defekte Leuchtstoffr”hre.
+
+
+Tom deponiert die Waffe in dem Wandschrank.^^ "So. Wenn ich
+jetzt von der anderen Seite dieser Schleuse hier wieder an den Schrank
+drankomme, hab' ich die Secus gelinkt und die Waffe geh”rt mir!"
+
+
+"War bislang eine angenehme Reise, Driscoll."
+
+
+"Danke, ich bin in guter Fluglaune heute.^^Es ist vieles Routine in meinem
+Job, aber einen neuen Planeten anzufliegen, ist und bleibt das Gr”áte!"
+
+
+"Wem sagen Sie das! Gut, daá es meine Dienstelle nicht weiá, aber ich wrde
+sogar auf mein Gehalt verzichten, um diesen Augenblick zu erleben."
+
+
+"Wir kommen jetzt in Sichtweite!^^Sehen Sie sich das an, Hofstedt! Macht auf
+mich nicht den Eindruck einer Wstenwelt."
+
+
+"In der Tat! Viele Wolken, und die Farbe w„re fr Staubwolken ungew”hnlich,
+wenn man bedenkt, daá die Gelbf„rbung von der Sonne stammt."
+
+
+"Ich werde mit der TORONTO sprechen. Versuchen Sie w„hrend|dessen, etwas auf
+ihre Instrumente zu bekommen.^^Shuttle an TORONTO! Ned, wie ist der Kontakt?"
+
+
+"Die Verst„ndigung ist ausgezeichnet, Mr. Driscoll. Sie haben nun
+Sichtkontakt mit dem Ziel?"
+
+
+"Ja. Der Planet ist dem Augenschein nach nicht unbedingt eine Wste. Mr.
+Hofstedt befragt gerade die Instrumente."
+
+
+"Inter....nt. Oh, ich gl..be, die V..bind.g wird schw„..r. Aber fahr.n Sie
+fort."
+
+
+"Die dichte Wolkendecke macht die Messungen schwierig.^^Die Analyse weist in
+der Tat auf groáe Rohstoffmengen hin...^^Es scheint mehr Wasser zu geben als
+angenomm..."
+
+
+"Ein.. Moment, Mr. Hofst..t. Die Verb...n.g wird imm.r schw„ch.r. Haben Sie
+Schwier..keit.n? Mr. Driscoll?"
+
+
+"Nein. Alles scheint im grnen Bereich zu sein."
+
+
+"Wow! Ich h„tte es nicht beschreien sollen!^^ Ausfall der Servos!
+Ersatzkreise gehen schnell 'runter! Versuche, manuell etwas zu
+machen!^^Hofstedt?"
+
+
+"Versuche, 'n Check zu fahren!"
+
+
+"Mr. Dr..coll? Ihr Status zeig. kriti...e Werte. Erbitte Bericht!"
+
+
+"Ausfall mehrerer Systeme! Manuelle Steuerung O.K.! Versuche umzukehren!"
+
+
+"Wir haben Probleme mit der Energieversorgung. Ich... HEY!"
+
+
+"Das hat geknallt! Scheiáe, ich verliere die Kontrolle!^^ Hofstedt, halten
+Sie sich fest!^^WIR GEHEN RUNTER!"
+
+
+Das Shuttle ist bereits im Schwerkraftfeld des Planeten und strzt schnell
+auf ihn zu!^^Harte St”áe erschttern das kleine Schiff, als es in die
+Atmosph„re eindringt.^^ Tom arbeitet fieberhaft und schafft mit den Resten
+manueller Kontrolle eine krachende Bruchlandung...^^^^Langsam kommen die
+M„nner wieder zu sich.
+
+
+"Ohh, mein Kopf!^^Mit Ihnen fliege ich so schnell nicht wieder, Driscoll."
+
+
+"Bestimmt nicht mit diesem Shuttle.^^Auáerdem, Sie k”nnen mir dankbar sein,
+daá Sie noch leben! Die Automatik h„tte die Kiste nie heil heruntergebracht!"
+
+
+"O.K., O.K. Ist schon klar.^^Und nun?"
+
+
+"Nun schnappen wir uns die Masken, und steigen aus. ^^Wenn die Luft zum Atmen
+reicht, gehen wir die Vorr„te durch und fangen an zu basteln, um einen
+Funkkontakt herzustellen.^^Wenn die Luft zu dnn ist... Gute Nacht."
+
+
+Oh, Mann.^^Was soll's. Hat keinen Zweck, es herauszu|z”gern.^^Gehen wir!"
+
+
+"MEIN GOTT! Das ist also die Wstenwelt! Ich werde verrckt! Schauen Sie doch
+nur!"
+
+
+"Phantastisch! Riechen Sie nur! H”ren Sie! Hier wimmelt es von Leben!"
+
+
+"Wie konnte die Sonde nur solche Daten senden? Das ist eine Sensation!"
+
+
+"Lassen Sie uns zuerst vom Shuttle weggehen. In dieser sauerstoff|reichen
+Atmosph„re k”nnte es..."
+
+
+Alles um Tom herum versinkt in Licht, dann in Dunkelheit, die fr eine lange
+Zeit anh„lt. Dann beginnt Tom wieder, seinen Traum zu tr„umen...
+
+
+ FEDDICH !
+
+
+Wieder dieser Traum.
+
+
+Muá irgendwann mit Chris darber reden. Zeit, aufzuwachen. Muá den Flug
+vorbereiten.
+
+
+Der Flug.^^Das Shuttle. ^^War bereits dort. ^^Ist schon geschehen.
+^^^^Schmerzen. ^^^^^Irgend|etwas ist falsch, etwas stimmt nicht. Mehr
+Schmerzen! ^^^^^^^Was ist passiert?
+
+
+Gott, der Absturz!^^Was war dann? Oh, Scheiáe, die Schmerzen, warum wache ich
+nicht auf? ^^Hofstedt und ich gehen hinaus... ^^^^Alles voller Pflanzen und
+Tiere, der Planet lebt! Die Farben, das Grn, alles ist grn...
+
+
+Srrniak? Rriiba nes anrji. Frinaard dra besiir wreniid?
+
+
+"Was um alles in der Welt... ^^WO BIN ICH? ^^Wer, WAS ist das?
+^^Ich dachte, ich w„re WACH! ^^^Ich muá hoch, um...^ "Aaauh! Oh, Scheiáe!"
+
+
+"Ein recht deutliches Genesungs|zeichen, sch„tze ich. Willkommen unter den
+Lebenden!"
+
+
+ 
+
+
+Ein Sicherungskasten.
+
+
+Ein Sessel.
+
+
+Eine Liege.
+
+
+Das Steuerpult fr den Atomreaktor.
+
+
+Ein Servicepanel. In der Mitte befindet sich eine Tastatur zur Eingabe eines
+Codes.
+
+
+Eine Steuerungskonsole.
+
+
+Eine Flugsteuerungskonsole.
+
+
+Ein Kontrollpult.
+
+
+Eine chemische Toilette.
+
+
+Ein Schrank.
+
+
+Eine Sple.
+
+
+Handtcher.
+
+
+Zahnputzzeug.
+
+
+Eine Anzeige fr die Korridor-šberwachung.
+
+
+Kontroll-Anzeigen.
+
+
+Ein Teil des Reaktors.
+
+
+F„sser mit Mll, Wasser, Gift- und Rohstoffen.
+
+
+Eine ausgeschaltete Konsole.
+
+
+Eine Lampe.
+
+
+Ein Teller.
+
+
+Ein Glas.
+
+
+Ein Becher.
+
+
+Ein Beh„lter.
+
+
+Eine Flasche.
+
+
+Eine Kanne.
+
+
+Eine Dose.
+
+
+Ein Gef„á.
+
+
+Ein Pfeffer- und ein Salzstreuer.
+
+
+Sojasoáe.
+
+
+Ein Topf.
+
+
+Eine kleine Dose.
+
+
+Eine Schaufel.
+
+
+Ein Spaten.
+
+
+Ein Schraubenschlssel.
+
+
+Ein Schraubenzieher.
+
+
+Eine Handkonsole.
+
+
+Ein PDA. (Personal Digital Assistent)
+
+
+Eine Zange.
+
+
+Besteck und ein Becher.
+
+
+Geschirr.
+
+
+Eine Automatik-Tre.
+
+
+Ein Shuttle.
+
+
+Container.
+
+
+Eine Dusche.
+
+
+Ein Fahrzeug.
+
+
+Bodenmarkierungen.
+
+
+Platzhalter fr weitere Cutmap-Events.
+
+
+"Schon wieder dieser Traum. Muá das zehnte Mal sein; was soll das nur?^^ Kann
+mich auch nicht erinnern, je in Farbe getr„umt zu haben...^^ Na ja, werde mir
+noch ein wenig die Fáe vertreten. Hoffentlich wird bald durchgegeben, wann
+ich das Shuttle zu unserem Vorausflug starten soll."
+
+
+"Hallo Groáer! Na, ausgeschlafen?"
+
+
+"Christine! Sch”n, Dich zu sehen, Schatz!^ Ich fhle mich wie ger„dert. Du
+hattest mal wieder recht, gestern abend. H„tte doch bei Dir schlafen sollen.
+Ich hatte wieder diesen verrckten Traum. Er wird jedesmal... deutlicher."
+
+
+"Ist schon verrckt. Du bist doch sonst kein Sensibelchen. Hat bestimmt was
+mit dem over-c - Sprung zu tun. Bleib' heute Nacht bei mir, und ich werde Dir
+die Alptr„ume schon austreiben!"
+
+
+"Der Traum begann schon vorher, und es ist eigentlich auch kein Alptraum. Er
+ist nur so intensiv!^^ Ach egal, was soll's. Ich werde mal 'ne Runde drehen.
+Vielleicht treffe ich K„pt'n Brandt und bekomme heraus, wann ich mit Snoopy
+starten soll."
+
+
+"Snoopy? Hast Du denn nicht...? Junge, Du muát einen guten Schlaf haben. Die
+Explosion war durch das ganze Segment zu spren!"
+
+
+"Explosion? Mach's nicht so spannend! Von was redest Du, Chris? Was ist mit
+Snoopy?"
+
+
+"Der Inspektor hat w„hrend des Sprunges an der over-c - Comanlage gesessen.
+Das Ding hat sich berladen und ist f”rmlich explodiert. Snoopy's Bestandteile
+waren im ganzen Raum zu finden, heiát es."
+
+
+"Was fr'n Hammer! Junge, das muá ich erstmal verdauen! Dann ist Hofstedt nun
+der einzige Regierungs|beauftragte an Bord."
+
+
+"Ja, ich habe geh”rt, daá Du den Vorausflug nun mit ihm anstatt Snoopy
+unternehmen sollst."
+
+
+"Der Tag f„ngt ja hervorragend an. Na ja, Hofstedt ist ganz in Ordnung, und
+an meinem Flugplan „ndert sich durch den Unfall sicher nichts. Ich werde mal
+eine Runde mit Joe ber die Sache quatschen."
+
+
+"Dein Kumpel ist heute im Nordosten des Segmentes eingeteilt, in der N„he des
+Zugangs zum Comraum.^^ O.K. Ich werde mich auch mal auf'n Weg machen. Hab'
+noch viel Arbeit. Bis dann, Sáer."
+
+
+"Tschá, Christine."
+
+
+Diese Tr ist verschlossen.
+
+
+"hem, Driscoll: Sei mir nicht b”se, aber ich h„tte jetzt gern etwas
+Privatsph„re. Bitte bleib' drauáen."
+
+
+"Hier gibt es nichts zu sehen. Gehen Sie bitte weiter."
+
+
+Dies ist Rainer Hofstedt, Physiker und Xenobiologe und
+Aufsichts|beauf|tragter der Regierung. Aufgeregt beginnt er ein Gespr„ch.
+
+
+"Driscoll! Gut, daá ich Sie treffe! Haben sie schon vom Tod Inspektor Beegles
+geh”rt?"
+
+
+"Hallo, Hofstedt. Ja, meine Lebensgef„hrtin hat mir gerade von der Sache
+berichtet. Muá ja ein scheuálicher Anblick gewesen sein!"
+
+
+"Dieser sture britische Dicksch„del! Er war zwar kein Techniker, aber daá der
+Betrieb der Comanlage w„hrend des over-c - Sprunges nicht problemlos ist,
+h„tte er eigentlich wissen mssen. Diese ganze šberlichttechnik ist noch lange
+nicht v”llig unter Kontrolle. Der arme Teufel!"
+
+
+"Das macht Sie nun zum einzigen Regierungs|repr„sentanten an Bord, nicht
+wahr?"
+
+
+"Der einzige Schnffler, ja. Erinnern Sie mich bloá nicht daran!^^ Wie dem
+auch sei: Ich hatte gerade ein Gespr„ch mit Kapit„n Brandt. Er will den
+Vorausflug trotzdem durchfhren, mit meiner Wenigkeit anstelle von Beegle.^^
+Sieht aus, als h„tten Sie einen neuen Passagier, Driscoll."
+
+
+"Ich m”chte nicht piet„tlos erscheinen, aber dem Shuttle ist es gleich,
+welche zwei Personen es bef”rdert. Von mir aus kann der Flug planm„áig
+stattfinden."
+
+
+"Ich muá zugeben, daá ich mich sehr auf den Flug freue. Der Abflug sollte in
+den n„chsten Tagen stattfinden. Wir mssen wohl auf die Durchsage des Kapit„ns
+warten."
+
+
+"So ist es.^ Wir sehen uns sicher noch vorher. Bis dann, Hofstedt!"
+
+
+"Ja, bis dahin, Driscoll."
+
+
+"Grá' Sie, Driscoll. Viel Glck bei ihrem Flug."
+
+
+Der Sicherheitsmann wirft Tom nur einen miámutigen Blick zu. Er
+antwortet nicht.
+
+
+"Hallo, Driscoll! Habe geh”rt, Du hast 'nen neuen Passagier, jetzt, wo sie
+den Inspektor von der Wand gekratzt haben.^Ich drck' Dir jedenfalls die
+Daumen fr den Flug."
+
+
+"Hi, Tom. Sorry, bin 'n biáchen in Eile. Voller Dienstplan! Bis sp„ter."
+
+
+"Hallo, Tom. M”chte zu gern wissen, wie es jetzt im Comraum aussieht, wo es
+Snoopy erwischt hat. Zu bl”d, das die Secus davor Wache schieben."
+
+
+Tom versucht, die letzten Nachrichten von der Konsole abzurufen. Vor
+den Meldungen erscheint folgendes:^^ ***Videodaten nicht
+verfgbar***^ ***Comverbindung nicht aktiv***^^ Textmodus aktiviert.
+
+
+"Hallo, Driscoll. Na, noch einen Blick auf Ihr Shuttle werfen? Ist alles in
+bester Ordnung mit dem Ding."
+
+
+NEWSFLASH (Textmodus):^^ "Europ„ische Union: Der 14. Versuch der
+Einfhrung einer ein|heit|lichen, offi|ziellen W„hrung ist am Widerstand
+Deutschlands gescheitert."
+
+
+NEWSFLASH (Textmodus):^^ "McCartney-Erben rufen Inter|nationalen
+Gerichts|hof an. Bedroht der Enteignungs|versuch Brasiliens an den
+McCartney-Erben die letzten zusammen|h„ngenden Regen|wald|gebiete? Besitz der
+Erben|gemein|schaft soll durch Eingreifen der Schutztruppen gesichert werden,
+fordern einige Staaten."
+
+
+NEWSFLASH (Textmodus):^^ "Rom. Papst Johannes Paul der 14.
+ver”ffentlichte heute seine Enzyklika zum Schutz des ungeborenen Lebens. Darin
+bekr„ftigt der Vatikan seine Standpunkte gegenber der Geburtenkontrolle und
+der Frage der Abtreibung. Auch weiterhin haben der Enzyklika zufolge Werden
+und Schutz des ungeborenen Lebens absoluten Vorrang vor 'individualistischen
+Partikularinteressen', wie es in dem Papier heiát. Abtreibung sei auch
+weiterhin nur erlaubt, wenn das Leben der Mutter nicht anders erhalten werden
+kann. Die Schwangerschaftsverhtung bezeichnete der Papst als
+'verdammenswerten Eingriff in die biologischen Hoheitsrechte Gottes'. Auch
+eine st„ndig wachsende šberbev”lkerung k”nne kein Grund sein, von diesem
+Zivilisationsprinzip abzurcken."
+
+
+NEWSFLASH (Textmodus):^^ "Brssel. Der Innenminister der
+Vereinigten Staaten von Europa, John McDermott, bezeichnete die jngste
+Enzyklika des Vatikans als 'weitere, fr diese Sekte kennzeichnende
+Verleugnung aller Realit„ten dieser Welt.' In diesem Zusammenhang wies
+McDermott auf die st„ndig steigenden Mitgliederzahlen religi”ser Sekten hin,
+hinter denen in der Regel nichts anderes stehe, als der Versuch, mit Hilfe von
+Gehirnw„sche an die Verm”gen der Mitglieder zu gelangen. Erschreckend sei
+insbesondere die hohe Anzahl Jugendlicher und junger Erwachsener, die Opfer
+dieser Methoden wrden. McDermott kndigte eine versch„rfte Beobachtung des
+Vatikans durch europ„ische Agenten an. Insbesondere wolle man die enorm
+angewachsene Rstungsindustrie des Vatikan unter Beobachtung halten. In
+jngster Zeit vermehren sich die Anzeichen, daá der Vatikan auch ber
+biologische Waffensysteme verfgt."
+
+
+NEWSFLASH (Textmodus):^^ "Stuttgart-Tokio. Ein Sprecher des
+DDT-Konzerns trat heute an die ™ffentlichkeit, um erstmals auf Gerchte zu
+reagieren, ein Fabrikschiff des Konzerns, die 'Toronto', sei auf einer Mission
+im All verschollen. Tatsache sei, so der Konzernsprecher, daá die Funkanlage
+des Schiffs ausgefallen sei. Das Schiff selbst sende allerdings weiterhin
+Ortungssignale von einem Wstenplanet namens Nugget im Sektor HR-13- 4198. Man
+gehe davon aus, daá die Systeme des Schiffes normal arbeiten und in wenigen
+Jahren die ersten Frachtschiffe der Toronto auf der Erde eintreffen werden.
+Eine Bergungsmission sei deshalb unn”tig und k„me fr den mit absoluter
+Sicherheit ausschlieábaren Katastrophenfall auch zu sp„t, da eine Reise zu
+diesem Planeten mindestens drei Jahre in Anspruch n„hme. An der B”rse erholte
+sich in Folge dieser Pressemitteilung der Kurs der Wert der DDT-Aktien nur
+wenig."
+
+
+NEWSFLASH (Textmodus):^^ "Straáburg. Auf der Jahrestagung
+europ„ischer Sozialp„dagogen wurde heute eine Resolution verabschiedet, in der
+die europ„ische Staatsregierung aufgefordert wird, das Beten mit
+Minderj„hrigen ab sofort unter Strafe zu stellen. Es k”nne nicht angehen, so
+die 1. Vorsitzende der ESP, Annagret Bergmann-Lampe, daá wehrlose Kinder den
+oft brutalen Weltuntergangs- oder Erl”sungsszenarien beinahe aller Religionen
+schutzlos ausgeliefert seien. In jngster Zeit, so die Vorsitzende, sei es an
+europ„ischen Schulen vermehrt zu religi”s motivierten Graffitos gekommen. Es
+reiche nicht aus, so Bergmann-Lampe, die šbelt„ter hart zu bestrafen. Man
+msse sie vielmehr als Suchtkranke erkennen und behandeln."
+
+
+NEWSFLASH (Textmodus):^^ "Genf. Die Auáenminister der
+europ„ischen, amerikanischen und asiatischen Staatengemeinden trafen sich
+heute zu ihrer halbj„hrlichen Routinekonferenz ber die weitere friedliche
+Zusammenarbeit, RwfZ. Unbersehbar im Vordergrund stand dabei der Handelskrieg
+zwischen den Amerikanern und Asien. Gegenseitige Vorwrfe ber zu hohe
+Schutzz”lle pr„gten das Bild. Die Drohung des asiatischen Kaisers, man werde
+das gemeinsam geplante Tunnelprojekt unter der Beringsee platzen lassen, war
+aber nicht Thema der Tagung. Mit einer gemeinsamen Abschluáerkl„rung wird
+nicht vor morgen abend gerechnet."
+
+
+NEWSFLASH (Textmodus):^^"Den diesj„hrigen Gatespreis fr
+Plasmaphysik errang der Chinese Huo Wong Gang fr eine bahnbrechende Arbeit
+auf dem Gebiet der Grundlagenforschung. Wong Gang erhielt den mit 470
+Millionen Credits dotierten Preis als erster Chinese. Der Gatespreis wird seit
+154 Jahren an herausragende Wissenschaftler und Gesch„ftsleute verliehen."
+
+
+NEWSFLASH (Textmodus):^^ "Eine Meldung vom Sport. Golf. Im
+Nationscupspiel zwischen Irak und den USA steht die Partie nach 3 von 5 Runden
+2:1 fr den hohen Favoriten aus Amerika."
+
+
+NEWSFLASH (Textmodus):^^ "Die Erdbebenwarnung fr morgen, den 9.
+September 2230. Im Bereich des Sankt Andreas Grabens kommt es zu keinen
+nennenswerten Erschtterungen. Nach dem groáen Beben vom vergangenen Jahr
+bauen sich erneute Spannungen zwischen der amerikanischen Festlandsplatte und
+der pazifischen Platte nur sehr langsam wieder auf. Lediglich im Bereich von
+Los Angeles kann es zu einigen kleineren Erschtterungen kommen, die
+allerdings den Wert von 3.5 auf der nach oben offenen Richterskala nicht
+berschreiten drften. Ruhig verhalten sich auch die japanischen
+Kstenregionen, dort ist mit keinen Beben zu rechnen. Ein wenig unruhig k”nnte
+es aber im n”rdlichen Mittelmeer, westlich von Athen werden. Die Messungen der
+internationalen Bebenwarten rechnen mit einem Beben etwa der St„rke 5, das
+allerdings kaum Auswirkungen auf die griechische Provinzhauptstadt haben wird."
+
+
+NEWSFLASH (Textmodus):^^ "Im Tarifkonflikt zwischen
+Raumfahrergewerkschaft und den supranationalen Raumzentren konnte auch heute
+keine entscheidende Ann„herung der unterschiedlichen Positionen erreicht
+werden. Die Arbeitnehmervertreter drohten mit Warnstreik, wenn die Arbeitgeber
+nicht bis zur n„chsten Verhandlungsrunde ein akzeptables Angebot vorgelegt
+h„tten. In der Hauptsache geht es in diesem Konflikt um eine Beteiligung der
+raumfahrenden Wissenschaftler an den durch ihre Experimente entstandenen
+Patenten. W„hrend die Arbeitgeberseite jede Beteiligung kategorisch 'in den
+Bereich der Utopie' verweist, so ein Firmensprecher, rechnet die Gegenseite
+vor, daá alleine dieses Jahr aus den Patenten von im Weltraum erzielten
+Forschungsergebnissen 400 Milliarden Credits Tantiemen verteilt wrden. 'Von
+diesem Kuchen', so ein Gewerkschaftssprecher, 'h„tten wir gerne ein Stckchen
+ab.'"
+
+
+NEWSFLASH (Textmodus):^^ "Nrnberg. Der Pr„sident der
+europ„ischen Anstalt fr Arbeit, Jagoda, legte heute seinen Bericht fr den
+Monat August vor. Demnach waren im August 76 Millionen Menschen in Europa ohne
+Arbeit, das entspricht einer Arbeitslosenquote von 16,7%. Der Sprecher der
+sozial”kologischen Opposition im Europaparlament, Guiseppe Piscator,
+verurteilte in diesem Zusammenhang die, so Piscator, hemmungslos unsoziale
+Politik der Unionsregierung, die den supranationalen Konzernen Rekordgewinne
+gestatte und gleichzeitig einer zunehmenden Verslumung der europ„ischen
+Groást„dte tatenlos zus„he. W”rtlich sagte Piscator: 'Ganz offensichtlich hat
+die Regierung ein pers”nliches Interesse daran, daá in Europa bald
+amerikanische Verh„ltnisse herrschen. Die Opposition wird diesem Rckfall in
+den Thatcher- Kapitalismus nicht tatenlos zusehen!'"
+
+
+NEWSFLASH (Textmodus):^^ "Am morgigen Montag beginnt in weiten
+Teilen Europas wieder die Schule nach den groáen Sommerferien. Das
+Unionsverkehrsministerium bat heute deshalb alle Indipiloten, in den n„chsten
+Tagen besonders rcksichtsvoll zu fliegen, da wie jedes Jahr viele
+Erstkl„ssler unterwegs seien. Seien Sie also bitte vorsichtig."
+
+
+"NEWSFLASH (Textmodus):^^ 3.Oktober und kein Ende. Der Vorschlag
+der Arbeitgeberverb„nde, den deutschen Nationalfeiertag 3.Oktober zugunsten
+der allgemeinen Ausbildungspflichtversicherung zu streichen, st”át weiterhin
+auf Widerstand. Heute meldete sich die Sudetendeutsche Landsmannschaft zu
+Wort, deren Vorsitzender, Herbert Hupka VI., davor warnte, diesen Tag aus dem
+Ged„chtnis der Deutschen zu streichen, bevor das Sudetenland nicht wieder
+deutsch sei. Gestern hatte schon die deutsche Landesregierung Bedenken gegen
+die Pl„ne ge„uáert. Eine Reaktion der Unionsregierung steht noch aus."
+
+
+NEWSFLASH (Textmodus):^^ "Die Erdbebenwarnung fr morgen, den 9.
+September 2195. Im Bereich des Sankt Andreas Grabens kommt es zu keinen
+nennenswerten Erschtterungen. Nach dem groáen Beben vom vergangenen Jahr
+bauen sich erneute Spannungen zwischen der amerikanischen Festlandsplatte und
+der pazifischen Platte nur sehr langsam wieder auf. Lediglich im Bereich von
+Los Angeles kann es zu einigen kleineren Erschtterungen kommen, die
+allerdings den Wert von 3.5 auf der nach oben offenen Richterskala nicht
+berschreiten drften. Ruhig verhalten sich auch die japanischen
+Kstenregionen, dort ist mit keinen Beben zu rechnen. Ein wenig unruhig k”nnte
+es aber im n”rdlichen Mittelmeer, westlich von Athen werden. Die Messungen der
+internationalen Bebenwarten rechnen mit einem Beben etwa der St„rke 5, das
+allerdings kaum Auswirkungen auf die griechische Provinzhauptstadt haben wird."
+
+
+Eine Konsole zum Abruf von Nachrichten.
+
+
+Ein riesiges Schott.
+
+
+"Guten Abend, Tom! Komm rein und laá uns einen gemtlichen Abend verbringen."
+
+
+In dieser Nacht bleibt Tom von seinem Traum unbehelligt...^^ Einige Zeit
+sp„ter, Tom verl„át Christines Kabine.
+
+
+Dies ist die Tr zu Christines Kabine. Sie ist im Moment nicht anwesend.
+
+
+Dies ist die Tr zu Christines Kabine.^ Chris scheint anwesend zu sein.
+
+
+An die Tr klopfen?
+
+
+"Hallo, Tom! Sch”n, Dich zu sehen. Komm rein, wir machen es uns gemtlich."
+
+
+Eine Tastatur zur Eingabe von Zahlencodes.
+
+
+FALSCHER CODE. ™FFNUNG VERWEIGERT.
+
+
+™FFNUNGSCODE EINGEBEN:
+
+
+Tom steigt in die Service-Ebene hinab.
+
+
+CODE KORREKT. ™FFNE SERVICEPANEL.
+
+
+Die Leiter fhrt hinab in die Service-Ebene.
+
+
+Dies ist tats„chlich der Comraum! Tom sieht sich vorsichtig um, aber niemand
+ist hier. In der Luft h„ngt der Geruch nach verschmorter Elektronik.
+
+
+Das sind also die šberreste der Comanlage. Die Explosion muá in der Tat
+verheerend gewesen sein.
+
+
+Tom will sich gerade abwenden, da f„llt sein Blick auf einen Gegenstand, der
+unter der zerst”rten Konsole liegt. Es ist eine Waffe!
+
+
+"Wie um alles in der Welt kommt die Kanone hierher? Auáer fr Secus sind
+Waffen an Bord strengstens verboten!^^ Ein interessanter Fund jedenfalls..."
+
+
+Die zerst”rte Comanlage. Es ist nichts weiter Interessantes dort zu finden.
+
+
+Die zerst”rte Comanlage. Darunter liegt etwas!
+
+
+Scherben der zerst”rten Comanlage.
+
+
+Auf den Gesichtern der Sicherheitsoffiziere ist erst Verblffung, dann Zorn
+zu sehen, als sie jemanden aus dem von ihnen bewachten Bereich spazieren sehen!
+
+
+"Bleiben Sie stehen, Driscoll! Wie kommen Sie in den abgesperrten Bereich?^^
+Rhren Sie sich nicht, wir werden eine Leibesvisitation durchfhren!"
+
+
+Colonel Priver tastet Tom ab...
+
+
+"In Ordnung. Sie k”nnen gehen. Aber das wird Folgen fr Ihre Personalakte
+haben, das kann ich ihnen versprechen!"
+
+
+"Eine Waffe! Driscoll, sind Sie wahnsinnig? Das wird Folgen fr Ihre
+Personalakte haben, darauf k”nnen Sie sich verlassen!^^ Verziehen Sie sich,
+Sie werden von uns h”ren!"^^ Colonel Priver hat die Waffe konfisziert!
+
+
+"Schon wieder Sie! Sagen Sie, suchen Sie rger, oder was?"
+
+
+"Bleiben Sie ruhig!"^^ Colonel Priver durchsucht Tom grndlich.
+
+
+Dies ist Toms Aufbewahrungsort fr private Gegenst„nde.
+
+
+Dies war der Raum Inspektor Beegles.
+
+
+In diesem Schrank sind eine Menge Patronen!
+
+
+Stimdrinks. Eine abgestimmte Mischung hochwirksamer Medikamente.
+
+
+Spezialwerkzeuge dieser Art lassen sich hervor|ragend zum Knacken von
+mecha|nischen Schl”ssern zweck|entfremden!
+
+
+Hier ist Nahrung in Form von Konzentrat-Riegeln zu finden.
+
+
+Dies ist der Shuttlehangar der TORONTO. Von hier aus werden alle Flge der
+kleinen Raumfahrzeuge gestartet.
+
+
+Eine Lautsprecherdurchsage hallt durch die G„nge des Schiffes:^^
+"Durchsage fr Pilot Driscoll: Shuttle zum Start vorbereitet.
+Startaufruf folgt in Krze."
+
+
+Eine Lautsprecherdurchsage:^^ "Durchsage fr Pilot
+Driscoll: Bitte melden Sie sich zum Start des Erkundungsfluges."
+
+
+Eine Lautsprecherdurchsage:^^ Letzter Aufruf an Pilot
+Driscoll. Finden Sie sich sofort zum Start im Shuttlehangar ein!
+
+
+"Also gut. Ich muá mich wohl auf den Weg machen."
+
+
+Tom l„uft mit eiligen Schritten zum Shuttlehangar. Er wird dort bereits
+erwartet.
+
+
+Nun folgt eine dicke Scriptsequenz: Tom & Rainer fliegen los und
+strzen ab!
+
+
+Im Shuttlehangar wird Tom bereits erwartet. Schnell l„uft er zu dem
+vorbereiteten Shuttle.
+
+
+Dieses Schott fhrt zu den Kabinen des Fhrungspersonals und des Kapit„ns.
+Der Zutritt ist fr andere Crewmitglieder nicht m”glich.
+
+
+Hier geht es in das Segment der TORONTO, das die Krankenstation und die
+Unterknfte des Sicherheits|personals enth„lt. Regul„re Besatzungs|mitglieder
+haben hier keinen Zutritt.
+
+
+"Aha, endlich ist es soweit. Ich sollte nicht vergessen, alles mitzunehmen,
+was ich auf diesem Flug dabei haben m”chte, wenn es losgeht."
+
+
+Yep.
+
+
+Dies ist der Shuttlehangar.
+
+
+Das Schott zur Kommandobrcke. Nur wenige Besatzungs|mitglieder haben hier
+Zutritt, Tom geh”rt nicht zu ihnen.
+
+
+Dies ist die Messe des Schiffes, Treffpunkt und Verpfleg|ungsraum fr die
+Besatzung.
+
+
+Vor dem Eingang zum Comraum, wo die Kommuni|kations|anlagen des Schiffes
+unter|gebracht sind, stehen zwei Sicherheits|beauftrage Wache.
+
+
+Hinter der unteren Tr ist der Raum, in dem Joe, ein alter Freund Toms,
+gerade arbeitet.
+
+
+Zum Start des Shuttlefluges melden? Ja, starten Nein, noch
+warten
+
+
+Tom geht zu einer Konsole und gibt seine Startbereitschaft durch.^^ Kurz
+darauf im Shuttlehangar...
+
+
+Tom beschlieát, den Aufruf vorerst zu ignorieren.
+
+
+Bitte bedenken Sie: dies ist eine Preview-Version. Wir bitten,
+Bugs, fehlende Teile und mangelnde Feinabstimmung zu entschuldigen.^^^^
+ KURZINFO FšR PREVIEWVERSION:^^ Sie sind TOM DRISCOLL, ein
+Shuttlepilot an Bord der TORONTO. Die TORONTO ist ein Fabrik|raumschiff eines
+irdischen Konzerns, dessen Aufgabe der Abbau von Rohstoffen in groáem Stil
+ist. Das Ziel der TORONTO ist ein Planet, der NUGGET genannt wurde, eine
+Wstenwelt mit groáen Rohstoffvorkommen.^^ Sie sollen in Krze mit einem
+Regierungs|kontolleur, Mr. BEEGLE, genannt SNOOPY, einen Vorausflug in einem
+kleinen Shuttle unternehmen, um den Zielplaneten vorab n„her zu
+untersuchen.^^ Ihnen n„her bekannte Personen:^ CHRISTINE - Technikerin
+und ihre derzeitige Partnerin.^ RAINER HOFSTEDT - Wissenschaftler und zweiter
+Regierungs|beauftragter an Bord.^ JOE - Techniker und ein alter Freund von
+ihnen.^^ Dieses Szenario dient zur Einfhrung in die Handlung, es gibt
+noch keine K„mpfe. Sprechen Sie mit Personen, um n„here Informationen zu Ihrer
+Situation zu erhalten. Es gibt auch ein Puzzle zu l”sen; bei Erfolg kann man
+einen Gegenstand behalten, der einem das sp„tere Vorankommen erleichtert.^^
+Die Handlung setzt direkt nach dem Intro (siehe CD) ein. TOM erwacht aus
+seinem seltsamen Traum und beginnt seinen Tag.^^^ LOS GEHTS!
+
+
+Als Tom auf den Gang hinaustritt, sieht er von rechts Christine, seine
+Lebens|gef„hrtin, auf sich zukommen.^^Freudig geht er ihr entgegen, um mit ihr
+zu sprechen.
+
+
+- S C R I P T S E Q U E N Z - ^^ Hier wird eine Scriptsequenz
+beginnen, die den Flug nach Albion, den Absturz, die ersten Schritte auf dem
+Planeten, die Explosion des Shuttles und das Erwachen bei den Iskai darstellt.
+
+
+"Driscoll, es ist alles bereit fr ihren Flug."
+
+
+"Alle erforderlichen Daten zur Kursbestimmung stehen Ihnen in den Systemen
+des Shuttles zur Verfgung, Mister Driscoll.^^W„hrend des Fluges werde ich
+direkt mit Ihnen kommunizieren, um Ihnen die Auswertung der bertragenen Daten
+sofort mitteilen zu k”nnen."
+
+
+"Sie kennen Ihren Auftrag: Durchfhrung von Meáreihen im Orbit und vor Ort
+zur Verifizierung der Sondendaten. Bringen Sie Mister Hofstedt gut hinunter,
+Driscoll.^ Viel Glck."
+
+
+"Danke, Sir. Ich werde mich bemhen.^^Sind Sie bereit, Hofstedt?"
+
+
+"Aber sicher! Geben Sie Gas, Driscoll!"
+
+
+Neben dem Shuttle trifft Tom auf Kapit„n Brandt sowie den Androidenk”rper von
+Ned, dem AI-System des Schiffes, und natrlich auf Rainer Hofstedt, seinen
+Passagier.
+
+
+Tom bringt das Shuttle sicher aus dem riesigen Mutterschiff.^^Das kleine
+Raumfahrzeug hat einen kr„ftigen Antrieb, und so sind die beiden schon nach
+ein paar Stunden in der N„he des Zielplaneten...
+
+
+"Am Ende dieses Ganges dort oben arbeitet Joe, das alte Haus, im
+Augenblick.^^Ich sollte ihn bald mal besuchen."
+
+
+Willkommen zum^^^ ALBION-DEMO
+
+
+Dieses Demo enth„lt die unver„nderten ersten beiden Szenarien des
+kompletten Spiels.^^In Albion finden sich sehr viele unterschiedliche Features
+wie z.B. Kampfzauber, H„ndler und Trainer, die aber erst nach einiger
+Spielzeit auftauchen. Wollen Sie schnell in ein paar K„mpfe und einen
+3D-Dungeon hineinschnuppern, k”nnen Sie den Spielstand "DEMO" laden: Westlich
+von Ihnen ist ein H”hleneingang, ein Stck im Sdwesten eine Stadt. Probieren
+Sie im Kampf mal den Feuerring aus, den Rainer Hofstedt bei sich hat! ^^Zur
+Steuerung:^STEUERN Sie, indem Sie die linke Maustaste drcken; wenn Sie etwas
+TUN wollen, drcken Sie die rechte Maustaste oder halten Sie sie gedrckt.^^
+Zur Story:^Sie sind Tom Driscoll, Pilot an Bord eines riesigen
+Fabrik|raum|schiffes, der TORONTO. Ihr Job ist es, mit einem
+Regierungs|beamten einen Voraus|flug zum Zielplaneten an Bord eines kleinen
+Shuttles zu unternehmen. Sprechen Sie mit den Menschen in der TORONTO, um mehr
+ber Ihre Situation zu erfahren. TIP: Es gibt in diesem ersten Szenario eine
+Waffe und Munition zu finden, die Ihnen sp„tere K„mpfe erleichtern.^^Viel Spaá
+beim Antesten von Albion. Sie k”nnen brigens Ihren Demo-Spielstand
+weiterfhren, wenn Sie Albion kaufen sollten (einfach den Spielstand in das
+neue SAVES - Verzeichnis kopieren).^^ Das komplette Spiel ist jetzt erh„ltlich!
+
+
+"Die TORONTO ist der gr”áte Kasten, auf dem ich bisher geflogen bin, wie wir
+alle wohl. Alles ist noch neu, wie aus der Schachtel! DDT hat ihren Gewinn von
+3 Jahren in dieses Schiff investiert, habe ich geh”rt. šber 120 Milliarden
+Credits, da wird einem schwindlig!"
+
+
+"Warte mal. Ist schon seltsam. Man arbeitet fr diesen Multi, aber es f„llt
+mir schwer, mich auf Anhieb zu erinnern, was die Abkrzung bedeutet. Wird ja
+nichts anderes benutzt. Es war irgendwas mit Doimlr-Daithasu-Thompson oder so.
+Ist, glaube ich, aus zwei alten europ„ischen und 'nem japanischen Konzern
+entstanden."
+
+
+"Ein phantastisches Ding. Soll fast ein Viertel der Entwicklungs|kosten des
+ganzen Schiffes verschlungen haben. Wenn man bedenkt, das es erst 20 Jahre her
+ist, seit die erste Kiste schnell genug war, um mit Bewuátseins|algorithmen
+umgehen zu k”nnen. Das Ding hat geantwortet wie ein schwach|sinniges Kind, und
+wenn Du heute mit sowas wie Ned sprichst, kommst DU Dir wie der Idiot vor.
+^^Immerhin eine gute Idee, Ned durch diesen Androiden|k”rper mit uns
+kommu|nizieren zu lassen. Man kommt sich dabei nicht ganz so merkwrdig vor,
+als wenn man mit einer Konsole oder einer Wand|instal|lation
+diskutiert.^^Auáerdem steuert Ned das ganze Schiff und sp„ter die Anlage. Ist
+schon irgendwie unheimlich, das gerade mal 80 Leute Besatzung n”tig sind, um
+das hier am Laufen zu halten."
+
+
+"Wenn sich auch nur die H„lfte der Daten best„tigt, die die Sonde ber unser
+Ziel durchgegeben hat, kann sich jeder von seiner Pr„mie die Zulassung fr'n
+Indi leisten. Die Rohstoffmenge muá fast so hoch wie auf Joshi sein. Was die
+genauen Daten angeht, weiá Hofstedt wohl am besten darber
+Bescheid."
+
+
+"Ja, stell Dir vor, mit 'nem Individualflitzer 'rumsausen, wie so'n reicher
+Sack!"
+
+
+"Der grne Planet. Na, jedenfalls frher mal. Zum Glck weisen die Daten ber
+Nugget eine Wstenwelt aus. Wir mssen uns zumindest nicht das Gejammer
+anh”ren, wie bei diesen Schlappohren von Joshi. Auáerdem, ich bin zwar
+wirklich kein Envi, aber einen blhenden Planeten wie Joshi umzugraben, w„re
+dann doch nicht mein Ding."
+
+
+"Ja, Du hast schon irgendwie recht. Sie waren immerhin neben den Hoika die
+einzigen intelligenten Wesen, die entdeckt wurden. Aber sogar die Eierk”pfe
+von der Regierung meinten, daá die Schlappohren schon am Ende ihrer
+Entwicklung angelangt waren. Irgendwie dekadent. Ja, trotzdem schade, daá sie
+sich diese Krankheit gefangen haben. Sie waren ja eh' nur noch ein paar
+tausend, aber wenn man bedenkt, daá eine ganze Rasse stirbt und nichts mehr
+bleibt...^ Na ja, zumindest die Hoika leben ja noch."
+
+
+"Die Siedler sind vielleicht ein wenig ruppig mit den Ureinwohnern Gaia's
+umgesprungen. Na ja, es ist schlieálich die einzige bisher entdeckte Welt, auf
+der Menschen dauerhaft leben k”nnen. Die Hoika haben ja ihre Reservate
+zugewiesen bekommen."
+
+
+"Was meinst Du, die Comanlage oder den Antrieb?" "Das Com."
+"Den Antrieb."
+
+
+"Ich habe geh”rt, das es da ziemlich geknallt haben soll. Muá 'ne ganz sch”ne
+Sauerei gegeben haben. Was muá Snoopy auch w„hrend des Sprunges an der
+Comanlage herumfummeln. Beunruhigend ist nur, daá wir erstmal keinen Kontakt
+mehr zum HQ haben."
+
+
+"Hat wieder gut funktioniert, der over-c. Wenn man bedenkt, daá immer noch
+gerade mal 'ne handvoll Leute wirklich verstehen, wie das Ding funktioniert..."
+
+
+"Wenn sich das Schiff auf dem Planeten zu der Anlage umgebaut hat, geht die
+Arbeit richtig los. Bin mal gespannt, ob alles funktioniert. Das Ding hier
+soll sich ja seine gesamte Infrastruktur selbst bauen. Man kann sich gar nicht
+vorstellen, wie groá das Ganze anw„chst, wenn es erst mal den halben Planeten
+abgebaut hat. Die Strukturen werden riesig sein! Na ja, am Ende wird ja auch
+die Anlage eingeschmolzen und nach Hause geknallt."
+
+
+"Der Regierungsinspektor? Er hat seinen Kontrolljob ziemlich ernst genommen,
+er ist ja dem K„pt'n ein paar Mal ziemlich auf die Pelle gerckt, h”rt man.
+Der Typ, der ihn entdeckt hat, sagte, er hat ihn unter der explodierten
+Com-Konsole gefunden. Und auf dem Sitz. Und ein biáchen im
+Nachbarraum."
+
+
+"Hast Du das Neueste von den Environmentalists geh”rt? Der radikale Flgel
+hat die letzte Galapagosinsel mit einem Minengrtel umgeben. Sind drei
+peruanische Milit„rboote bei 'draufgegangen. Die gem„áigten Envis sind am
+toben. Jetzt drften sie's erstmal schwer haben, uns noch mehr Auflagen
+reinzudrcken."
+
+
+"Skipper Brandt macht einen guten Job, denke ich, auch wenn er ein biáchen,
+na ja, kontaktscheu ist. Man sieht ihn selten auáerhalb der Dienstzeiten. Er
+spricht ja mehr mit der AI als mit der Besatzung."
+
+
+"Ich denke, die Regierungen schauen uns deshalb so genau auf die Finger, weil
+sie immer noch nicht die Tatsache verkraftet haben, daá die Konzerne die
+Raumfahrt beherrschen. Bei DDT gibt's ja schon genug Schreibkram, aber diese
+Regierungs|brokraten w„ren doch nie in der Lage, ein Schiff wie die TORONTO
+zu bauen, selbst wenn sie das Geld dazu h„tten."
+
+
+"Die Daten versprechen einen Planeten, der Rohstoffe in gengend hoher
+Konzentration enth„lt, so daá sich der Einsatz von diesem Riesenkasten hier
+lohnt. Im HQ drften die Korken geknallt haben, als die Ergebnisse der Sonde
+herein|gekommen sind. Bin mal gespannt, wie es auf Nugget aussieht. ^^Allzu
+aufregend wird's wohl nicht. Es soll sich um eine furz|trockene Wsten|welt
+handeln, mit nicht mal gengend Sauerstoff zum freien Atmen. Keine Gift|stoffe
+in der Atmosph„re, allerdings. Kein Leben, auáer vielleicht ein paar einfachen
+Pflanzen. Ist 'ne ganze Ecke kleiner als die Erde, aber durch die schweren
+Elemente k”nnen wir trotzdem um die 0,8 G Schwerkraft erwarten. Ist 'n guter
+Wert, schont das Material."
+
+
+"Die Jungs im HQ Osaka wird es berhaupt nicht freuen, daá wir keinen Kontakt
+mehr aufrecht erhalten k”nnen. Wenn diese ganze over-c - Technik nur nicht so
+schweine|teuer w„re, h„tten die bestimmt eine zweite Comanlage eingebaut.
+Sch„tze, wir mssen Nachrichten bermitteln, wenn die ersten Erzcontainer nach
+Hause gehen. Vielleicht schicken die uns dann die ben”tigten
+Ersatzteile."
+
+
+"Tja, nun ist er der einzige "Offizielle" an Bord. Eigentlich ist der Typ fr
+einen Eierkopf ganz in Ordnung. Kritisiert allerdings gern an der Firma herum,
+wenn man l„nger mit ihm spricht. Was soll's, sind ja auch keine Engel, die
+Sesselfurzer in den oberen Etagen."
+
+
+"Eine Kanone! Du weiát, daá Du in Teufels Kche kommst, wenn die Secus Dich
+damit erwischen. Behalt' lieber fr Dich, daá Du das Ding hast."
+
+
+"Die Security-Leute sind wohl auf keinem Schiff besonders beliebt. Seit dem
+Vorfall vor 10 Jahren auf der GATES, wo die Streikenden zusammengeschossen
+wurden, ist der ganze Berufstand in Verruf geraten."
+
+
+"Die TORONTO erfllt mich einer Mischung aus Ehrfurcht und Skepsis, um
+ehrlich zu sein. Der Physiker in mir bewundert diese phantastische technische
+Leistung. Schade nur, daá all dies lediglich dazu dient, sich in eine Anlage
+zu verwandeln, um Rohstoffe von anderen Welten zu beschaffen und diese dabei
+zu verschandeln, auch wenn es sich um eine Wstenwelt wie unser Ziel handelt,
+die von DDT so sinnig "Nugget" getauft wurde."
+
+
+"Doimlr-Daithasu-Thompson. Ich kenne Ihre Firma besser, als Sie vielleicht
+glauben, Driscoll. Meine Mutter hat dort gearbeitet und ich habe einen Teil
+meiner Kindheit und Jugend innerhalb der Firmenkultur verbracht. Der
+zweitgr”áte Multi der Erde. Mehr Umsatz als das Brutto|sozial|produkt der
+meisten Staaten. DDT ist aus einem Zusammenschluá zweier europ„ischer und
+eines japanischen Konzerns entstanden. Der Konzern gilt als einer der
+gesndesten unter den Groámultis. Sieht so aus, als h„tten sie einen sicheren
+Arbeitsplatz, Driscoll."
+
+
+"Die neueste Generation bewuáter Rechner. DDT h„tte sich dieses AI-System nie
+leisten k”nnen, wenn sie nicht selbst fhrend in der Technik w„ren, und auch
+so hat Ned fast 25% der Entwicklungskosten der ganzen TORONTO verschlungen.
+Das System enth„lt Prozessoren, die speziell auf die Bewuátseins|algorithmen
+zugeschnitten sind. Ich habe mich schon mehrere Male mit Ned unterhalten und
+jedesmal hat es mir einen Schauer ber den Rcken gejagt. Ned ist wirklich ein
+intelligentes Bewuátsein. Der Grad an Urteilsf„higkeit des Systems ist
+bahnbrechend.^ Daá keine Kosten gescheut wurden, erkennt man auch daran, daá
+man die AI durch einen aufwendigen Anroidenk”rper sprechen l„át. Die
+Hemmschwelle, mit einem knstlichen Bewuátsein zu kommunizieren, wird durch
+einen menschlich erscheinenden K”rper natrlich stark herabgesetzt."
+
+
+"Der Name fr unseren Zielplaneten bezeichnet groáartig, was DDT darin sieht:
+ein profitables Rohstofflager und nicht mehr. Sind Ihnen die Daten, die uns
+von einer Sonde bermittelt wurden, nicht mitgeteilt worden? Lassen Sie mich
+kurz nachdenken.^^Also, die Daten weisen auf einen kleinen Wstenplaneten hin,
+der aufgrund des schweren Kerns aber ber einen Schwerkraftwert von 0,8 G
+verfgt. Es ist eine sauerstoffhaltige Atmosph„re vorhanden, wahrscheinlich
+ist das Atmen im Freien aber ohne Hilfsmittel nicht m”glich. Die Sonne des
+Systems ist von „hnlicher Gr”áe wie die unseres Sonnensystems, strahlt aber
+ein etwas ins R”tliche verschobenes Farbspektrum aus. Der Planet hat keine
+Achsenneigung, so daá mit groáen geographischen Temperatur|„nderungen nicht zu
+rechnen ist. Ich denke, wir k”nnen mit Tages|temperaturen um die 50 Grad
+Celsius und Nachtempe|raturen unter dem Gefrierpunkt rechnen.^ Ein
+Sonnen|umlauf dauert skurrilerweise fast exakt so lange wie ein irdisches
+Jahr. So, ich denke, daá war alles, was bisher ber unser Ziel bekannt ist.
+Nach unserem gemeinsamen Flug werden wir mehr wissen."
+
+
+"Das Zeitalter des Individualverkehrs ist ja schon seit ber 100 Jahren
+eigentlich vorber. Nur die Spitzenverdiener k”nnen sich die Zulassung fr ein
+Individual|fahrzeug leisten. Meiner Meinung nach ist ein unver|antwortlicher
+Bl”dsinn, dafr die ”ffentlichen Verkehrswege fr teures Geld instand zu
+halten, aber der Schein freier Mobilit„t muá nunmal gewahrt bleiben."
+
+
+"Erinnern Sie mich bloá nicht daran! Zusammen mit dem rcksichtslosen
+Vorgehen auf Gaia ist der Fall Joshi meiner Meinung nach der gr”áte Skandal
+der interstellaren Raumfahrt. Sie wissen ja, daá damals ein blhender Planet
+von einem Konkurrenz|unternehmen DDT's fast vollst„ndig zugrunde gerichtet
+wurde. Und wissen sie noch etwas? Wenn sich nicht herausgestellt h„tte, daá
+dabei nicht nur ein lebendiger Planet ruiniert, sondern auch intelligente
+Wesen dabei ausgerottet wurden, wrde es wohl heute noch keine Kontrollen
+geben. ^^Wenn ich an die Kommentare des Multis denke! "Der Planet hatte
+Giftstoffe in seiner Atmosph„re, die menschliches Leben nicht erlauben". Als
+ob die einheimische Flora und Fauna dadurch weniger wertvolles Leben
+darstellte! Unglaublich auch der Kommentar zum Ende der Grik'tra. Schlappohren
+haben sie sie genannt und gemeint, daá sie dem irdischen Virus erlegen w„ren,
+weil sie dekadent und am Ende ihrer Entwicklungs|geschichte angelangt waren!
+Es ist...^^ Verzeihen sie, bei diesem Thema rede ich mich gern in Rage. Wie
+dem auch sei, dieser Vorfall ist letztendlich der Grund fr meine Anwesenheit
+auf dem Schiff. Kein privates Raumfahrzeug darf seit Joshi unerforschte
+Systeme ohne Begleitung eines Regierungs|beauftragten
+ansteuern."
+
+
+"Eine rassistische Bezeichnung, Driscoll. Die Grik'tra waren ein Kulturvolk
+mit einer Entwicklungs|geschichte, die zweihundertausend Jahre l„nger als die
+unsere ist. Ihre Zahl betrug nur noch einige tausend, als der von der Erde
+eingeschleppte Virus sie ausrottete."
+
+
+"Gaia ist ein Beispiel, daá wir offenbar nicht in der Lage sind, aus den
+Fehlern unserer Geschichte zu lernen. In der Euphorie nach der Erfindung, oder
+besser Entdeckung, des over-c hatte Gaia einfach nur das Pech, daá unter den
+ersten angesteuerten Sonnensystemen ein Planet existierte, der menschliches
+Leben erlaubte.^^Die Entdeckung einheimischer intelligenter Einwohner, der
+Hoika, war eine Sensation, die noch gr”áere Aufregung als die erfolgreichen
+Tests des over-c ausl”ste; was die Siedler allerdings nicht daran hinderte,
+die Hoika „hnlich zu behandeln, wie es mit zahlreichen V”lkern auf der Erde zu
+Zeiten des Kolonialismus passierte. Was fr eine Ausnahme Gaia darstellt, ist
+erst heute klar, denn es ist bislang die einzige Welt geblieben, auf der
+menschliches Leben dauerhaft m”glich ist."
+
+
+"Meinen Sie die Comanlage oder den Antrieb?" "Das Com."
+"Den Antrieb."
+
+
+"Die Comanlage soll v”llig zerst”rt worden sein. Mein pers”nliches Verh„ltnis
+zu Snoop..., ehm, Inspektor Beegle war leider nicht das Beste. Ich wáte zu
+gern, was er w„hrend des Sprunges an der Anlage zu suchen hatte.^ Die
+Hochenergietechnik der over-c Kommunikation ist leider so sndhaft teuer, daá
+wir offenbar nicht gengend Ersatzteile mitfhren, um die Anlage wieder in
+Betrieb zu setzen."
+
+
+"Der over-c - Antrieb ist fr uns, was das Feuer fr den Frhmenschen war.
+Wir wissen nicht bis in alle Einzelheiten, was er genau bewirkt, aber wir
+verwenden ihn und er schleudert uns in eine neue Phase unserer
+Entwicklungs|geschichte, welche Konsequenzen es auch immer haben mag..."
+
+
+"Es wird faszinierend sein, zu beobachten, wie sich das Schiff zu einer
+Fabrik umbaut, die sich ihre eigene Infrastruktur baut. Das Ausmaá an
+Automatisierung ist einfach unvorstellbar. Es entsteht ein metallener
+Organismus, der sich immer weiter selbst vergr”áert und die berschssigen
+Rohstoffe zur Erde schickt. ^^Die TORONTO wird mich noch in die Schizophrenie
+treiben! Hofstedt, der Xenobiologe trauert um die Verschandelung eines
+jungfr„ulichen Planeten, aber der Physiker Hofstedt ist gefesselt von der
+phantastischen technischen Leistung, die dieses Schiff darstellt."
+
+
+"Der Regierungsinspektor war ein wandelndes Klischee von einem Briten. Ich
+hielt ihn fr ziemlich arrogant, wir sind nicht besonders gut miteinander
+ausgekommen, um ehrlich zu sein. Aber er hat seinen Job ernst genommen, das
+muá ich ihm lassen."
+
+
+"Wissen Sie, ich war frher selbst bei den Environmentalists aktiv, bis der
+radikale Flgel immer mehr in Richtung Terrorismus abgedriftet ist. Immerhin
+hat der offizielle Teil der Organisation groáartige Erfolge erzielt. Die
+gentechnisch gesttzte Rckzchtung des Tigers letztes Jahr hat der
+Organisation glcklicherweise wieder Auftrieb im ”ffentlichen
+Meinungs|barometer verliehen. Seit die gr”áten Schweine|reien auáerhalb der
+Erde passieren, bessert sich der Zustand der letzten Naturreservate zusehends."
+
+
+"Brandt ist in Ordnung, sch„tze ich. Er ist v”llig fasziniert von Ned,
+unserer AI. Liegt vielleicht daran, das er seine Karriere als
+Software|ingenieur begonnen hat."
+
+
+"Seit die letzten Eigenm„chtigkeiten der Multis bekannt geworden sind, hat
+der ”ffentliche Druck auf die Konzerne erfreulich groáe Ausmaáe angenommen. Es
+ist fast soweit, das die Regierung ihre Bezeichnung wieder verdient."
+
+
+"Sind Ihnen die Daten, die uns von einer Sonde bermittelt wurden, nicht
+mitgeteilt worden? Lassen Sie mich kurz nachdenken.^^Also, die Daten weisen
+auf einen kleinen Wstenplaneten hin, der aufgrund des schweren Kern aber ber
+einen Schwerkraftwert von 0,8 G verfgt. Es ist eine sauerstoffhaltige
+Atmosph„re vorhanden, wahrscheinlich ist das Atmen im Freien aber ohne
+Hilfsmittel nicht m”glich. Die Sonne des Systems ist von „hnlicher Gr”áe wie
+die unseres Sonnensystems, strahlt aber ein etwas ins R”tliche verschobenes
+Farbspektrum aus. Der Planet hat keine Achsenneigung, so daá mit groáen
+geographischen Temperatur|„nderungen nicht zu rechnen ist. Ich denke, wir
+k”nnen mit Tagestemperaturen um die 50 Grad Celsius und Nachtemperaturen unter
+dem Gefrierpunkt rechnen.^^Ein Sonnenumlauf dauert skurrilerweise fast exakt
+so lange wie ein irdisches Jahr. So, ich denke, das war alles, was bisher ber
+unser Ziel bekannt ist. Nach unserem gemeinsamen Flug werden wir mehr
+wissen."
+
+
+"In der DDT-Zentrale von Osaka wird man rotieren, seit der Kontakt
+abgebrochen ist, sch„tze ich."
+
+
+"So lautet mein Name; v”llig korrekt, Driscoll."
+
+
+"Sie sind im Besitz einer Waffe! Sind die Secus nicht die einzigen
+Besatzungs|mitglieder, die Waffen tragen drfen? Sie sollten das Ding besser
+niemandem zeigen, Driscoll."
+
+
+"Ich bin Physiker und Xenobiologe im Regierungsdienst. Wie Sie wohl wissen,
+reise ich mit, um zu verhindern, daá sich Katastrophen wie die auf Joshi
+wiederholen k”nnen."
+
+
+"Die TORONTO erfllt mich mit einer Mischung aus Ehrfurcht und Skepsis, um
+ehrlich zu sein. Der Physiker in mir bewundert diese phantastische technische
+Leistung. Schade nur, das all dies lediglich dazu dient, sich in eine Anlage
+zu verwandeln, um Rohstoffe von anderen Welten zu beschaffen und diese dabei
+zu verschandeln, auch wenn es sich um eine Wstenwelt wie unser Ziel handelt,
+die von DDT so sinnig "Nugget" getauft wurde."
+
+
+"Doimlr-Daithasu-Thompson. Ich kenne Ihre Firma besser, als Sie vielleicht
+glauben, Driscoll. Meine Mutter hat dort gearbeitet und ich habe einen Teil
+meiner Kindheit und Jugend innerhalb der Firmenkultur verbracht. Der
+zweitgr”áte Multi der Erde. Mehr Umsatz als das Brutto|sozial|produkt der
+meisten Staaten. DDT ist aus einem Zusammenschluá zweier europ„ischer und
+eines japanischen Konzerns entstanden. Der Konzern gilt als einer der
+gesndesten unter den Groámultis. Der Verlust, den DDT durch die falschen
+Daten ber diesen Planeten einstecken muá, wird allerdings hart sein."
+
+
+"Die neueste Generation bewuáter Rechner. DDT h„tte sich dieses AI-System nie
+leisten k”nnen, wenn sie nicht selbst fhrend in der Technik w„ren, und auch
+so hat Ned fast 25% der Entwicklungskosten der ganzen TORONTO verschlungen.
+Das System enth„lt Prozessoren, die speziell auf die Bewuátseins|algorithmen
+zugeschnitten sind. Ich habe mich schon mehrere Male mit Ned unterhalten und
+jedesmal hat es mir einen Schauer ber den Rcken gejagt. Ned ist wirklich ein
+intelligentes Bewuátsein. Der Grad an Urteilsf„higkeit des Systems ist
+bahnbrechend."
+
+
+"Nun, der Name ist wohl nicht l„nger haltbar - der Planet hat sich ja als
+šberraschung ersten Grades herausgestellt. M”chte wissen, was mit der Sonde
+los war. Nun, einige Daten haben immerhin gestimmt. Die Tagesdauer betr„gt
+tats„chlich 24 Stunden, die warme Farbe des Sonnenlichtes stimmt, und auch die
+Abwesenheit von Jahreszeiten aufgrund der nicht vorhandenen Achsenneigung des
+Planeten sind zutreffend."
+
+
+"Hier scheint sich der Individualverkehr haupts„chlich auf die eigenen Fáe
+zu beschr„nken."
+
+
+"Erinnern Sie mich bloá nicht daran! Zusammen mit dem rcksichtslosen
+Vorgehen auf Gaia ist der Fall Joshi meiner Meinung nach der gr”áte Skandal
+der interstellaren Raumfahrt. Sie wissen ja, daá damals ein blhender Planet
+von einem Konkurrenz|unternehmen DDT's fast vollst„ndig zugrunde gerichtet
+wurde. Und wissen Sie noch etwas? Wenn sich nicht herausgestellt h„tte, daá
+dabei nicht nur ein lebendiger Planet ruiniert, sondern auch intelligente
+Wesen dabei ausgerottet wurden, wrde es wohl heute noch keine Kontrollen
+geben. Wenn ich an die Kommentare des Multis denke! "Der Planet hatte
+Giftstoffe in seiner Atmosph„re, die menschliches Leben nicht erlauben". Als
+ob die einheimische Flora und Fauna dadurch weniger wertvolles Leben
+darstellte! Unglaublich auch der Kommentar zum Ende der Grik'tra. Schlappohren
+haben sie sie genannt und gemeint, daá sie dem irdischen Virus erlegen w„ren,
+weil sie dekadent und am Ende ihrer Entwicklungs|geschichte angelangt waren!
+Es ist...^ verzeihen Sie, bei diesem Thema rede ich mich gern in Rage. Wie dem
+auch sei, dieser Vorfall ist letztendlich der Grund fr meine Anwesenheit auf
+dem Schiff. Kein privates Raumfahrzeug darf seit Joshi unerforschte Systeme
+ohne Begleitung eines Regierungs|beauftragten ansteuern."
+
+
+"Ein rassistische Bezeichnung, Driscoll. Die Grik'tra waren ein Kulturvolk
+mit einer Entwicklungs|geschichte, die zweihundertausend Jahre l„nger als die
+unsere ist. Ihre Zahl betrug nur noch einige tausend, als der von der Erde
+eingeschleppte Virus sie ausrottete."
+
+
+"Gaia ist ein Beispiel, daá wir offenbar nicht in der Lage sind, aus den
+Fehlern unserer Geschichte zu lernen. In der Euphorie nach der Erfindung, oder
+besser Entdeckung, des over-c hatte Gaia einfach nur das Pech, daá unter den
+ersten angesteuerten Sonnensystemen ein Planet existierte, der menschliches
+Leben erlaubte. Die Entdeckung einheimischer intelligenter Einwohner, der
+Hoika, war eine Sensation, die noch gr”áere Aufregung als die erfolgreichen
+Tests des over-c ausl”ste; was die Siedler allerdings nicht daran hinderte,
+die Hoika „hnlich zu behandeln, wie es mit zahlreichen V”lkern auf der Erde zu
+Zeiten des Kolonialismus passierte. Was fr eine Ausnahme Gaia darstellt, ist
+erst heute klar, denn es ist bislang die einzige Welt geblieben, auf der
+menschliches Leben dauerhaft m”glich ist."
+
+
+"Die Comanlage soll v”llig zerst”rt worden sein. Mein pers”nliches Verh„ltnis
+zu Inspektor Beegle war leider nicht das Beste. Ich wáte zu gern, was er
+w„hrend des Sprunges an der Anlage zu suchen hatte.^ Die Hochenergietechnik
+der over-c Kommunikation ist leider so sndhaft teuer, daá wir offenbar nicht
+gengend Ersatzteile mitfhren, um die Anlage wieder in Betrieb zu setzen."
+
+
+"Der Umbau zur Fabrikanlage wird nun wohl nicht stattfinden k”nnen. Ich bin
+gar nicht mal sicher, ob die TORONTO, ohne zus„tzliche Maánahmen zu ergreifen,
+wieder starten kann."
+
+
+"Wissen Sie, ich war frher selbst bei den Environmentalists aktiv, bis der
+radikale Flgel immer mehr in Richtung Terrorismus abgedriftet ist. Immerhin
+hat der offizielle Teil der Organisation groáartige Erfolge erzielt. Die
+gentech-gesttzte Rckzchtung des Tigers letztes Jahr hat der Organisation
+glcklicherweise wieder Auftrieb im ”ffentlichen Meinungsbarometer verliehen.
+Seit die gr”áten Schweinereien auáerhalb der Erde passieren, bessert sich der
+Zustand der letzten Naturreservate zusehends."
+
+
+"Brandt ist in Ordnung, sch„tze ich. Er ist v”llig fasziniert von Ned,
+unserer AI. Liegt vielleicht daran, daá er seine Karriere als
+Softwareingenieur begonnen hat."
+
+
+"Die Daten ber diesen Planeten mssen wohl leicht revidiert werden!"
+
+
+"Ich checke heute zum vierten Mal die Systeme zur Landung durch."
+
+
+
+"Hallo Schatz. Na, noch ein wenig die Fáe vertreten, bevor der Shuttleflug
+losgeht? Ich checke gerade die Systeme zur Landung dieses riesigen Pottes."
+
+
+
+"Bongiorno, Sáer. Was gibt's?"
+
+
+"Wenn alles klappt, und davon ist auszugehen, mssen wir uns fr ca. 45
+Minuten anschnallen. Danach sollte die Landung vollzogen sein und die Segmente
+des Schiffes sind horizontal ausgeklappt. Dann besteht innerhalb der Segmente
+wieder die korrekte Schwerkraft|richtung. Vergiá nicht, das Zeug in Deiner
+Kabine gut zu verstauen."
+
+
+"Mach Dir mal keine Sorgen, mein Sáer. Die Systeme und alle Backupkreise
+sind topfit. Das l„uft wie am Schnrchen."
+
+
+"Ich beneide Dich und Hofstedt. Ihr werdet den ersten Blick mit eigenen Augen
+auf Nugget werfen. Ich drcke Dir die Daumen fr den Flug, Tom. Paá' bitte auf
+Dich auf, ja?"
+
+
+"Na, wenn Du nur ein halb so guter Pilot bist, wie Du mir erz„hlt hast, muá
+ich mir ja keine Sorgen machen. Im Ernst, Schatz, bau' keine Scheiáe, ja? Ich
+mag Dich wirklich."
+
+
+"Der Traum geht Dir immer noch nicht aus dem Kopf, was? Ist schon seltsam,
+daá er immer wiederkehrt. Aber es ist ja eigentlich kein Alptraum. Du kannst
+sicher damit leben, bis er von allein wieder verschwindet."
+
+
+Was kannst Du sagen ber... Schau Dir mal dies hier an...
+Bis demn„chst! Was ist Dein augenblicklicher Job?
+
+
+"Tschá, Groáer."
+
+
+"Ich simuliere ein paar Fehler, um den Reservesystemen ein biáchen
+auf den Zahn zu fhlen."
+
+
+"Hallo, mein Alter! 'willst mich von der Arbeit abhalten, hm? Gute Idee!"
+"Grá' dich, Joe! Hast du die Secus im Nachbarraum gesehen?"
+"Joe! Das letzte Mal, daá Du so fertig ausgesehen hast, war nach der
+Tour durch Osaka, kurz vor dem Start!"
+
+
+"Ja, sie sperren den Zugang zum Comraum ab. Arrogante Typen." "Das
+stimmt. Du weiát, ich war schon immer ein biáchen neugierig. 'wrde zu gern
+mal einen Blick auf den Schrott im Comraum werfen!"
+
+
+"Mhm, ich wáte, wie wir diese Geheimniskr„mer linken. Ich k”nnte Dir einen
+Zugang zum Servicedeck zeigen. Dort mátest Du die Typen unterlaufen k”nnen
+und in den Comraum kommen. Wie sieht's aus?" "Gute Idee!
+Schieá' los!" "Ach, es ist den rger wohl doch nicht wert. Ich laá'
+es bleiben."
+
+
+"O.K. Paá auf, die Wandpanels mit den grnen Lichtketten verkleiden Zug„nge
+zum Servicedeck. Du findest einen dieser Zug„nge rechts oben in dem Raum
+n”rdlich von diesem hier. Der Code, den Du bei den Dingern eingeben muát,
+lautet fr dieses Deck "1042". Dahinter findest Du eine Leiter nach unten und
+kannst Dir dann einen Weg bis zum Serviceaufgang in den Combereich
+suchen."
+
+
+"He, so kenne ich Dich ja gar nicht, Alter! Na ja, sag' mir Bescheid, wenn Du
+es Dir anders berlegst."
+
+
+"Das Servicedeck liegt unterhalb des Hauptdecks, wo wir uns gerade befinden.
+Es gibt Zugang zu den Einrichtungen des Schiffes und wird haupts„chlich von
+Service|robotern benutzt und von uns Technikern, wenn die Kbel mit etwas
+nicht zurecht|kommen. ^^Du muát Dich darauf einstellen, daá es dort unten
+haupts„chlich fr die Robots eingerichtet wurde. Es gibt 'ne Menge
+Bodenschalt|platten und „hnlichen Schnickschnack, der die Schleusen steuert.
+Schau' Dich dort unten genau nach Schaltern um, wenn Du mal nicht
+weiterkommst. Dir ist ja kein Brot auf'n Kopf gefallen."
+
+
+"H”r' bloá auf. So kurz vor dem Ziel ertrinke ich in Arbeit! Unser
+Sake|marathon in Osaka war's wenigstens Wert, har, har!"
+
+
+"Hi, Tom. Na, willst Du doch 'nen Tip, wie Du die Secus umgehen kannst?"
+"O.K., O.K.! Du hast mich. Was schl„gst Du vor?"
+
+
+"Na, hast Du was Interessantes gesehen?" "Bin noch nicht
+durchgekommen. Ich versuch's sp„ter nochmal." "Wie war noch mal die
+Codenummer fr die Servicezug„nge?"
+
+
+"Denk dran, mit den Schaltern zu experimentieren und Dich an die Servicerobs
+zu halten, dann wird's schon klappen."
+
+
+"Wow! Zeig' das Ding niemandem, sonst kassieren sie's sofort ein! 'ne Knarre,
+ist ja heiá!"
+
+
+"Shit. H„ttest Du das Ding nicht im Servicedeck deponieren k”nnen, um es
+sp„ter von der anderen Seite abzuholen oder so? Na ja, jetzt ist es zu sp„t."
+
+
+"Ach, Routinekrempel, aber jede Menge davon. Ich simuliere die
+unwahrschein|lichsten Ausf„lle, aber die Systeme des Schiffes stecken alles
+locker weg."
+
+
+"Na, hast Du was Interessantes gesehen?" "Nun, das over-c - Com
+sieht tats„chlich bel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden!"
+
+
+"Na, hast Du was Interessantes gesehen?" "Nun, das over-c - Com
+sieht tats„chlich bel aus. Aber das Beste ist, ich hab' dort 'ne Kanone
+gefunden! Die S„cke von der Secu haben mir das Ding allerdings abgenommen,
+weil der Rckweg durch das Servicedeck versperrt war."
+
+
+"Ah, kleiner Alzheimer-Anfall, hm? Der Code lautet "1042". Viel Glck!"
+
+
+"Na, hast Du was Interessantes gesehen?" "Das over-c - Com ist
+v”llig hinber. Snoopys šberreste haben sie aber schon beseitigt."
+
+
+"Sonst nichts Aufregendes gefunden? Ist ja direkt entt„uschend."
+
+
+"Mach's gut, Tom."
+
+
+"Ich bin Security - Offizier im Range eines Colonel."
+
+
+"Gehen Sie weiter, hier gibt es nichts zu sehen." "Was ist denn
+passiert? Sie stehen hier doch nicht zum Vergngen herum."
+
+
+"Sie haben sicher von dem Unfall des Inspektors mit der over-c - Comanlage
+geh”rt. Der Comraum ist bis auf weiteres gesperrt."
+
+
+"Der Raum bleibt solange fr die Besatzung geschlossen, bis keine Gefahr
+durch die defekte Anlage mehr besteht. Und jetzt ist Schluá mit der Fragerei."
+
+
+"Werden Sie nicht frech, Driscoll. Fr Sie immer noch Colonel."
+
+
+"Sind Sie wahnsinnig?^ Geben Sie sofort die Waffe heraus! Das
+wird Folgen fr Ihre Personalakte haben, Driscoll, das verspreche ich
+Ihnen!"^^ Priver nimmt Tom die Waffe ab.
+
+
+"Was wollen Sie denn noch? Wir werden nicht frs Reden bezahlt."
+
+
+"Verschwinden Sie, Driscoll. Ich habe keine Lust, mit Unruhestiftern wie
+Ihnen zu diskutieren."
+
+
+Was k”nnen Sie mir sagen ber... Schauen Sie sich dies hier
+an... Wiederseh'n. Was ist Ihre Aufgabe?
+
+
+"Wiederseh'n."
+
+
+"Ich bin Mathematiker und Navigator."
+
+
+"Hallo, Driscoll. Na, alles klar fr den Flug?"
+
+
+"Ah, Driscoll. Was kann ich noch fr Dich tun?"
+
+
+"Ich habe die Berechnungen Deiner Flugbahn nochmal berprft. Ist alles im
+grnen Bereich, keine kritischen Punkte in der Bahn. Sollte 'n Kinderspiel
+werden."
+
+
+"Wie schon gesagt, die Berechnungen der Flugbahn sind fertig und berprft."
+
+
+"Ziemlich harter Job, diesmal. Obwohl, oder gerade weil wir Ned, die
+Wunder-AI an Bord haben. W„hrend des ganzen Fluges habe ich versucht, der AI
+Fehler nachzuweisen, aber es war nichts zu machen. Ich sch„tze, daá ich mich
+durch die šberprfungen noch selbst wegrationa|lisieren werde. Noch traut man
+den AI - Systemen nicht hundert|prozentig, aber das „ndert sich bald, sch„tze
+ich."
+
+
+"Bis dann."
+
+
+"Ich bin Maschinenfhrer. Ich fahre gerade Tests ber die
+Einsatzf„higkeit der Abbauanlagen."
+
+
+"Hallo, Driscoll. Wie steht's? Bald haben wir Nugget erreicht, dann hat fr
+mich die faule Zeit ein Ende."
+
+
+"Hallo, Driscoll. Wie steht's?"
+
+
+"Nun, zuerst werden die mitgebrachten Systeme gengend Erze abbauen, um eine
+Fertigung fr weitere Roboter|systeme zu errichten. Dann entsteht ein
+selbstlaufender Prozeá, bei dem immer mehr berschssiges Erz abf„llt, das wir
+mit den billigen Containern nach Hause ballern."
+
+
+"Die neuen Modelle sind riesig, mit integrierten Selbstreparatur|kreisen.
+Sind unverwstlich, die Dinger."
+
+
+"Es soll ja alle m”glichen Sorten auf Nugget geben".
+
+
+"Tschá, Tom."
+
+
+"Ich bin fr die Lebenserhaltung|systeme an Bord verantwortlich."
+
+
+
+"Hallo Driscoll, Du H”llenpilot. Schon die Sache mit Snoopy geh”rt?"
+
+
+
+"Hallo, Driscoll. Was gibt's denn noch?"
+
+
+"Alles im grnen Bereich, ich erwarte keine Probleme. Wenn's bei der Landung
+'n biáchen von den F„kalien ins Frischwassersystem schleudert, wirst Du's
+schon merken!"
+
+
+"Tschá dann."
+
+
+"Ich bin fr die Versorgung der Besatzung mit Nahrung und Anderem
+verantwortlich."
+
+
+"Hallo. Womit kann ich dienen? 'ne kleine Zwischenmahlzeit? Ich hab' 'n paar
+gute Schokoriegel zu bieten. Ist nicht so sá, das Zeug." "Ja, gerne.
+Immer her damit."
+
+
+"Hallo, Driscoll. Noch'n biáchen Nachschub gef„llig? Die Firma wird's
+verkraften." "Ja, gerne. K”nnte noch was davon vertragen."
+
+
+"Hallo. Sorry, keine Schokoriegel mehr. Ich muá langsam darauf achten, daá
+die anderen auch etwas abbekommen. Du wirst noch fett werden, Driscoll."
+
+
+"Hier hast Du 'ne Packung."^^ Sie berreicht Tom einige Rationen.
+
+
+"Es nicht gerade Feinschmeckerkost, was uns die Firma eingelagert hat. Aber
+mit ein biáchen Intuition beim Programmieren der Kche mache ich daraus ein
+genieábares Essen."
+
+
+"Wenn Du neue Videos oder was zu lesen brauchst, wende Dich an mich, wenn ich
+in meinem Bro bin."
+
+
+"Die Auswahl ist groá, schau bei Gelegenheit meine Datenbank durch."
+
+
+"Bis demn„chst."
+
+
+"Ich bin Maschinenfhrerin fr die Abbauroboter. Im Augenblick
+sichere ich allerdings den Lagerraum ab."
+
+
+"Hi, Tom! Hab 'n biáchen wenig Zeit. Der Kapit„n hat mich dazu verdonnert,
+den Lagerraum fr die Landung vorzubereiten."
+
+
+"Na, Du weiát doch. Normalerweise beginnt fr unsereins der Job erst nach der
+Landung, wenn es mit dem Abbau der Rohstoffe losgeht."
+
+
+"Wenn bei der Landung die Schwerkraftverh„ltnisse durcheinander geraten, darf
+hier natrlich nichts mehr unbefestigt herumstehen."
+
+
+"Ja, was gibt's noch, Tom?"
+
+
+"Ich bin der technische Leiter fr alle Segmente."
+
+
+
+"Hallo, Driscoll."
+
+
+"Wann immer es irgendwo klemmt, kommen die Techniker zu mir und erwarten
+wundert„tige L”sungen. Na, ich will mich nicht beschweren, dieser Flug ist
+bisher v”llig reibungslos verlaufen. Die TORONTO ist wirklich ihr Geld
+wert."
+
+
+"Nun, wie ich schon sagte: Wann immer es irgendwo klemmt, kommen die
+Techniker zu mir und erwarten wundert„tige L”sungen. Na, ich will mich nicht
+beschweren, dieser Flug ist bisher v”llig reibungslos verlaufen. Die TORONTO
+ist wirklich ihr Geld wert."
+
+
+"Die TORONTO hat von ihren acht Segmenten ja nur zwei, in denen
+Lebenserhalt|ungsysteme installiert sind: Dieses hier und das Segment, in dem
+die Secus, die Krankenstation und der Kraftwerkskern untergebracht wurden. Die
+brigen Segmente beinhalten Maschinen und Material zum Rohstoffabbau und
+mssen w„hrend des Fluges nicht gewartet werden, machen mir also auch keinen
+Trouble."
+
+
+"Nicht verstanden? Also nochmal: Die TORONTO hat von ihren acht Segmenten
+zwei, in denen Lebenserhalt|ungsysteme installiert sind: Dieses hier und das
+Segment, in dem die Secus, die Krankenstation und der Kraftwerkskern
+untergebracht wurden. Die brigen Segmente enthalten Maschinen und Material
+zum Rohstoffabbau und mssen w„hrend des Fluges nicht gewartet
+werden."
+
+
+"Bis irgendwann mal!"
+
+
+"Ich bin Physiker und Xenobiologe im Regierungsdienst." 
+
+
+"Ah, hallo, Driscoll! Ich hoffe, Sie fhlen sich fit fr unseren Flug!"
+
+
+
+"Grá' Sie, Driscoll. Na, was haben Sie auf dem Herzen?"
+
+
+"Nun, ich stehe in Regierungsdiensten, weil dies eine der wenigen
+M”glichkeiten ist, praktische Arbeit hier drauáen zu leisten, ohne im Sold
+einer groáen Firma wie DDT zu stehen."
+
+
+"Ja, ich bin gespannt auf Ihre Flugknste. Es ist fr mich jedesmal ein
+absoluter H”hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn es
+sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch”nheit, wie es
+Joshi einmal war, w„re natrlich noch interessanter gewesen.^^Aber dann h„tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfllt h„tte."
+
+
+
+"Wie gesagt, ich bin gespannt auf Ihre Flugknste. Es ist fr mich jedesmal
+ein absoluter H”hepunkt, eine neue Welt mit eigenen Augen zu sehen. Auch wenn
+es sich dabei um eine offenbar eher karge Welt handelt, die Ihre Firma mit dem
+unglaublich poetischen Namen "Nugget" versehen hat. Eine Sch”nheit, wie es
+Joshi einmal war, w„re natrlich noch interessanter gewesen.^ Aber dann h„tte
+diese Anlage ja ganz umsonst den weiten Weg gemacht, auch wenn mich das als
+alten Envi ein wenig mit Schadenfreude erfllt h„tte."
+
+
+
+Was k”nnen Sie mir sagen ber... Schauen Sie sich dies hier
+mal an... Bis sp„ter. Was ist Ihre Aufgabe?
+
+
+"Bis sp„ter."
+
+
+"Ich bin der Kapit„n dieses Schiffes, wie Sie wissen sollten.
+
+
+"Was gibt es denn, Driscoll? Meine Zeit ist knapp bemessen, so kurz vor der
+Landung." "Sir, ich wollte nur fragen, ob Sie mir etwas Genaueres
+ber den Zeitpunkt des Shuttlefluges verraten k”nnen."
+
+
+"Tut mir leid, Driscoll, ich bin in Eile. Bitte richten Sie sich wegen Ihres
+Abfluges nach den Laut|sprecher|durch|sagen."
+
+
+"Ich kann Ihnen noch keine genaue Auskunft geben, Driscoll. Es wird aber
+nicht mehr allzulange dauern. Die Brcke wird den Abflug|termin rechtzeitig
+durch Laut|sprecher|durch|sagen bekanntgeben.^^Entschul|digen Sie mich nun
+bitte, ich habe noch viel zu tun."
+
+
+"Sie sollten doch schon l„ngst starten, Driscoll. Haben Sie die Durchsagen
+nicht geh”rt? Der Startzeitpunkt liegt zwar in Ihrem Ermessen, aber Sie
+sollten unsere Geduld nicht allzulange auf die Probe stellen."
+
+
+Auf Wiedersehen, Sir. Was ist Ihre Aufgabe?
+
+
+"Wiederseh'n, Driscoll."
+
+
+"Ich bin Ned, das AI-System der TORONTO."
+
+
+Dies ist der Androidenk”rper, der von Ned, dem AI-Rechnersystem der
+TORONTO, zur Kommunikation mit Menschen benutzt wird.^^ "Guten Tag,
+Mister Driscoll. Kann ich Ihnen behilflich sein?" "Hallo, „h, Ned.
+Wissen Sie etwas ber den Unfall, dem Inspektor Beegle zum Opfer fiel?"
+"Ned, haben Sie noch irgendwelche genaueren Angaben, die meinen
+Vorausflug mit Dr. Hofstedt betreffen?" "Laufen die
+Landevorbereitungen wie geplant?" "Ich muá nun weiter, Ned."
+
+
+"Die Entladung, die bedauerlicherweise zu Mister Beegles Ableben gefhrt hat,
+muá w„hrend der over-c - Phase aufgetreten sein.^^ Leider ist mir nicht
+bekannt, warum Mister Beegle ausgerechnet zu diesem Zeitpunkt die Comanlage in
+Betrieb setzen wollte. Seine pers”nliche Beziehung zu den brigen
+Crewmitgliedern war nicht ausgesprochen tiefgehend, so daá niemand ber seine
+Motive Auskunft zu geben vermochte.^^Es tut mir leid, nicht mehr Licht in
+diese Angelegenheit bringen zu k”nnen, denn der Tod eines Regierungsbeamten,
+auch wenn es zweifelsfrei ein Unfall war, wirft ein schlechtes Licht auf
+unsere Firma."
+
+
+"Der ideale Abflugzeitpunkt wird gerade ermittelt, Mister Driscoll. Sie
+werden durch eine Durchsage rechtzeitig in Kenntnis gesetzt. Die
+Abtastinstrumente best„tigen bislang die Daten der Sonde durchgehend.^^Sie
+k”nnen erwarten, auf eine leblose Wstenwelt ohne gr”áere atmosph„rische
+Turbulenzen zu stoáen. Es wird sich bei Ihrem Flug mit groáer
+Wahrschein|lichkeit um eine reibungslose Routinean|gelegenheit handeln."
+
+
+"Ich bin erfreut, mitteilen zu k”nnen, daá alle Systeme mit einer Fehlerquote
+laufen, die alle bisherigen Flge von DDT-Raumfahrzeugen um das Fnffache
+unterschreiten. Anders ausgedrckt: Alles l„uft wie am Schnrchen, Mister
+Driscoll."
+
+
+"Wie Sie aus den Durchsagen entnehmen k”nnen, ist alles fr den Start bereit.
+Sie brauchen sich nur zu melden, wenn Sie eine Durchsage h”ren."
+
+
+"Auf Wiedersehen, Mr. Driscoll."
+
+
+"Existieren. Leben. Fhlen. Riechen. H”ren. Sehen."
+
+
+"Ahh, ein komplexer Verstand. So lange her, so lange. Sch”n. Reden."
+"Wer oder was bist Du?"
+
+
+"Ich bin... hier. Ich bin nun dieser Ort. Vor langer Zeit... war ich klein,
+war ich einzeln, allein." "Du warst einmal jemand anderes?"
+
+
+"Ja... Einst war ich... war ich wie Du. Iskai." "Oh,
+G”ttin! Du... Ihr wart einmal... ARGIM !"
+
+
+"Ja."
+
+
+"Es ist sch”n, zu reden." "Was ist damals passiert?" "K”nnt
+Ihr mir etwas ber Euer jetziges Leben erz„hlen, Argim?" "Wir sind
+auf der Suche nach einem Menschen, der hier eingedrungen ist." "Ich
+m”chte den Kontakt nun abbrechen, Argim".
+
+
+"Es ist so lange her, es ist... schwer. Ich bin nicht mehr gewohnt auf diese
+Art zu... denken, mich zu erinnern. Ich wollte leben. Mein Leben war so kurz.
+Ich wurde... heiá. So zornig. Alles... floá aus mir heraus. Ich breitete mich
+aus. Es ist... schwierig zu vermitteln.^^ Aber alles wurde gut. Ich lebe."
+
+
+"Ich lebe. Das ist sch”n. Ich lebe in diesem Ort. Ich bin dieser Ort. Ich
+lebe in den Tieren hier. Ich erlebe alles, was sie erleben.^^ Ich bin in
+ihnen. Ich spre, wie sie leben, wie sie jagen und gejagt werden, wie sie
+lieben und sterben.^^ Es ist wundervoll. Ich bin glcklich. Ich vermisse nur
+wenig. Gespr„che wie dieses. Und Musik."
+
+
+"Ja. Es war ein Mensch hier. Er war ein gutes Raubtier. Doch er war nicht das
+einzige Raubtier hier. Er ist im Kreislauf aufgegangen. Er lebt nicht mehr."
+"Drfen wir einen Blick auf seine šberreste werfen? Wir haben sie im
+Raum hinter der Struktur, durch die wir kommunizieren, gesehen."
+
+
+"Aber ja, . Ich werde nach unserem Kontakt diese Struktur
+bewegen."
+
+
+"Das ist schade. Ich fand diesen Kontakt sehr sch”n. Kommt bitte wieder.^^
+Und ich... ich m”chte Euch um etwas bitten. Ich erinnere mich an Musik,
+herrliche Musik. Ich vermisse Musik. Ich tr„ume oft von Musik aus dem
+Kristall. Bitte bringt mir einen Musikkristall. Versprecht Ihr mir das?"
+"Wir versprechen es Euch, Argim. Wir bringen Euch einen
+Musikkristall." "Wir bezweifeln, daá wir ein solches Kleinod besorgen
+k”nnen, Argim."
+
+
+"Ich freue mich sehr. Laát mich Euch Dankbarkeit zeigen.^^ In dem groáen Raum
+stehen zwei Quellen der Farbe. Verbindet sie mit einem Weg des
+Lichtes.^Erfreut euch anschlieáend an den Quellen der Kraft. ^^Nun lebt wohl.
+Ich warte auf Eure Wiederkehr."
+
+
+"Das ist sehr traurig. Ich sehne mich sehr nach Musik. Lebt wohl."
+
+
+"Es ist sch”n, zu reden." "Wir haben Euch einen Musikkristall
+mitgebracht, Argim!" "Was ist damals passiert?" "K”nnt Ihr
+mir etwas ber Euer jetziges Leben erz„hlen, Argim?" "Ich m”chte den
+Kontakt nun abbrechen, Argim."
+
+
+"Ihr seid wieder da! Ich freue mich."
+
+
+"Es ist sch”n, zu reden." "Was ist damals passiert?" "K”nnt
+Ihr mir etwas ber Euer jetziges Leben erz„hlen, Argim?" "Hat Euch
+der Musikkristall gefallen?" "Ich m”chte den Kontakt nun abbrechen,
+Argim."
+
+
+"Oh, ja! Die Musik hat mir viel Freude bereitet! Ich bin Euch dankbar."
+
+
+"Ich habe mich sehr ber Euren Besuch gefreut. M”ge die G”ttin ber Eure Wege
+wachen."
+
+
+"Die Musik ist in mein Leben zurckgekehrt! Ich freue mich! Ich bin
+glcklich. Habt Dank."
+
+
+"Wolltet Ihr mir nicht einen Musikkristall geben, ?"
+
+
+"Es ist sch”n, zu reden." "Was ist damals passiert?" "K”nnt
+Ihr mir etwas ber Euer jetziges Leben erz„hlen, Argim?" "Ich m”chte
+den Kontakt nun abbrechen, Argim".
+
+
+ richtet einen kurzen Satz an die anderen:^^
+"Das ist unglaublich. Ich habe Kontakt mit dem Bewuátsein, daá einmal Argim
+war!"^^ Dann konzentriert  sich wieder auf Argims Gedanken.
+
+
+"Welch ein Erlebnis! Stellt euch vor: ..."^^  berichtet
+den anderen von dem Kontakt mit Argims Bewuátsein."
+
+
+"Oh, es ist an der Zeit! Wir sollten zu der Feier zu gehen, zu der uns die
+Sebainah eingeladen hat!"
+
+
+ leert ein Fl„schchen mit grner Medizin und fhlt sich danach
+etwas besser!
+
+
+Dieser Text ist nicht interessant.
+
+
+ leert ein Fl„schchen mit trkis|farbener Medizin und  fhlt
+sich sehr viel besser!
+
+
+ leert ein Fl„schchen mit blauer Medizin und  fhlt sich
+sofort fast v”llig gesund!
+
+
+ trinkt die rote Flssigkeit.^^ Kopf kl„rt sich, und ein
+wenig geistige Energie kehrt zurck.
+
+
+ trinkt die violette Flssigkeit.^^Eine betr„chtliche Menge an
+Konzentrations|f„higkeit kehrt zurck!
+
+
+ trinkt die blaue Flssigkeit.^^ Sofort kehrt ein Groáteil er geistigen Energie zurck!
+
+
+ trinkt die silberhelle Flssigkeit und sprt, wie das Gift in
+em K”rper neutralisiert wird!
+
+
+Als  den bronzenen Trank zu sich nimmt, kl„rt sich 
+verwirrter Geist und  ist endlich wieder bei sich!
+
+
+Eine Welle der Wohltat geht durch 's K”rper, als  die
+goldene Flssigkeit schluckt. Die Krankheit weicht aus em K”rper!
+
+
+Die Wirkstoffe des Stimdrinks lassen  sich besser fhlen!
+
+
+Als  den weiáen Ring auf den Finger steckt, bemerkt , daá er
+nicht mehr zu l”sen ist!  fhlt sich schw„cher!
+
+
+Auf dem Fetzen eines Schaltplanes hat jemand zwei Ziffern notiert:^^
+12
+
+
+Auf dem Fetzen eines Schaltplanes hat jemand eine Ziffer notiert:^^
+3
+
+
+Auf dem Fetzen eines Schaltplanes hat jemand eine Ziffer notiert:^^
+4
+
+
+Auf dem Zettel hat jemand hastig eine Ziffernfolge notiert:^^ 1001
+
+
+Es fehlt der andere Teil des Dokuments!
+
+
+Die beiden Dokumententeile passen genau aneinander. Das ursprngliche
+Schriftstck ist wiederhergestellt!
+
+
+ nimmt das Schwert aus schwarzen Obsidian in die Hand. Es l„át
+sich nicht mehr aus der Hand legen und  sprt, wie die Waffe an
+er Lebenskraft und Ausdauer zehrt!
+
+
+Das rote Schwert ist verflucht!  kann es nicht mehr loswerden und
+sprt, wie es die St„rke und Angriffskraft aus em K”rper saugt!
+
+
+Der Kristallgriff des Dolches verbindet sich untrennbar mit 's
+Hand und  sprt, wie die Kraft aus em K”rper weicht!
+
+
+ merkt, daá ein Fluch auf der blauen Klinge liegt: Der Dolch
+erschwert 's Zugang zur Magie!
+
+
+Der schwarze Stein des Helmes raubt die Kraft aus 's K”rper, er
+ist verflucht!
+
+
+"Dieses Amulett ist Zeichen meiner Zugeh”rigkeit zu den Dji Cantos. Ich
+m”chte es nicht aus der Hand geben."
+
+
+"Ich sollte das Amulett lieber an seinem Platz lassen, es ist zu wertvoll, um
+es abzulegen."
+
+
+Harriet erwacht zu schwacher Gegenwehr, als das Amulett berhrt wird
+und sagt:^^"Bitte nicht! Dieses Amulett ist mein pers”nliches
+Eigentum!"
+
+
+Der kleine rote Stein ist fest mit Toms Haut verbunden. Er l„át sich nicht
+l”sen.
+
+
+"Sorry, aber ich behalte das Ding lieber. Brauche ich noch!"
+
+
+Mellthas schttelt den Kopf, er m”chte das Schreibzeug nicht
+herausgeben. Es ist sein Kommunikationsmittel.
+
+
+"Das Ding ist ungeheuer wichtig. Lassen wir es lieber, wo es ist, bevor etwas
+damit passiert."
+
+
+ erwacht aus der Bewuátlosigkeit und sagt:
+
+
+Aus dem Dokument gehen interessante Informationen hervor. Es weist auf einen
+Vertrag zwischen Kontos, Gard und Riko hin. Die Gef„hrten verstehen nicht
+alles, was hier vermerkt ist, denn manches ist in einer Art Codesprache
+notiert. Vermutlich geht es um eine Art von Aufteilungsvertrag von wertvollen
+Materialien. Genaueres l„át sich im Moment allerdings nicht sagen.^^Man k”nnte
+dieses Beweisstck vielleicht dazu benutzen, den Konflikt zwischen Iskai und
+Mahinos zu schlichten!
+
+
+Es widerstrebt Tom, das Samenkorn, das Ergebnis aller Mhen und Gefahren, aus
+der Hand zu geben.
+
+
+Die Aufzeichnungen ber das hohe Wissen sind wohl nur fr wahre Meister der
+Magie verst„ndlich. Kompilzierte Beschreibungen und Reime in komplexen
+Versmaáen bedecken das Pergament.
+
+
+Eine seltsame Mischung aus magisch klingendem Kauderwelsch und technischen
+Beschreibungen sind hier zu lesen. Die Dji Cantos k”nnen sicher mehr damit
+anfangen.
+
+
+Auf dem Pergamentstck steht geschrieben:^^Nicht immer wird
+Mut belohnt. Fahre trotzdem fort, mutig zu sein.
+
+
+ iát die Kr„uter und sprt, wie sie eine reinigende Wirkung auf
+K”rper und Geist ausben!
+
+
+:^^ "Lassen wir den Schlssel lieber, wo er
+ist. Ich m”chte ihn hier nicht verlieren."
+
+
+:^^ "Lassen wir das Dokument lieber, wo es ist.
+Ich m”chte es hier nicht verlieren."
+
